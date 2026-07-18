@@ -759,4 +759,76 @@ describe("Bank module (e2e)", () => {
       expect(res.body.total).toBeGreaterThanOrEqual(2);
     });
   });
+
+  /**
+   * S7: single-question Typst PDF preview, in-memory cached by question id.
+   * Only `type='structured'` questions can be previewed (an image question's
+   * "preview" is just the uploaded image itself, rendered directly by the
+   * front end — no Typst compile involved). The cache is invalidated by
+   * `PATCH :id` (`editDraftQuestion`) so a re-fetched preview never serves a
+   * stale compile after an edit.
+   */
+  describe("GET /bank/questions/:id/preview (S7)", () => {
+    function previewRequest(token: string, id: string) {
+      return request(app.getHttpServer())
+        .get(`/bank/questions/${id}/preview`)
+        .set("Authorization", `Bearer ${token}`);
+    }
+
+    async function createStructuredDraft(): Promise<string> {
+      const id = await createDraftQuestion(tenantAId, tenantATeacherId);
+      return id;
+    }
+
+    async function createImageQuestion(): Promise<string> {
+      const response = await uploadRequest(tenantAToken)
+        .field("courseId", courseId)
+        .field("topicId", topicId)
+        .field("difficulty", Difficulty.Easy)
+        .field("gradeLevel", "primaria_1")
+        .field("correctAnswer", "b")
+        .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+        .expect(201);
+      await trackCreatedQuestion(response.body.id);
+      return response.body.id;
+    }
+
+    it("returns a PDF for a structured draft", async () => {
+      const structuredDraftId = await createStructuredDraft();
+
+      const res = await previewRequest(tenantAToken, structuredDraftId).expect(200);
+
+      expect(res.headers["content-type"]).toContain("application/pdf");
+      expect(res.body.length).toBeGreaterThan(500);
+    });
+
+    it("400 for image questions", async () => {
+      const imageQuestionId = await createImageQuestion();
+
+      await previewRequest(tenantAToken, imageQuestionId).expect(400);
+    });
+
+    it("404 when the question belongs to another tenant", async () => {
+      const tenantOnlyDraftId = await createStructuredDraft();
+      await previewRequest(tenantBToken, tenantOnlyDraftId).expect(404);
+    });
+
+    it("404 for a non-existent question id", async () => {
+      await previewRequest(tenantAToken, randomUUID()).expect(404);
+    });
+
+    it("serves a cached PDF on repeated requests, invalidated by PATCH", async () => {
+      const id = await createStructuredDraft();
+
+      const first = await previewRequest(tenantAToken, id).expect(200);
+      const second = await previewRequest(tenantAToken, id).expect(200);
+      expect(Buffer.compare(first.body, second.body)).toBe(0);
+
+      await editRequest(tenantAToken, id).send({ bodyTypst: "cuerpo editado para preview" }).expect(200);
+
+      const afterEdit = await previewRequest(tenantAToken, id).expect(200);
+      expect(afterEdit.headers["content-type"]).toContain("application/pdf");
+      expect(afterEdit.body.length).toBeGreaterThan(500);
+    });
+  });
 });

@@ -10,11 +10,13 @@ import {
   Patch,
   Post,
   Query,
+  Res,
   UploadedFile,
   UseGuards,
   UseInterceptors,
 } from "@nestjs/common";
 import { FileInterceptor } from "@nestjs/platform-express";
+import { Response } from "express";
 import { QuestionStatus } from "../../db/schema/enums";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
@@ -138,6 +140,23 @@ export class BankController {
     }
 
     return this.service.listQuestions(user, filters, clampPagination(query.page, query.pageSize));
+  }
+
+  /**
+   * S7: single-question Typst PDF preview, in-memory cached (invalidated by
+   * `PATCH :id`). Declared BEFORE `@Get(":id")` — a static-looking suffix
+   * route must be registered before the generic `:id` catch-all in the same
+   * file for Nest's route matching to prefer it.
+   */
+  @Get(":id/preview")
+  async preview(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("id") id: string,
+    @Res() res: Response,
+  ): Promise<void> {
+    const pdf = await this.service.previewQuestion(user, id);
+    res.setHeader("Content-Type", "application/pdf");
+    res.send(pdf);
   }
 
   /**

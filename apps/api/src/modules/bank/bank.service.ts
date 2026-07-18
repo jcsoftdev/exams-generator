@@ -80,6 +80,15 @@ export interface ListQuestionsQuery {
  */
 @Injectable()
 export class BankService {
+  /**
+   * S7: in-memory Typst-compile cache for single-question previews, keyed by
+   * question id. Deliberately NOT persisted/shared across instances — a
+   * cold cache just means one extra Typst compile, never a correctness
+   * issue. Invalidated in `editDraftQuestion` on every successful edit so a
+   * re-fetched preview never serves a stale compile.
+   */
+  private readonly previewCache = new Map<string, Buffer>();
+
   constructor(
     private readonly repository: BankRepository,
     @Inject(STORAGE_PORT) private readonly storage: StoragePort,
@@ -262,6 +271,46 @@ export class BankService {
   }
 
   /**
+   * S7: single-question Typst PDF preview (versionLabel: "preview"),
+   * in-memory cached by question id. Uses the SAME tenant-visibility rule as
+   * `getQuestionById` (not `requireVisibleDraft`) — a preview is a read, not
+   * a management action, and is available regardless of `status`
+   * (draft/approved/archived). Only `type='structured'` questions compile a
+   * Typst preview; an image question's "preview" IS the uploaded image, so
+   * that's a 400 here — the front end renders the image directly instead.
+   */
+  async previewQuestion(user: AuthTokenPayload, id: string): Promise<Buffer> {
+    const question = await this.repository.findQuestionById(id, user.tenantId);
+    if (!question) {
+      throw new NotFoundException(`Question not found: ${id}`);
+    }
+    if (question.type !== "structured" || !question.bodyTypst) {
+      throw new BadRequestException("Preview is only available for structured questions");
+    }
+
+    const cached = this.previewCache.get(id);
+    if (cached) {
+      return cached;
+    }
+
+    const pdf = await this.pdfCompiler.compileExam({
+      title: "Vista previa",
+      versionLabel: "preview",
+      questions: [
+        {
+          id: question.id,
+          type: "structured",
+          bodyTypst: question.bodyTypst,
+          alternatives: (question.alternatives ?? []) as string[],
+          figureCode: question.figureCode ?? undefined,
+        },
+      ],
+    });
+    this.previewCache.set(id, pdf);
+    return pdf;
+  }
+
+  /**
    * Human edit of a draft's structured content BEFORE approval (Lane D3:
    * "un humano pueda editar el draft antes de aprobar"). Re-validates the
    * merged content, then recompiles a Typst PREVIEW via `PdfCompilerPort` —
@@ -317,6 +366,7 @@ export class BankService {
     if (!updated) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
+    this.previewCache.delete(id);
     return updated;
   }
 
