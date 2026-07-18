@@ -21,9 +21,41 @@ const READY_EXAM: ExamForGenerationRecord = {
   status: "ready",
   logoStorageKey: "tenants/tenant-1/logo/logo.png",
   selectedQuestions: [
-    { questionId: "q1", position: 0, correctAnswer: "b", imageStorageKey: "bank/questions/q1", imageMime: "image/png" },
-    { questionId: "q2", position: 1, correctAnswer: "d", imageStorageKey: "bank/questions/q2", imageMime: "image/png" },
+    {
+      questionId: "q1",
+      position: 0,
+      type: "image",
+      correctAnswer: "b",
+      imageStorageKey: "bank/questions/q1",
+      imageMime: "image/png",
+      bodyTypst: null,
+      alternatives: null,
+      figureCode: null,
+    },
+    {
+      questionId: "q2",
+      position: 1,
+      type: "image",
+      correctAnswer: "d",
+      imageStorageKey: "bank/questions/q2",
+      imageMime: "image/png",
+      bodyTypst: null,
+      alternatives: null,
+      figureCode: null,
+    },
   ],
+};
+
+const STRUCTURED_QUESTION_RECORD = {
+  questionId: "q3",
+  position: 2,
+  type: "structured" as const,
+  correctAnswer: "1",
+  imageStorageKey: null,
+  imageMime: null,
+  bodyTypst: "¿Cuánto es $3 + 3$?",
+  alternatives: ["5", "6", "7"],
+  figureCode: null,
 };
 
 class FakePdfCompiler implements PdfCompilerPort {
@@ -120,6 +152,57 @@ describe("ExamVersionGenerationService.generateVersions", () => {
     for (const result of results) {
       expect(result.pdfUrl).toMatch(/^memory:\/\//);
       expect(result.answerSheetUrl).toMatch(/^memory:\/\//);
+    }
+  });
+
+  it("mixes image + structured questions: structured alternatives are shuffled per version, image is untouched, and the answer key follows the shuffled position (Lane B1xD4 gap)", async () => {
+    const { service, repository, pdfCompiler } = buildDeps();
+    const mixedExam: ExamForGenerationRecord = {
+      ...READY_EXAM,
+      selectedQuestions: [...READY_EXAM.selectedQuestions, STRUCTURED_QUESTION_RECORD],
+    };
+    repository.getExamForGeneration.mockResolvedValue(mixedExam);
+    repository.createAsset.mockResolvedValue({ id: "asset-id" });
+
+    const results = await service.generateVersions(TEACHER, "exam-1", 3);
+
+    expect(results).toHaveLength(3);
+    expect(pdfCompiler.examCalls).toHaveLength(3);
+    expect(pdfCompiler.answerKeyCalls).toHaveLength(3);
+
+    for (let i = 0; i < pdfCompiler.examCalls.length; i++) {
+      const examCall = pdfCompiler.examCalls[i]!;
+      const answerKeyCall = pdfCompiler.answerKeyCalls[i]!;
+
+      expect(examCall.questions.map((q) => q.id).sort()).toEqual(["q1", "q2", "q3"]);
+
+      const structuredQuestion = examCall.questions.find((q) => q.id === "q3");
+      expect(structuredQuestion?.type).toBe("structured");
+      if (structuredQuestion?.type !== "structured") {
+        throw new Error("expected q3 to render as a structured question");
+      }
+      // Alternatives are shuffled (a permutation of the original 3), never
+      // the untouched original image-baked answer letter passthrough.
+      expect(structuredQuestion.bodyTypst).toBe(STRUCTURED_QUESTION_RECORD.bodyTypst);
+      expect([...structuredQuestion.alternatives].sort()).toEqual(["5", "6", "7"]);
+
+      // The image question in the same version is completely unaffected —
+      // still a materialized on-disk path, never shuffled alternatives.
+      const imageQuestion = examCall.questions.find((q) => q.id === "q1");
+      expect(imageQuestion?.type).not.toBe("structured");
+
+      // Release-gate invariant (Lane D4): the answer key's letter for q3
+      // must point at the alternative text that was ORIGINALLY correct
+      // (index 1 -> "6"), regardless of where shuffling moved it.
+      const structuredEntry = answerKeyCall.entries.find((e) => e.questionId === "q3");
+      expect(structuredEntry).toBeDefined();
+      const letterIndex = structuredEntry!.correctOption.charCodeAt(0) - "A".charCodeAt(0);
+      expect(structuredQuestion.alternatives[letterIndex]).toBe("6");
+
+      // Image answer keys still pass through unchanged.
+      const byId = new Map(answerKeyCall.entries.map((e) => [e.questionId, e.correctOption]));
+      expect(byId.get("q1")).toBe("b");
+      expect(byId.get("q2")).toBe("d");
     }
   });
 

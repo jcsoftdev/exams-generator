@@ -13,7 +13,7 @@ import {
   tenants,
   topics,
 } from "../../db/schema";
-import { ExamStatus } from "../../db/schema/enums";
+import { ExamStatus, QuestionType } from "../../db/schema/enums";
 
 export interface CreateExamBlueprintRowRecord {
   readonly courseId: string;
@@ -76,12 +76,26 @@ export interface ExamQuestionRecord {
   readonly position: number;
 }
 
+/**
+ * `type='image'` questions carry `imageStorageKey`/`imageMime`
+ * (`bodyTypst`/`alternatives`/`figureCode` are `null`); `type='structured'`
+ * questions (design doc §5.4) carry `bodyTypst`/`alternatives`/`figureCode`
+ * instead (`imageStorageKey`/`imageMime` are `null`). Both variants always
+ * carry `correctAnswer`, but its MEANING differs by type — see
+ * `SelectedQuestion` in `domain/version-shuffler.ts` for the exact contract
+ * (answer letter for image, 0-based index into `alternatives` for
+ * structured).
+ */
 export interface SelectedQuestionForGeneration {
   readonly questionId: string;
   readonly position: number;
+  readonly type: QuestionType;
   readonly correctAnswer: string;
   readonly imageStorageKey: string | null;
   readonly imageMime: string | null;
+  readonly bodyTypst: string | null;
+  readonly alternatives: readonly string[] | null;
+  readonly figureCode: string | null;
 }
 
 export interface ExamForGenerationRecord {
@@ -313,9 +327,13 @@ export class ExamsRepository {
       .select({
         questionId: examQuestions.questionId,
         position: examQuestions.position,
+        type: questions.type,
         correctAnswer: questions.correctAnswer,
         imageStorageKey: assets.storageKey,
         imageMime: assets.mime,
+        bodyTypst: questions.bodyTypst,
+        alternatives: questions.alternatives,
+        figureCode: questions.figureCode,
       })
       .from(examQuestions)
       .innerJoin(questions, eq(examQuestions.questionId, questions.id))
@@ -332,9 +350,13 @@ export class ExamsRepository {
       selectedQuestions: selectedRows.map((row) => ({
         questionId: row.questionId,
         position: row.position,
+        type: row.type,
         correctAnswer: row.correctAnswer,
         imageStorageKey: row.imageStorageKey,
         imageMime: row.imageMime,
+        bodyTypst: row.bodyTypst,
+        alternatives: (row.alternatives as readonly string[] | null) ?? null,
+        figureCode: row.figureCode,
       })),
     };
   }

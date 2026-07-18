@@ -167,6 +167,36 @@ describe("ExamsRepository", () => {
     return question!.id;
   }
 
+  /** `type='structured'` variant (design doc §5.4) — no image asset; carries `bodyTypst`/`alternatives`/`figureCode` directly on the row. */
+  async function createStructuredQuestion(params: {
+    tenantId: string | null;
+    createdBy: string;
+    topicId?: string;
+    difficulty?: Difficulty;
+    gradeLevel?: string;
+    status?: "draft" | "approved";
+    alternatives?: readonly string[];
+    correctAnswer?: string;
+  }): Promise<string> {
+    const [question] = await db
+      .insert(questions)
+      .values({
+        tenantId: params.tenantId,
+        type: "structured",
+        topicId: params.topicId ?? topicId,
+        difficulty: params.difficulty ?? Difficulty.Easy,
+        gradeLevel: params.gradeLevel ?? "primaria_1",
+        status: params.status ?? "approved",
+        bodyTypst: "¿Cuánto es $2 + 2$?",
+        alternatives: params.alternatives ?? ["3", "4", "5"],
+        correctAnswer: params.correctAnswer ?? "1",
+        createdBy: params.createdBy,
+      })
+      .returning({ id: questions.id });
+    createdQuestionIds.push(question!.id);
+    return question!.id;
+  }
+
   describe("createExam() + getBlueprintRows()", () => {
     it("persists the exam and its blueprint rows, resolving course/topic names", async () => {
       const { id } = await repository.createExam({
@@ -349,8 +379,43 @@ describe("ExamsRepository", () => {
       expect(forGeneration?.title).toBe("Generation exam");
       expect(forGeneration?.tenantId).toBe(tenantAId);
       expect(forGeneration?.selectedQuestions.map((q) => q.questionId)).toEqual([q1, q2]);
+      expect(forGeneration?.selectedQuestions[0]!.type).toBe("image");
       expect(forGeneration?.selectedQuestions[0]!.correctAnswer).toBe("a");
       expect(forGeneration?.selectedQuestions[0]!.imageStorageKey).toBeTruthy();
+      expect(forGeneration?.selectedQuestions[0]!.bodyTypst).toBeNull();
+      expect(forGeneration?.selectedQuestions[0]!.alternatives).toBeNull();
+    });
+
+    it("returns bodyTypst/alternatives/figureCode (and a null imageStorageKey) for a type='structured' selected question (Lane B1xD4 gap)", async () => {
+      const structuredId = await createStructuredQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel: "primaria_5",
+        alternatives: ["3", "4", "5"],
+        correctAnswer: "1",
+      });
+
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Structured generation exam",
+        gradeLevel: "primaria_5",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+      const [row] = await repository.getBlueprintRows(examId);
+      await repository.saveSelection(examId, [{ blueprintRowId: row!.id, questionId: structuredId }]);
+
+      const forGeneration = await repository.getExamForGeneration(examId, tenantAId);
+      const selected = forGeneration?.selectedQuestions[0];
+
+      expect(selected?.questionId).toBe(structuredId);
+      expect(selected?.type).toBe("structured");
+      expect(selected?.correctAnswer).toBe("1");
+      expect(selected?.imageStorageKey).toBeNull();
+      expect(selected?.bodyTypst).toBe("¿Cuánto es $2 + 2$?");
+      expect(selected?.alternatives).toEqual(["3", "4", "5"]);
+      expect(selected?.figureCode).toBeNull();
     });
 
     it("returns undefined when the exam belongs to a different tenant", async () => {

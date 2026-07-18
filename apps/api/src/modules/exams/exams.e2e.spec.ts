@@ -59,6 +59,8 @@ describe("Exams module (e2e)", () => {
   let staffToken: string;
   let tenantAToken: string;
   let tenantBToken: string;
+  /** Global role (design doc §2) — used ONLY to set up a real tenant logo via `POST /tenants/:id/logo` (that endpoint requires platform_admin/school_admin, `staffToken`'s content_editor role is deliberately excluded from it). */
+  let platformAdminToken: string;
 
   const createdTopicIds: string[] = [];
   const createdQuestionIds: string[] = [];
@@ -130,6 +132,7 @@ describe("Exams module (e2e)", () => {
     staffToken = tokenService.sign({ sub: staffUserId, tenantId: null, role: Role.ContentEditor });
     tenantAToken = tokenService.sign({ sub: tenantATeacherId, tenantId: tenantAId, role: Role.Teacher });
     tenantBToken = tokenService.sign({ sub: tenantBTeacherId, tenantId: tenantBId, role: Role.Teacher });
+    platformAdminToken = tokenService.sign({ sub: staffUserId, tenantId: null, role: Role.PlatformAdmin });
   });
 
   afterAll(async () => {
@@ -142,6 +145,10 @@ describe("Exams module (e2e)", () => {
     if (createdQuestionIds.length > 0) {
       await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
     }
+    // Null out the tenant logo FK first — the real-logo setup above makes
+    // `tenants.logo_asset_id` point at an `assets` row, and the sweep below
+    // deletes that same row; without this, the delete violates the FK.
+    await db.update(tenants).set({ logoAssetId: null }).where(inArray(tenants.id, [tenantAId, tenantBId]));
     // Also sweep by tenantId: `generateVersions()` creates its own PDF/
     // answer-key asset rows (repository.createAsset) whose ids aren't
     // tracked in `createdAssetIds`.
@@ -346,6 +353,17 @@ describe("Exams module (e2e)", () => {
       const topicId = await createTopic();
       const gradeLevel = "primaria_1";
 
+      // Real logo for tenant B — exercises `materializeLogo()` +
+      // `#image(...)` embedding end-to-end (smoke capstone, PARALLEL-TODO
+      // "Smoke e2e completo ... con tenant real + logo"). A prior version of
+      // this test never set a logo, so the versions-generation positive
+      // control below never actually compiled the logo-embedding branch.
+      await request(app.getHttpServer())
+        .post(`/tenants/${tenantBId}/logo`)
+        .set("Authorization", `Bearer ${platformAdminToken}`)
+        .attach("file", TINY_PNG, { filename: "logo.png", contentType: "image/png" })
+        .expect(201);
+
       // Two approved questions matching the row so a same-tenant reroll has
       // a real alternative available — proves a 200 for the owner is a
       // genuine success, not a false negative from an empty pool.
@@ -404,13 +422,28 @@ describe("Exams module (e2e)", () => {
       await versionsRequest(tenantAToken, examBId).send({ versionCount: 1 }).expect(404);
     });
 
-    it("POST .../versions — positive control: owner tenant B can fully generate a version (proves the 404 above is ownership, not a broken route)", async () => {
-      const response = await versionsRequest(tenantBToken, examBId).send({ versionCount: 1 }).expect(201);
+    it("POST .../versions — positive control: owner tenant B can fully generate K>=2 versions, real PDFs land in MinIO (with tenant B's logo embedded), presigned URLs returned (smoke capstone)", async () => {
+      const response = await versionsRequest(tenantBToken, examBId).send({ versionCount: 2 }).expect(201);
 
-      expect(response.body).toHaveLength(1);
-      expect(response.body[0]).toMatchObject({ code: "A" });
-      expect(response.body[0].pdfUrl).toEqual(expect.any(String));
-      expect(response.body[0].answerSheetUrl).toEqual(expect.any(String));
+      expect(response.body).toHaveLength(2);
+      expect(response.body.map((v: { code: string }) => v.code).sort()).toEqual(["A", "B"]);
+
+      for (const version of response.body as { code: string; pdfUrl: string; answerSheetUrl: string }[]) {
+        expect(version.pdfUrl).toEqual(expect.any(String));
+        expect(version.answerSheetUrl).toEqual(expect.any(String));
+
+        // The URLs are presigned MinIO GETs (real StoragePort, not
+        // in-memory) — pull the real bytes back out to prove the compiled
+        // PDF actually landed in the bucket (compiling with a real tenant
+        // logo — `materializeLogo()` — did not throw).
+        const pdfKey = `exams/${examBId}/versions/${version.code}/exam.pdf`;
+        const answerKeyKey = `exams/${examBId}/versions/${version.code}/answer-key.pdf`;
+        const pdfBytes = await storage.get(pdfKey);
+        const answerBytes = await storage.get(answerKeyKey);
+
+        expect(pdfBytes.subarray(0, 4).toString("latin1")).toBe("%PDF");
+        expect(answerBytes.subarray(0, 4).toString("latin1")).toBe("%PDF");
+      }
     });
   });
 
