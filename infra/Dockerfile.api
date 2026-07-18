@@ -38,6 +38,10 @@ RUN pnpm --filter @exams-generator/api deploy --prod --legacy /app/deploy
 FROM base AS runtime
 ENV NODE_ENV=production
 COPY --from=build /app/deploy ./
+# Ship the Drizzle migration SQL — migrate.js resolves ../../drizzle from dist/db.
+COPY --from=build /app/apps/api/drizzle ./drizzle
 
 EXPOSE 3000
-CMD ["node", "dist/main.js"]
+# Apply migrations, then idempotent seed (demo tenant + admin login), then start.
+# && chain aborts boot if migrate/seed fail, so we never serve an unmigrated DB.
+CMD ["sh", "-c", "node dist/db/migrate.js && node dist/db/seed.js && node dist/main.js"]
