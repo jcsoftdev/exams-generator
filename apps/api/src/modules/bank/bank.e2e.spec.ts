@@ -711,23 +711,52 @@ describe("Bank module (e2e)", () => {
       expect(typeof res.body.total).toBe("number");
     });
 
-    it("handles edge case page=0&pageSize=0 gracefully with valid pagination", async () => {
+    /**
+     * Behavioral proof that `pageSize=0` actually clamps to 1 by the time it
+     * reaches the SQL `LIMIT` — not just a shape assertion. Needs >=2
+     * visible questions in tenant A's pool so `items.length === 1` can only
+     * hold if the clamp landed; with a single-question fixture this
+     * assertion would pass vacuously regardless of clamping.
+     *
+     * The upper-bound clamp (`pageSize` capped at 100) is covered by the
+     * `clampPagination` unit test (`pagination.util.spec.ts`) instead of
+     * here — asserting it e2e would require seeding 100+ questions, which
+     * this suite deliberately avoids.
+     */
+    it("clamps page=0&pageSize=0 to page=1&pageSize=1, landing in the SQL LIMIT", async () => {
+      await structuredRequest(tenantAToken)
+        .send({
+          courseId,
+          topicId,
+          difficulty: Difficulty.Easy,
+          gradeLevel: "primaria_1",
+          bodyTypst: "pagination fixture question 1",
+          alternatives: ["a", "b"],
+          correctAnswer: "0",
+        })
+        .expect(201)
+        .then((res) => trackCreatedQuestion(res.body.id));
+
+      await structuredRequest(tenantAToken)
+        .send({
+          courseId,
+          topicId,
+          difficulty: Difficulty.Easy,
+          gradeLevel: "primaria_1",
+          bodyTypst: "pagination fixture question 2",
+          alternatives: ["a", "b"],
+          correctAnswer: "0",
+        })
+        .expect(201)
+        .then((res) => trackCreatedQuestion(res.body.id));
+
       const res = await request(app.getHttpServer())
         .get("/bank/questions?page=0&pageSize=0")
         .set("Authorization", `Bearer ${tenantAToken}`)
         .expect(200);
-      expect(Array.isArray(res.body.items)).toBe(true);
-      expect(typeof res.body.total).toBe("number");
-    });
 
-    it("clamps pageSize upper bound: page=-3&pageSize=500 respects pageSize <= 100", async () => {
-      const res = await request(app.getHttpServer())
-        .get("/bank/questions?page=-3&pageSize=500")
-        .set("Authorization", `Bearer ${tenantAToken}`)
-        .expect(200);
-      expect(Array.isArray(res.body.items)).toBe(true);
-      expect(res.body.items.length).toBeLessThanOrEqual(100);
-      expect(typeof res.body.total).toBe("number");
+      expect(res.body.items.length).toBe(1);
+      expect(res.body.total).toBeGreaterThanOrEqual(2);
     });
   });
 });

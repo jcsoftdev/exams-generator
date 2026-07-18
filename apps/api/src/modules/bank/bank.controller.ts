@@ -21,6 +21,7 @@ import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankService } from "./bank.service";
 import { QuestionListItem } from "./bank.repository";
+import { clampPagination } from "./pagination.util";
 
 interface CreateImageQuestionBody {
   readonly courseId?: string;
@@ -136,10 +137,7 @@ export class BankController {
       return this.service.listQuestions(user, filters);
     }
 
-    return this.service.listQuestions(user, filters, {
-      page: Math.max(1, Number(query.page) || 1),
-      pageSize: Math.min(100, Math.max(1, Number(query.pageSize) || 20)),
-    });
+    return this.service.listQuestions(user, filters, clampPagination(query.page, query.pageSize));
   }
 
   /**
