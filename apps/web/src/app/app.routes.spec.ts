@@ -30,6 +30,14 @@ describe('app routes', () => {
     expect(bankUploadRoute).toBeTruthy();
   });
 
+  it('registers an exam versions panel route under the protected /app shell', () => {
+    const appRoute = routes.find((route) => route.path === 'app');
+    const versionsRoute = appRoute?.children?.find(
+      (route) => route.path === 'exams/:examId/versions',
+    );
+    expect(versionsRoute).toBeTruthy();
+  });
+
   it('redirects the empty path to /app', () => {
     const emptyRoute = routes.find((route) => route.path === '' && route.redirectTo);
     expect(emptyRoute?.redirectTo).toBe('app');
