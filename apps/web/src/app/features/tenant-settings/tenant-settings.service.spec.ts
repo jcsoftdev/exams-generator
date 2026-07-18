@@ -2,7 +2,9 @@ import { TestBed } from '@angular/core/testing';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import { signal } from '@angular/core';
 import { TenantSettingsService } from './tenant-settings.service';
+import { AuthService } from '../../core/auth/auth.service';
 import { environment } from '../../../environments/environment';
 import { TenantSettings } from './tenant-settings.models';
 
@@ -12,7 +14,11 @@ describe('TenantSettingsService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [provideHttpClient(), provideHttpClientTesting()],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        { provide: AuthService, useValue: { currentTenantId: signal('tenant-1') } },
+      ],
     });
     service = TestBed.inject(TenantSettingsService);
     httpMock = TestBed.inject(HttpTestingController);
@@ -23,10 +29,10 @@ describe('TenantSettingsService', () => {
   });
 
   describe('getSettings', () => {
-    it('GETs /tenants/me', () => {
+    it('GETs /tenants/:id using the current tenant id from AuthService', () => {
       service.getSettings().subscribe();
 
-      const req = httpMock.expectOne(`${environment.apiBaseUrl}/tenants/me`);
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/tenants/tenant-1`);
       expect(req.request.method).toBe('GET');
       req.flush({ id: 'tenant-1', name: 'Colegio X', logoAssetId: null });
     });
@@ -37,7 +43,7 @@ describe('TenantSettingsService', () => {
 
       service.getSettings().subscribe((response) => (result = response));
 
-      const req = httpMock.expectOne(`${environment.apiBaseUrl}/tenants/me`);
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/tenants/tenant-1`);
       req.flush(settings);
 
       expect(result).toEqual(settings);
@@ -45,29 +51,52 @@ describe('TenantSettingsService', () => {
   });
 
   describe('updateSettings', () => {
-    it('PATCHes /tenants/me with a multipart FormData containing name and logo', () => {
-      const logo = new File(['fake-bytes'], 'logo.png', { type: 'image/png' });
-
-      service.updateSettings({ name: 'Colegio Nuevo', logo }).subscribe();
-
-      const req = httpMock.expectOne(`${environment.apiBaseUrl}/tenants/me`);
-      expect(req.request.method).toBe('PATCH');
-      expect(req.request.body).toBeInstanceOf(FormData);
-
-      const body = req.request.body as FormData;
-      expect(body.get('name')).toBe('Colegio Nuevo');
-      expect(body.get('logo')).toBe(logo);
-
-      req.flush({ id: 'tenant-1', name: 'Colegio Nuevo', logoAssetId: 'asset-2' });
-    });
-
-    it('omits the logo field entirely when no new file is provided', () => {
+    it('PATCHes /tenants/:id with a JSON body containing only the name when no logo is provided', () => {
       service.updateSettings({ name: 'Colegio Nuevo' }).subscribe();
 
-      const req = httpMock.expectOne(`${environment.apiBaseUrl}/tenants/me`);
-      const body = req.request.body as FormData;
-      expect(body.get('logo')).toBeNull();
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/tenants/tenant-1`);
+      expect(req.request.method).toBe('PATCH');
+      expect(req.request.body).toEqual({ name: 'Colegio Nuevo' });
       req.flush({ id: 'tenant-1', name: 'Colegio Nuevo', logoAssetId: null });
     });
+
+    it('PATCHes the name and then POSTs the logo to /tenants/:id/logo as multipart when a file is provided', () => {
+      const logo = new File(['fake-bytes'], 'logo.png', { type: 'image/png' });
+
+      let result: TenantSettings | undefined;
+      service.updateSettings({ name: 'Colegio Nuevo', logo }).subscribe((response) => (result = response));
+
+      const patchReq = httpMock.expectOne(`${environment.apiBaseUrl}/tenants/tenant-1`);
+      expect(patchReq.request.method).toBe('PATCH');
+      expect(patchReq.request.body).toEqual({ name: 'Colegio Nuevo' });
+      patchReq.flush({ id: 'tenant-1', name: 'Colegio Nuevo', logoAssetId: null });
+
+      const logoReq = httpMock.expectOne(`${environment.apiBaseUrl}/tenants/tenant-1/logo`);
+      expect(logoReq.request.method).toBe('POST');
+      expect(logoReq.request.body).toBeInstanceOf(FormData);
+      const body = logoReq.request.body as FormData;
+      expect(body.get('file')).toBe(logo);
+      logoReq.flush({ id: 'tenant-1', name: 'Colegio Nuevo', logoAssetId: 'asset-2' });
+
+      expect(result).toEqual({ id: 'tenant-1', name: 'Colegio Nuevo', logoAssetId: 'asset-2' });
+    });
+
+  });
+});
+
+describe('TenantSettingsService (no tenant id)', () => {
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        { provide: AuthService, useValue: { currentTenantId: signal(null) } },
+      ],
+    });
+  });
+
+  it('throws when there is no current tenant id available', () => {
+    const service = TestBed.inject(TenantSettingsService);
+    expect(() => service.getSettings()).toThrow();
   });
 });

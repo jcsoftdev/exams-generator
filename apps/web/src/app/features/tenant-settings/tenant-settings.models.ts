@@ -1,13 +1,11 @@
 /**
- * GAP (documented, matches the `ai.models.ts`/bank "no catalog endpoint
- * yet" convention already used in this codebase): no `GET/PATCH /tenants/me`
- * endpoint exists on the backend yet. `apps/api/src/db/schema/tenants.schema.ts`
- * already has the `tenants` table with a nullable `logoAssetId` FK to
- * `assets`, but no controller/service exposes it over HTTP. This module is
- * the FRONTEND CONTRACT this screen is built against — wire the real
- * `/tenants/me` routes once the backend module ships; until then this
- * screen's specs mock `TenantSettingsService` directly (Strict TDD does not
- * require the live endpoint to exist for a component spec).
+ * Wired against the REAL backend (`apps/api/src/modules/tenants/tenants.controller.ts`):
+ * `GET/PATCH /tenants/:id` + `POST /tenants/:id/logo`. There is no
+ * `/tenants/me` — a prior iteration of this screen assumed one, but the
+ * `TenantGuard` scopes every route by the `:id` param, so `TenantSettingsService`
+ * resolves the id from `AuthService.currentTenantId()` (decoded JWT claim)
+ * instead. Subset of the `tenants` table columns
+ * (`apps/api/src/db/schema/tenants.schema.ts`) this screen needs.
  */
 export interface TenantSettings {
   readonly id: string;

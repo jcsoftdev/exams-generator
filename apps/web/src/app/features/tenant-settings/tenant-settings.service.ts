@@ -1,31 +1,50 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of, switchMap } from 'rxjs';
 import { environment } from '../../../environments/environment';
+import { AuthService } from '../../core/auth/auth.service';
 import { TenantSettings, UpdateTenantSettingsPayload } from './tenant-settings.models';
 
 /**
- * Angular client for the tenant-settings screen. See `tenant-settings.models.ts`
- * for the documented GAP: `/tenants/me` does not exist on the backend yet —
- * this is the frontend contract the screen is built against. Bearer JWT is
- * attached automatically by `authInterceptor` (see app.config.ts), same as
- * every other feature service.
+ * Angular client for the tenant-settings screen. Wires the REAL backend
+ * routes (`apps/api/src/modules/tenants/tenants.controller.ts`):
+ * `GET/PATCH /tenants/:id` (JSON, `{ name?, active? }`) and
+ * `POST /tenants/:id/logo` (multipart, field name `file`) — there is no
+ * `/tenants/me`. `TenantGuard` requires the `:id` param to match the
+ * authenticated user's `tenantId`, so the id always comes from
+ * `AuthService.currentTenantId()` (decoded from the JWT), never a route
+ * param on this screen. `updateSettings` PATCHes the name first and, only
+ * when a new logo file was selected, chains the multipart upload — the two
+ * are separate backend endpoints.
  */
 @Injectable({ providedIn: 'root' })
 export class TenantSettingsService {
   private readonly http = inject(HttpClient);
+  private readonly authService = inject(AuthService);
 
   getSettings(): Observable<TenantSettings> {
-    return this.http.get<TenantSettings>(`${environment.apiBaseUrl}/tenants/me`);
+    return this.http.get<TenantSettings>(`${environment.apiBaseUrl}/tenants/${this.requireTenantId()}`);
   }
 
   updateSettings(payload: UpdateTenantSettingsPayload): Observable<TenantSettings> {
-    const formData = new FormData();
-    formData.set('name', payload.name);
-    if (payload.logo) {
-      formData.set('logo', payload.logo);
-    }
+    const tenantId = this.requireTenantId();
 
-    return this.http.patch<TenantSettings>(`${environment.apiBaseUrl}/tenants/me`, formData);
+    return this.http
+      .patch<TenantSettings>(`${environment.apiBaseUrl}/tenants/${tenantId}`, { name: payload.name })
+      .pipe(switchMap((tenant) => (payload.logo ? this.uploadLogo(tenantId, payload.logo) : of(tenant))));
+  }
+
+  private uploadLogo(tenantId: string, logo: File): Observable<TenantSettings> {
+    const formData = new FormData();
+    formData.set('file', logo);
+    return this.http.post<TenantSettings>(`${environment.apiBaseUrl}/tenants/${tenantId}/logo`, formData);
+  }
+
+  private requireTenantId(): string {
+    const tenantId = this.authService.currentTenantId();
+    if (!tenantId) {
+      throw new Error('No hay un colegio asociado a la sesión actual.');
+    }
+    return tenantId;
   }
 }
