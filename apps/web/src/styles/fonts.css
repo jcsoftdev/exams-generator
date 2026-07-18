@@ -1,0 +1,46 @@
+/**
+ * Self-hosted Plus Jakarta Sans (DECISION FE-2 — no CDN dependency).
+ * Files vendored under apps/web/public/fonts/plus-jakarta-sans/ (served
+ * same-origin from "/fonts/..." via the `public/**` assets glob in
+ * angular.json). Weights 400/500/600/700/800, latin subset only.
+ */
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/plus-jakarta-sans/plus-jakarta-sans-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/plus-jakarta-sans/plus-jakarta-sans-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/plus-jakarta-sans/plus-jakarta-sans-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/plus-jakarta-sans/plus-jakarta-sans-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/plus-jakarta-sans/plus-jakarta-sans-800.woff2") format("woff2");
+}

@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./styles/fonts.css";
+@import "tailwindcss";
+
+@theme {
+  /* Marca "Pizarra profunda" — primary ramp */
+  --color-primary-900: #072034;
+  --color-primary-800: #1c3141;
+  --color-primary-700: #2f4657;
+  --color-primary-600: #3f596f;
+  --color-primary-500: #516f8a;
+  --color-primary-400: #7392ae;
+  --color-primary-300: #9db4cb;
+  --color-primary-200: #c3d3e2;
+  --color-primary-100: #e2ebf3;
+  --color-primary-50: #f3f6fa;
+
+  /* Nav activo / chips */
+  --color-tint-activo: #deedfb;
+  --color-tint-texto: #3b5872;
+
+  /* Neutrales (n50..n900) */
+  --color-n50: #f7f8f9;
+  --color-n100: #eceef1;
+  --color-n200: #dde0e4;
+  --color-n300: #c3c8ce;
+  --color-n400: #a4abb3;
+  --color-n500: #868d96;
+  --color-n600: #6a717a;
+  --color-n700: #4e545c;
+  --color-n800: #363b41;
+  --color-n900: #20242a;
+
+  /* Semánticos — pares bg/text (tags + estados) */
+  --color-easy-bg: #dcfce7;
+  --color-easy-text: #166534;
+  --color-medium-bg: #fef3c7;
+  --color-medium-text: #92620a;
+  --color-hard-bg: #fee2e2;
+  --color-hard-text: #9f1239;
+  --color-ai-bg: #f3e8ff;
+  --color-ai-text: #6b21a8;
+  --color-warn-bg: #fff8f1;
+  --color-warn-text: #9a3412;
+
+  /* Radii 8–12px (§3.3) */
+  --radius-field: 8px;
+  --radius-card: 12px;
+
+  /* Tipografía */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  @apply font-sans bg-n50 text-n900;
+}
