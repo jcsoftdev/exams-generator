@@ -3,6 +3,7 @@ import { Difficulty } from "@exams-generator/shared";
 import {
   BadRequestException,
   ConflictException,
+  ForbiddenException,
   Inject,
   Injectable,
   NotFoundException,
@@ -13,9 +14,27 @@ import { StoragePort } from "../exams/domain/ports/storage.port";
 import { QuestionStatus } from "../../db/schema/enums";
 import { PDF_COMPILER_PORT, STORAGE_PORT } from "./bank.constants";
 import { BankRepository, QuestionListItem } from "./bank.repository";
+import { canManageQuestionTenant } from "./domain/can-manage-question-tenant";
 import { validateCreateImageQuestionInput } from "./domain/validate-create-image-question";
 import { validateCreateStructuredQuestionInput } from "./domain/validate-create-structured-question";
 import { validateUpdateStructuredQuestionInput } from "./domain/validate-update-structured-question";
+
+/**
+ * Central-vs-tenant authorization gate (design doc §2), shared by every
+ * write path in this service. Throws `ForbiddenException` naming which
+ * side of the split was violated. See `domain/can-manage-question-tenant.ts`
+ * for the underlying (pure, unit-tested) rule.
+ */
+function assertCanManageTenant(role: AuthTokenPayload["role"], targetTenantId: string | null): void {
+  if (canManageQuestionTenant(role, targetTenantId)) {
+    return;
+  }
+  throw new ForbiddenException(
+    targetTenantId === null
+      ? "Only platform staff (platform_admin, content_editor) can manage the central question bank"
+      : "Only school staff (school_admin, teacher) can manage a tenant's private questions",
+  );
+}
 
 export interface CreateImageQuestionDto {
   readonly courseId: string | undefined;
@@ -71,6 +90,8 @@ export class BankService {
     user: AuthTokenPayload,
     dto: CreateImageQuestionDto,
   ): Promise<{ id: string }> {
+    assertCanManageTenant(user.role, user.tenantId);
+
     const validation = validateCreateImageQuestionInput({
       courseId: dto.courseId,
       topicId: dto.topicId,
@@ -111,6 +132,8 @@ export class BankService {
     user: AuthTokenPayload,
     dto: CreateStructuredQuestionDto,
   ): Promise<{ id: string }> {
+    assertCanManageTenant(user.role, user.tenantId);
+
     const validation = validateCreateStructuredQuestionInput({
       courseId: dto.courseId,
       topicId: dto.topicId,
@@ -169,9 +192,12 @@ export class BankService {
   }
 
   /**
-   * Fetches the question (404 if not found/not visible) and asserts it's
-   * still `status='draft'` (409 otherwise) — shared precondition for
-   * approve/reject/edit, all of which only ever act on drafts.
+   * Fetches the question (404 if not found/not visible), asserts the
+   * requester's role is allowed to MANAGE it (403 — central bank drafts are
+   * staff-only even though tenants can VIEW them, design doc §2), and
+   * asserts it's still `status='draft'` (409 otherwise) — shared
+   * precondition for approve/reject/edit, all of which only ever act on
+   * drafts.
    */
   private async requireVisibleDraft(
     user: AuthTokenPayload,
@@ -181,6 +207,7 @@ export class BankService {
     if (!question) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
+    assertCanManageTenant(user.role, question.tenantId);
     if (question.status !== "draft") {
       throw new ConflictException(`Question ${id} is not a draft (status=${question.status})`);
     }
