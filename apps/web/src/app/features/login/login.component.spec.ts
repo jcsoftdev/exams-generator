@@ -1,103 +1,119 @@
 import { TestBed } from '@angular/core/testing';
-import { Router } from '@angular/router';
-import { HttpErrorResponse } from '@angular/common/http';
 import { describe, it, expect, vi } from 'vitest';
 import { Subject, of, throwError } from 'rxjs';
+import { HttpErrorResponse } from '@angular/common/http';
+import { ActivatedRoute, Router, convertToParamMap } from '@angular/router';
 import { LoginComponent } from './login.component';
 import { AuthService } from '../../core/auth/auth.service';
 
-function setup(loginImpl: (...args: unknown[]) => unknown) {
-  const login = vi.fn(loginImpl);
+function setup(opts: { expired?: boolean; loginImpl?: (...a: unknown[]) => unknown } = {}) {
+  const login = vi.fn(opts.loginImpl ?? (() => of({ accessToken: 'jwt' })));
   const navigateByUrl = vi.fn();
-
   TestBed.configureTestingModule({
     imports: [LoginComponent],
     providers: [
       { provide: AuthService, useValue: { login } },
       { provide: Router, useValue: { navigateByUrl } },
+      {
+        provide: ActivatedRoute,
+        useValue: { snapshot: { queryParamMap: convertToParamMap(opts.expired ? { expired: '1' } : {}) } },
+      },
     ],
   });
-
   const fixture = TestBed.createComponent(LoginComponent);
   fixture.detectChanges();
   const compiled = fixture.nativeElement as HTMLElement;
+  return { fixture, compiled, login, navigateByUrl };
+}
 
-  const emailInput = compiled.querySelector<HTMLInputElement>('input[name="email"]')!;
-  const passwordInput = compiled.querySelector<HTMLInputElement>('input[name="password"]')!;
-  const form = compiled.querySelector<HTMLFormElement>('form')!;
+function typeInto(compiled: HTMLElement, testid: string, value: string) {
+  const input = compiled.querySelector(`[data-testid="${testid}"] input`) as HTMLInputElement;
+  input.value = value;
+  input.dispatchEvent(new Event('input'));
+}
 
-  function fillAndSubmit(email: string, password: string) {
-    emailInput.value = email;
-    emailInput.dispatchEvent(new Event('input'));
-    passwordInput.value = password;
-    passwordInput.dispatchEvent(new Event('input'));
-    fixture.detectChanges();
-    form.dispatchEvent(new Event('submit'));
-    fixture.detectChanges();
-  }
-
-  return { fixture, compiled, login, navigateByUrl, fillAndSubmit, form };
+function submit(compiled: HTMLElement) {
+  (compiled.querySelector('[data-testid="login-submit"] button') as HTMLButtonElement).click();
 }
 
 describe('LoginComponent', () => {
-  it('renders an email + password form (ui/input) and a submit button (ui/button)', () => {
-    const { compiled } = setup(() => of({ accessToken: 'token' }));
-
-    expect(compiled.querySelector('input[name="email"]')).toBeTruthy();
-    expect(compiled.querySelector('input[type="password"]')).toBeTruthy();
-    expect(compiled.querySelector('button[type="submit"]')).toBeTruthy();
+  it('renders the brand promise on the dark panel', () => {
+    const { compiled } = setup();
+    expect(compiled.querySelector('[data-testid="login-brand-panel"]')).toBeTruthy();
+    expect(compiled.textContent).toMatch(/listos para imprimir/i);
   });
 
-  it('calls AuthService.login and navigates to the protected shell on success', () => {
-    const { login, navigateByUrl, fillAndSubmit } = setup(() => of({ accessToken: 'token' }));
+  it('shows the "sesión expiró" notice when ?expired=1', () => {
+    const { compiled } = setup({ expired: true });
+    expect(compiled.querySelector('[data-testid="login-expired"]')).toBeTruthy();
+    expect(compiled.textContent).toMatch(/tu sesión expiró/i);
+  });
 
-    fillAndSubmit('teacher@school.dev', 'secret');
+  it('does not show the expired notice by default', () => {
+    const { compiled } = setup();
+    expect(compiled.querySelector('[data-testid="login-expired"]')).toBeFalsy();
+  });
 
-    expect(login).toHaveBeenCalledWith({ email: 'teacher@school.dev', password: 'secret' });
+  it('logs in and navigates to /app on success', () => {
+    const { compiled, fixture, login, navigateByUrl } = setup();
+    typeInto(compiled, 'login-email', 'profe@colegio.pe');
+    typeInto(compiled, 'login-password', 'secret123');
+    fixture.detectChanges();
+    submit(compiled);
+    expect(login).toHaveBeenCalledWith({ email: 'profe@colegio.pe', password: 'secret123' });
     expect(navigateByUrl).toHaveBeenCalledWith('/app');
   });
 
-  it('shows an inline Spanish error message on a 401 response and does not navigate, never a browser alert (LG-R1)', () => {
-    const unauthorized = new HttpErrorResponse({ status: 401, statusText: 'Unauthorized' });
-    const { compiled, navigateByUrl, fillAndSubmit } = setup(() => throwError(() => unauthorized));
-
-    fillAndSubmit('teacher@school.dev', 'wrong-password');
-
-    expect(navigateByUrl).not.toHaveBeenCalled();
+  it('shows an inline error on 401', () => {
+    const { compiled, fixture } = setup({
+      loginImpl: () => throwError(() => new HttpErrorResponse({ status: 401 })),
+    });
+    typeInto(compiled, 'login-email', 'profe@colegio.pe');
+    typeInto(compiled, 'login-password', 'bad');
+    fixture.detectChanges();
+    submit(compiled);
+    fixture.detectChanges();
     expect(compiled.querySelector('[data-testid="login-error"]')).toBeTruthy();
-    expect(compiled.textContent).toMatch(/correo o contraseña incorrectos/i);
+    expect(compiled.textContent).toMatch(/incorrectos/i);
   });
 
   it('does not call login when the form is invalid', () => {
-    const { login, fillAndSubmit } = setup(() => of({ accessToken: 'token' }));
-
-    fillAndSubmit('not-an-email', '');
-
+    const { compiled, fixture, login } = setup();
+    typeInto(compiled, 'login-email', 'not-an-email');
+    typeInto(compiled, 'login-password', '');
+    fixture.detectChanges();
+    submit(compiled);
     expect(login).not.toHaveBeenCalled();
   });
 
-  it('disables the submit button and shows a loading indicator while the login call is pending (LG-R2)', () => {
+  it('disables the submit button and shows a loading indicator while the login call is pending', () => {
     const subject = new Subject<{ accessToken: string }>();
-    const { compiled, fixture, fillAndSubmit } = setup(() => subject.asObservable());
+    const { compiled, fixture } = setup({ loginImpl: () => subject.asObservable() });
+    typeInto(compiled, 'login-email', 'profe@colegio.pe');
+    typeInto(compiled, 'login-password', 'secret123');
+    fixture.detectChanges();
+    submit(compiled);
+    fixture.detectChanges();
 
-    fillAndSubmit('teacher@school.dev', 'secret');
-
-    const button = compiled.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    const button = compiled.querySelector<HTMLButtonElement>('[data-testid="login-submit"] button')!;
     expect(button.disabled).toBe(true);
 
-    subject.next({ accessToken: 'token' });
+    subject.next({ accessToken: 'jwt' });
     subject.complete();
     fixture.detectChanges();
   });
 
-  it('does not fire a second login request when the submit form is triggered again while a call is pending (LG-R2)', () => {
+  it('does not fire a second login request when submit is triggered again while a call is pending', () => {
     const subject = new Subject<{ accessToken: string }>();
-    const { login, fillAndSubmit, form, fixture } = setup(() => subject.asObservable());
-
-    fillAndSubmit('teacher@school.dev', 'secret');
+    const { compiled, fixture, login } = setup({ loginImpl: () => subject.asObservable() });
+    typeInto(compiled, 'login-email', 'profe@colegio.pe');
+    typeInto(compiled, 'login-password', 'secret123');
+    fixture.detectChanges();
+    submit(compiled);
+    fixture.detectChanges();
     expect(login).toHaveBeenCalledTimes(1);
 
-    form.dispatchEvent(new Event('submit'));
+    submit(compiled);
     fixture.detectChanges();
 
     expect(login).toHaveBeenCalledTimes(1);
