@@ -493,4 +493,19 @@ export class ExamsService {
 
     return versions;
   }
+
+  /**
+   * `DELETE /exams/:examId` (S3) — cascading delete. Tenant-scoped
+   * 404-on-mismatch, same pattern as `getExamDetail`/`confirmExam`:
+   * `repository.deleteExam()` returns `false` for a missing/cross-tenant
+   * exam instead of deleting anything. No status check — confirmation of
+   * the destructive action is the frontend's responsibility.
+   */
+  async deleteExam(user: AuthTokenPayload, examId: string): Promise<void> {
+    const tenantId = requireTenant(user);
+    const deleted = await this.repository.deleteExam(examId, tenantId);
+    if (!deleted) {
+      throw new NotFoundException(`Exam not found: ${examId}`);
+    }
+  }
 }

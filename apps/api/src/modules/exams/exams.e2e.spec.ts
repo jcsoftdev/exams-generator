@@ -248,6 +248,12 @@ describe("Exams module (e2e)", () => {
       .set("Authorization", `Bearer ${token}`);
   }
 
+  function deleteRequest(token: string, examId: string) {
+    return request(app.getHttpServer())
+      .delete(`/exams/${examId}`)
+      .set("Authorization", `Bearer ${token}`);
+  }
+
   describe("POST /exams — blueprint selection never draws from another tenant's private pool", () => {
     it("fills the row only from central + own-tenant approved questions, never another tenant's private ones", async () => {
       const topicId = await createTopic();
@@ -582,6 +588,50 @@ describe("Exams module (e2e)", () => {
         .post(`/exams/${examId}/duplicate`)
         .set("Authorization", `Bearer ${tenantBToken}`)
         .expect(404);
+    });
+  });
+
+  describe("DELETE /exams/:examId — cascades to children, tenant-scoped (S3)", () => {
+    it("deletes draft exam and its children, then 404 on GET", async () => {
+      const topicId = await createTopic();
+      const gradeLevel = "primaria_1";
+      await createApprovedQuestion({ tenantId: null, createdBy: staffUserId, topicId, gradeLevel });
+
+      const created = await createExamRequest(tenantAToken)
+        .send({
+          title: "Disposable exam for delete",
+          gradeLevel,
+          blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
+        })
+        .expect(201);
+      const disposableExamId = created.body.id;
+      createdExamIds.push(disposableExamId);
+
+      await deleteRequest(tenantAToken, disposableExamId).expect(204);
+      await getExamRequest(tenantAToken, disposableExamId).expect(404);
+    });
+
+    it("404 cross-tenant, and leaves the exam untouched for its owner", async () => {
+      const topicId = await createTopic();
+      const gradeLevel = "primaria_1";
+      await createApprovedQuestion({ tenantId: null, createdBy: staffUserId, topicId, gradeLevel });
+
+      const created = await createExamRequest(tenantAToken)
+        .send({
+          title: "Tenant A exam not deletable by B",
+          gradeLevel,
+          blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
+        })
+        .expect(201);
+      const tenantAExamId = created.body.id;
+      createdExamIds.push(tenantAExamId);
+
+      await deleteRequest(tenantBToken, tenantAExamId).expect(404);
+      await getExamRequest(tenantAToken, tenantAExamId).expect(200);
+    });
+
+    it("404 for a non-existent exam id", async () => {
+      await deleteRequest(tenantAToken, randomUUID()).expect(404);
     });
   });
 

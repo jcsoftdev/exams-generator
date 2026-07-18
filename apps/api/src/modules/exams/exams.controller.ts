@@ -3,6 +3,7 @@ import {
   BadRequestException,
   Body,
   Controller,
+  Delete,
   Get,
   HttpCode,
   HttpStatus,
@@ -148,6 +149,13 @@ export class ExamsController {
   @Get(":examId")
   async getExam(@CurrentUser() user: AuthTokenPayload, @Param("examId") examId: string): Promise<ExamDetailResult> {
     return this.examsService.getExamDetail(user, examId);
+  }
+
+  /** `DELETE /exams/:examId` (S3) — cascading delete; no status restriction (confirmation is the frontend's job). */
+  @Delete(":examId")
+  @HttpCode(HttpStatus.NO_CONTENT)
+  async remove(@CurrentUser() user: AuthTokenPayload, @Param("examId") examId: string): Promise<void> {
+    await this.examsService.deleteExam(user, examId);
   }
 
   @Post(":examId/questions/:questionId/replace")

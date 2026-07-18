@@ -689,6 +689,35 @@ export class ExamsRepository {
   }
 
   /**
+   * `DELETE /exams/:examId` (S3) — cascades to every child row in ONE
+   * transaction: `exam_versions`, `exam_questions`, `exam_blueprint_rows`,
+   * then the `exams` row itself. Deliberately does NOT touch the assets
+   * referenced by `exam_versions.pdfAssetId`/`answerSheetAssetId` — those
+   * become orphaned storage objects, accepted per the design doc (no GC
+   * pass exists yet). Tenant-scoped like `getExamById`/`duplicateExam`:
+   * returns `false` for a missing/cross-tenant exam instead of deleting
+   * anything, so a cross-tenant caller never mutates another tenant's data.
+   * No status restriction — the frontend is responsible for confirming the
+   * destructive action before calling this endpoint.
+   */
+  async deleteExam(examId: string, tenantId: string): Promise<boolean> {
+    return db.transaction(async (tx) => {
+      const [existing] = await tx
+        .select({ id: exams.id })
+        .from(exams)
+        .where(and(eq(exams.id, examId), eq(exams.tenantId, tenantId)));
+      if (!existing) return false;
+
+      await tx.delete(examVersions).where(eq(examVersions.examId, examId));
+      await tx.delete(examQuestions).where(eq(examQuestions.examId, examId));
+      await tx.delete(examBlueprintRows).where(eq(examBlueprintRows.examId, examId));
+      await tx.delete(exams).where(eq(exams.id, examId));
+
+      return true;
+    });
+  }
+
+  /**
    * `GET /exams/:examId/versions` (B4): tenant-scoped like `getExamById`
    * (returns `undefined` — never leak existence, B4-R2). `pdfUrl`/
    * `answerSheetUrl` are constructed directly from the asset ids
