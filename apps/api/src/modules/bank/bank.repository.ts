@@ -369,4 +369,22 @@ export class BankRepository {
 
     return { ...row, courseId: topicRow?.courseId ?? "" };
   }
+
+  /**
+   * Soft-remove: `approved` -> `archived` (Lane D4, S4). The caller (service)
+   * has already resolved visibility + the `status='approved'` precondition
+   * via `findQuestionById`, so this is a plain unconditional status flip.
+   */
+  async updateStatus(id: string, status: QuestionStatus): Promise<void> {
+    await db.update(questions).set({ status }).where(eq(questions.id, id));
+  }
+
+  /**
+   * Hard delete of a `draft` question (Lane D4, S5). The caller (service)
+   * has already resolved visibility + the `status='draft'` precondition via
+   * `requireVisibleDraft`.
+   */
+  async deleteQuestion(id: string): Promise<void> {
+    await db.delete(questions).where(eq(questions.id, id));
+  }
 }

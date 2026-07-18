@@ -2,7 +2,10 @@ import { Difficulty } from "@exams-generator/shared";
 import {
   Body,
   Controller,
+  Delete,
   Get,
+  HttpCode,
+  HttpStatus,
   Param,
   Patch,
   Post,
@@ -164,5 +167,24 @@ export class BankController {
       correctAnswer: body.correctAnswer,
       figureCode: body.figureCode,
     });
+  }
+
+  /** Lane D4 (S4): soft-removes an `approved` question — never a draft. */
+  @Patch(":id/archive")
+  async archive(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("id") id: string,
+  ): Promise<{ id: string; status: "archived" }> {
+    return this.service.archiveQuestion(user, id);
+  }
+
+  /** Lane D4 (S5): permanently deletes an own `draft` question. */
+  @Delete(":id")
+  @HttpCode(HttpStatus.NO_CONTENT)
+  async removeDraft(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("id") id: string,
+  ): Promise<void> {
+    await this.service.deleteDraftQuestion(user, id);
   }
 }

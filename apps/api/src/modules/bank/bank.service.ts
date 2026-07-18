@@ -301,4 +301,43 @@ export class BankService {
     }
     return updated;
   }
+
+  /**
+   * Lane D4 (S4): soft-removes an `approved` question from the bank —
+   * `archived` questions are excluded from `getQuestionPool`
+   * (`ExamsRepository`, `status = 'approved'` filter) but never deleted, so
+   * exams that already reference them keep working. Only an `approved`
+   * question can be archived (409 otherwise) — archiving a draft makes no
+   * sense (reject/delete is the discard path for drafts).
+   */
+  async archiveQuestion(
+    user: AuthTokenPayload,
+    id: string,
+  ): Promise<{ id: string; status: "archived" }> {
+    const question = await this.repository.findQuestionById(id, user.tenantId);
+    if (!question) {
+      throw new NotFoundException(`Question not found: ${id}`);
+    }
+    assertCanManageTenant(user.role, question.tenantId);
+    if (question.status !== "approved") {
+      throw new ConflictException(
+        `Only approved questions can be archived (status=${question.status})`,
+      );
+    }
+    await this.repository.updateStatus(id, "archived");
+    return { id, status: "archived" };
+  }
+
+  /**
+   * Lane D4 (S5): permanently deletes a `draft` question. Reuses
+   * `requireVisibleDraft` — the SAME 404/403/409 gate `approveQuestion`/
+   * `rejectQuestion`/`editDraftQuestion` already share — so a draft can only
+   * be deleted by whoever is allowed to manage it, and only while it's still
+   * a draft (an `approved`/`archived` question is never deletable this way;
+   * use `archiveQuestion` instead).
+   */
+  async deleteDraftQuestion(user: AuthTokenPayload, id: string): Promise<void> {
+    const draft = await this.requireVisibleDraft(user, id);
+    await this.repository.deleteQuestion(draft.id);
+  }
 }

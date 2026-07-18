@@ -9,6 +9,7 @@ import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import { assets, courses, questions, tenants, topics, users } from "../../db/schema";
 import { TokenService } from "../auth/token.service";
+import { ExamsRepository } from "../exams/exams.repository";
 
 /**
  * Full HTTP e2e — real Nest app, real Postgres, real MinIO (docker-compose
@@ -592,6 +593,95 @@ describe("Bank module (e2e)", () => {
 
       const schoolAdminDraftId = await createDraftQuestion(tenantAId, tenantASchoolAdminId);
       await rejectRequest(tenantASchoolAdminToken, schoolAdminDraftId).expect(201);
+    });
+  });
+
+  /**
+   * Lane D4 (S4/S5): archive an `approved` question (soft-remove from the
+   * bank — never deleted) and delete a `draft` outright. Same
+   * `assertCanManageTenant`/`requireVisibleDraft` gates the rest of the
+   * module already exercises.
+   */
+  describe("archive & delete", () => {
+    async function createApprovedQuestion(token: string): Promise<string> {
+      const response = await structuredRequest(token)
+        .send({
+          courseId,
+          topicId,
+          difficulty: Difficulty.Easy,
+          gradeLevel: "primaria_1",
+          bodyTypst: "pregunta aprobada para archive/delete tests",
+          alternatives: ["a", "b"],
+          correctAnswer: "0",
+        })
+        .expect(201);
+      await trackCreatedQuestion(response.body.id);
+      return response.body.id;
+    }
+
+    it("archives an approved own-tenant question", async () => {
+      const approvedQuestionId = await createApprovedQuestion(tenantAToken);
+
+      const res = await request(app.getHttpServer())
+        .patch(`/bank/questions/${approvedQuestionId}/archive`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+
+      expect(res.body.status).toBe("archived");
+    });
+
+    it("409 archiving a draft", async () => {
+      const draftQuestionId = await createDraftQuestion(tenantAId, tenantATeacherId);
+
+      await request(app.getHttpServer())
+        .patch(`/bank/questions/${draftQuestionId}/archive`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(409);
+    });
+
+    it("teacher cannot archive central-bank question", async () => {
+      const centralQuestionId = await createApprovedQuestion(staffToken);
+
+      await request(app.getHttpServer())
+        .patch(`/bank/questions/${centralQuestionId}/archive`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(403);
+    });
+
+    it("deletes an own draft, 404 after", async () => {
+      const ownDraftId = await createDraftQuestion(tenantAId, tenantATeacherId);
+
+      await request(app.getHttpServer())
+        .delete(`/bank/questions/${ownDraftId}`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(204);
+
+      await getByIdRequest(tenantAToken, ownDraftId).expect(404);
+    });
+
+    it("409 deleting an approved question", async () => {
+      const anotherApprovedId = await createApprovedQuestion(tenantAToken);
+
+      await request(app.getHttpServer())
+        .delete(`/bank/questions/${anotherApprovedId}`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(409);
+    });
+
+    it("an archived question NEVER enters the exam question pool (release gate)", async () => {
+      const archivedId = await createApprovedQuestion(tenantAToken);
+      await request(app.getHttpServer())
+        .patch(`/bank/questions/${archivedId}/archive`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+
+      const examsRepository = new ExamsRepository();
+      const pool = await examsRepository.getQuestionPool({
+        tenantId: tenantAId,
+        gradeLevel: "primaria_1",
+      });
+
+      expect(pool.map((q) => q.id)).not.toContain(archivedId);
     });
   });
 });
