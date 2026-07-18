@@ -1,5 +1,7 @@
+import { importProvidersFrom } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, beforeEach } from 'vitest';
+import { LucideAngularModule, X } from 'lucide-angular';
 import { BannerComponent } from './banner.component';
 
 function setup() {
@@ -10,7 +12,10 @@ function setup() {
 
 describe('BannerComponent', () => {
   beforeEach(() => {
-    TestBed.configureTestingModule({ imports: [BannerComponent] });
+    TestBed.configureTestingModule({
+      imports: [BannerComponent],
+      providers: [importProvidersFrom(LucideAngularModule.pick({ X }))],
+    });
   });
 
   it.each(['info', 'success', 'warning', 'error'] as const)(
@@ -48,5 +53,17 @@ describe('BannerComponent', () => {
     fixture.detectChanges();
 
     expect(compiled.querySelector('[data-testid="banner-close"]')).toBeFalsy();
+  });
+
+  it('renders a lucide x icon (no emoji) in the dismiss button', () => {
+    const { fixture, compiled } = setup();
+    fixture.componentRef.setInput('variant', 'info');
+    fixture.componentRef.setInput('message', 'Aviso');
+    fixture.componentRef.setInput('dismissible', true);
+    fixture.detectChanges();
+
+    const close = compiled.querySelector('[data-testid="banner-close"]')!;
+    expect(close.querySelector('lucide-angular,i-lucide')).toBeTruthy();
+    expect(close.textContent).not.toContain('✕');
   });
 });

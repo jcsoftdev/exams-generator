@@ -23,7 +23,7 @@ import { LucideAngularModule, Menu } from 'lucide-angular';
           (click)="menuToggle.emit()"
           aria-label="Abrir menú"
         >
-          <lucide-icon name="menu" [size]="20"></lucide-icon>
+          <lucide-angular name="menu" class="h-5 w-5"></lucide-angular>
         </button>
         @if (title()) {
           <h1 class="text-base font-semibold text-n900">{{ title() }}</h1>

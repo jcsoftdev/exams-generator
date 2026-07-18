@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, importProvidersFrom } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect } from 'vitest';
+import { LucideAngularModule, Menu } from 'lucide-angular';
 import { TopbarComponent } from './topbar.component';
 
 @Component({
@@ -16,34 +17,42 @@ class HostComponent {
   toggled = false;
 }
 
+function setup() {
+  TestBed.configureTestingModule({
+    imports: [HostComponent],
+    providers: [importProvidersFrom(LucideAngularModule.pick({ Menu }))],
+  });
+  const fixture = TestBed.createComponent(HostComponent);
+  fixture.detectChanges();
+  return { fixture, compiled: fixture.nativeElement as HTMLElement };
+}
+
 describe('TopbarComponent', () => {
   it('renders the title', () => {
-    TestBed.configureTestingModule({ imports: [HostComponent] });
-    const fixture = TestBed.createComponent(HostComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
+    const { compiled } = setup();
 
     expect(compiled.textContent).toContain('Exámenes');
   });
 
   it('renders projected [actions] content', () => {
-    TestBed.configureTestingModule({ imports: [HostComponent] });
-    const fixture = TestBed.createComponent(HostComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
+    const { compiled } = setup();
 
     expect(compiled.querySelector('[data-testid="topbar-action"]')).toBeTruthy();
   });
 
   it('emits menuToggle when the menu button is clicked', () => {
-    TestBed.configureTestingModule({ imports: [HostComponent] });
-    const fixture = TestBed.createComponent(HostComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
+    const { fixture, compiled } = setup();
 
     compiled.querySelector<HTMLButtonElement>('[data-testid="topbar-menu-button"]')!.click();
     fixture.detectChanges();
 
     expect(fixture.componentInstance.toggled).toBe(true);
+  });
+
+  it('renders a lucide menu icon (no emoji) inside the menu button', () => {
+    const { compiled } = setup();
+    const button = compiled.querySelector('[data-testid="topbar-menu-button"]')!;
+    expect(button.querySelector('lucide-angular,i-lucide')).toBeTruthy();
+    expect(button.textContent).not.toContain('☰');
   });
 });

@@ -13,7 +13,7 @@ import { BannerVariant } from '../ui.types';
   changeDetection: ChangeDetectionStrategy.OnPush,
   // `ModuleWithProviders` (from `.pick()`) is not valid inside a standalone
   // component's `imports` (NG2012) — the bare module goes in `imports` (so
-  // the `<lucide-icon>` selector resolves) and its providers go in `providers`.
+  // the `<lucide-angular>` selector resolves) and its providers go in `providers`.
   imports: [LucideAngularModule],
   providers: [LucideAngularModule.pick({ X }).providers ?? []],
   template: `
@@ -27,7 +27,7 @@ import { BannerVariant } from '../ui.types';
           (click)="dismissed.emit()"
           aria-label="Cerrar"
         >
-          <lucide-icon name="x" [size]="16"></lucide-icon>
+          <lucide-angular name="x" class="h-4 w-4"></lucide-angular>
         </button>
       }
     </div>
