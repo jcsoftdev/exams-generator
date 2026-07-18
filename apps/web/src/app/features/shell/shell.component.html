@@ -17,7 +17,32 @@
   }
 
   <div class="flex flex-1 flex-col overflow-hidden">
-    <ui-topbar title="Exams Generator" (menuToggle)="toggleMobileMenu()"></ui-topbar>
+    <ui-topbar [title]="schoolName()" (menuToggle)="toggleMobileMenu()">
+      <div actions class="relative">
+        <button
+          type="button"
+          data-testid="user-menu-button"
+          class="flex h-9 w-9 items-center justify-center rounded-full bg-primary-100 text-primary-700 hover:bg-primary-200"
+          (click)="toggleUserMenu()"
+          aria-label="Menú de usuario"
+        >
+          <lucide-angular name="user" class="h-5 w-5"></lucide-angular>
+        </button>
+        @if (userMenuOpen()) {
+          <div class="absolute right-0 z-50 mt-2 w-48 rounded-card border border-n200 bg-white py-1 shadow-lg">
+            <button
+              type="button"
+              data-testid="logout-button"
+              class="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-n800 hover:bg-n50"
+              (click)="logout()"
+            >
+              <lucide-angular name="log-out" class="h-4 w-4"></lucide-angular>
+              Cerrar sesión
+            </button>
+          </div>
+        }
+      </div>
+    </ui-topbar>
     <main class="flex-1 overflow-auto p-4">
       <router-outlet></router-outlet>
     </main>

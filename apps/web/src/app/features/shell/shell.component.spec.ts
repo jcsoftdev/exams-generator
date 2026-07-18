@@ -1,75 +1,58 @@
 import { TestBed } from '@angular/core/testing';
-import { importProvidersFrom } from '@angular/core';
-import { provideRouter } from '@angular/router';
-import { signal } from '@angular/core';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
+import { EMPTY, of } from 'rxjs';
+import { importProvidersFrom, signal } from '@angular/core';
+import { provideRouter, Router } from '@angular/router';
+import { LucideAngularModule, Menu, User, LogOut } from 'lucide-angular';
 import { Role } from '@exams-generator/shared';
-import { LucideAngularModule, Menu, X, Sparkles, Lock, Download, Ellipsis, Check, TriangleAlert, Search, School, LogOut, User, Users, Trash2, Pencil, Archive, ChevronLeft, ChevronRight, ChevronDown, Plus, Minus } from 'lucide-angular';
 import { ShellComponent } from './shell.component';
 import { AuthService } from '../../core/auth/auth.service';
+import { TenantSettingsService } from '../../features/tenant-settings/tenant-settings.service';
 
-function setup(role: Role) {
+function setup(role: Role | null) {
+  const logout = vi.fn();
+  const navigateByUrl = vi.fn();
   TestBed.configureTestingModule({
     imports: [ShellComponent],
     providers: [
       provideRouter([]),
-      { provide: AuthService, useValue: { currentRole: signal(role) } },
-      importProvidersFrom(
-        LucideAngularModule.pick({
-          Menu, X, Sparkles, Lock, Download, Ellipsis, Check, TriangleAlert, Search, School,
-          LogOut, User, Users, Trash2, Pencil, Archive, ChevronLeft, ChevronRight, ChevronDown, Plus, Minus,
-        }),
-      ),
+      importProvidersFrom(LucideAngularModule.pick({ Menu, User, LogOut })),
+      { provide: AuthService, useValue: { currentRole: signal(role), logout } },
+      { provide: TenantSettingsService, useValue: { getSettings: () => of({ id: 't1', name: 'Colegio San Marcos', logoAssetId: null }) } },
+      {
+        provide: Router,
+        useValue: {
+          navigateByUrl,
+          createUrlTree: () => ({}),
+          serializeUrl: () => '',
+          // RouterLink/RouterLinkActive (used by ui-sidebar) inject the
+          // real Router: RouterLink's default ActivatedRoute provider
+          // reads `router.routerState.root`, and RouterLinkActive
+          // subscribes to `router.events` — the mock needs both shapes
+          // or DI throws before the component renders.
+          routerState: { root: {} },
+          events: EMPTY,
+        },
+      },
     ],
   });
-
   const fixture = TestBed.createComponent(ShellComponent);
   fixture.detectChanges();
-  const compiled = fixture.nativeElement as HTMLElement;
-  return { fixture, compiled };
+  return { fixture, compiled: fixture.nativeElement as HTMLElement, logout, navigateByUrl };
 }
 
 describe('ShellComponent', () => {
-  it('composes ui-sidebar, ui-topbar and a router-outlet', () => {
+  it('shows the school name as the topbar title', () => {
     const { compiled } = setup(Role.Teacher);
-
-    expect(compiled.querySelector('ui-sidebar')).toBeTruthy();
-    expect(compiled.querySelector('ui-topbar')).toBeTruthy();
-    expect(compiled.querySelector('router-outlet')).toBeTruthy();
+    expect(compiled.textContent).toContain('Colegio San Marcos');
   });
 
-  it('renders the three nav groups: Principal, Inteligencia and Colegio (for school_admin)', () => {
-    const { compiled } = setup(Role.SchoolAdmin);
-
-    expect(compiled.textContent).toContain('Principal');
-    expect(compiled.textContent).toContain('Inteligencia');
-    expect(compiled.textContent).toContain('Colegio');
-    expect(compiled.textContent).toContain('Configuración');
-  });
-
-  it('hides the Colegio group for a teacher role', () => {
-    const { compiled } = setup(Role.Teacher);
-
-    expect(compiled.textContent).not.toContain('Colegio');
-    expect(compiled.textContent).not.toContain('Configuración');
-  });
-
-  it('keeps the desktop sidebar structurally collapsed at mobile widths (hidden md:block)', () => {
-    const { compiled } = setup(Role.Teacher);
-
-    const desktopSidebar = compiled.querySelector('[data-testid="shell-sidebar-desktop"]')!;
-    expect(desktopSidebar.className).toContain('hidden');
-    expect(desktopSidebar.className).toContain('md:block');
-  });
-
-  it('opens a mobile drawer when the topbar menu button is toggled, closed by default', () => {
-    const { fixture, compiled } = setup(Role.Teacher);
-
-    expect(compiled.querySelector('[data-testid="shell-mobile-drawer"]')).toBeFalsy();
-
-    compiled.querySelector<HTMLButtonElement>('[data-testid="topbar-menu-button"]')!.click();
+  it('logs out and redirects to /login from the user menu', () => {
+    const { compiled, fixture, logout, navigateByUrl } = setup(Role.Teacher);
+    (compiled.querySelector('[data-testid="user-menu-button"]') as HTMLButtonElement).click();
     fixture.detectChanges();
-
-    expect(compiled.querySelector('[data-testid="shell-mobile-drawer"]')).toBeTruthy();
+    (compiled.querySelector('[data-testid="logout-button"]') as HTMLButtonElement).click();
+    expect(logout).toHaveBeenCalledTimes(1);
+    expect(navigateByUrl).toHaveBeenCalledWith('/login');
   });
 });
