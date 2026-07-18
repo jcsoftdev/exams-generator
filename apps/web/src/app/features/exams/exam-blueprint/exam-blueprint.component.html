@@ -1,0 +1,83 @@
+<section class="exam-blueprint">
+  <h1>Build Exam</h1>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label>
+      Title
+      <input type="text" name="title" formControlName="title" />
+    </label>
+    <label>
+      Grade level
+      <select name="gradeLevel" formControlName="gradeLevel">
+        <option value="">Select...</option>
+        @for (gradeLevel of gradeLevels; track gradeLevel) {
+          <option [value]="gradeLevel">{{ gradeLevelLabels[gradeLevel] }}</option>
+        }
+      </select>
+    </label>
+
+    <fieldset formArrayName="blueprint" class="exam-blueprint__rows">
+      <legend>Blueprint rows</legend>
+
+      @for (row of rows.controls; track row; let i = $index) {
+        <div [formGroupName]="i" class="exam-blueprint__row" data-testid="blueprint-row">
+          <label>
+            Course
+            <input type="text" name="courseId" formControlName="courseId" />
+          </label>
+          <label>
+            Topic (optional)
+            <input type="text" name="topicId" formControlName="topicId" />
+          </label>
+          <label>
+            Difficulty (optional)
+            <select name="difficulty" formControlName="difficulty">
+              <option value="">Any</option>
+              @for (difficulty of difficulties; track difficulty) {
+                <option [value]="difficulty">{{ difficulty }}</option>
+              }
+            </select>
+          </label>
+          <label>
+            Count
+            <input type="number" name="count" formControlName="count" min="1" />
+          </label>
+          <button
+            type="button"
+            data-testid="remove-row-button"
+            [disabled]="rows.length <= 1"
+            (click)="removeRow(i)"
+          >
+            Remove row
+          </button>
+
+          @if (shortageForRow(i); as shortage) {
+            <p class="exam-blueprint__row-shortage" role="alert" data-testid="row-shortage">
+              {{ shortage.courseName }}{{ shortage.topicName ? '/' + shortage.topicName : '' }}: requested
+              {{ shortage.requested }}, only {{ shortage.available }} available.
+            </p>
+          }
+        </div>
+      }
+    </fieldset>
+
+    <button type="button" data-testid="add-row-button" (click)="addRow()">Add row</button>
+
+    <button type="submit" [disabled]="submitting()">Create exam</button>
+  </form>
+
+  @if (errorMessage()) {
+    <p class="exam-blueprint__error" role="alert">{{ errorMessage() }}</p>
+  }
+
+  @if (shortages().length > 0) {
+    <ul class="exam-blueprint__shortages" data-testid="shortage-list">
+      @for (shortage of shortages(); track shortage.blueprintRowId) {
+        <li data-testid="shortage-item">
+          {{ shortage.courseName }}{{ shortage.topicName ? '/' + shortage.topicName : '' }}: requested
+          {{ shortage.requested }}, only {{ shortage.available }} available.
+        </li>
+      }
+    </ul>
+  }
+</section>
