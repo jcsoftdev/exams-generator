@@ -151,6 +151,84 @@ describe("BankRepository", () => {
     expect(assetRow).toBeDefined();
   });
 
+  async function createStructuredQuestion(params: {
+    tenantId: string | null;
+    createdBy: string;
+    topicId?: string;
+    difficulty?: Difficulty;
+    gradeLevel?: string;
+  }): Promise<string> {
+    const { id } = await repository.createStructuredQuestion({
+      tenantId: params.tenantId,
+      topicId: params.topicId ?? topicId,
+      difficulty: params.difficulty ?? Difficulty.Easy,
+      gradeLevel: params.gradeLevel ?? "primaria_1",
+      bodyTypst: "$x + 1 = 2$, resuelve para $x$",
+      alternatives: ["1", "2", "3"],
+      correctAnswer: "0",
+      figureCode: undefined,
+      createdBy: params.createdBy,
+    });
+    createdQuestionIds.push(id);
+    return id;
+  }
+
+  it("createStructuredQuestion() persists a question row with status='approved', type='structured' and no backing asset", async () => {
+    const id = await createStructuredQuestion({ tenantId: null, createdBy: centralUserId });
+
+    const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+    expect(row?.status).toBe("approved");
+    expect(row?.type).toBe("structured");
+    expect(row?.imageAssetId).toBeNull();
+    expect(row?.bodyTypst).toBe("$x + 1 = 2$, resuelve para $x$");
+    expect(row?.alternatives).toEqual(["1", "2", "3"]);
+    expect(row?.correctAnswer).toBe("0");
+  });
+
+  it("createStructuredQuestion() persists figureCode when provided", async () => {
+    const { id } = await repository.createStructuredQuestion({
+      tenantId: null,
+      topicId,
+      difficulty: Difficulty.Easy,
+      gradeLevel: "primaria_1",
+      bodyTypst: "figura triangular",
+      alternatives: ["a", "b"],
+      correctAnswer: "1",
+      figureCode: "cetz.canvas({ /* triangle */ })",
+      createdBy: centralUserId,
+    });
+    createdQuestionIds.push(id);
+
+    const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+    expect(row?.figureCode).toBe("cetz.canvas({ /* triangle */ })");
+  });
+
+  it("listQuestions() and findQuestionById() surface structured fields (bodyTypst/alternatives/figureCode/type)", async () => {
+    const id = await createStructuredQuestion({ tenantId: null, createdBy: centralUserId });
+
+    const list = await repository.listQuestions({ currentTenantId: null });
+    const listed = list.find((q) => q.id === id);
+    expect(listed).toBeDefined();
+    expect(listed?.type).toBe("structured");
+    expect(listed?.bodyTypst).toBe("$x + 1 = 2$, resuelve para $x$");
+    expect(listed?.alternatives).toEqual(["1", "2", "3"]);
+    expect(listed?.imageAssetId).toBeNull();
+
+    const byId = await repository.findQuestionById(id, null);
+    expect(byId?.type).toBe("structured");
+    expect(byId?.bodyTypst).toBe("$x + 1 = 2$, resuelve para $x$");
+  });
+
+  it("listQuestions() surfaces type='image' with null structured fields for image questions", async () => {
+    const id = await createQuestion({ tenantId: null, createdBy: centralUserId });
+
+    const list = await repository.listQuestions({ currentTenantId: null });
+    const listed = list.find((q) => q.id === id);
+    expect(listed?.type).toBe("image");
+    expect(listed?.bodyTypst).toBeNull();
+    expect(listed?.alternatives).toBeNull();
+  });
+
   describe("listQuestions() visibility", () => {
     it("a central (tenantId=null) question is visible to every tenant", async () => {
       const centralId = await createQuestion({ tenantId: null, createdBy: centralUserId });

@@ -15,6 +15,7 @@ const VALID_FILE = {
 function buildDeps() {
   const repository = {
     createImageQuestion: jest.fn().mockResolvedValue({ id: "question-1" }),
+    createStructuredQuestion: jest.fn().mockResolvedValue({ id: "question-2" }),
     listQuestions: jest.fn().mockResolvedValue([] as QuestionListItem[]),
     findQuestionById: jest.fn().mockResolvedValue(undefined as QuestionListItem | undefined),
   } as unknown as jest.Mocked<BankRepository>;
@@ -92,6 +93,69 @@ describe("BankService.createImageQuestion", () => {
   });
 });
 
+describe("BankService.createStructuredQuestion", () => {
+  const VALID_DTO = {
+    courseId: "course-1",
+    topicId: "topic-1",
+    difficulty: Difficulty.Medium,
+    gradeLevel: "primaria_2",
+    bodyTypst: "$x + 1 = 2$",
+    alternatives: ["1", "2", "3"],
+    correctAnswer: "1",
+    figureCode: undefined,
+  };
+
+  it("persists the structured question with the requester's tenant, no storage upload involved", async () => {
+    const { service, repository, storage } = buildDeps();
+
+    const result = await service.createStructuredQuestion(TEACHER_USER, VALID_DTO);
+
+    expect(storage.put).not.toHaveBeenCalled();
+    expect(repository.createStructuredQuestion).toHaveBeenCalledWith(
+      expect.objectContaining({
+        tenantId: "tenant-1",
+        topicId: "topic-1",
+        difficulty: Difficulty.Medium,
+        gradeLevel: "primaria_2",
+        bodyTypst: "$x + 1 = 2$",
+        alternatives: ["1", "2", "3"],
+        correctAnswer: "1",
+        createdBy: "teacher-1",
+      }),
+    );
+    expect(result).toEqual({ id: "question-2" });
+  });
+
+  it("persists tenantId=null when the requester is platform staff", async () => {
+    const { service, repository } = buildDeps();
+
+    await service.createStructuredQuestion(STAFF_USER, VALID_DTO);
+
+    expect(repository.createStructuredQuestion).toHaveBeenCalledWith(
+      expect.objectContaining({ tenantId: null, createdBy: "staff-1" }),
+    );
+  });
+
+  it("rejects with BadRequestException (aggregating every error) when required fields are missing", async () => {
+    const { service, repository } = buildDeps();
+
+    await expect(
+      service.createStructuredQuestion(TEACHER_USER, {
+        courseId: undefined,
+        topicId: undefined,
+        difficulty: undefined,
+        gradeLevel: undefined,
+        bodyTypst: undefined,
+        alternatives: undefined,
+        correctAnswer: undefined,
+        figureCode: undefined,
+      }),
+    ).rejects.toBeInstanceOf(BadRequestException);
+
+    expect(repository.createStructuredQuestion).not.toHaveBeenCalled();
+  });
+});
+
 describe("BankService.listQuestions", () => {
   it("scopes the repository query to the requester's own tenant", async () => {
     const { service, repository } = buildDeps();
@@ -123,7 +187,11 @@ describe("BankService.getQuestionById", () => {
     difficulty: Difficulty.Easy,
     gradeLevel: "primaria_1",
     correctAnswer: "a",
+    type: "image",
     imageAssetId: "asset-1",
+    bodyTypst: null,
+    alternatives: null,
+    figureCode: null,
   };
 
   it("scopes the repository lookup to the requester's own tenant and returns the question", async () => {

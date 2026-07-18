@@ -139,6 +139,12 @@ describe("Bank module (e2e)", () => {
       .set("Authorization", `Bearer ${token}`);
   }
 
+  function structuredRequest(token: string) {
+    return request(app.getHttpServer())
+      .post("/bank/questions/structured")
+      .set("Authorization", `Bearer ${token}`);
+  }
+
   function listRequest(token: string) {
     return request(app.getHttpServer())
       .get("/bank/questions")
@@ -298,6 +304,84 @@ describe("Bank module (e2e)", () => {
     const ids = response.body.map((q: { id: string }) => q.id);
     expect(ids).toContain(target.body.id);
     expect(ids).not.toContain(nonMatching.body.id);
+  });
+
+  it("POST /bank/questions/structured — creates a structured question with status=approved and surfaces its fields via GET", async () => {
+    const response = await structuredRequest(staffToken)
+      .send({
+        courseId,
+        topicId,
+        difficulty: Difficulty.Medium,
+        gradeLevel: "secundaria_1",
+        bodyTypst: "$x + 1 = 2$, resuelve para $x$",
+        alternatives: ["1", "2", "3"],
+        correctAnswer: "0",
+      })
+      .expect(201);
+
+    expect(response.body.id).toBeDefined();
+    await trackCreatedQuestion(response.body.id);
+
+    const fetched = await getByIdRequest(staffToken, response.body.id).expect(200);
+    expect(fetched.body.type).toBe("structured");
+    expect(fetched.body.bodyTypst).toBe("$x + 1 = 2$, resuelve para $x$");
+    expect(fetched.body.alternatives).toEqual(["1", "2", "3"]);
+  });
+
+  it("POST /bank/questions/structured — a tenant-private structured question is NEVER visible to another tenant", async () => {
+    const response = await structuredRequest(tenantAToken)
+      .send({
+        courseId,
+        topicId,
+        difficulty: Difficulty.Easy,
+        gradeLevel: "primaria_1",
+        bodyTypst: "enunciado privado",
+        alternatives: ["a", "b"],
+        correctAnswer: "1",
+      })
+      .expect(201);
+    await trackCreatedQuestion(response.body.id);
+
+    const listForA = await listRequest(tenantAToken).expect(200);
+    const listForB = await listRequest(tenantBToken).expect(200);
+
+    expect(listForA.body.map((q: { id: string }) => q.id)).toContain(response.body.id);
+    expect(listForB.body.map((q: { id: string }) => q.id)).not.toContain(response.body.id);
+  });
+
+  it("POST /bank/questions/structured — rejects with 400 listing every missing field", async () => {
+    const response = await structuredRequest(staffToken).send({}).expect(400);
+
+    const bodyText = JSON.stringify(response.body);
+    for (const keyword of [
+      "courseId",
+      "topicId",
+      "difficulty",
+      "gradeLevel",
+      "bodyTypst",
+      "alternatives",
+      "correctAnswer",
+    ]) {
+      expect(bodyText).toContain(keyword);
+    }
+  });
+
+  it("POST /bank/questions/structured — rejects with 400 when correctAnswer is out of bounds", async () => {
+    await structuredRequest(staffToken)
+      .send({
+        courseId,
+        topicId,
+        difficulty: Difficulty.Easy,
+        gradeLevel: "primaria_1",
+        bodyTypst: "enunciado",
+        alternatives: ["a", "b"],
+        correctAnswer: "9",
+      })
+      .expect(400);
+  });
+
+  it("POST /bank/questions/structured — rejects with 401 when no Authorization header is sent", async () => {
+    await request(app.getHttpServer()).post("/bank/questions/structured").send({}).expect(401);
   });
 
   it("rejects with 400 listing every missing field (correctAnswer/course/topic/difficulty/gradeLevel)", async () => {

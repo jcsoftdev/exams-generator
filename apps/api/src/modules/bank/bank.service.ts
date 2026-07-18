@@ -6,6 +6,7 @@ import { StoragePort } from "../exams/domain/ports/storage.port";
 import { STORAGE_PORT } from "./bank.constants";
 import { BankRepository, QuestionListItem } from "./bank.repository";
 import { validateCreateImageQuestionInput } from "./domain/validate-create-image-question";
+import { validateCreateStructuredQuestionInput } from "./domain/validate-create-structured-question";
 
 export interface CreateImageQuestionDto {
   readonly courseId: string | undefined;
@@ -14,6 +15,17 @@ export interface CreateImageQuestionDto {
   readonly gradeLevel: string | undefined;
   readonly correctAnswer: string | undefined;
   readonly file: Express.Multer.File | undefined;
+}
+
+export interface CreateStructuredQuestionDto {
+  readonly courseId: string | undefined;
+  readonly topicId: string | undefined;
+  readonly difficulty: string | undefined;
+  readonly gradeLevel: string | undefined;
+  readonly bodyTypst: string | undefined;
+  readonly alternatives: readonly string[] | undefined;
+  readonly correctAnswer: string | undefined;
+  readonly figureCode: string | undefined;
 }
 
 export interface ListQuestionsQuery {
@@ -64,6 +76,46 @@ export class BankService {
       correctAnswer: dto.correctAnswer as string,
       createdBy: user.sub,
       image: { storageKey, mime: file.mimetype },
+    });
+  }
+
+  /**
+   * Manual structured-question creation (Lane D2). No storage upload — the
+   * statement/alternatives/figure are stored directly on the question row.
+   * `status = 'approved'` for the same reason as `createImageQuestion`: a
+   * manually-created structured question is curated by definition. The
+   * AI-generated draft flow (`status = 'draft'`) is a separate lane, out of
+   * scope here.
+   */
+  async createStructuredQuestion(
+    user: AuthTokenPayload,
+    dto: CreateStructuredQuestionDto,
+  ): Promise<{ id: string }> {
+    const validation = validateCreateStructuredQuestionInput({
+      courseId: dto.courseId,
+      topicId: dto.topicId,
+      difficulty: dto.difficulty,
+      gradeLevel: dto.gradeLevel,
+      bodyTypst: dto.bodyTypst,
+      alternatives: dto.alternatives,
+      correctAnswer: dto.correctAnswer,
+      figureCode: dto.figureCode,
+    });
+
+    if (!validation.ok) {
+      throw new BadRequestException(validation.errors);
+    }
+
+    return this.repository.createStructuredQuestion({
+      tenantId: user.tenantId,
+      topicId: dto.topicId as string,
+      difficulty: dto.difficulty as Difficulty,
+      gradeLevel: dto.gradeLevel as string,
+      bodyTypst: dto.bodyTypst as string,
+      alternatives: dto.alternatives as readonly string[],
+      correctAnswer: dto.correctAnswer as string,
+      figureCode: dto.figureCode,
+      createdBy: user.sub,
     });
   }
 
