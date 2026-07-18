@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Difficulty } from '@exams-generator/shared';
+import { TagComponent } from '../../../ui/tag/tag.component';
 import { AiService } from '../ai.service';
 import { GRADE_LEVELS, GRADE_LEVEL_LABELS, GenerateQuestionsResult } from '../ai.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
@@ -17,7 +18,7 @@ import { Course, Topic } from '../../taxonomy/taxonomy.models';
  */
 @Component({
   selector: 'app-ai-generate',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, TagComponent],
   templateUrl: './ai-generate.component.html',
 })
 export class AiGenerateComponent {

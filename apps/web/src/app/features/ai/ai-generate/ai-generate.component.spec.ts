@@ -149,6 +149,40 @@ describe('AiGenerateComponent', () => {
     expect(failures[0].textContent).toContain('invalid Typst markup');
   });
 
+  it('renders both successes and failures distinctly on a partial-success response, never collapsing them (AG-R1)', () => {
+    const response: GenerateQuestionsResult = {
+      created: [{ id: 'q1' }, { id: 'q2' }, { id: 'q3' }, { id: 'q4' }],
+      failed: [{ index: 4, error: 'invalid Typst markup' }],
+    };
+    const { compiled, fillForm, submit } = setup(() => of(response));
+
+    fillForm({});
+    submit();
+
+    const successes = compiled.querySelectorAll('[data-testid="generate-success"]');
+    expect(successes.length).toBe(4);
+    const failures = compiled.querySelectorAll('[data-testid="generate-failure"]');
+    expect(failures.length).toBe(1);
+  });
+
+  it('marks every created question as "borrador" (draft), never as "aprobada" (AG-R2)', () => {
+    const response: GenerateQuestionsResult = {
+      created: [{ id: 'q1' }, { id: 'q2' }],
+      failed: [],
+    };
+    const { compiled, fillForm, submit } = setup(() => of(response));
+
+    fillForm({});
+    submit();
+
+    const successes = compiled.querySelectorAll('[data-testid="generate-success"]');
+    expect(successes.length).toBe(2);
+    for (const success of Array.from(successes)) {
+      expect(success.textContent).toMatch(/borrador/i);
+      expect(success.textContent).not.toMatch(/aprobada/i);
+    }
+  });
+
   it('shows an error message when the request fails', () => {
     const serverError = new HttpErrorResponse({ status: 500 });
     const { compiled, fillForm, submit } = setup(() => throwError(() => serverError));

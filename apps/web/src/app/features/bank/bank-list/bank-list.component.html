@@ -1,65 +1,75 @@
-<section class="bank-list">
-  <h1>Banco de preguntas</h1>
+<section class="bank-list p-6" data-testid="bank-list">
+  <h1 class="mb-4 text-xl font-semibold text-n900">Banco de preguntas</h1>
 
-  <form [formGroup]="filtersForm" (ngSubmit)="search()" class="bank-list__filters">
-    <label>
-      Curso
-      <input type="text" name="courseId" formControlName="courseId" />
-    </label>
-    <label>
-      Tema
-      <input type="text" name="topicId" formControlName="topicId" />
-    </label>
-    <label>
-      Dificultad
-      <select name="difficulty" formControlName="difficulty">
-        <option value="">Todas</option>
-        @for (difficulty of difficulties; track difficulty) {
-          <option [value]="difficulty">{{ difficulty }}</option>
-        }
-      </select>
-    </label>
-    <label>
-      Grado
-      <select name="gradeLevel" formControlName="gradeLevel">
-        <option value="">Todos</option>
-        @for (gradeLevel of gradeLevels; track gradeLevel) {
-          <option [value]="gradeLevel">{{ gradeLevelLabels[gradeLevel] }}</option>
-        }
-      </select>
-    </label>
-    <button type="submit">Filtrar</button>
-  </form>
-
-  @if (errorMessage()) {
-    <p class="bank-list__error" role="alert">{{ errorMessage() }}</p>
-  }
+  <div class="mb-4 flex flex-wrap items-end gap-3" data-testid="bank-filters">
+    <ui-input
+      label="Curso"
+      name="courseId"
+      [value]="courseId()"
+      (valueChange)="courseId.set($event)"
+    ></ui-input>
+    <ui-input
+      label="Tema"
+      name="topicId"
+      [value]="topicId()"
+      (valueChange)="topicId.set($event)"
+    ></ui-input>
+    <ui-select
+      label="Dificultad"
+      placeholder="Todas"
+      [options]="difficultyOptions"
+      [value]="difficulty()"
+      (valueChange)="difficulty.set($event)"
+    ></ui-select>
+    <ui-select
+      label="Grado"
+      placeholder="Todos"
+      [options]="gradeLevelOptions"
+      [value]="gradeLevel()"
+      (valueChange)="gradeLevel.set($event)"
+    ></ui-select>
+    <ui-button variant="primary" (clicked)="search()">Filtrar</ui-button>
+  </div>
 
   @if (loading()) {
-    <p>Cargando...</p>
+    <div data-testid="loading-indicator" class="py-6 text-sm text-n600">Cargando preguntas…</div>
+  } @else if (errorMessage()) {
+    <div data-testid="error-state" class="rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text">
+      <p>{{ errorMessage() }}</p>
+      <ui-button data-testid="retry-button" variant="ghost" (clicked)="search()">Reintentar</ui-button>
+    </div>
+  } @else if (questions().length === 0 && bankHasAnyQuestions()) {
+    <div data-testid="empty-no-results">
+      <ui-empty-state message="Sin resultados para estos filtros." icon="🔍">
+        <ui-button cta variant="ghost" (clicked)="search()">Limpiar filtros</ui-button>
+      </ui-empty-state>
+    </div>
+  } @else if (questions().length === 0) {
+    <div data-testid="empty-bank">
+      <ui-empty-state message="Banco vacío: todavía no hay preguntas cargadas." icon="📭">
+        <ui-button cta variant="primary" (clicked)="goToUpload()">Subir preguntas</ui-button>
+      </ui-empty-state>
+    </div>
   } @else {
-    <ul class="bank-list__questions">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3" data-testid="bank-questions">
       @for (question of questions(); track question.id) {
-        <li class="bank-list__question" data-testid="bank-question">
+        <div class="rounded-card border border-n200 bg-white p-4" data-testid="bank-question">
           @if (imageUrl(question); as url) {
-            <img [src]="url" [alt]="'Pregunta ' + question.id" />
+            <img [src]="url" [alt]="'Pregunta ' + question.id" class="mb-2 max-h-32 w-full rounded-field object-cover" />
           }
-          <dl>
-            <dt>Respuesta</dt>
+          <ui-tag [variant]="tagVariantFor(question.difficulty)">{{ difficultyLabels[question.difficulty] }}</ui-tag>
+          <dl class="mt-2 text-sm text-n700">
+            <dt class="font-medium">Respuesta</dt>
             <dd>{{ question.correctAnswer }}</dd>
-            <dt>Curso</dt>
+            <dt class="font-medium">Curso</dt>
             <dd>{{ question.courseId }}</dd>
-            <dt>Tema</dt>
+            <dt class="font-medium">Tema</dt>
             <dd>{{ question.topicId }}</dd>
-            <dt>Dificultad</dt>
-            <dd>{{ question.difficulty }}</dd>
-            <dt>Grado</dt>
+            <dt class="font-medium">Grado</dt>
             <dd>{{ question.gradeLevel }}</dd>
           </dl>
-        </li>
-      } @empty {
-        <li>No se encontraron preguntas.</li>
+        </div>
       }
-    </ul>
+    </div>
   }
 </section>

@@ -56,6 +56,18 @@
   @if (result(); as result) {
     <div class="ai-generate__result" data-testid="generate-result">
       <p>{{ result.created.length }} creadas, {{ result.failed.length }} fallidas.</p>
+
+      @if (result.created.length > 0) {
+        <ul class="ai-generate__created">
+          @for (created of result.created; track created.id) {
+            <li data-testid="generate-success">
+              Pregunta {{ created.id }}
+              <ui-tag variant="ai">Borrador</ui-tag>
+            </li>
+          }
+        </ul>
+      }
+
       @if (result.failed.length > 0) {
         <ul class="ai-generate__failed">
           @for (failure of result.failed; track failure.index) {

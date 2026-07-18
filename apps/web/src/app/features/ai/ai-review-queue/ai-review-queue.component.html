@@ -72,7 +72,7 @@
             <button
               type="button"
               data-testid="approve-button"
-              [disabled]="isSaving(draft.id)"
+              [disabled]="!canApprove(draft.id)"
               (click)="onApprove(draft)"
             >
               Aprobar
@@ -88,7 +88,11 @@
           </div>
         </li>
       } @empty {
-        <li>No hay preguntas borrador para revisar.</li>
+        <li data-testid="empty-queue-item">
+          <div data-testid="empty-queue">
+            <ui-empty-state message="No hay preguntas borrador para revisar." icon="✅"></ui-empty-state>
+          </div>
+        </li>
       }
     </ul>
   }

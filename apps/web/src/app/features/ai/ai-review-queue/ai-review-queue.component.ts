@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
+import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
 import { AiService } from '../ai.service';
 import { DraftQuestion, EditDraftPayload } from '../ai.models';
 import { extractErrorMessage } from '../extract-error-message';
@@ -19,7 +20,7 @@ import { extractErrorMessage } from '../extract-error-message';
  */
 @Component({
   selector: 'app-ai-review-queue',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, EmptyStateComponent],
   templateUrl: './ai-review-queue.component.html',
 })
 export class AiReviewQueueComponent implements OnInit {
@@ -79,6 +80,11 @@ export class AiReviewQueueComponent implements OnInit {
 
   protected errorFor(id: string): string | null {
     return this.editErrors()[id] ?? null;
+  }
+
+  /** Approve stays disabled while a draft carries an unresolved inline validation error (RQ-R2) — cleared by a successful save. */
+  protected canApprove(id: string): boolean {
+    return !this.isSaving(id) && !this.errorFor(id);
   }
 
   protected onSave(draft: DraftQuestion, index: number): void {

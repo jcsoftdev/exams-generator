@@ -1,32 +1,51 @@
-<section class="exam-versions-panel">
-  <h1>Exam Versions</h1>
-
-  <form [formGroup]="form" (ngSubmit)="generate()" class="exam-versions-panel__controls">
-    <label>
-      Number of versions
-      <input type="number" name="versionCount" min="1" formControlName="versionCount" />
-    </label>
-    <button type="submit" [disabled]="loading()">Generate</button>
-  </form>
-
-  @if (errorMessage()) {
-    <p class="exam-versions-panel__error" role="alert">{{ errorMessage() }}</p>
-  }
+<section class="exam-versions-panel p-6" data-testid="exam-versions-panel">
+  <header class="mb-4 flex items-center justify-between">
+    <h1 class="text-xl font-semibold text-n900">Versiones del examen</h1>
+    <span data-testid="download-zip" [title]="'Disponible próximamente'">
+      <ui-button variant="ghost" [disabled]="true">Descargar todo (ZIP)</ui-button>
+    </span>
+  </header>
 
   @if (loading()) {
-    <p>Generating versions...</p>
+    <div data-testid="loading-indicator" class="py-6 text-sm text-n600">Cargando versiones…</div>
+  } @else if (notFound()) {
+    <div data-testid="not-found-state" class="rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text">
+      No se encontró este examen.
+    </div>
+  } @else if (errorMessage()) {
+    <div data-testid="error-state" class="rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text">
+      {{ errorMessage() }}
+    </div>
+  } @else if (versions().length === 0) {
+    <div data-testid="empty-versions">
+      <ui-empty-state message="Todavía no se generaron versiones para este examen." icon="🗂️"></ui-empty-state>
+    </div>
   } @else {
-    <ul class="exam-versions-panel__versions">
+    <ul class="flex flex-col gap-3" data-testid="exam-versions-list">
       @for (version of versions(); track version.code) {
-        <li class="exam-versions-panel__version" data-testid="version-row">
-          <span class="exam-versions-panel__code">Version {{ version.code }}</span>
-          <a [href]="version.pdfUrl" download data-testid="version-pdf-link">Download exam PDF</a>
-          <a [href]="version.answerSheetUrl" download data-testid="version-answer-link">
-            Download answer key
-          </a>
+        <li
+          class="flex items-center justify-between rounded-card border border-n200 bg-white px-4 py-3"
+          data-testid="version-row"
+        >
+          <span class="font-medium text-n900">Forma {{ version.code }}</span>
+          <div class="flex gap-4">
+            @if (downloadUrlFor(version.pdfUrl); as url) {
+              <a [href]="url" download data-testid="version-pdf-link" class="text-sm text-primary-500 underline">
+                Examen (PDF)
+              </a>
+            }
+            @if (downloadUrlFor(version.answerSheetUrl); as url) {
+              <a
+                [href]="url"
+                download
+                data-testid="version-answer-link"
+                class="text-sm text-primary-500 underline"
+              >
+                Hoja de claves
+              </a>
+            }
+          </div>
         </li>
-      } @empty {
-        <li>No versions generated yet.</li>
       }
     </ul>
   }

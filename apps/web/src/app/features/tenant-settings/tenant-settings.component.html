@@ -1,0 +1,39 @@
+<section class="tenant-settings p-6" data-testid="tenant-settings">
+  <h1 class="mb-4 text-xl font-semibold text-n900">Configuración del colegio</h1>
+
+  @if (loading()) {
+    <div data-testid="loading-indicator" class="py-6 text-sm text-n600">Cargando configuración…</div>
+  } @else if (loadError()) {
+    <div data-testid="load-error" class="rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text">
+      {{ loadError() }}
+    </div>
+  } @else {
+    <div class="flex max-w-md flex-col gap-4">
+      <ui-input label="Nombre del colegio" name="name" [value]="name()" (valueChange)="name.set($event)"></ui-input>
+
+      <label class="flex flex-col gap-2 text-sm font-medium text-n700">
+        Logo
+        <input type="file" accept="image/*" (change)="onLogoSelected($event)" />
+      </label>
+
+      @if (logoPreviewUrl(); as url) {
+        <img [src]="url" alt="Vista previa del logo" data-testid="logo-preview" class="h-24 w-24 rounded-field object-cover" />
+      }
+
+      @if (saveError()) {
+        <p data-testid="save-error" class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">
+          {{ saveError() }}
+        </p>
+      }
+      @if (saveSuccess()) {
+        <p data-testid="save-success" class="rounded-field bg-easy-bg px-3 py-2 text-sm text-easy-text" role="status">
+          Configuración guardada.
+        </p>
+      }
+
+      <span data-testid="save-button">
+        <ui-button variant="primary" [loading]="saving()" (clicked)="onSave()">Guardar</ui-button>
+      </span>
+    </div>
+  }
+</section>

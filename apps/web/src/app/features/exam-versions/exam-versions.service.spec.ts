@@ -4,7 +4,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { ExamVersionsService } from './exam-versions.service';
 import { environment } from '../../../environments/environment';
-import { GeneratedVersionResult } from './exam-versions.models';
+import { ExamVersion, GeneratedVersionResult } from './exam-versions.models';
 
 describe('ExamVersionsService', () => {
   let service: ExamVersionsService;
@@ -67,6 +67,59 @@ describe('ExamVersionsService', () => {
       expect((capturedError as { error: { questionId: string } }).error.questionId).toBe(
         'question-9',
       );
+    });
+  });
+
+  describe('listVersions', () => {
+    it('GETs /exams/:examId/versions (B4)', () => {
+      service.listVersions('exam-1').subscribe();
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1/versions`);
+      expect(req.request.method).toBe('GET');
+      req.flush([]);
+    });
+
+    it('resolves with the version list returned by the API (relative /assets/:id paths, DECISION B4-A)', () => {
+      const versions: ExamVersion[] = [
+        { code: 'A', pdfUrl: '/assets/pdf-a', answerSheetUrl: '/assets/answer-a' },
+        { code: 'B', pdfUrl: '/assets/pdf-b', answerSheetUrl: '/assets/answer-b' },
+      ];
+      let result: ExamVersion[] | undefined;
+
+      service.listVersions('exam-1').subscribe((response) => (result = response));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1/versions`);
+      req.flush(versions);
+
+      expect(result).toEqual(versions);
+    });
+
+    it('propagates a 404 when the exam does not exist or belongs to another tenant', () => {
+      let capturedError: unknown;
+
+      service.listVersions('missing-exam').subscribe({ error: (error) => (capturedError = error) });
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/missing-exam/versions`);
+      req.flush({ message: 'Not Found' }, { status: 404, statusText: 'Not Found' });
+
+      expect((capturedError as { status: number }).status).toBe(404);
+    });
+  });
+
+  describe('downloadAsset', () => {
+    it('GETs a relative asset path prefixed with apiBaseUrl, as a blob (mirrors BankService.fetchQuestionImage)', () => {
+      let result: Blob | undefined;
+
+      service.downloadAsset('/assets/pdf-a').subscribe((response) => (result = response));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/assets/pdf-a`);
+      expect(req.request.method).toBe('GET');
+      expect(req.request.responseType).toBe('blob');
+
+      const blob = new Blob(['fake-pdf-bytes'], { type: 'application/pdf' });
+      req.flush(blob);
+
+      expect(result).toEqual(blob);
     });
   });
 });

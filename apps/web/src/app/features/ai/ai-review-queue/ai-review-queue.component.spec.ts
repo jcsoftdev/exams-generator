@@ -145,4 +145,51 @@ describe('AiReviewQueueComponent', () => {
 
     expect(firstItem.textContent).toMatch(/typst compile failed: unexpected token/i);
   });
+
+  it('renders an empty state (not an empty table) when there are zero pending drafts (RQ-R1)', () => {
+    const { compiled } = setup({ listDraftsImpl: () => of([]) });
+
+    expect(compiled.querySelector('[data-testid="draft-item"]')).toBeFalsy();
+    expect(compiled.querySelector('[data-testid="empty-queue"]')).toBeTruthy();
+    expect(compiled.textContent).toMatch(/no hay preguntas borrador/i);
+  });
+
+  it('disables Approve on a draft with an inline validation error until the edit is fixed and saved (RQ-R2)', () => {
+    const badRequest = new HttpErrorResponse({
+      status: 400,
+      error: { statusCode: 400, message: 'Typst compile failed: unexpected token' },
+    });
+    const editDraft = vi
+      .fn()
+      .mockReturnValueOnce(throwError(() => badRequest))
+      .mockReturnValueOnce(of(DRAFTS[0]));
+    const { compiled, fixture } = setup({ editImpl: editDraft });
+
+    const items = compiled.querySelectorAll('[data-testid="draft-item"]');
+    const firstItem = items[0] as HTMLElement;
+    const saveButton = firstItem.querySelector<HTMLButtonElement>('[data-testid="save-button"]')!;
+    const approveButton = firstItem.querySelector<HTMLButtonElement>('[data-testid="approve-button"]')!;
+
+    saveButton.click();
+    fixture.detectChanges();
+
+    expect(approveButton.disabled).toBe(true);
+
+    saveButton.click();
+    fixture.detectChanges();
+
+    expect(approveButton.disabled).toBe(false);
+  });
+
+  it('only exposes Approve/Reject actions on drafts (every listed item is a draft, RQ-R3)', () => {
+    const { compiled } = setup({});
+
+    const approveButtons = compiled.querySelectorAll<HTMLButtonElement>('[data-testid="approve-button"]');
+    const rejectButtons = compiled.querySelectorAll<HTMLButtonElement>('[data-testid="reject-button"]');
+    expect(approveButtons.length).toBe(2);
+    expect(rejectButtons.length).toBe(2);
+    for (const button of Array.from(approveButtons)) {
+      expect(button.disabled).toBe(false);
+    }
+  });
 });

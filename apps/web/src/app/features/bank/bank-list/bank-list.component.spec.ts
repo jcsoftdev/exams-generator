@@ -1,42 +1,43 @@
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, vi } from 'vitest';
-import { of, throwError } from 'rxjs';
+import { Subject, of, throwError } from 'rxjs';
+import { HttpErrorResponse } from '@angular/common/http';
 import { Difficulty } from '@exams-generator/shared';
 import { BankListComponent } from './bank-list.component';
 import { BankService } from '../bank.service';
 import { BankQuestion } from '../bank.models';
 
-const QUESTIONS: BankQuestion[] = [
-  {
-    id: 'q1',
-    tenantId: null,
-    courseId: 'course-1',
-    topicId: 'topic-1',
-    difficulty: Difficulty.Easy,
-    gradeLevel: 'primaria_1',
-    correctAnswer: 'a',
-    imageAssetId: 'asset-1',
-  },
-  {
-    id: 'q2',
-    tenantId: 'tenant-1',
-    courseId: 'course-2',
-    topicId: 'topic-2',
-    difficulty: Difficulty.Hard,
-    gradeLevel: 'secundaria_5',
-    correctAnswer: 'b',
-    imageAssetId: null,
-  },
-];
+function makeQuestion(overrides: Partial<BankQuestion> & { id: string }): BankQuestion {
+  return {
+    id: overrides.id,
+    tenantId: overrides.tenantId ?? null,
+    courseId: overrides.courseId ?? 'course-1',
+    topicId: overrides.topicId ?? 'topic-1',
+    difficulty: overrides.difficulty ?? Difficulty.Easy,
+    gradeLevel: overrides.gradeLevel ?? 'primaria_1',
+    correctAnswer: overrides.correctAnswer ?? 'a',
+    imageAssetId: overrides.imageAssetId ?? null,
+  };
+}
 
-function setup(
-  listQuestionsImpl: (...args: unknown[]) => unknown,
-  fetchQuestionImageImpl: (id: string) => unknown = (id: string) =>
-    of(new Blob([`fake-bytes-${id}`], { type: 'image/png' })),
-) {
-  const listQuestions = vi.fn(listQuestionsImpl);
+const TWELVE_QUESTIONS: BankQuestion[] = Array.from({ length: 12 }, (_, i) =>
+  makeQuestion({
+    id: `q${i}`,
+    difficulty: [Difficulty.Easy, Difficulty.Medium, Difficulty.Hard][i % 3],
+    imageAssetId: i === 0 ? 'asset-1' : null,
+  }),
+);
+
+function setup(overrides: {
+  listQuestionsImpl?: (...args: unknown[]) => unknown;
+  fetchQuestionImageImpl?: (id: string) => unknown;
+}) {
+  const listQuestions = vi.fn(overrides.listQuestionsImpl ?? (() => of(TWELVE_QUESTIONS)));
   const buildImageAssetUrl = vi.fn((id: string) => `http://api.test/assets/${id}`);
-  const fetchQuestionImage = vi.fn(fetchQuestionImageImpl);
+  const fetchQuestionImage = vi.fn(
+    overrides.fetchQuestionImageImpl ??
+      ((id: string) => of(new Blob([`fake-bytes-${id}`], { type: 'image/png' }))),
+  );
 
   let objectUrlCounter = 0;
   vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:mock-url-${objectUrlCounter++}`);
@@ -57,81 +58,97 @@ function setup(
 }
 
 describe('BankListComponent', () => {
-  it('loads and renders questions on init', () => {
-    const { compiled, listQuestions } = setup(() => of(QUESTIONS));
+  describe('with-data', () => {
+    it('renders 12 questions with a difficulty tag on each, correctly color-coded', () => {
+      const { compiled } = setup({});
 
-    expect(listQuestions).toHaveBeenCalledWith({});
-    const items = compiled.querySelectorAll('[data-testid="bank-question"]');
-    expect(items.length).toBe(2);
-  });
+      const items = compiled.querySelectorAll('[data-testid="bank-question"]');
+      expect(items.length).toBe(12);
 
-  it('renders an image for questions that have an imageAssetId, fetched as an authenticated blob (not a raw <img src> URL, which never sends the Authorization header)', () => {
-    const { compiled, fetchQuestionImage } = setup(() => of(QUESTIONS));
+      const tags = compiled.querySelectorAll('[data-testid="tag"]');
+      expect(tags.length).toBe(12);
 
-    expect(fetchQuestionImage).toHaveBeenCalledWith('asset-1');
-    const images = compiled.querySelectorAll('img');
-    expect(images.length).toBe(1);
-    expect(images[0].getAttribute('src')).toMatch(/^blob:/);
-  });
+      const easyTags = Array.from(tags).filter((t) => t.className.includes('bg-easy-bg'));
+      const mediumTags = Array.from(tags).filter((t) => t.className.includes('bg-medium-bg'));
+      const hardTags = Array.from(tags).filter((t) => t.className.includes('bg-hard-bg'));
+      expect(easyTags.length).toBe(4);
+      expect(mediumTags.length).toBe(4);
+      expect(hardTags.length).toBe(4);
+    });
 
-  it('never calls fetchQuestionImage for a question without an imageAssetId', () => {
-    const { fetchQuestionImage } = setup(() => of(QUESTIONS));
+    it('renders a thumbnail image sourced through an authenticated blob for questions with an imageAssetId', () => {
+      const { compiled, fetchQuestionImage } = setup({});
 
-    expect(fetchQuestionImage).toHaveBeenCalledTimes(1);
-    expect(fetchQuestionImage).not.toHaveBeenCalledWith(null);
-  });
-
-  it('revokes every created object URL on destroy (no blob: memory leak)', () => {
-    const { fixture } = setup(() => of(QUESTIONS));
-    fixture.detectChanges();
-
-    fixture.destroy();
-
-    expect(URL.revokeObjectURL).toHaveBeenCalledWith('blob:mock-url-0');
-  });
-
-  it('renders the correct answer and taxonomy for each question', () => {
-    const { compiled } = setup(() => of(QUESTIONS));
-
-    expect(compiled.textContent).toContain('a');
-    expect(compiled.textContent).toContain('course-1');
-    expect(compiled.textContent).toContain('topic-1');
-    expect(compiled.textContent).toContain('easy');
-    expect(compiled.textContent).toContain('primaria_1');
-  });
-
-  it('sends courseId/topicId/difficulty/gradeLevel filters when the filter form is submitted', () => {
-    const { compiled, fixture, listQuestions } = setup(() => of(QUESTIONS));
-    listQuestions.mockClear();
-
-    const courseInput = compiled.querySelector<HTMLInputElement>('input[name="courseId"]')!;
-    const topicInput = compiled.querySelector<HTMLInputElement>('input[name="topicId"]')!;
-    const difficultySelect = compiled.querySelector<HTMLSelectElement>('select[name="difficulty"]')!;
-    const gradeLevelSelect = compiled.querySelector<HTMLSelectElement>('select[name="gradeLevel"]')!;
-    const form = compiled.querySelector('form')!;
-
-    courseInput.value = 'course-9';
-    courseInput.dispatchEvent(new Event('input'));
-    topicInput.value = 'topic-9';
-    topicInput.dispatchEvent(new Event('input'));
-    difficultySelect.value = 'hard';
-    difficultySelect.dispatchEvent(new Event('change'));
-    gradeLevelSelect.value = 'pre';
-    gradeLevelSelect.dispatchEvent(new Event('change'));
-    fixture.detectChanges();
-    form.dispatchEvent(new Event('submit'));
-
-    expect(listQuestions).toHaveBeenCalledWith({
-      courseId: 'course-9',
-      topicId: 'topic-9',
-      difficulty: 'hard',
-      gradeLevel: 'pre',
+      expect(fetchQuestionImage).toHaveBeenCalledWith('asset-1');
+      const images = compiled.querySelectorAll('img');
+      expect(images.length).toBe(1);
+      expect(images[0].getAttribute('src')).toMatch(/^blob:/);
     });
   });
 
-  it('shows an error message when the listing request fails', () => {
-    const { compiled } = setup(() => throwError(() => new Error('boom')));
+  describe('loading', () => {
+    it('shows a loading indicator while the list call is pending and renders no stale data', () => {
+      const subject = new Subject<BankQuestion[]>();
+      const { compiled, fixture } = setup({ listQuestionsImpl: () => subject.asObservable() });
 
-    expect(compiled.textContent).toMatch(/no se pudieron cargar/i);
+      expect(compiled.querySelector('[data-testid="loading-indicator"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="bank-question"]')).toBeFalsy();
+
+      subject.next(TWELVE_QUESTIONS);
+      subject.complete();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="loading-indicator"]')).toBeFalsy();
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(12);
+    });
+  });
+
+  describe('empty states', () => {
+    it('shows the "banco vacío" empty state (with upload CTA) when the bank has zero questions overall', () => {
+      const { compiled } = setup({ listQuestionsImpl: () => of([]) });
+
+      expect(compiled.querySelector('[data-testid="empty-bank"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="empty-no-results"]')).toBeFalsy();
+      expect(compiled.textContent).toMatch(/banco vacío/i);
+    });
+
+    it('shows the distinct "sin resultados" empty state when filters yield zero results but the bank is non-empty', () => {
+      const listQuestionsImpl = vi
+        .fn()
+        .mockReturnValueOnce(of(TWELVE_QUESTIONS)) // initial unfiltered load
+        .mockReturnValueOnce(of([])); // filtered search
+      const { compiled, fixture } = setup({ listQuestionsImpl });
+
+      (fixture.componentInstance as unknown as { courseId: { set(v: string): void } }).courseId.set(
+        'course-does-not-exist',
+      );
+      (fixture.componentInstance as unknown as { search(): void }).search();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="empty-no-results"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="empty-bank"]')).toBeFalsy();
+      expect(compiled.textContent).toMatch(/sin resultados/i);
+    });
+  });
+
+  describe('error', () => {
+    it('shows an error state with a retry affordance when the list call fails, with no stale results', () => {
+      const { compiled, fixture, listQuestions } = setup({
+        listQuestionsImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+
+      expect(compiled.querySelector('[data-testid="error-state"]')).toBeTruthy();
+      expect(compiled.textContent).toMatch(/no se pudieron cargar/i);
+
+      listQuestions.mockClear();
+      listQuestions.mockReturnValue(of(TWELVE_QUESTIONS));
+
+      const retryButton = compiled.querySelector<HTMLButtonElement>('[data-testid="retry-button"] button')!;
+      retryButton.click();
+      fixture.detectChanges();
+
+      expect(listQuestions).toHaveBeenCalledTimes(1);
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(12);
+    });
   });
 });

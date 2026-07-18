@@ -50,6 +50,12 @@ describe('app routes', () => {
     expect(reviewRoute).toBeTruthy();
   });
 
+  it('registers a tenant-settings route under the protected /app shell (additive, TS.2)', () => {
+    const appRoute = routes.find((route) => route.path === 'app');
+    const settingsRoute = appRoute?.children?.find((route) => route.path === 'settings');
+    expect(settingsRoute).toBeTruthy();
+  });
+
   it('redirects the empty path to /app', () => {
     const emptyRoute = routes.find((route) => route.path === '' && route.redirectTo);
     expect(emptyRoute?.redirectTo).toBe('app');

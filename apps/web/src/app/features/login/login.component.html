@@ -1,17 +1,31 @@
-<main class="login">
-  <h1>Iniciar sesión</h1>
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <label>
-      Correo electrónico
-      <input type="email" name="email" formControlName="email" autocomplete="username" />
-    </label>
-    <label>
-      Contraseña
-      <input type="password" name="password" formControlName="password" autocomplete="current-password" />
-    </label>
-    <button type="submit" [disabled]="submitting()">Iniciar sesión</button>
-  </form>
-  @if (errorMessage()) {
-    <p class="login__error" role="alert">{{ errorMessage() }}</p>
-  }
+<main class="login flex min-h-screen items-center justify-center bg-n50">
+  <div class="w-full max-w-sm rounded-card border border-n200 bg-white p-6">
+    <h1 class="mb-4 text-xl font-semibold text-n900">Iniciar sesión</h1>
+    <form (submit)="onFormSubmit($event)" class="flex flex-col gap-4">
+      <ui-input
+        label="Correo electrónico"
+        name="email"
+        type="email"
+        [value]="email()"
+        (valueChange)="email.set($event)"
+      ></ui-input>
+      <ui-input
+        label="Contraseña"
+        name="password"
+        type="password"
+        [value]="password()"
+        (valueChange)="password.set($event)"
+      ></ui-input>
+
+      @if (errorMessage()) {
+        <p data-testid="login-error" class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">
+          {{ errorMessage() }}
+        </p>
+      }
+
+      <ui-button htmlType="submit" variant="primary" [loading]="submitting()">
+        Iniciar sesión
+      </ui-button>
+    </form>
+  </div>
 </main>

@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { describe, it, expect, vi } from 'vitest';
-import { of, throwError } from 'rxjs';
+import { Subject, of, throwError } from 'rxjs';
 import { LoginComponent } from './login.component';
 import { AuthService } from '../../core/auth/auth.service';
 
@@ -36,11 +36,11 @@ function setup(loginImpl: (...args: unknown[]) => unknown) {
     fixture.detectChanges();
   }
 
-  return { fixture, compiled, login, navigateByUrl, fillAndSubmit };
+  return { fixture, compiled, login, navigateByUrl, fillAndSubmit, form };
 }
 
 describe('LoginComponent', () => {
-  it('renders an email + password reactive form', () => {
+  it('renders an email + password form (ui/input) and a submit button (ui/button)', () => {
     const { compiled } = setup(() => of({ accessToken: 'token' }));
 
     expect(compiled.querySelector('input[name="email"]')).toBeTruthy();
@@ -57,13 +57,14 @@ describe('LoginComponent', () => {
     expect(navigateByUrl).toHaveBeenCalledWith('/app');
   });
 
-  it('shows an error message on a 401 response and does not navigate', () => {
+  it('shows an inline Spanish error message on a 401 response and does not navigate, never a browser alert (LG-R1)', () => {
     const unauthorized = new HttpErrorResponse({ status: 401, statusText: 'Unauthorized' });
     const { compiled, navigateByUrl, fillAndSubmit } = setup(() => throwError(() => unauthorized));
 
     fillAndSubmit('teacher@school.dev', 'wrong-password');
 
     expect(navigateByUrl).not.toHaveBeenCalled();
+    expect(compiled.querySelector('[data-testid="login-error"]')).toBeTruthy();
     expect(compiled.textContent).toMatch(/correo o contraseña incorrectos/i);
   });
 
@@ -73,5 +74,32 @@ describe('LoginComponent', () => {
     fillAndSubmit('not-an-email', '');
 
     expect(login).not.toHaveBeenCalled();
+  });
+
+  it('disables the submit button and shows a loading indicator while the login call is pending (LG-R2)', () => {
+    const subject = new Subject<{ accessToken: string }>();
+    const { compiled, fixture, fillAndSubmit } = setup(() => subject.asObservable());
+
+    fillAndSubmit('teacher@school.dev', 'secret');
+
+    const button = compiled.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    expect(button.disabled).toBe(true);
+
+    subject.next({ accessToken: 'token' });
+    subject.complete();
+    fixture.detectChanges();
+  });
+
+  it('does not fire a second login request when the submit form is triggered again while a call is pending (LG-R2)', () => {
+    const subject = new Subject<{ accessToken: string }>();
+    const { login, fillAndSubmit, form, fixture } = setup(() => subject.asObservable());
+
+    fillAndSubmit('teacher@school.dev', 'secret');
+    expect(login).toHaveBeenCalledTimes(1);
+
+    form.dispatchEvent(new Event('submit'));
+    fixture.detectChanges();
+
+    expect(login).toHaveBeenCalledTimes(1);
   });
 });

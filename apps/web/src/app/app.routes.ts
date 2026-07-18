@@ -10,6 +10,7 @@ import { ExamBuilderComponent } from './features/exams/exam-builder/exam-builder
 import { ExamReviewComponent } from './features/exams/exam-review/exam-review.component';
 import { AiGenerateComponent } from './features/ai/ai-generate/ai-generate.component';
 import { AiReviewQueueComponent } from './features/ai/ai-review-queue/ai-review-queue.component';
+import { TenantSettingsComponent } from './features/tenant-settings/tenant-settings.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -26,6 +27,7 @@ export const routes: Routes = [
       { path: 'exams/:examId/versions', component: ExamVersionsPanelComponent },
       { path: 'ai/generate', component: AiGenerateComponent },
       { path: 'ai/review', component: AiReviewQueueComponent },
+      { path: 'settings', component: TenantSettingsComponent },
     ],
   },
   { path: '', pathMatch: 'full', redirectTo: 'app' },

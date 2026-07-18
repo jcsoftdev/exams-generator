@@ -1,24 +1,36 @@
 import { TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
 import { describe, it, expect, vi } from 'vitest';
-import { of, throwError } from 'rxjs';
+import { Subject, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ExamVersionsPanelComponent } from './exam-versions-panel.component';
 import { ExamVersionsService } from '../exam-versions.service';
-import { GeneratedVersionResult } from '../exam-versions.models';
+import { ExamVersion } from '../exam-versions.models';
 
-const VERSIONS: GeneratedVersionResult[] = [
-  { code: 'A', pdfUrl: 'http://minio.test/a.pdf', answerSheetUrl: 'http://minio.test/a-key.pdf' },
-  { code: 'B', pdfUrl: 'http://minio.test/b.pdf', answerSheetUrl: 'http://minio.test/b-key.pdf' },
+const VERSIONS: ExamVersion[] = [
+  { code: 'A', pdfUrl: '/assets/pdf-a', answerSheetUrl: '/assets/answer-a' },
+  { code: 'B', pdfUrl: '/assets/pdf-b', answerSheetUrl: '/assets/answer-b' },
+  { code: 'C', pdfUrl: '/assets/pdf-c', answerSheetUrl: '/assets/answer-c' },
 ];
 
-function setup(generateVersionsImpl: (...args: unknown[]) => unknown) {
-  const generateVersions = vi.fn(generateVersionsImpl);
+function setup(overrides: {
+  listVersionsImpl?: (...args: unknown[]) => unknown;
+  downloadAssetImpl?: (assetUrl: string) => unknown;
+}) {
+  const listVersions = vi.fn(overrides.listVersionsImpl ?? (() => of(VERSIONS)));
+  const downloadAsset = vi.fn(
+    overrides.downloadAssetImpl ??
+      ((assetUrl: string) => of(new Blob([`fake-bytes-${assetUrl}`], { type: 'application/pdf' }))),
+  );
+
+  let objectUrlCounter = 0;
+  vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:mock-url-${objectUrlCounter++}`);
+  vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
 
   TestBed.configureTestingModule({
     imports: [ExamVersionsPanelComponent],
     providers: [
-      { provide: ExamVersionsService, useValue: { generateVersions } },
+      { provide: ExamVersionsService, useValue: { listVersions, downloadAsset } },
       {
         provide: ActivatedRoute,
         useValue: { snapshot: { paramMap: new Map([['examId', 'exam-1']]) } },
@@ -30,82 +42,90 @@ function setup(generateVersionsImpl: (...args: unknown[]) => unknown) {
   fixture.detectChanges();
   const compiled = fixture.nativeElement as HTMLElement;
 
-  return { fixture, compiled, generateVersions };
+  return { fixture, compiled, listVersions, downloadAsset };
 }
 
 describe('ExamVersionsPanelComponent', () => {
-  it('reads examId from the route and defaults versionCount to 1', () => {
-    const { fixture } = setup(() => of(VERSIONS));
+  describe('with-data', () => {
+    it('calls listVersions(examId) with the route examId on init', () => {
+      const { listVersions } = setup({});
 
-    expect(fixture.componentInstance.examId()).toBe('exam-1');
-    expect(fixture.componentInstance.form.getRawValue().versionCount).toBe(1);
+      expect(listVersions).toHaveBeenCalledWith('exam-1');
+    });
+
+    it('renders 3 rows, each with 2 working (blob:) download links (VS-R1)', () => {
+      const { compiled, downloadAsset } = setup({});
+
+      const rows = compiled.querySelectorAll('[data-testid="version-row"]');
+      expect(rows.length).toBe(3);
+      expect(rows[0].textContent).toContain('A');
+
+      expect(downloadAsset).toHaveBeenCalledWith('/assets/pdf-a');
+      expect(downloadAsset).toHaveBeenCalledWith('/assets/answer-a');
+
+      const pdfLinks = compiled.querySelectorAll<HTMLAnchorElement>('[data-testid="version-pdf-link"]');
+      const answerLinks = compiled.querySelectorAll<HTMLAnchorElement>(
+        '[data-testid="version-answer-link"]',
+      );
+      expect(pdfLinks.length).toBe(3);
+      expect(answerLinks.length).toBe(3);
+      expect(pdfLinks[0].getAttribute('href')).toMatch(/^blob:/);
+      expect(answerLinks[0].getAttribute('href')).toMatch(/^blob:/);
+    });
+
+    it('renders a disabled "Descargar todo (ZIP)" placeholder button (N1 out of scope)', () => {
+      const { compiled } = setup({});
+
+      const zipButton = compiled.querySelector<HTMLButtonElement>('[data-testid="download-zip"] button');
+      expect(zipButton).toBeTruthy();
+      expect(zipButton?.disabled).toBe(true);
+    });
   });
 
-  it('calls generateVersions with the examId and chosen versionCount when Generate is clicked', () => {
-    const { compiled, fixture, generateVersions } = setup(() => of(VERSIONS));
+  describe('loading', () => {
+    it('shows a loading indicator while the versions call is pending and renders no stale data', () => {
+      const subject = new Subject<ExamVersion[]>();
+      const { compiled, fixture } = setup({ listVersionsImpl: () => subject.asObservable() });
 
-    const input = compiled.querySelector<HTMLInputElement>('input[name="versionCount"]')!;
-    input.value = '3';
-    input.dispatchEvent(new Event('input'));
-    fixture.detectChanges();
+      expect(compiled.querySelector('[data-testid="loading-indicator"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="version-row"]')).toBeFalsy();
 
-    const form = compiled.querySelector('form')!;
-    form.dispatchEvent(new Event('submit'));
+      subject.next(VERSIONS);
+      subject.complete();
+      fixture.detectChanges();
 
-    expect(generateVersions).toHaveBeenCalledWith('exam-1', 3);
+      expect(compiled.querySelector('[data-testid="loading-indicator"]')).toBeFalsy();
+      expect(compiled.querySelectorAll('[data-testid="version-row"]').length).toBe(3);
+    });
   });
 
-  it('shows a loading state while the request is in flight', () => {
-    const { compiled, fixture } = setup(() => of(VERSIONS));
+  describe('empty', () => {
+    it('renders the empty state (not an empty list) when the exam has zero generated versions (VS-R2)', () => {
+      const { compiled } = setup({ listVersionsImpl: () => of([]) });
 
-    expect(fixture.componentInstance.loading()).toBe(false);
-
-    const form = compiled.querySelector('form')!;
-    form.dispatchEvent(new Event('submit'));
-    fixture.detectChanges();
-
-    // of() resolves synchronously so loading toggles back to false after the submit;
-    // assert the flag exists and ends in a settled state.
-    expect(fixture.componentInstance.loading()).toBe(false);
+      expect(compiled.querySelector('[data-testid="version-row"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="empty-versions"]')).toBeTruthy();
+    });
   });
 
-  it('renders one row per generated version with its code, PDF link and answer key link', () => {
-    const { compiled, fixture } = setup(() => of(VERSIONS));
+  describe('not-found', () => {
+    it('renders a distinct not-found state (not empty/loading) on a 404 (VS-R3)', () => {
+      const { compiled } = setup({
+        listVersionsImpl: () => throwError(() => new HttpErrorResponse({ status: 404 })),
+      });
 
-    const form = compiled.querySelector('form')!;
-    form.dispatchEvent(new Event('submit'));
-    fixture.detectChanges();
+      expect(compiled.querySelector('[data-testid="not-found-state"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="empty-versions"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="version-row"]')).toBeFalsy();
+    });
 
-    const rows = compiled.querySelectorAll('[data-testid="version-row"]');
-    expect(rows.length).toBe(2);
-    expect(rows[0].textContent).toContain('A');
+    it('renders a generic error state (distinguishable from not-found) on a non-404 failure', () => {
+      const { compiled } = setup({
+        listVersionsImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
 
-    const pdfLinks = compiled.querySelectorAll<HTMLAnchorElement>('[data-testid="version-pdf-link"]');
-    expect(pdfLinks[0].getAttribute('href')).toBe('http://minio.test/a.pdf');
-
-    const answerLinks = compiled.querySelectorAll<HTMLAnchorElement>(
-      '[data-testid="version-answer-link"]',
-    );
-    expect(answerLinks[0].getAttribute('href')).toBe('http://minio.test/a-key.pdf');
-  });
-
-  it('shows the 422 error message including the offending questionId on failure', () => {
-    const { compiled, fixture } = setup(() =>
-      throwError(
-        () =>
-          new HttpErrorResponse({
-            status: 422,
-            error: { message: 'Insufficient questions', examId: 'exam-1', questionId: 'question-9' },
-          }),
-      ),
-    );
-
-    const form = compiled.querySelector('form')!;
-    form.dispatchEvent(new Event('submit'));
-    fixture.detectChanges();
-
-    expect(compiled.textContent).toContain('Insufficient questions');
-    expect(compiled.textContent).toContain('question-9');
-    expect(fixture.componentInstance.loading()).toBe(false);
+      expect(compiled.querySelector('[data-testid="error-state"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="not-found-state"]')).toBeFalsy();
+    });
   });
 });
