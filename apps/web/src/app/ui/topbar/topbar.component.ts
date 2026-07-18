@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
-import { LucideAngularModule, Menu } from 'lucide-angular';
+import { LucideAngularModule } from 'lucide-angular';
 
 /**
  * Design-system topbar primitive (DECISION FE-4). `menuToggle` drives the
@@ -12,7 +12,6 @@ import { LucideAngularModule, Menu } from 'lucide-angular';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [LucideAngularModule],
-  providers: [LucideAngularModule.pick({ Menu }).providers ?? []],
   template: `
     <header class="flex items-center justify-between border-b border-n200 bg-white px-4 py-3">
       <div class="flex items-center gap-3">

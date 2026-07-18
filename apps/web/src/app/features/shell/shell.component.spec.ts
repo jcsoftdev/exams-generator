@@ -1,8 +1,10 @@
 import { TestBed } from '@angular/core/testing';
+import { importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { signal } from '@angular/core';
 import { describe, it, expect } from 'vitest';
 import { Role } from '@exams-generator/shared';
+import { LucideAngularModule, Menu, X, Sparkles, Lock, Download, Ellipsis, Check, TriangleAlert, Search, School, LogOut, User, Users, Trash2, Pencil, Archive, ChevronLeft, ChevronRight, ChevronDown, Plus, Minus } from 'lucide-angular';
 import { ShellComponent } from './shell.component';
 import { AuthService } from '../../core/auth/auth.service';
 
@@ -12,6 +14,12 @@ function setup(role: Role) {
     providers: [
       provideRouter([]),
       { provide: AuthService, useValue: { currentRole: signal(role) } },
+      importProvidersFrom(
+        LucideAngularModule.pick({
+          Menu, X, Sparkles, Lock, Download, Ellipsis, Check, TriangleAlert, Search, School,
+          LogOut, User, Users, Trash2, Pencil, Archive, ChevronLeft, ChevronRight, ChevronDown, Plus, Minus,
+        }),
+      ),
     ],
   });
 

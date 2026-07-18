@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
-import { LucideAngularModule, X } from 'lucide-angular';
+import { LucideAngularModule } from 'lucide-angular';
 import { BannerVariant } from '../ui.types';
 
 /**
@@ -11,11 +11,7 @@ import { BannerVariant } from '../ui.types';
   selector: 'ui-banner',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  // `ModuleWithProviders` (from `.pick()`) is not valid inside a standalone
-  // component's `imports` (NG2012) — the bare module goes in `imports` (so
-  // the `<lucide-angular>` selector resolves) and its providers go in `providers`.
   imports: [LucideAngularModule],
-  providers: [LucideAngularModule.pick({ X }).providers ?? []],
   template: `
     <div data-testid="banner" [class]="classes()">
       <p class="flex-1 text-sm">{{ message() }}</p>
