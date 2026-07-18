@@ -299,6 +299,184 @@ describe("BankRepository", () => {
     });
   });
 
+  describe("createStructuredQuestion() draft/AI workflow (Lane D3)", () => {
+    it("defaults to status='approved' and aiGenerated=false when not provided (backwards compatible with manual creation)", async () => {
+      const id = await createStructuredQuestion({ tenantId: null, createdBy: centralUserId });
+
+      const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+      expect(row?.status).toBe("approved");
+      expect(row?.aiGenerated).toBe(false);
+    });
+
+    it("persists status='draft' and aiGenerated=true when explicitly requested (AI generation flow)", async () => {
+      const { id } = await repository.createStructuredQuestion({
+        tenantId: null,
+        topicId,
+        difficulty: Difficulty.Easy,
+        gradeLevel: "primaria_1",
+        bodyTypst: "pregunta generada por IA",
+        alternatives: ["1", "2", "3", "4", "5"],
+        correctAnswer: "1",
+        figureCode: undefined,
+        createdBy: centralUserId,
+        status: "draft",
+        aiGenerated: true,
+      });
+      createdQuestionIds.push(id);
+
+      const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+      expect(row?.status).toBe("draft");
+      expect(row?.aiGenerated).toBe(true);
+    });
+  });
+
+  describe("listQuestions() status filter", () => {
+    it("filters by status='draft', excluding approved questions", async () => {
+      const draftId = (
+        await repository.createStructuredQuestion({
+          tenantId: null,
+          topicId,
+          difficulty: Difficulty.Easy,
+          gradeLevel: "primaria_1",
+          bodyTypst: "draft q",
+          alternatives: ["1", "2"],
+          correctAnswer: "0",
+          figureCode: undefined,
+          createdBy: centralUserId,
+          status: "draft",
+          aiGenerated: true,
+        })
+      ).id;
+      createdQuestionIds.push(draftId);
+      const approvedId = await createStructuredQuestion({ tenantId: null, createdBy: centralUserId });
+
+      const drafts = await repository.listQuestions({ currentTenantId: null, status: "draft" });
+      const ids = drafts.map((q) => q.id);
+      expect(ids).toContain(draftId);
+      expect(ids).not.toContain(approvedId);
+    });
+  });
+
+  describe("findCourseAndTopicNames()", () => {
+    it("returns course and topic names when the topic belongs to the course", async () => {
+      const result = await repository.findCourseAndTopicNames(courseId, topicId);
+
+      expect(result).toBeDefined();
+      expect(result?.courseName).toContain("Test Course");
+      expect(result?.topicName).toContain("Test Topic");
+    });
+
+    it("returns undefined when the topic does not belong to the given course", async () => {
+      const [otherCourse] = await db
+        .insert(courses)
+        .values({ name: `Unrelated Course ${randomUUID()}` })
+        .returning({ id: courses.id });
+
+      const result = await repository.findCourseAndTopicNames(otherCourse!.id, topicId);
+      expect(result).toBeUndefined();
+
+      await db.delete(courses).where(inArray(courses.id, [otherCourse!.id]));
+    });
+
+    it("returns undefined for a non-existent courseId/topicId", async () => {
+      const result = await repository.findCourseAndTopicNames(randomUUID(), randomUUID());
+      expect(result).toBeUndefined();
+    });
+  });
+
+  describe("approveQuestion() / rejectQuestion() / updateStructuredQuestion() (Lane D3 draft workflow)", () => {
+    async function createDraft(tenantId: string | null, createdBy: string): Promise<string> {
+      const { id } = await repository.createStructuredQuestion({
+        tenantId,
+        topicId,
+        difficulty: Difficulty.Easy,
+        gradeLevel: "primaria_1",
+        bodyTypst: "draft body",
+        alternatives: ["1", "2", "3"],
+        correctAnswer: "0",
+        figureCode: undefined,
+        createdBy,
+        status: "draft",
+        aiGenerated: true,
+      });
+      createdQuestionIds.push(id);
+      return id;
+    }
+
+    it("approveQuestion() flips status draft -> approved, scoped to the requester's tenant visibility", async () => {
+      const id = await createDraft(null, centralUserId);
+
+      const result = await repository.approveQuestion(id, null);
+      expect(result?.status).toBe("approved");
+
+      const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+      expect(row?.status).toBe("approved");
+    });
+
+    it("approveQuestion() returns undefined when the draft belongs to another tenant", async () => {
+      const id = await createDraft(tenantAId, tenantAUserId);
+
+      const result = await repository.approveQuestion(id, tenantBId);
+      expect(result).toBeUndefined();
+
+      const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+      expect(row?.status).toBe("draft");
+    });
+
+    it("rejectQuestion() deletes the draft row, scoped to the requester's tenant visibility", async () => {
+      const id = await createDraft(null, centralUserId);
+
+      const result = await repository.rejectQuestion(id, null);
+      expect(result).toBe(true);
+
+      const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+      expect(row).toBeUndefined();
+      createdQuestionIds.splice(createdQuestionIds.indexOf(id), 1);
+    });
+
+    it("rejectQuestion() returns false and does NOT delete when the draft belongs to another tenant", async () => {
+      const id = await createDraft(tenantAId, tenantAUserId);
+
+      const result = await repository.rejectQuestion(id, tenantBId);
+      expect(result).toBe(false);
+
+      const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+      expect(row).toBeDefined();
+    });
+
+    it("updateStructuredQuestion() overwrites bodyTypst/alternatives/correctAnswer/figureCode on a draft", async () => {
+      const id = await createDraft(null, centralUserId);
+
+      const result = await repository.updateStructuredQuestion(id, null, {
+        bodyTypst: "edited body",
+        alternatives: ["a", "b"],
+        correctAnswer: "1",
+        figureCode: "cetz.canvas({})",
+      });
+
+      expect(result?.bodyTypst).toBe("edited body");
+      expect(result?.alternatives).toEqual(["a", "b"]);
+      expect(result?.correctAnswer).toBe("1");
+      expect(result?.figureCode).toBe("cetz.canvas({})");
+
+      const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+      expect(row?.bodyTypst).toBe("edited body");
+    });
+
+    it("updateStructuredQuestion() returns undefined when the draft belongs to another tenant", async () => {
+      const id = await createDraft(tenantAId, tenantAUserId);
+
+      const result = await repository.updateStructuredQuestion(id, tenantBId, {
+        bodyTypst: "hacked",
+        alternatives: ["x", "y"],
+        correctAnswer: "0",
+        figureCode: undefined,
+      });
+
+      expect(result).toBeUndefined();
+    });
+  });
+
   describe("listQuestions() filters", () => {
     it("combines courseId, topicId, difficulty and gradeLevel filters", async () => {
       const matching = await createQuestion({

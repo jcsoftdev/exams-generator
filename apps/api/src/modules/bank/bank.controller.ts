@@ -4,6 +4,7 @@ import {
   Controller,
   Get,
   Param,
+  Patch,
   Post,
   Query,
   UploadedFile,
@@ -11,6 +12,7 @@ import {
   UseInterceptors,
 } from "@nestjs/common";
 import { FileInterceptor } from "@nestjs/platform-express";
+import { QuestionStatus } from "../../db/schema/enums";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../auth/token.service";
@@ -36,19 +38,29 @@ interface CreateStructuredQuestionBody {
   readonly figureCode?: string;
 }
 
+interface EditDraftQuestionBody {
+  readonly bodyTypst?: string;
+  readonly alternatives?: readonly string[];
+  readonly correctAnswer?: string;
+  readonly figureCode?: string;
+}
+
 interface ListQuestionsQueryParams {
   readonly courseId?: string;
   readonly topicId?: string;
   readonly difficulty?: string;
   readonly gradeLevel?: string;
+  readonly status?: string;
 }
 
 /**
  * `POST /bank/questions/image`, `POST /bank/questions/structured` and
- * `GET /bank/questions` — manual bank curation endpoints. Both creation
- * routes persist directly to `status = 'approved'` (curated by definition,
- * design doc §5.1); the AI-generated `status = 'draft'` review flow is a
- * separate lane, out of scope here.
+ * `GET /bank/questions` — manual bank curation endpoints (both creation
+ * routes persist directly to `status = 'approved'`, curated by definition,
+ * design doc §5.1). Also the human side of the AI draft workflow (Lane D3,
+ * design doc §5.2): `POST :id/approve`, `POST :id/reject`, `PATCH :id` — the
+ * AI-generation endpoint itself (`POST /ai/questions/generate`, which
+ * CREATES the drafts this reviews) lives in the `ai` module.
  */
 @Controller("bank/questions")
 @UseGuards(JwtAuthGuard)
@@ -99,6 +111,7 @@ export class BankController {
       topicId: query.topicId,
       difficulty: query.difficulty as Difficulty | undefined,
       gradeLevel: query.gradeLevel,
+      status: query.status as QuestionStatus | undefined,
     });
   }
 
@@ -114,5 +127,42 @@ export class BankController {
     @Param("id") id: string,
   ): Promise<QuestionListItem> {
     return this.service.getQuestionById(user, id);
+  }
+
+  /** Lane D3: human curation — draft -> approved. */
+  @Post(":id/approve")
+  async approveQuestion(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("id") id: string,
+  ): Promise<{ id: string }> {
+    return this.service.approveQuestion(user, id);
+  }
+
+  /** Lane D3: human curation — rejects (deletes) a draft. */
+  @Post(":id/reject")
+  async rejectQuestion(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("id") id: string,
+  ): Promise<{ id: string }> {
+    return this.service.rejectQuestion(user, id);
+  }
+
+  /**
+   * Lane D3: human edit of a draft's structured content before approval.
+   * Recompiles the Typst preview server-side; a broken edit is rejected
+   * with 400 and never persisted.
+   */
+  @Patch(":id")
+  async editDraftQuestion(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("id") id: string,
+    @Body() body: EditDraftQuestionBody,
+  ): Promise<QuestionListItem> {
+    return this.service.editDraftQuestion(user, id, {
+      bodyTypst: body.bodyTypst,
+      alternatives: body.alternatives,
+      correctAnswer: body.correctAnswer,
+      figureCode: body.figureCode,
+    });
   }
 }

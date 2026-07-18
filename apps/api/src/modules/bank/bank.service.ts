@@ -1,12 +1,21 @@
 import { randomUUID } from "node:crypto";
 import { Difficulty } from "@exams-generator/shared";
-import { BadRequestException, Inject, Injectable, NotFoundException } from "@nestjs/common";
+import {
+  BadRequestException,
+  ConflictException,
+  Inject,
+  Injectable,
+  NotFoundException,
+} from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
+import { PdfCompilerPort, TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { StoragePort } from "../exams/domain/ports/storage.port";
-import { STORAGE_PORT } from "./bank.constants";
+import { QuestionStatus } from "../../db/schema/enums";
+import { PDF_COMPILER_PORT, STORAGE_PORT } from "./bank.constants";
 import { BankRepository, QuestionListItem } from "./bank.repository";
 import { validateCreateImageQuestionInput } from "./domain/validate-create-image-question";
 import { validateCreateStructuredQuestionInput } from "./domain/validate-create-structured-question";
+import { validateUpdateStructuredQuestionInput } from "./domain/validate-update-structured-question";
 
 export interface CreateImageQuestionDto {
   readonly courseId: string | undefined;
@@ -28,23 +37,34 @@ export interface CreateStructuredQuestionDto {
   readonly figureCode: string | undefined;
 }
 
+export interface EditDraftQuestionDto {
+  readonly bodyTypst?: string;
+  readonly alternatives?: readonly string[];
+  readonly correctAnswer?: string;
+  readonly figureCode?: string;
+}
+
 export interface ListQuestionsQuery {
   readonly courseId?: string;
   readonly topicId?: string;
   readonly difficulty?: Difficulty;
   readonly gradeLevel?: string;
+  readonly status?: QuestionStatus;
 }
 
 /**
- * Orchestrates the manual image-question upload flow (design doc 5.1) and
- * tenant-scoped listing. Validation happens BEFORE the storage upload so a
- * rejected request never leaves an orphaned object in MinIO.
+ * Orchestrates the manual image-question upload flow (design doc 5.1),
+ * tenant-scoped listing, and the human-review side of the AI draft workflow
+ * (Lane D3, design doc §5.2: approve/reject/edit a `status='draft'`
+ * question). Validation happens BEFORE the storage upload so a rejected
+ * request never leaves an orphaned object in MinIO.
  */
 @Injectable()
 export class BankService {
   constructor(
     private readonly repository: BankRepository,
     @Inject(STORAGE_PORT) private readonly storage: StoragePort,
+    @Inject(PDF_COMPILER_PORT) private readonly pdfCompiler: PdfCompilerPort,
   ) {}
 
   async createImageQuestion(
@@ -129,6 +149,7 @@ export class BankService {
       topicId: query.topicId,
       difficulty: query.difficulty,
       gradeLevel: query.gradeLevel,
+      status: query.status,
     });
   }
 
@@ -145,5 +166,112 @@ export class BankService {
       throw new NotFoundException(`Question not found: ${id}`);
     }
     return question;
+  }
+
+  /**
+   * Fetches the question (404 if not found/not visible) and asserts it's
+   * still `status='draft'` (409 otherwise) — shared precondition for
+   * approve/reject/edit, all of which only ever act on drafts.
+   */
+  private async requireVisibleDraft(
+    user: AuthTokenPayload,
+    id: string,
+  ): Promise<QuestionListItem> {
+    const question = await this.repository.findQuestionById(id, user.tenantId);
+    if (!question) {
+      throw new NotFoundException(`Question not found: ${id}`);
+    }
+    if (question.status !== "draft") {
+      throw new ConflictException(`Question ${id} is not a draft (status=${question.status})`);
+    }
+    return question;
+  }
+
+  /**
+   * Human curation step (Lane D3, design doc §5.2): draft -> approved. The
+   * AI never publishes directly to the bank — this is the ONLY path a
+   * question can take from `draft` to `approved`.
+   */
+  async approveQuestion(user: AuthTokenPayload, id: string): Promise<{ id: string }> {
+    await this.requireVisibleDraft(user, id);
+
+    const result = await this.repository.approveQuestion(id, user.tenantId);
+    if (!result) {
+      throw new NotFoundException(`Question not found: ${id}`);
+    }
+    return { id: result.id };
+  }
+
+  /**
+   * Human curation step (Lane D3): rejects a draft by deleting it outright
+   * (design doc §5.2 — rejected AI drafts are discarded, not archived).
+   */
+  async rejectQuestion(user: AuthTokenPayload, id: string): Promise<{ id: string }> {
+    await this.requireVisibleDraft(user, id);
+
+    const deleted = await this.repository.rejectQuestion(id, user.tenantId);
+    if (!deleted) {
+      throw new NotFoundException(`Question not found: ${id}`);
+    }
+    return { id };
+  }
+
+  /**
+   * Human edit of a draft's structured content BEFORE approval (Lane D3:
+   * "un humano pueda editar el draft antes de aprobar"). Re-validates the
+   * merged content, then recompiles a Typst PREVIEW via `PdfCompilerPort` —
+   * exactly like AI generation itself — so an edit can never leave the
+   * draft in an uncompilable state either. On a compile failure, nothing is
+   * persisted.
+   */
+  async editDraftQuestion(
+    user: AuthTokenPayload,
+    id: string,
+    dto: EditDraftQuestionDto,
+  ): Promise<QuestionListItem> {
+    const question = await this.requireVisibleDraft(user, id);
+    if (question.type !== "structured") {
+      throw new BadRequestException("Only structured questions can be edited");
+    }
+
+    const validation = validateUpdateStructuredQuestionInput(dto, {
+      bodyTypst: question.bodyTypst as string,
+      alternatives: question.alternatives as readonly string[],
+      correctAnswer: question.correctAnswer,
+      figureCode: question.figureCode ?? undefined,
+    });
+
+    if (!validation.ok) {
+      throw new BadRequestException(validation.errors);
+    }
+
+    const { merged } = validation;
+
+    try {
+      await this.pdfCompiler.compileExam({
+        title: "Draft preview",
+        versionLabel: "preview",
+        questions: [
+          {
+            id,
+            type: "structured",
+            bodyTypst: merged.bodyTypst,
+            alternatives: merged.alternatives,
+            figureCode: merged.figureCode,
+          },
+        ],
+      });
+    } catch (error) {
+      if (error instanceof TypstCompilationError) {
+        throw new BadRequestException(`Typst compile failed: ${error.message}`);
+      }
+      throw error;
+    }
+
+    const updated = await this.repository.updateStructuredQuestion(id, user.tenantId, merged);
+    if (!updated) {
+      throw new NotFoundException(`Question not found: ${id}`);
+    }
+    return updated;
   }
 }
