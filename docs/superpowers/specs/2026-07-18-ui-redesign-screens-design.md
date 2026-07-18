@@ -20,6 +20,23 @@
 8. **Config colegio**: datos + logo (backend ya existe) **+ pestaña "Profesores"**: listar/crear/desactivar usuarios del tenant. Requiere módulo `users` nuevo (API+UI). Sin infra de email: el school_admin genera password temporal (cubre "olvidé mi contraseña" sin SMTP).
 9. **Login/Shell — fixes requeridos**: botón logout (el `AuthService.logout()` existe y nadie lo llama), manejo 401 en interceptor (token vencido → redirect a login), cablear `roleGuard` en rutas (escrito y testeado, nunca usado), nav condicionada por rol.
 
+## Iconografía (regla global)
+
+**NUNCA emojis en la UI.** Todos los íconos salen de **Lucide** (`lucide-angular`, SVG stroke, tree-shakeable). Los emojis que aparecen en este doc y en los mockups son placeholders; mapa canónico:
+
+| Placeholder | Ícono Lucide |
+|---|---|
+| ✨ (IA) | `sparkles` |
+| 🔒 (banco central / bloqueado) | `lock` |
+| ⬇ (descargar) | `download` |
+| ⋯ (menú acciones) | `more-horizontal` |
+| ✓ (aprobar/correcta) | `check` |
+| ⚠ (warning) | `triangle-alert` |
+| 🔍 (buscar) | `search` |
+| 🏫 (logo colegio placeholder) | `school` |
+
+Aplica también al doc base cuando el otro agente implemente el flujo maestro (candado del gate, sparkles del puente a IA, etc.).
+
 ## Endpoints nuevos que este spec agrega (además de B1–B4 del doc base)
 
 | ID | Endpoint | Para |
