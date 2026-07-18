@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { Difficulty, Role } from "@exams-generator/shared";
-import { inArray } from "drizzle-orm";
+import { eq, inArray, or } from "drizzle-orm";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import {
@@ -39,6 +39,8 @@ describe("ExamsRepository", () => {
   const createdExamIds: string[] = [];
   const createdQuestionIds: string[] = [];
   const createdAssetIds: string[] = [];
+  const createdCourseIds: string[] = [];
+  const createdTopicIds: string[] = [];
 
   beforeAll(async () => {
     await runMigrations();
@@ -125,15 +127,48 @@ describe("ExamsRepository", () => {
     if (createdQuestionIds.length > 0) {
       await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
     }
-    if (createdAssetIds.length > 0) {
-      await db.delete(assets).where(inArray(assets.id, createdAssetIds));
-    }
+    // Sweep by tenantId too: `clearVersions()`/`getVersions()` test fixtures
+    // create their own PDF/answer-key asset rows (repository.createAsset)
+    // whose ids aren't individually tracked in `createdAssetIds` — mirrors
+    // `exams.e2e.spec.ts`'s cleanup convention.
+    await db
+      .delete(assets)
+      .where(
+        or(
+          createdAssetIds.length > 0 ? inArray(assets.id, createdAssetIds) : undefined,
+          inArray(assets.tenantId, [tenantAId, tenantBId]),
+        ),
+      );
     await db.delete(users).where(inArray(users.id, [staffUserId, tenantAUserId, tenantBUserId]));
     await db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]));
+    if (createdTopicIds.length > 0) {
+      await db.delete(topics).where(inArray(topics.id, createdTopicIds));
+    }
     await db.delete(topics).where(inArray(topics.id, [topicId, otherTopicId]));
+    if (createdCourseIds.length > 0) {
+      await db.delete(courses).where(inArray(courses.id, createdCourseIds));
+    }
     await db.delete(courses).where(inArray(courses.id, [courseId, otherCourseId]));
     await pool.end();
   });
+
+  /** Fresh course+topic pair, isolated per test so `countStock()` aggregate assertions can't be contaminated by sibling tests (mirrors `exams.e2e.spec.ts`'s `createTopic()` convention). */
+  async function createCourseAndTopic(): Promise<{ courseId: string; topicId: string }> {
+    const suffix = randomUUID();
+    const [freshCourse] = await db
+      .insert(courses)
+      .values({ name: `StockBatch Course ${suffix}` })
+      .returning({ id: courses.id });
+    createdCourseIds.push(freshCourse!.id);
+
+    const [freshTopic] = await db
+      .insert(topics)
+      .values({ courseId: freshCourse!.id, name: `StockBatch Topic ${suffix}` })
+      .returning({ id: topics.id });
+    createdTopicIds.push(freshTopic!.id);
+
+    return { courseId: freshCourse!.id, topicId: freshTopic!.id };
+  }
 
   async function createQuestion(params: {
     tenantId: string | null;
@@ -307,6 +342,84 @@ describe("ExamsRepository", () => {
       const pool = await repository.getQuestionPool({ tenantId: tenantAId, gradeLevel: "primaria_2" });
 
       expect(pool.map((c) => c.id)).not.toContain(wrongGradeId);
+    });
+  });
+
+  describe("countStock() — B1 stock-batch aggregate", () => {
+    const gradeLevel = "secundaria_5"; // unused by every other describe block in this file — safe to reuse across countStock tests since isolation comes from each test's fresh course/topic pair
+
+    it("counts central + own-tenant approved questions matching a cell, order-matched to input", async () => {
+      const cell = await createCourseAndTopic();
+      await createQuestion({ tenantId: null, createdBy: staffUserId, gradeLevel, topicId: cell.topicId, difficulty: Difficulty.Easy });
+      await createQuestion({ tenantId: null, createdBy: staffUserId, gradeLevel, topicId: cell.topicId, difficulty: Difficulty.Easy });
+      await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel, topicId: cell.topicId, difficulty: Difficulty.Easy });
+
+      const counts = await repository.countStock(
+        { tenantId: tenantAId, gradeLevel },
+        [{ courseId: cell.courseId, topicId: cell.topicId, difficulty: Difficulty.Easy }],
+      );
+
+      expect(counts).toEqual([3]);
+    });
+
+    it("returns 0 for a cell whose difficulty has no matching questions", async () => {
+      const cell = await createCourseAndTopic();
+      await createQuestion({ tenantId: null, createdBy: staffUserId, gradeLevel, topicId: cell.topicId, difficulty: Difficulty.Easy });
+
+      const counts = await repository.countStock(
+        { tenantId: tenantAId, gradeLevel },
+        [{ courseId: cell.courseId, topicId: cell.topicId, difficulty: Difficulty.Hard }],
+      );
+
+      expect(counts).toEqual([0]);
+    });
+
+    it("counts 5 independent cells, order-matched, each isolated by its own criteria", async () => {
+      const cellA = await createCourseAndTopic();
+      const cellB = await createCourseAndTopic();
+      await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel, topicId: cellA.topicId, difficulty: Difficulty.Easy });
+      await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel, topicId: cellA.topicId, difficulty: Difficulty.Medium });
+      await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel, topicId: cellA.topicId, difficulty: Difficulty.Medium });
+      await createQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel,
+        difficulty: Difficulty.Hard,
+        topicId: cellB.topicId,
+      });
+
+      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel }, [
+        { courseId: cellA.courseId, topicId: cellA.topicId, difficulty: Difficulty.Easy },
+        { courseId: cellA.courseId, topicId: cellA.topicId, difficulty: Difficulty.Medium },
+        { courseId: cellA.courseId, topicId: cellA.topicId, difficulty: Difficulty.Hard },
+        { courseId: cellB.courseId, topicId: cellB.topicId, difficulty: Difficulty.Hard },
+        { courseId: cellA.courseId, topicId: cellA.topicId }, // no difficulty -> counts across all difficulties for this topic
+      ]);
+
+      expect(counts).toEqual([1, 2, 0, 1, 3]);
+    });
+
+    it("excludes draft/rejected and cross-tenant questions from the count", async () => {
+      const cell = await createCourseAndTopic();
+      await createQuestion({ tenantId: null, createdBy: staffUserId, gradeLevel, topicId: cell.topicId, status: "draft" });
+      await createQuestion({ tenantId: tenantBId, createdBy: tenantBUserId, gradeLevel, topicId: cell.topicId });
+      await createQuestion({ tenantId: null, createdBy: staffUserId, gradeLevel, topicId: cell.topicId });
+
+      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel }, [
+        { courseId: cell.courseId, topicId: cell.topicId, difficulty: Difficulty.Easy },
+      ]);
+
+      expect(counts).toEqual([1]);
+    });
+
+    it("returns 0 (not an error) for a cell whose courseId/topicId has zero matching questions", async () => {
+      const cell = await createCourseAndTopic();
+
+      const counts = await repository.countStock({ tenantId: tenantAId, gradeLevel }, [
+        { courseId: cell.courseId, topicId: cell.topicId, difficulty: Difficulty.Easy },
+      ]);
+
+      expect(counts).toEqual([0]);
     });
   });
 
@@ -563,6 +676,134 @@ describe("ExamsRepository", () => {
       expect(versionRow?.code).toBe("A");
       expect(versionRow?.pdfAssetId).toBe(pdfAsset.id);
       expect(versionRow?.answerSheetAssetId).toBe(answerAsset.id);
+    });
+  });
+
+  describe("clearVersions() — B4 idempotent regeneration", () => {
+    async function createExamWithOneVersion(): Promise<{ examId: string; pdfAssetId: string; answerAssetId: string }> {
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Clear-versions exam",
+        gradeLevel: "primaria_1",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+
+      const pdfAsset = await repository.createAsset(tenantAId, `exams/${examId}/versions/A/exam.pdf`, "application/pdf");
+      const answerAsset = await repository.createAsset(
+        tenantAId,
+        `exams/${examId}/versions/A/answer-key.pdf`,
+        "application/pdf",
+      );
+
+      await repository.saveVersion(examId, {
+        code: "A",
+        questionOrder: ["q1"],
+        answerKey: { 0: "a" },
+        pdfAssetId: pdfAsset.id,
+        answerSheetAssetId: answerAsset.id,
+      });
+
+      return { examId, pdfAssetId: pdfAsset.id, answerAssetId: answerAsset.id };
+    }
+
+    it("deletes exam_versions rows THEN their assets rows, returning the deleted assets' storageKeys", async () => {
+      const { examId, pdfAssetId, answerAssetId } = await createExamWithOneVersion();
+
+      const deletedKeys = await repository.clearVersions(examId);
+
+      expect([...deletedKeys].sort()).toEqual(
+        [`exams/${examId}/versions/A/exam.pdf`, `exams/${examId}/versions/A/answer-key.pdf`].sort(),
+      );
+
+      const remainingVersions = await db.select().from(examVersions).where(eq(examVersions.examId, examId));
+      expect(remainingVersions).toHaveLength(0);
+
+      const remainingAssets = await db.select().from(assets).where(inArray(assets.id, [pdfAssetId, answerAssetId]));
+      expect(remainingAssets).toHaveLength(0);
+    });
+
+    it("is a no-op (returns []) when the exam has zero prior versions", async () => {
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "No-versions exam",
+        gradeLevel: "primaria_1",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+
+      const deletedKeys = await repository.clearVersions(examId);
+
+      expect(deletedKeys).toEqual([]);
+    });
+  });
+
+  describe("getVersions() — B4 versions-history read", () => {
+    it("returns {code, pdfUrl, answerSheetUrl}[] ordered by code ASC, using /assets/:id paths (DECISION B4-A/C)", async () => {
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Versions history exam",
+        gradeLevel: "primaria_1",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+
+      // Insert codes out of order (C, then A, then B) to prove the ORDER BY, not insertion order, drives the result.
+      for (const code of ["C", "A", "B"]) {
+        const pdfAsset = await repository.createAsset(tenantAId, `exams/${examId}/versions/${code}/exam.pdf`, "application/pdf");
+        const answerAsset = await repository.createAsset(
+          tenantAId,
+          `exams/${examId}/versions/${code}/answer-key.pdf`,
+          "application/pdf",
+        );
+        await repository.saveVersion(examId, {
+          code,
+          questionOrder: ["q1"],
+          answerKey: { 0: "a" },
+          pdfAssetId: pdfAsset.id,
+          answerSheetAssetId: answerAsset.id,
+        });
+      }
+
+      const versions = await repository.getVersions(examId, tenantAId);
+
+      expect(versions?.map((v: { code: string }) => v.code)).toEqual(["A", "B", "C"]);
+      for (const version of versions ?? []) {
+        expect(version.pdfUrl).toMatch(/^\/assets\//);
+        expect(version.answerSheetUrl).toMatch(/^\/assets\//);
+      }
+    });
+
+    it("returns [] for a zero-version exam (not undefined/404)", async () => {
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Zero-versions exam",
+        gradeLevel: "primaria_1",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+
+      const versions = await repository.getVersions(examId, tenantAId);
+
+      expect(versions).toEqual([]);
+    });
+
+    it("returns undefined for a nonexistent/cross-tenant exam (never leak existence)", async () => {
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Cross-tenant versions exam",
+        gradeLevel: "primaria_1",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+
+      expect(await repository.getVersions(examId, tenantBId)).toBeUndefined();
+      expect(await repository.getVersions(randomUUID(), tenantAId)).toBeUndefined();
     });
   });
 });

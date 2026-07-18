@@ -26,6 +26,37 @@ export type CreateExamValidation =
 const VALID_DIFFICULTIES = new Set<string>(Object.values(Difficulty));
 
 /**
+ * Shared `gradeLevel` + `blueprint` validation, factored out so
+ * `validatePreviewExamInput` (B2) can reuse the EXACT same rules minus the
+ * `title` requirement (B2-R4) without duplicating them. Mutates `errors` in
+ * place (collect-every-error convention).
+ */
+export function validateGradeLevelAndBlueprint(
+  gradeLevel: string | undefined,
+  blueprint: readonly CreateExamBlueprintRowInput[] | undefined,
+  errors: string[],
+): void {
+  if (!gradeLevel || !isGradeLevel(gradeLevel)) {
+    errors.push("gradeLevel is required and must be a valid catalog value");
+  }
+  if (!blueprint || blueprint.length === 0) {
+    errors.push("blueprint must contain at least one row");
+  } else {
+    blueprint.forEach((row, index) => {
+      if (!row.courseId) {
+        errors.push(`blueprint[${index}].courseId is required`);
+      }
+      if (row.difficulty !== undefined && !VALID_DIFFICULTIES.has(row.difficulty)) {
+        errors.push(`blueprint[${index}].difficulty must be one of: easy, medium, hard`);
+      }
+      if (row.count === undefined || !Number.isInteger(row.count) || row.count <= 0) {
+        errors.push(`blueprint[${index}].count must be a positive integer`);
+      }
+    });
+  }
+}
+
+/**
  * Validates the create-exam request shape (design doc 5.3 step 1-2): a
  * title, a valid `gradeLevel` catalog value, and at least one blueprint row.
  * Each row requires `courseId` and a positive integer `count`; `topicId` and
@@ -40,24 +71,7 @@ export function validateCreateExamInput(input: CreateExamInput): CreateExamValid
   if (!input.title || input.title.trim().length === 0) {
     errors.push("title is required");
   }
-  if (!input.gradeLevel || !isGradeLevel(input.gradeLevel)) {
-    errors.push("gradeLevel is required and must be a valid catalog value");
-  }
-  if (!input.blueprint || input.blueprint.length === 0) {
-    errors.push("blueprint must contain at least one row");
-  } else {
-    input.blueprint.forEach((row, index) => {
-      if (!row.courseId) {
-        errors.push(`blueprint[${index}].courseId is required`);
-      }
-      if (row.difficulty !== undefined && !VALID_DIFFICULTIES.has(row.difficulty)) {
-        errors.push(`blueprint[${index}].difficulty must be one of: easy, medium, hard`);
-      }
-      if (row.count === undefined || !Number.isInteger(row.count) || row.count <= 0) {
-        errors.push(`blueprint[${index}].count must be a positive integer`);
-      }
-    });
-  }
+  validateGradeLevelAndBlueprint(input.gradeLevel, input.blueprint, errors);
 
   return errors.length > 0 ? { ok: false, errors } : { ok: true };
 }

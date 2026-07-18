@@ -1,5 +1,5 @@
 import { Difficulty } from "@exams-generator/shared";
-import { and, asc, eq, isNull, or, SQL } from "drizzle-orm";
+import { and, asc, count, eq, inArray, isNull, or, SQL } from "drizzle-orm";
 import { alias } from "drizzle-orm/pg-core";
 import { db } from "../../db/client";
 import {
@@ -136,6 +136,13 @@ export interface ExamDetailRecord {
   readonly questions: readonly ExamDetailQuestionRecord[];
 }
 
+/** One cell in a `countStock()` batch — same criteria shape as `Candidate`/`BlueprintRow`, minus `count` (B1). */
+export interface StockCellFilter {
+  readonly courseId: string;
+  readonly topicId?: string;
+  readonly difficulty?: Difficulty;
+}
+
 export interface SaveVersionRecord {
   readonly code: string;
   readonly questionOrder: readonly string[];
@@ -144,7 +151,24 @@ export interface SaveVersionRecord {
   readonly answerSheetAssetId: string;
 }
 
+/** `GET /exams/:examId/versions` (B4) row shape — see `getVersions()`. */
+export interface VersionSummaryRecord {
+  readonly code: string;
+  readonly pdfUrl: string;
+  readonly answerSheetUrl: string;
+}
+
 const logoAssets = alias(assets, "logo_assets");
+
+/**
+ * The tenant-visibility predicate shared by every query that reads from the
+ * question bank on behalf of an exam (`getQuestionPool`, `countStock`):
+ * `tenant_id IS NULL OR tenant_id = :tenant` (B1-R7 — must not be
+ * duplicated).
+ */
+function questionVisibility(tenantId: string): SQL {
+  return or(isNull(questions.tenantId), eq(questions.tenantId, tenantId)) as SQL;
+}
 
 /**
  * Drizzle-backed persistence for the exams module. Mirrors the bank
@@ -245,7 +269,7 @@ export class ExamsRepository {
    * place that decides tenant visibility for exam question selection.
    */
   async getQuestionPool(filter: QuestionPoolFilter): Promise<QuestionPoolCandidateRecord[]> {
-    const visibility = or(isNull(questions.tenantId), eq(questions.tenantId, filter.tenantId)) as SQL;
+    const visibility = questionVisibility(filter.tenantId);
 
     return db
       .select({
@@ -263,6 +287,42 @@ export class ExamsRepository {
           eq(questions.gradeLevel, filter.gradeLevel),
         ),
       );
+  }
+
+  /**
+   * `POST /exams/stock/batch` (B1): ONE grouped query over the same
+   * release-gate visibility as `getQuestionPool()` (B1-R7 — factored via
+   * `questionVisibility()`, not duplicated), `GROUP BY` course/topic/
+   * difficulty, then one `available` count projected per input cell in
+   * input order. A cell with no matching group yields `0` (B1-R9), not an
+   * error. Omitting a cell's `topicId`/`difficulty` sums across every
+   * group that still matches the cell's other criteria.
+   */
+  async countStock(filter: QuestionPoolFilter, cells: readonly StockCellFilter[]): Promise<number[]> {
+    const visibility = questionVisibility(filter.tenantId);
+
+    const groups = await db
+      .select({
+        courseId: topics.courseId,
+        topicId: questions.topicId,
+        difficulty: questions.difficulty,
+        total: count(),
+      })
+      .from(questions)
+      .innerJoin(topics, eq(questions.topicId, topics.id))
+      .where(and(visibility, eq(questions.status, "approved"), eq(questions.gradeLevel, filter.gradeLevel)))
+      .groupBy(topics.courseId, questions.topicId, questions.difficulty);
+
+    return cells.map((cell) =>
+      groups
+        .filter(
+          (group) =>
+            group.courseId === cell.courseId &&
+            (cell.topicId === undefined || group.topicId === cell.topicId) &&
+            (cell.difficulty === undefined || group.difficulty === cell.difficulty),
+        )
+        .reduce((sum, group) => sum + Number(group.total), 0),
+    );
   }
 
   /**
@@ -467,5 +527,73 @@ export class ExamsRepository {
       pdfAssetId: version.pdfAssetId,
       answerSheetAssetId: version.answerSheetAssetId,
     });
+  }
+
+  /**
+   * B4-B (idempotent regeneration): in ONE transaction, reads the exam's
+   * existing `exam_versions` rows, deletes them (must happen BEFORE
+   * deleting their `assets` rows — `exam_versions.pdfAssetId`/
+   * `answerSheetAssetId` FK-reference `assets.id`), then deletes those
+   * asset rows too, returning their `storageKey`s so the caller can
+   * best-effort clean up the actual storage objects. No-op (`[]`) when the
+   * exam has zero prior versions — a first-time generation is unaffected
+   * (B4-R7).
+   */
+  async clearVersions(examId: string): Promise<string[]> {
+    return db.transaction(async (tx) => {
+      const existing = await tx
+        .select({ pdfAssetId: examVersions.pdfAssetId, answerSheetAssetId: examVersions.answerSheetAssetId })
+        .from(examVersions)
+        .where(eq(examVersions.examId, examId));
+
+      if (existing.length === 0) {
+        return [];
+      }
+
+      const assetIds = existing
+        .flatMap((row) => [row.pdfAssetId, row.answerSheetAssetId])
+        .filter((id): id is string => id !== null);
+
+      await tx.delete(examVersions).where(eq(examVersions.examId, examId));
+
+      if (assetIds.length === 0) {
+        return [];
+      }
+
+      const assetRows = await tx.select({ storageKey: assets.storageKey }).from(assets).where(inArray(assets.id, assetIds));
+      await tx.delete(assets).where(inArray(assets.id, assetIds));
+
+      return assetRows.map((row) => row.storageKey);
+    });
+  }
+
+  /**
+   * `GET /exams/:examId/versions` (B4): tenant-scoped like `getExamById`
+   * (returns `undefined` — never leak existence, B4-R2). `pdfUrl`/
+   * `answerSheetUrl` are constructed directly from the asset ids
+   * (DECISION B4-A — `/assets/:id`, no join needed since only the id is
+   * used), ordered by `code ASC` (DECISION B4-C).
+   */
+  async getVersions(examId: string, tenantId: string): Promise<VersionSummaryRecord[] | undefined> {
+    const exam = await this.getExamById(examId, tenantId);
+    if (!exam) {
+      return undefined;
+    }
+
+    const rows = await db
+      .select({
+        code: examVersions.code,
+        pdfAssetId: examVersions.pdfAssetId,
+        answerSheetAssetId: examVersions.answerSheetAssetId,
+      })
+      .from(examVersions)
+      .where(eq(examVersions.examId, examId))
+      .orderBy(asc(examVersions.code));
+
+    return rows.map((row) => ({
+      code: row.code,
+      pdfUrl: row.pdfAssetId ? `/assets/${row.pdfAssetId}` : "",
+      answerSheetUrl: row.answerSheetAssetId ? `/assets/${row.answerSheetAssetId}` : "",
+    }));
   }
 }

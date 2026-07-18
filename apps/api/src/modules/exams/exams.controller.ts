@@ -1,5 +1,15 @@
 import { Role } from "@exams-generator/shared";
-import { Body, Controller, Get, Param, Post, UnprocessableEntityException, UseGuards } from "@nestjs/common";
+import {
+  Body,
+  Controller,
+  Get,
+  HttpCode,
+  HttpStatus,
+  Param,
+  Post,
+  UnprocessableEntityException,
+  UseGuards,
+} from "@nestjs/common";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { Roles } from "../auth/roles.decorator";
@@ -16,9 +26,14 @@ import {
   CreateExamResult,
   ExamDetailResult,
   ExamsService,
+  ExamVersionSummary,
   InsufficientQuestionStockError,
+  PreviewExamDto,
+  PreviewExamResult,
   ReplaceQuestionDto,
   ReplaceQuestionResult,
+  StockBatchDto,
+  StockBatchResult,
 } from "./exams.service";
 
 interface CreateExamBody {
@@ -39,6 +54,15 @@ interface ReplaceQuestionBody {
 
 interface GenerateVersionsBody {
   readonly versionCount?: number;
+}
+
+interface StockBatchBody {
+  readonly gradeLevel?: string;
+  readonly cells?: ReadonlyArray<{
+    readonly courseId?: string;
+    readonly topicId?: string;
+    readonly difficulty?: string;
+  }>;
 }
 
 /**
@@ -74,6 +98,23 @@ export class ExamsController {
     }
   }
 
+  /** `POST /exams/stock/batch` (B1) — sibling method, inherits class-level guards, pure read (no persistence, hence 200 not 201). */
+  @Post("stock/batch")
+  @HttpCode(HttpStatus.OK)
+  async countStock(
+    @CurrentUser() user: AuthTokenPayload,
+    @Body() body: StockBatchBody,
+  ): Promise<StockBatchResult> {
+    return this.examsService.countStock(user, body as StockBatchDto);
+  }
+
+  /** `POST /exams/preview` (B2) — same body shape as `POST /exams` minus `title`; pure read, no persistence (200 not 201). */
+  @Post("preview")
+  @HttpCode(HttpStatus.OK)
+  async preview(@CurrentUser() user: AuthTokenPayload, @Body() body: CreateExamBody): Promise<PreviewExamResult> {
+    return this.examsService.previewExam(user, body as PreviewExamDto);
+  }
+
   @Get(":examId")
   async getExam(@CurrentUser() user: AuthTokenPayload, @Param("examId") examId: string): Promise<ExamDetailResult> {
     return this.examsService.getExamDetail(user, examId);
@@ -97,6 +138,15 @@ export class ExamsController {
   @Post(":examId/confirm")
   async confirm(@CurrentUser() user: AuthTokenPayload, @Param("examId") examId: string): Promise<ConfirmExamResult> {
     return this.examsService.confirmExam(user, examId);
+  }
+
+  /** `GET /exams/:examId/versions` (B4) — read-only history, distinct from `POST /versions` (generate). */
+  @Get(":examId/versions")
+  async getVersions(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("examId") examId: string,
+  ): Promise<readonly ExamVersionSummary[]> {
+    return this.examsService.listVersions(user, examId);
   }
 
   @Post(":examId/versions")

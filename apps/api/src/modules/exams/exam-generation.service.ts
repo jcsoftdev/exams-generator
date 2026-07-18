@@ -96,11 +96,36 @@ export class ExamVersionGenerationService {
     if (!exam) {
       throw new NotFoundException(`Exam not found: ${examId}`);
     }
-    if (exam.status !== "ready") {
+
+    // B3 auto-confirm: a `draft` exam with a non-empty selection is
+    // confirmed (draft->ready) as part of this same call, instead of
+    // requiring a separate `POST /confirm` (B3-R1/R5). A `draft` exam with
+    // NO selected questions is still rejected (B3-R2 — auto-confirm never
+    // bypasses that invariant). Any other non-`ready` status is unchanged
+    // (B3-R4).
+    if (exam.status === "draft") {
+      if (exam.selectedQuestions.length === 0) {
+        throw new ConflictException("Exam has no selected questions");
+      }
+      await this.repository.confirmExam(examId);
+    } else if (exam.status !== "ready") {
       throw new ConflictException("Exam must be confirmed (status=ready) before generating versions");
-    }
-    if (exam.selectedQuestions.length === 0) {
+    } else if (exam.selectedQuestions.length === 0) {
       throw new ConflictException("Exam has no selected questions");
+    }
+
+    // B4-B idempotent regeneration: wipe any prior versions (DB rows first,
+    // then best-effort delete their storage objects) BEFORE building new
+    // ones, so a second `POST /versions` call never collides on the
+    // `(examId, code)` unique index (B4-R5/R6). No-op on first-time
+    // generation (B4-R7).
+    const deletedStorageKeys = await this.repository.clearVersions(examId);
+    for (const key of deletedStorageKeys) {
+      try {
+        await this.storage.delete(key);
+      } catch {
+        // best-effort — the DB rows are already gone regardless (DECISION B4-B).
+      }
     }
 
     // Discriminated by `type` (design doc §5.4, Lane D4): `structured`

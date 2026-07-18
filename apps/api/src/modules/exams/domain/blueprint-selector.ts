@@ -81,6 +81,39 @@ export function select(
   return { ok: true, questionIds: selectedIdsByRow.flat() };
 }
 
+/** One row's preview pick (B2) — unlike `RowShortage`, always carries whatever ids WERE selected, even when short. */
+export interface PreviewRowResult {
+  readonly questionIds: string[];
+  readonly requested: number;
+  readonly available: number;
+}
+
+/**
+ * `POST /exams/preview` (B2) variant of `select()`: same matching + shuffle
+ * + no-reuse-across-rows mechanics, but NEVER fails wholesale — a short row
+ * gets a partial fill (all available ids, B2-R3) instead of blanking out
+ * every row's result. Every row is always represented in the returned array,
+ * in input order.
+ */
+export function selectPreview(
+  rows: readonly BlueprintRow[],
+  pool: readonly Candidate[],
+  rng: Rng,
+): PreviewRowResult[] {
+  const used = new Set<string>();
+
+  return rows.map((row) => {
+    const matching = pool.filter((candidate) => matchesRow(candidate, row) && !used.has(candidate.id));
+    const pickCount = Math.min(row.count, matching.length);
+    const chosen = shuffleArray(matching, rng)
+      .slice(0, pickCount)
+      .map((candidate) => candidate.id);
+    chosen.forEach((id) => used.add(id));
+
+    return { questionIds: chosen, requested: row.count, available: matching.length };
+  });
+}
+
 function matchesRow(candidate: Candidate, row: BlueprintRow): boolean {
   if (candidate.courseId !== row.courseId) {
     return false;

@@ -4,6 +4,7 @@ import {
   BlueprintRow,
   Candidate,
   select,
+  selectPreview,
   SelectionResult,
 } from "./blueprint-selector";
 
@@ -168,5 +169,94 @@ describe("select", () => {
         }
       }
     }
+  });
+});
+
+describe("selectPreview (B2 — always partial-fills, never fails wholesale)", () => {
+  it("exact-fill row: pool size == count -> the whole pool is selected, deterministically", () => {
+    const rows: BlueprintRow[] = [{ courseId: "aritmetica", difficulty: Difficulty.Easy, count: 2 }];
+    const pool: Candidate[] = [
+      { id: "q1", courseId: "aritmetica", difficulty: Difficulty.Easy },
+      { id: "q2", courseId: "aritmetica", difficulty: Difficulty.Easy },
+    ];
+
+    const [result] = selectPreview(rows, pool, createSeededRng(1));
+
+    expect(result.requested).toBe(2);
+    expect(result.available).toBe(2);
+    expect([...result.questionIds].sort()).toEqual(["q1", "q2"]);
+  });
+
+  it("shortage row: pool size < count -> ALL available ids are returned (partial fill), never zero", () => {
+    const rows: BlueprintRow[] = [{ courseId: "aritmetica", difficulty: Difficulty.Easy, count: 10 }];
+    const pool: Candidate[] = [
+      { id: "q1", courseId: "aritmetica", difficulty: Difficulty.Easy },
+      { id: "q2", courseId: "aritmetica", difficulty: Difficulty.Easy },
+      { id: "q3", courseId: "aritmetica", difficulty: Difficulty.Easy },
+      { id: "q4", courseId: "aritmetica", difficulty: Difficulty.Easy },
+    ];
+
+    const [result] = selectPreview(rows, pool, createSeededRng(2));
+
+    expect(result.requested).toBe(10);
+    expect(result.available).toBe(4);
+    expect([...result.questionIds].sort()).toEqual(["q1", "q2", "q3", "q4"]);
+  });
+
+  it("over-supplied row: pool size > count -> exactly `count` ids, all a subset of the pool (never asserts exact ids — random pick)", () => {
+    const rows: BlueprintRow[] = [{ courseId: "aritmetica", difficulty: Difficulty.Easy, count: 2 }];
+    const pool: Candidate[] = [
+      { id: "q1", courseId: "aritmetica", difficulty: Difficulty.Easy },
+      { id: "q2", courseId: "aritmetica", difficulty: Difficulty.Easy },
+      { id: "q3", courseId: "aritmetica", difficulty: Difficulty.Easy },
+      { id: "q4", courseId: "aritmetica", difficulty: Difficulty.Easy },
+      { id: "q5", courseId: "aritmetica", difficulty: Difficulty.Easy },
+    ];
+
+    const [result] = selectPreview(rows, pool, createSeededRng(3));
+
+    expect(result.questionIds).toHaveLength(2);
+    expect(result.available).toBe(5);
+    for (const id of result.questionIds) {
+      expect(pool.map((c) => c.id)).toContain(id);
+    }
+  });
+
+  it("never fails wholesale: a shortage in row 1 does not blank out row 2's successful selection", () => {
+    const rows: BlueprintRow[] = [
+      { courseId: "aritmetica", difficulty: Difficulty.Easy, count: 5 },
+      { courseId: "algebra", difficulty: Difficulty.Hard, count: 1 },
+    ];
+    const pool: Candidate[] = [
+      { id: "q1", courseId: "aritmetica", difficulty: Difficulty.Easy },
+      { id: "q2", courseId: "algebra", difficulty: Difficulty.Hard },
+    ];
+
+    const results = selectPreview(rows, pool, createSeededRng(4));
+
+    expect(results).toHaveLength(2);
+    expect(results[0].questionIds).toEqual(["q1"]);
+    expect(results[0].available).toBe(1);
+    expect(results[1].questionIds).toEqual(["q2"]);
+    expect(results[1].available).toBe(1);
+  });
+
+  it("no question id is reused across rows (same dedup semantics as select())", () => {
+    const rows: BlueprintRow[] = [
+      { courseId: "aritmetica", difficulty: Difficulty.Easy, count: 2 },
+      { courseId: "aritmetica", difficulty: Difficulty.Easy, count: 2 },
+    ];
+    const pool: Candidate[] = [
+      { id: "q1", courseId: "aritmetica", difficulty: Difficulty.Easy },
+      { id: "q2", courseId: "aritmetica", difficulty: Difficulty.Easy },
+      { id: "q3", courseId: "aritmetica", difficulty: Difficulty.Easy },
+    ];
+
+    const results = selectPreview(rows, pool, createSeededRng(5));
+
+    const allIds = results.flatMap((r: { questionIds: string[] }) => r.questionIds);
+    expect(new Set(allIds).size).toBe(allIds.length);
+    expect(results[0].questionIds).toHaveLength(2);
+    expect(results[1].questionIds).toHaveLength(1); // only 1 left unused
   });
 });

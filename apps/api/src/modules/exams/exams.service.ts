@@ -9,14 +9,18 @@ import {
 } from "@nestjs/common";
 import { ExamStatus } from "../../db/schema/enums";
 import { AuthTokenPayload } from "../auth/token.service";
-import { BlueprintRow, Candidate, select } from "./domain/blueprint-selector";
+import { BlueprintRow, Candidate, select, selectPreview } from "./domain/blueprint-selector";
 import { Rng, createSeededRng, shuffleArray } from "./domain/ports/random.port";
 import { CreateExamInput, validateCreateExamInput } from "./domain/validate-create-exam-input";
+import { PreviewExamInput, validatePreviewExamInput } from "./domain/validate-preview-exam-input";
+import { StockBatchInput, validateStockBatchInput } from "./domain/validate-stock-batch-input";
 import {
   BlueprintRowRecord,
   ExamDetailRecord,
   ExamsRepository,
   QuestionPoolCandidateRecord,
+  StockCellFilter,
+  VersionSummaryRecord,
 } from "./exams.repository";
 
 export interface CreateExamBlueprintRowDto {
@@ -77,8 +81,62 @@ export interface ConfirmExamResult {
   readonly status: ExamStatus;
 }
 
+export interface StockBatchCellDto {
+  readonly courseId?: string;
+  readonly topicId?: string;
+  readonly difficulty?: string;
+}
+
+export interface StockBatchDto {
+  readonly gradeLevel?: string;
+  readonly cells?: readonly StockBatchCellDto[];
+}
+
+export interface StockBatchCellResult {
+  readonly courseId: string;
+  readonly topicId?: string;
+  readonly difficulty?: Difficulty;
+  readonly available: number;
+}
+
+export interface StockBatchResult {
+  readonly results: readonly StockBatchCellResult[];
+}
+
+/** `POST /exams/preview` (B2) request — same blueprint row shape as `CreateExamDto`, minus `title`. */
+export interface PreviewExamDto {
+  readonly gradeLevel?: string;
+  readonly blueprint?: readonly CreateExamBlueprintRowDto[];
+}
+
+export interface PreviewSelectionRow {
+  readonly rowIndex: number;
+  readonly courseId: string;
+  readonly topicId?: string;
+  readonly difficulty?: Difficulty;
+  readonly questionIds: readonly string[];
+}
+
+/** Preview's shortage shape mirrors `ShortageDetail` but keys by `rowIndex` — nothing is persisted, so there is no `blueprintRowId` (B2-R1/R3). */
+export interface PreviewShortageDetail {
+  readonly rowIndex: number;
+  readonly courseId: string;
+  readonly topicId?: string;
+  readonly difficulty?: Difficulty;
+  readonly requested: number;
+  readonly available: number;
+}
+
+export interface PreviewExamResult {
+  readonly selections: readonly PreviewSelectionRow[];
+  readonly shortages: readonly PreviewShortageDetail[];
+}
+
 /** `GET /exams/:examId` response — same shape as the repository's `ExamDetailRecord` (no extra mapping needed). */
 export type ExamDetailResult = ExamDetailRecord;
+
+/** `GET /exams/:examId/versions` response entry (B4) — same shape as the repository's `VersionSummaryRecord`. */
+export type ExamVersionSummary = VersionSummaryRecord;
 
 function requireTenant(user: AuthTokenPayload): string {
   if (!user.tenantId) {
@@ -197,6 +255,99 @@ export class ExamsService {
     return { id: examId, status: "draft", selectedQuestionIds: result.questionIds };
   }
 
+  /**
+   * `POST /exams/stock/batch` (B1) — pure read, no persistence (B1-R8).
+   * `requireTenant()` + validate-before-query (B1-R2..R6), then ONE batched
+   * `repository.countStock()` call, order-matched to the input cells.
+   */
+  async countStock(user: AuthTokenPayload, dto: StockBatchDto): Promise<StockBatchResult> {
+    const tenantId = requireTenant(user);
+
+    const validation = validateStockBatchInput(dto as StockBatchInput);
+    if (!validation.ok) {
+      throw new BadRequestException(validation.errors);
+    }
+
+    const gradeLevel = dto.gradeLevel as string;
+    const cells: StockCellFilter[] = (dto.cells as StockBatchCellDto[]).map((cell) => ({
+      courseId: cell.courseId as string,
+      topicId: cell.topicId,
+      difficulty: cell.difficulty as Difficulty | undefined,
+    }));
+
+    const counts = await this.repository.countStock({ tenantId, gradeLevel }, cells);
+
+    return {
+      results: cells.map((cell, index) => ({
+        courseId: cell.courseId,
+        topicId: cell.topicId,
+        difficulty: cell.difficulty,
+        available: counts[index] as number,
+      })),
+    };
+  }
+
+  /**
+   * `POST /exams/preview` (B2) — runs the exact same pool query +
+   * blueprint-selector matching as `createExam()`, but via `selectPreview()`
+   * (never fails wholesale, B2-R3) and with ZERO persistence calls (B2-R2):
+   * no `repository.createExam()`/`getBlueprintRows()`/`saveSelection()`.
+   */
+  async previewExam(user: AuthTokenPayload, dto: PreviewExamDto): Promise<PreviewExamResult> {
+    const tenantId = requireTenant(user);
+
+    const validation = validatePreviewExamInput(dto as PreviewExamInput);
+    if (!validation.ok) {
+      throw new BadRequestException(validation.errors);
+    }
+
+    const gradeLevel = dto.gradeLevel as string;
+    const blueprint = dto.blueprint as CreateExamBlueprintRowDto[];
+
+    const pool = await this.repository.getQuestionPool({ tenantId, gradeLevel });
+    const candidates: Candidate[] = pool.map((c) => ({
+      id: c.id,
+      courseId: c.courseId,
+      topicId: c.topicId,
+      difficulty: c.difficulty,
+    }));
+
+    const rows: BlueprintRow[] = blueprint.map((row) => ({
+      courseId: row.courseId as string,
+      topicId: row.topicId,
+      difficulty: row.difficulty as Difficulty | undefined,
+      count: row.count as number,
+    }));
+
+    const rowResults = selectPreview(rows, candidates, this.rngFactory());
+
+    const selections: PreviewSelectionRow[] = [];
+    const shortages: PreviewShortageDetail[] = [];
+
+    rows.forEach((row, rowIndex) => {
+      const rowResult = rowResults[rowIndex]!;
+      selections.push({
+        rowIndex,
+        courseId: row.courseId,
+        topicId: row.topicId,
+        difficulty: row.difficulty,
+        questionIds: rowResult.questionIds,
+      });
+      if (rowResult.questionIds.length < rowResult.requested) {
+        shortages.push({
+          rowIndex,
+          courseId: row.courseId,
+          topicId: row.topicId,
+          difficulty: row.difficulty,
+          requested: rowResult.requested,
+          available: rowResult.available,
+        });
+      }
+    });
+
+    return { selections, shortages };
+  }
+
   async replaceQuestion(
     user: AuthTokenPayload,
     examId: string,
@@ -288,5 +439,22 @@ export class ExamsService {
     await this.repository.confirmExam(examId);
 
     return { id: examId, status: "ready" };
+  }
+
+  /**
+   * `GET /exams/:examId/versions` (B4) — same tenant-scoped 404-on-mismatch
+   * pattern as `getExamDetail`/`confirmExam` (B4-R2): `repository.getVersions()`
+   * returns `undefined` for a missing/cross-tenant exam and `[]` for a
+   * zero-version exam (B4-R3) — only `undefined` becomes a 404.
+   */
+  async listVersions(user: AuthTokenPayload, examId: string): Promise<readonly ExamVersionSummary[]> {
+    const tenantId = requireTenant(user);
+
+    const versions = await this.repository.getVersions(examId, tenantId);
+    if (versions === undefined) {
+      throw new NotFoundException(`Exam not found: ${examId}`);
+    }
+
+    return versions;
   }
 }

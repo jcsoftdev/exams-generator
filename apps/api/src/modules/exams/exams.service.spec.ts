@@ -15,11 +15,13 @@ function buildDeps() {
     getExamDetail: jest.fn(),
     getBlueprintRows: jest.fn(),
     getQuestionPool: jest.fn(),
+    countStock: jest.fn(),
     saveSelection: jest.fn().mockResolvedValue(undefined),
     getSelectedQuestionIds: jest.fn(),
     findExamQuestion: jest.fn(),
     replaceQuestion: jest.fn().mockResolvedValue(undefined),
     confirmExam: jest.fn().mockResolvedValue(undefined),
+    getVersions: jest.fn(),
   } as unknown as jest.Mocked<ExamsRepository>;
 
   const service = new ExamsService(repository, () => createSeededRng(1));
@@ -371,5 +373,216 @@ describe("ExamsService.confirmExam", () => {
 
     expect(repository.confirmExam).toHaveBeenCalledWith("exam-1");
     expect(result).toEqual({ id: "exam-1", status: "ready" });
+  });
+});
+
+describe("ExamsService.countStock (B1)", () => {
+  it("rejects platform staff (no tenant) with 403, before touching the repository", async () => {
+    const { service, repository } = buildDeps();
+
+    await expect(
+      service.countStock(STAFF, { gradeLevel: "primaria_1", cells: [{ courseId: "c1" }] }),
+    ).rejects.toBeInstanceOf(ForbiddenException);
+    expect(repository.countStock).not.toHaveBeenCalled();
+  });
+
+  it("rejects an invalid gradeLevel with 400, before touching the repository", async () => {
+    const { service, repository } = buildDeps();
+
+    await expect(
+      service.countStock(TEACHER, { gradeLevel: "not-a-real-grade", cells: [{ courseId: "c1" }] }),
+    ).rejects.toBeInstanceOf(BadRequestException);
+    expect(repository.countStock).not.toHaveBeenCalled();
+  });
+
+  it("rejects a missing/empty cells array with 400", async () => {
+    const { service, repository } = buildDeps();
+
+    await expect(service.countStock(TEACHER, { gradeLevel: "primaria_1", cells: [] })).rejects.toBeInstanceOf(
+      BadRequestException,
+    );
+    expect(repository.countStock).not.toHaveBeenCalled();
+  });
+
+  it("rejects with 400 naming the offending cell index when courseId is missing", async () => {
+    const { service, repository } = buildDeps();
+
+    let caught: BadRequestException | undefined;
+    try {
+      await service.countStock(TEACHER, {
+        gradeLevel: "primaria_1",
+        cells: [{ courseId: "c1" }, { courseId: undefined }],
+      });
+    } catch (error) {
+      caught = error as BadRequestException;
+    }
+
+    expect(caught).toBeInstanceOf(BadRequestException);
+    expect(caught?.getResponse()).toMatchObject({
+      message: expect.arrayContaining([expect.stringContaining("cells[1].courseId")]),
+    });
+    expect(repository.countStock).not.toHaveBeenCalled();
+  });
+
+  it("rejects an invalid difficulty with 400", async () => {
+    const { service, repository } = buildDeps();
+
+    await expect(
+      service.countStock(TEACHER, {
+        gradeLevel: "primaria_1",
+        cells: [{ courseId: "c1", difficulty: "impossible" }],
+      }),
+    ).rejects.toBeInstanceOf(BadRequestException);
+    expect(repository.countStock).not.toHaveBeenCalled();
+  });
+
+  it("delegates to repository.countStock() on valid input and returns order-matched results", async () => {
+    const { service, repository } = buildDeps();
+    repository.countStock.mockResolvedValue([20, 0]);
+
+    const result = await service.countStock(TEACHER, {
+      gradeLevel: "secundaria_1",
+      cells: [
+        { courseId: "course-1", difficulty: "easy" },
+        { courseId: "course-1", topicId: "topic-1", difficulty: "hard" },
+      ],
+    });
+
+    expect(repository.countStock).toHaveBeenCalledWith(
+      { tenantId: "tenant-1", gradeLevel: "secundaria_1" },
+      [
+        { courseId: "course-1", topicId: undefined, difficulty: "easy" },
+        { courseId: "course-1", topicId: "topic-1", difficulty: "hard" },
+      ],
+    );
+    expect(result).toEqual({
+      results: [
+        { courseId: "course-1", topicId: undefined, difficulty: "easy", available: 20 },
+        { courseId: "course-1", topicId: "topic-1", difficulty: "hard", available: 0 },
+      ],
+    });
+  });
+});
+
+describe("ExamsService.previewExam (B2)", () => {
+  it("rejects platform staff (no tenant) with 403, before touching the repository", async () => {
+    const { service, repository } = buildDeps();
+
+    await expect(
+      service.previewExam(STAFF, { gradeLevel: "primaria_1", blueprint: [{ courseId: "c1", count: 1 }] }),
+    ).rejects.toBeInstanceOf(ForbiddenException);
+    expect(repository.getQuestionPool).not.toHaveBeenCalled();
+  });
+
+  it("rejects invalid input (no title required, unlike createExam) with 400, before touching the repository", async () => {
+    const { service, repository } = buildDeps();
+
+    await expect(
+      service.previewExam(TEACHER, { gradeLevel: undefined, blueprint: undefined }),
+    ).rejects.toBeInstanceOf(BadRequestException);
+    expect(repository.getQuestionPool).not.toHaveBeenCalled();
+
+    // No title field at all in the DTO -- still valid input, proving title is genuinely not required.
+    repository.getQuestionPool.mockResolvedValue(POOL);
+    const result = await service.previewExam(TEACHER, {
+      gradeLevel: "primaria_1",
+      blueprint: [{ courseId: "course-1", difficulty: Difficulty.Easy, count: 1 }],
+    });
+    expect(result.shortages).toEqual([]);
+  });
+
+  it("exact-fill row: deterministic full-pool selection, matches the seeded rng", async () => {
+    const { service, repository } = buildDeps();
+    const exactPool: QuestionPoolCandidateRecord[] = [
+      { id: "q1", courseId: "course-1", topicId: "topic-1", difficulty: Difficulty.Easy },
+      { id: "q2", courseId: "course-1", topicId: "topic-1", difficulty: Difficulty.Easy },
+    ];
+    repository.getQuestionPool.mockResolvedValue(exactPool);
+
+    const result = await service.previewExam(TEACHER, {
+      gradeLevel: "primaria_1",
+      blueprint: [{ courseId: "course-1", difficulty: Difficulty.Easy, count: 2 }],
+    });
+
+    expect(result.shortages).toEqual([]);
+    expect(result.selections).toHaveLength(1);
+    expect([...result.selections[0]!.questionIds].sort()).toEqual(["q1", "q2"]);
+  });
+
+  it("shortage row: partial fill with all available ids + a shortages entry, still 200-shaped (no throw)", async () => {
+    const { service, repository } = buildDeps();
+    repository.getQuestionPool.mockResolvedValue(POOL); // 3 available
+
+    const result = await service.previewExam(TEACHER, {
+      gradeLevel: "primaria_1",
+      blueprint: [{ courseId: "course-1", difficulty: Difficulty.Easy, count: 10 }],
+    });
+
+    expect(result.shortages).toHaveLength(1);
+    expect(result.shortages[0]).toMatchObject({ rowIndex: 0, requested: 10, available: 3 });
+    expect([...result.selections[0]!.questionIds].sort()).toEqual(["q1", "q2", "q3"]);
+  });
+
+  it("over-supplied row: questionIds.length === count and every id is a subset of the pool (never asserts exact ids)", async () => {
+    const { service, repository } = buildDeps();
+    const bigPool: QuestionPoolCandidateRecord[] = [
+      { id: "q1", courseId: "course-1", topicId: "topic-1", difficulty: Difficulty.Easy },
+      { id: "q2", courseId: "course-1", topicId: "topic-1", difficulty: Difficulty.Easy },
+      { id: "q3", courseId: "course-1", topicId: "topic-1", difficulty: Difficulty.Easy },
+      { id: "q4", courseId: "course-1", topicId: "topic-1", difficulty: Difficulty.Easy },
+      { id: "q5", courseId: "course-1", topicId: "topic-1", difficulty: Difficulty.Easy },
+    ];
+    repository.getQuestionPool.mockResolvedValue(bigPool);
+
+    const result = await service.previewExam(TEACHER, {
+      gradeLevel: "primaria_1",
+      blueprint: [{ courseId: "course-1", difficulty: Difficulty.Easy, count: 2 }],
+    });
+
+    expect(result.shortages).toEqual([]);
+    expect(result.selections[0]!.questionIds).toHaveLength(2);
+    for (const id of result.selections[0]!.questionIds) {
+      expect(bigPool.map((c) => c.id)).toContain(id);
+    }
+  });
+
+  it("does NOT persist anything — no createExam/getBlueprintRows/saveSelection calls (B2-R2)", async () => {
+    const { service, repository } = buildDeps();
+    repository.getQuestionPool.mockResolvedValue(POOL);
+
+    await service.previewExam(TEACHER, {
+      gradeLevel: "primaria_1",
+      blueprint: [{ courseId: "course-1", difficulty: Difficulty.Easy, count: 2 }],
+    });
+
+    expect(repository.createExam).not.toHaveBeenCalled();
+    expect(repository.getBlueprintRows).not.toHaveBeenCalled();
+    expect(repository.saveSelection).not.toHaveBeenCalled();
+  });
+});
+
+describe("ExamsService.listVersions (B4)", () => {
+  it("rejects platform staff (no tenant) with 403", async () => {
+    const { service } = buildDeps();
+
+    await expect(service.listVersions(STAFF, "exam-1")).rejects.toBeInstanceOf(ForbiddenException);
+  });
+
+  it("rejects with 404 for a missing/cross-tenant exam — never leaks existence", async () => {
+    const { service, repository } = buildDeps();
+    repository.getVersions.mockResolvedValue(undefined);
+
+    await expect(service.listVersions(TEACHER, "exam-1")).rejects.toBeInstanceOf(NotFoundException);
+    expect(repository.getVersions).toHaveBeenCalledWith("exam-1", "tenant-1");
+  });
+
+  it("delegates to repository.getVersions() and returns its result", async () => {
+    const { service, repository } = buildDeps();
+    const versions = [{ code: "A", pdfUrl: "/assets/x", answerSheetUrl: "/assets/y" }];
+    repository.getVersions.mockResolvedValue(versions);
+
+    const result = await service.listVersions(TEACHER, "exam-1");
+
+    expect(result).toEqual(versions);
   });
 });

@@ -78,6 +78,8 @@ function buildDeps() {
     getExamForGeneration: jest.fn(),
     createAsset: jest.fn(),
     saveVersion: jest.fn().mockResolvedValue(undefined),
+    confirmExam: jest.fn().mockResolvedValue(undefined),
+    clearVersions: jest.fn().mockResolvedValue([]),
   } as unknown as jest.Mocked<ExamsRepository>;
 
   const storage = new InMemoryStorageAdapter();
@@ -100,11 +102,41 @@ describe("ExamVersionGenerationService.generateVersions", () => {
     await expect(service.generateVersions(TEACHER, "exam-1", 2)).rejects.toBeInstanceOf(NotFoundException);
   });
 
-  it("rejects when the exam is not yet confirmed (status != ready)", async () => {
+  it("rejects a draft exam with ZERO selected questions with 409, and does NOT call confirmExam (B3-R2)", async () => {
     const { service, repository } = buildDeps();
-    repository.getExamForGeneration.mockResolvedValue({ ...READY_EXAM, status: "draft" });
+    repository.getExamForGeneration.mockResolvedValue({ ...READY_EXAM, status: "draft", selectedQuestions: [] });
 
     await expect(service.generateVersions(TEACHER, "exam-1", 2)).rejects.toBeInstanceOf(ConflictException);
+    expect(repository.confirmExam).not.toHaveBeenCalled();
+  });
+
+  it("auto-confirms a draft exam WITH selected questions (calls confirmExam) then generates normally (B3-R1/R5)", async () => {
+    const { service, repository } = buildDeps();
+    repository.getExamForGeneration.mockResolvedValue({ ...READY_EXAM, status: "draft" });
+    repository.createAsset.mockResolvedValue({ id: "asset-id" });
+
+    const results = await service.generateVersions(TEACHER, "exam-1", 2);
+
+    expect(repository.confirmExam).toHaveBeenCalledWith("exam-1");
+    expect(results).toHaveLength(2);
+  });
+
+  it("a ready exam does NOT trigger confirmExam — no regression (B3-R3)", async () => {
+    const { service, repository } = buildDeps();
+    repository.getExamForGeneration.mockResolvedValue(READY_EXAM);
+    repository.createAsset.mockResolvedValue({ id: "asset-id" });
+
+    await service.generateVersions(TEACHER, "exam-1", 1);
+
+    expect(repository.confirmExam).not.toHaveBeenCalled();
+  });
+
+  it("rejects when the exam's status is neither draft nor ready — unchanged rejection (B3-R4)", async () => {
+    const { service, repository } = buildDeps();
+    repository.getExamForGeneration.mockResolvedValue({ ...READY_EXAM, status: "archived" as never });
+
+    await expect(service.generateVersions(TEACHER, "exam-1", 2)).rejects.toBeInstanceOf(ConflictException);
+    expect(repository.confirmExam).not.toHaveBeenCalled();
   });
 
   it("rejects a non-positive versionCount", async () => {
@@ -218,5 +250,54 @@ describe("ExamVersionGenerationService.generateVersions", () => {
 
     await expect(promise).rejects.toBeInstanceOf(ExamPdfGenerationError);
     await expect(promise).rejects.toMatchObject({ examId: "exam-1", questionId: "q2" });
+  });
+
+  describe("idempotent regeneration (B4)", () => {
+    it("calls clearVersions() AFTER auto-confirm and BEFORE buildVersions() on a regeneration, then best-effort deletes each returned storage key", async () => {
+      const { service, repository, storage } = buildDeps();
+      repository.getExamForGeneration.mockResolvedValue(READY_EXAM);
+      repository.createAsset.mockResolvedValue({ id: "asset-id" });
+      repository.clearVersions.mockResolvedValue(["exams/exam-1/versions/A/exam.pdf", "exams/exam-1/versions/A/answer-key.pdf"]);
+      await storage.put("exams/exam-1/versions/A/exam.pdf", Buffer.from("old-pdf"), "application/pdf");
+      await storage.put("exams/exam-1/versions/A/answer-key.pdf", Buffer.from("old-answer"), "application/pdf");
+      const deleteSpy = jest.spyOn(storage, "delete");
+
+      await service.generateVersions(TEACHER, "exam-1", 2);
+
+      expect(repository.clearVersions).toHaveBeenCalledWith("exam-1");
+      expect(deleteSpy).toHaveBeenCalledWith("exams/exam-1/versions/A/exam.pdf");
+      expect(deleteSpy).toHaveBeenCalledWith("exams/exam-1/versions/A/answer-key.pdf");
+    });
+
+    it("first-time generation (clearVersions returns []) skips every storage.delete call — no regression", async () => {
+      const { service, repository, storage } = buildDeps();
+      repository.getExamForGeneration.mockResolvedValue(READY_EXAM);
+      repository.createAsset.mockResolvedValue({ id: "asset-id" });
+      repository.clearVersions.mockResolvedValue([]);
+      const deleteSpy = jest.spyOn(storage, "delete");
+
+      await service.generateVersions(TEACHER, "exam-1", 1);
+
+      expect(repository.clearVersions).toHaveBeenCalledWith("exam-1");
+      expect(deleteSpy).not.toHaveBeenCalled();
+    });
+
+    it("clearVersions() runs on a draft-with-questions exam too, AFTER the auto-confirm call", async () => {
+      const { service, repository } = buildDeps();
+      repository.getExamForGeneration.mockResolvedValue({ ...READY_EXAM, status: "draft" });
+      repository.createAsset.mockResolvedValue({ id: "asset-id" });
+      const callOrder: string[] = [];
+      repository.confirmExam.mockImplementation(async () => {
+        callOrder.push("confirmExam");
+      });
+      repository.clearVersions.mockImplementation(async () => {
+        callOrder.push("clearVersions");
+        return [];
+      });
+
+      await service.generateVersions(TEACHER, "exam-1", 1);
+
+      expect(callOrder).toEqual(["confirmExam", "clearVersions"]);
+    });
   });
 });
