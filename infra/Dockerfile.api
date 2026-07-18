@@ -28,6 +28,10 @@ RUN pnpm install --frozen-lockfile --filter "@exams-generator/api..." || pnpm in
 
 FROM deps AS build
 COPY . .
+# Build the shared package first: @exams-generator/api resolves it via its
+# package.json main/types (dist/), and this Dockerfile invokes pnpm directly
+# (not turbo), so the ^build dependency is not auto-resolved. Mirrors Dockerfile.web.
+RUN pnpm --filter @exams-generator/shared build
 RUN pnpm --filter @exams-generator/api build
 RUN pnpm --filter @exams-generator/api deploy --prod --legacy /app/deploy
 
