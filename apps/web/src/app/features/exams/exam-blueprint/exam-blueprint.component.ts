@@ -1,5 +1,5 @@
-import { Component, inject, output, signal } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, WritableSignal, inject, output, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Difficulty } from '@exams-generator/shared';
 import { ExamsService } from '../exams.service';
@@ -10,15 +10,19 @@ import {
   InsufficientStockErrorBody,
   ShortageDetail,
 } from '../exams.models';
+import { TaxonomyService } from '../../taxonomy/taxonomy.service';
+import { Course, Topic } from '../../taxonomy/taxonomy.models';
 
 /**
  * Blueprint builder (design doc §5.3 steps 1-2). Lets a teacher define an
  * exam's title/grade level plus N blueprint rows ("X questions of
  * {course, topic?, difficulty?}"), then calls `POST /exams`.
  *
- * GAP: there is no `GET /courses`/`GET /topics` listing endpoint, so
- * `courseId`/`topicId` are free-text UUID inputs (same workaround as
- * `BankListComponent`'s filters) — see exams.models.ts.
+ * Course/topic are dropdowns populated from `TaxonomyService`
+ * (`GET /courses`, `GET /topics?courseId=`). Each row's topic list is
+ * cascaded from ITS OWN course selection — topics are tracked in a
+ * `WeakMap` keyed by the row's `FormGroup` instance (not by index), so
+ * adding/removing rows never mixes up which topics belong to which row.
  *
  * On a 422 (`InsufficientQuestionStockError`), the backend still persists
  * the exam and its blueprint rows so the user can fix and retry — this
@@ -33,10 +37,14 @@ import {
 export class ExamBlueprintComponent {
   private readonly formBuilder = inject(FormBuilder);
   private readonly examsService = inject(ExamsService);
+  private readonly taxonomyService = inject(TaxonomyService);
 
   protected readonly difficulties = Object.values(Difficulty);
   protected readonly gradeLevels = GRADE_LEVELS;
   protected readonly gradeLevelLabels = GRADE_LEVEL_LABELS;
+
+  protected readonly courses = signal<Course[]>([]);
+  private readonly rowTopics = new WeakMap<AbstractControl, WritableSignal<Topic[]>>();
 
   protected readonly submitting = signal(false);
   protected readonly errorMessage = signal<string | null>(null);
@@ -50,17 +58,40 @@ export class ExamBlueprintComponent {
     blueprint: this.formBuilder.array([this.buildRow()]),
   });
 
+  constructor() {
+    this.taxonomyService.getCourses().subscribe((courses) => this.courses.set(courses));
+  }
+
   protected get rows() {
     return this.form.controls.blueprint;
   }
 
   private buildRow() {
-    return this.formBuilder.nonNullable.group({
+    const row = this.formBuilder.nonNullable.group({
       courseId: ['', [Validators.required]],
       topicId: [''],
       difficulty: [''],
       count: [1, [Validators.required, Validators.min(1)]],
     });
+
+    const topics = signal<Topic[]>([]);
+    this.rowTopics.set(row, topics);
+
+    row.controls.courseId.valueChanges.subscribe((courseId) => {
+      row.controls.topicId.setValue('');
+      if (!courseId) {
+        topics.set([]);
+        return;
+      }
+      this.taxonomyService.getTopics(courseId).subscribe((result) => topics.set(result));
+    });
+
+    return row;
+  }
+
+  /** Keyed by the row's `FormGroup` (stable across add/remove), not by index. */
+  protected topicsForRow(row: AbstractControl): Topic[] {
+    return this.rowTopics.get(row)?.() ?? [];
   }
 
   protected addRow(): void {
@@ -69,6 +100,7 @@ export class ExamBlueprintComponent {
 
   protected removeRow(index: number): void {
     if (this.rows.length > 1) {
+      this.rowTopics.delete(this.rows.at(index));
       this.rows.removeAt(index);
     }
   }

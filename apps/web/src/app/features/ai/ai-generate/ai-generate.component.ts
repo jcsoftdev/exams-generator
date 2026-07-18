@@ -4,6 +4,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Difficulty } from '@exams-generator/shared';
 import { AiService } from '../ai.service';
 import { GRADE_LEVELS, GRADE_LEVEL_LABELS, GenerateQuestionsResult } from '../ai.models';
+import { TaxonomyService } from '../../taxonomy/taxonomy.service';
+import { Course, Topic } from '../../taxonomy/taxonomy.models';
 
 /**
  * Generation-by-topic form (design doc §5.2 step 1): course/topic/
@@ -21,10 +23,14 @@ import { GRADE_LEVELS, GRADE_LEVEL_LABELS, GenerateQuestionsResult } from '../ai
 export class AiGenerateComponent {
   private readonly formBuilder = inject(FormBuilder);
   private readonly aiService = inject(AiService);
+  private readonly taxonomyService = inject(TaxonomyService);
 
   protected readonly difficulties = Object.values(Difficulty);
   protected readonly gradeLevels = GRADE_LEVELS;
   protected readonly gradeLevelLabels = GRADE_LEVEL_LABELS;
+
+  protected readonly courses = signal<Course[]>([]);
+  protected readonly topics = signal<Topic[]>([]);
 
   protected readonly submitting = signal(false);
   protected readonly result = signal<GenerateQuestionsResult | null>(null);
@@ -38,6 +44,19 @@ export class AiGenerateComponent {
     count: [1, [Validators.required, Validators.min(1)]],
     withFigure: [false],
   });
+
+  constructor() {
+    this.taxonomyService.getCourses().subscribe((courses) => this.courses.set(courses));
+
+    this.form.controls.courseId.valueChanges.subscribe((courseId) => {
+      this.form.controls.topicId.setValue('');
+      if (!courseId) {
+        this.topics.set([]);
+        return;
+      }
+      this.taxonomyService.getTopics(courseId).subscribe((topics) => this.topics.set(topics));
+    });
+  }
 
   protected onSubmit(): void {
     if (this.form.invalid || this.submitting()) {
