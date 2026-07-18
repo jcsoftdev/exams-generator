@@ -23,7 +23,7 @@ import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankService } from "./bank.service";
 import { QuestionListItem } from "./bank.repository";
-import { clampPagination } from "./pagination.util";
+import { clampPagination } from "../../common/pagination.util";
 
 interface CreateImageQuestionBody {
   readonly courseId?: string;

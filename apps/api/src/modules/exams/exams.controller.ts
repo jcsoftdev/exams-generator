@@ -13,6 +13,7 @@ import {
   UnprocessableEntityException,
   UseGuards,
 } from "@nestjs/common";
+import { clampPagination } from "../../common/pagination.util";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { Roles } from "../auth/roles.decorator";
@@ -141,8 +142,7 @@ export class ExamsController {
       status,
       gradeLevel,
       search,
-      page: Math.max(1, Number(page) || 1),
-      pageSize: Math.min(100, Math.max(1, Number(pageSize) || 20)),
+      ...clampPagination(page, pageSize),
     });
   }
 

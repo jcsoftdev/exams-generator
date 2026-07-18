@@ -72,6 +72,16 @@ export interface ListQuestionsQuery {
 }
 
 /**
+ * Hard cap on `BankService.previewCache` entries. Each entry holds a
+ * compiled PDF `Buffer`, so an unbounded cache is an unbounded memory leak
+ * as distinct questions get previewed over the process lifetime. 50 is
+ * generous for a single-question preview cache (bounded working set of
+ * "questions someone is actively iterating on") while capping worst-case
+ * memory.
+ */
+const MAX_PREVIEW_CACHE = 50;
+
+/**
  * Orchestrates the manual image-question upload flow (design doc 5.1),
  * tenant-scoped listing, and the human-review side of the AI draft workflow
  * (Lane D3, design doc §5.2: approve/reject/edit a `status='draft'`
@@ -85,7 +95,10 @@ export class BankService {
    * question id. Deliberately NOT persisted/shared across instances — a
    * cold cache just means one extra Typst compile, never a correctness
    * issue. Invalidated in `editDraftQuestion` on every successful edit so a
-   * re-fetched preview never serves a stale compile.
+   * re-fetched preview never serves a stale compile. Bounded to
+   * `MAX_PREVIEW_CACHE` entries with FIFO eviction (see `previewQuestion`) —
+   * a `Map` preserves insertion order, so `.keys().next().value` is always
+   * the oldest entry.
    */
   private readonly previewCache = new Map<string, Buffer>();
 
@@ -307,6 +320,12 @@ export class BankService {
           },
         ],
       });
+      if (this.previewCache.size >= MAX_PREVIEW_CACHE) {
+        const oldestKey = this.previewCache.keys().next().value;
+        if (oldestKey !== undefined) {
+          this.previewCache.delete(oldestKey);
+        }
+      }
       this.previewCache.set(id, pdf);
       return pdf;
     } catch (error) {

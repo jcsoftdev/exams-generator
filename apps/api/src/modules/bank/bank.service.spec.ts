@@ -554,4 +554,27 @@ describe("BankService.previewQuestion", () => {
       BadRequestException,
     );
   });
+
+  it("evicts the oldest entry once the preview cache exceeds MAX_PREVIEW_CACHE (50)", async () => {
+    const { service, repository, pdfCompiler } = buildDeps();
+    repository.findQuestionById.mockImplementation((id: string) =>
+      Promise.resolve({ ...DRAFT_QUESTION, id }),
+    );
+
+    // Insert 51 distinct previews — one over the cap — to force eviction.
+    for (let i = 0; i < 51; i += 1) {
+      await service.previewQuestion(TEACHER_USER, `draft-${i}`);
+    }
+
+    const cache = (service as unknown as { previewCache: Map<string, Buffer> }).previewCache;
+    expect(cache.size).toBeLessThanOrEqual(50);
+    expect(cache.has("draft-0")).toBe(false);
+    expect(cache.has("draft-50")).toBe(true);
+
+    // Behavioral proof: the evicted entry is a genuine cache miss (recompiles),
+    // not just absent from the Map.
+    const compileCallsBeforeRefetch = pdfCompiler.compileExam.mock.calls.length;
+    await service.previewQuestion(TEACHER_USER, "draft-0");
+    expect(pdfCompiler.compileExam.mock.calls.length).toBe(compileCallsBeforeRefetch + 1);
+  });
 });
