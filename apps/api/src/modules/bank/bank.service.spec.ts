@@ -490,3 +490,68 @@ describe("BankService.editDraftQuestion", () => {
     expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
   });
 });
+
+describe("BankService.previewQuestion", () => {
+  it("compiles and caches the Typst preview for a structured question", async () => {
+    const { service, repository, pdfCompiler } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
+    const mockPdf = Buffer.from("fake-pdf-bytes");
+    pdfCompiler.compileExam.mockResolvedValue(mockPdf);
+
+    const result = await service.previewQuestion(TEACHER_USER, "draft-1");
+
+    expect(pdfCompiler.compileExam).toHaveBeenCalledTimes(1);
+    expect(result).toBe(mockPdf);
+
+    // Second call should hit cache
+    const cachedResult = await service.previewQuestion(TEACHER_USER, "draft-1");
+    expect(pdfCompiler.compileExam).toHaveBeenCalledTimes(1); // Still 1, not 2
+    expect(cachedResult).toBe(mockPdf);
+  });
+
+  it("throws BadRequestException when the Typst compilation fails", async () => {
+    const { service, repository, pdfCompiler } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
+    pdfCompiler.compileExam.mockRejectedValue(
+      new TypstCompilationError("typst compile failed", "draft-1", "syntax error"),
+    );
+
+    await expect(service.previewQuestion(TEACHER_USER, "draft-1")).rejects.toBeInstanceOf(
+      BadRequestException,
+    );
+  });
+
+  it("throws NotFoundException when the question doesn't exist or isn't visible to the requester", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(undefined);
+
+    await expect(service.previewQuestion(TEACHER_USER, "missing")).rejects.toBeInstanceOf(
+      NotFoundException,
+    );
+  });
+
+  it("throws BadRequestException when the question is not structured", async () => {
+    const { service, repository } = buildDeps();
+    const imageQuestion: QuestionListItem = {
+      id: "image-1",
+      tenantId: "tenant-1",
+      courseId: "course-1",
+      topicId: "topic-1",
+      difficulty: Difficulty.Easy,
+      gradeLevel: "primaria_1",
+      correctAnswer: "a",
+      type: "image",
+      status: "approved",
+      aiGenerated: false,
+      imageAssetId: "asset-1",
+      bodyTypst: null,
+      alternatives: null,
+      figureCode: null,
+    };
+    repository.findQuestionById.mockResolvedValue(imageQuestion);
+
+    await expect(service.previewQuestion(TEACHER_USER, "image-1")).rejects.toBeInstanceOf(
+      BadRequestException,
+    );
+  });
+});

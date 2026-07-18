@@ -293,21 +293,28 @@ export class BankService {
       return cached;
     }
 
-    const pdf = await this.pdfCompiler.compileExam({
-      title: "Vista previa",
-      versionLabel: "preview",
-      questions: [
-        {
-          id: question.id,
-          type: "structured",
-          bodyTypst: question.bodyTypst,
-          alternatives: (question.alternatives ?? []) as string[],
-          figureCode: question.figureCode ?? undefined,
-        },
-      ],
-    });
-    this.previewCache.set(id, pdf);
-    return pdf;
+    try {
+      const pdf = await this.pdfCompiler.compileExam({
+        title: "Vista previa",
+        versionLabel: "preview",
+        questions: [
+          {
+            id: question.id,
+            type: "structured",
+            bodyTypst: question.bodyTypst,
+            alternatives: (question.alternatives ?? []) as string[],
+            figureCode: question.figureCode ?? undefined,
+          },
+        ],
+      });
+      this.previewCache.set(id, pdf);
+      return pdf;
+    } catch (error) {
+      if (error instanceof TypstCompilationError) {
+        throw new BadRequestException(`Typst compile failed: ${error.message}`);
+      }
+      throw error;
+    }
   }
 
   /**
