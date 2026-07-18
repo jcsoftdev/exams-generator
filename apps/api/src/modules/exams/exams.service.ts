@@ -12,7 +12,12 @@ import { AuthTokenPayload } from "../auth/token.service";
 import { BlueprintRow, Candidate, select } from "./domain/blueprint-selector";
 import { Rng, createSeededRng, shuffleArray } from "./domain/ports/random.port";
 import { CreateExamInput, validateCreateExamInput } from "./domain/validate-create-exam-input";
-import { BlueprintRowRecord, ExamsRepository, QuestionPoolCandidateRecord } from "./exams.repository";
+import {
+  BlueprintRowRecord,
+  ExamDetailRecord,
+  ExamsRepository,
+  QuestionPoolCandidateRecord,
+} from "./exams.repository";
 
 export interface CreateExamBlueprintRowDto {
   readonly courseId?: string;
@@ -71,6 +76,9 @@ export interface ConfirmExamResult {
   readonly id: string;
   readonly status: ExamStatus;
 }
+
+/** `GET /exams/:examId` response — same shape as the repository's `ExamDetailRecord` (no extra mapping needed). */
+export type ExamDetailResult = ExamDetailRecord;
 
 function requireTenant(user: AuthTokenPayload): string {
   if (!user.tenantId) {
@@ -242,6 +250,23 @@ export class ExamsService {
     await this.repository.replaceQuestion(examId, questionId, newQuestionId);
 
     return { examId, oldQuestionId: questionId, newQuestionId };
+  }
+
+  /**
+   * `GET /exams/:examId` — powers the web review screen so it can reload an
+   * exam's current selection from a route param instead of only holding it
+   * in memory (`ExamCreateComponent`'s GAP note). Same tenant-scoped
+   * 404-on-mismatch pattern as `replaceQuestion`/`confirmExam`.
+   */
+  async getExamDetail(user: AuthTokenPayload, examId: string): Promise<ExamDetailResult> {
+    const tenantId = requireTenant(user);
+
+    const exam = await this.repository.getExamDetail(examId, tenantId);
+    if (!exam) {
+      throw new NotFoundException(`Exam not found: ${examId}`);
+    }
+
+    return exam;
   }
 
   async confirmExam(user: AuthTokenPayload, examId: string): Promise<ConfirmExamResult> {

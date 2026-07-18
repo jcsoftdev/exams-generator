@@ -6,25 +6,20 @@ import {
   ConfirmExamResult,
   CreateExamPayload,
   CreateExamResult,
-  ExamQuestionSummary,
+  ExamDetail,
   ReplaceQuestionPayload,
   ReplaceQuestionResult,
 } from './exams.models';
 
 /**
  * Angular client for the Fase 1 exams API (design doc §5.3): `POST /exams`
- * (blueprint -> automatic selection, 422 on stock shortage),
- * `POST /exams/:examId/questions/:questionId/replace` (reroll/manual), and
- * `POST /exams/:examId/confirm` (draft -> ready). Bearer JWT is attached
- * automatically by `authInterceptor` (see app.config.ts) — same separation
- * of concerns as `BankService`, this service never touches auth headers.
- *
- * GAP: there is no `GET /exams/:examId` endpoint yet, so a created exam's
- * review state only lives in the browser (see `ExamCreateComponent`) —
- * refreshing the page loses it. `getQuestionById` reuses the bank module's
- * `GET /bank/questions/:id` purely to render course/topic/answer for the
- * bare ids `POST /exams` returns; there is no dedicated
- * exam-question-detail endpoint.
+ * (blueprint -> automatic selection, 422 on stock shortage), `GET
+ * /exams/:examId` (full detail — header + selected questions, tenant-scoped
+ * 404 on mismatch), `POST /exams/:examId/questions/:questionId/replace`
+ * (reroll/manual), and `POST /exams/:examId/confirm` (draft -> ready).
+ * Bearer JWT is attached automatically by `authInterceptor` (see
+ * app.config.ts) — same separation of concerns as `BankService`, this
+ * service never touches auth headers.
  */
 @Injectable({ providedIn: 'root' })
 export class ExamsService {
@@ -32,6 +27,10 @@ export class ExamsService {
 
   createExam(payload: CreateExamPayload): Observable<CreateExamResult> {
     return this.http.post<CreateExamResult>(`${environment.apiBaseUrl}/exams`, payload);
+  }
+
+  getExam(examId: string): Observable<ExamDetail> {
+    return this.http.get<ExamDetail>(`${environment.apiBaseUrl}/exams/${examId}`);
   }
 
   replaceQuestion(
@@ -47,9 +46,5 @@ export class ExamsService {
 
   confirmExam(examId: string): Observable<ConfirmExamResult> {
     return this.http.post<ConfirmExamResult>(`${environment.apiBaseUrl}/exams/${examId}/confirm`, {});
-  }
-
-  getQuestionById(questionId: string): Observable<ExamQuestionSummary> {
-    return this.http.get<ExamQuestionSummary>(`${environment.apiBaseUrl}/bank/questions/${questionId}`);
   }
 }

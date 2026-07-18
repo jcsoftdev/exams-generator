@@ -107,6 +107,35 @@ export interface ExamForGenerationRecord {
   readonly selectedQuestions: readonly SelectedQuestionForGeneration[];
 }
 
+/**
+ * One selected question in `GET /exams/:examId` detail output (design doc
+ * §5.3/§5.4 review screen). Same `type='image'` vs `type='structured'`
+ * duality as `SelectedQuestionForGeneration` above, but exposes
+ * `imageAssetId` (not `imageStorageKey`) — the review screen only needs an
+ * asset reference, never the raw storage key.
+ */
+export interface ExamDetailQuestionRecord {
+  readonly id: string;
+  readonly position: number;
+  readonly type: QuestionType;
+  readonly courseId: string;
+  readonly topicId: string;
+  readonly difficulty: Difficulty;
+  readonly correctAnswer: string;
+  readonly imageAssetId: string | null;
+  readonly bodyTypst: string | null;
+  readonly alternatives: readonly string[] | null;
+  readonly figureCode: string | null;
+}
+
+export interface ExamDetailRecord {
+  readonly id: string;
+  readonly title: string;
+  readonly gradeLevel: string;
+  readonly status: ExamStatus;
+  readonly questions: readonly ExamDetailQuestionRecord[];
+}
+
 export interface SaveVersionRecord {
   readonly code: string;
   readonly questionOrder: readonly string[];
@@ -354,6 +383,60 @@ export class ExamsRepository {
         correctAnswer: row.correctAnswer,
         imageStorageKey: row.imageStorageKey,
         imageMime: row.imageMime,
+        bodyTypst: row.bodyTypst,
+        alternatives: (row.alternatives as readonly string[] | null) ?? null,
+        figureCode: row.figureCode,
+      })),
+    };
+  }
+
+  /**
+   * `GET /exams/:examId` (design doc §5.3/§5.4 review screen): the exam's
+   * header fields plus every selected question, ordered by position.
+   * Tenant-scoped like `getExamById`/`getExamForGeneration` — returns
+   * `undefined` for another tenant's exam so the caller turns it into a 404
+   * without leaking existence.
+   */
+  async getExamDetail(examId: string, tenantId: string): Promise<ExamDetailRecord | undefined> {
+    const exam = await this.getExamById(examId, tenantId);
+    if (!exam) {
+      return undefined;
+    }
+
+    const rows = await db
+      .select({
+        id: examQuestions.questionId,
+        position: examQuestions.position,
+        type: questions.type,
+        courseId: topics.courseId,
+        topicId: questions.topicId,
+        difficulty: questions.difficulty,
+        correctAnswer: questions.correctAnswer,
+        imageAssetId: questions.imageAssetId,
+        bodyTypst: questions.bodyTypst,
+        alternatives: questions.alternatives,
+        figureCode: questions.figureCode,
+      })
+      .from(examQuestions)
+      .innerJoin(questions, eq(examQuestions.questionId, questions.id))
+      .innerJoin(topics, eq(questions.topicId, topics.id))
+      .where(eq(examQuestions.examId, examId))
+      .orderBy(asc(examQuestions.position));
+
+    return {
+      id: exam.id,
+      title: exam.title,
+      gradeLevel: exam.gradeLevel,
+      status: exam.status,
+      questions: rows.map((row) => ({
+        id: row.id,
+        position: row.position,
+        type: row.type,
+        courseId: row.courseId,
+        topicId: row.topicId,
+        difficulty: row.difficulty,
+        correctAnswer: row.correctAnswer,
+        imageAssetId: row.imageAssetId,
         bodyTypst: row.bodyTypst,
         alternatives: (row.alternatives as readonly string[] | null) ?? null,
         figureCode: row.figureCode,

@@ -1,5 +1,1 @@
-@if (exam(); as createdExam) {
-  <app-exam-review [exam]="createdExam" />
-} @else {
-  <app-exam-blueprint (examCreated)="onExamCreated($event)" />
-}
+<app-exam-blueprint (examCreated)="onExamCreated($event)" />

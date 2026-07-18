@@ -1,5 +1,5 @@
 import { Role } from "@exams-generator/shared";
-import { Body, Controller, Param, Post, UnprocessableEntityException, UseGuards } from "@nestjs/common";
+import { Body, Controller, Get, Param, Post, UnprocessableEntityException, UseGuards } from "@nestjs/common";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { Roles } from "../auth/roles.decorator";
@@ -14,6 +14,7 @@ import {
   ConfirmExamResult,
   CreateExamDto,
   CreateExamResult,
+  ExamDetailResult,
   ExamsService,
   InsufficientQuestionStockError,
   ReplaceQuestionDto,
@@ -71,6 +72,11 @@ export class ExamsController {
       }
       throw error;
     }
+  }
+
+  @Get(":examId")
+  async getExam(@CurrentUser() user: AuthTokenPayload, @Param("examId") examId: string): Promise<ExamDetailResult> {
+    return this.examsService.getExamDetail(user, examId);
   }
 
   @Post(":examId/questions/:questionId/replace")

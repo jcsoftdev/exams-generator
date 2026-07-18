@@ -1,9 +1,9 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { describe, it, expect } from 'vitest';
+import { Router } from '@angular/router';
+import { describe, it, expect, vi } from 'vitest';
 import { ExamCreateComponent } from './exam-create.component';
 import { ExamBlueprintComponent } from '../exam-blueprint/exam-blueprint.component';
-import { ExamReviewComponent } from '../exam-review/exam-review.component';
 import type { CreateExamResult } from '../exams.models';
 
 const EXAM: CreateExamResult = { id: 'exam-1', status: 'draft', selectedQuestionIds: ['q1'] };
@@ -14,40 +14,37 @@ class StubBlueprintComponent {
   exam = EXAM;
 }
 
-@Component({ selector: 'app-exam-review', template: '<p data-testid="stub-review">reviewing {{ exam.id }}</p>' })
-class StubReviewComponent {
-  @Input() exam!: CreateExamResult;
-}
-
 function setup() {
-  TestBed.configureTestingModule({ imports: [ExamCreateComponent] });
+  const navigate = vi.fn();
+
+  TestBed.configureTestingModule({
+    imports: [ExamCreateComponent],
+    providers: [{ provide: Router, useValue: { navigate } }],
+  });
   TestBed.overrideComponent(ExamCreateComponent, {
-    remove: { imports: [ExamBlueprintComponent, ExamReviewComponent] },
-    add: { imports: [StubBlueprintComponent, StubReviewComponent] },
+    remove: { imports: [ExamBlueprintComponent] },
+    add: { imports: [StubBlueprintComponent] },
   });
 
   const fixture = TestBed.createComponent(ExamCreateComponent);
   fixture.detectChanges();
   const compiled = fixture.nativeElement as HTMLElement;
 
-  return { fixture, compiled };
+  return { fixture, compiled, navigate };
 }
 
 describe('ExamCreateComponent', () => {
-  it('shows the blueprint builder first', () => {
+  it('shows the blueprint builder', () => {
     const { compiled } = setup();
 
     expect(compiled.querySelector('[data-testid="stub-create"]')).toBeTruthy();
-    expect(compiled.querySelector('[data-testid="stub-review"]')).toBeFalsy();
   });
 
-  it('switches to the review screen once the blueprint emits examCreated', () => {
-    const { compiled, fixture } = setup();
+  it('navigates to the review route once the blueprint emits examCreated', () => {
+    const { compiled, navigate } = setup();
 
     compiled.querySelector<HTMLButtonElement>('[data-testid="stub-create"]')!.click();
-    fixture.detectChanges();
 
-    expect(compiled.querySelector('[data-testid="stub-create"]')).toBeFalsy();
-    expect(compiled.querySelector('[data-testid="stub-review"]')!.textContent).toContain('exam-1');
+    expect(navigate).toHaveBeenCalledWith(['/app/exams', 'exam-1']);
   });
 });

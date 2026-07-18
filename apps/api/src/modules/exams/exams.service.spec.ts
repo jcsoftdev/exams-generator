@@ -12,6 +12,7 @@ function buildDeps() {
   const repository = {
     createExam: jest.fn(),
     getExamById: jest.fn(),
+    getExamDetail: jest.fn(),
     getBlueprintRows: jest.fn(),
     getQuestionPool: jest.fn(),
     saveSelection: jest.fn().mockResolvedValue(undefined),
@@ -258,6 +259,59 @@ describe("ExamsService.replaceQuestion", () => {
       service.replaceQuestion(TEACHER, "exam-1", "q1", { mode: "manual", replacementQuestionId: "q2" }),
     ).rejects.toBeInstanceOf(BadRequestException);
     expect(repository.replaceQuestion).not.toHaveBeenCalled();
+  });
+});
+
+describe("ExamsService.getExamDetail", () => {
+  it("rejects platform staff (no tenant) — exams always belong to a tenant", async () => {
+    const { service } = buildDeps();
+
+    await expect(service.getExamDetail(STAFF, "exam-1")).rejects.toBeInstanceOf(ForbiddenException);
+  });
+
+  it("rejects when the exam does not exist or belongs to another tenant", async () => {
+    const { service, repository } = buildDeps();
+    repository.getExamDetail.mockResolvedValue(undefined);
+
+    await expect(service.getExamDetail(TEACHER, "exam-1")).rejects.toBeInstanceOf(NotFoundException);
+    expect(repository.getExamDetail).toHaveBeenCalledWith("exam-1", "tenant-1");
+  });
+
+  it("returns the exam header + its selected questions for the owning tenant", async () => {
+    const { service, repository } = buildDeps();
+    repository.getExamDetail.mockResolvedValue({
+      id: "exam-1",
+      title: "Simulacro",
+      gradeLevel: "primaria_1",
+      status: "draft",
+      questions: [
+        {
+          id: "q1",
+          position: 0,
+          type: "image",
+          courseId: "course-1",
+          topicId: "topic-1",
+          difficulty: Difficulty.Easy,
+          correctAnswer: "a",
+          imageAssetId: "asset-1",
+          bodyTypst: null,
+          alternatives: null,
+          figureCode: null,
+        },
+      ],
+    });
+
+    const result = await service.getExamDetail(TEACHER, "exam-1");
+
+    expect(result).toEqual({
+      id: "exam-1",
+      title: "Simulacro",
+      gradeLevel: "primaria_1",
+      status: "draft",
+      questions: [
+        expect.objectContaining({ id: "q1", position: 0, type: "image", imageAssetId: "asset-1" }),
+      ],
+    });
   });
 });
 
