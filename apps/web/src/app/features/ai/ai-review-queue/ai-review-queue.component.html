@@ -1,99 +1,75 @@
-<section class="ai-review-queue">
-  <h1>Cola de revisión</h1>
-
-  <p class="ai-review-queue__typst-note" role="note">
-    No hay compilador de Typst en el navegador. El texto de abajo se edita
-    como texto plano; la "vista previa" ES la compilación que corre en el
-    servidor cuando <code>PATCH /bank/questions/:id</code> guarda — si el
-    texto no es válido, la API responde 400 y no se guarda nada.
-  </p>
-
-  @if (loadErrorMessage()) {
-    <p class="ai-review-queue__load-error" role="alert">{{ loadErrorMessage() }}</p>
-  }
-
-  @if (loading()) {
-    <p>Cargando...</p>
-  } @else {
-    <ul class="ai-review-queue__drafts">
-      @for (draft of drafts(); track draft.id; let i = $index) {
-        <li class="ai-review-queue__draft" data-testid="draft-item" [formGroup]="group(i)">
-          <dl>
-            <dt>Curso</dt>
-            <dd>{{ draft.courseId }}</dd>
-            <dt>Tema</dt>
-            <dd>{{ draft.topicId }}</dd>
-            <dt>Dificultad</dt>
-            <dd>{{ draft.difficulty }}</dd>
-            <dt>Grado</dt>
-            <dd>{{ draft.gradeLevel }}</dd>
-            <dt>Texto actual (Typst)</dt>
-            <dd>{{ draft.bodyTypst }}</dd>
-            <dt>Alternativas actuales</dt>
-            <dd>{{ (draft.alternatives ?? []).join(', ') }}</dd>
-            <dt>Respuesta correcta actual</dt>
-            <dd>{{ draft.correctAnswer }}</dd>
-            @if (draft.figureCode) {
-              <dt>Código de figura actual</dt>
-              <dd>{{ draft.figureCode }}</dd>
-            }
-          </dl>
-
-          <label>
-            Texto (Typst)
-            <textarea name="bodyTypst" formControlName="bodyTypst"></textarea>
-          </label>
-          <label>
-            Alternativas (una por línea)
-            <textarea name="alternatives" formControlName="alternatives"></textarea>
-          </label>
-          <label>
-            Respuesta correcta
-            <input type="text" name="correctAnswer" formControlName="correctAnswer" />
-          </label>
-          <label>
-            Código de figura (opcional)
-            <textarea name="figureCode" formControlName="figureCode"></textarea>
-          </label>
-
-          @if (errorFor(draft.id)) {
-            <p class="ai-review-queue__save-error" role="alert">{{ errorFor(draft.id) }}</p>
-          }
-
-          <div class="ai-review-queue__actions">
-            <button
-              type="button"
-              data-testid="save-button"
-              [disabled]="isSaving(draft.id)"
-              (click)="onSave(draft, i)"
-            >
-              Guardar
-            </button>
-            <button
-              type="button"
-              data-testid="approve-button"
-              [disabled]="!canApprove(draft.id)"
-              (click)="onApprove(draft)"
-            >
-              Aprobar
-            </button>
-            <button
-              type="button"
-              data-testid="reject-button"
-              [disabled]="isSaving(draft.id)"
-              (click)="onReject(draft)"
-            >
-              Rechazar
-            </button>
-          </div>
-        </li>
-      } @empty {
-        <li data-testid="empty-queue-item">
-          <div data-testid="empty-queue">
-            <ui-empty-state message="No hay preguntas borrador para revisar." icon="check"></ui-empty-state>
-          </div>
-        </li>
+<div class="grid grid-cols-1 gap-4 lg:grid-cols-[240px_1fr]">
+  <!-- Lista -->
+  <div class="flex flex-col gap-2">
+    @if (loading()) {
+      <div data-testid="loading-indicator" class="h-12 animate-pulse rounded-field bg-n100"></div>
+    } @else if (drafts().length === 0) {
+      <div data-testid="empty-queue">
+        <ui-empty-state message="No hay borradores por revisar."></ui-empty-state>
+      </div>
+    } @else {
+      @for (d of drafts(); track d.id) {
+        <button
+          type="button"
+          data-testid="review-item"
+          class="rounded-field border bg-white p-2 text-left"
+          [class.border-primary-500]="selected()?.id === d.id"
+          [class.border-n200]="selected()?.id !== d.id"
+          (click)="select(d)"
+        >
+          <p class="truncate text-sm text-n800">{{ d.bodyTypst }}</p>
+          <p class="text-xs text-n500">{{ d.courseId }} · {{ d.topicId }}</p>
+        </button>
       }
-    </ul>
-  }
-</section>
+    }
+  </div>
+
+  <!-- Panel -->
+  <div>
+    @if (selected(); as d) {
+      <div class="rounded-card border border-n200 bg-white p-4">
+        <div class="mb-3 flex flex-wrap items-center gap-2">
+          <ui-tag variant="ai">Borrador IA</ui-tag>
+          <span class="text-sm text-n600">{{ d.gradeLevel }} · clave: {{ d.correctAnswer }}</span>
+        </div>
+
+        @if (actionError()) {
+          <p class="mb-3 rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">{{ actionError() }}</p>
+        }
+
+        <div class="mb-4 rounded-card bg-n100 p-3">
+          @if (previewLoading()) {
+            <div data-testid="preview-loading" class="h-72 animate-pulse rounded bg-n200"></div>
+          } @else if (previewUrl()) {
+            <iframe data-testid="preview-frame" [src]="previewUrl()" class="h-72 w-full rounded bg-white" title="Vista previa"></iframe>
+            <p class="mt-1 text-center text-xs text-n500">Vista previa real — así se imprimirá.</p>
+          } @else if (previewFailed()) {
+            <div data-testid="preview-fallback" class="rounded bg-white p-3 text-sm text-n700">
+              <p class="mb-2 text-xs text-warn-text">No se pudo generar la vista de impresión; mostramos el contenido.</p>
+              <p class="font-medium text-n900">{{ d.bodyTypst }}</p>
+              <ul class="mt-2 list-inside list-disc">
+                @for (alt of d.alternatives ?? []; track alt) { <li>{{ alt }}</li> }
+              </ul>
+            </div>
+          }
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <div data-testid="approve"><ui-button variant="primary" (clicked)="approve()"><span class="flex items-center gap-1"><lucide-angular name="check" class="h-4 w-4"></lucide-angular>Aprobar</span></ui-button></div>
+          <div data-testid="edit"><ui-button variant="ghost"><span class="flex items-center gap-1"><lucide-angular name="pencil" class="h-4 w-4"></lucide-angular>Editar</span></ui-button></div>
+          <div data-testid="reject"><ui-button variant="ghost" (clicked)="requestReject()"><span class="flex items-center gap-1 text-hard-text"><lucide-angular name="x" class="h-4 w-4"></lucide-angular>Rechazar</span></ui-button></div>
+        </div>
+      </div>
+    } @else if (!loading()) {
+      <div class="rounded-card border border-dashed border-n200 p-8 text-center text-sm text-n500">La cola está vacía.</div>
+    }
+  </div>
+
+  <ui-modal [open]="rejecting()" title="Rechazar borrador">
+    <p class="text-sm text-n700">¿Seguro que quieres rechazar este borrador? No entrará al banco.</p>
+    <div actions class="flex justify-end gap-2">
+      <ui-button variant="ghost" (clicked)="cancelReject()">Cancelar</ui-button>
+      <div data-testid="reject-confirm-yes"><ui-button variant="primary" (clicked)="confirmReject()">Rechazar</ui-button></div>
+    </div>
+  </ui-modal>
+</div>

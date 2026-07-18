@@ -53,4 +53,15 @@ export class AiService {
   editDraft(id: string, patch: EditDraftPayload): Observable<DraftQuestion> {
     return this.http.patch<DraftQuestion>(`${environment.apiBaseUrl}/bank/questions/${id}`, patch);
   }
+
+  /**
+   * S7: single-question Typst PDF preview, embedded via a `blob:` object
+   * URL (same authenticated-blob pattern as `fetchQuestionImage` on
+   * BankService). Powers the WYSIWYG print preview in the review queue.
+   */
+  previewDraft(id: string): Observable<Blob> {
+    return this.http.get(`${environment.apiBaseUrl}/bank/questions/${id}/preview`, {
+      responseType: 'blob',
+    });
+  }
 }

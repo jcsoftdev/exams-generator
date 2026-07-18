@@ -1,190 +1,133 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
-import { LucideAngularModule, Check } from 'lucide-angular';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { LucideAngularModule } from 'lucide-angular';
+import { ButtonComponent } from '../../../ui/button/button.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
+import { TagComponent } from '../../../ui/tag/tag.component';
+import { ModalComponent } from '../../../ui/modal/modal.component';
 import { AiService } from '../ai.service';
-import { DraftQuestion, EditDraftPayload } from '../ai.models';
-import { extractErrorMessage } from '../extract-error-message';
+import { DraftQuestion } from '../ai.models';
 
 /**
- * Draft review queue (design doc §5.2 steps 3-5): lists `status='draft'`
- * structured questions and lets a human edit/approve/reject each one. The
- * AI never publishes directly to the bank — this screen IS the human
- * curation gate.
+ * "Mesa de trabajo" review queue (design doc §5.2 steps 3-5, Task 10):
+ * two-column layout — a left list of `status='draft'` structured
+ * questions and a right panel showing the WYSIWYG PDF preview (S7 `GET
+ * /bank/questions/:id/preview`, embedded via a `blob:` object URL, same
+ * authenticated-blob pattern as `fetchQuestionImage`). The AI never
+ * publishes directly to the bank — this screen IS the human curation gate.
+ * Approve/Reject advance to the next draft automatically; Reject requires
+ * confirmation via `ui-modal`.
  *
- * "Typst preview" note: there is no client-side Typst compiler. `PATCH
- * /bank/questions/:id` recompiles the preview server-side and responds 400
- * (never persists) if the markup is invalid after the edit — that 400 IS
- * the validation surfaced here (see `extract-error-message.ts`), not a
- * browser-rendered preview.
+ * "Editar" is wired but intentionally inert here — the full structured
+ * editor (form + re-validation + preview-cache invalidation) is out of
+ * scope for this task; see the note above the template's edit button.
  */
 @Component({
   selector: 'app-ai-review-queue',
-  // `<lucide-icon>` is only used inside the nested `ui-empty-state` primitive
-  // (not directly in this component's own template), so only the icon
-  // providers are needed here — `.pick()`'s `ModuleWithProviders` cannot go
-  // in `imports` (NG2012).
-  imports: [ReactiveFormsModule, EmptyStateComponent],
-  providers: [LucideAngularModule.pick({ Check }).providers ?? []],
+  standalone: true,
+  imports: [ButtonComponent, EmptyStateComponent, TagComponent, ModalComponent, LucideAngularModule],
   templateUrl: './ai-review-queue.component.html',
 })
-export class AiReviewQueueComponent implements OnInit {
-  private readonly formBuilder = inject(FormBuilder);
+export class AiReviewQueueComponent {
   private readonly aiService = inject(AiService);
+  private readonly destroyRef = inject(DestroyRef);
+  private readonly sanitizer = inject(DomSanitizer);
 
   protected readonly drafts = signal<DraftQuestion[]>([]);
   protected readonly loading = signal(false);
-  protected readonly loadErrorMessage = signal<string | null>(null);
-  protected readonly savingIds = signal<ReadonlySet<string>>(new Set());
-  protected readonly editErrors = signal<Readonly<Record<string, string>>>({});
+  protected readonly errorMessage = signal<string | null>(null);
 
-  protected readonly formArray = this.formBuilder.array<FormGroup>([]);
+  protected readonly selected = signal<DraftQuestion | null>(null);
+  protected readonly previewUrl = signal<SafeResourceUrl | null>(null);
+  protected readonly previewLoading = signal(false);
+  protected readonly previewFailed = signal(false);
+  protected readonly rejecting = signal(false);
+  protected readonly actionError = signal<string | null>(null);
 
-  ngOnInit(): void {
-    this.reload();
+  private readonly objectUrls: string[] = [];
+  protected readonly firstLine = computed(() => {
+    const body = this.selected()?.bodyTypst ?? '';
+    return body.split('\n')[0] ?? '';
+  });
+
+  constructor() {
+    this.load();
+    this.destroyRef.onDestroy(() => this.objectUrls.forEach((u) => URL.revokeObjectURL(u)));
   }
 
-  private reload(): void {
+  private load(): void {
     this.loading.set(true);
-    this.loadErrorMessage.set(null);
-
+    this.errorMessage.set(null);
     this.aiService.listDrafts().subscribe({
       next: (drafts) => {
         this.loading.set(false);
-        this.drafts.set(drafts);
-        this.rebuildForm(drafts);
+        this.drafts.set([...drafts]);
+        if (drafts.length > 0) this.select(drafts[0]);
+        else this.selected.set(null);
       },
-      error: (_error: HttpErrorResponse) => {
+      error: (_e: HttpErrorResponse) => {
         this.loading.set(false);
-        this.loadErrorMessage.set('No se pudieron cargar los borradores. Inténtalo de nuevo.');
+        this.errorMessage.set('No se pudo cargar la cola. Inténtalo de nuevo.');
       },
     });
   }
 
-  private rebuildForm(drafts: readonly DraftQuestion[]): void {
-    this.formArray.clear();
-    for (const draft of drafts) {
-      this.formArray.push(
-        this.formBuilder.nonNullable.group({
-          bodyTypst: [draft.bodyTypst ?? ''],
-          alternatives: [(draft.alternatives ?? []).join('\n')],
-          correctAnswer: [draft.correctAnswer],
-          figureCode: [draft.figureCode ?? ''],
-        }),
-      );
-    }
+  protected select(draft: DraftQuestion): void {
+    this.selected.set(draft);
+    this.actionError.set(null);
+    this.compilePreview(draft.id);
   }
 
-  protected group(index: number): FormGroup {
-    return this.formArray.at(index) as FormGroup;
-  }
-
-  protected isSaving(id: string): boolean {
-    return this.savingIds().has(id);
-  }
-
-  protected errorFor(id: string): string | null {
-    return this.editErrors()[id] ?? null;
-  }
-
-  /** Approve stays disabled while a draft carries an unresolved inline validation error (RQ-R2) — cleared by a successful save. */
-  protected canApprove(id: string): boolean {
-    return !this.isSaving(id) && !this.errorFor(id);
-  }
-
-  protected onSave(draft: DraftQuestion, index: number): void {
-    const raw = this.group(index).getRawValue() as {
-      bodyTypst: string;
-      alternatives: string;
-      correctAnswer: string;
-      figureCode: string;
-    };
-
-    const patch: EditDraftPayload = {
-      bodyTypst: raw.bodyTypst,
-      alternatives: raw.alternatives
-        .split('\n')
-        .map((line) => line.trim())
-        .filter((line) => line.length > 0),
-      correctAnswer: raw.correctAnswer,
-      figureCode: raw.figureCode || undefined,
-    };
-
-    this.clearError(draft.id);
-    this.setSaving(draft.id, true);
-
-    this.aiService.editDraft(draft.id, patch).subscribe({
-      next: (updated) => {
-        this.setSaving(draft.id, false);
-        this.replaceDraft(updated);
+  private compilePreview(id: string): void {
+    this.previewUrl.set(null);
+    this.previewFailed.set(false);
+    this.previewLoading.set(true);
+    this.aiService.previewDraft(id).subscribe({
+      next: (blob) => {
+        this.previewLoading.set(false);
+        const url = URL.createObjectURL(blob);
+        this.objectUrls.push(url);
+        this.previewUrl.set(this.sanitizer.bypassSecurityTrustResourceUrl(url));
       },
-      error: (error: HttpErrorResponse) => {
-        this.setSaving(draft.id, false);
-        this.editErrors.update((errors) => ({ ...errors, [draft.id]: extractErrorMessage(error) }));
+      error: () => {
+        this.previewLoading.set(false);
+        this.previewFailed.set(true);
       },
     });
   }
 
-  protected onApprove(draft: DraftQuestion): void {
-    this.setSaving(draft.id, true);
-    this.aiService.approveQuestion(draft.id).subscribe({
-      next: () => {
-        this.setSaving(draft.id, false);
-        this.removeDraft(draft.id);
-      },
-      error: (error: HttpErrorResponse) => {
-        this.setSaving(draft.id, false);
-        this.editErrors.update((errors) => ({ ...errors, [draft.id]: extractErrorMessage(error) }));
-      },
+  private advanceAfter(id: string): void {
+    const remaining = this.drafts().filter((d) => d.id !== id);
+    this.drafts.set(remaining);
+    if (remaining.length > 0) this.select(remaining[0]);
+    else this.selected.set(null);
+  }
+
+  protected approve(): void {
+    const current = this.selected();
+    if (!current) return;
+    this.actionError.set(null);
+    this.aiService.approveQuestion(current.id).subscribe({
+      next: () => this.advanceAfter(current.id),
+      error: () => this.actionError.set('No se pudo aprobar. Inténtalo de nuevo.'),
     });
   }
 
-  protected onReject(draft: DraftQuestion): void {
-    this.setSaving(draft.id, true);
-    this.aiService.rejectQuestion(draft.id).subscribe({
-      next: () => {
-        this.setSaving(draft.id, false);
-        this.removeDraft(draft.id);
-      },
-      error: (error: HttpErrorResponse) => {
-        this.setSaving(draft.id, false);
-        this.editErrors.update((errors) => ({ ...errors, [draft.id]: extractErrorMessage(error) }));
-      },
-    });
+  protected requestReject(): void {
+    this.rejecting.set(true);
   }
-
-  private replaceDraft(updated: DraftQuestion): void {
-    const next = this.drafts().map((draft) => (draft.id === updated.id ? updated : draft));
-    this.drafts.set(next);
-    this.rebuildForm(next);
+  protected cancelReject(): void {
+    this.rejecting.set(false);
   }
-
-  private removeDraft(id: string): void {
-    const index = this.drafts().findIndex((draft) => draft.id === id);
-    if (index === -1) {
-      return;
-    }
-    this.drafts.set(this.drafts().filter((draft) => draft.id !== id));
-    this.formArray.removeAt(index);
-  }
-
-  private setSaving(id: string, saving: boolean): void {
-    this.savingIds.update((ids) => {
-      const next = new Set(ids);
-      if (saving) {
-        next.add(id);
-      } else {
-        next.delete(id);
-      }
-      return next;
-    });
-  }
-
-  private clearError(id: string): void {
-    this.editErrors.update((errors) => {
-      const { [id]: _removed, ...rest } = errors;
-      return rest;
+  protected confirmReject(): void {
+    const current = this.selected();
+    this.rejecting.set(false);
+    if (!current) return;
+    this.actionError.set(null);
+    this.aiService.rejectQuestion(current.id).subscribe({
+      next: () => this.advanceAfter(current.id),
+      error: () => this.actionError.set('No se pudo rechazar. Inténtalo de nuevo.'),
     });
   }
 }

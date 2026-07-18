@@ -134,6 +134,17 @@ describe('AiService', () => {
     });
   });
 
+  describe('previewDraft', () => {
+    it('GETs /bank/questions/:id/preview as a blob', () => {
+      service.previewDraft('q1').subscribe();
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/bank/questions/q1/preview`);
+      expect(req.request.method).toBe('GET');
+      expect(req.request.responseType).toBe('blob');
+      req.flush(new Blob(['%PDF'], { type: 'application/pdf' }));
+    });
+  });
+
   describe('editDraft', () => {
     it('PATCHes /bank/questions/:id with the given patch and resolves with the updated draft', () => {
       const updated: DraftQuestion = {
