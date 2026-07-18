@@ -47,7 +47,7 @@ export class ExamReviewComponent implements OnInit {
       },
       error: (_error: HttpErrorResponse) => {
         this.loading.set(false);
-        this.errorMessage.set('Could not load the exam. Please try again.');
+        this.errorMessage.set('No se pudo cargar el examen. Inténtalo de nuevo.');
       },
     });
   }
@@ -80,7 +80,7 @@ export class ExamReviewComponent implements OnInit {
         this.loadExam();
       },
       error: (_error: HttpErrorResponse) => {
-        this.errorMessage.set('Could not replace the question. Please try again.');
+        this.errorMessage.set('No se pudo reemplazar la pregunta. Inténtalo de nuevo.');
       },
     });
   }
@@ -93,7 +93,7 @@ export class ExamReviewComponent implements OnInit {
         this.status.set(result.status);
       },
       error: (_error: HttpErrorResponse) => {
-        this.errorMessage.set('Could not confirm the exam. Please try again.');
+        this.errorMessage.set('No se pudo confirmar el examen. Inténtalo de nuevo.');
       },
     });
   }

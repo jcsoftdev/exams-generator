@@ -1,37 +1,67 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
+import { signal } from '@angular/core';
 import { describe, it, expect } from 'vitest';
+import { Role } from '@exams-generator/shared';
 import { ShellComponent } from './shell.component';
+import { AuthService } from '../../core/auth/auth.service';
+
+function setup(role: Role) {
+  TestBed.configureTestingModule({
+    imports: [ShellComponent],
+    providers: [
+      provideRouter([]),
+      { provide: AuthService, useValue: { currentRole: signal(role) } },
+    ],
+  });
+
+  const fixture = TestBed.createComponent(ShellComponent);
+  fixture.detectChanges();
+  const compiled = fixture.nativeElement as HTMLElement;
+  return { fixture, compiled };
+}
 
 describe('ShellComponent', () => {
-  it('renders a nav placeholder and the router outlet', async () => {
-    await TestBed.configureTestingModule({
-      imports: [ShellComponent],
-      providers: [provideRouter([])],
-    }).compileComponents();
+  it('composes ui-sidebar, ui-topbar and a router-outlet', () => {
+    const { compiled } = setup(Role.Teacher);
 
-    const fixture = TestBed.createComponent(ShellComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-
-    expect(compiled.querySelector('nav')).toBeTruthy();
+    expect(compiled.querySelector('ui-sidebar')).toBeTruthy();
+    expect(compiled.querySelector('ui-topbar')).toBeTruthy();
     expect(compiled.querySelector('router-outlet')).toBeTruthy();
   });
 
-  it('links to the AI generate and draft review-queue routes', async () => {
-    await TestBed.configureTestingModule({
-      imports: [ShellComponent],
-      providers: [provideRouter([])],
-    }).compileComponents();
+  it('renders the three nav groups: Principal, Inteligencia and Colegio (for school_admin)', () => {
+    const { compiled } = setup(Role.SchoolAdmin);
 
-    const fixture = TestBed.createComponent(ShellComponent);
+    expect(compiled.textContent).toContain('Principal');
+    expect(compiled.textContent).toContain('Inteligencia');
+    expect(compiled.textContent).toContain('Colegio');
+    expect(compiled.textContent).toContain('Configuración');
+  });
+
+  it('hides the Colegio group for a teacher role', () => {
+    const { compiled } = setup(Role.Teacher);
+
+    expect(compiled.textContent).not.toContain('Colegio');
+    expect(compiled.textContent).not.toContain('Configuración');
+  });
+
+  it('keeps the desktop sidebar structurally collapsed at mobile widths (hidden md:block)', () => {
+    const { compiled } = setup(Role.Teacher);
+
+    const desktopSidebar = compiled.querySelector('[data-testid="shell-sidebar-desktop"]')!;
+    expect(desktopSidebar.className).toContain('hidden');
+    expect(desktopSidebar.className).toContain('md:block');
+  });
+
+  it('opens a mobile drawer when the topbar menu button is toggled, closed by default', () => {
+    const { fixture, compiled } = setup(Role.Teacher);
+
+    expect(compiled.querySelector('[data-testid="shell-mobile-drawer"]')).toBeFalsy();
+
+    compiled.querySelector<HTMLButtonElement>('[data-testid="topbar-menu-button"]')!.click();
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
 
-    const links = Array.from(compiled.querySelectorAll('a')).map((a) =>
-      a.getAttribute('routerLink'),
-    );
-    expect(links).toContain('/app/ai/generate');
-    expect(links).toContain('/app/ai/review');
+    expect(compiled.querySelector('[data-testid="shell-mobile-drawer"]')).toBeTruthy();
   });
 });

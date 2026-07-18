@@ -167,7 +167,7 @@ describe('BankUploadComponent', () => {
     fillForm({});
     submit();
 
-    expect(compiled.textContent).toMatch(/success/i);
+    expect(compiled.textContent).toMatch(/correctamente/i);
   });
 
   it('shows an error message and does not reset when the upload fails', () => {
@@ -177,7 +177,7 @@ describe('BankUploadComponent', () => {
     fillForm({});
     submit();
 
-    expect(compiled.textContent).toMatch(/could not upload/i);
+    expect(compiled.textContent).toMatch(/no se pudo subir/i);
   });
 
   it('does not submit when required fields are missing', () => {

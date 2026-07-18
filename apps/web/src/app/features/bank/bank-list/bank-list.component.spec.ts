@@ -132,6 +132,6 @@ describe('BankListComponent', () => {
   it('shows an error message when the listing request fails', () => {
     const { compiled } = setup(() => throwError(() => new Error('boom')));
 
-    expect(compiled.textContent).toMatch(/could not load/i);
+    expect(compiled.textContent).toMatch(/no se pudieron cargar/i);
   });
 });

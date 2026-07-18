@@ -141,8 +141,8 @@ describe('AiGenerateComponent', () => {
     submit();
 
     const result = compiled.querySelector('[data-testid="generate-result"]');
-    expect(result?.textContent).toMatch(/2 created/i);
-    expect(result?.textContent).toMatch(/1 failed/i);
+    expect(result?.textContent).toMatch(/2 creadas/i);
+    expect(result?.textContent).toMatch(/1 fallidas/i);
 
     const failures = compiled.querySelectorAll('[data-testid="generate-failure"]');
     expect(failures.length).toBe(1);
@@ -156,7 +156,7 @@ describe('AiGenerateComponent', () => {
     fillForm({});
     submit();
 
-    expect(compiled.textContent).toMatch(/could not generate/i);
+    expect(compiled.textContent).toMatch(/no se pudieron generar/i);
   });
 
   it('does not submit when required fields are missing', () => {

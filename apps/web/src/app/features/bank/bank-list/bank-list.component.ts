@@ -64,7 +64,7 @@ export class BankListComponent {
         },
         error: (_error: HttpErrorResponse) => {
           this.loading.set(false);
-          this.errorMessage.set('Could not load questions. Please try again.');
+          this.errorMessage.set('No se pudieron cargar las preguntas. Inténtalo de nuevo.');
         },
       });
   }

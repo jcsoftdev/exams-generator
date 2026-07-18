@@ -1,9 +1,25 @@
-<nav class="app-nav">
-  <span class="app-nav__brand">Exams Generator</span>
-  <a routerLink="/app/bank">Question Bank</a>
-  <a routerLink="/app/bank/upload">Upload Question</a>
-  <a routerLink="/app/exams">Build Exam</a>
-  <a routerLink="/app/ai/generate">Generate with AI</a>
-  <a routerLink="/app/ai/review">Draft Review Queue</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="flex h-screen bg-n50">
+  <aside data-testid="shell-sidebar-desktop" class="hidden w-64 shrink-0 md:block">
+    <ui-sidebar [groups]="navGroups()"></ui-sidebar>
+  </aside>
+
+  @if (mobileOpen()) {
+    <div data-testid="shell-mobile-drawer" class="fixed inset-0 z-40 md:hidden">
+      <div
+        data-testid="shell-mobile-backdrop"
+        class="absolute inset-0 bg-primary-900/40"
+        (click)="closeMobileMenu()"
+      ></div>
+      <div class="relative h-full w-64">
+        <ui-sidebar [groups]="navGroups()"></ui-sidebar>
+      </div>
+    </div>
+  }
+
+  <div class="flex flex-1 flex-col overflow-hidden">
+    <ui-topbar title="Exams Generator" (menuToggle)="toggleMobileMenu()"></ui-topbar>
+    <main class="flex-1 overflow-auto p-4">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

@@ -86,7 +86,7 @@ export class AiGenerateComponent {
         },
         error: (_error: HttpErrorResponse) => {
           this.submitting.set(false);
-          this.errorMessage.set('Could not generate questions. Please try again.');
+          this.errorMessage.set('No se pudieron generar las preguntas. Inténtalo de nuevo.');
         },
       });
   }

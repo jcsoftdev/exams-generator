@@ -1,11 +1,11 @@
 <section class="ai-review-queue">
-  <h1>Draft Review Queue</h1>
+  <h1>Cola de revisión</h1>
 
   <p class="ai-review-queue__typst-note" role="note">
-    There is no client-side Typst compiler. The markup below is edited as
-    raw text; the "preview" IS the server-side compile that
-    <code>PATCH /bank/questions/:id</code> runs on save — if the markup is
-    invalid the API responds 400 and nothing is persisted.
+    No hay compilador de Typst en el navegador. El texto de abajo se edita
+    como texto plano; la "vista previa" ES la compilación que corre en el
+    servidor cuando <code>PATCH /bank/questions/:id</code> guarda — si el
+    texto no es válido, la API responde 400 y no se guarda nada.
   </p>
 
   @if (loadErrorMessage()) {
@@ -13,46 +13,46 @@
   }
 
   @if (loading()) {
-    <p>Loading...</p>
+    <p>Cargando...</p>
   } @else {
     <ul class="ai-review-queue__drafts">
       @for (draft of drafts(); track draft.id; let i = $index) {
         <li class="ai-review-queue__draft" data-testid="draft-item" [formGroup]="group(i)">
           <dl>
-            <dt>Course</dt>
+            <dt>Curso</dt>
             <dd>{{ draft.courseId }}</dd>
-            <dt>Topic</dt>
+            <dt>Tema</dt>
             <dd>{{ draft.topicId }}</dd>
-            <dt>Difficulty</dt>
+            <dt>Dificultad</dt>
             <dd>{{ draft.difficulty }}</dd>
-            <dt>Grade level</dt>
+            <dt>Grado</dt>
             <dd>{{ draft.gradeLevel }}</dd>
-            <dt>Current body (Typst)</dt>
+            <dt>Texto actual (Typst)</dt>
             <dd>{{ draft.bodyTypst }}</dd>
-            <dt>Current alternatives</dt>
+            <dt>Alternativas actuales</dt>
             <dd>{{ (draft.alternatives ?? []).join(', ') }}</dd>
-            <dt>Current correct answer</dt>
+            <dt>Respuesta correcta actual</dt>
             <dd>{{ draft.correctAnswer }}</dd>
             @if (draft.figureCode) {
-              <dt>Current figure code</dt>
+              <dt>Código de figura actual</dt>
               <dd>{{ draft.figureCode }}</dd>
             }
           </dl>
 
           <label>
-            Body (Typst)
+            Texto (Typst)
             <textarea name="bodyTypst" formControlName="bodyTypst"></textarea>
           </label>
           <label>
-            Alternatives (one per line)
+            Alternativas (una por línea)
             <textarea name="alternatives" formControlName="alternatives"></textarea>
           </label>
           <label>
-            Correct answer
+            Respuesta correcta
             <input type="text" name="correctAnswer" formControlName="correctAnswer" />
           </label>
           <label>
-            Figure code (optional)
+            Código de figura (opcional)
             <textarea name="figureCode" formControlName="figureCode"></textarea>
           </label>
 
@@ -67,7 +67,7 @@
               [disabled]="isSaving(draft.id)"
               (click)="onSave(draft, i)"
             >
-              Save
+              Guardar
             </button>
             <button
               type="button"
@@ -75,7 +75,7 @@
               [disabled]="isSaving(draft.id)"
               (click)="onApprove(draft)"
             >
-              Approve
+              Aprobar
             </button>
             <button
               type="button"
@@ -83,12 +83,12 @@
               [disabled]="isSaving(draft.id)"
               (click)="onReject(draft)"
             >
-              Reject
+              Rechazar
             </button>
           </div>
         </li>
       } @empty {
-        <li>No draft questions to review.</li>
+        <li>No hay preguntas borrador para revisar.</li>
       }
     </ul>
   }

@@ -1,34 +1,34 @@
 <section class="bank-list">
-  <h1>Question Bank</h1>
+  <h1>Banco de preguntas</h1>
 
   <form [formGroup]="filtersForm" (ngSubmit)="search()" class="bank-list__filters">
     <label>
-      Course
+      Curso
       <input type="text" name="courseId" formControlName="courseId" />
     </label>
     <label>
-      Topic
+      Tema
       <input type="text" name="topicId" formControlName="topicId" />
     </label>
     <label>
-      Difficulty
+      Dificultad
       <select name="difficulty" formControlName="difficulty">
-        <option value="">All</option>
+        <option value="">Todas</option>
         @for (difficulty of difficulties; track difficulty) {
           <option [value]="difficulty">{{ difficulty }}</option>
         }
       </select>
     </label>
     <label>
-      Grade level
+      Grado
       <select name="gradeLevel" formControlName="gradeLevel">
-        <option value="">All</option>
+        <option value="">Todos</option>
         @for (gradeLevel of gradeLevels; track gradeLevel) {
           <option [value]="gradeLevel">{{ gradeLevelLabels[gradeLevel] }}</option>
         }
       </select>
     </label>
-    <button type="submit">Filter</button>
+    <button type="submit">Filtrar</button>
   </form>
 
   @if (errorMessage()) {
@@ -36,29 +36,29 @@
   }
 
   @if (loading()) {
-    <p>Loading...</p>
+    <p>Cargando...</p>
   } @else {
     <ul class="bank-list__questions">
       @for (question of questions(); track question.id) {
         <li class="bank-list__question" data-testid="bank-question">
           @if (imageUrl(question); as url) {
-            <img [src]="url" [alt]="'Question ' + question.id" />
+            <img [src]="url" [alt]="'Pregunta ' + question.id" />
           }
           <dl>
-            <dt>Answer</dt>
+            <dt>Respuesta</dt>
             <dd>{{ question.correctAnswer }}</dd>
-            <dt>Course</dt>
+            <dt>Curso</dt>
             <dd>{{ question.courseId }}</dd>
-            <dt>Topic</dt>
+            <dt>Tema</dt>
             <dd>{{ question.topicId }}</dd>
-            <dt>Difficulty</dt>
+            <dt>Dificultad</dt>
             <dd>{{ question.difficulty }}</dd>
-            <dt>Grade level</dt>
+            <dt>Grado</dt>
             <dd>{{ question.gradeLevel }}</dd>
           </dl>
         </li>
       } @empty {
-        <li>No questions found.</li>
+        <li>No se encontraron preguntas.</li>
       }
     </ul>
   }

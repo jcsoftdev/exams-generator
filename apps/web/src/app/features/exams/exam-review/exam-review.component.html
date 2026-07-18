@@ -1,9 +1,9 @@
 <section class="exam-review">
-  <h1>Review Exam</h1>
+  <h1>Revisar examen</h1>
   @if (title()) {
     <p data-testid="exam-title">{{ title() }}</p>
   }
-  <p>Status: <strong>{{ status() }}</strong></p>
+  <p>Estado: <strong>{{ status() }}</strong></p>
 
   @if (errorMessage()) {
     <p class="exam-review__error" role="alert">{{ errorMessage() }}</p>
@@ -13,13 +13,13 @@
     @for (question of questions(); track question.id) {
       <li class="exam-review__question" data-testid="exam-question" [attr.data-question-id]="question.id">
         <dl>
-          <dt>Course</dt>
+          <dt>Curso</dt>
           <dd>{{ question.courseId }}</dd>
-          <dt>Topic</dt>
+          <dt>Tema</dt>
           <dd>{{ question.topicId }}</dd>
-          <dt>Difficulty</dt>
+          <dt>Dificultad</dt>
           <dd>{{ question.difficulty }}</dd>
-          <dt>Answer</dt>
+          <dt>Respuesta</dt>
           <dd>{{ question.correctAnswer }}</dd>
         </dl>
 
@@ -29,11 +29,11 @@
           [disabled]="status() === 'ready'"
           (click)="reroll(question.id)"
         >
-          Reroll
+          Cambiar (al azar)
         </button>
 
         <label>
-          Replacement question id
+          Id de la pregunta de reemplazo
           <input
             type="text"
             data-testid="manual-replacement-input"
@@ -47,13 +47,13 @@
           [disabled]="status() === 'ready'"
           (click)="manualReplace(question.id)"
         >
-          Replace manually
+          Reemplazar manualmente
         </button>
       </li>
     }
   </ul>
 
   <button type="button" data-testid="confirm-button" [disabled]="status() === 'ready'" (click)="confirm()">
-    Confirm exam
+    Confirmar examen
   </button>
 </section>

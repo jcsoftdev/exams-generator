@@ -1,52 +1,52 @@
 <section class="bank-upload">
-  <h1>Upload Question</h1>
+  <h1>Subir pregunta</h1>
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <label>
-      Course
+      Curso
       <select name="courseId" formControlName="courseId">
-        <option value="">Select...</option>
+        <option value="">Selecciona...</option>
         @for (course of courses(); track course.id) {
           <option [value]="course.id">{{ course.name }}</option>
         }
       </select>
     </label>
     <label>
-      Topic
+      Tema
       <select name="topicId" formControlName="topicId" [disabled]="!form.controls.courseId.value">
-        <option value="">Select...</option>
+        <option value="">Selecciona...</option>
         @for (topic of topics(); track topic.id) {
           <option [value]="topic.id">{{ topic.name }}</option>
         }
       </select>
     </label>
     <label>
-      Difficulty
+      Dificultad
       <select name="difficulty" formControlName="difficulty">
-        <option value="">Select...</option>
+        <option value="">Selecciona...</option>
         @for (difficulty of difficulties; track difficulty) {
           <option [value]="difficulty">{{ difficulty }}</option>
         }
       </select>
     </label>
     <label>
-      Grade level
+      Grado
       <select name="gradeLevel" formControlName="gradeLevel">
-        <option value="">Select...</option>
+        <option value="">Selecciona...</option>
         @for (gradeLevel of gradeLevels; track gradeLevel) {
           <option [value]="gradeLevel">{{ gradeLevelLabels[gradeLevel] }}</option>
         }
       </select>
     </label>
     <label>
-      Correct answer
+      Respuesta correcta
       <input type="text" name="correctAnswer" formControlName="correctAnswer" />
     </label>
     <label>
-      Image
+      Imagen
       <input type="file" name="image" accept="image/*" (change)="onFileSelected($event)" />
     </label>
-    <button type="submit" [disabled]="submitting()">Upload</button>
+    <button type="submit" [disabled]="submitting()">Subir</button>
   </form>
 
   @if (successMessage()) {

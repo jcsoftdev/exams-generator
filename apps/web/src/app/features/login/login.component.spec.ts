@@ -64,7 +64,7 @@ describe('LoginComponent', () => {
     fillAndSubmit('teacher@school.dev', 'wrong-password');
 
     expect(navigateByUrl).not.toHaveBeenCalled();
-    expect(compiled.textContent).toMatch(/invalid email or password/i);
+    expect(compiled.textContent).toMatch(/correo o contraseña incorrectos/i);
   });
 
   it('does not call login when the form is invalid', () => {

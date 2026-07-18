@@ -1,52 +1,52 @@
 <section class="ai-generate">
-  <h1>Generate Questions with AI</h1>
+  <h1>Generar preguntas con IA</h1>
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <label>
-      Course
+      Curso
       <select name="courseId" formControlName="courseId">
-        <option value="">Select...</option>
+        <option value="">Selecciona...</option>
         @for (course of courses(); track course.id) {
           <option [value]="course.id">{{ course.name }}</option>
         }
       </select>
     </label>
     <label>
-      Topic
+      Tema
       <select name="topicId" formControlName="topicId" [disabled]="!form.controls.courseId.value">
-        <option value="">Select...</option>
+        <option value="">Selecciona...</option>
         @for (topic of topics(); track topic.id) {
           <option [value]="topic.id">{{ topic.name }}</option>
         }
       </select>
     </label>
     <label>
-      Difficulty
+      Dificultad
       <select name="difficulty" formControlName="difficulty">
-        <option value="">Select...</option>
+        <option value="">Selecciona...</option>
         @for (difficulty of difficulties; track difficulty) {
           <option [value]="difficulty">{{ difficulty }}</option>
         }
       </select>
     </label>
     <label>
-      Grade level
+      Grado
       <select name="gradeLevel" formControlName="gradeLevel">
-        <option value="">Select...</option>
+        <option value="">Selecciona...</option>
         @for (gradeLevel of gradeLevels; track gradeLevel) {
           <option [value]="gradeLevel">{{ gradeLevelLabels[gradeLevel] }}</option>
         }
       </select>
     </label>
     <label>
-      Count
+      Cantidad
       <input type="number" name="count" formControlName="count" min="1" />
     </label>
     <label>
       <input type="checkbox" name="withFigure" formControlName="withFigure" />
-      With figure
+      Con figura
     </label>
-    <button type="submit" [disabled]="submitting()">Generate</button>
+    <button type="submit" [disabled]="submitting()">Generar</button>
   </form>
 
   @if (errorMessage()) {
@@ -55,11 +55,11 @@
 
   @if (result(); as result) {
     <div class="ai-generate__result" data-testid="generate-result">
-      <p>{{ result.created.length }} created, {{ result.failed.length }} failed.</p>
+      <p>{{ result.created.length }} creadas, {{ result.failed.length }} fallidas.</p>
       @if (result.failed.length > 0) {
         <ul class="ai-generate__failed">
           @for (failure of result.failed; track failure.index) {
-            <li data-testid="generate-failure">Question {{ failure.index }}: {{ failure.error }}</li>
+            <li data-testid="generate-failure">Pregunta {{ failure.index }}: {{ failure.error }}</li>
           }
         </ul>
       }

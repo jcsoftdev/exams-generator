@@ -42,8 +42,8 @@ export class LoginComponent {
         this.submitting.set(false);
         this.errorMessage.set(
           error.status === 401
-            ? 'Invalid email or password.'
-            : 'Something went wrong. Please try again.',
+            ? 'Correo o contraseña incorrectos.'
+            : 'Ocurrió un error. Inténtalo de nuevo.',
         );
       },
     });

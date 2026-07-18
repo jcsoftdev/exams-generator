@@ -73,7 +73,7 @@ describe('AiReviewQueueComponent', () => {
   it('surfaces a note that Typst compilation is server-side only, not previewed in the browser', () => {
     const { compiled } = setup({});
 
-    expect(compiled.textContent).toMatch(/server/i);
+    expect(compiled.textContent).toMatch(/servidor/i);
     expect(compiled.textContent).toMatch(/typst/i);
   });
 

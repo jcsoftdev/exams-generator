@@ -88,7 +88,7 @@ describe('ExamReviewComponent', () => {
       getExam: () => throwError(() => new HttpErrorResponse({ status: 404, error: {} })),
     });
 
-    expect(compiled.textContent).toMatch(/could not load/i);
+    expect(compiled.textContent).toMatch(/no se pudo cargar/i);
   });
 
   it('rerolls a question and reloads the exam detail', () => {
@@ -133,7 +133,7 @@ describe('ExamReviewComponent', () => {
     compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"]')!.click();
     fixture.detectChanges();
 
-    expect(compiled.textContent).toMatch(/could not replace/i);
+    expect(compiled.textContent).toMatch(/no se pudo reemplazar/i);
   });
 
   it('confirms the exam and disables further replacement', () => {
@@ -155,6 +155,6 @@ describe('ExamReviewComponent', () => {
     compiled.querySelector<HTMLButtonElement>('[data-testid="confirm-button"]')!.click();
     fixture.detectChanges();
 
-    expect(compiled.textContent).toMatch(/could not confirm/i);
+    expect(compiled.textContent).toMatch(/no se pudo confirmar/i);
   });
 });

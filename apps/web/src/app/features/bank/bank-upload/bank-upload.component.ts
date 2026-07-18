@@ -80,7 +80,7 @@ export class BankUploadComponent {
       .subscribe({
         next: () => {
           this.submitting.set(false);
-          this.successMessage.set('Question uploaded successfully.');
+          this.successMessage.set('Pregunta subida correctamente.');
           this.form.reset();
           this.selectedFile.set(null);
         },
@@ -89,7 +89,7 @@ export class BankUploadComponent {
           this.errorMessage.set(
             Array.isArray(error.error)
               ? error.error.join(', ')
-              : 'Could not upload the question. Please try again.',
+              : 'No se pudo subir la pregunta. Inténtalo de nuevo.',
           );
         },
       });

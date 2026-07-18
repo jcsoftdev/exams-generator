@@ -50,7 +50,7 @@ export class AiReviewQueueComponent implements OnInit {
       },
       error: (_error: HttpErrorResponse) => {
         this.loading.set(false);
-        this.loadErrorMessage.set('Could not load draft questions. Please try again.');
+        this.loadErrorMessage.set('No se pudieron cargar los borradores. Inténtalo de nuevo.');
       },
     });
   }
