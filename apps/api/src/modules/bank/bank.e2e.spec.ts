@@ -145,6 +145,12 @@ describe("Bank module (e2e)", () => {
       .set("Authorization", `Bearer ${token}`);
   }
 
+  function getByIdRequest(token: string, id: string) {
+    return request(app.getHttpServer())
+      .get(`/bank/questions/${id}`)
+      .set("Authorization", `Bearer ${token}`);
+  }
+
   it("uploads a central question (staff, tenantId=null) and it is visible to every tenant", async () => {
     const response = await uploadRequest(staffToken)
       .field("courseId", courseId)
@@ -182,6 +188,84 @@ describe("Bank module (e2e)", () => {
 
     expect(listForA.body.map((q: { id: string }) => q.id)).toContain(response.body.id);
     expect(listForB.body.map((q: { id: string }) => q.id)).not.toContain(response.body.id);
+  });
+
+  it("is symmetric: a question private to tenant B is NEVER visible to tenant A", async () => {
+    const response = await uploadRequest(tenantBToken)
+      .field("courseId", courseId)
+      .field("topicId", topicId)
+      .field("difficulty", Difficulty.Medium)
+      .field("gradeLevel", "secundaria_2")
+      .field("correctAnswer", "c")
+      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .expect(201);
+
+    await trackCreatedQuestion(response.body.id);
+
+    const listForB = await listRequest(tenantBToken).expect(200);
+    const listForA = await listRequest(tenantAToken).expect(200);
+    const listForStaff = await listRequest(staffToken).expect(200);
+
+    expect(listForB.body.map((q: { id: string }) => q.id)).toContain(response.body.id);
+    expect(listForA.body.map((q: { id: string }) => q.id)).not.toContain(response.body.id);
+    expect(listForStaff.body.map((q: { id: string }) => q.id)).not.toContain(response.body.id);
+  });
+
+  it("GET /bank/questions/:id — a tenant can fetch its own private question directly by id", async () => {
+    const created = await uploadRequest(tenantAToken)
+      .field("courseId", courseId)
+      .field("topicId", topicId)
+      .field("difficulty", Difficulty.Easy)
+      .field("gradeLevel", "primaria_2")
+      .field("correctAnswer", "b")
+      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .expect(201);
+    await trackCreatedQuestion(created.body.id);
+
+    const response = await getByIdRequest(tenantAToken, created.body.id).expect(200);
+
+    expect(response.body.id).toBe(created.body.id);
+  });
+
+  it("GET /bank/questions/:id — a central (tenantId=null) question is fetchable by any tenant", async () => {
+    const created = await uploadRequest(staffToken)
+      .field("courseId", courseId)
+      .field("topicId", topicId)
+      .field("difficulty", Difficulty.Easy)
+      .field("gradeLevel", "primaria_2")
+      .field("correctAnswer", "b")
+      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .expect(201);
+    await trackCreatedQuestion(created.body.id);
+
+    const forA = await getByIdRequest(tenantAToken, created.body.id).expect(200);
+    const forB = await getByIdRequest(tenantBToken, created.body.id).expect(200);
+
+    expect(forA.body.id).toBe(created.body.id);
+    expect(forB.body.id).toBe(created.body.id);
+  });
+
+  it("GET /bank/questions/:id — 404 when tenant B tries to fetch tenant A's private question directly by id (enumeration guard)", async () => {
+    const created = await uploadRequest(tenantAToken)
+      .field("courseId", courseId)
+      .field("topicId", topicId)
+      .field("difficulty", Difficulty.Hard)
+      .field("gradeLevel", "secundaria_4")
+      .field("correctAnswer", "d")
+      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .expect(201);
+    await trackCreatedQuestion(created.body.id);
+
+    await getByIdRequest(tenantBToken, created.body.id).expect(404);
+    await getByIdRequest(staffToken, created.body.id).expect(404);
+  });
+
+  it("GET /bank/questions/:id — 404 for a non-existent id", async () => {
+    await getByIdRequest(tenantAToken, randomUUID()).expect(404);
+  });
+
+  it("GET /bank/questions/:id — 401 when no Authorization header is sent", async () => {
+    await request(app.getHttpServer()).get(`/bank/questions/${randomUUID()}`).expect(401);
   });
 
   it("combines course/topic/difficulty/gradeLevel filters", async () => {

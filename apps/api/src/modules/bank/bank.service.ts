@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { Difficulty } from "@exams-generator/shared";
-import { BadRequestException, Inject, Injectable } from "@nestjs/common";
+import { BadRequestException, Inject, Injectable, NotFoundException } from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
 import { StoragePort } from "../exams/domain/ports/storage.port";
 import { STORAGE_PORT } from "./bank.constants";
@@ -78,5 +78,20 @@ export class BankService {
       difficulty: query.difficulty,
       gradeLevel: query.gradeLevel,
     });
+  }
+
+  /**
+   * Direct-by-id fetch (release gate: id enumeration guard). Scoped to the
+   * requester's own tenant via the SAME visibility rule `listQuestions`
+   * uses. A question that exists but belongs to another tenant is
+   * indistinguishable from a non-existent one — both throw 404 — so IDs
+   * can't be used to probe for another tenant's private questions.
+   */
+  async getQuestionById(user: AuthTokenPayload, id: string): Promise<QuestionListItem> {
+    const question = await this.repository.findQuestionById(id, user.tenantId);
+    if (!question) {
+      throw new NotFoundException(`Question not found: ${id}`);
+    }
+    return question;
   }
 }

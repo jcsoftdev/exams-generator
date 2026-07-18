@@ -132,4 +132,37 @@ export class BankRepository {
       .innerJoin(topics, eq(questions.topicId, topics.id))
       .where(and(...conditions));
   }
+
+  /**
+   * Direct-by-id lookup (release gate: id enumeration guard). Applies the
+   * SAME visibility rule as `listQuestions` — `tenant_id IS NULL OR
+   * tenant_id = :current` — so a guessed/enumerated id belonging to another
+   * tenant resolves to `undefined` exactly like a non-existent id. Callers
+   * (the service) turn that into a 404, never leaking whether the id exists.
+   */
+  async findQuestionById(
+    id: string,
+    currentTenantId: string | null,
+  ): Promise<QuestionListItem | undefined> {
+    const visibility: SQL = currentTenantId
+      ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
+      : (isNull(questions.tenantId) as SQL);
+
+    const [row] = await db
+      .select({
+        id: questions.id,
+        tenantId: questions.tenantId,
+        courseId: topics.courseId,
+        topicId: questions.topicId,
+        difficulty: questions.difficulty,
+        gradeLevel: questions.gradeLevel,
+        correctAnswer: questions.correctAnswer,
+        imageAssetId: questions.imageAssetId,
+      })
+      .from(questions)
+      .innerJoin(topics, eq(questions.topicId, topics.id))
+      .where(and(eq(questions.id, id), visibility));
+
+    return row;
+  }
 }
