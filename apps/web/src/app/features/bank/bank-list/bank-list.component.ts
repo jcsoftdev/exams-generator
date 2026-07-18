@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Difficulty } from '@exams-generator/shared';
@@ -13,6 +13,7 @@ import { BankQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
 export class BankListComponent {
   private readonly formBuilder = inject(FormBuilder);
   private readonly bankService = inject(BankService);
+  private readonly destroyRef = inject(DestroyRef);
 
   protected readonly difficulties = Object.values(Difficulty);
   protected readonly gradeLevels = GRADE_LEVELS;
@@ -21,6 +22,11 @@ export class BankListComponent {
   protected readonly questions = signal<BankQuestion[]>([]);
   protected readonly loading = signal(false);
   protected readonly errorMessage = signal<string | null>(null);
+
+  /** `imageAssetId` -> `blob:` object URL, populated lazily by `loadImages`. */
+  protected readonly imageUrls = signal<Record<string, string>>({});
+  /** Every object URL this component has ever created, revoked on destroy. */
+  private readonly objectUrls: string[] = [];
 
   protected readonly filtersForm = this.formBuilder.nonNullable.group({
     courseId: [''],
@@ -31,6 +37,11 @@ export class BankListComponent {
 
   constructor() {
     this.search();
+    this.destroyRef.onDestroy(() => {
+      for (const url of this.objectUrls) {
+        URL.revokeObjectURL(url);
+      }
+    });
   }
 
   protected search(): void {
@@ -49,6 +60,7 @@ export class BankListComponent {
         next: (questions) => {
           this.questions.set(questions);
           this.loading.set(false);
+          this.loadImages(questions);
         },
         error: (_error: HttpErrorResponse) => {
           this.loading.set(false);
@@ -57,7 +69,29 @@ export class BankListComponent {
       });
   }
 
+  /**
+   * `GET /assets/:id` is Bearer-JWT protected, and a plain `<img src>`
+   * never sends the Authorization header — binding `buildImageAssetUrl()`
+   * directly to `<img src>` would 401. Instead: fetch the bytes through
+   * `HttpClient` (the `authInterceptor` attaches the header automatically,
+   * same as every other request this app makes) and turn the response into
+   * a `blob:` object URL, which `<img>` CAN load without any header.
+   */
+  private loadImages(questions: readonly BankQuestion[]): void {
+    for (const question of questions) {
+      const assetId = question.imageAssetId;
+      if (!assetId || this.imageUrls()[assetId]) {
+        continue;
+      }
+      this.bankService.fetchQuestionImage(assetId).subscribe((blob) => {
+        const url = URL.createObjectURL(blob);
+        this.objectUrls.push(url);
+        this.imageUrls.update((current) => ({ ...current, [assetId]: url }));
+      });
+    }
+  }
+
   protected imageUrl(question: BankQuestion): string | null {
-    return question.imageAssetId ? this.bankService.buildImageAssetUrl(question.imageAssetId) : null;
+    return question.imageAssetId ? (this.imageUrls()[question.imageAssetId] ?? null) : null;
   }
 }

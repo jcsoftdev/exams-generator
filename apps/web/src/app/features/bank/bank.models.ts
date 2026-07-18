@@ -46,10 +46,9 @@ export const GRADE_LEVEL_LABELS: Record<GradeLevel, string> = {
 /**
  * Mirrors `QuestionListItem` from apps/api/src/modules/bank/bank.repository.ts.
  *
- * GAP: the API does not expose an image URL, mime type, or width/height —
- * only the bare `imageAssetId` (the asset row's UUID). There is no
- * `GET /assets/:id` (or similar) endpoint on the backend yet. See
- * `BankService.buildImageAssetUrl` for how this component works around it.
+ * `GET /bank/questions` returns the bare `imageAssetId` (the asset row's
+ * UUID), not a URL or mime type/dimensions. `GET /assets/:id` serves the
+ * actual bytes — see `BankService.buildImageAssetUrl`/`fetchQuestionImage`.
  */
 export interface BankQuestion {
   readonly id: string;
