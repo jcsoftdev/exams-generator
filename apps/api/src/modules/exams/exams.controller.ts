@@ -7,6 +7,7 @@ import {
   HttpStatus,
   Param,
   Post,
+  Query,
   UnprocessableEntityException,
   UseGuards,
 } from "@nestjs/common";
@@ -113,6 +114,30 @@ export class ExamsController {
   @HttpCode(HttpStatus.OK)
   async preview(@CurrentUser() user: AuthTokenPayload, @Body() body: CreateExamBody): Promise<PreviewExamResult> {
     return this.examsService.previewExam(user, body as PreviewExamDto);
+  }
+
+  /**
+   * `GET /exams` (S1) — tenant-scoped, filtered, paginated list (plan 2's
+   * web list screen). Declared BEFORE `@Get(":examId")` so Nest's route
+   * matching tries the literal `/exams` path first — otherwise `:examId`
+   * would greedily capture this route.
+   */
+  @Get()
+  async listExams(
+    @CurrentUser() user: AuthTokenPayload,
+    @Query("status") status?: "draft" | "ready",
+    @Query("gradeLevel") gradeLevel?: string,
+    @Query("search") search?: string,
+    @Query("page") page = "1",
+    @Query("pageSize") pageSize = "20",
+  ) {
+    return this.examsService.listExams(user, {
+      status,
+      gradeLevel,
+      search,
+      page: Math.max(1, Number(page) || 1),
+      pageSize: Math.min(100, Math.max(1, Number(pageSize) || 20)),
+    });
   }
 
   @Get(":examId")

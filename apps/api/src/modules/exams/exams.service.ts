@@ -17,6 +17,8 @@ import { StockBatchInput, validateStockBatchInput } from "./domain/validate-stoc
 import {
   BlueprintRowRecord,
   ExamDetailRecord,
+  ExamListFilters,
+  ExamListItem,
   ExamsRepository,
   QuestionPoolCandidateRecord,
   StockCellFilter,
@@ -183,6 +185,17 @@ export class ExamsService {
     @Optional() rngFactory?: () => Rng,
   ) {
     this.rngFactory = rngFactory ?? (() => createSeededRng(Date.now() ^ (Math.random() * 2 ** 31)));
+  }
+
+  /**
+   * `GET /exams` (S1) — tenant-scoped, filtered, paginated exam list
+   * (plan 2's web list screen). Pure pass-through to
+   * `repository.listExams()`: `requireTenant()` is the only logic here,
+   * page/pageSize defaulting+clamping is the controller's job.
+   */
+  async listExams(user: AuthTokenPayload, filters: ExamListFilters): Promise<{ items: ExamListItem[]; total: number }> {
+    const tenantId = requireTenant(user);
+    return this.repository.listExams(tenantId, filters);
   }
 
   async createExam(user: AuthTokenPayload, dto: CreateExamDto): Promise<CreateExamResult> {

@@ -1,5 +1,5 @@
 import { Difficulty } from "@exams-generator/shared";
-import { and, asc, count, eq, inArray, isNull, or, SQL } from "drizzle-orm";
+import { and, asc, count, desc, eq, ilike, inArray, isNull, or, sql, SQL } from "drizzle-orm";
 import { alias } from "drizzle-orm/pg-core";
 import { db } from "../../db/client";
 import {
@@ -37,6 +37,26 @@ export interface ExamRecord {
   readonly gradeLevel: string;
   readonly status: ExamStatus;
   readonly createdBy: string;
+}
+
+/** `GET /exams` (S1) list filters — `page`/`pageSize` are always resolved (defaulted/clamped) by the controller before reaching the repository. */
+export interface ExamListFilters {
+  readonly status?: "draft" | "ready";
+  readonly gradeLevel?: string;
+  readonly search?: string;
+  readonly page: number;
+  readonly pageSize: number;
+}
+
+/** `GET /exams` (S1) list row — `questionCount`/`versionCount` are correlated subquery counts, not joins (avoids row fan-out). */
+export interface ExamListItem {
+  readonly id: string;
+  readonly title: string;
+  readonly gradeLevel: string;
+  readonly status: string;
+  readonly questionCount: number;
+  readonly versionCount: number;
+  readonly createdAt: string;
 }
 
 export interface BlueprintRowRecord {
@@ -230,6 +250,43 @@ export class ExamsRepository {
       gradeLevel: row.gradeLevel,
       status: row.status,
       createdBy: row.createdBy,
+    };
+  }
+
+  /**
+   * `GET /exams` (S1) — tenant-scoped, filtered, paginated exam list
+   * (design doc plan 2, web-consumed). `createdAt DESC` is the fixed sort
+   * (S1 has no sort param). `questionCount`/`versionCount` are correlated
+   * scalar subqueries so the base row set isn't multiplied by joins.
+   */
+  async listExams(tenantId: string, f: ExamListFilters): Promise<{ items: ExamListItem[]; total: number }> {
+    const conditions = [eq(exams.tenantId, tenantId)];
+    if (f.status) conditions.push(eq(exams.status, f.status));
+    if (f.gradeLevel) conditions.push(eq(exams.gradeLevel, f.gradeLevel));
+    if (f.search) conditions.push(ilike(exams.title, `%${f.search}%`));
+    const where = and(...conditions);
+
+    const [{ value: total }] = await db.select({ value: count() }).from(exams).where(where);
+
+    const rows = await db
+      .select({
+        id: exams.id,
+        title: exams.title,
+        gradeLevel: exams.gradeLevel,
+        status: exams.status,
+        createdAt: exams.createdAt,
+        questionCount: sql<number>`(select count(*)::int from ${examQuestions} where ${examQuestions.examId} = ${exams.id})`,
+        versionCount: sql<number>`(select count(*)::int from ${examVersions} where ${examVersions.examId} = ${exams.id})`,
+      })
+      .from(exams)
+      .where(where)
+      .orderBy(desc(exams.createdAt))
+      .limit(f.pageSize)
+      .offset((f.page - 1) * f.pageSize);
+
+    return {
+      items: rows.map((r) => ({ ...r, createdAt: r.createdAt.toISOString() })),
+      total,
     };
   }
 

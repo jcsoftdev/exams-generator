@@ -472,6 +472,67 @@ describe("Exams module (e2e)", () => {
     });
   });
 
+  describe("GET /exams (list)", () => {
+    it("lists only own-tenant exams, newest first, with counts", async () => {
+      const res = await request(app.getHttpServer())
+        .get("/exams")
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+      expect(res.body).toHaveProperty("items");
+      expect(res.body).toHaveProperty("total");
+      for (const item of res.body.items) {
+        expect(item).toEqual(
+          expect.objectContaining({
+            id: expect.any(String),
+            title: expect.any(String),
+            gradeLevel: expect.any(String),
+            status: expect.stringMatching(/^(draft|ready)$/),
+            questionCount: expect.any(Number),
+            versionCount: expect.any(Number),
+            createdAt: expect.any(String),
+          }),
+        );
+      }
+    });
+
+    it("does not leak cross-tenant exams", async () => {
+      const topicId = await createTopic();
+      const gradeLevel = "primaria_1";
+      await createApprovedQuestion({ tenantId: tenantBId, createdBy: tenantBTeacherId, topicId, gradeLevel });
+
+      const created = await createExamRequest(tenantBToken)
+        .send({
+          title: "Tenant B list-leak check",
+          gradeLevel,
+          blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
+        })
+        .expect(201);
+      createdExamIds.push(created.body.id);
+
+      const res = await request(app.getHttpServer())
+        .get("/exams?pageSize=100")
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+      expect(res.body.items.some((i: { id: string }) => i.id === created.body.id)).toBe(false);
+    });
+
+    it("filters by status and paginates", async () => {
+      const res = await request(app.getHttpServer())
+        .get("/exams?status=draft&page=1&pageSize=1")
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+      expect(res.body.items.length).toBeLessThanOrEqual(1);
+      expect(res.body.items.every((i: { status: string }) => i.status === "draft")).toBe(true);
+    });
+
+    it("rejects staff users (no tenant)", async () => {
+      await request(app.getHttpServer())
+        .get("/exams")
+        .set("Authorization", `Bearer ${staffToken}`)
+        .expect(403);
+    });
+  });
+
   it("POST /exams — rejects with 401 when no Authorization header is sent", async () => {
     await request(app.getHttpServer()).post("/exams").send({}).expect(401);
   });
