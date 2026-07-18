@@ -684,4 +684,31 @@ describe("Bank module (e2e)", () => {
       expect(pool.map((q) => q.id)).not.toContain(archivedId);
     });
   });
+
+  /**
+   * S6: `GET /bank/questions` gains OPTIONAL pagination. Without `page` it
+   * MUST keep returning the bare array (retro-compat release gate — web's
+   * `bank.service.ts` and `ai.service.ts` `listDrafts` both consume this
+   * endpoint today expecting a flat array). Only when `page` is present does
+   * the response switch to `{ items, total }`.
+   */
+  describe("GET /bank/questions pagination (S6)", () => {
+    it("returns flat array without page param (legacy)", async () => {
+      const res = await request(app.getHttpServer())
+        .get("/bank/questions")
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+      expect(Array.isArray(res.body)).toBe(true);
+    });
+
+    it("returns {items,total} with page param", async () => {
+      const res = await request(app.getHttpServer())
+        .get("/bank/questions?page=1&pageSize=2")
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+      expect(Array.isArray(res.body.items)).toBe(true);
+      expect(res.body.items.length).toBeLessThanOrEqual(2);
+      expect(typeof res.body.total).toBe("number");
+    });
+  });
 });

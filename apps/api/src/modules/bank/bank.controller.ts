@@ -54,6 +54,14 @@ interface ListQuestionsQueryParams {
   readonly difficulty?: string;
   readonly gradeLevel?: string;
   readonly status?: string;
+  /**
+   * S6: optional pagination. `page === undefined` is the retro-compat
+   * signal — the controller returns the legacy flat array in that case,
+   * NEVER the `{items,total}` envelope (existing web consumers decode a
+   * bare array).
+   */
+  readonly page?: string;
+  readonly pageSize?: string;
 }
 
 /**
@@ -104,17 +112,33 @@ export class BankController {
     });
   }
 
+  /**
+   * S6: optional pagination, retro-compat. `page === undefined` returns the
+   * SAME flat array this endpoint always returned — web's `bank.service.ts`
+   * and `ai.service.ts`'s `listDrafts` both still decode a bare array.
+   * `?page=&pageSize=` switches to `{ items, total }`, clamped the same way
+   * `ExamsController.listExams` (T2) clamps its own page/pageSize.
+   */
   @Get()
   async listQuestions(
     @CurrentUser() user: AuthTokenPayload,
     @Query() query: ListQuestionsQueryParams,
-  ): Promise<QuestionListItem[]> {
-    return this.service.listQuestions(user, {
+  ): Promise<QuestionListItem[] | { items: QuestionListItem[]; total: number }> {
+    const filters = {
       courseId: query.courseId,
       topicId: query.topicId,
       difficulty: query.difficulty as Difficulty | undefined,
       gradeLevel: query.gradeLevel,
       status: query.status as QuestionStatus | undefined,
+    };
+
+    if (query.page === undefined) {
+      return this.service.listQuestions(user, filters);
+    }
+
+    return this.service.listQuestions(user, filters, {
+      page: Math.max(1, Number(query.page) || 1),
+      pageSize: Math.min(100, Math.max(1, Number(query.pageSize) || 20)),
     });
   }
 

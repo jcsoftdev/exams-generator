@@ -13,7 +13,7 @@ import { PdfCompilerPort, TypstCompilationError } from "../exams/domain/ports/pd
 import { StoragePort } from "../exams/domain/ports/storage.port";
 import { QuestionStatus } from "../../db/schema/enums";
 import { PDF_COMPILER_PORT, STORAGE_PORT } from "./bank.constants";
-import { BankRepository, QuestionListItem } from "./bank.repository";
+import { BankRepository, QuestionListItem, QuestionListPagination } from "./bank.repository";
 import { canManageQuestionTenant } from "./domain/can-manage-question-tenant";
 import { validateCreateImageQuestionInput } from "./domain/validate-create-image-question";
 import { validateCreateStructuredQuestionInput } from "./domain/validate-create-structured-question";
@@ -162,18 +162,36 @@ export class BankService {
     });
   }
 
+  /**
+   * S6: `pagination` is opt-in — retro-compat with existing web consumers
+   * (`bank.service.ts`, `ai.service.ts`'s `listDrafts`) means omitting it
+   * MUST keep returning the flat `QuestionListItem[]` this always returned.
+   * Only passing `pagination` switches to the `{ items, total }` envelope.
+   */
+  async listQuestions(user: AuthTokenPayload, query: ListQuestionsQuery): Promise<QuestionListItem[]>;
   async listQuestions(
     user: AuthTokenPayload,
     query: ListQuestionsQuery,
-  ): Promise<QuestionListItem[]> {
-    return this.repository.listQuestions({
+    pagination: QuestionListPagination,
+  ): Promise<{ items: QuestionListItem[]; total: number }>;
+  async listQuestions(
+    user: AuthTokenPayload,
+    query: ListQuestionsQuery,
+    pagination?: QuestionListPagination,
+  ): Promise<QuestionListItem[] | { items: QuestionListItem[]; total: number }> {
+    const filters = {
       currentTenantId: user.tenantId,
       courseId: query.courseId,
       topicId: query.topicId,
       difficulty: query.difficulty,
       gradeLevel: query.gradeLevel,
       status: query.status,
-    });
+    };
+
+    if (!pagination) {
+      return this.repository.listQuestions(filters);
+    }
+    return this.repository.listQuestions(filters, pagination);
   }
 
   /**

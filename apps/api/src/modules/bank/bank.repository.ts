@@ -1,5 +1,5 @@
 import { Difficulty } from "@exams-generator/shared";
-import { and, eq, isNull, or, SQL } from "drizzle-orm";
+import { and, count, eq, isNull, or, SQL } from "drizzle-orm";
 import { db } from "../../db/client";
 import { assets, courses, questions, topics } from "../../db/schema";
 import { QuestionStatus, QuestionType } from "../../db/schema/enums";
@@ -71,6 +71,12 @@ export interface QuestionListFilter {
   readonly difficulty?: Difficulty;
   readonly gradeLevel?: string;
   readonly status?: QuestionStatus;
+}
+
+/** S6: opt-in pagination for `listQuestions` — 1-indexed page, clamped by the caller (controller). */
+export interface QuestionListPagination {
+  readonly page: number;
+  readonly pageSize: number;
 }
 
 /**
@@ -168,8 +174,23 @@ export class BankRepository {
    * another tenant's private questions. `currentTenantId: null` (platform
    * staff) resolves to `tenant_id IS NULL` only, since there is no "current
    * tenant" whose private rows staff should see by default.
+   *
+   * S6: `pagination` is opt-in and retro-compat is load-bearing — omitting it
+   * returns the SAME flat array shape this always returned (existing web
+   * consumers — `bank.service.ts` and `ai.service.ts`'s `listDrafts` —
+   * decode the response as an array, not `{items,total}`). Passing it
+   * switches to a `{ items, total }` envelope with `count()` + `limit`/
+   * `offset`, same pattern as `ExamsRepository.listExams` (T2).
    */
-  async listQuestions(filter: QuestionListFilter): Promise<QuestionListItem[]> {
+  async listQuestions(filter: QuestionListFilter): Promise<QuestionListItem[]>;
+  async listQuestions(
+    filter: QuestionListFilter,
+    pagination: QuestionListPagination,
+  ): Promise<{ items: QuestionListItem[]; total: number }>;
+  async listQuestions(
+    filter: QuestionListFilter,
+    pagination?: QuestionListPagination,
+  ): Promise<QuestionListItem[] | { items: QuestionListItem[]; total: number }> {
     const visibility: SQL = filter.currentTenantId
       ? (or(isNull(questions.tenantId), eq(questions.tenantId, filter.currentTenantId)) as SQL)
       : (isNull(questions.tenantId) as SQL);
@@ -191,26 +212,43 @@ export class BankRepository {
       conditions.push(eq(questions.status, filter.status) as SQL);
     }
 
-    return db
-      .select({
-        id: questions.id,
-        tenantId: questions.tenantId,
-        courseId: topics.courseId,
-        topicId: questions.topicId,
-        difficulty: questions.difficulty,
-        gradeLevel: questions.gradeLevel,
-        correctAnswer: questions.correctAnswer,
-        type: questions.type,
-        status: questions.status,
-        aiGenerated: questions.aiGenerated,
-        imageAssetId: questions.imageAssetId,
-        bodyTypst: questions.bodyTypst,
-        alternatives: questions.alternatives,
-        figureCode: questions.figureCode,
-      })
+    const where = and(...conditions);
+    const selection = {
+      id: questions.id,
+      tenantId: questions.tenantId,
+      courseId: topics.courseId,
+      topicId: questions.topicId,
+      difficulty: questions.difficulty,
+      gradeLevel: questions.gradeLevel,
+      correctAnswer: questions.correctAnswer,
+      type: questions.type,
+      status: questions.status,
+      aiGenerated: questions.aiGenerated,
+      imageAssetId: questions.imageAssetId,
+      bodyTypst: questions.bodyTypst,
+      alternatives: questions.alternatives,
+      figureCode: questions.figureCode,
+    };
+
+    if (!pagination) {
+      return db.select(selection).from(questions).innerJoin(topics, eq(questions.topicId, topics.id)).where(where);
+    }
+
+    const [{ value: total }] = await db
+      .select({ value: count() })
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
-      .where(and(...conditions));
+      .where(where);
+
+    const items = await db
+      .select(selection)
+      .from(questions)
+      .innerJoin(topics, eq(questions.topicId, topics.id))
+      .where(where)
+      .limit(pagination.pageSize)
+      .offset((pagination.page - 1) * pagination.pageSize);
+
+    return { items, total };
   }
 
   /**
