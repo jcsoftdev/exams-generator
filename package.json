@@ -8,6 +8,8 @@
   },
   "scripts": {
     "dev": "turbo run dev",
+    "dev:infra": "docker compose -f infra/docker-compose.yml up -d postgres minio",
+    "dev:down": "docker compose -f infra/docker-compose.yml stop postgres minio",
     "build": "turbo run build",
     "test": "turbo run test",
     "lint": "turbo run lint",
