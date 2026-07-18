@@ -17,4 +17,21 @@ describe('ShellComponent', () => {
     expect(compiled.querySelector('nav')).toBeTruthy();
     expect(compiled.querySelector('router-outlet')).toBeTruthy();
   });
+
+  it('links to the AI generate and draft review-queue routes', async () => {
+    await TestBed.configureTestingModule({
+      imports: [ShellComponent],
+      providers: [provideRouter([])],
+    }).compileComponents();
+
+    const fixture = TestBed.createComponent(ShellComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    const links = Array.from(compiled.querySelectorAll('a')).map((a) =>
+      a.getAttribute('routerLink'),
+    );
+    expect(links).toContain('/app/ai/generate');
+    expect(links).toContain('/app/ai/review');
+  });
 });

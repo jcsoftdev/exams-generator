@@ -1,0 +1,95 @@
+<section class="ai-review-queue">
+  <h1>Draft Review Queue</h1>
+
+  <p class="ai-review-queue__typst-note" role="note">
+    There is no client-side Typst compiler. The markup below is edited as
+    raw text; the "preview" IS the server-side compile that
+    <code>PATCH /bank/questions/:id</code> runs on save — if the markup is
+    invalid the API responds 400 and nothing is persisted.
+  </p>
+
+  @if (loadErrorMessage()) {
+    <p class="ai-review-queue__load-error" role="alert">{{ loadErrorMessage() }}</p>
+  }
+
+  @if (loading()) {
+    <p>Loading...</p>
+  } @else {
+    <ul class="ai-review-queue__drafts">
+      @for (draft of drafts(); track draft.id; let i = $index) {
+        <li class="ai-review-queue__draft" data-testid="draft-item" [formGroup]="group(i)">
+          <dl>
+            <dt>Course</dt>
+            <dd>{{ draft.courseId }}</dd>
+            <dt>Topic</dt>
+            <dd>{{ draft.topicId }}</dd>
+            <dt>Difficulty</dt>
+            <dd>{{ draft.difficulty }}</dd>
+            <dt>Grade level</dt>
+            <dd>{{ draft.gradeLevel }}</dd>
+            <dt>Current body (Typst)</dt>
+            <dd>{{ draft.bodyTypst }}</dd>
+            <dt>Current alternatives</dt>
+            <dd>{{ (draft.alternatives ?? []).join(', ') }}</dd>
+            <dt>Current correct answer</dt>
+            <dd>{{ draft.correctAnswer }}</dd>
+            @if (draft.figureCode) {
+              <dt>Current figure code</dt>
+              <dd>{{ draft.figureCode }}</dd>
+            }
+          </dl>
+
+          <label>
+            Body (Typst)
+            <textarea name="bodyTypst" formControlName="bodyTypst"></textarea>
+          </label>
+          <label>
+            Alternatives (one per line)
+            <textarea name="alternatives" formControlName="alternatives"></textarea>
+          </label>
+          <label>
+            Correct answer
+            <input type="text" name="correctAnswer" formControlName="correctAnswer" />
+          </label>
+          <label>
+            Figure code (optional)
+            <textarea name="figureCode" formControlName="figureCode"></textarea>
+          </label>
+
+          @if (errorFor(draft.id)) {
+            <p class="ai-review-queue__save-error" role="alert">{{ errorFor(draft.id) }}</p>
+          }
+
+          <div class="ai-review-queue__actions">
+            <button
+              type="button"
+              data-testid="save-button"
+              [disabled]="isSaving(draft.id)"
+              (click)="onSave(draft, i)"
+            >
+              Save
+            </button>
+            <button
+              type="button"
+              data-testid="approve-button"
+              [disabled]="isSaving(draft.id)"
+              (click)="onApprove(draft)"
+            >
+              Approve
+            </button>
+            <button
+              type="button"
+              data-testid="reject-button"
+              [disabled]="isSaving(draft.id)"
+              (click)="onReject(draft)"
+            >
+              Reject
+            </button>
+          </div>
+        </li>
+      } @empty {
+        <li>No draft questions to review.</li>
+      }
+    </ul>
+  }
+</section>

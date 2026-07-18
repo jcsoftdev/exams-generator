@@ -1,0 +1,63 @@
+<section class="ai-generate">
+  <h1>Generate Questions with AI</h1>
+
+  <p class="ai-generate__gap-note" role="note">
+    GAP: there is no course/topic catalog endpoint yet — enter the raw course
+    and topic IDs.
+  </p>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label>
+      Course ID
+      <input type="text" name="courseId" formControlName="courseId" />
+    </label>
+    <label>
+      Topic ID
+      <input type="text" name="topicId" formControlName="topicId" />
+    </label>
+    <label>
+      Difficulty
+      <select name="difficulty" formControlName="difficulty">
+        <option value="">Select...</option>
+        @for (difficulty of difficulties; track difficulty) {
+          <option [value]="difficulty">{{ difficulty }}</option>
+        }
+      </select>
+    </label>
+    <label>
+      Grade level
+      <select name="gradeLevel" formControlName="gradeLevel">
+        <option value="">Select...</option>
+        @for (gradeLevel of gradeLevels; track gradeLevel) {
+          <option [value]="gradeLevel">{{ gradeLevelLabels[gradeLevel] }}</option>
+        }
+      </select>
+    </label>
+    <label>
+      Count
+      <input type="number" name="count" formControlName="count" min="1" />
+    </label>
+    <label>
+      <input type="checkbox" name="withFigure" formControlName="withFigure" />
+      With figure
+    </label>
+    <button type="submit" [disabled]="submitting()">Generate</button>
+  </form>
+
+  @if (errorMessage()) {
+    <p class="ai-generate__error" role="alert">{{ errorMessage() }}</p>
+  }
+
+  @if (result(); as result) {
+    <div class="ai-generate__result" data-testid="generate-result">
+      <p>{{ result.created.length }} created, {{ result.failed.length }} failed.</p>
+      @if (result.failed.length > 0) {
+        <ul class="ai-generate__failed">
+          @for (failure of result.failed; track failure.index) {
+            <li data-testid="generate-failure">Question {{ failure.index }}: {{ failure.error }}</li>
+          }
+        </ul>
+      }
+    </div>
+  }
+</section>

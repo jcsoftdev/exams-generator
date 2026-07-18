@@ -1,0 +1,111 @@
+import { Difficulty } from '@exams-generator/shared';
+
+/**
+ * LOCAL grade-level catalog for apps/web's ai feature.
+ *
+ * Duplicated from `features/bank/bank.models.ts` (same fixed backend
+ * catalog, see that file's comment for the full rationale). Kept as a
+ * local copy — same convention the bank feature already follows for
+ * auth.models.ts — rather than cross-importing another feature folder or
+ * editing `packages/shared` (integrator-owned, see
+ * docs/superpowers/PARALLEL-TODO.md Reglas de coordinación). Promote to
+ * `@exams-generator/shared` once a third feature needs it.
+ */
+export const GRADE_LEVELS = [
+  'primaria_1',
+  'primaria_2',
+  'primaria_3',
+  'primaria_4',
+  'primaria_5',
+  'primaria_6',
+  'secundaria_1',
+  'secundaria_2',
+  'secundaria_3',
+  'secundaria_4',
+  'secundaria_5',
+  'pre',
+] as const;
+
+export type GradeLevel = (typeof GRADE_LEVELS)[number];
+
+export const GRADE_LEVEL_LABELS: Record<GradeLevel, string> = {
+  primaria_1: '1° primaria',
+  primaria_2: '2° primaria',
+  primaria_3: '3° primaria',
+  primaria_4: '4° primaria',
+  primaria_5: '5° primaria',
+  primaria_6: '6° primaria',
+  secundaria_1: '1° secundaria',
+  secundaria_2: '2° secundaria',
+  secundaria_3: '3° secundaria',
+  secundaria_4: '4° secundaria',
+  secundaria_5: '5° secundaria',
+  pre: 'Pre-admisión',
+};
+
+/**
+ * `POST /ai/questions/generate` request body (design doc §5.2). Course and
+ * topic are raw IDs — GAP: there is no course/topic catalog endpoint yet,
+ * see ai-generate.component for the note surfaced to the user.
+ */
+export interface GenerateQuestionsPayload {
+  readonly courseId: string;
+  readonly topicId: string;
+  readonly difficulty: Difficulty;
+  readonly gradeLevel: string;
+  readonly count: number;
+  readonly withFigure: boolean;
+}
+
+/** Mirrors `GenerateQuestionsCreatedItem` (apps/api ai module). */
+export interface GenerateQuestionsCreatedItem {
+  readonly id: string;
+}
+
+/** Mirrors `GenerateQuestionsFailedItem` (apps/api ai module). */
+export interface GenerateQuestionsFailedItem {
+  readonly index: number;
+  readonly error: string;
+}
+
+/**
+ * Mirrors `GenerateQuestionsResult` (apps/api ai module) — a batch is
+ * PARTIAL: some questions can fail (e.g. invalid Typst markup from the
+ * model) while others are created as drafts.
+ */
+export interface GenerateQuestionsResult {
+  readonly created: readonly GenerateQuestionsCreatedItem[];
+  readonly failed: readonly GenerateQuestionsFailedItem[];
+}
+
+/**
+ * A `status='draft'` structured question awaiting human review (design doc
+ * §5.2, §7 — the AI never publishes directly to the bank). Mirrors the
+ * relevant fields of `QuestionListItem` (apps/api bank module) narrowed to
+ * what the structured editor needs.
+ */
+export interface DraftQuestion {
+  readonly id: string;
+  readonly tenantId: string | null;
+  readonly courseId: string;
+  readonly topicId: string;
+  readonly difficulty: Difficulty;
+  readonly gradeLevel: string;
+  readonly correctAnswer: string;
+  readonly bodyTypst: string | null;
+  readonly alternatives: readonly string[] | null;
+  readonly figureCode: string | null;
+}
+
+/**
+ * `PATCH /bank/questions/:id` request body. The backend recompiles the
+ * Typst preview server-side and responds 400 (never persists) if the
+ * markup is invalid after applying the patch — see
+ * `extract-error-message.ts` for how the review queue surfaces that.
+ */
+export interface EditDraftPayload {
+  readonly bodyTypst?: string;
+  readonly alternatives?: readonly string[];
+  readonly correctAnswer?: string;
+  readonly figureCode?: string;
+}

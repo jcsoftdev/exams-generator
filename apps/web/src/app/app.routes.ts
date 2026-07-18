@@ -6,6 +6,8 @@ import { ForbiddenComponent } from './features/forbidden/forbidden.component';
 import { BankListComponent } from './features/bank/bank-list/bank-list.component';
 import { BankUploadComponent } from './features/bank/bank-upload/bank-upload.component';
 import { ExamVersionsPanelComponent } from './features/exam-versions/exam-versions-panel/exam-versions-panel.component';
+import { AiGenerateComponent } from './features/ai/ai-generate/ai-generate.component';
+import { AiReviewQueueComponent } from './features/ai/ai-review-queue/ai-review-queue.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,6 +20,8 @@ export const routes: Routes = [
       { path: 'bank', component: BankListComponent },
       { path: 'bank/upload', component: BankUploadComponent },
       { path: 'exams/:examId/versions', component: ExamVersionsPanelComponent },
+      { path: 'ai/generate', component: AiGenerateComponent },
+      { path: 'ai/review', component: AiReviewQueueComponent },
     ],
   },
   { path: '', pathMatch: 'full', redirectTo: 'app' },

@@ -38,6 +38,18 @@ describe('app routes', () => {
     expect(versionsRoute).toBeTruthy();
   });
 
+  it('registers an AI generation route under the protected /app shell', () => {
+    const appRoute = routes.find((route) => route.path === 'app');
+    const generateRoute = appRoute?.children?.find((route) => route.path === 'ai/generate');
+    expect(generateRoute).toBeTruthy();
+  });
+
+  it('registers an AI draft review-queue route under the protected /app shell', () => {
+    const appRoute = routes.find((route) => route.path === 'app');
+    const reviewRoute = appRoute?.children?.find((route) => route.path === 'ai/review');
+    expect(reviewRoute).toBeTruthy();
+  });
+
   it('redirects the empty path to /app', () => {
     const emptyRoute = routes.find((route) => route.path === '' && route.redirectTo);
     expect(emptyRoute?.redirectTo).toBe('app');
