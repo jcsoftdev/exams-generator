@@ -9,7 +9,8 @@
     "build": "tsc -p tsconfig.build.json",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "eslint \"src/**/*.ts\""
+    "lint": "eslint \"src/**/*.ts\"",
+    "db:generate": "drizzle-kit generate --schema=./src/db/schema/index.ts --dialect=postgresql --out=./drizzle"
   },
   "dependencies": {
     "@exams-generator/shared": "workspace:*",
