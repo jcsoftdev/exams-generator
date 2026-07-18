@@ -33,6 +33,10 @@ export class AuthService {
       throw new UnauthorizedException("Invalid email or password");
     }
 
+    if (!user.active) {
+      throw new UnauthorizedException("Account is deactivated");
+    }
+
     const payload: JwtPayload = {
       sub: user.id,
       role: user.role,
