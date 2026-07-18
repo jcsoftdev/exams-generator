@@ -1,0 +1,65 @@
+<div class="flex flex-col gap-4">
+  <div class="flex items-center justify-between">
+    <h1 class="text-xl font-bold text-n900">Mis exámenes</h1>
+    <ui-button variant="primary" (clicked)="newExam()">+ Nuevo examen</ui-button>
+  </div>
+
+  @if (actionError()) {
+    <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">{{ actionError() }}</p>
+  }
+
+  @if (loading()) {
+    <div data-testid="loading-indicator" class="grid gap-2">
+      @for (i of [1,2,3]; track i) { <div class="h-16 animate-pulse rounded-card bg-n100"></div> }
+    </div>
+  } @else if (errorMessage()) {
+    <div data-testid="error-state" class="rounded-card border border-n200 bg-white p-8 text-center">
+      <p class="text-n700">{{ errorMessage() }}</p>
+      <div data-testid="retry-button" class="mt-3 inline-block"><ui-button variant="primary" (clicked)="retry()">Reintentar</ui-button></div>
+    </div>
+  } @else if (exams().length === 0) {
+    <div data-testid="empty-exams">
+      <ui-empty-state message="Aún no tienes exámenes. Crea el primero para empezar.">
+        <div cta><ui-button variant="primary" (clicked)="newExam()">+ Nuevo examen</ui-button></div>
+      </ui-empty-state>
+    </div>
+  } @else {
+    <div class="flex flex-col gap-2">
+      @for (exam of exams(); track exam.id) {
+        <div data-testid="exam-row" class="flex items-center gap-3 rounded-card border border-n200 bg-white p-3">
+          <div class="min-w-0 flex-1">
+            <p class="truncate font-medium text-n900">{{ exam.title }}</p>
+            <p class="text-xs text-n500">{{ gradeLabel(exam.gradeLevel) }} · {{ exam.questionCount }} preguntas · {{ exam.versionCount }} formas</p>
+          </div>
+          <ui-tag [variant]="statusTag(exam.status)">{{ statusLabel(exam.status) }}</ui-tag>
+          @if (exam.status === 'ready') {
+            <div data-testid="exam-open"><ui-button variant="ghost" (clicked)="open(exam)">Abrir ›</ui-button></div>
+          } @else {
+            <div data-testid="exam-continue"><ui-button variant="ghost" (clicked)="continueDraft(exam)">Seguir armando ›</ui-button></div>
+          }
+          <div class="relative">
+            <button type="button" data-testid="exam-menu" class="rounded-field p-2 text-n500 hover:bg-n50" (click)="toggleMenu(exam.id)" aria-label="Más acciones">
+              <lucide-angular name="ellipsis" class="h-4 w-4"></lucide-angular>
+            </button>
+            @if (openMenuId() === exam.id) {
+              <div class="absolute right-0 z-40 mt-1 w-52 rounded-card border border-n200 bg-white py-1 shadow-lg">
+                <div data-testid="exam-duplicate"><ui-button variant="ghost" (clicked)="duplicate(exam)">Usar de plantilla</ui-button></div>
+                <div data-testid="exam-delete"><ui-button variant="ghost" (clicked)="requestDelete(exam)"><span class="text-hard-text">Eliminar</span></ui-button></div>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  }
+
+  <ui-modal [open]="pendingDelete() !== null" title="Eliminar examen">
+    <p data-testid="delete-confirm" class="text-sm text-n700">
+      ¿Seguro que quieres eliminar "{{ pendingDelete()?.title }}"? Esta acción no se puede deshacer.
+    </p>
+    <div actions class="flex justify-end gap-2">
+      <ui-button variant="ghost" (clicked)="cancelDelete()">Cancelar</ui-button>
+      <div data-testid="delete-confirm-yes"><ui-button variant="primary" (clicked)="confirmDelete()">Eliminar</ui-button></div>
+    </div>
+  </ui-modal>
+</div>

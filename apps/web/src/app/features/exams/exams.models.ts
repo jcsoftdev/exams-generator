@@ -198,3 +198,36 @@ export interface PreviewExamResult {
   readonly selections: readonly PreviewSelectionRow[];
   readonly shortages: readonly PreviewShortageDetail[];
 }
+
+/** `GET /exams` (S1) query params — all optional, server paginates. */
+export interface ExamListFilters {
+  readonly status?: ExamStatus;
+  readonly gradeLevel?: string;
+  readonly search?: string;
+  readonly page?: number;
+  readonly pageSize?: number;
+}
+
+/** One row in the `GET /exams` (S1) response `items` array. */
+export interface ExamListItem {
+  readonly id: string;
+  readonly title: string;
+  readonly gradeLevel: string;
+  readonly status: ExamStatus;
+  readonly questionCount: number;
+  readonly versionCount: number;
+  readonly createdAt: string;
+}
+
+/** `GET /exams` (S1) response. */
+export interface ExamListResult {
+  readonly items: readonly ExamListItem[];
+  readonly total: number;
+}
+
+/** `POST /exams/:id/duplicate` (S2) response — the new draft copy. */
+export interface DuplicateExamResult {
+  readonly id: string;
+  readonly title: string;
+  readonly status: 'draft';
+}

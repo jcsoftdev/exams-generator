@@ -239,4 +239,37 @@ describe('ExamsService', () => {
       expect(response).toEqual(result);
     });
   });
+
+  describe('listExams', () => {
+    it('GETs /exams with filter params and returns {items,total}', () => {
+      service.listExams({ status: 'ready', page: 1, pageSize: 20 }).subscribe();
+      const req = httpMock.expectOne(
+        (r) =>
+          r.url === '/api/exams' &&
+          r.params.get('status') === 'ready' &&
+          r.params.get('page') === '1' &&
+          r.params.get('pageSize') === '20',
+      );
+      expect(req.request.method).toBe('GET');
+      req.flush({ items: [], total: 0 });
+    });
+  });
+
+  describe('duplicateExam', () => {
+    it('POSTs /exams/:id/duplicate', () => {
+      service.duplicateExam('e1').subscribe();
+      const req = httpMock.expectOne('/api/exams/e1/duplicate');
+      expect(req.request.method).toBe('POST');
+      req.flush({ id: 'e2', title: 'Copia de X', status: 'draft' });
+    });
+  });
+
+  describe('deleteExam', () => {
+    it('DELETEs /exams/:id', () => {
+      service.deleteExam('e1').subscribe();
+      const req = httpMock.expectOne('/api/exams/e1');
+      expect(req.request.method).toBe('DELETE');
+      req.flush(null);
+    });
+  });
 });

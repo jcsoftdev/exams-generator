@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
@@ -6,7 +6,10 @@ import {
   ConfirmExamResult,
   CreateExamPayload,
   CreateExamResult,
+  DuplicateExamResult,
   ExamDetail,
+  ExamListFilters,
+  ExamListResult,
   PreviewExamPayload,
   PreviewExamResult,
   ReplaceQuestionPayload,
@@ -60,5 +63,26 @@ export class ExamsService {
   /** `POST /exams/preview` (B2) — same body shape as `createExam` minus `title`; pure read, no persistence. */
   previewExam(payload: PreviewExamPayload): Observable<PreviewExamResult> {
     return this.http.post<PreviewExamResult>(`${environment.apiBaseUrl}/exams/preview`, payload);
+  }
+
+  /** `GET /exams` (S1) — paginated exam history for the "Mis exámenes" screen. */
+  listExams(filters: ExamListFilters): Observable<ExamListResult> {
+    let params = new HttpParams();
+    if (filters.status) params = params.set('status', filters.status);
+    if (filters.gradeLevel) params = params.set('gradeLevel', filters.gradeLevel);
+    if (filters.search) params = params.set('search', filters.search);
+    if (filters.page) params = params.set('page', String(filters.page));
+    if (filters.pageSize) params = params.set('pageSize', String(filters.pageSize));
+    return this.http.get<ExamListResult>(`${environment.apiBaseUrl}/exams`, { params });
+  }
+
+  /** `POST /exams/:id/duplicate` (S2) — clones an exam into a fresh draft. */
+  duplicateExam(examId: string): Observable<DuplicateExamResult> {
+    return this.http.post<DuplicateExamResult>(`${environment.apiBaseUrl}/exams/${examId}/duplicate`, {});
+  }
+
+  /** `DELETE /exams/:id` (S3). */
+  deleteExam(examId: string): Observable<void> {
+    return this.http.delete<void>(`${environment.apiBaseUrl}/exams/${examId}`);
   }
 }
