@@ -1,8 +1,16 @@
 import { Role } from "@exams-generator/shared";
 import { eq } from "drizzle-orm";
 import { GRADE_LEVELS } from "../modules/exams/domain/value-objects/grade-level";
+import { hashPassword } from "../modules/auth/password.util";
 import { db, pool } from "./client";
 import { courses, gradeLevels, tenants, topics, users } from "./schema";
+
+/**
+ * Known demo password for the seeded school-admin account, so a human (or a
+ * smoke check) can actually log in through `POST /auth/login`. Seed/demo data
+ * only — never a real credential.
+ */
+const DEMO_ADMIN_PASSWORD = "demo-password-123";
 
 /**
  * Demo course -> topic taxonomy. Small on purpose (this is seed/demo data,
@@ -95,11 +103,6 @@ const DEMO_TENANT = {
 
 const DEMO_ADMIN = {
   email: "admin@colegio-demo.test",
-  // NOTE: not a real bcrypt hash — the auth module (PR5) owns password
-  // hashing and will replace this with a properly hashed value once it
-  // exists. This seed only needs a syntactically valid, clearly-marked
-  // placeholder so `password_hash NOT NULL` is satisfied.
-  passwordHash: "unset-pending-auth-module-pr5",
   role: Role.SchoolAdmin,
 };
 
@@ -151,10 +154,13 @@ async function seedDemoTenant(): Promise<string> {
 }
 
 async function seedDemoAdmin(tenantId: string): Promise<void> {
+  const passwordHash = await hashPassword(DEMO_ADMIN_PASSWORD);
+  // Upsert the hash so an account seeded earlier with the old placeholder
+  // converges to a real, login-usable bcrypt hash on the next seed run.
   await db
     .insert(users)
-    .values({ ...DEMO_ADMIN, tenantId })
-    .onConflictDoNothing({ target: users.email });
+    .values({ ...DEMO_ADMIN, passwordHash, tenantId })
+    .onConflictDoUpdate({ target: users.email, set: { passwordHash, role: DEMO_ADMIN.role } });
 }
 
 async function seedBankSampleAdmin(): Promise<void> {
