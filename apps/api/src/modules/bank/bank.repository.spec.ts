@@ -171,6 +171,54 @@ describe("BankRepository", () => {
       expect(forTenantA.map((q) => q.id)).toContain(privateId);
       expect(forTenantB.map((q) => q.id)).not.toContain(privateId);
     });
+
+    it("is symmetric: tenant B's private question is NEVER visible to tenant A (or platform staff)", async () => {
+      const privateId = await createQuestion({ tenantId: tenantBId, createdBy: tenantBUserId });
+
+      const forTenantB = await repository.listQuestions({ currentTenantId: tenantBId });
+      const forTenantA = await repository.listQuestions({ currentTenantId: tenantAId });
+      const forStaff = await repository.listQuestions({ currentTenantId: null });
+
+      expect(forTenantB.map((q) => q.id)).toContain(privateId);
+      expect(forTenantA.map((q) => q.id)).not.toContain(privateId);
+      expect(forStaff.map((q) => q.id)).not.toContain(privateId);
+    });
+  });
+
+  describe("findQuestionById() visibility (release gate: direct-by-id access)", () => {
+    it("returns a central (tenantId=null) question for any tenant", async () => {
+      const centralId = await createQuestion({ tenantId: null, createdBy: centralUserId });
+
+      const forTenantA = await repository.findQuestionById(centralId, tenantAId);
+      const forTenantB = await repository.findQuestionById(centralId, tenantBId);
+
+      expect(forTenantA?.id).toBe(centralId);
+      expect(forTenantB?.id).toBe(centralId);
+    });
+
+    it("returns a tenant-private question to its own tenant", async () => {
+      const privateId = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId });
+
+      const result = await repository.findQuestionById(privateId, tenantAId);
+
+      expect(result?.id).toBe(privateId);
+    });
+
+    it("does NOT return a tenant-private question to another tenant (id enumeration guard)", async () => {
+      const privateId = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId });
+
+      const forTenantB = await repository.findQuestionById(privateId, tenantBId);
+      const forStaff = await repository.findQuestionById(privateId, null);
+
+      expect(forTenantB).toBeUndefined();
+      expect(forStaff).toBeUndefined();
+    });
+
+    it("returns undefined for a non-existent id", async () => {
+      const result = await repository.findQuestionById(randomUUID(), tenantAId);
+
+      expect(result).toBeUndefined();
+    });
   });
 
   describe("listQuestions() filters", () => {

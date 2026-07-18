@@ -1,5 +1,5 @@
 import { Difficulty, Role } from "@exams-generator/shared";
-import { BadRequestException } from "@nestjs/common";
+import { BadRequestException, NotFoundException } from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankRepository, QuestionListItem } from "./bank.repository";
 import { BankService } from "./bank.service";
@@ -16,6 +16,7 @@ function buildDeps() {
   const repository = {
     createImageQuestion: jest.fn().mockResolvedValue({ id: "question-1" }),
     listQuestions: jest.fn().mockResolvedValue([] as QuestionListItem[]),
+    findQuestionById: jest.fn().mockResolvedValue(undefined as QuestionListItem | undefined),
   } as unknown as jest.Mocked<BankRepository>;
 
   const storage = {
@@ -109,6 +110,38 @@ describe("BankService.listQuestions", () => {
 
     expect(repository.listQuestions).toHaveBeenCalledWith(
       expect.objectContaining({ currentTenantId: null }),
+    );
+  });
+});
+
+describe("BankService.getQuestionById", () => {
+  const QUESTION: QuestionListItem = {
+    id: "question-1",
+    tenantId: "tenant-1",
+    courseId: "course-1",
+    topicId: "topic-1",
+    difficulty: Difficulty.Easy,
+    gradeLevel: "primaria_1",
+    correctAnswer: "a",
+    imageAssetId: "asset-1",
+  };
+
+  it("scopes the repository lookup to the requester's own tenant and returns the question", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(QUESTION);
+
+    const result = await service.getQuestionById(TEACHER_USER, "question-1");
+
+    expect(repository.findQuestionById).toHaveBeenCalledWith("question-1", "tenant-1");
+    expect(result).toEqual(QUESTION);
+  });
+
+  it("throws NotFoundException when the repository returns nothing (not found OR belongs to another tenant)", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(undefined);
+
+    await expect(service.getQuestionById(TEACHER_USER, "question-999")).rejects.toBeInstanceOf(
+      NotFoundException,
     );
   });
 });
