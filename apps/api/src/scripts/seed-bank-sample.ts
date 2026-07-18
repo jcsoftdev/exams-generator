@@ -133,22 +133,18 @@ async function main(): Promise<void> {
         }
 
         results.push({ file: label, ok: true });
-        // eslint-disable-next-line no-console
         console.log(`OK   ${label}`);
       } catch (error) {
         const message = error instanceof Error ? error.message : String(error);
         results.push({ file: label, ok: false, error: message });
-        // eslint-disable-next-line no-console
         console.error(`FAIL ${label}: ${message}`);
       }
     }
   }
 
   const failed = results.filter((r) => !r.ok);
-  // eslint-disable-next-line no-console
   console.log(`\n${results.length - failed.length}/${results.length} questions seeded successfully.`);
   if (failed.length > 0) {
-    // eslint-disable-next-line no-console
     console.error(`${failed.length} failure(s):`, failed);
   }
 
@@ -158,7 +154,6 @@ async function main(): Promise<void> {
 
 /* istanbul ignore next -- CLI entrypoint, exercised manually, not under unit test */
 main().catch((error: unknown) => {
-  // eslint-disable-next-line no-console
   console.error("Fatal error:", error);
   process.exitCode = 1;
 });

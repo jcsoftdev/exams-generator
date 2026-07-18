@@ -13,12 +13,10 @@ export async function runMigrations(): Promise<void> {
 if (require.main === module) {
   runMigrations()
     .then(() => {
-      // eslint-disable-next-line no-console
       console.log("Migrations applied.");
       return pool.end();
     })
     .catch((error: unknown) => {
-      // eslint-disable-next-line no-console
       console.error("Migration failed:", error);
       return pool.end().finally(() => process.exit(1));
     });
