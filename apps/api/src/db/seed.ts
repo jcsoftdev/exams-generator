@@ -195,12 +195,10 @@ async function seedCoursesAndTopics(
 if (require.main === module) {
   seed()
     .then(() => {
-      // eslint-disable-next-line no-console
       console.log("Seed complete.");
       return pool.end();
     })
     .catch((error: unknown) => {
-      // eslint-disable-next-line no-console
       console.error("Seed failed:", error);
       return pool.end().finally(() => process.exit(1));
     });

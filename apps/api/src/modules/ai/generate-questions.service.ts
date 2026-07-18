@@ -14,7 +14,7 @@ import {
 } from "./domain/validate-generate-questions-input";
 import { QUESTION_GENERATOR_PORT } from "./ai.constants";
 
-export interface GenerateQuestionsDto extends GenerateQuestionsInput {}
+export type GenerateQuestionsDto = GenerateQuestionsInput;
 
 export interface GenerateQuestionsCreatedItem {
   readonly id: string;

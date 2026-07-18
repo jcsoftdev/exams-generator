@@ -81,9 +81,9 @@ function buildDeps() {
   } as unknown as jest.Mocked<ExamsRepository>;
 
   const storage = new InMemoryStorageAdapter();
-  storage.put("bank/questions/q1", Buffer.from("fake-png-1"), "image/png");
-  storage.put("bank/questions/q2", Buffer.from("fake-png-2"), "image/png");
-  storage.put("tenants/tenant-1/logo/logo.png", Buffer.from("fake-logo"), "image/png");
+  void storage.put("bank/questions/q1", Buffer.from("fake-png-1"), "image/png");
+  void storage.put("bank/questions/q2", Buffer.from("fake-png-2"), "image/png");
+  void storage.put("tenants/tenant-1/logo/logo.png", Buffer.from("fake-logo"), "image/png");
 
   const pdfCompiler = new FakePdfCompiler();
 

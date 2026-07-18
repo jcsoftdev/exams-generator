@@ -59,7 +59,7 @@ export interface QuestionListItem {
   readonly aiGenerated: boolean;
   readonly imageAssetId: string | null;
   readonly bodyTypst: string | null;
-  readonly alternatives: unknown | null;
+  readonly alternatives: unknown;
   readonly figureCode: string | null;
 }
 
