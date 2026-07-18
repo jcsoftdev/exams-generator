@@ -1,0 +1,114 @@
+import { Difficulty, Role } from "@exams-generator/shared";
+import { BadRequestException } from "@nestjs/common";
+import { AuthTokenPayload } from "../auth/token.service";
+import { BankRepository, QuestionListItem } from "./bank.repository";
+import { BankService } from "./bank.service";
+
+const STAFF_USER: AuthTokenPayload = { sub: "staff-1", tenantId: null, role: Role.ContentEditor };
+const TEACHER_USER: AuthTokenPayload = { sub: "teacher-1", tenantId: "tenant-1", role: Role.Teacher };
+
+const VALID_FILE = {
+  buffer: Buffer.from("fake-image-bytes"),
+  mimetype: "image/png",
+} as Express.Multer.File;
+
+function buildDeps() {
+  const repository = {
+    createImageQuestion: jest.fn().mockResolvedValue({ id: "question-1" }),
+    listQuestions: jest.fn().mockResolvedValue([] as QuestionListItem[]),
+  } as unknown as jest.Mocked<BankRepository>;
+
+  const storage = {
+    put: jest.fn().mockResolvedValue("https://minio.local/bucket/key"),
+    get: jest.fn(),
+    delete: jest.fn(),
+  };
+
+  const service = new BankService(repository, storage);
+  return { service, repository, storage };
+}
+
+describe("BankService.createImageQuestion", () => {
+  it("uploads the image via StoragePort then persists the question with the requester's tenant", async () => {
+    const { service, repository, storage } = buildDeps();
+
+    const result = await service.createImageQuestion(TEACHER_USER, {
+      courseId: "course-1",
+      topicId: "topic-1",
+      difficulty: Difficulty.Medium,
+      gradeLevel: "primaria_2",
+      correctAnswer: "c",
+      file: VALID_FILE,
+    });
+
+    expect(storage.put).toHaveBeenCalledTimes(1);
+    expect(repository.createImageQuestion).toHaveBeenCalledWith(
+      expect.objectContaining({
+        tenantId: "tenant-1",
+        topicId: "topic-1",
+        difficulty: Difficulty.Medium,
+        gradeLevel: "primaria_2",
+        correctAnswer: "c",
+        createdBy: "teacher-1",
+      }),
+    );
+    expect(result).toEqual({ id: "question-1" });
+  });
+
+  it("persists tenantId=null when the requester is platform staff", async () => {
+    const { service, repository } = buildDeps();
+
+    await service.createImageQuestion(STAFF_USER, {
+      courseId: "course-1",
+      topicId: "topic-1",
+      difficulty: Difficulty.Easy,
+      gradeLevel: "pre",
+      correctAnswer: "a",
+      file: VALID_FILE,
+    });
+
+    expect(repository.createImageQuestion).toHaveBeenCalledWith(
+      expect.objectContaining({ tenantId: null, createdBy: "staff-1" }),
+    );
+  });
+
+  it("rejects with BadRequestException (aggregating every error) when required fields are missing", async () => {
+    const { service, repository, storage } = buildDeps();
+
+    await expect(
+      service.createImageQuestion(TEACHER_USER, {
+        courseId: undefined,
+        topicId: undefined,
+        difficulty: undefined,
+        gradeLevel: undefined,
+        correctAnswer: undefined,
+        file: undefined,
+      }),
+    ).rejects.toBeInstanceOf(BadRequestException);
+
+    expect(storage.put).not.toHaveBeenCalled();
+    expect(repository.createImageQuestion).not.toHaveBeenCalled();
+  });
+});
+
+describe("BankService.listQuestions", () => {
+  it("scopes the repository query to the requester's own tenant", async () => {
+    const { service, repository } = buildDeps();
+
+    await service.listQuestions(TEACHER_USER, { courseId: "course-1" });
+
+    expect(repository.listQuestions).toHaveBeenCalledWith(
+      expect.objectContaining({ currentTenantId: "tenant-1", courseId: "course-1" }),
+    );
+  });
+
+  it("scopes to tenantId=null for platform staff", async () => {
+    const { service, repository } = buildDeps();
+
+    await service.listQuestions(STAFF_USER, {});
+
+    expect(repository.listQuestions).toHaveBeenCalledWith(
+      expect.objectContaining({ currentTenantId: null }),
+    );
+  });
+});
