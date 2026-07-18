@@ -118,6 +118,12 @@ describe('ShellComponent', () => {
     expect(compiled.textContent).not.toContain('Configuración');
   });
 
+  it('labels the exams nav item "Mis exámenes"', () => {
+    const { compiled } = setup(Role.Teacher);
+
+    expect(compiled.textContent).toContain('Mis exámenes');
+  });
+
   it('keeps the desktop sidebar structurally collapsed at mobile widths (hidden md:block)', () => {
     const { compiled } = setup(Role.Teacher);
 

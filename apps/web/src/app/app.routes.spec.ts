@@ -62,6 +62,24 @@ describe('app routes', () => {
     expect(settingsRoute).toBeTruthy();
   });
 
+  it('guards /app/settings with a role guard', () => {
+    const appRoute = routes.find((route) => route.path === 'app');
+    const settingsRoute = appRoute?.children?.find((route) => route.path === 'settings');
+    expect(settingsRoute?.canActivate?.length).toBeGreaterThan(0);
+  });
+
+  it('exposes /app/exams as the exam list index', () => {
+    const appRoute = routes.find((route) => route.path === 'app');
+    const examsRoute = appRoute?.children?.find((route) => route.path === 'exams');
+    expect(examsRoute).toBeTruthy();
+  });
+
+  it('exposes /app/exams/new as the exam builder', () => {
+    const appRoute = routes.find((route) => route.path === 'app');
+    const examsNewRoute = appRoute?.children?.find((route) => route.path === 'exams/new');
+    expect(examsNewRoute).toBeTruthy();
+  });
+
   it('redirects the empty path to /app', () => {
     const emptyRoute = routes.find((route) => route.path === '' && route.redirectTo);
     expect(emptyRoute?.redirectTo).toBe('app');

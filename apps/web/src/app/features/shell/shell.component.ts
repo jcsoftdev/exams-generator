@@ -12,7 +12,7 @@ const PRINCIPAL_GROUP: NavGroup = {
   title: 'Principal',
   items: [
     { label: 'Banco de preguntas', route: '/app/bank' },
-    { label: 'Exámenes', route: '/app/exams' },
+    { label: 'Mis exámenes', route: '/app/exams' },
   ],
 };
 
