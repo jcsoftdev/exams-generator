@@ -10,7 +10,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint \"src/**/*.ts\"",
-    "db:generate": "drizzle-kit generate --schema=./src/db/schema/index.ts --dialect=postgresql --out=./drizzle"
+    "db:generate": "drizzle-kit generate --schema=./src/db/schema/index.ts --dialect=postgresql --out=./drizzle",
+    "db:migrate": "ts-node -r tsconfig-paths/register src/db/migrate.ts",
+    "db:seed": "ts-node -r tsconfig-paths/register src/db/seed.ts"
   },
   "dependencies": {
     "@exams-generator/shared": "workspace:*",
