@@ -1,0 +1,56 @@
+<section class="exam-review">
+  <h1>Review Exam</h1>
+  <p>Status: <strong>{{ status() }}</strong></p>
+
+  @if (errorMessage()) {
+    <p class="exam-review__error" role="alert">{{ errorMessage() }}</p>
+  }
+
+  <ul class="exam-review__questions">
+    @for (question of questions(); track question.id) {
+      <li class="exam-review__question" data-testid="exam-question" [attr.data-question-id]="question.id">
+        <dl>
+          <dt>Course</dt>
+          <dd>{{ question.courseId }}</dd>
+          <dt>Topic</dt>
+          <dd>{{ question.topicId }}</dd>
+          <dt>Difficulty</dt>
+          <dd>{{ question.difficulty }}</dd>
+          <dt>Answer</dt>
+          <dd>{{ question.correctAnswer }}</dd>
+        </dl>
+
+        <button
+          type="button"
+          data-testid="reroll-button"
+          [disabled]="status() === 'ready'"
+          (click)="reroll(question.id)"
+        >
+          Reroll
+        </button>
+
+        <label>
+          Replacement question id
+          <input
+            type="text"
+            data-testid="manual-replacement-input"
+            [disabled]="status() === 'ready'"
+            (input)="onManualReplacementInput(question.id, $any($event.target).value)"
+          />
+        </label>
+        <button
+          type="button"
+          data-testid="manual-replace-button"
+          [disabled]="status() === 'ready'"
+          (click)="manualReplace(question.id)"
+        >
+          Replace manually
+        </button>
+      </li>
+    }
+  </ul>
+
+  <button type="button" data-testid="confirm-button" [disabled]="status() === 'ready'" (click)="confirm()">
+    Confirm exam
+  </button>
+</section>
