@@ -3,12 +3,6 @@
 
   <!-- Barra de filtros -->
   <div class="flex flex-wrap items-end gap-3 rounded-card border border-n200 bg-white p-3" data-testid="bank-filters">
-    <div class="w-40">
-      <ui-input label="Curso" name="courseId" [value]="courseId()" (valueChange)="courseId.set($event)"></ui-input>
-    </div>
-    <div class="w-40">
-      <ui-input label="Tema" name="topicId" [value]="topicId()" (valueChange)="topicId.set($event)"></ui-input>
-    </div>
     <div class="w-36">
       <ui-select
         label="Nivel"
@@ -65,47 +59,71 @@
     </div>
   } @else {
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-[55%_45%]">
-      <!-- Lista -->
-      <div class="flex flex-col gap-2">
-        @for (q of questions(); track q.id) {
-          <button
-            type="button"
-            data-testid="bank-question"
-            class="flex items-center gap-3 rounded-field border bg-white p-2 text-left"
-            [class.border-primary-500]="selected()?.id === q.id"
-            [class.bg-primary-50]="selected()?.id === q.id"
-            [class.border-n200]="selected()?.id !== q.id"
-            (click)="select(q)"
-          >
-            @if (imageUrl(q); as url) {
-              <img [src]="url" [alt]="'Pregunta ' + q.id" class="h-10 w-10 shrink-0 rounded object-cover" />
-            } @else {
-              <div class="h-10 w-10 shrink-0 rounded bg-n100"></div>
-            }
-            <div class="min-w-0 flex-1">
-              <p class="truncate text-sm font-medium text-n900">Clave: {{ q.correctAnswer }}</p>
-              <p class="truncate text-xs text-n500">{{ q.courseId }} · {{ q.topicId }}</p>
-            </div>
-            <ui-tag [variant]="tagVariantFor(q.difficulty)">{{ difficultyLabel(q.difficulty) }}</ui-tag>
-          </button>
-        }
+      <!-- Árbol Curso -> Tema -> preguntas -->
+      <div data-testid="bank-tree" class="flex flex-col gap-2">
+        @for (course of tree(); track course.courseId) {
+          <div class="overflow-hidden rounded-card border border-n200 bg-white">
+            <button
+              type="button"
+              data-testid="course-header"
+              [attr.data-course-id]="course.courseId"
+              [attr.aria-expanded]="isCourseExpanded(course.courseId)"
+              class="flex w-full items-center gap-2 px-3 py-2 text-left"
+              (click)="toggleCourse(course.courseId)"
+            >
+              <lucide-angular [name]="chevronFor(isCourseExpanded(course.courseId))" class="h-4 w-4 shrink-0 text-n500"></lucide-angular>
+              <span class="font-semibold text-n900">{{ course.name }}</span>
+              <span class="text-xs text-n500">· {{ course.questionCount }}</span>
+            </button>
 
-        <div data-testid="bank-pagination" class="flex items-center justify-between pt-2 text-sm text-n600">
-          <span>{{ total() }} preguntas</span>
-          <div class="flex items-center gap-2">
-            <div data-testid="bank-page-prev">
-              <ui-button variant="ghost" [disabled]="page() === 1" (clicked)="prevPage()">
-                <lucide-angular name="chevron-left" class="h-4 w-4"></lucide-angular>
-              </ui-button>
-            </div>
-            <span>{{ page() }} / {{ lastPage() }}</span>
-            <div data-testid="bank-page-next">
-              <ui-button variant="ghost" [disabled]="page() === lastPage()" (clicked)="nextPage()">
-                <lucide-angular name="chevron-right" class="h-4 w-4"></lucide-angular>
-              </ui-button>
-            </div>
+            @if (isCourseExpanded(course.courseId)) {
+              <div class="border-t border-n200 pl-5">
+                @for (topic of course.topics; track topic.topicId) {
+                  <div class="border-b border-n100 last:border-b-0">
+                    <button
+                      type="button"
+                      data-testid="topic-header"
+                      [attr.data-topic-id]="topic.topicId"
+                      [attr.aria-expanded]="isTopicExpanded(topic.topicId)"
+                      class="flex w-full items-center gap-2 px-3 py-2 text-left"
+                      (click)="toggleTopic(topic.topicId)"
+                    >
+                      <lucide-angular [name]="chevronFor(isTopicExpanded(topic.topicId))" class="h-4 w-4 shrink-0 text-n400"></lucide-angular>
+                      <span class="text-sm font-medium text-n800">{{ topic.name }}</span>
+                      <span class="text-xs text-n500">· {{ topic.questions.length }}</span>
+                    </button>
+
+                    @if (isTopicExpanded(topic.topicId)) {
+                      <div class="flex flex-col gap-1 pb-2 pl-6">
+                        @for (q of topic.questions; track q.id) {
+                          <button
+                            type="button"
+                            data-testid="bank-question"
+                            class="flex items-center gap-3 rounded-field border bg-white p-2 text-left"
+                            [class.border-primary-500]="selected()?.id === q.id"
+                            [class.bg-primary-50]="selected()?.id === q.id"
+                            [class.border-n200]="selected()?.id !== q.id"
+                            (click)="select(q)"
+                          >
+                            @if (imageUrl(q); as url) {
+                              <img [src]="url" [alt]="'Pregunta ' + q.id" class="h-10 w-10 shrink-0 rounded object-cover" />
+                            } @else {
+                              <div class="h-10 w-10 shrink-0 rounded bg-n100"></div>
+                            }
+                            <div class="min-w-0 flex-1">
+                              <p class="truncate text-sm font-medium text-n900">Clave: {{ q.correctAnswer }}</p>
+                            </div>
+                            <ui-tag [variant]="tagVariantFor(q.difficulty)">{{ difficultyLabel(q.difficulty) }}</ui-tag>
+                          </button>
+                        }
+                      </div>
+                    }
+                  </div>
+                }
+              </div>
+            }
           </div>
-        </div>
+        }
       </div>
 
       <!-- Panel -->

@@ -1,16 +1,17 @@
 import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
-import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { Observable, forkJoin, map, of, switchMap } from 'rxjs';
 import { LucideAngularModule } from 'lucide-angular';
 import { Difficulty } from '@exams-generator/shared';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
-import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent } from '../../../ui/select/select.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { BankService } from '../bank.service';
 import { BankQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
+import { TaxonomyService } from '../../taxonomy/taxonomy.service';
+import { buildQuestionTree, QuestionTreeCourseNode } from './bank-question-tree';
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
   [Difficulty.Easy]: 'Fácil',
@@ -25,22 +26,31 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
   [Difficulty.Hard]: 'hard',
 };
 
-const PAGE_SIZE = 12;
+const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.';
 
 /**
- * Question-bank screen (design doc §4, spec QB-R1..R3, Task 5): a 55%/45%
- * list + detail-panel split. Left column is the paginated list (reuses
- * `data-testid="bank-question"`, `loading-indicator`, `empty-bank`,
- * `empty-no-results`, `error-state`, `retry-button`, plus new
- * `bank-pagination`/`bank-page-prev`/`bank-page-next`); right column is the
- * `bank-panel` detail view with badges/metadata and gated actions
- * (`panel-edit`, `panel-archive`, `panel-delete`, `panel-readonly`).
+ * Question-bank screen, tree redesign: a two-column split where the left
+ * column is a collapsible Curso -> Tema -> preguntas tree (replacing the
+ * flat paginated list + raw UUID subtitles) and the right column is the
+ * unchanged `bank-panel` detail view.
+ *
+ * Grouping/name-resolution is a pure transform (`buildQuestionTree`) fed by
+ * the flat `GET /bank/questions` array (`BankService.listQuestions` — no
+ * pagination needed, ~71 rows) plus id->name maps resolved once from
+ * `TaxonomyService.getCourses()` + one `getTopics(courseId)` call per course
+ * (the Angular `TaxonomyService` wrapper requires a `courseId`, so this
+ * fetches all courses' topics via `forkJoin` instead of a single unscoped
+ * call — see apply-progress deviations).
+ *
+ * Courses default EXPANDED (discoverability); topics default COLLAPSED
+ * (scannability — resets on every fetch). Only branches with at least one
+ * question render (empty branches never appear).
  *
  * Distinguishes TWO empty states (QB-R2): "banco vacío" (the tenant's bank
  * has zero questions at all, regardless of filters) vs "sin resultados"
  * (the bank has questions, but the current filters match none). Tracked via
- * `bankHasAnyQuestions`, set `true` the first time ANY paginated response
- * (filtered or not) returns `total > 0`.
+ * `bankHasAnyQuestions`, set `true` the first time ANY response (filtered or
+ * not) returns at least one question.
  *
  * Thumbnails are fetched as authenticated blobs (see `loadImages` —
  * `/assets/:id` is Bearer-JWT protected, a raw `<img src>` never sends that
@@ -55,18 +65,12 @@ const PAGE_SIZE = 12;
 @Component({
   selector: 'app-bank-list',
   standalone: true,
-  imports: [
-    ButtonComponent,
-    EmptyStateComponent,
-    InputComponent,
-    SelectComponent,
-    TagComponent,
-    LucideAngularModule,
-  ],
+  imports: [ButtonComponent, EmptyStateComponent, SelectComponent, TagComponent, LucideAngularModule],
   templateUrl: './bank-list.component.html',
 })
 export class BankListComponent {
   private readonly bankService = inject(BankService);
+  private readonly taxonomyService = inject(TaxonomyService);
   private readonly destroyRef = inject(DestroyRef);
   private readonly router = inject(Router);
 
@@ -81,14 +85,14 @@ export class BankListComponent {
     label: DIFFICULTY_LABELS[difficulty],
   }));
 
-  protected readonly courseId = signal('');
-  protected readonly topicId = signal('');
   protected readonly difficulty = signal<Difficulty | null>(null);
   protected readonly gradeLevel = signal<string | null>(null);
 
   protected readonly questions = signal<BankQuestion[]>([]);
-  protected readonly total = signal(0);
-  protected readonly page = signal(1);
+  private readonly courseNames = signal<ReadonlyMap<string, string>>(new Map());
+  private readonly topicNames = signal<ReadonlyMap<string, string>>(new Map());
+  private readonly taxonomyLoaded = signal(false);
+
   protected readonly loading = signal(false);
   protected readonly errorMessage = signal<string | null>(null);
   /** Set true the first time ANY response (filtered or not) is non-empty — drives QB-R2's two-empty-states split. */
@@ -102,11 +106,16 @@ export class BankListComponent {
   /** Every object URL this component has ever created, revoked on destroy. */
   private readonly objectUrls: string[] = [];
 
-  protected readonly pageSize = PAGE_SIZE;
-  protected readonly lastPage = computed(() => Math.max(1, Math.ceil(this.total() / this.pageSize)));
+  private readonly expandedCourses = signal<ReadonlySet<string>>(new Set());
+  private readonly expandedTopics = signal<ReadonlySet<string>>(new Set());
+
+  /** Curso -> Tema -> preguntas, grouped/sorted/name-resolved from the flat question list (QB tree redesign). */
+  protected readonly tree = computed<QuestionTreeCourseNode[]>(() =>
+    buildQuestionTree(this.questions(), this.courseNames(), this.topicNames()),
+  );
 
   constructor() {
-    this.search();
+    this.loadInitial();
     this.destroyRef.onDestroy(() => {
       for (const url of this.objectUrls) {
         URL.revokeObjectURL(url);
@@ -114,60 +123,111 @@ export class BankListComponent {
     });
   }
 
-  protected search(): void {
-    this.page.set(1);
-    this.load();
-  }
-
-  private load(): void {
+  private loadInitial(): void {
     this.loading.set(true);
     this.errorMessage.set(null);
-    this.questions.set([]);
 
-    this.bankService
-      .listQuestionsPaged(
-        {
-          courseId: this.courseId() || undefined,
-          topicId: this.topicId() || undefined,
-          difficulty: this.difficulty() ?? undefined,
-          gradeLevel: this.gradeLevel() ?? undefined,
-        },
-        this.page(),
-        this.pageSize,
-      )
-      .subscribe({
-        next: (res) => {
-          this.loading.set(false);
-          this.questions.set([...res.items]);
-          this.total.set(res.total);
-          if (res.total > 0) {
-            this.bankHasAnyQuestions.set(true);
-          }
-          this.loadImages(res.items);
-        },
-        error: (_error: HttpErrorResponse) => {
-          this.loading.set(false);
-          this.errorMessage.set('No se pudieron cargar las preguntas. Inténtalo de nuevo.');
-        },
-      });
+    forkJoin({ taxonomy: this.fetchTaxonomy(), questions: this.fetchQuestions() }).subscribe({
+      next: ({ taxonomy, questions }) => {
+        this.courseNames.set(taxonomy.courseNames);
+        this.topicNames.set(taxonomy.topicNames);
+        this.taxonomyLoaded.set(true);
+        this.applyQuestions(questions);
+        this.loading.set(false);
+      },
+      error: () => {
+        this.loading.set(false);
+        this.errorMessage.set(ERROR_MESSAGE);
+      },
+    });
+  }
+
+  protected search(): void {
+    this.loading.set(true);
+    this.errorMessage.set(null);
+
+    this.fetchQuestions().subscribe({
+      next: (questions) => {
+        this.applyQuestions(questions);
+        this.loading.set(false);
+      },
+      error: () => {
+        this.loading.set(false);
+        this.errorMessage.set(ERROR_MESSAGE);
+      },
+    });
   }
 
   protected retry(): void {
-    this.load();
-  }
-
-  protected prevPage(): void {
-    if (this.page() > 1) {
-      this.page.update((p) => p - 1);
-      this.load();
+    if (this.taxonomyLoaded()) {
+      this.search();
+    } else {
+      this.loadInitial();
     }
   }
 
-  protected nextPage(): void {
-    if (this.page() < this.lastPage()) {
-      this.page.update((p) => p + 1);
-      this.load();
+  private fetchQuestions(): Observable<BankQuestion[]> {
+    return this.bankService.listQuestions({
+      difficulty: this.difficulty() ?? undefined,
+      gradeLevel: this.gradeLevel() ?? undefined,
+    });
+  }
+
+  /**
+   * Resolves id->name maps for every course/topic. The Angular
+   * `TaxonomyService.getTopics()` wrapper requires a `courseId` (unlike the
+   * raw `GET /topics` endpoint, which also accepts no filter), so this
+   * fans out one `getTopics(courseId)` call per course via `forkJoin`
+   * instead of a single unscoped request — see class doc + apply-progress.
+   */
+  private fetchTaxonomy(): Observable<{
+    courseNames: ReadonlyMap<string, string>;
+    topicNames: ReadonlyMap<string, string>;
+  }> {
+    return this.taxonomyService.getCourses().pipe(
+      switchMap((courses) => {
+        const topics$ = courses.length
+          ? forkJoin(courses.map((course) => this.taxonomyService.getTopics(course.id)))
+          : of([]);
+        return topics$.pipe(
+          map((topicsByCourse) => ({
+            courseNames: new Map(courses.map((course) => [course.id, course.name])),
+            topicNames: new Map(topicsByCourse.flat().map((topic) => [topic.id, topic.name])),
+          })),
+        );
+      }),
+    );
+  }
+
+  private applyQuestions(questions: readonly BankQuestion[]): void {
+    this.questions.set([...questions]);
+    if (questions.length > 0) {
+      this.bankHasAnyQuestions.set(true);
     }
+    // Courses default expanded (discoverability); topics reset to collapsed (scannability) on every fetch.
+    this.expandedCourses.set(new Set(questions.map((q) => q.courseId)));
+    this.expandedTopics.set(new Set());
+    this.loadImages(questions);
+  }
+
+  protected toggleCourse(courseId: string): void {
+    this.expandedCourses.update((current) => toggleInSet(current, courseId));
+  }
+
+  protected toggleTopic(topicId: string): void {
+    this.expandedTopics.update((current) => toggleInSet(current, topicId));
+  }
+
+  protected isCourseExpanded(courseId: string): boolean {
+    return this.expandedCourses().has(courseId);
+  }
+
+  protected isTopicExpanded(topicId: string): boolean {
+    return this.expandedTopics().has(topicId);
+  }
+
+  protected chevronFor(expanded: boolean): string {
+    return expanded ? 'chevron-down' : 'chevron-right';
   }
 
   protected select(question: BankQuestion): void {
@@ -196,7 +256,7 @@ export class BankListComponent {
     this.bankService.archiveQuestion(question.id).subscribe({
       next: () => {
         this.selected.set(null);
-        this.load();
+        this.search();
       },
       error: () => this.actionError.set('No se pudo archivar la pregunta. Inténtalo de nuevo.'),
     });
@@ -207,7 +267,7 @@ export class BankListComponent {
     this.bankService.deleteQuestion(question.id).subscribe({
       next: () => {
         this.selected.set(null);
-        this.load();
+        this.search();
       },
       error: () => this.actionError.set('No se pudo borrar la pregunta. Inténtalo de nuevo.'),
     });
@@ -254,4 +314,14 @@ export class BankListComponent {
   protected goToNew(): void {
     this.router.navigate(['/app/bank/new']);
   }
+}
+
+function toggleInSet(current: ReadonlySet<string>, id: string): ReadonlySet<string> {
+  const next = new Set(current);
+  if (next.has(id)) {
+    next.delete(id);
+  } else {
+    next.add(id);
+  }
+  return next;
 }
