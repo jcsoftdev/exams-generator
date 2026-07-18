@@ -29,20 +29,31 @@ const QUESTIONS: BankQuestion[] = [
   },
 ];
 
-function setup(listQuestionsImpl: (...args: unknown[]) => unknown) {
+function setup(
+  listQuestionsImpl: (...args: unknown[]) => unknown,
+  fetchQuestionImageImpl: (id: string) => unknown = (id: string) =>
+    of(new Blob([`fake-bytes-${id}`], { type: 'image/png' })),
+) {
   const listQuestions = vi.fn(listQuestionsImpl);
   const buildImageAssetUrl = vi.fn((id: string) => `http://api.test/assets/${id}`);
+  const fetchQuestionImage = vi.fn(fetchQuestionImageImpl);
+
+  let objectUrlCounter = 0;
+  vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:mock-url-${objectUrlCounter++}`);
+  vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
 
   TestBed.configureTestingModule({
     imports: [BankListComponent],
-    providers: [{ provide: BankService, useValue: { listQuestions, buildImageAssetUrl } }],
+    providers: [
+      { provide: BankService, useValue: { listQuestions, buildImageAssetUrl, fetchQuestionImage } },
+    ],
   });
 
   const fixture = TestBed.createComponent(BankListComponent);
   fixture.detectChanges();
   const compiled = fixture.nativeElement as HTMLElement;
 
-  return { fixture, compiled, listQuestions, buildImageAssetUrl };
+  return { fixture, compiled, listQuestions, buildImageAssetUrl, fetchQuestionImage };
 }
 
 describe('BankListComponent', () => {
@@ -54,13 +65,29 @@ describe('BankListComponent', () => {
     expect(items.length).toBe(2);
   });
 
-  it('renders an image for questions that have an imageAssetId, using BankService.buildImageAssetUrl', () => {
-    const { compiled, buildImageAssetUrl } = setup(() => of(QUESTIONS));
+  it('renders an image for questions that have an imageAssetId, fetched as an authenticated blob (not a raw <img src> URL, which never sends the Authorization header)', () => {
+    const { compiled, fetchQuestionImage } = setup(() => of(QUESTIONS));
 
-    expect(buildImageAssetUrl).toHaveBeenCalledWith('asset-1');
+    expect(fetchQuestionImage).toHaveBeenCalledWith('asset-1');
     const images = compiled.querySelectorAll('img');
     expect(images.length).toBe(1);
-    expect(images[0].getAttribute('src')).toBe('http://api.test/assets/asset-1');
+    expect(images[0].getAttribute('src')).toMatch(/^blob:/);
+  });
+
+  it('never calls fetchQuestionImage for a question without an imageAssetId', () => {
+    const { fetchQuestionImage } = setup(() => of(QUESTIONS));
+
+    expect(fetchQuestionImage).toHaveBeenCalledTimes(1);
+    expect(fetchQuestionImage).not.toHaveBeenCalledWith(null);
+  });
+
+  it('revokes every created object URL on destroy (no blob: memory leak)', () => {
+    const { fixture } = setup(() => of(QUESTIONS));
+    fixture.detectChanges();
+
+    fixture.destroy();
+
+    expect(URL.revokeObjectURL).toHaveBeenCalledWith('blob:mock-url-0');
   });
 
   it('renders the correct answer and taxonomy for each question', () => {

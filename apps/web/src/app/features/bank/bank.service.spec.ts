@@ -138,4 +138,21 @@ describe('BankService', () => {
       expect(service.buildImageAssetUrl('asset-1')).toBe(`${environment.apiBaseUrl}/assets/asset-1`);
     });
   });
+
+  describe('fetchQuestionImage', () => {
+    it('GETs /assets/:id as a blob (authInterceptor attaches the Bearer header; <img src> cannot)', () => {
+      let result: Blob | undefined;
+
+      service.fetchQuestionImage('asset-1').subscribe((response) => (result = response));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/assets/asset-1`);
+      expect(req.request.method).toBe('GET');
+      expect(req.request.responseType).toBe('blob');
+
+      const blob = new Blob(['fake-bytes'], { type: 'image/png' });
+      req.flush(blob);
+
+      expect(result).toEqual(blob);
+    });
+  });
 });

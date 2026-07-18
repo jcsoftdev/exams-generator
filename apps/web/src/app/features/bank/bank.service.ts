@@ -49,12 +49,24 @@ export class BankService {
   }
 
   /**
-   * GAP (see bank.models.ts): `GET /bank/questions` only returns the bare
-   * `imageAssetId` UUID — the API has no image-serving endpoint yet. This
-   * builds a plausible `GET /assets/:id` URL that does NOT exist on the
-   * backend today; swap for the real contract once it ships.
+   * `GET /bank/questions` only returns the bare `imageAssetId` UUID — this
+   * builds the real `GET /assets/:id` URL that serves the image bytes.
+   * NOTE: don't bind this directly to `<img src>` — that endpoint is
+   * Bearer-JWT protected and `<img src>` never sends the Authorization
+   * header. Use `fetchQuestionImage()` instead, which goes through
+   * `HttpClient` (so `authInterceptor` attaches the header) and hands back
+   * a `Blob` the caller can turn into a same-origin `blob:` object URL.
    */
   buildImageAssetUrl(imageAssetId: string): string {
     return `${environment.apiBaseUrl}/assets/${imageAssetId}`;
+  }
+
+  /**
+   * Fetches the authenticated image bytes behind `imageAssetId` as a
+   * `Blob`. See `buildImageAssetUrl` for why this exists instead of a
+   * plain `<img src>` URL.
+   */
+  fetchQuestionImage(imageAssetId: string): Observable<Blob> {
+    return this.http.get(this.buildImageAssetUrl(imageAssetId), { responseType: 'blob' });
   }
 }
