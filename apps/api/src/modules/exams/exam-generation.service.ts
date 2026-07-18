@@ -1,7 +1,14 @@
 import { promises as fs } from "node:fs";
 import * as os from "node:os";
 import * as path from "node:path";
-import { BadRequestException, ConflictException, Inject, Injectable, NotFoundException } from "@nestjs/common";
+import {
+  BadRequestException,
+  ConflictException,
+  Inject,
+  Injectable,
+  NotFoundException,
+  Optional,
+} from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
 import { SelectedQuestion, Version, buildVersions } from "./domain/version-shuffler";
 import { Rng, createSeededRng } from "./domain/ports/random.port";
@@ -12,7 +19,8 @@ import {
   TypstCompilationError,
 } from "./domain/ports/pdf-compiler.port";
 import { StoragePort } from "./domain/ports/storage.port";
-import { PDF_COMPILER_PORT, STORAGE_PORT } from "./exams.constants";
+import { STORAGE_PORT } from "../bank/bank.constants";
+import { PDF_COMPILER_PORT } from "./exams.constants";
 import { ExamForGenerationRecord, ExamsRepository, SelectedQuestionForGeneration } from "./exams.repository";
 
 export interface GeneratedVersionResult {
@@ -57,12 +65,17 @@ function extensionForMime(mime: string | null): string {
  */
 @Injectable()
 export class ExamVersionGenerationService {
+  private readonly rngFactory: () => Rng;
+
+  /** See `ExamsService`'s constructor docstring for why this is `@Optional()` + body fallback, not a default parameter value. */
   constructor(
     private readonly repository: ExamsRepository,
     @Inject(STORAGE_PORT) private readonly storage: StoragePort,
     @Inject(PDF_COMPILER_PORT) private readonly pdfCompiler: PdfCompilerPort,
-    private readonly rngFactory: () => Rng = () => createSeededRng(Date.now() ^ (Math.random() * 2 ** 31)),
-  ) {}
+    @Optional() rngFactory?: () => Rng,
+  ) {
+    this.rngFactory = rngFactory ?? (() => createSeededRng(Date.now() ^ (Math.random() * 2 ** 31)));
+  }
 
   async generateVersions(
     user: AuthTokenPayload,

@@ -1,5 +1,12 @@
 import { Difficulty } from "@exams-generator/shared";
-import { BadRequestException, ConflictException, ForbiddenException, Injectable, NotFoundException } from "@nestjs/common";
+import {
+  BadRequestException,
+  ConflictException,
+  ForbiddenException,
+  Injectable,
+  NotFoundException,
+  Optional,
+} from "@nestjs/common";
 import { ExamStatus } from "../../db/schema/enums";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BlueprintRow, Candidate, select } from "./domain/blueprint-selector";
@@ -94,10 +101,23 @@ function matchesRowCriteria(candidate: QuestionPoolCandidateRecord, row: Bluepri
  */
 @Injectable()
 export class ExamsService {
+  private readonly rngFactory: () => Rng;
+
+  /**
+   * `rngFactory` is `@Optional()` — NOT given a plain default parameter
+   * value — because Nest's DI container always passes an explicit
+   * argument (`undefined` when no provider matches, since a bare function
+   * type has no injectable token) rather than omitting it, which would
+   * silently bypass a `= default` parameter value. The fallback is
+   * resolved in the constructor body instead, so it applies both under
+   * real Nest DI and when tests `new ExamsService(mockRepo, customRng)`.
+   */
   constructor(
     private readonly repository: ExamsRepository,
-    private readonly rngFactory: () => Rng = () => createSeededRng(Date.now() ^ (Math.random() * 2 ** 31)),
-  ) {}
+    @Optional() rngFactory?: () => Rng,
+  ) {
+    this.rngFactory = rngFactory ?? (() => createSeededRng(Date.now() ^ (Math.random() * 2 ** 31)));
+  }
 
   async createExam(user: AuthTokenPayload, dto: CreateExamDto): Promise<CreateExamResult> {
     const tenantId = requireTenant(user);
