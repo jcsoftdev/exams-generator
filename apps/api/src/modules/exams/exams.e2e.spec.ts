@@ -525,6 +525,13 @@ describe("Exams module (e2e)", () => {
       expect(res.body.items.every((i: { status: string }) => i.status === "draft")).toBe(true);
     });
 
+    it("GET /exams?status=bogus — rejects with 400 for invalid status", async () => {
+      await request(app.getHttpServer())
+        .get("/exams?status=bogus")
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(400);
+    });
+
     it("rejects staff users (no tenant)", async () => {
       await request(app.getHttpServer())
         .get("/exams")

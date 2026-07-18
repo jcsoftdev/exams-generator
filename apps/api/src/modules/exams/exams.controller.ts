@@ -1,5 +1,6 @@
 import { Role } from "@exams-generator/shared";
 import {
+  BadRequestException,
   Body,
   Controller,
   Get,
@@ -131,6 +132,9 @@ export class ExamsController {
     @Query("page") page = "1",
     @Query("pageSize") pageSize = "20",
   ) {
+    if (status !== undefined && !["draft", "ready"].includes(status)) {
+      throw new BadRequestException("status must be draft or ready");
+    }
     return this.examsService.listExams(user, {
       status,
       gradeLevel,
