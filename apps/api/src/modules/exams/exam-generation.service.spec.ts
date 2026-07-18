@@ -99,7 +99,12 @@ describe("ExamVersionGenerationService.generateVersions", () => {
       expect(call.tenantLogoAbsolutePath).toBeDefined();
       expect(call.questions.map((q) => q.id).sort()).toEqual(["q1", "q2"]);
       for (const q of call.questions) {
-        expect(q.imageAbsolutePath).toMatch(/^\//);
+        // READY_EXAM fixture is all image questions; narrow the discriminated
+        // union (structured questions carry no on-disk image path).
+        expect(q.type).not.toBe("structured");
+        if (q.type !== "structured") {
+          expect(q.imageAbsolutePath).toMatch(/^\//);
+        }
       }
     }
 
