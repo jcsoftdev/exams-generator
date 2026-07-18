@@ -1,0 +1,345 @@
+import { TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
+import { describe, it, expect, vi } from 'vitest';
+import { Subject, of, throwError } from 'rxjs';
+import { Difficulty } from '@exams-generator/shared';
+import { ExamBuilderComponent } from './exam-builder.component';
+import { ExamsService } from '../exams.service';
+import { ExamVersionsService } from '../../exam-versions/exam-versions.service';
+import { TaxonomyService } from '../../taxonomy/taxonomy.service';
+import { Course, Topic } from '../../taxonomy/taxonomy.models';
+import { StockBatchResult, PreviewExamResult, CreateExamResult } from '../exams.models';
+import { GeneratedVersionResult } from '../../exam-versions/exam-versions.models';
+
+const COURSES: Course[] = [{ id: 'c1', name: 'Matemática' }];
+const TOPICS: Topic[] = [{ id: 't1', name: 'Álgebra', courseId: 'c1' }];
+
+const FULL_STOCK: StockBatchResult = {
+  results: [
+    { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 },
+    { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, available: 18 },
+    { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Hard, available: 18 },
+  ],
+};
+
+const ZERO_STOCK: StockBatchResult = {
+  results: [
+    { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 0 },
+    { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, available: 0 },
+    { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Hard, available: 0 },
+  ],
+};
+
+function setup(overrides: {
+  getCourses?(): unknown;
+  getTopics?(courseId: string): unknown;
+  stockBatch?(payload: unknown): unknown;
+  previewExam?(payload: unknown): unknown;
+  createExam?(payload: unknown): unknown;
+  generateVersions?(...args: unknown[]): unknown;
+} = {}) {
+  const getCourses = vi.fn(overrides.getCourses ?? (() => of(COURSES)));
+  const getTopics = vi.fn(overrides.getTopics ?? (() => of(TOPICS)));
+  const stockBatch = vi.fn(overrides.stockBatch ?? (() => of(FULL_STOCK)));
+  const previewExam = vi.fn(
+    overrides.previewExam ??
+      ((payload: { blueprint: { count: number }[] }) =>
+        of<PreviewExamResult>({
+          selections: [
+            {
+              rowIndex: 0,
+              courseId: 'c1',
+              topicId: 't1',
+              difficulty: Difficulty.Easy,
+              questionIds: Array.from({ length: payload.blueprint[0].count }, (_, i) => `q${i}`),
+            },
+          ],
+          shortages: [],
+        })),
+  );
+  const createExam = vi.fn(
+    overrides.createExam ??
+      (() => of<CreateExamResult>({ id: 'exam-1', status: 'draft', selectedQuestionIds: [] })),
+  );
+  const generateVersions = vi.fn(
+    overrides.generateVersions ?? (() => of<GeneratedVersionResult[]>([])),
+  );
+  const navigate = vi.fn();
+
+  TestBed.configureTestingModule({
+    imports: [ExamBuilderComponent],
+    providers: [
+      { provide: TaxonomyService, useValue: { getCourses, getTopics } },
+      { provide: ExamsService, useValue: { stockBatch, previewExam, createExam } },
+      { provide: ExamVersionsService, useValue: { generateVersions } },
+      { provide: Router, useValue: { navigate } },
+    ],
+  });
+
+  const fixture = TestBed.createComponent(ExamBuilderComponent);
+  fixture.detectChanges();
+  const compiled = fixture.nativeElement as HTMLElement;
+
+  return {
+    fixture,
+    compiled,
+    getCourses,
+    getTopics,
+    stockBatch,
+    previewExam,
+    createExam,
+    generateVersions,
+    navigate,
+  };
+}
+
+function selectGradeLevel(compiled: HTMLElement, fixture: { detectChanges: () => void }, value: string): void {
+  const select = compiled.querySelector<HTMLSelectElement>('select');
+  if (!select) {
+    throw new Error('grade level select not found');
+  }
+  select.value = value;
+  select.dispatchEvent(new Event('change'));
+  fixture.detectChanges();
+}
+
+function setCellCount(
+  compiled: HTMLElement,
+  fixture: { detectChanges: () => void },
+  cellKey: string,
+  value: string,
+): void {
+  const input = compiled.querySelector<HTMLInputElement>(`input[name="requested-${cellKey}"]`);
+  if (!input) {
+    throw new Error(`input for cell ${cellKey} not found`);
+  }
+  input.value = value;
+  input.dispatchEvent(new Event('input'));
+  fixture.detectChanges();
+}
+
+describe('ExamBuilderComponent', () => {
+  describe('loading', () => {
+    it('shows a loading indicator while the stock-batch call is pending and renders no stale data', () => {
+      const stockSubject = new Subject<StockBatchResult>();
+      const { compiled, fixture } = setup({ stockBatch: () => stockSubject.asObservable() });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      expect(compiled.querySelector('[data-testid="loading-indicator"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeFalsy();
+
+      stockSubject.next(FULL_STOCK);
+      stockSubject.complete();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="loading-indicator"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeTruthy();
+    });
+  });
+
+  describe('empty', () => {
+    it('renders the empty state with both CTAs when there is zero stock for the grade level', () => {
+      const { compiled, fixture } = setup({ stockBatch: () => of(ZERO_STOCK) });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      const emptyState = compiled.querySelector('[data-testid="empty-state-cta"]');
+      expect(emptyState).toBeTruthy();
+      expect(emptyState!.textContent).toContain('Subir preguntas');
+      expect(emptyState!.textContent).toContain('Generar con IA');
+      expect(compiled.querySelector('[data-testid="content-table-desktop"]')).toBeFalsy();
+    });
+
+    it('renders the empty state when the course catalog is empty', () => {
+      const { compiled, fixture } = setup({ getCourses: () => of([]) });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      expect(compiled.querySelector('[data-testid="empty-state-cta"]')).toBeTruthy();
+    });
+  });
+
+  describe('error', () => {
+    it('renders an error state distinguishable from loading/empty when the stock-batch call fails', () => {
+      const { compiled, fixture } = setup({ stockBatch: () => throwError(() => new Error('boom')) });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      const errorState = compiled.querySelector('[data-testid="error-state"]');
+      expect(errorState).toBeTruthy();
+      expect(errorState!.textContent).toMatch(/no se pudieron cargar/i);
+      expect(compiled.querySelector('[data-testid="loading-indicator"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="empty-state-cta"]')).toBeFalsy();
+    });
+
+    it('renders an error state when the preview call fails', () => {
+      const { compiled, fixture } = setup({ previewExam: () => throwError(() => new Error('boom')) });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+
+      const errorState = compiled.querySelector('[data-testid="preview-error"]');
+      expect(errorState).toBeTruthy();
+    });
+  });
+
+  describe('with-data', () => {
+    it('shows "de 18" with no warning styling when a row requests 6 with 18 in stock', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+
+      const cell = compiled.querySelector('[data-cell-key="c1:t1:easy"]')!;
+      expect(cell.textContent).toContain('de 18');
+      expect(cell.querySelector('[data-testid="stock-warning"]')).toBeFalsy();
+    });
+  });
+
+  describe('short-stock', () => {
+    it('shows "solo 2 ✕" in the warning-stock tag when a row requests 6 with only 2 in stock', () => {
+      const shortStock: StockBatchResult = {
+        results: [
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 },
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, available: 2 },
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Hard, available: 18 },
+        ],
+      };
+      const { compiled, fixture } = setup({ stockBatch: () => of(shortStock) });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:medium', '6');
+
+      const cell = compiled.querySelector('[data-cell-key="c1:t1:medium"]')!;
+      const warning = cell.querySelector('[data-testid="stock-warning"]');
+      expect(warning).toBeTruthy();
+      expect(warning!.textContent).toContain('solo 2 ✕');
+    });
+
+    it('shows the puente-a-IA affordance ("Generar con IA" / "Elegir del banco" / "Bajar la cantidad") on a shortage cell (EB-R2)', () => {
+      const shortStock: StockBatchResult = {
+        results: [
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 },
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, available: 2 },
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Hard, available: 18 },
+        ],
+      };
+      const { compiled, fixture } = setup({ stockBatch: () => of(shortStock) });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:medium', '6');
+
+      const cell = compiled.querySelector('[data-cell-key="c1:t1:medium"]')!;
+      expect(cell.querySelector('[data-testid="bridge-generate-ai"]')).toBeTruthy();
+      expect(cell.querySelector('[data-testid="bridge-choose-bank"]')).toBeTruthy();
+      expect(cell.querySelector('[data-testid="bridge-lower-count"]')).toBeTruthy();
+    });
+  });
+
+  describe('lock / unlock "Generar versiones" (EB-R3/R4)', () => {
+    it('locks with a reason when the table is only partially satisfiable', () => {
+      const shortStock: StockBatchResult = {
+        results: [
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 },
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, available: 2 },
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Hard, available: 18 },
+        ],
+      };
+      const { compiled, fixture } = setup({ stockBatch: () => of(shortStock) });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+      setCellCount(compiled, fixture, 'c1:t1:medium', '6');
+
+      const button = compiled.querySelector<HTMLButtonElement>('[data-testid="generate-versions"] button')!;
+      expect(button.disabled).toBe(true);
+      expect(compiled.querySelector('[data-testid="lock-reason"]')).toBeTruthy();
+    });
+
+    it('unlocks when every requested cell is fully satisfiable', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+
+      const button = compiled.querySelector<HTMLButtonElement>('[data-testid="generate-versions"] button')!;
+      expect(button.disabled).toBe(false);
+      expect(compiled.querySelector('[data-testid="lock-reason"]')).toBeFalsy();
+    });
+  });
+
+  describe('EB-R5 — editing one cell does not re-roll another cell already previewed', () => {
+    it('leaves the easy cell preview untouched when the medium cell is edited afterward, and calls preview with a single-row blueprint per edit', () => {
+      const previewExam = vi.fn((payload: { blueprint: { difficulty: Difficulty; count: number }[] }) => {
+        const row = payload.blueprint[0];
+        const ids =
+          row.difficulty === Difficulty.Easy ? ['q1', 'q2', 'q3', 'q4', 'q5', 'q6'] : ['q9', 'q10', 'q11', 'q12'];
+        return of<PreviewExamResult>({
+          selections: [{ rowIndex: 0, courseId: 'c1', topicId: 't1', difficulty: row.difficulty, questionIds: ids }],
+          shortages: [],
+        });
+      });
+      const { compiled, fixture } = setup({ previewExam });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+
+      const easyCellBefore = compiled.querySelector('[data-testid="preview-ids"][data-cell-key="c1:t1:easy"]')!.textContent;
+      expect(easyCellBefore).toContain('q1');
+
+      previewExam.mockClear();
+      setCellCount(compiled, fixture, 'c1:t1:medium', '4');
+
+      expect(previewExam).toHaveBeenCalledTimes(1);
+      const secondCallPayload = previewExam.mock.calls[0][0] as { blueprint: { difficulty: Difficulty }[] };
+      expect(secondCallPayload.blueprint).toHaveLength(1);
+      expect(secondCallPayload.blueprint[0].difficulty).toBe(Difficulty.Medium);
+
+      const easyCellAfter = compiled.querySelector('[data-testid="preview-ids"][data-cell-key="c1:t1:easy"]')!.textContent;
+      expect(easyCellAfter).toBe(easyCellBefore);
+      const mediumCellAfter = compiled.querySelector('[data-testid="preview-ids"][data-cell-key="c1:t1:medium"]')!.textContent;
+      expect(mediumCellAfter).toContain('q9');
+    });
+  });
+
+  describe('responsive (EB-R7)', () => {
+    it('renders stacked per-topic cards for mobile (md:hidden) and the table for desktop (hidden md:block), preview after the cards on mobile', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      const mobile = compiled.querySelector('[data-testid="content-cards-mobile"]')!;
+      const desktop = compiled.querySelector('[data-testid="content-table-desktop"]')!;
+      expect(mobile.className).toContain('md:hidden');
+      expect(desktop.className).toContain('hidden');
+      expect(desktop.className).toContain('md:block');
+
+      const card = mobile.querySelector('[data-testid="builder-card"]');
+      expect(card).toBeTruthy();
+
+      const cardsIndex = Array.from(mobile.children).findIndex((el) => el === card);
+      const previewPanel = mobile.querySelector('[data-testid="preview-panel"]');
+      expect(previewPanel).toBeTruthy();
+      const previewIndex = Array.from(mobile.children).indexOf(previewPanel as Element);
+      expect(previewIndex).toBeGreaterThan(cardsIndex);
+    });
+  });
+
+  describe('commit lifecycle', () => {
+    it('creates the exam, generates versions, and navigates to the versions screen', () => {
+      const { compiled, fixture, createExam, generateVersions, navigate } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+
+      const button = compiled.querySelector<HTMLButtonElement>('[data-testid="generate-versions"] button')!;
+      button.click();
+      fixture.detectChanges();
+
+      expect(createExam).toHaveBeenCalled();
+      expect(generateVersions).toHaveBeenCalledWith('exam-1', expect.any(Number));
+      expect(navigate).toHaveBeenCalledWith(['/app/exams', 'exam-1', 'versions']);
+    });
+  });
+});
