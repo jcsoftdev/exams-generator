@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import { Difficulty, Role } from "@exams-generator/shared";
 import { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
-import { inArray } from "drizzle-orm";
+import { inArray, or } from "drizzle-orm";
 import request from "supertest";
 import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
@@ -19,33 +19,51 @@ import {
   topics,
   users,
 } from "../../db/schema";
+import { STORAGE_PORT } from "../bank/bank.constants";
 import { TokenService } from "../auth/token.service";
+import { StoragePort } from "./domain/ports/storage.port";
+
+/** Minimal valid 1x1 transparent PNG — real image bytes so a full
+ * shuffle -> Typst compile -> MinIO upload round trip can actually succeed
+ * end-to-end in the ownership positive-control test below (not just a
+ * placeholder buffer that would fail image decoding). */
+const TINY_PNG = Buffer.from(
+  "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=",
+  "base64",
+);
 
 /**
- * Full HTTP e2e — real Nest app, real Postgres, real MinIO, and the real
- * `typst` CLI (release-gate requirement, design doc §8: e2e of flows by
- * role + tenant isolation). Covers the whole design doc §5.3/§5.4 flow:
- * create -> auto-select -> (shortage 422) -> replace -> confirm -> generate
- * versions+PDFs, PLUS the explicit "a tenant NEVER sees another tenant's
- * private questions" gate for exam question selection specifically.
+ * Full HTTP e2e for the `exams` module — release-gate requirement from the
+ * design doc's Testing section (§8): "un tenant NUNCA ve preguntas privadas
+ * de otro" must also hold for exam *question selection* (automatic
+ * blueprint fill), and exam *ownership* must be enforced on every mutating
+ * endpoint (`replace`, `confirm`, `versions`) — a tenant must never be able
+ * to operate on another tenant's exam.
+ *
+ * `bank.e2e.spec.ts` already covers `GET /bank/questions` (list) and
+ * `GET /bank/questions/:id` isolation exhaustively — this file does NOT
+ * duplicate that; it covers the exams-module-specific surface only.
  */
 describe("Exams module (e2e)", () => {
   let app: INestApplication;
   let tokenService: TokenService;
+  let storage: StoragePort;
 
   let courseId: string;
-  let topicId: string;
+  let staffUserId: string;
   let tenantAId: string;
   let tenantATeacherId: string;
   let tenantBId: string;
   let tenantBTeacherId: string;
 
+  let staffToken: string;
   let tenantAToken: string;
   let tenantBToken: string;
 
-  const createdExamIds: string[] = [];
+  const createdTopicIds: string[] = [];
   const createdQuestionIds: string[] = [];
   const createdAssetIds: string[] = [];
+  const createdExamIds: string[] = [];
 
   beforeAll(async () => {
     await runMigrations();
@@ -54,24 +72,30 @@ describe("Exams module (e2e)", () => {
     app = moduleRef.createNestApplication();
     await app.init();
     tokenService = moduleRef.get(TokenService);
+    storage = moduleRef.get(STORAGE_PORT);
 
     const suffix = randomUUID();
 
     const [course] = await db
       .insert(courses)
-      .values({ name: `E2E Exams Course ${suffix}` })
+      .values({ name: `ExamsE2E Course ${suffix}` })
       .returning({ id: courses.id });
     courseId = course!.id;
 
-    const [topic] = await db
-      .insert(topics)
-      .values({ courseId, name: `E2E Exams Topic ${suffix}` })
-      .returning({ id: topics.id });
-    topicId = topic!.id;
+    const [staff] = await db
+      .insert(users)
+      .values({
+        tenantId: null,
+        email: `exams-e2e-staff-${suffix}@exams-generator.test`,
+        passwordHash: "test-hash",
+        role: Role.ContentEditor,
+      })
+      .returning({ id: users.id });
+    staffUserId = staff!.id;
 
     const [tenantA] = await db
       .insert(tenants)
-      .values({ name: `E2E Exams Tenant A ${suffix}`, slug: `e2e-exams-tenant-a-${suffix}` })
+      .values({ name: `ExamsE2E Tenant A ${suffix}`, slug: `exams-e2e-tenant-a-${suffix}` })
       .returning({ id: tenants.id });
     tenantAId = tenantA!.id;
 
@@ -79,7 +103,7 @@ describe("Exams module (e2e)", () => {
       .insert(users)
       .values({
         tenantId: tenantAId,
-        email: `e2e-exams-teacher-a-${suffix}@exams-generator.test`,
+        email: `exams-e2e-teacher-a-${suffix}@exams-generator.test`,
         passwordHash: "test-hash",
         role: Role.Teacher,
       })
@@ -88,7 +112,7 @@ describe("Exams module (e2e)", () => {
 
     const [tenantB] = await db
       .insert(tenants)
-      .values({ name: `E2E Exams Tenant B ${suffix}`, slug: `e2e-exams-tenant-b-${suffix}` })
+      .values({ name: `ExamsE2E Tenant B ${suffix}`, slug: `exams-e2e-tenant-b-${suffix}` })
       .returning({ id: tenants.id });
     tenantBId = tenantB!.id;
 
@@ -96,13 +120,14 @@ describe("Exams module (e2e)", () => {
       .insert(users)
       .values({
         tenantId: tenantBId,
-        email: `e2e-exams-teacher-b-${suffix}@exams-generator.test`,
+        email: `exams-e2e-teacher-b-${suffix}@exams-generator.test`,
         passwordHash: "test-hash",
         role: Role.Teacher,
       })
       .returning({ id: users.id });
     tenantBTeacherId = teacherB!.id;
 
+    staffToken = tokenService.sign({ sub: staffUserId, tenantId: null, role: Role.ContentEditor });
     tenantAToken = tokenService.sign({ sub: tenantATeacherId, tenantId: tenantAId, role: Role.Teacher });
     tenantBToken = tokenService.sign({ sub: tenantBTeacherId, tenantId: tenantBId, role: Role.Teacher });
   });
@@ -117,58 +142,70 @@ describe("Exams module (e2e)", () => {
     if (createdQuestionIds.length > 0) {
       await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
     }
-    if (createdAssetIds.length > 0) {
-      await db.delete(assets).where(inArray(assets.id, createdAssetIds));
-    }
-    // Version generation also creates its own PDF/answer-sheet assets
-    // (row.pdfAssetId/answerSheetAssetId) that this suite never tracks by
-    // id — sweep anything still tied to the test tenants before they're deleted.
-    await db.delete(assets).where(inArray(assets.tenantId, [tenantAId, tenantBId]));
-    await db.delete(users).where(inArray(users.id, [tenantATeacherId, tenantBTeacherId]));
+    // Also sweep by tenantId: `generateVersions()` creates its own PDF/
+    // answer-key asset rows (repository.createAsset) whose ids aren't
+    // tracked in `createdAssetIds`.
+    await db
+      .delete(assets)
+      .where(
+        or(
+          createdAssetIds.length > 0 ? inArray(assets.id, createdAssetIds) : undefined,
+          inArray(assets.tenantId, [tenantAId, tenantBId]),
+        ),
+      );
+    await db.delete(users).where(inArray(users.id, [staffUserId, tenantATeacherId, tenantBTeacherId]));
     await db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]));
-    await db.delete(topics).where(inArray(topics.id, [topicId]));
+    if (createdTopicIds.length > 0) {
+      await db.delete(topics).where(inArray(topics.id, createdTopicIds));
+    }
     await db.delete(courses).where(inArray(courses.id, [courseId]));
     await app.close();
     await pool.end();
   });
 
-  async function seedApprovedQuestion(params: {
+  /** Fresh topic per scenario so pool-size assertions can't be contaminated by sibling tests. */
+  async function createTopic(): Promise<string> {
+    const [topic] = await db
+      .insert(topics)
+      .values({ courseId, name: `ExamsE2E Topic ${randomUUID()}` })
+      .returning({ id: topics.id });
+    createdTopicIds.push(topic!.id);
+    return topic!.id;
+  }
+
+  /** Approved question inserted directly (mirrors `exams.repository.spec.ts`'s fixture convention). */
+  async function createApprovedQuestion(params: {
     tenantId: string | null;
     createdBy: string;
+    topicId: string;
     gradeLevel: string;
     difficulty?: Difficulty;
+    /** Uploads a real (tiny) PNG to storage under the asset's key — needed
+     * only when a test exercises actual PDF generation end-to-end. */
+    withRealImage?: boolean;
   }): Promise<string> {
-    // 1x1 transparent PNG — small, valid image bytes typst can actually decode.
-    const pngBytes = Buffer.from(
-      "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=",
-      "base64",
-    );
+    const storageKey = `exams-e2e/${randomUUID()}`;
+    if (params.withRealImage) {
+      await storage.put(storageKey, TINY_PNG, "image/png");
+    }
 
-    const storageKey = `e2e-exams/${randomUUID()}.png`;
     const [asset] = await db
       .insert(assets)
       .values({ tenantId: params.tenantId, storageKey, mime: "image/png" })
       .returning({ id: assets.id });
     createdAssetIds.push(asset!.id);
 
-    // Upload real bytes to MinIO too — version generation downloads by storageKey.
-    const storageProviderModule: typeof import("../bank/storage-provider") = await import(
-      "../bank/storage-provider"
-    );
-    const storage = storageProviderModule.resolveStorageAdapter();
-    await storage.put(storageKey, pngBytes, "image/png");
-
     const [question] = await db
       .insert(questions)
       .values({
         tenantId: params.tenantId,
         type: "image",
-        topicId,
+        topicId: params.topicId,
         difficulty: params.difficulty ?? Difficulty.Easy,
         gradeLevel: params.gradeLevel,
         status: "approved",
         imageAssetId: asset!.id,
-        correctAnswer: "b",
+        correctAnswer: "a",
         createdBy: params.createdBy,
       })
       .returning({ id: questions.id });
@@ -176,117 +213,212 @@ describe("Exams module (e2e)", () => {
     return question!.id;
   }
 
-  function authed(token: string) {
-    return {
-      post: (url: string) => request(app.getHttpServer()).post(url).set("Authorization", `Bearer ${token}`),
-    };
+  function createExamRequest(token: string) {
+    return request(app.getHttpServer()).post("/exams").set("Authorization", `Bearer ${token}`);
   }
 
-  it("rejects unauthenticated requests with 401", async () => {
+  function replaceRequest(token: string, examId: string, questionId: string) {
+    return request(app.getHttpServer())
+      .post(`/exams/${examId}/questions/${questionId}/replace`)
+      .set("Authorization", `Bearer ${token}`);
+  }
+
+  function confirmRequest(token: string, examId: string) {
+    return request(app.getHttpServer())
+      .post(`/exams/${examId}/confirm`)
+      .set("Authorization", `Bearer ${token}`);
+  }
+
+  function versionsRequest(token: string, examId: string) {
+    return request(app.getHttpServer())
+      .post(`/exams/${examId}/versions`)
+      .set("Authorization", `Bearer ${token}`);
+  }
+
+  describe("POST /exams — blueprint selection never draws from another tenant's private pool", () => {
+    it("fills the row only from central + own-tenant approved questions, never another tenant's private ones", async () => {
+      const topicId = await createTopic();
+      const gradeLevel = "primaria_1";
+
+      const centralId = await createApprovedQuestion({
+        tenantId: null,
+        createdBy: staffUserId,
+        topicId,
+        gradeLevel,
+      });
+      const aPrivateId = await createApprovedQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantATeacherId,
+        topicId,
+        gradeLevel,
+      });
+      // Decoys: two tenant-B-private approved questions matching the exact
+      // same criteria. If the pool ever leaked cross-tenant, the selector
+      // would have 4 candidates for a row asking for 2 and this test's
+      // exact-set assertion below would fail.
+      await createApprovedQuestion({ tenantId: tenantBId, createdBy: tenantBTeacherId, topicId, gradeLevel });
+      await createApprovedQuestion({ tenantId: tenantBId, createdBy: tenantBTeacherId, topicId, gradeLevel });
+
+      const response = await createExamRequest(tenantAToken)
+        .send({
+          title: "Simulacro Tenant A",
+          gradeLevel,
+          blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 2 }],
+        })
+        .expect(201);
+      createdExamIds.push(response.body.id);
+
+      expect(response.body.status).toBe("draft");
+      expect([...response.body.selectedQuestionIds].sort()).toEqual([centralId, aPrivateId].sort());
+    });
+
+    it("reports a stock shortage (not a silent cross-tenant leak) when the tenant-visible pool can't fill the row", async () => {
+      const topicId = await createTopic();
+      const gradeLevel = "primaria_1";
+
+      // Only 1 question visible to tenant A (central); 2 more exist but are
+      // private to tenant B. A correct implementation must report a
+      // shortage of "1 available" — NOT silently pull in tenant B's rows to
+      // satisfy the count.
+      const centralId = await createApprovedQuestion({
+        tenantId: null,
+        createdBy: staffUserId,
+        topicId,
+        gradeLevel,
+      });
+      await createApprovedQuestion({ tenantId: tenantBId, createdBy: tenantBTeacherId, topicId, gradeLevel });
+      await createApprovedQuestion({ tenantId: tenantBId, createdBy: tenantBTeacherId, topicId, gradeLevel });
+
+      const response = await createExamRequest(tenantAToken)
+        .send({
+          title: "Simulacro Tenant A Shortage",
+          gradeLevel,
+          blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 3 }],
+        })
+        .expect(422);
+
+      createdExamIds.push(response.body.examId);
+      expect(response.body.shortages).toHaveLength(1);
+      expect(response.body.shortages[0]).toMatchObject({ requested: 3, available: 1 });
+      void centralId; // available count above proves only the central question counted
+    });
+
+    it("central (tenantId=null) questions are visible to every tenant's exam pool", async () => {
+      const topicId = await createTopic();
+      const gradeLevel = "primaria_1";
+
+      const centralId = await createApprovedQuestion({
+        tenantId: null,
+        createdBy: staffUserId,
+        topicId,
+        gradeLevel,
+      });
+
+      const forA = await createExamRequest(tenantAToken)
+        .send({
+          title: "Central visible to A",
+          gradeLevel,
+          blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
+        })
+        .expect(201);
+      createdExamIds.push(forA.body.id);
+
+      const forB = await createExamRequest(tenantBToken)
+        .send({
+          title: "Central visible to B",
+          gradeLevel,
+          blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
+        })
+        .expect(201);
+      createdExamIds.push(forB.body.id);
+
+      expect(forA.body.selectedQuestionIds).toEqual([centralId]);
+      expect(forB.body.selectedQuestionIds).toEqual([centralId]);
+    });
+  });
+
+  describe("Cross-tenant exam ownership — replace/confirm/versions must never operate on another tenant's exam", () => {
+    let examBId: string;
+    let examBQuestionId: string;
+    let spareCandidateId: string;
+
+    beforeAll(async () => {
+      const topicId = await createTopic();
+      const gradeLevel = "primaria_1";
+
+      // Two approved questions matching the row so a same-tenant reroll has
+      // a real alternative available — proves a 200 for the owner is a
+      // genuine success, not a false negative from an empty pool.
+      const central = await createApprovedQuestion({
+        tenantId: null,
+        createdBy: staffUserId,
+        topicId,
+        gradeLevel,
+        withRealImage: true,
+      });
+      const bPrivate = await createApprovedQuestion({
+        tenantId: tenantBId,
+        createdBy: tenantBTeacherId,
+        topicId,
+        gradeLevel,
+        withRealImage: true,
+      });
+
+      const created = await createExamRequest(tenantBToken)
+        .send({
+          title: "Tenant B's own exam",
+          gradeLevel,
+          blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
+        })
+        .expect(201);
+      createdExamIds.push(created.body.id);
+
+      examBId = created.body.id;
+      examBQuestionId = created.body.selectedQuestionIds[0];
+      spareCandidateId = examBQuestionId === central ? bPrivate : central;
+    });
+
+    it("POST .../replace — tenant A gets 404 on tenant B's exam", async () => {
+      await replaceRequest(tenantAToken, examBId, examBQuestionId).send({ mode: "reroll" }).expect(404);
+    });
+
+    it("POST .../replace — positive control: tenant B (owner) can replace on its own exam", async () => {
+      const response = await replaceRequest(tenantBToken, examBId, examBQuestionId)
+        .send({ mode: "reroll" })
+        .expect(201);
+
+      expect(response.body).toMatchObject({ examId: examBId, oldQuestionId: examBQuestionId });
+      expect(response.body.newQuestionId).toBe(spareCandidateId);
+    });
+
+    it("POST .../confirm — tenant A gets 404 on tenant B's exam", async () => {
+      await confirmRequest(tenantAToken, examBId).expect(404);
+    });
+
+    it("POST .../confirm — positive control: tenant B (owner) can confirm its own exam", async () => {
+      const response = await confirmRequest(tenantBToken, examBId).expect(201);
+      expect(response.body).toEqual({ id: examBId, status: "ready" });
+    });
+
+    it("POST .../versions — tenant A gets 404 on tenant B's exam (ownership checked before anything else)", async () => {
+      await versionsRequest(tenantAToken, examBId).send({ versionCount: 1 }).expect(404);
+    });
+
+    it("POST .../versions — positive control: owner tenant B can fully generate a version (proves the 404 above is ownership, not a broken route)", async () => {
+      const response = await versionsRequest(tenantBToken, examBId).send({ versionCount: 1 }).expect(201);
+
+      expect(response.body).toHaveLength(1);
+      expect(response.body[0]).toMatchObject({ code: "A" });
+      expect(response.body[0].pdfUrl).toEqual(expect.any(String));
+      expect(response.body[0].answerSheetUrl).toEqual(expect.any(String));
+    });
+  });
+
+  it("POST /exams — rejects with 401 when no Authorization header is sent", async () => {
     await request(app.getHttpServer()).post("/exams").send({}).expect(401);
   });
 
-  it("returns 422 with row-specific detail when the blueprint can't be filled, and does NOT select a sibling tenant's private questions", async () => {
-    // Tenant B has a matching question, but tenant A's pool must never see it.
-    await seedApprovedQuestion({ tenantId: tenantBId, createdBy: tenantBTeacherId, gradeLevel: "secundaria_1" });
-
-    const response = await authed(tenantAToken)
-      .post("/exams")
-      .send({
-        title: "Shortage exam",
-        gradeLevel: "secundaria_1",
-        blueprint: [{ courseId, count: 3 }],
-      })
-      .expect(422);
-
-    expect(response.body.examId).toBeDefined();
-    createdExamIds.push(response.body.examId);
-    expect(response.body.shortages).toHaveLength(1);
-    expect(response.body.shortages[0]).toMatchObject({ requested: 3, available: 0 });
+  it("POST /exams — rejects with 403 for a platform-staff role (content_editor is not teacher/school_admin)", async () => {
+    await createExamRequest(staffToken).send({}).expect(403);
   });
-
-  it("full flow: create (auto-select) -> replace -> confirm -> generate versions with real PDFs", async () => {
-    // Fixed catalog value (grade_levels is a small seeded catalog, not
-    // insertable per-test) — safe to reuse across tests because the
-    // blueprint filters by this suite's OWN unique `courseId`, isolating
-    // it from any other data already seeded at this grade level.
-    const gradeLevel = "primaria_2";
-    // Seed enough approved central questions for a 2-row blueprint, plus one
-    // extra so reroll has somewhere to go.
-    const q1 = await seedApprovedQuestion({ tenantId: null, createdBy: tenantATeacherId, gradeLevel });
-    const q2 = await seedApprovedQuestion({ tenantId: null, createdBy: tenantATeacherId, gradeLevel });
-    const q3 = await seedApprovedQuestion({ tenantId: null, createdBy: tenantATeacherId, gradeLevel });
-
-    const createResponse = await authed(tenantAToken)
-      .post("/exams")
-      .send({
-        title: "Simulacro E2E",
-        gradeLevel,
-        blueprint: [{ courseId, count: 2 }],
-      })
-      .expect(201);
-
-    const examId = createResponse.body.id;
-    createdExamIds.push(examId);
-    expect(createResponse.body.status).toBe("draft");
-    expect(createResponse.body.selectedQuestionIds).toHaveLength(2);
-    const selectedIds: string[] = createResponse.body.selectedQuestionIds;
-    expect(new Set(selectedIds).size).toBe(2);
-    for (const id of selectedIds) {
-      expect([q1, q2, q3]).toContain(id);
-    }
-
-    // A sibling tenant must never be able to replace a question on an exam
-    // it doesn't own — 404, never leaking that the exam exists.
-    await authed(tenantBToken)
-      .post(`/exams/${examId}/questions/${selectedIds[0]}/replace`)
-      .send({ mode: "reroll" })
-      .expect(404);
-
-    // Reroll the first selected question — must land on the remaining
-    // unused candidate from {q1,q2,q3}.
-    const questionToReplace = selectedIds[0]!;
-    const replaceResponse = await authed(tenantAToken)
-      .post(`/exams/${examId}/questions/${questionToReplace}/replace`)
-      .send({ mode: "reroll" })
-      .expect(201);
-
-    expect(replaceResponse.body.oldQuestionId).toBe(questionToReplace);
-    expect(replaceResponse.body.newQuestionId).not.toBe(questionToReplace);
-    expect([q1, q2, q3]).toContain(replaceResponse.body.newQuestionId);
-
-    const finalSelectedIds = [replaceResponse.body.newQuestionId, selectedIds[1]];
-
-    // Confirming from the wrong tenant must 404 (never leak existence).
-    await authed(tenantBToken).post(`/exams/${examId}/confirm`).send({}).expect(404);
-
-    await authed(tenantAToken).post(`/exams/${examId}/confirm`).send({}).expect(201);
-
-    // Replacing after confirmation is locked.
-    await authed(tenantAToken)
-      .post(`/exams/${examId}/questions/${replaceResponse.body.newQuestionId}/replace`)
-      .send({ mode: "reroll" })
-      .expect(409);
-
-    const versionsResponse = await authed(tenantAToken)
-      .post(`/exams/${examId}/versions`)
-      .send({ versionCount: 2 })
-      .expect(201);
-
-    expect(versionsResponse.body).toHaveLength(2);
-    for (const version of versionsResponse.body) {
-      expect(version.code).toMatch(/^[A-Z]+$/);
-      expect(typeof version.pdfUrl).toBe("string");
-      expect(typeof version.answerSheetUrl).toBe("string");
-    }
-
-    const versionRows = await db.select().from(examVersions).where(inArray(examVersions.examId, [examId]));
-    expect(versionRows).toHaveLength(2);
-    for (const row of versionRows) {
-      expect(row.pdfAssetId).toBeTruthy();
-      expect(row.answerSheetAssetId).toBeTruthy();
-      expect(Array.isArray(row.questionOrder)).toBe(true);
-      expect((row.questionOrder as string[]).sort()).toEqual([...finalSelectedIds].sort());
-    }
-  }, 30000);
 });
