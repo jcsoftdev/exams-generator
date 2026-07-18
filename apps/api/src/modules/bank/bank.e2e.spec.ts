@@ -710,5 +710,24 @@ describe("Bank module (e2e)", () => {
       expect(res.body.items.length).toBeLessThanOrEqual(2);
       expect(typeof res.body.total).toBe("number");
     });
+
+    it("handles edge case page=0&pageSize=0 gracefully with valid pagination", async () => {
+      const res = await request(app.getHttpServer())
+        .get("/bank/questions?page=0&pageSize=0")
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+      expect(Array.isArray(res.body.items)).toBe(true);
+      expect(typeof res.body.total).toBe("number");
+    });
+
+    it("clamps pageSize upper bound: page=-3&pageSize=500 respects pageSize <= 100", async () => {
+      const res = await request(app.getHttpServer())
+        .get("/bank/questions?page=-3&pageSize=500")
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+      expect(Array.isArray(res.body.items)).toBe(true);
+      expect(res.body.items.length).toBeLessThanOrEqual(100);
+      expect(typeof res.body.total).toBe("number");
+    });
   });
 });
