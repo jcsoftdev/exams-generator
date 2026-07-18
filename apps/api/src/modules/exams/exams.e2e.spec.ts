@@ -540,6 +540,51 @@ describe("Exams module (e2e)", () => {
     });
   });
 
+  describe("POST /exams/:examId/duplicate", () => {
+    let examId: string;
+    let originalTitle: string;
+
+    beforeAll(async () => {
+      const topicId = await createTopic();
+      const gradeLevel = "primaria_1";
+      await createApprovedQuestion({ tenantId: null, createdBy: staffUserId, topicId, gradeLevel });
+
+      originalTitle = `Duplicate Source ${randomUUID()}`;
+      const created = await createExamRequest(tenantAToken)
+        .send({
+          title: originalTitle,
+          gradeLevel,
+          blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }],
+        })
+        .expect(201);
+      examId = created.body.id;
+      createdExamIds.push(examId);
+    });
+
+    it("clones exam as draft with blueprint and selection", async () => {
+      const res = await request(app.getHttpServer())
+        .post(`/exams/${examId}/duplicate`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(201);
+      expect(res.body.status).toBe("draft");
+      expect(res.body.title).toBe(`Copia de ${originalTitle}`);
+      createdExamIds.push(res.body.id);
+
+      const detail = await request(app.getHttpServer())
+        .get(`/exams/${res.body.id}`)
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .expect(200);
+      expect(detail.body.questions.length).toBeGreaterThan(0);
+    });
+
+    it("404 on cross-tenant duplicate", async () => {
+      await request(app.getHttpServer())
+        .post(`/exams/${examId}/duplicate`)
+        .set("Authorization", `Bearer ${tenantBToken}`)
+        .expect(404);
+    });
+  });
+
   it("POST /exams — rejects with 401 when no Authorization header is sent", async () => {
     await request(app.getHttpServer()).post("/exams").send({}).expect(401);
   });

@@ -232,6 +232,70 @@ export class ExamsRepository {
     });
   }
 
+  /**
+   * `POST /exams/:examId/duplicate` (S2) — "usar de plantilla": clones the
+   * exam row (title `"Copia de <original>"`, always `draft`, never
+   * versions), its blueprint rows, and its current selection in ONE
+   * transaction. `blueprintRowId` on the copied `exam_questions` rows is
+   * remapped through `rowIdMap` (old row id -> new row id) so the copy's
+   * selection still points at ITS OWN blueprint rows, not the original's.
+   * Tenant-scoped like `getExamById` — returns `undefined` (never leaks
+   * existence) for a missing/cross-tenant exam.
+   */
+  async duplicateExam(
+    examId: string,
+    tenantId: string,
+    createdBy: string,
+  ): Promise<{ id: string; title: string } | undefined> {
+    return db.transaction(async (tx) => {
+      const [original] = await tx
+        .select()
+        .from(exams)
+        .where(and(eq(exams.id, examId), eq(exams.tenantId, tenantId)));
+      if (!original) return undefined;
+
+      const [copy] = await tx
+        .insert(exams)
+        .values({
+          tenantId,
+          title: `Copia de ${original.title}`,
+          gradeLevel: original.gradeLevel,
+          status: "draft",
+          createdBy,
+        })
+        .returning({ id: exams.id, title: exams.title });
+
+      const rows = await tx.select().from(examBlueprintRows).where(eq(examBlueprintRows.examId, examId));
+      const rowIdMap = new Map<string, string>();
+      for (const row of rows) {
+        const [newRow] = await tx
+          .insert(examBlueprintRows)
+          .values({
+            examId: copy!.id,
+            courseId: row.courseId,
+            topicId: row.topicId,
+            difficulty: row.difficulty,
+            count: row.count,
+          })
+          .returning({ id: examBlueprintRows.id });
+        rowIdMap.set(row.id, newRow!.id);
+      }
+
+      const selection = await tx.select().from(examQuestions).where(eq(examQuestions.examId, examId));
+      if (selection.length > 0) {
+        await tx.insert(examQuestions).values(
+          selection.map((s) => ({
+            examId: copy!.id,
+            questionId: s.questionId,
+            blueprintRowId: s.blueprintRowId ? (rowIdMap.get(s.blueprintRowId) ?? null) : null,
+            position: s.position,
+          })),
+        );
+      }
+      return copy;
+    });
+  }
+
   /** Tenant-scoped lookup — an exam is only ever visible to its own tenant. */
   async getExamById(examId: string, tenantId: string): Promise<ExamRecord | undefined> {
     const [row] = await db

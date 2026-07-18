@@ -26,6 +26,7 @@ import {
   ConfirmExamResult,
   CreateExamDto,
   CreateExamResult,
+  DuplicateExamResult,
   ExamDetailResult,
   ExamsService,
   ExamVersionSummary,
@@ -167,6 +168,15 @@ export class ExamsController {
   @Post(":examId/confirm")
   async confirm(@CurrentUser() user: AuthTokenPayload, @Param("examId") examId: string): Promise<ConfirmExamResult> {
     return this.examsService.confirmExam(user, examId);
+  }
+
+  /** `POST /exams/:examId/duplicate` (S2) — "usar de plantilla": clones title/blueprint/selection into a new `draft` exam. */
+  @Post(":examId/duplicate")
+  async duplicate(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("examId") examId: string,
+  ): Promise<DuplicateExamResult> {
+    return this.examsService.duplicateExam(user, examId);
   }
 
   /** `GET /exams/:examId/versions` (B4) — read-only history, distinct from `POST /versions` (generate). */

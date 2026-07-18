@@ -83,6 +83,13 @@ export interface ConfirmExamResult {
   readonly status: ExamStatus;
 }
 
+/** `POST /exams/:examId/duplicate` (S2) response — the copy always lands `draft` (re-editable), regardless of the original's status. */
+export interface DuplicateExamResult {
+  readonly id: string;
+  readonly title: string;
+  readonly status: "draft";
+}
+
 export interface StockBatchCellDto {
   readonly courseId?: string;
   readonly topicId?: string;
@@ -431,6 +438,22 @@ export class ExamsService {
     }
 
     return exam;
+  }
+
+  /**
+   * `POST /exams/:examId/duplicate` (S2) — "usar de plantilla": clones the
+   * exam (title, blueprint, and selection) into a brand-new `draft` exam,
+   * regardless of the original's status. Tenant-scoped 404-on-mismatch, same
+   * as `getExamDetail`/`confirmExam` — `repository.duplicateExam()` returns
+   * `undefined` for a missing/cross-tenant exam.
+   */
+  async duplicateExam(user: AuthTokenPayload, examId: string): Promise<DuplicateExamResult> {
+    const tenantId = requireTenant(user);
+    const copy = await this.repository.duplicateExam(examId, tenantId, user.sub);
+    if (!copy) {
+      throw new NotFoundException(`Exam not found: ${examId}`);
+    }
+    return { ...copy, status: "draft" };
   }
 
   async confirmExam(user: AuthTokenPayload, examId: string): Promise<ConfirmExamResult> {
