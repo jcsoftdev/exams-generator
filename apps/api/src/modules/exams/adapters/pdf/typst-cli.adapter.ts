@@ -29,7 +29,13 @@ export type CompileRunner = (
 
 export const spawnTypstRunner: CompileRunner = (args) =>
   new Promise((resolve, reject) => {
-    const child = spawn("typst", args);
+    // Pin SOURCE_DATE_EPOCH so typst stamps a fixed creation date into the
+    // PDF metadata. Without it the byte output varies with wall-clock time,
+    // which makes the deterministic-output release gate flake under parallel
+    // test load (two compiles straddling a one-second boundary).
+    const child = spawn("typst", args, {
+      env: { ...process.env, SOURCE_DATE_EPOCH: "1700000000" },
+    });
     let stdout = "";
     let stderr = "";
 
