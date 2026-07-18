@@ -236,6 +236,13 @@ describe("Exams module (e2e)", () => {
       expect([q1, q2, q3]).toContain(id);
     }
 
+    // A sibling tenant must never be able to replace a question on an exam
+    // it doesn't own — 404, never leaking that the exam exists.
+    await authed(tenantBToken)
+      .post(`/exams/${examId}/questions/${selectedIds[0]}/replace`)
+      .send({ mode: "reroll" })
+      .expect(404);
+
     // Reroll the first selected question — must land on the remaining
     // unused candidate from {q1,q2,q3}.
     const questionToReplace = selectedIds[0]!;
