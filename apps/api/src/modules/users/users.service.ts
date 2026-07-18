@@ -1,5 +1,6 @@
-import { ConflictException, ForbiddenException, Injectable, NotFoundException } from "@nestjs/common";
+import { BadRequestException, ConflictException, ForbiddenException, Injectable, NotFoundException } from "@nestjs/common";
 import { randomBytes } from "node:crypto";
+import { Role } from "@exams-generator/shared";
 import { hashPassword } from "../auth/password.util";
 import { AuthTokenPayload } from "../auth/token.service";
 import { TenantUser, UsersRepository } from "./users.repository";
@@ -23,6 +24,9 @@ export class UsersService {
   }
 
   async create(user: AuthTokenPayload, email: string, role: "teacher" | "school_admin") {
+    if (role !== Role.Teacher && role !== Role.SchoolAdmin) {
+      throw new BadRequestException("role must be teacher or school_admin");
+    }
     const tenantId = requireTenant(user);
     if (await this.repository.findByEmail(email)) {
       throw new ConflictException(`Email already in use: ${email}`);

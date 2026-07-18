@@ -140,6 +140,14 @@ describe("Users module (e2e)", () => {
       .expect(200);
   });
 
+  it("rejects role escalation attempt on create (only teacher/school_admin allowed)", async () => {
+    await request(app.getHttpServer())
+      .post("/users")
+      .set("Authorization", `Bearer ${schoolAdminAToken}`)
+      .send({ email: `escalate-${suffix}@e2e.test`, role: "platform_admin" })
+      .expect(400);
+  });
+
   it("409 on duplicate email", async () => {
     const email = `dup-${suffix}@e2e.test`;
     await request(app.getHttpServer())
@@ -164,6 +172,16 @@ describe("Users module (e2e)", () => {
       .post("/auth/login")
       .send({ email: createdTeacherEmail, password: temporaryPassword })
       .expect(401);
+
+    await request(app.getHttpServer())
+      .patch(`/users/${createdTeacherId}`)
+      .set("Authorization", `Bearer ${schoolAdminAToken}`)
+      .send({ active: true })
+      .expect(200);
+    await request(app.getHttpServer())
+      .post("/auth/login")
+      .send({ email: createdTeacherEmail, password: temporaryPassword })
+      .expect(200);
   });
 
   it("cannot deactivate self", async () => {
@@ -175,13 +193,6 @@ describe("Users module (e2e)", () => {
   });
 
   it("reset-password returns a new working temporary password", async () => {
-    // reactivar primero al teacher desactivado en el test anterior
-    await request(app.getHttpServer())
-      .patch(`/users/${createdTeacherId}`)
-      .set("Authorization", `Bearer ${schoolAdminAToken}`)
-      .send({ active: true })
-      .expect(200);
-
     const res = await request(app.getHttpServer())
       .post(`/users/${createdTeacherId}/reset-password`)
       .set("Authorization", `Bearer ${schoolAdminAToken}`)
