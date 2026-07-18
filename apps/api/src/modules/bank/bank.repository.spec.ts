@@ -1,0 +1,214 @@
+import { randomUUID } from "node:crypto";
+import { Difficulty, Role } from "@exams-generator/shared";
+import { inArray } from "drizzle-orm";
+import { db, pool } from "../../db/client";
+import { runMigrations } from "../../db/migrate";
+import { assets, courses, questions, tenants, topics, users } from "../../db/schema";
+import { BankRepository } from "./bank.repository";
+
+/**
+ * Integration test against the real docker-compose Postgres — same pattern
+ * as `db/seed-idempotency.spec.ts`. Every fixture uses a random suffix so
+ * repeated runs never collide, and `afterAll` deletes everything this file
+ * created so the shared dev DB doesn't grow unbounded.
+ */
+describe("BankRepository", () => {
+  const repository = new BankRepository();
+
+  let courseId: string;
+  let topicId: string;
+  let otherTopicId: string;
+  let centralUserId: string;
+  let tenantAId: string;
+  let tenantAUserId: string;
+  let tenantBId: string;
+  let tenantBUserId: string;
+
+  const createdQuestionIds: string[] = [];
+  const createdAssetIds: string[] = [];
+
+  beforeAll(async () => {
+    await runMigrations();
+
+    const suffix = randomUUID();
+
+    const [course] = await db
+      .insert(courses)
+      .values({ name: `Test Course ${suffix}` })
+      .returning({ id: courses.id });
+    courseId = course!.id;
+
+    const [topic] = await db
+      .insert(topics)
+      .values({ courseId, name: `Test Topic ${suffix}` })
+      .returning({ id: topics.id });
+    topicId = topic!.id;
+
+    const [topicOther] = await db
+      .insert(topics)
+      .values({ courseId, name: `Other Topic ${suffix}` })
+      .returning({ id: topics.id });
+    otherTopicId = topicOther!.id;
+
+    const [centralUser] = await db
+      .insert(users)
+      .values({
+        tenantId: null,
+        email: `staff-${suffix}@exams-generator.test`,
+        passwordHash: "test-hash",
+        role: Role.ContentEditor,
+      })
+      .returning({ id: users.id });
+    centralUserId = centralUser!.id;
+
+    const [tenantA] = await db
+      .insert(tenants)
+      .values({ name: `Tenant A ${suffix}`, slug: `tenant-a-${suffix}` })
+      .returning({ id: tenants.id });
+    tenantAId = tenantA!.id;
+
+    const [tenantAUser] = await db
+      .insert(users)
+      .values({
+        tenantId: tenantAId,
+        email: `teacher-a-${suffix}@exams-generator.test`,
+        passwordHash: "test-hash",
+        role: Role.Teacher,
+      })
+      .returning({ id: users.id });
+    tenantAUserId = tenantAUser!.id;
+
+    const [tenantB] = await db
+      .insert(tenants)
+      .values({ name: `Tenant B ${suffix}`, slug: `tenant-b-${suffix}` })
+      .returning({ id: tenants.id });
+    tenantBId = tenantB!.id;
+
+    const [tenantBUser] = await db
+      .insert(users)
+      .values({
+        tenantId: tenantBId,
+        email: `teacher-b-${suffix}@exams-generator.test`,
+        passwordHash: "test-hash",
+        role: Role.Teacher,
+      })
+      .returning({ id: users.id });
+    tenantBUserId = tenantBUser!.id;
+  });
+
+  afterAll(async () => {
+    if (createdQuestionIds.length > 0) {
+      await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
+    }
+    if (createdAssetIds.length > 0) {
+      await db.delete(assets).where(inArray(assets.id, createdAssetIds));
+    }
+    await db.delete(users).where(inArray(users.id, [centralUserId, tenantAUserId, tenantBUserId]));
+    await db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]));
+    await db.delete(topics).where(inArray(topics.id, [topicId, otherTopicId]));
+    await db.delete(courses).where(inArray(courses.id, [courseId]));
+    await pool.end();
+  });
+
+  async function createQuestion(params: {
+    tenantId: string | null;
+    createdBy: string;
+    topicId?: string;
+    difficulty?: Difficulty;
+    gradeLevel?: string;
+  }): Promise<string> {
+    const { id } = await repository.createImageQuestion({
+      tenantId: params.tenantId,
+      topicId: params.topicId ?? topicId,
+      difficulty: params.difficulty ?? Difficulty.Easy,
+      gradeLevel: params.gradeLevel ?? "primaria_1",
+      correctAnswer: "a",
+      createdBy: params.createdBy,
+      image: { storageKey: `test/${randomUUID()}`, mime: "image/png" },
+    });
+    createdQuestionIds.push(id);
+
+    const [row] = await db.select({ imageAssetId: questions.imageAssetId }).from(questions).where(inArray(questions.id, [id]));
+    if (row?.imageAssetId) {
+      createdAssetIds.push(row.imageAssetId);
+    }
+
+    return id;
+  }
+
+  it("createImageQuestion() persists a question row with status='approved' and its backing asset row", async () => {
+    const id = await createQuestion({ tenantId: null, createdBy: centralUserId });
+
+    const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
+    expect(row?.status).toBe("approved");
+    expect(row?.type).toBe("image");
+    expect(row?.imageAssetId).toBeTruthy();
+
+    const [assetRow] = await db
+      .select()
+      .from(assets)
+      .where(inArray(assets.id, row?.imageAssetId ? [row.imageAssetId] : []));
+    expect(assetRow).toBeDefined();
+  });
+
+  describe("listQuestions() visibility", () => {
+    it("a central (tenantId=null) question is visible to every tenant", async () => {
+      const centralId = await createQuestion({ tenantId: null, createdBy: centralUserId });
+
+      const forTenantA = await repository.listQuestions({ currentTenantId: tenantAId });
+      const forTenantB = await repository.listQuestions({ currentTenantId: tenantBId });
+
+      expect(forTenantA.map((q) => q.id)).toContain(centralId);
+      expect(forTenantB.map((q) => q.id)).toContain(centralId);
+    });
+
+    it("a tenant-private question is NEVER visible to another tenant", async () => {
+      const privateId = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId });
+
+      const forTenantA = await repository.listQuestions({ currentTenantId: tenantAId });
+      const forTenantB = await repository.listQuestions({ currentTenantId: tenantBId });
+
+      expect(forTenantA.map((q) => q.id)).toContain(privateId);
+      expect(forTenantB.map((q) => q.id)).not.toContain(privateId);
+    });
+  });
+
+  describe("listQuestions() filters", () => {
+    it("combines courseId, topicId, difficulty and gradeLevel filters", async () => {
+      const matching = await createQuestion({
+        tenantId: null,
+        createdBy: centralUserId,
+        topicId,
+        difficulty: Difficulty.Hard,
+        gradeLevel: "secundaria_3",
+      });
+      const wrongTopic = await createQuestion({
+        tenantId: null,
+        createdBy: centralUserId,
+        topicId: otherTopicId,
+        difficulty: Difficulty.Hard,
+        gradeLevel: "secundaria_3",
+      });
+      const wrongDifficulty = await createQuestion({
+        tenantId: null,
+        createdBy: centralUserId,
+        topicId,
+        difficulty: Difficulty.Easy,
+        gradeLevel: "secundaria_3",
+      });
+
+      const results = await repository.listQuestions({
+        currentTenantId: null,
+        courseId,
+        topicId,
+        difficulty: Difficulty.Hard,
+        gradeLevel: "secundaria_3",
+      });
+
+      const ids = results.map((q) => q.id);
+      expect(ids).toContain(matching);
+      expect(ids).not.toContain(wrongTopic);
+      expect(ids).not.toContain(wrongDifficulty);
+    });
+  });
+});
