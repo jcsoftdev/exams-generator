@@ -103,4 +103,75 @@ describe('ExamListComponent', () => {
     fixture.detectChanges();
     expect(listExams).toHaveBeenCalledTimes(1);
   });
+
+  it('reloads exams with the selected estado when the filter changes', () => {
+    const { compiled, fixture, listExams } = setup();
+    listExams.mockClear();
+    const select = compiled.querySelector<HTMLSelectElement>('[data-testid="status-filter"] select')!;
+    select.value = 'ready';
+    select.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+    expect(listExams).toHaveBeenCalledWith(
+      expect.objectContaining({ status: 'ready', page: 1, pageSize: 50 }),
+    );
+  });
+
+  it('reloads exams with the selected grado when the filter changes', () => {
+    const { compiled, fixture, listExams } = setup();
+    listExams.mockClear();
+    const select = compiled.querySelector<HTMLSelectElement>('[data-testid="gradeLevel-filter"] select')!;
+    select.value = 'secundaria_3';
+    select.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+    expect(listExams).toHaveBeenCalledWith(
+      expect.objectContaining({ gradeLevel: 'secundaria_3', page: 1, pageSize: 50 }),
+    );
+  });
+
+  it('debounces the search box 300ms before reloading exams', () => {
+    vi.useFakeTimers();
+    try {
+      const { compiled, fixture, listExams } = setup();
+      listExams.mockClear();
+      const input = compiled.querySelector<HTMLInputElement>('[data-testid="search-filter"] input')!;
+      input.value = 'bimestral';
+      input.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+      expect(listExams).not.toHaveBeenCalled();
+
+      vi.advanceTimersByTime(299);
+      expect(listExams).not.toHaveBeenCalled();
+
+      vi.advanceTimersByTime(1);
+      expect(listExams).toHaveBeenCalledWith(
+        expect.objectContaining({ search: 'bimestral', page: 1, pageSize: 50 }),
+      );
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('closes the delete-confirm modal when it self-closes (Esc/backdrop) and allows reopening it', () => {
+    const { compiled, fixture } = setup();
+    (compiled.querySelectorAll('[data-testid="exam-menu"]')[0] as HTMLButtonElement).click(); // e1 ready
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="exam-delete"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    expect(compiled.querySelector('[data-testid="delete-confirm"]')).toBeTruthy();
+
+    // ui-modal self-closes on backdrop click / Esc without the parent ever calling cancelDelete()
+    (compiled.querySelector('[data-testid="modal-backdrop"]') as HTMLElement).click();
+    fixture.detectChanges();
+    expect(compiled.querySelector('[data-testid="delete-confirm"]')).toBeFalsy();
+    expect(
+      (fixture.componentInstance as unknown as { pendingDelete: () => unknown }).pendingDelete(),
+    ).toBeNull();
+
+    // Must be able to reopen the same confirmation afterwards.
+    (compiled.querySelectorAll('[data-testid="exam-menu"]')[0] as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="exam-delete"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    expect(compiled.querySelector('[data-testid="delete-confirm"]')).toBeTruthy();
+  });
 });

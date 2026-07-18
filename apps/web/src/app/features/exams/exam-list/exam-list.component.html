@@ -4,6 +4,35 @@
     <ui-button variant="primary" (clicked)="newExam()">+ Nuevo examen</ui-button>
   </div>
 
+  <div class="flex flex-wrap items-end gap-3 rounded-card border border-n200 bg-white p-3" data-testid="exam-filters">
+    <div class="w-40" data-testid="status-filter">
+      <ui-select
+        label="Estado"
+        placeholder="Todos"
+        [options]="statusOptions"
+        [value]="status()"
+        (valueChange)="onStatusChange($event)"
+      ></ui-select>
+    </div>
+    <div class="w-44" data-testid="gradeLevel-filter">
+      <ui-select
+        label="Grado"
+        placeholder="Todos"
+        [options]="gradeLevelOptions"
+        [value]="gradeLevel()"
+        (valueChange)="onGradeLevelChange($event)"
+      ></ui-select>
+    </div>
+    <div class="min-w-[200px] flex-1" data-testid="search-filter">
+      <ui-input
+        label="Buscar"
+        placeholder="Buscar examen por título…"
+        [value]="search()"
+        (valueChange)="onSearchChange($event)"
+      ></ui-input>
+    </div>
+  </div>
+
   @if (actionError()) {
     <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">{{ actionError() }}</p>
   }
@@ -53,7 +82,7 @@
     </div>
   }
 
-  <ui-modal [open]="pendingDelete() !== null" title="Eliminar examen">
+  <ui-modal [open]="pendingDelete() !== null" title="Eliminar examen" (openChange)="cancelDelete()">
     <p data-testid="delete-confirm" class="text-sm text-n700">
       ¿Seguro que quieres eliminar "{{ pendingDelete()?.title }}"? Esta acción no se puede deshacer.
     </p>

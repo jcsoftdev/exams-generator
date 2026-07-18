@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
@@ -6,9 +6,19 @@ import { ButtonComponent } from '../../../ui/button/button.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { ModalComponent } from '../../../ui/modal/modal.component';
+import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
+import { InputComponent } from '../../../ui/input/input.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { ExamsService } from '../exams.service';
-import { ExamListItem, GRADE_LEVEL_LABELS, GradeLevel } from '../exams.models';
+import { ExamListItem, ExamStatus, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from '../exams.models';
+
+/** Debounce delay (ms) for the título search box (spec §2.1) before re-fetching the list. */
+const SEARCH_DEBOUNCE_MS = 300;
+
+const STATUS_OPTIONS: readonly SelectOption<ExamStatus>[] = [
+  { value: 'draft', label: 'Borrador' },
+  { value: 'ready', label: 'Generado' },
+];
 
 /**
  * "Mis exámenes" — historial index screen (Task F7). Replaces the F3 stub.
@@ -22,13 +32,22 @@ import { ExamListItem, GRADE_LEVEL_LABELS, GradeLevel } from '../exams.models';
 @Component({
   selector: 'app-exam-list',
   standalone: true,
-  imports: [ButtonComponent, EmptyStateComponent, TagComponent, ModalComponent, LucideAngularModule],
+  imports: [
+    ButtonComponent,
+    EmptyStateComponent,
+    TagComponent,
+    ModalComponent,
+    SelectComponent,
+    InputComponent,
+    LucideAngularModule,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './exam-list.component.html',
 })
 export class ExamListComponent {
   private readonly examsService = inject(ExamsService);
   private readonly router = inject(Router);
+  private readonly destroyRef = inject(DestroyRef);
 
   protected readonly exams = signal<ExamListItem[]>([]);
   protected readonly loading = signal(false);
@@ -37,27 +56,74 @@ export class ExamListComponent {
   protected readonly pendingDelete = signal<ExamListItem | null>(null);
   protected readonly actionError = signal<string | null>(null);
 
+  protected readonly statusOptions = STATUS_OPTIONS;
+  protected readonly gradeLevelOptions: readonly SelectOption<string>[] = GRADE_LEVELS.map((gradeLevel) => ({
+    value: gradeLevel,
+    label: GRADE_LEVEL_LABELS[gradeLevel],
+  }));
+
+  protected readonly status = signal<ExamStatus | null>(null);
+  protected readonly gradeLevel = signal<string | null>(null);
+  protected readonly search = signal('');
+
+  private searchDebounceHandle: ReturnType<typeof setTimeout> | null = null;
+
   constructor() {
     this.load();
+    this.destroyRef.onDestroy(() => {
+      if (this.searchDebounceHandle !== null) {
+        clearTimeout(this.searchDebounceHandle);
+      }
+    });
   }
 
   private load(): void {
     this.loading.set(true);
     this.errorMessage.set(null);
     this.exams.set([]);
-    this.examsService.listExams({ page: 1, pageSize: 50 }).subscribe({
-      next: (res) => {
-        this.loading.set(false);
-        this.exams.set([...res.items]);
-      },
-      error: (_e: HttpErrorResponse) => {
-        this.loading.set(false);
-        this.errorMessage.set('No se pudieron cargar los exámenes. Inténtalo de nuevo.');
-      },
-    });
+    this.examsService
+      .listExams({
+        status: this.status() ?? undefined,
+        gradeLevel: this.gradeLevel() ?? undefined,
+        search: this.search() || undefined,
+        page: 1,
+        pageSize: 50,
+      })
+      .subscribe({
+        next: (res) => {
+          this.loading.set(false);
+          this.exams.set([...res.items]);
+        },
+        error: (_e: HttpErrorResponse) => {
+          this.loading.set(false);
+          this.errorMessage.set('No se pudieron cargar los exámenes. Inténtalo de nuevo.');
+        },
+      });
   }
   protected retry(): void {
     this.load();
+  }
+
+  protected onStatusChange(value: ExamStatus | null): void {
+    this.status.set(value || null);
+    this.load();
+  }
+
+  protected onGradeLevelChange(value: string | null): void {
+    this.gradeLevel.set(value || null);
+    this.load();
+  }
+
+  /** Debounces the título search box (spec §2.1) so it doesn't re-fetch on every keystroke. */
+  protected onSearchChange(value: string): void {
+    this.search.set(value);
+    if (this.searchDebounceHandle !== null) {
+      clearTimeout(this.searchDebounceHandle);
+    }
+    this.searchDebounceHandle = setTimeout(() => {
+      this.searchDebounceHandle = null;
+      this.load();
+    }, SEARCH_DEBOUNCE_MS);
   }
 
   protected statusTag(status: string): TagVariant {
