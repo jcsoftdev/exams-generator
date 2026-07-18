@@ -6,6 +6,7 @@ import {
   BankQuestion,
   BankQuestionFilters,
   CreateImageQuestionPayload,
+  CreateStructuredQuestionPayload,
   PagedQuestions,
 } from './bank.models';
 
@@ -95,6 +96,16 @@ export class BankService {
     return this.http.post<{ id: string }>(
       `${environment.apiBaseUrl}/bank/questions/image`,
       formData,
+    );
+  }
+
+  /** Task 6: creates a `structured` question (JSON body, no file upload). */
+  createStructuredQuestion(
+    payload: CreateStructuredQuestionPayload,
+  ): Observable<{ id: string }> {
+    return this.http.post<{ id: string }>(
+      `${environment.apiBaseUrl}/bank/questions/structured`,
+      payload,
     );
   }
 

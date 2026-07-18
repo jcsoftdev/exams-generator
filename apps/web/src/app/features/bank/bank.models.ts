@@ -95,3 +95,14 @@ export interface CreateImageQuestionPayload {
   readonly correctAnswer: string;
   readonly image: File;
 }
+
+/** Task 6: payload for `POST /bank/questions/structured` (JSON, no file). */
+export interface CreateStructuredQuestionPayload {
+  readonly courseId: string;
+  readonly topicId: string;
+  readonly difficulty: Difficulty;
+  readonly gradeLevel: string;
+  readonly correctAnswer: string;
+  readonly bodyTypst: string;
+  readonly alternatives: readonly string[];
+}

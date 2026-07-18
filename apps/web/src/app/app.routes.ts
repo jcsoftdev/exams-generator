@@ -5,6 +5,7 @@ import { ShellComponent } from './features/shell/shell.component';
 import { ForbiddenComponent } from './features/forbidden/forbidden.component';
 import { BankListComponent } from './features/bank/bank-list/bank-list.component';
 import { BankUploadComponent } from './features/bank/bank-upload/bank-upload.component';
+import { BankNewComponent } from './features/bank/bank-new/bank-new.component';
 import { ExamVersionsPanelComponent } from './features/exam-versions/exam-versions-panel/exam-versions-panel.component';
 import { ExamBuilderComponent } from './features/exams/exam-builder/exam-builder.component';
 import { ExamReviewComponent } from './features/exams/exam-review/exam-review.component';
@@ -22,6 +23,7 @@ export const routes: Routes = [
     children: [
       { path: 'bank', component: BankListComponent },
       { path: 'bank/upload', component: BankUploadComponent },
+      { path: 'bank/new', component: BankNewComponent },
       { path: 'exams', component: ExamBuilderComponent },
       { path: 'exams/:examId', component: ExamReviewComponent },
       { path: 'exams/:examId/versions', component: ExamVersionsPanelComponent },

@@ -133,6 +133,27 @@ describe('BankService', () => {
     });
   });
 
+  describe('createStructuredQuestion', () => {
+    it('POSTs /bank/questions/structured with the payload', () => {
+      const payload = {
+        courseId: 'c1',
+        topicId: 't1',
+        difficulty: Difficulty.Easy,
+        gradeLevel: 'pre',
+        correctAnswer: 'a',
+        bodyTypst: '¿2+2?',
+        alternatives: ['4', '3', '5', '6'],
+      };
+
+      service.createStructuredQuestion(payload).subscribe();
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/bank/questions/structured`);
+      expect(req.request.method).toBe('POST');
+      expect(req.request.body).toEqual(payload);
+      req.flush({ id: 'new-q' });
+    });
+  });
+
   describe('buildImageAssetUrl', () => {
     it('builds a URL from the apiBaseUrl and the imageAssetId', () => {
       expect(service.buildImageAssetUrl('asset-1')).toBe(`${environment.apiBaseUrl}/assets/asset-1`);

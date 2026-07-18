@@ -1,0 +1,59 @@
+<div class="mx-auto max-w-2xl">
+  <h1 class="mb-4 text-xl font-bold text-n900">Nueva pregunta</h1>
+
+  <div class="mb-4 flex gap-1 border-b border-n200">
+    <button
+      type="button"
+      data-testid="tab-photo"
+      class="px-4 py-2 text-sm font-medium"
+      [class.border-b-2]="tab() === 'photo'"
+      [class.border-primary-500]="tab() === 'photo'"
+      [class.text-primary-700]="tab() === 'photo'"
+      [class.text-n500]="tab() !== 'photo'"
+      (click)="setTab('photo')"
+    >Foto de la pregunta</button>
+    <button
+      type="button"
+      data-testid="tab-structured"
+      class="px-4 py-2 text-sm font-medium"
+      [class.border-b-2]="tab() === 'structured'"
+      [class.border-primary-500]="tab() === 'structured'"
+      [class.text-primary-700]="tab() === 'structured'"
+      [class.text-n500]="tab() !== 'structured'"
+      (click)="setTab('structured')"
+    >Escribir pregunta</button>
+  </div>
+
+  @if (saveError()) {
+    <p data-testid="save-error" class="mb-3 rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">{{ saveError() }}</p>
+  }
+
+  @if (tab() === 'photo') {
+    <div data-testid="tab-photo-panel" class="flex flex-col gap-3 rounded-card border border-n200 bg-white p-4">
+      <ui-input label="Curso" [value]="pCourseId()" (valueChange)="pCourseId.set($event)"></ui-input>
+      <ui-input label="Tema" [value]="pTopicId()" (valueChange)="pTopicId.set($event)"></ui-input>
+      <ui-select label="Nivel" [options]="difficultyOptions" [value]="pDifficulty()" (valueChange)="pDifficulty.set($event)" placeholder="Elige"></ui-select>
+      <ui-select label="Grado" [options]="gradeLevelOptions" [value]="pGradeLevel()" (valueChange)="pGradeLevel.set($event)" placeholder="Elige"></ui-select>
+      <ui-input label="Clave (respuesta correcta)" [value]="pCorrectAnswer()" (valueChange)="pCorrectAnswer.set($event)"></ui-input>
+      <label class="text-sm text-n700">Imagen del enunciado
+        <input type="file" accept="image/*" class="mt-1 block w-full text-sm" (change)="onImageSelected($event)" />
+      </label>
+      <div data-testid="photo-submit"><ui-button variant="primary" [loading]="saving()" (clicked)="submitPhoto()">Guardar pregunta</ui-button></div>
+    </div>
+  } @else {
+    <div data-testid="tab-structured-panel" class="flex flex-col gap-3 rounded-card border border-n200 bg-white p-4">
+      <ui-input label="Curso" [value]="sCourseId()" (valueChange)="sCourseId.set($event)"></ui-input>
+      <ui-input label="Tema" [value]="sTopicId()" (valueChange)="sTopicId.set($event)"></ui-input>
+      <ui-select label="Nivel" [options]="difficultyOptions" [value]="sDifficulty()" (valueChange)="sDifficulty.set($event)" placeholder="Elige"></ui-select>
+      <ui-select label="Grado" [options]="gradeLevelOptions" [value]="sGradeLevel()" (valueChange)="sGradeLevel.set($event)" placeholder="Elige"></ui-select>
+      <label class="text-sm text-n700">Enunciado
+        <textarea class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm" rows="3" [value]="sBody()" (input)="sBody.set($any($event.target).value)"></textarea>
+      </label>
+      <label class="text-sm text-n700">Alternativas (una por línea)
+        <textarea class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm" rows="4" [value]="sAlternatives()" (input)="sAlternatives.set($any($event.target).value)"></textarea>
+      </label>
+      <ui-input label="Clave (a/b/c/d)" [value]="sCorrectAnswer()" (valueChange)="sCorrectAnswer.set($event)"></ui-input>
+      <div data-testid="structured-submit"><ui-button variant="primary" [loading]="saving()" (clicked)="submitStructured()">Guardar pregunta</ui-button></div>
+    </div>
+  }
+</div>

@@ -30,6 +30,12 @@ describe('app routes', () => {
     expect(bankUploadRoute).toBeTruthy();
   });
 
+  it('exposes /app/bank/new', () => {
+    const appRoute = routes.find((route) => route.path === 'app');
+    const bankNewRoute = appRoute?.children?.find((route) => route.path === 'bank/new');
+    expect(bankNewRoute).toBeTruthy();
+  });
+
   it('registers an exam versions panel route under the protected /app shell', () => {
     const appRoute = routes.find((route) => route.path === 'app');
     const versionsRoute = appRoute?.children?.find(
