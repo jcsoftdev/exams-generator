@@ -46,7 +46,19 @@ export const examBlueprintRows = pgTable("exam_blueprint_rows", {
   count: integer("count").notNull(),
 });
 
-/** Final ordered question selection for an exam (shared across versions). */
+/**
+ * Final ordered question selection for an exam (shared across versions).
+ *
+ * `blueprint_row_id` links each selected question back to the exact
+ * `exam_blueprint_rows` row it fulfilled. Necessary because rows are NOT
+ * unique per criteria set (see `examBlueprintRows` docstring) — two rows can
+ * share identical `{course, topic?, difficulty?}` while a third overlapping
+ * row targets a narrower slice (e.g. row A = "5 aritmética", row B = "2
+ * aritmética/hard"); a hard-aritmética question satisfies BOTH rows'
+ * criteria, so without this link a "replace" operation couldn't reliably
+ * know which row's (possibly narrower) criteria to preserve. Nullable only
+ * so legacy/manual inserts remain valid; the exams module always sets it.
+ */
 export const examQuestions = pgTable(
   "exam_questions",
   {
@@ -57,6 +69,7 @@ export const examQuestions = pgTable(
     questionId: uuid("question_id")
       .notNull()
       .references(() => questions.id),
+    blueprintRowId: uuid("blueprint_row_id").references(() => examBlueprintRows.id),
     position: integer("position").notNull(),
   },
   (table) => ({

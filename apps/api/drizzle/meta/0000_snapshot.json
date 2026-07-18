@@ -1,5 +1,5 @@
 {
-  "id": "edaaceec-78c9-48f7-811d-d66d247c6870",
+  "id": "600bc3fa-4122-4294-888e-fdb4979fa6f4",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -673,6 +673,12 @@
           "primaryKey": false,
           "notNull": true
         },
+        "blueprint_row_id": {
+          "name": "blueprint_row_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
         "position": {
           "name": "position",
           "type": "integer",
@@ -744,6 +750,19 @@
           "tableTo": "questions",
           "columnsFrom": [
             "question_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "exam_questions_blueprint_row_id_exam_blueprint_rows_id_fk": {
+          "name": "exam_questions_blueprint_row_id_exam_blueprint_rows_id_fk",
+          "tableFrom": "exam_questions",
+          "tableTo": "exam_blueprint_rows",
+          "columnsFrom": [
+            "blueprint_row_id"
           ],
           "columnsTo": [
             "id"
