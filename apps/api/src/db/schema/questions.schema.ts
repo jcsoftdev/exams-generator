@@ -1,4 +1,4 @@
-import { boolean, index, jsonb, pgTable, text, uuid } from "drizzle-orm/pg-core";
+import { boolean, index, jsonb, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
 import { assets } from "./assets.schema";
 import { difficultyEnum, questionStatusEnum, questionTypeEnum } from "./enums";
 import { gradeLevels } from "./grade-levels.schema";
@@ -50,6 +50,7 @@ export const questions = pgTable(
     createdBy: uuid("created_by")
       .notNull()
       .references(() => users.id),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (table) => ({
     tenantIdIdx: index("questions_tenant_id_idx").on(table.tenantId),

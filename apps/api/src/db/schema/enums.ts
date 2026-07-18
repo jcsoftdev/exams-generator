@@ -34,8 +34,10 @@ export const questionTypeEnum = pgEnum("question_type", QUESTION_TYPES);
  * 2 — the AI never publishes directly to the bank).
  * `approved`: visible to blueprint selection. Manual image uploads go
  * straight to `approved` (curated by definition per design doc 5.1).
+ * `archived`: soft-removed from the bank — no longer visible to blueprint
+ * selection, kept for historical/audit purposes (S9).
  */
-export const QUESTION_STATUSES = ["draft", "approved"] as const;
+export const QUESTION_STATUSES = ["draft", "approved", "archived"] as const;
 export type QuestionStatus = (typeof QUESTION_STATUSES)[number];
 export const questionStatusEnum = pgEnum("question_status", QUESTION_STATUSES);
 

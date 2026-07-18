@@ -1,4 +1,4 @@
-import { integer, jsonb, pgTable, text, uniqueIndex, uuid } from "drizzle-orm/pg-core";
+import { integer, jsonb, pgTable, text, timestamp, uniqueIndex, uuid } from "drizzle-orm/pg-core";
 import { assets } from "./assets.schema";
 import { courses } from "./courses.schema";
 import { difficultyEnum, examStatusEnum } from "./enums";
@@ -22,6 +22,7 @@ export const exams = pgTable("exams", {
   createdBy: uuid("created_by")
     .notNull()
     .references(() => users.id),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
 
 /**
