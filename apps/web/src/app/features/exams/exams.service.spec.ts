@@ -5,7 +5,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { Difficulty } from '@exams-generator/shared';
 import { ExamsService } from './exams.service';
 import { environment } from '../../../environments/environment';
-import { ConfirmExamResult, CreateExamResult, ExamQuestionSummary, ReplaceQuestionResult } from './exams.models';
+import { ConfirmExamResult, CreateExamResult, ExamDetail, ReplaceQuestionResult } from './exams.models';
 
 describe('ExamsService', () => {
   let service: ExamsService;
@@ -110,30 +110,44 @@ describe('ExamsService', () => {
     });
   });
 
-  describe('getQuestionById', () => {
-    it('GETs /bank/questions/:id', () => {
-      service.getQuestionById('q1').subscribe();
+  describe('getExam', () => {
+    it('GETs /exams/:examId', () => {
+      service.getExam('exam-1').subscribe();
 
-      const req = httpMock.expectOne(`${environment.apiBaseUrl}/bank/questions/q1`);
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1`);
       expect(req.request.method).toBe('GET');
-      req.flush({ id: 'q1', courseId: 'c1', topicId: 't1', difficulty: 'easy', correctAnswer: 'a' });
+      req.flush({ id: 'exam-1', title: 'T', gradeLevel: 'pre', status: 'draft', questions: [] });
     });
 
-    it('resolves with the question summary', () => {
-      const summary: ExamQuestionSummary = {
-        id: 'q1',
-        courseId: 'c1',
-        topicId: 't1',
-        difficulty: Difficulty.Easy,
-        correctAnswer: 'a',
+    it('resolves with the exam detail (header + selected questions)', () => {
+      const detail: ExamDetail = {
+        id: 'exam-1',
+        title: 'Admisión 2026',
+        gradeLevel: 'secundaria_5',
+        status: 'draft',
+        questions: [
+          {
+            id: 'q1',
+            position: 0,
+            type: 'image',
+            courseId: 'c1',
+            topicId: 't1',
+            difficulty: Difficulty.Easy,
+            correctAnswer: 'a',
+            imageAssetId: 'asset-1',
+            bodyTypst: null,
+            alternatives: null,
+            figureCode: null,
+          },
+        ],
       };
-      let response: ExamQuestionSummary | undefined;
+      let response: ExamDetail | undefined;
 
-      service.getQuestionById('q1').subscribe((r: ExamQuestionSummary) => (response = r));
+      service.getExam('exam-1').subscribe((r: ExamDetail) => (response = r));
 
-      httpMock.expectOne(`${environment.apiBaseUrl}/bank/questions/q1`).flush(summary);
+      httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1`).flush(detail);
 
-      expect(response).toEqual(summary);
+      expect(response).toEqual(detail);
     });
   });
 });

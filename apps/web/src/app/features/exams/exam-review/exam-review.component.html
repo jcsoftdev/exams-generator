@@ -1,5 +1,8 @@
 <section class="exam-review">
   <h1>Review Exam</h1>
+  @if (title()) {
+    <p data-testid="exam-title">{{ title() }}</p>
+  }
   <p>Status: <strong>{{ status() }}</strong></p>
 
   @if (errorMessage()) {

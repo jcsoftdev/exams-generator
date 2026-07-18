@@ -242,6 +242,12 @@ describe("Exams module (e2e)", () => {
       .set("Authorization", `Bearer ${token}`);
   }
 
+  function getExamRequest(token: string, examId: string) {
+    return request(app.getHttpServer())
+      .get(`/exams/${examId}`)
+      .set("Authorization", `Bearer ${token}`);
+  }
+
   describe("POST /exams — blueprint selection never draws from another tenant's private pool", () => {
     it("fills the row only from central + own-tenant approved questions, never another tenant's private ones", async () => {
       const topicId = await createTopic();
@@ -444,6 +450,25 @@ describe("Exams module (e2e)", () => {
         expect(pdfBytes.subarray(0, 4).toString("latin1")).toBe("%PDF");
         expect(answerBytes.subarray(0, 4).toString("latin1")).toBe("%PDF");
       }
+    });
+
+    it("GET /exams/:examId — tenant A gets 404 on tenant B's exam", async () => {
+      await getExamRequest(tenantAToken, examBId).expect(404);
+    });
+
+    it("GET /exams/:examId — positive control: tenant B (owner) can fetch its own exam detail with selected questions", async () => {
+      const response = await getExamRequest(tenantBToken, examBId).expect(200);
+
+      expect(response.body).toMatchObject({ id: examBId, title: "Tenant B's own exam", status: "ready" });
+      expect(response.body.questions).toEqual(
+        expect.arrayContaining([expect.objectContaining({ type: "image" })]),
+      );
+      expect(response.body.questions[0]).toHaveProperty("position");
+      expect(response.body.questions[0]).toHaveProperty("correctAnswer");
+    });
+
+    it("GET /exams/:examId — 404 for a non-existent exam id", async () => {
+      await getExamRequest(tenantBToken, randomUUID()).expect(404);
     });
   });
 

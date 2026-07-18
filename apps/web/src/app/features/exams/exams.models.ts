@@ -108,18 +108,34 @@ export interface ConfirmExamResult {
   readonly status: ExamStatus;
 }
 
+export type QuestionType = 'image' | 'structured';
+
 /**
- * GAP: `POST /exams` only returns bare ids in `selectedQuestionIds` — there
- * is no dedicated "exam question detail" shape. This mirrors the subset of
- * fields from `QuestionListItem`
- * (apps/api/src/modules/bank/bank.repository.ts) that `ExamsService` fetches
- * per-id from the bank module's `GET /bank/questions/:id` so the review
- * screen can render course/topic/answer for each selected question.
+ * One selected question as returned by `GET /exams/:examId` (mirrors
+ * `ExamDetailQuestionRecord` in apps/api/src/modules/exams/exams.repository.ts).
+ * `type='image'` questions carry `imageAssetId` (`bodyTypst`/`alternatives`/
+ * `figureCode` are `null`); `type='structured'` questions carry
+ * `bodyTypst`/`alternatives`/`figureCode` instead (`imageAssetId` is `null`).
  */
-export interface ExamQuestionSummary {
+export interface ExamDetailQuestion {
   readonly id: string;
+  readonly position: number;
+  readonly type: QuestionType;
   readonly courseId: string;
   readonly topicId: string;
   readonly difficulty: Difficulty;
   readonly correctAnswer: string;
+  readonly imageAssetId: string | null;
+  readonly bodyTypst: string | null;
+  readonly alternatives: readonly string[] | null;
+  readonly figureCode: string | null;
+}
+
+/** `GET /exams/:examId` response — the exam header plus its full selection, ordered by position. */
+export interface ExamDetail {
+  readonly id: string;
+  readonly title: string;
+  readonly gradeLevel: string;
+  readonly status: ExamStatus;
+  readonly questions: readonly ExamDetailQuestion[];
 }

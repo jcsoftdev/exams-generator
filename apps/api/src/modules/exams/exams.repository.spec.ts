@@ -433,6 +433,105 @@ describe("ExamsRepository", () => {
     });
   });
 
+  describe("getExamDetail()", () => {
+    it("returns the exam header + selected questions (image type) ordered by position, tenant-scoped", async () => {
+      const q1 = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel: "primaria_2" });
+      const q2 = await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, gradeLevel: "primaria_2" });
+
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Detail exam",
+        gradeLevel: "primaria_2",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 2 }],
+      });
+      createdExamIds.push(examId);
+      const [row] = await repository.getBlueprintRows(examId);
+      await repository.saveSelection(examId, [
+        { blueprintRowId: row!.id, questionId: q1 },
+        { blueprintRowId: row!.id, questionId: q2 },
+      ]);
+
+      const detail = await repository.getExamDetail(examId, tenantAId);
+
+      expect(detail?.id).toBe(examId);
+      expect(detail?.title).toBe("Detail exam");
+      expect(detail?.gradeLevel).toBe("primaria_2");
+      expect(detail?.status).toBe("draft");
+      expect(detail?.questions.map((q) => q.id)).toEqual([q1, q2]);
+      expect(detail?.questions[0]).toMatchObject({
+        position: 0,
+        type: "image",
+        courseId,
+        difficulty: Difficulty.Easy,
+        correctAnswer: "a",
+        bodyTypst: null,
+        alternatives: null,
+      });
+      expect(detail?.questions[0]!.imageAssetId).toBeTruthy();
+    });
+
+    it("returns bodyTypst/alternatives/figureCode (and a null imageAssetId) for a type='structured' selected question", async () => {
+      const structuredId = await createStructuredQuestion({
+        tenantId: tenantAId,
+        createdBy: tenantAUserId,
+        gradeLevel: "primaria_6",
+        alternatives: ["3", "4", "5"],
+        correctAnswer: "1",
+      });
+
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Structured detail exam",
+        gradeLevel: "primaria_6",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+      const [row] = await repository.getBlueprintRows(examId);
+      await repository.saveSelection(examId, [{ blueprintRowId: row!.id, questionId: structuredId }]);
+
+      const detail = await repository.getExamDetail(examId, tenantAId);
+      const selected = detail?.questions[0];
+
+      expect(selected?.id).toBe(structuredId);
+      expect(selected?.type).toBe("structured");
+      expect(selected?.correctAnswer).toBe("1");
+      expect(selected?.imageAssetId).toBeNull();
+      expect(selected?.bodyTypst).toBe("¿Cuánto es $2 + 2$?");
+      expect(selected?.alternatives).toEqual(["3", "4", "5"]);
+      expect(selected?.figureCode).toBeNull();
+    });
+
+    it("returns undefined when the exam belongs to a different tenant", async () => {
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Tenant guarded detail exam",
+        gradeLevel: "primaria_1",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+
+      const result = await repository.getExamDetail(examId, tenantBId);
+      expect(result).toBeUndefined();
+    });
+
+    it("returns an empty questions array when nothing has been selected yet", async () => {
+      const { id: examId } = await repository.createExam({
+        tenantId: tenantAId,
+        title: "Unselected detail exam",
+        gradeLevel: "primaria_1",
+        createdBy: tenantAUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      createdExamIds.push(examId);
+
+      const detail = await repository.getExamDetail(examId, tenantAId);
+      expect(detail?.questions).toEqual([]);
+    });
+  });
+
   describe("createAsset() + saveVersion()", () => {
     it("persists an asset and an exam_version row referencing it", async () => {
       const { id: examId } = await repository.createExam({
