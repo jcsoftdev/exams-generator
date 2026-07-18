@@ -1,5 +1,6 @@
 import {
   ExamPdfDocumentInput,
+  ExamPdfQuestion,
   AnswerKeyDocumentInput,
 } from "../../domain/ports/pdf-compiler.port";
 
@@ -10,16 +11,15 @@ import {
  * trace a failing compile-time line number back to the offending question.
  */
 
+const ALTERNATIVE_LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
+
 export function renderExamTypst(input: ExamPdfDocumentInput): string {
   const logoBlock = input.tenantLogoAbsolutePath
     ? `#image("${input.tenantLogoAbsolutePath}", width: 3cm)\n\n`
     : "";
 
   const questionBlocks = input.questions
-    .map(
-      (question) =>
-        `// q:${question.id}\n#image("${question.imageAbsolutePath}", width: 100%)`,
-    )
+    .map((question, index) => renderQuestionBlock(question, index + 1))
     .join("\n\n");
 
   return `#set page(columns: 2, margin: 1.5cm)
@@ -29,6 +29,37 @@ ${logoBlock}#align(center)[= ${input.title} --- ${input.versionLabel}]
 
 ${questionBlocks}
 `;
+}
+
+function renderQuestionBlock(question: ExamPdfQuestion, number: number): string {
+  if (question.type === "structured") {
+    return renderStructuredQuestionBlock(question, number);
+  }
+  return `// q:${question.id}\n#image("${question.imageAbsolutePath}", width: 100%)`;
+}
+
+/**
+ * Structured questions carry no baked-in numbering/lettering (unlike image
+ * questions, whose enunciado + alternatives are already flattened into the
+ * uploaded image) — so, to match the SAME two-column, numbered visual style
+ * as image questions, this block explicitly numbers the statement (`N.`)
+ * and letters each alternative (`A)`, `B)`, ...). `bodyTypst` and
+ * `figureCode` are trusted Typst/CeTZ markup, embedded verbatim (same trust
+ * model as the image path string above).
+ */
+function renderStructuredQuestionBlock(
+  question: Extract<ExamPdfQuestion, { type: "structured" }>,
+  number: number,
+): string {
+  const figureBlock = question.figureCode ? `\n\n${question.figureCode}` : "";
+  const alternativesBlock = question.alternatives
+    .map((alternative, index) => `${ALTERNATIVE_LETTERS[index] ?? index + 1}) ${alternative}`)
+    .join(" \\ \n");
+
+  return `// q:${question.id}
+*${number}.* ${question.bodyTypst}${figureBlock}
+
+${alternativesBlock}`;
 }
 
 export function renderAnswerKeyTypst(input: AnswerKeyDocumentInput): string {

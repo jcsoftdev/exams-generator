@@ -25,6 +25,17 @@ interface CreateImageQuestionBody {
   readonly correctAnswer?: string;
 }
 
+interface CreateStructuredQuestionBody {
+  readonly courseId?: string;
+  readonly topicId?: string;
+  readonly difficulty?: string;
+  readonly gradeLevel?: string;
+  readonly bodyTypst?: string;
+  readonly alternatives?: readonly string[];
+  readonly correctAnswer?: string;
+  readonly figureCode?: string;
+}
+
 interface ListQuestionsQueryParams {
   readonly courseId?: string;
   readonly topicId?: string;
@@ -33,9 +44,11 @@ interface ListQuestionsQueryParams {
 }
 
 /**
- * `POST /bank/questions/image` and `GET /bank/questions` — the Fase 1 (MVP)
- * bank endpoints. `type = 'structured'` CRUD is Fase 2, out of scope here
- * (see design doc §9).
+ * `POST /bank/questions/image`, `POST /bank/questions/structured` and
+ * `GET /bank/questions` — manual bank curation endpoints. Both creation
+ * routes persist directly to `status = 'approved'` (curated by definition,
+ * design doc §5.1); the AI-generated `status = 'draft'` review flow is a
+ * separate lane, out of scope here.
  */
 @Controller("bank/questions")
 @UseGuards(JwtAuthGuard)
@@ -56,6 +69,23 @@ export class BankController {
       gradeLevel: body.gradeLevel,
       correctAnswer: body.correctAnswer,
       file,
+    });
+  }
+
+  @Post("structured")
+  async createStructuredQuestion(
+    @CurrentUser() user: AuthTokenPayload,
+    @Body() body: CreateStructuredQuestionBody,
+  ): Promise<{ id: string }> {
+    return this.service.createStructuredQuestion(user, {
+      courseId: body.courseId,
+      topicId: body.topicId,
+      difficulty: body.difficulty,
+      gradeLevel: body.gradeLevel,
+      bodyTypst: body.bodyTypst,
+      alternatives: body.alternatives,
+      correctAnswer: body.correctAnswer,
+      figureCode: body.figureCode,
     });
   }
 

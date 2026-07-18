@@ -54,4 +54,27 @@ describeIfTypst("TypstCliAdapter golden compile (real typst binary)", () => {
 
     expect(pdf.subarray(0, 5).toString("ascii")).toBe("%PDF-");
   });
+
+  it("compiles a mixed image + structured exam (math body, alternatives, figure) into a valid PDF", async () => {
+    const adapter = new TypstCliAdapter();
+
+    const mixedInput: ExamPdfDocumentInput = {
+      title: "Simulacro San Marcos",
+      versionLabel: "Version A",
+      questions: [
+        { id: "q1", imageAbsolutePath: path.join(FIXTURES_DIR, "q1.png") },
+        {
+          id: "sq1",
+          type: "structured",
+          bodyTypst: "Resuelve para $x$: $x + 1 = 2$",
+          alternatives: ["1", "2", "3", "4"],
+          figureCode: "#box(width: 2cm, height: 2cm, stroke: 1pt)[]",
+        },
+      ],
+    };
+
+    const pdf = await adapter.compileExam(mixedInput);
+
+    expect(pdf.subarray(0, 5).toString("ascii")).toBe("%PDF-");
+  });
 });

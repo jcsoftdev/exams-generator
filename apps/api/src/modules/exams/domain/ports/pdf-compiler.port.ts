@@ -1,14 +1,28 @@
 /**
  * PdfCompilerPort — generates the printable exam PDF and its separate
- * answer-key PDF for one exam version. MVP questions are single baked
- * images (enunciado + alternativas already flattened into one image) — the
- * PDF layout embeds question images, it never renders structured question
- * text.
+ * answer-key PDF for one exam version. `type='image'` questions are single
+ * baked images (enunciado + alternativas already flattened into one image)
+ * embedded as-is. `type='structured'` questions (design doc §5.4) carry
+ * Typst-markup `bodyTypst`, a JSON `alternatives` array, and an optional
+ * CeTZ `figureCode` — the template renders enunciado + numbered
+ * alternatives + figure with the SAME two-column, numbered visual style as
+ * image questions.
  */
-export interface ExamPdfQuestion {
+export interface ExamPdfImageQuestion {
   readonly id: string;
+  readonly type?: "image";
   readonly imageAbsolutePath: string;
 }
+
+export interface ExamPdfStructuredQuestion {
+  readonly id: string;
+  readonly type: "structured";
+  readonly bodyTypst: string;
+  readonly alternatives: readonly string[];
+  readonly figureCode?: string;
+}
+
+export type ExamPdfQuestion = ExamPdfImageQuestion | ExamPdfStructuredQuestion;
 
 export interface ExamPdfDocumentInput {
   readonly title: string;

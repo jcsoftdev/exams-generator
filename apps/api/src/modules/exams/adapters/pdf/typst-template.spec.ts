@@ -56,6 +56,10 @@ describe("renderExamTypst", () => {
     const lines = source.split("\n");
 
     for (const question of input.questions) {
+      if (question.type === "structured") {
+        continue;
+      }
+
       const markerIndex = lines.findIndex((line) =>
         line.includes(`// q:${question.id}`),
       );
@@ -79,6 +83,113 @@ describe("renderExamTypst", () => {
 
     expect(source).toContain("Simulacro San Marcos");
     expect(source).toContain("Version B");
+  });
+});
+
+describe("renderExamTypst — structured questions", () => {
+  it("embeds a structured question's body, marked with the same `// q:{id}` marker as image questions", () => {
+    const input: ExamPdfDocumentInput = {
+      title: "Simulacro San Marcos",
+      versionLabel: "Version A",
+      questions: [
+        {
+          id: "sq1",
+          type: "structured",
+          bodyTypst: "Resuelve: $x + 1 = 2$",
+          alternatives: ["1", "2", "3"],
+        },
+      ],
+    };
+
+    const source = renderExamTypst(input);
+    const lines = source.split("\n");
+
+    const markerIndex = lines.findIndex((line) => line.includes("// q:sq1"));
+    expect(markerIndex).toBeGreaterThanOrEqual(0);
+    expect(source).toContain("Resuelve: $x + 1 = 2$");
+  });
+
+  it("renders every alternative, numbered/lettered", () => {
+    const input: ExamPdfDocumentInput = {
+      title: "Simulacro San Marcos",
+      versionLabel: "Version A",
+      questions: [
+        {
+          id: "sq1",
+          type: "structured",
+          bodyTypst: "Resuelve: $x + 1 = 2$",
+          alternatives: ["1", "2", "3"],
+        },
+      ],
+    };
+
+    const source = renderExamTypst(input);
+
+    expect(source).toContain("A) 1");
+    expect(source).toContain("B) 2");
+    expect(source).toContain("C) 3");
+  });
+
+  it("embeds figureCode verbatim when provided", () => {
+    const input: ExamPdfDocumentInput = {
+      title: "Simulacro San Marcos",
+      versionLabel: "Version A",
+      questions: [
+        {
+          id: "sq1",
+          type: "structured",
+          bodyTypst: "Observa la figura",
+          alternatives: ["a", "b"],
+          figureCode: '#box[triangle placeholder]',
+        },
+      ],
+    };
+
+    const source = renderExamTypst(input);
+
+    expect(source).toContain("#box[triangle placeholder]");
+  });
+
+  it("omits any figure block when figureCode is not provided", () => {
+    const input: ExamPdfDocumentInput = {
+      title: "Simulacro San Marcos",
+      versionLabel: "Version A",
+      questions: [
+        {
+          id: "sq1",
+          type: "structured",
+          bodyTypst: "Sin figura",
+          alternatives: ["a", "b"],
+        },
+      ],
+    };
+
+    const source = renderExamTypst(input);
+
+    expect(source).not.toContain("undefined");
+  });
+
+  it("renders image and structured questions side by side in the same document, each with its own marker", () => {
+    const input: ExamPdfDocumentInput = {
+      title: "Simulacro San Marcos",
+      versionLabel: "Version A",
+      questions: [
+        { id: "q1", imageAbsolutePath: "/fixtures/q1.png" },
+        {
+          id: "sq1",
+          type: "structured",
+          bodyTypst: "Resuelve: $x + 1 = 2$",
+          alternatives: ["1", "2"],
+        },
+      ],
+    };
+
+    const source = renderExamTypst(input);
+
+    expect(source).toContain("// q:q1");
+    expect(source).toContain("// q:sq1");
+    expect(source).toContain('image("/fixtures/q1.png"');
+    expect(source).toContain("Resuelve: $x + 1 = 2$");
   });
 });
 

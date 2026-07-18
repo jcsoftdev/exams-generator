@@ -2,6 +2,7 @@ import { Difficulty } from "@exams-generator/shared";
 import { and, eq, isNull, or, SQL } from "drizzle-orm";
 import { db } from "../../db/client";
 import { assets, questions, topics } from "../../db/schema";
+import { QuestionType } from "../../db/schema/enums";
 
 export interface CreateImageQuestionRecord {
   readonly tenantId: string | null;
@@ -18,6 +19,18 @@ export interface CreateImageQuestionRecord {
   };
 }
 
+export interface CreateStructuredQuestionRecord {
+  readonly tenantId: string | null;
+  readonly topicId: string;
+  readonly difficulty: Difficulty;
+  readonly gradeLevel: string;
+  readonly bodyTypst: string;
+  readonly alternatives: readonly string[];
+  readonly correctAnswer: string;
+  readonly figureCode: string | undefined;
+  readonly createdBy: string;
+}
+
 export interface QuestionListItem {
   readonly id: string;
   readonly tenantId: string | null;
@@ -26,7 +39,11 @@ export interface QuestionListItem {
   readonly difficulty: Difficulty;
   readonly gradeLevel: string;
   readonly correctAnswer: string;
+  readonly type: QuestionType;
   readonly imageAssetId: string | null;
+  readonly bodyTypst: string | null;
+  readonly alternatives: unknown | null;
+  readonly figureCode: string | null;
 }
 
 export interface QuestionListFilter {
@@ -92,6 +109,41 @@ export class BankRepository {
   }
 
   /**
+   * Manual structured-question creation (Lane D2, design doc §5.4): no
+   * backing asset — the statement/alternatives/figure live directly on the
+   * question row (`body_typst` / `alternatives` jsonb / `figure_code`).
+   * Same as manual image upload, this is curated by definition, so it goes
+   * straight to `status = 'approved'` (no draft state here; the AI-generated
+   * draft flow is a separate lane).
+   */
+  async createStructuredQuestion(
+    record: CreateStructuredQuestionRecord,
+  ): Promise<{ id: string }> {
+    const [question] = await db
+      .insert(questions)
+      .values({
+        tenantId: record.tenantId,
+        type: "structured",
+        topicId: record.topicId,
+        difficulty: record.difficulty,
+        gradeLevel: record.gradeLevel,
+        status: "approved",
+        bodyTypst: record.bodyTypst,
+        alternatives: record.alternatives,
+        figureCode: record.figureCode,
+        correctAnswer: record.correctAnswer,
+        createdBy: record.createdBy,
+      })
+      .returning({ id: questions.id });
+
+    if (!question) {
+      throw new Error("Insert invariant violated: question row missing after insert");
+    }
+
+    return { id: question.id };
+  }
+
+  /**
    * Visibility rule (design doc §3, MUST release gate): every query filters
    * `tenant_id IS NULL OR tenant_id = :current` — a tenant NEVER sees
    * another tenant's private questions. `currentTenantId: null` (platform
@@ -126,7 +178,11 @@ export class BankRepository {
         difficulty: questions.difficulty,
         gradeLevel: questions.gradeLevel,
         correctAnswer: questions.correctAnswer,
+        type: questions.type,
         imageAssetId: questions.imageAssetId,
+        bodyTypst: questions.bodyTypst,
+        alternatives: questions.alternatives,
+        figureCode: questions.figureCode,
       })
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
@@ -157,7 +213,11 @@ export class BankRepository {
         difficulty: questions.difficulty,
         gradeLevel: questions.gradeLevel,
         correctAnswer: questions.correctAnswer,
+        type: questions.type,
         imageAssetId: questions.imageAssetId,
+        bodyTypst: questions.bodyTypst,
+        alternatives: questions.alternatives,
+        figureCode: questions.figureCode,
       })
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
