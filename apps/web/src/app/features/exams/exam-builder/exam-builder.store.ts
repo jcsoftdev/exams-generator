@@ -79,7 +79,7 @@ export class ExamBuilderStore {
     this.rows.update((current) => current.filter((row) => row.id !== rowId));
   }
 
-  /** requested <= stock => 'ok' (drives EB-R1's "de N" vs "solo N ✕" warning-stock tag). */
+  /** requested <= stock => 'ok' (drives EB-R1's "de N" vs "solo N" warning-stock tag with a triangle-alert icon). */
   cellStatus(key: CellKey): CellStatus {
     const requestedCount = this.requested().get(key) ?? 0;
     const stockCount = this.stock().get(key) ?? 0;

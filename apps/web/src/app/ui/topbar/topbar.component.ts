@@ -1,14 +1,18 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
+import { LucideAngularModule, Menu } from 'lucide-angular';
 
 /**
  * Design-system topbar primitive (DECISION FE-4). `menuToggle` drives the
  * shell's mobile drawer; `[actions]` is a projection slot for screen-level
- * buttons (e.g. "Nueva pregunta").
+ * buttons (e.g. "Nueva pregunta"). Icons are lucide-angular only (no emojis
+ * in UI — see docs/superpowers/specs/2026-07-18-ui-redesign-screens-design.md).
  */
 @Component({
   selector: 'ui-topbar',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [LucideAngularModule],
+  providers: [LucideAngularModule.pick({ Menu }).providers ?? []],
   template: `
     <header class="flex items-center justify-between border-b border-n200 bg-white px-4 py-3">
       <div class="flex items-center gap-3">
@@ -19,7 +23,7 @@ import { ChangeDetectionStrategy, Component, input, output } from '@angular/core
           (click)="menuToggle.emit()"
           aria-label="Abrir menú"
         >
-          ☰
+          <lucide-icon name="menu" [size]="20"></lucide-icon>
         </button>
         @if (title()) {
           <h1 class="text-base font-semibold text-n900">{{ title() }}</h1>

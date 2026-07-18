@@ -1,14 +1,21 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
+import { LucideAngularModule, X } from 'lucide-angular';
 import { BannerVariant } from '../ui.types';
 
 /**
  * Design-system banner/alert primitive (DECISION FE-4). Solid fills only
- * (§3.3 — no gradients). Optional dismiss button.
+ * (§3.3 — no gradients). Optional dismiss button. Icons are lucide-angular
+ * only (no emojis in UI — see docs/superpowers/specs/2026-07-18-ui-redesign-screens-design.md).
  */
 @Component({
   selector: 'ui-banner',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  // `ModuleWithProviders` (from `.pick()`) is not valid inside a standalone
+  // component's `imports` (NG2012) — the bare module goes in `imports` (so
+  // the `<lucide-icon>` selector resolves) and its providers go in `providers`.
+  imports: [LucideAngularModule],
+  providers: [LucideAngularModule.pick({ X }).providers ?? []],
   template: `
     <div data-testid="banner" [class]="classes()">
       <p class="flex-1 text-sm">{{ message() }}</p>
@@ -20,7 +27,7 @@ import { BannerVariant } from '../ui.types';
           (click)="dismissed.emit()"
           aria-label="Cerrar"
         >
-          ✕
+          <lucide-icon name="x" [size]="16"></lucide-icon>
         </button>
       }
     </div>

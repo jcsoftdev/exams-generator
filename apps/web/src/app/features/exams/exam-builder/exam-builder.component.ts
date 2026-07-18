@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { forkJoin, map, switchMap } from 'rxjs';
 import { Difficulty } from '@exams-generator/shared';
+import { LucideAngularModule, Sparkles, TriangleAlert, Lock, Inbox } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { CardComponent } from '../../../ui/card/card.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
@@ -50,17 +51,23 @@ function parseCellKey(key: CellKey): { courseId: string; topicId: string; diffic
 @Component({
   selector: 'app-exam-builder',
   standalone: true,
+  // `<lucide-icon>` is used directly in this component's own template
+  // (sparkles/triangle-alert/lock) AND inside the nested `ui-empty-state`
+  // (inbox), so the bare module goes in `imports` (selector resolution) and
+  // the icon providers go in `providers` — `.pick()`'s `ModuleWithProviders`
+  // cannot go in `imports` (NG2012).
   imports: [
     ButtonComponent,
     CardComponent,
     EmptyStateComponent,
     InputComponent,
+    LucideAngularModule,
     ProgressComponent,
     SelectComponent,
     TableComponent,
     TagComponent,
   ],
-  providers: [ExamBuilderStore],
+  providers: [ExamBuilderStore, LucideAngularModule.pick({ Sparkles, TriangleAlert, Lock, Inbox }).providers ?? []],
   templateUrl: './exam-builder.component.html',
 })
 export class ExamBuilderComponent {

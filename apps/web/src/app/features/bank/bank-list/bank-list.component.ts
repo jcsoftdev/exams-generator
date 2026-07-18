@@ -2,6 +2,7 @@ import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Difficulty } from '@exams-generator/shared';
 import { Router } from '@angular/router';
+import { LucideAngularModule, Search, Inbox } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
 import { InputComponent } from '../../../ui/input/input.component';
@@ -40,7 +41,12 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
 @Component({
   selector: 'app-bank-list',
   standalone: true,
+  // `<lucide-icon>` is only used inside the nested `ui-empty-state` primitive
+  // (not directly in this component's own template), so only the icon
+  // providers are needed here — `.pick()`'s `ModuleWithProviders` cannot go
+  // in `imports` (NG2012).
   imports: [ButtonComponent, EmptyStateComponent, InputComponent, SelectComponent, TagComponent],
+  providers: [LucideAngularModule.pick({ Search, Inbox }).providers ?? []],
   templateUrl: './bank-list.component.html',
 })
 export class BankListComponent {

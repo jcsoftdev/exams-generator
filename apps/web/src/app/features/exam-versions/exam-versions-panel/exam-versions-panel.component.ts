@@ -1,6 +1,7 @@
 import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
+import { LucideAngularModule, Folder } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
 import { ExamVersionsService } from '../exam-versions.service';
@@ -21,7 +22,11 @@ import { ExamVersion } from '../exam-versions.models';
 @Component({
   selector: 'app-exam-versions-panel',
   standalone: true,
+  // `<lucide-icon>` is only used inside the nested `ui-empty-state`
+  // primitive, so only the icon providers are needed here — `.pick()`'s
+  // `ModuleWithProviders` cannot go in `imports` (NG2012).
   imports: [ButtonComponent, EmptyStateComponent],
+  providers: [LucideAngularModule.pick({ Folder }).providers ?? []],
   templateUrl: './exam-versions-panel.component.html',
 })
 export class ExamVersionsPanelComponent {

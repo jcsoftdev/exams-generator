@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
+import { LucideAngularModule, Check } from 'lucide-angular';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
 import { AiService } from '../ai.service';
 import { DraftQuestion, EditDraftPayload } from '../ai.models';
@@ -20,7 +21,12 @@ import { extractErrorMessage } from '../extract-error-message';
  */
 @Component({
   selector: 'app-ai-review-queue',
+  // `<lucide-icon>` is only used inside the nested `ui-empty-state` primitive
+  // (not directly in this component's own template), so only the icon
+  // providers are needed here — `.pick()`'s `ModuleWithProviders` cannot go
+  // in `imports` (NG2012).
   imports: [ReactiveFormsModule, EmptyStateComponent],
+  providers: [LucideAngularModule.pick({ Check }).providers ?? []],
   templateUrl: './ai-review-queue.component.html',
 })
 export class AiReviewQueueComponent implements OnInit {

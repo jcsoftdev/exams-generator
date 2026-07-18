@@ -17,9 +17,12 @@
         {{ errorMessage() }}
       </div>
     } @else if (emptyBank()) {
-      <ui-empty-state message="No hay preguntas aprobadas para este grado todavía." icon="📭">
+      <ui-empty-state message="No hay preguntas aprobadas para este grado todavía." icon="inbox">
         <ui-button cta variant="primary" (clicked)="goToUpload()">Subir preguntas</ui-button>
-        <ui-button cta variant="ghost" (clicked)="goToAiGenerate()">✨ Generar con IA</ui-button>
+        <ui-button cta variant="ghost" (clicked)="goToAiGenerate()">
+          <lucide-icon name="sparkles" [size]="16"></lucide-icon>
+          Generar con IA
+        </ui-button>
       </ui-empty-state>
     } @else {
       @if (previewError()) {
@@ -54,13 +57,19 @@
                   @if (statusFor(row, difficulty) === 'ok') {
                     <span data-testid="stock-ok" class="text-sm text-n600">de {{ stockFor(row, difficulty) }}</span>
                   } @else {
-                    <ui-tag data-testid="stock-warning" variant="warning-stock">solo {{ stockFor(row, difficulty) }} ✕</ui-tag>
+                    <ui-tag data-testid="stock-warning" variant="warning-stock"
+                      >solo {{ stockFor(row, difficulty) }}
+                      <lucide-icon name="triangle-alert" data-testid="stock-warning-icon" [size]="14"></lucide-icon
+                    ></ui-tag>
                     <div data-testid="bridge-to-ai" class="mt-2 flex flex-col gap-1">
                       <ui-button
                         data-testid="bridge-generate-ai"
                         variant="ghost"
                         (clicked)="goToAiGenerate(row, difficulty)"
-                      >✨ Generar {{ requestedFor(row, difficulty) - stockFor(row, difficulty) }} con IA</ui-button>
+                      >
+                        <lucide-icon name="sparkles" [size]="16"></lucide-icon>
+                        Generar {{ requestedFor(row, difficulty) - stockFor(row, difficulty) }} con IA
+                      </ui-button>
                       <ui-button data-testid="bridge-choose-bank" variant="ghost" (clicked)="goToBank()">Elegir del banco</ui-button>
                       <ui-button data-testid="bridge-lower-count" variant="ghost" (clicked)="lowerToStock(row, difficulty)">Bajar la cantidad</ui-button>
                     </div>
@@ -102,13 +111,19 @@
                 @if (statusFor(row, difficulty) === 'ok') {
                   <span data-testid="stock-ok" class="text-sm text-n600">de {{ stockFor(row, difficulty) }}</span>
                 } @else {
-                  <ui-tag data-testid="stock-warning" variant="warning-stock">solo {{ stockFor(row, difficulty) }} ✕</ui-tag>
+                  <ui-tag data-testid="stock-warning" variant="warning-stock"
+                    >solo {{ stockFor(row, difficulty) }}
+                    <lucide-icon name="triangle-alert" data-testid="stock-warning-icon" [size]="14"></lucide-icon
+                  ></ui-tag>
                   <div data-testid="bridge-to-ai" class="mt-2 flex flex-col gap-1">
                     <ui-button
                       data-testid="bridge-generate-ai"
                       variant="ghost"
                       (clicked)="goToAiGenerate(row, difficulty)"
-                    >✨ Generar {{ requestedFor(row, difficulty) - stockFor(row, difficulty) }} con IA</ui-button>
+                    >
+                      <lucide-icon name="sparkles" [size]="16"></lucide-icon>
+                      Generar {{ requestedFor(row, difficulty) - stockFor(row, difficulty) }} con IA
+                    </ui-button>
                     <ui-button data-testid="bridge-choose-bank" variant="ghost" (clicked)="goToBank()">Elegir del banco</ui-button>
                     <ui-button data-testid="bridge-lower-count" variant="ghost" (clicked)="lowerToStock(row, difficulty)">Bajar la cantidad</ui-button>
                   </div>
@@ -144,7 +159,7 @@
           (clicked)="onGenerateVersions()"
         >
           @if (!store.allSatisfiable()) {
-            🔒
+            <lucide-icon name="lock" [size]="16"></lucide-icon>
           }
           Generar versiones
         </ui-button>

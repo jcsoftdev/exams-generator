@@ -198,7 +198,7 @@ describe('ExamBuilderComponent', () => {
   });
 
   describe('short-stock', () => {
-    it('shows "solo 2 ✕" in the warning-stock tag when a row requests 6 with only 2 in stock', () => {
+    it('shows "solo 2" with a triangle-alert icon in the warning-stock tag when a row requests 6 with only 2 in stock', () => {
       const shortStock: StockBatchResult = {
         results: [
           { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 },
@@ -214,7 +214,9 @@ describe('ExamBuilderComponent', () => {
       const cell = compiled.querySelector('[data-cell-key="c1:t1:medium"]')!;
       const warning = cell.querySelector('[data-testid="stock-warning"]');
       expect(warning).toBeTruthy();
-      expect(warning!.textContent).toContain('solo 2 ✕');
+      expect(warning!.textContent).toContain('solo 2');
+      expect(warning!.querySelector('[data-testid="stock-warning-icon"]')).toBeTruthy();
+      expect(warning!.querySelector('svg.lucide-triangle-alert')).toBeTruthy();
     });
 
     it('shows the puente-a-IA affordance ("Generar con IA" / "Elegir del banco" / "Bajar la cantidad") on a shortage cell (EB-R2)', () => {

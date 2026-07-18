@@ -40,13 +40,13 @@
     </div>
   } @else if (questions().length === 0 && bankHasAnyQuestions()) {
     <div data-testid="empty-no-results">
-      <ui-empty-state message="Sin resultados para estos filtros." icon="🔍">
+      <ui-empty-state message="Sin resultados para estos filtros." icon="search">
         <ui-button cta variant="ghost" (clicked)="search()">Limpiar filtros</ui-button>
       </ui-empty-state>
     </div>
   } @else if (questions().length === 0) {
     <div data-testid="empty-bank">
-      <ui-empty-state message="Banco vacío: todavía no hay preguntas cargadas." icon="📭">
+      <ui-empty-state message="Banco vacío: todavía no hay preguntas cargadas." icon="inbox">
         <ui-button cta variant="primary" (clicked)="goToUpload()">Subir preguntas</ui-button>
       </ui-empty-state>
     </div>
