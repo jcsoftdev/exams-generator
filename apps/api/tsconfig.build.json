@@ -1,4 +1,11 @@
 {
   "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@exams-generator/shared": ["../../packages/shared/dist/index.d.ts"],
+      "@exams-generator/shared/*": ["../../packages/shared/dist/*"]
+    }
+  },
   "exclude": ["node_modules", "dist", "**/*.spec.ts"]
 }
