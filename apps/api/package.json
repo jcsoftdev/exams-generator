@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node dist/main.js",
-    "start:dev": "ts-node -r tsconfig-paths/register src/main.ts",
-    "dev": "ts-node -r tsconfig-paths/register src/main.ts",
+    "start:dev": "PORT=3012 ts-node -r tsconfig-paths/register src/main.ts",
+    "dev": "PORT=3012 ts-node -r tsconfig-paths/register src/main.ts",
     "build": "tsc -p tsconfig.build.json",
     "test": "jest",
     "test:watch": "jest --watch",
