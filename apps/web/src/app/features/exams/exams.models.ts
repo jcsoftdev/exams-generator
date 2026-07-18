@@ -139,3 +139,62 @@ export interface ExamDetail {
   readonly status: ExamStatus;
   readonly questions: readonly ExamDetailQuestion[];
 }
+
+/**
+ * `POST /exams/stock/batch` (B1) request cell — mirrors `StockBatchCellDto`
+ * in apps/api/src/modules/exams/exams.service.ts. `topicId`/`difficulty`
+ * are optional at the API level, but the exam-builder screen always sends
+ * both (one cell per curso·tema·nivel).
+ */
+export interface StockBatchCellPayload {
+  readonly courseId: string;
+  readonly topicId?: string;
+  readonly difficulty?: Difficulty;
+}
+
+export interface StockBatchPayload {
+  readonly gradeLevel: string;
+  readonly cells: readonly StockBatchCellPayload[];
+}
+
+/** Mirrors `StockBatchCellResult` — one entry per input cell, order-matched. */
+export interface StockBatchCellResult {
+  readonly courseId: string;
+  readonly topicId?: string;
+  readonly difficulty?: Difficulty;
+  readonly available: number;
+}
+
+export interface StockBatchResult {
+  readonly results: readonly StockBatchCellResult[];
+}
+
+/** `POST /exams/preview` (B2) request — same blueprint row shape as `CreateExamPayload` minus `title`. */
+export interface PreviewExamPayload {
+  readonly gradeLevel: string;
+  readonly blueprint: readonly CreateExamBlueprintRow[];
+}
+
+/** Mirrors `PreviewSelectionRow` — one entry per blueprint row, keyed by `rowIndex` (nothing persists, so no `blueprintRowId`). */
+export interface PreviewSelectionRow {
+  readonly rowIndex: number;
+  readonly courseId: string;
+  readonly topicId?: string;
+  readonly difficulty?: Difficulty;
+  readonly questionIds: readonly string[];
+}
+
+/** Mirrors `PreviewShortageDetail`. */
+export interface PreviewShortageDetail {
+  readonly rowIndex: number;
+  readonly courseId: string;
+  readonly topicId?: string;
+  readonly difficulty?: Difficulty;
+  readonly requested: number;
+  readonly available: number;
+}
+
+export interface PreviewExamResult {
+  readonly selections: readonly PreviewSelectionRow[];
+  readonly shortages: readonly PreviewShortageDetail[];
+}

@@ -7,8 +7,12 @@ import {
   CreateExamPayload,
   CreateExamResult,
   ExamDetail,
+  PreviewExamPayload,
+  PreviewExamResult,
   ReplaceQuestionPayload,
   ReplaceQuestionResult,
+  StockBatchPayload,
+  StockBatchResult,
 } from './exams.models';
 
 /**
@@ -46,5 +50,15 @@ export class ExamsService {
 
   confirmExam(examId: string): Observable<ConfirmExamResult> {
     return this.http.post<ConfirmExamResult>(`${environment.apiBaseUrl}/exams/${examId}/confirm`, {});
+  }
+
+  /** `POST /exams/stock/batch` (B1) — pure read, order-matched availability per cell. */
+  stockBatch(payload: StockBatchPayload): Observable<StockBatchResult> {
+    return this.http.post<StockBatchResult>(`${environment.apiBaseUrl}/exams/stock/batch`, payload);
+  }
+
+  /** `POST /exams/preview` (B2) — same body shape as `createExam` minus `title`; pure read, no persistence. */
+  previewExam(payload: PreviewExamPayload): Observable<PreviewExamResult> {
+    return this.http.post<PreviewExamResult>(`${environment.apiBaseUrl}/exams/preview`, payload);
   }
 }

@@ -5,7 +5,14 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { Difficulty } from '@exams-generator/shared';
 import { ExamsService } from './exams.service';
 import { environment } from '../../../environments/environment';
-import { ConfirmExamResult, CreateExamResult, ExamDetail, ReplaceQuestionResult } from './exams.models';
+import {
+  ConfirmExamResult,
+  CreateExamResult,
+  ExamDetail,
+  PreviewExamResult,
+  ReplaceQuestionResult,
+  StockBatchResult,
+} from './exams.models';
 
 describe('ExamsService', () => {
   let service: ExamsService;
@@ -148,6 +155,88 @@ describe('ExamsService', () => {
       httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1`).flush(detail);
 
       expect(response).toEqual(detail);
+    });
+  });
+
+  describe('stockBatch', () => {
+    it('POSTs {gradeLevel, cells} to /exams/stock/batch (B1)', () => {
+      service
+        .stockBatch({
+          gradeLevel: 'secundaria_1',
+          cells: [{ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy }],
+        })
+        .subscribe();
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/stock/batch`);
+      expect(req.request.method).toBe('POST');
+      expect(req.request.body).toEqual({
+        gradeLevel: 'secundaria_1',
+        cells: [{ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy }],
+      });
+      req.flush({ results: [{ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 }] });
+    });
+
+    it('resolves with the order-matched availability results', () => {
+      const result: StockBatchResult = {
+        results: [{ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 }],
+      };
+      let response: StockBatchResult | undefined;
+
+      service
+        .stockBatch({ gradeLevel: 'secundaria_1', cells: [{ courseId: 'c1' }] })
+        .subscribe((r: StockBatchResult) => (response = r));
+
+      httpMock.expectOne(`${environment.apiBaseUrl}/exams/stock/batch`).flush(result);
+
+      expect(response).toEqual(result);
+    });
+  });
+
+  describe('previewExam', () => {
+    it('POSTs {gradeLevel, blueprint} to /exams/preview (B2)', () => {
+      service
+        .previewExam({
+          gradeLevel: 'secundaria_1',
+          blueprint: [{ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, count: 6 }],
+        })
+        .subscribe();
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/preview`);
+      expect(req.request.method).toBe('POST');
+      expect(req.request.body).toEqual({
+        gradeLevel: 'secundaria_1',
+        blueprint: [{ courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, count: 6 }],
+      });
+      req.flush({
+        selections: [
+          { rowIndex: 0, courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, questionIds: ['q1', 'q2'] },
+        ],
+        shortages: [],
+      });
+    });
+
+    it('resolves with selections + shortages (no exact-id assertion — selection is random per B2-R5)', () => {
+      const result: PreviewExamResult = {
+        selections: [
+          { rowIndex: 0, courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, questionIds: ['q1'] },
+        ],
+        shortages: [{ rowIndex: 1, courseId: 'c2', requested: 10, available: 4 }],
+      };
+      let response: PreviewExamResult | undefined;
+
+      service
+        .previewExam({
+          gradeLevel: 'secundaria_1',
+          blueprint: [
+            { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, count: 1 },
+            { courseId: 'c2', count: 10 },
+          ],
+        })
+        .subscribe((r: PreviewExamResult) => (response = r));
+
+      httpMock.expectOne(`${environment.apiBaseUrl}/exams/preview`).flush(result);
+
+      expect(response).toEqual(result);
     });
   });
 });
