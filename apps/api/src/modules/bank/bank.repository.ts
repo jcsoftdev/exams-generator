@@ -1,8 +1,8 @@
 import { Difficulty } from "@exams-generator/shared";
 import { and, eq, isNull, or, SQL } from "drizzle-orm";
 import { db } from "../../db/client";
-import { assets, questions, topics } from "../../db/schema";
-import { QuestionType } from "../../db/schema/enums";
+import { assets, courses, questions, topics } from "../../db/schema";
+import { QuestionStatus, QuestionType } from "../../db/schema/enums";
 
 export interface CreateImageQuestionRecord {
   readonly tenantId: string | null;
@@ -29,6 +29,21 @@ export interface CreateStructuredQuestionRecord {
   readonly correctAnswer: string;
   readonly figureCode: string | undefined;
   readonly createdBy: string;
+  /**
+   * Defaults to `'approved'` (manual creation is curated by definition).
+   * The AI generation flow (Lane D3) passes `'draft'` explicitly — the AI
+   * NEVER publishes directly to the bank.
+   */
+  readonly status?: QuestionStatus;
+  /** Defaults to `false`. `true` only for AI-generated drafts (Lane D3). */
+  readonly aiGenerated?: boolean;
+}
+
+export interface UpdateStructuredQuestionRecord {
+  readonly bodyTypst: string;
+  readonly alternatives: readonly string[];
+  readonly correctAnswer: string;
+  readonly figureCode: string | undefined;
 }
 
 export interface QuestionListItem {
@@ -40,6 +55,8 @@ export interface QuestionListItem {
   readonly gradeLevel: string;
   readonly correctAnswer: string;
   readonly type: QuestionType;
+  readonly status: QuestionStatus;
+  readonly aiGenerated: boolean;
   readonly imageAssetId: string | null;
   readonly bodyTypst: string | null;
   readonly alternatives: unknown | null;
@@ -53,6 +70,7 @@ export interface QuestionListFilter {
   readonly topicId?: string;
   readonly difficulty?: Difficulty;
   readonly gradeLevel?: string;
+  readonly status?: QuestionStatus;
 }
 
 /**
@@ -127,12 +145,13 @@ export class BankRepository {
         topicId: record.topicId,
         difficulty: record.difficulty,
         gradeLevel: record.gradeLevel,
-        status: "approved",
+        status: record.status ?? "approved",
         bodyTypst: record.bodyTypst,
         alternatives: record.alternatives,
         figureCode: record.figureCode,
         correctAnswer: record.correctAnswer,
         createdBy: record.createdBy,
+        aiGenerated: record.aiGenerated ?? false,
       })
       .returning({ id: questions.id });
 
@@ -168,6 +187,9 @@ export class BankRepository {
     if (filter.gradeLevel) {
       conditions.push(eq(questions.gradeLevel, filter.gradeLevel) as SQL);
     }
+    if (filter.status) {
+      conditions.push(eq(questions.status, filter.status) as SQL);
+    }
 
     return db
       .select({
@@ -179,6 +201,8 @@ export class BankRepository {
         gradeLevel: questions.gradeLevel,
         correctAnswer: questions.correctAnswer,
         type: questions.type,
+        status: questions.status,
+        aiGenerated: questions.aiGenerated,
         imageAssetId: questions.imageAssetId,
         bodyTypst: questions.bodyTypst,
         alternatives: questions.alternatives,
@@ -214,6 +238,8 @@ export class BankRepository {
         gradeLevel: questions.gradeLevel,
         correctAnswer: questions.correctAnswer,
         type: questions.type,
+        status: questions.status,
+        aiGenerated: questions.aiGenerated,
         imageAssetId: questions.imageAssetId,
         bodyTypst: questions.bodyTypst,
         alternatives: questions.alternatives,
@@ -224,5 +250,123 @@ export class BankRepository {
       .where(and(eq(questions.id, id), visibility));
 
     return row;
+  }
+
+  /**
+   * Resolves the human-readable course/topic names the AI prompt needs
+   * (`QuestionGeneratorPort.generate()` takes `course`/`topic` as free text,
+   * see design doc §5.2) from the client-supplied ids. Returns `undefined`
+   * when either id doesn't exist OR the topic doesn't belong to the given
+   * course — the caller turns that into a 404/400, never a raw FK error.
+   */
+  async findCourseAndTopicNames(
+    courseId: string,
+    topicId: string,
+  ): Promise<{ courseName: string; topicName: string } | undefined> {
+    const [row] = await db
+      .select({ courseName: courses.name, topicName: topics.name })
+      .from(topics)
+      .innerJoin(courses, eq(topics.courseId, courses.id))
+      .where(and(eq(topics.id, topicId), eq(courses.id, courseId)));
+
+    return row;
+  }
+
+  /**
+   * Draft -> approved (Lane D3 human curation step). Scoped to the SAME
+   * visibility rule as `findQuestionById`/`listQuestions` — a tenant can
+   * only approve its own (or central) drafts. Also requires the row to
+   * currently be `status = 'draft'` (`and()` bakes that into the `UPDATE ...
+   * WHERE`, so it's atomic: no read-then-write race), so re-approving an
+   * already-approved question, or approving another tenant's draft, both
+   * resolve to `undefined` — the caller distinguishes 404 vs 409 by doing
+   * its own pre-check via `findQuestionById` before calling this.
+   */
+  async approveQuestion(
+    id: string,
+    currentTenantId: string | null,
+  ): Promise<{ id: string; status: QuestionStatus } | undefined> {
+    const visibility: SQL = currentTenantId
+      ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
+      : (isNull(questions.tenantId) as SQL);
+
+    const [row] = await db
+      .update(questions)
+      .set({ status: "approved" })
+      .where(and(eq(questions.id, id), eq(questions.status, "draft"), visibility))
+      .returning({ id: questions.id, status: questions.status });
+
+    return row;
+  }
+
+  /**
+   * Rejects a draft by deleting its row outright (design doc §5.2: rejected
+   * AI drafts are discarded, not archived). Same tenant-visibility +
+   * `status = 'draft'` scoping as `approveQuestion`. Returns `true` only
+   * when a row was actually deleted.
+   */
+  async rejectQuestion(id: string, currentTenantId: string | null): Promise<boolean> {
+    const visibility: SQL = currentTenantId
+      ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
+      : (isNull(questions.tenantId) as SQL);
+
+    const deleted = await db
+      .delete(questions)
+      .where(and(eq(questions.id, id), eq(questions.status, "draft"), visibility))
+      .returning({ id: questions.id });
+
+    return deleted.length > 0;
+  }
+
+  /**
+   * Human edit of a structured draft's content before approval (Lane D3:
+   * "un humano pueda editar el draft antes de aprobar"). Same
+   * tenant-visibility + `status = 'draft'` scoping as `approveQuestion` —
+   * only an editable draft the requester can see gets updated.
+   */
+  async updateStructuredQuestion(
+    id: string,
+    currentTenantId: string | null,
+    patch: UpdateStructuredQuestionRecord,
+  ): Promise<QuestionListItem | undefined> {
+    const visibility: SQL = currentTenantId
+      ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
+      : (isNull(questions.tenantId) as SQL);
+
+    const [row] = await db
+      .update(questions)
+      .set({
+        bodyTypst: patch.bodyTypst,
+        alternatives: patch.alternatives,
+        correctAnswer: patch.correctAnswer,
+        figureCode: patch.figureCode,
+      })
+      .where(and(eq(questions.id, id), eq(questions.status, "draft"), visibility))
+      .returning({
+        id: questions.id,
+        tenantId: questions.tenantId,
+        topicId: questions.topicId,
+        difficulty: questions.difficulty,
+        gradeLevel: questions.gradeLevel,
+        correctAnswer: questions.correctAnswer,
+        type: questions.type,
+        status: questions.status,
+        aiGenerated: questions.aiGenerated,
+        imageAssetId: questions.imageAssetId,
+        bodyTypst: questions.bodyTypst,
+        alternatives: questions.alternatives,
+        figureCode: questions.figureCode,
+      });
+
+    if (!row) {
+      return undefined;
+    }
+
+    const [topicRow] = await db
+      .select({ courseId: topics.courseId })
+      .from(topics)
+      .where(eq(topics.id, row.topicId));
+
+    return { ...row, courseId: topicRow?.courseId ?? "" };
   }
 }

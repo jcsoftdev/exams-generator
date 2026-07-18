@@ -1,6 +1,7 @@
 import { Difficulty, Role } from "@exams-generator/shared";
-import { BadRequestException, NotFoundException } from "@nestjs/common";
+import { BadRequestException, ConflictException, NotFoundException } from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
+import { TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { BankRepository, QuestionListItem } from "./bank.repository";
 import { BankService } from "./bank.service";
 
@@ -18,6 +19,9 @@ function buildDeps() {
     createStructuredQuestion: jest.fn().mockResolvedValue({ id: "question-2" }),
     listQuestions: jest.fn().mockResolvedValue([] as QuestionListItem[]),
     findQuestionById: jest.fn().mockResolvedValue(undefined as QuestionListItem | undefined),
+    approveQuestion: jest.fn().mockResolvedValue(undefined as { id: string; status: string } | undefined),
+    rejectQuestion: jest.fn().mockResolvedValue(false),
+    updateStructuredQuestion: jest.fn().mockResolvedValue(undefined as QuestionListItem | undefined),
   } as unknown as jest.Mocked<BankRepository>;
 
   const storage = {
@@ -26,8 +30,13 @@ function buildDeps() {
     delete: jest.fn(),
   };
 
-  const service = new BankService(repository, storage);
-  return { service, repository, storage };
+  const pdfCompiler = {
+    compileExam: jest.fn().mockResolvedValue(Buffer.from("fake-pdf-bytes")),
+    compileAnswerKey: jest.fn().mockResolvedValue(Buffer.from("fake-pdf-bytes")),
+  };
+
+  const service = new BankService(repository, storage, pdfCompiler);
+  return { service, repository, storage, pdfCompiler };
 }
 
 describe("BankService.createImageQuestion", () => {
@@ -188,6 +197,8 @@ describe("BankService.getQuestionById", () => {
     gradeLevel: "primaria_1",
     correctAnswer: "a",
     type: "image",
+    status: "approved",
+    aiGenerated: false,
     imageAssetId: "asset-1",
     bodyTypst: null,
     alternatives: null,
@@ -211,5 +222,151 @@ describe("BankService.getQuestionById", () => {
     await expect(service.getQuestionById(TEACHER_USER, "question-999")).rejects.toBeInstanceOf(
       NotFoundException,
     );
+  });
+});
+
+const DRAFT_QUESTION: QuestionListItem = {
+  id: "draft-1",
+  tenantId: "tenant-1",
+  courseId: "course-1",
+  topicId: "topic-1",
+  difficulty: Difficulty.Easy,
+  gradeLevel: "primaria_1",
+  correctAnswer: "0",
+  type: "structured",
+  status: "draft",
+  aiGenerated: true,
+  imageAssetId: null,
+  bodyTypst: "draft body",
+  alternatives: ["1", "2", "3"],
+  figureCode: null,
+};
+
+describe("BankService.approveQuestion", () => {
+  it("approves a draft owned by the requester's tenant", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
+    repository.approveQuestion.mockResolvedValue({ id: "draft-1", status: "approved" });
+
+    const result = await service.approveQuestion(TEACHER_USER, "draft-1");
+
+    expect(repository.approveQuestion).toHaveBeenCalledWith("draft-1", "tenant-1");
+    expect(result).toEqual({ id: "draft-1" });
+  });
+
+  it("throws NotFoundException when the question doesn't exist or isn't visible to the requester", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(undefined);
+
+    await expect(service.approveQuestion(TEACHER_USER, "missing")).rejects.toBeInstanceOf(
+      NotFoundException,
+    );
+    expect(repository.approveQuestion).not.toHaveBeenCalled();
+  });
+
+  it("throws ConflictException when the question is already approved", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, status: "approved" });
+
+    await expect(service.approveQuestion(TEACHER_USER, "draft-1")).rejects.toBeInstanceOf(
+      ConflictException,
+    );
+    expect(repository.approveQuestion).not.toHaveBeenCalled();
+  });
+});
+
+describe("BankService.rejectQuestion", () => {
+  it("rejects (deletes) a draft owned by the requester's tenant", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
+    repository.rejectQuestion.mockResolvedValue(true);
+
+    const result = await service.rejectQuestion(TEACHER_USER, "draft-1");
+
+    expect(repository.rejectQuestion).toHaveBeenCalledWith("draft-1", "tenant-1");
+    expect(result).toEqual({ id: "draft-1" });
+  });
+
+  it("throws NotFoundException when the question doesn't exist or isn't visible to the requester", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(undefined);
+
+    await expect(service.rejectQuestion(TEACHER_USER, "missing")).rejects.toBeInstanceOf(
+      NotFoundException,
+    );
+  });
+
+  it("throws ConflictException when the question is already approved", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, status: "approved" });
+
+    await expect(service.rejectQuestion(TEACHER_USER, "draft-1")).rejects.toBeInstanceOf(
+      ConflictException,
+    );
+  });
+});
+
+describe("BankService.editDraftQuestion", () => {
+  it("recompiles the Typst preview and persists the merged edit", async () => {
+    const { service, repository, pdfCompiler } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
+    repository.updateStructuredQuestion.mockResolvedValue({
+      ...DRAFT_QUESTION,
+      bodyTypst: "edited body",
+    });
+
+    const result = await service.editDraftQuestion(TEACHER_USER, "draft-1", {
+      bodyTypst: "edited body",
+    });
+
+    expect(pdfCompiler.compileExam).toHaveBeenCalledTimes(1);
+    expect(repository.updateStructuredQuestion).toHaveBeenCalledWith(
+      "draft-1",
+      "tenant-1",
+      expect.objectContaining({ bodyTypst: "edited body", alternatives: ["1", "2", "3"] }),
+    );
+    expect(result.bodyTypst).toBe("edited body");
+  });
+
+  it("throws BadRequestException and does NOT persist when the Typst preview fails to compile", async () => {
+    const { service, repository, pdfCompiler } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
+    pdfCompiler.compileExam.mockRejectedValue(
+      new TypstCompilationError("typst compile failed", "draft-1", "syntax error"),
+    );
+
+    await expect(
+      service.editDraftQuestion(TEACHER_USER, "draft-1", { bodyTypst: "#broken{" }),
+    ).rejects.toBeInstanceOf(BadRequestException);
+
+    expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
+  });
+
+  it("throws NotFoundException when the question doesn't exist or isn't visible to the requester", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(undefined);
+
+    await expect(
+      service.editDraftQuestion(TEACHER_USER, "missing", { bodyTypst: "x" }),
+    ).rejects.toBeInstanceOf(NotFoundException);
+  });
+
+  it("throws ConflictException when the question is already approved", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, status: "approved" });
+
+    await expect(
+      service.editDraftQuestion(TEACHER_USER, "draft-1", { bodyTypst: "x" }),
+    ).rejects.toBeInstanceOf(ConflictException);
+  });
+
+  it("throws BadRequestException when the merged content fails validation", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
+
+    await expect(
+      service.editDraftQuestion(TEACHER_USER, "draft-1", { bodyTypst: "   " }),
+    ).rejects.toBeInstanceOf(BadRequestException);
+    expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
   });
 });

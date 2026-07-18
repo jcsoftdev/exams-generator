@@ -1,5 +1,6 @@
 import { Difficulty } from "@exams-generator/shared";
 import { isGradeLevel } from "../../exams/domain/value-objects/grade-level";
+import { validateStructuredContent } from "./validate-structured-content";
 
 /**
  * Pure input shape the controller/service maps its raw request into before
@@ -25,7 +26,6 @@ export type CreateStructuredQuestionValidation =
   | { readonly ok: false; readonly errors: readonly string[] };
 
 const VALID_DIFFICULTIES = new Set<string>(Object.values(Difficulty));
-const MIN_ALTERNATIVES = 2;
 
 /**
  * Manual structured-question creation validation. Unlike image uploads,
@@ -52,27 +52,14 @@ export function validateCreateStructuredQuestionInput(
   if (!input.gradeLevel || !isGradeLevel(input.gradeLevel)) {
     errors.push("gradeLevel is required and must be a valid catalog value");
   }
-  if (!input.bodyTypst || input.bodyTypst.trim().length === 0) {
-    errors.push("bodyTypst is required");
-  }
 
-  const alternatives = input.alternatives;
-  if (
-    !alternatives ||
-    alternatives.length < MIN_ALTERNATIVES ||
-    alternatives.some((alt) => !alt || alt.trim().length === 0)
-  ) {
-    errors.push(`alternatives is required and must have at least ${MIN_ALTERNATIVES} non-blank entries`);
-  }
-
-  if (!input.correctAnswer) {
-    errors.push("correctAnswer is required");
-  } else if (alternatives && alternatives.length >= MIN_ALTERNATIVES) {
-    const index = Number(input.correctAnswer);
-    if (!Number.isInteger(index) || index < 0 || index >= alternatives.length) {
-      errors.push("correctAnswer must be a valid 0-based index into alternatives");
-    }
-  }
+  errors.push(
+    ...validateStructuredContent({
+      bodyTypst: input.bodyTypst,
+      alternatives: input.alternatives,
+      correctAnswer: input.correctAnswer,
+    }),
+  );
 
   return errors.length > 0 ? { ok: false, errors } : { ok: true };
 }
