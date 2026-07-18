@@ -15,6 +15,7 @@ import { Rng, createSeededRng } from "./domain/ports/random.port";
 import {
   AnswerKeyDocumentInput,
   ExamPdfDocumentInput,
+  ExamPdfQuestion,
   PdfCompilerPort,
   TypstCompilationError,
 } from "./domain/ports/pdf-compiler.port";
@@ -102,20 +103,41 @@ export class ExamVersionGenerationService {
       throw new ConflictException("Exam has no selected questions");
     }
 
-    const selected: SelectedQuestion[] = exam.selectedQuestions.map((q) => ({
-      questionId: q.questionId,
-      correctAnswer: q.correctAnswer,
-    }));
+    // Discriminated by `type` (design doc §5.4, Lane D4): `structured`
+    // questions carry `alternatives` so `buildVersions()`/`VersionShuffler`
+    // actually shuffles them and recomputes the answer key; `image`
+    // questions pass `correctAnswer` straight through, unchanged.
+    const selected: SelectedQuestion[] = exam.selectedQuestions.map((q): SelectedQuestion =>
+      q.type === "structured"
+        ? {
+            type: "structured",
+            questionId: q.questionId,
+            alternatives: q.alternatives ?? [],
+            correctAnswer: q.correctAnswer,
+          }
+        : {
+            questionId: q.questionId,
+            correctAnswer: q.correctAnswer,
+          },
+    );
     const versions = buildVersions(selected, versionCount, this.rngFactory());
+
+    const questionById = new Map(exam.selectedQuestions.map((q) => [q.questionId, q]));
 
     const workDir = await fs.mkdtemp(path.join(os.tmpdir(), "exam-gen-"));
     try {
-      const imagePathByQuestionId = await this.materializeQuestionImages(workDir, exam.selectedQuestions);
+      // Image materialization only ever applies to `type='image'` questions
+      // — `type='structured'` questions render from `bodyTypst`/
+      // `alternatives`/`figureCode` text, no on-disk image involved.
+      const imageQuestions = exam.selectedQuestions.filter((q) => q.type !== "structured");
+      const imagePathByQuestionId = await this.materializeQuestionImages(workDir, imageQuestions);
       const logoPath = await this.materializeLogo(workDir, exam);
 
       const results: GeneratedVersionResult[] = [];
       for (const version of versions) {
-        results.push(await this.generateOneVersion(exam, version, imagePathByQuestionId, logoPath));
+        results.push(
+          await this.generateOneVersion(exam, version, questionById, imagePathByQuestionId, logoPath),
+        );
       }
       return results;
     } finally {
@@ -126,6 +148,7 @@ export class ExamVersionGenerationService {
   private async generateOneVersion(
     exam: ExamForGenerationRecord,
     version: Version,
+    questionById: ReadonlyMap<string, SelectedQuestionForGeneration>,
     imagePathByQuestionId: ReadonlyMap<string, string>,
     logoPath: string | undefined,
   ): Promise<GeneratedVersionResult> {
@@ -135,10 +158,9 @@ export class ExamVersionGenerationService {
       title: exam.title,
       versionLabel,
       tenantLogoAbsolutePath: logoPath,
-      questions: version.questionOrder.map((questionId) => ({
-        id: questionId,
-        imageAbsolutePath: imagePathByQuestionId.get(questionId)!,
-      })),
+      questions: version.questionOrder.map((questionId) =>
+        this.buildPdfQuestion(questionId, questionById, imagePathByQuestionId, version),
+      ),
     };
 
     const answerKeyInput: AnswerKeyDocumentInput = {
@@ -180,6 +202,43 @@ export class ExamVersionGenerationService {
     });
 
     return { code: version.code, pdfUrl, answerSheetUrl };
+  }
+
+  /**
+   * Maps one shuffled `questionOrder` entry to the discriminated
+   * `ExamPdfQuestion` the compiler/template expect (`pdf-compiler.port.ts`,
+   * `typst-template.ts`). `type='structured'` questions render from
+   * `bodyTypst`/`figureCode` plus `version.shuffledAlternatives[questionId]`
+   * — the ALREADY-PERMUTED alternative texts for this specific version, so
+   * the printed lettering (A/B/C…) matches `version.answerKey[position]`
+   * (see `VersionShuffler`'s invariant docstring). `type='image'` questions
+   * keep rendering from the materialized on-disk path, unchanged.
+   */
+  private buildPdfQuestion(
+    questionId: string,
+    questionById: ReadonlyMap<string, SelectedQuestionForGeneration>,
+    imagePathByQuestionId: ReadonlyMap<string, string>,
+    version: Version,
+  ): ExamPdfQuestion {
+    const question = questionById.get(questionId);
+    if (!question) {
+      throw new ConflictException(`Question ${questionId} is not part of this exam's selection`);
+    }
+
+    if (question.type === "structured") {
+      return {
+        id: questionId,
+        type: "structured",
+        bodyTypst: question.bodyTypst ?? "",
+        alternatives: version.shuffledAlternatives[questionId] ?? question.alternatives ?? [],
+        figureCode: question.figureCode ?? undefined,
+      };
+    }
+
+    return {
+      id: questionId,
+      imageAbsolutePath: imagePathByQuestionId.get(questionId)!,
+    };
   }
 
   private async materializeQuestionImages(
