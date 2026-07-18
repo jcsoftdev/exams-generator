@@ -1,5 +1,10 @@
 import { Difficulty, Role } from "@exams-generator/shared";
-import { BadRequestException, ConflictException, NotFoundException } from "@nestjs/common";
+import {
+  BadRequestException,
+  ConflictException,
+  ForbiddenException,
+  NotFoundException,
+} from "@nestjs/common";
 import { AuthTokenPayload } from "../auth/token.service";
 import { TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { BankRepository, QuestionListItem } from "./bank.repository";
@@ -7,6 +12,25 @@ import { BankService } from "./bank.service";
 
 const STAFF_USER: AuthTokenPayload = { sub: "staff-1", tenantId: null, role: Role.ContentEditor };
 const TEACHER_USER: AuthTokenPayload = { sub: "teacher-1", tenantId: "tenant-1", role: Role.Teacher };
+/**
+ * A `teacher` (tenant role) whose token carries `tenantId: null` — this is
+ * exactly what "a tenant tries to create/manage centrally" looks like at
+ * the JWT-payload level, since a legitimate tenant account always has
+ * `tenantId` set (see design doc §2). `JwtAuthGuard` doesn't touch the DB,
+ * so a forged/misissued token like this reaches the service — this is the
+ * authorization boundary the service-level check protects.
+ */
+const TENANT_ROLE_NO_TENANT_ID_USER: AuthTokenPayload = {
+  sub: "rogue-1",
+  tenantId: null,
+  role: Role.Teacher,
+};
+/** A staff role (`content_editor`) whose token carries a `tenantId` — mirror case. */
+const STAFF_ROLE_WITH_TENANT_ID_USER: AuthTokenPayload = {
+  sub: "rogue-2",
+  tenantId: "tenant-1",
+  role: Role.ContentEditor,
+};
 
 const VALID_FILE = {
   buffer: Buffer.from("fake-image-bytes"),
@@ -100,6 +124,42 @@ describe("BankService.createImageQuestion", () => {
     expect(storage.put).not.toHaveBeenCalled();
     expect(repository.createImageQuestion).not.toHaveBeenCalled();
   });
+
+  it("throws ForbiddenException when a tenant role (teacher) attempts to create centrally (tenantId=null)", async () => {
+    const { service, repository, storage } = buildDeps();
+
+    await expect(
+      service.createImageQuestion(TENANT_ROLE_NO_TENANT_ID_USER, {
+        courseId: "course-1",
+        topicId: "topic-1",
+        difficulty: Difficulty.Easy,
+        gradeLevel: "primaria_1",
+        correctAnswer: "a",
+        file: VALID_FILE,
+      }),
+    ).rejects.toBeInstanceOf(ForbiddenException);
+
+    expect(storage.put).not.toHaveBeenCalled();
+    expect(repository.createImageQuestion).not.toHaveBeenCalled();
+  });
+
+  it("throws ForbiddenException when a staff role (content_editor) attempts to create for a tenant", async () => {
+    const { service, repository, storage } = buildDeps();
+
+    await expect(
+      service.createImageQuestion(STAFF_ROLE_WITH_TENANT_ID_USER, {
+        courseId: "course-1",
+        topicId: "topic-1",
+        difficulty: Difficulty.Easy,
+        gradeLevel: "primaria_1",
+        correctAnswer: "a",
+        file: VALID_FILE,
+      }),
+    ).rejects.toBeInstanceOf(ForbiddenException);
+
+    expect(storage.put).not.toHaveBeenCalled();
+    expect(repository.createImageQuestion).not.toHaveBeenCalled();
+  });
 });
 
 describe("BankService.createStructuredQuestion", () => {
@@ -160,6 +220,26 @@ describe("BankService.createStructuredQuestion", () => {
         figureCode: undefined,
       }),
     ).rejects.toBeInstanceOf(BadRequestException);
+
+    expect(repository.createStructuredQuestion).not.toHaveBeenCalled();
+  });
+
+  it("throws ForbiddenException when a tenant role (teacher) attempts to create centrally (tenantId=null)", async () => {
+    const { service, repository } = buildDeps();
+
+    await expect(
+      service.createStructuredQuestion(TENANT_ROLE_NO_TENANT_ID_USER, VALID_DTO),
+    ).rejects.toBeInstanceOf(ForbiddenException);
+
+    expect(repository.createStructuredQuestion).not.toHaveBeenCalled();
+  });
+
+  it("throws ForbiddenException when a staff role (content_editor) attempts to create for a tenant", async () => {
+    const { service, repository } = buildDeps();
+
+    await expect(
+      service.createStructuredQuestion(STAFF_ROLE_WITH_TENANT_ID_USER, VALID_DTO),
+    ).rejects.toBeInstanceOf(ForbiddenException);
 
     expect(repository.createStructuredQuestion).not.toHaveBeenCalled();
   });
@@ -273,6 +353,26 @@ describe("BankService.approveQuestion", () => {
     );
     expect(repository.approveQuestion).not.toHaveBeenCalled();
   });
+
+  it("throws ForbiddenException when a tenant role (teacher) tries to approve a central draft", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, tenantId: null });
+
+    await expect(service.approveQuestion(TEACHER_USER, "draft-1")).rejects.toBeInstanceOf(
+      ForbiddenException,
+    );
+    expect(repository.approveQuestion).not.toHaveBeenCalled();
+  });
+
+  it("throws ForbiddenException when a staff role (content_editor) tries to approve a tenant's draft", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
+
+    await expect(service.approveQuestion(STAFF_USER, "draft-1")).rejects.toBeInstanceOf(
+      ForbiddenException,
+    );
+    expect(repository.approveQuestion).not.toHaveBeenCalled();
+  });
 });
 
 describe("BankService.rejectQuestion", () => {
@@ -303,6 +403,16 @@ describe("BankService.rejectQuestion", () => {
     await expect(service.rejectQuestion(TEACHER_USER, "draft-1")).rejects.toBeInstanceOf(
       ConflictException,
     );
+  });
+
+  it("throws ForbiddenException when a tenant role (teacher) tries to reject a central draft", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, tenantId: null });
+
+    await expect(service.rejectQuestion(TEACHER_USER, "draft-1")).rejects.toBeInstanceOf(
+      ForbiddenException,
+    );
+    expect(repository.rejectQuestion).not.toHaveBeenCalled();
   });
 });
 
@@ -367,6 +477,16 @@ describe("BankService.editDraftQuestion", () => {
     await expect(
       service.editDraftQuestion(TEACHER_USER, "draft-1", { bodyTypst: "   " }),
     ).rejects.toBeInstanceOf(BadRequestException);
+    expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
+  });
+
+  it("throws ForbiddenException when a tenant role (teacher) tries to edit a central draft", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, tenantId: null });
+
+    await expect(
+      service.editDraftQuestion(TEACHER_USER, "draft-1", { bodyTypst: "x" }),
+    ).rejects.toBeInstanceOf(ForbiddenException);
     expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
   });
 });
