@@ -103,6 +103,7 @@ CREATE TABLE IF NOT EXISTS "exam_questions" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"exam_id" uuid NOT NULL,
 	"question_id" uuid NOT NULL,
+	"blueprint_row_id" uuid,
 	"position" integer NOT NULL
 );
 --> statement-breakpoint
@@ -206,6 +207,12 @@ END $$;
 --> statement-breakpoint
 DO $$ BEGIN
  ALTER TABLE "exam_questions" ADD CONSTRAINT "exam_questions_question_id_questions_id_fk" FOREIGN KEY ("question_id") REFERENCES "public"."questions"("id") ON DELETE no action ON UPDATE no action;
+EXCEPTION
+ WHEN duplicate_object THEN null;
+END $$;
+--> statement-breakpoint
+DO $$ BEGIN
+ ALTER TABLE "exam_questions" ADD CONSTRAINT "exam_questions_blueprint_row_id_exam_blueprint_rows_id_fk" FOREIGN KEY ("blueprint_row_id") REFERENCES "public"."exam_blueprint_rows"("id") ON DELETE no action ON UPDATE no action;
 EXCEPTION
  WHEN duplicate_object THEN null;
 END $$;
