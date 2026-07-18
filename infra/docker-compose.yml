@@ -1,13 +1,13 @@
 services:
   postgres:
-    image: postgres:16
+    image: postgres:17.2-bookworm
     restart: unless-stopped
     environment:
       POSTGRES_USER: ${DB_USER:-exams}
       POSTGRES_PASSWORD: ${DB_PASSWORD:-exams}
       POSTGRES_DB: ${DB_NAME:-exams_generator}
     ports:
-      - "${DB_PORT:-5432}:5432"
+      - "${DB_PORT:-5439}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -24,8 +24,8 @@ services:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
     ports:
-      - "${MINIO_API_PORT:-9000}:9000"
-      - "${MINIO_CONSOLE_PORT:-9001}:9001"
+      - "${MINIO_API_PORT:-9030}:9000"
+      - "${MINIO_CONSOLE_PORT:-9003}:9001"
     volumes:
       - minio_data:/data
     healthcheck:
@@ -47,14 +47,26 @@ services:
     environment:
       DATABASE_URL: postgres://${DB_USER:-exams}:${DB_PASSWORD:-exams}@postgres:5432/${DB_NAME:-exams_generator}
       MINIO_ENDPOINT: minio
-      MINIO_PORT: ${MINIO_API_PORT:-9000}
+      MINIO_PORT: 9000
       MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
-      JWT_SECRET: ${JWT_SECRET}
+      JWT_SECRET: ${JWT_SECRET:?JWT_SECRET must be set}
       AI_MODEL: ${AI_MODEL}
       PORT: 3000
     ports:
-      - "${API_PORT:-3000}:3000"
+      - "${API_PORT:-3012}:3000"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "require('http').get('http://localhost:3000/health', (res) => process.exit(res.statusCode === 200 ? 0 : 1)).on('error', () => process.exit(1))",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
 
 volumes:
   postgres_data:

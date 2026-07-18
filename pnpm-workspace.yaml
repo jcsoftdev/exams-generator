@@ -1,6 +1,7 @@
 packages:
   - "apps/*"
   - "packages/*"
+injectWorkspacePackages: true
 allowBuilds:
   '@nestjs/core': true
   '@parcel/watcher': true

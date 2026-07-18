@@ -1,4 +1,5 @@
-FROM node:20-bookworm-slim AS base
+FROM node:22-bookworm-slim AS base
+ENV CI=true
 
 # Install the typst CLI binary (PdfCompilerPort adapter dependency).
 # Pinned version — bump deliberately when upgrading Typst.
@@ -28,12 +29,11 @@ RUN pnpm install --frozen-lockfile --filter "@exams-generator/api..." || pnpm in
 FROM deps AS build
 COPY . .
 RUN pnpm --filter @exams-generator/api build
+RUN pnpm --filter @exams-generator/api deploy --prod --legacy /app/deploy
 
 FROM base AS runtime
 ENV NODE_ENV=production
-COPY --from=build /app/apps/api/dist ./dist
-COPY --from=build /app/node_modules ./node_modules
-COPY --from=build /app/apps/api/package.json ./package.json
+COPY --from=build /app/deploy ./
 
 EXPOSE 3000
 CMD ["node", "dist/main.js"]

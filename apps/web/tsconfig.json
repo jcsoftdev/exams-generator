@@ -2,6 +2,7 @@
 /* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "compileOnSave": false,
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -11,12 +12,10 @@
     "isolatedModules": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "ES2022",
     "module": "preserve",
-    "paths": {
-      "@exams-generator/shared": ["../../packages/shared/src/index.ts"],
-      "@exams-generator/shared/*": ["../../packages/shared/src/*"]
-    }
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "dom"],
+    "ignoreDeprecations": "6.0"
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
