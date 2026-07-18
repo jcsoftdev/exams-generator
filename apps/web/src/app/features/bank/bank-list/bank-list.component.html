@@ -1,0 +1,65 @@
+<section class="bank-list">
+  <h1>Question Bank</h1>
+
+  <form [formGroup]="filtersForm" (ngSubmit)="search()" class="bank-list__filters">
+    <label>
+      Course
+      <input type="text" name="courseId" formControlName="courseId" />
+    </label>
+    <label>
+      Topic
+      <input type="text" name="topicId" formControlName="topicId" />
+    </label>
+    <label>
+      Difficulty
+      <select name="difficulty" formControlName="difficulty">
+        <option value="">All</option>
+        @for (difficulty of difficulties; track difficulty) {
+          <option [value]="difficulty">{{ difficulty }}</option>
+        }
+      </select>
+    </label>
+    <label>
+      Grade level
+      <select name="gradeLevel" formControlName="gradeLevel">
+        <option value="">All</option>
+        @for (gradeLevel of gradeLevels; track gradeLevel) {
+          <option [value]="gradeLevel">{{ gradeLevelLabels[gradeLevel] }}</option>
+        }
+      </select>
+    </label>
+    <button type="submit">Filter</button>
+  </form>
+
+  @if (errorMessage()) {
+    <p class="bank-list__error" role="alert">{{ errorMessage() }}</p>
+  }
+
+  @if (loading()) {
+    <p>Loading...</p>
+  } @else {
+    <ul class="bank-list__questions">
+      @for (question of questions(); track question.id) {
+        <li class="bank-list__question" data-testid="bank-question">
+          @if (imageUrl(question); as url) {
+            <img [src]="url" [alt]="'Question ' + question.id" />
+          }
+          <dl>
+            <dt>Answer</dt>
+            <dd>{{ question.correctAnswer }}</dd>
+            <dt>Course</dt>
+            <dd>{{ question.courseId }}</dd>
+            <dt>Topic</dt>
+            <dd>{{ question.topicId }}</dd>
+            <dt>Difficulty</dt>
+            <dd>{{ question.difficulty }}</dd>
+            <dt>Grade level</dt>
+            <dd>{{ question.gradeLevel }}</dd>
+          </dl>
+        </li>
+      } @empty {
+        <li>No questions found.</li>
+      }
+    </ul>
+  }
+</section>

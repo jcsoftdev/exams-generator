@@ -1,0 +1,48 @@
+<section class="bank-upload">
+  <h1>Upload Question</h1>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label>
+      Course
+      <input type="text" name="courseId" formControlName="courseId" />
+    </label>
+    <label>
+      Topic
+      <input type="text" name="topicId" formControlName="topicId" />
+    </label>
+    <label>
+      Difficulty
+      <select name="difficulty" formControlName="difficulty">
+        <option value="">Select...</option>
+        @for (difficulty of difficulties; track difficulty) {
+          <option [value]="difficulty">{{ difficulty }}</option>
+        }
+      </select>
+    </label>
+    <label>
+      Grade level
+      <select name="gradeLevel" formControlName="gradeLevel">
+        <option value="">Select...</option>
+        @for (gradeLevel of gradeLevels; track gradeLevel) {
+          <option [value]="gradeLevel">{{ gradeLevelLabels[gradeLevel] }}</option>
+        }
+      </select>
+    </label>
+    <label>
+      Correct answer
+      <input type="text" name="correctAnswer" formControlName="correctAnswer" />
+    </label>
+    <label>
+      Image
+      <input type="file" name="image" accept="image/*" (change)="onFileSelected($event)" />
+    </label>
+    <button type="submit" [disabled]="submitting()">Upload</button>
+  </form>
+
+  @if (successMessage()) {
+    <p class="bank-upload__success" role="status">{{ successMessage() }}</p>
+  }
+  @if (errorMessage()) {
+    <p class="bank-upload__error" role="alert">{{ errorMessage() }}</p>
+  }
+</section>
