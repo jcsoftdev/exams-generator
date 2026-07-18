@@ -23,11 +23,21 @@
         <div [formGroupName]="i" class="exam-blueprint__row" data-testid="blueprint-row">
           <label>
             Course
-            <input type="text" name="courseId" formControlName="courseId" />
+            <select name="courseId" formControlName="courseId">
+              <option value="">Select...</option>
+              @for (course of courses(); track course.id) {
+                <option [value]="course.id">{{ course.name }}</option>
+              }
+            </select>
           </label>
           <label>
             Topic (optional)
-            <input type="text" name="topicId" formControlName="topicId" />
+            <select name="topicId" formControlName="topicId" [disabled]="!row.controls.courseId.value">
+              <option value="">Any</option>
+              @for (topic of topicsForRow(row); track topic.id) {
+                <option [value]="topic.id">{{ topic.name }}</option>
+              }
+            </select>
           </label>
           <label>
             Difficulty (optional)

@@ -4,26 +4,49 @@ import { of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { BankUploadComponent } from './bank-upload.component';
 import { BankService } from '../bank.service';
+import { TaxonomyService } from '../../taxonomy/taxonomy.service';
+import { Course, Topic } from '../../taxonomy/taxonomy.models';
 
-function setup(uploadImpl: (...args: unknown[]) => unknown) {
+const COURSES: Course[] = [
+  { id: 'course-1', name: 'Aritmética' },
+  { id: 'course-2', name: 'Álgebra' },
+];
+
+const TOPICS_COURSE_1: Topic[] = [{ id: 'topic-1', name: 'Fracciones', courseId: 'course-1' }];
+
+function setup(
+  uploadImpl: (...args: unknown[]) => unknown,
+  taxonomyOverrides: { getCourses?: () => unknown; getTopics?: (...args: unknown[]) => unknown } = {},
+) {
   const uploadImageQuestion = vi.fn(uploadImpl);
+  const getCourses = vi.fn(taxonomyOverrides.getCourses ?? (() => of(COURSES)));
+  const getTopics = vi.fn(taxonomyOverrides.getTopics ?? (() => of(TOPICS_COURSE_1)));
 
   TestBed.configureTestingModule({
     imports: [BankUploadComponent],
-    providers: [{ provide: BankService, useValue: { uploadImageQuestion } }],
+    providers: [
+      { provide: BankService, useValue: { uploadImageQuestion } },
+      { provide: TaxonomyService, useValue: { getCourses, getTopics } },
+    ],
   });
 
   const fixture = TestBed.createComponent(BankUploadComponent);
   fixture.detectChanges();
   const compiled = fixture.nativeElement as HTMLElement;
 
-  const courseInput = compiled.querySelector<HTMLInputElement>('input[name="courseId"]')!;
-  const topicInput = compiled.querySelector<HTMLInputElement>('input[name="topicId"]')!;
+  const courseSelect = compiled.querySelector<HTMLSelectElement>('select[name="courseId"]')!;
+  const topicSelect = compiled.querySelector<HTMLSelectElement>('select[name="topicId"]')!;
   const difficultySelect = compiled.querySelector<HTMLSelectElement>('select[name="difficulty"]')!;
   const gradeLevelSelect = compiled.querySelector<HTMLSelectElement>('select[name="gradeLevel"]')!;
   const answerInput = compiled.querySelector<HTMLInputElement>('input[name="correctAnswer"]')!;
   const fileInput = compiled.querySelector<HTMLInputElement>('input[type="file"]')!;
   const form = compiled.querySelector<HTMLFormElement>('form')!;
+
+  function selectCourse(courseId: string) {
+    courseSelect.value = courseId;
+    courseSelect.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+  }
 
   function fillForm(overrides: {
     courseId?: string;
@@ -33,10 +56,9 @@ function setup(uploadImpl: (...args: unknown[]) => unknown) {
     correctAnswer?: string;
     file?: File;
   }) {
-    courseInput.value = overrides.courseId ?? 'course-1';
-    courseInput.dispatchEvent(new Event('input'));
-    topicInput.value = overrides.topicId ?? 'topic-1';
-    topicInput.dispatchEvent(new Event('input'));
+    selectCourse(overrides.courseId ?? 'course-1');
+    topicSelect.value = overrides.topicId ?? 'topic-1';
+    topicSelect.dispatchEvent(new Event('change'));
     difficultySelect.value = overrides.difficulty ?? 'medium';
     difficultySelect.dispatchEvent(new Event('change'));
     gradeLevelSelect.value = overrides.gradeLevel ?? 'primaria_3';
@@ -56,19 +78,63 @@ function setup(uploadImpl: (...args: unknown[]) => unknown) {
     fixture.detectChanges();
   }
 
-  return { fixture, compiled, uploadImageQuestion, fillForm, submit, fileInput };
+  return {
+    fixture,
+    compiled,
+    uploadImageQuestion,
+    getCourses,
+    getTopics,
+    fillForm,
+    submit,
+    fileInput,
+    courseSelect,
+    topicSelect,
+    selectCourse,
+  };
 }
 
 describe('BankUploadComponent', () => {
-  it('renders course/topic/difficulty/gradeLevel/correctAnswer fields plus a file input', () => {
+  it('renders course/topic dropdowns plus difficulty/gradeLevel/correctAnswer fields and a file input', () => {
     const { compiled } = setup(() => of({ id: 'new-id' }));
 
-    expect(compiled.querySelector('input[name="courseId"]')).toBeTruthy();
-    expect(compiled.querySelector('input[name="topicId"]')).toBeTruthy();
+    expect(compiled.querySelector('select[name="courseId"]')).toBeTruthy();
+    expect(compiled.querySelector('select[name="topicId"]')).toBeTruthy();
     expect(compiled.querySelector('select[name="difficulty"]')).toBeTruthy();
     expect(compiled.querySelector('select[name="gradeLevel"]')).toBeTruthy();
     expect(compiled.querySelector('input[name="correctAnswer"]')).toBeTruthy();
     expect(compiled.querySelector('input[type="file"]')).toBeTruthy();
+  });
+
+  it('loads courses from TaxonomyService and populates the course dropdown', () => {
+    const { compiled, getCourses } = setup(() => of({ id: 'new-id' }));
+
+    expect(getCourses).toHaveBeenCalledTimes(1);
+    const options = compiled.querySelectorAll('select[name="courseId"] option');
+    expect(Array.from(options).some((o) => o.textContent === 'Aritmética')).toBe(true);
+    expect(Array.from(options).some((o) => o.textContent === 'Álgebra')).toBe(true);
+  });
+
+  it('loads topics for the selected course and populates the topic dropdown', () => {
+    const { compiled, getTopics, selectCourse } = setup(() => of({ id: 'new-id' }));
+
+    selectCourse('course-1');
+
+    expect(getTopics).toHaveBeenCalledWith('course-1');
+    const options = compiled.querySelectorAll('select[name="topicId"] option');
+    expect(Array.from(options).some((o) => o.textContent === 'Fracciones')).toBe(true);
+  });
+
+  it('resets the selected topic when the course changes', () => {
+    const { topicSelect, selectCourse, fixture } = setup(() => of({ id: 'new-id' }));
+
+    selectCourse('course-1');
+    topicSelect.value = 'topic-1';
+    topicSelect.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+
+    selectCourse('course-2');
+
+    expect(topicSelect.value).toBe('');
   });
 
   it('calls BankService.uploadImageQuestion with the taxonomy fields and selected file on submit', () => {
@@ -76,8 +142,8 @@ describe('BankUploadComponent', () => {
     const file = new File(['fake-bytes'], 'question.png', { type: 'image/png' });
 
     fillForm({
-      courseId: 'course-9',
-      topicId: 'topic-9',
+      courseId: 'course-1',
+      topicId: 'topic-1',
       difficulty: 'hard',
       gradeLevel: 'secundaria_1',
       correctAnswer: 'd',
@@ -86,8 +152,8 @@ describe('BankUploadComponent', () => {
     submit();
 
     expect(uploadImageQuestion).toHaveBeenCalledWith({
-      courseId: 'course-9',
-      topicId: 'topic-9',
+      courseId: 'course-1',
+      topicId: 'topic-1',
       difficulty: 'hard',
       gradeLevel: 'secundaria_1',
       correctAnswer: 'd',

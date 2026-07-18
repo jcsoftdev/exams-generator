@@ -4,11 +4,21 @@
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <label>
       Course
-      <input type="text" name="courseId" formControlName="courseId" />
+      <select name="courseId" formControlName="courseId">
+        <option value="">Select...</option>
+        @for (course of courses(); track course.id) {
+          <option [value]="course.id">{{ course.name }}</option>
+        }
+      </select>
     </label>
     <label>
       Topic
-      <input type="text" name="topicId" formControlName="topicId" />
+      <select name="topicId" formControlName="topicId" [disabled]="!form.controls.courseId.value">
+        <option value="">Select...</option>
+        @for (topic of topics(); track topic.id) {
+          <option [value]="topic.id">{{ topic.name }}</option>
+        }
+      </select>
     </label>
     <label>
       Difficulty

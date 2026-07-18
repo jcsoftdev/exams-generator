@@ -5,26 +5,46 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { AiGenerateComponent } from './ai-generate.component';
 import { AiService } from '../ai.service';
 import { GenerateQuestionsResult } from '../ai.models';
+import { TaxonomyService } from '../../taxonomy/taxonomy.service';
+import { Course, Topic } from '../../taxonomy/taxonomy.models';
+
+const COURSES: Course[] = [
+  { id: 'course-1', name: 'Aritmética' },
+  { id: 'course-2', name: 'Álgebra' },
+];
+
+const TOPICS_COURSE_1: Topic[] = [{ id: 'topic-1', name: 'Fracciones', courseId: 'course-1' }];
 
 function setup(generateImpl: (...args: unknown[]) => unknown) {
   const generateQuestions = vi.fn(generateImpl);
+  const getCourses = vi.fn(() => of(COURSES));
+  const getTopics = vi.fn(() => of(TOPICS_COURSE_1));
 
   TestBed.configureTestingModule({
     imports: [AiGenerateComponent],
-    providers: [{ provide: AiService, useValue: { generateQuestions } }],
+    providers: [
+      { provide: AiService, useValue: { generateQuestions } },
+      { provide: TaxonomyService, useValue: { getCourses, getTopics } },
+    ],
   });
 
   const fixture = TestBed.createComponent(AiGenerateComponent);
   fixture.detectChanges();
   const compiled = fixture.nativeElement as HTMLElement;
 
-  const courseInput = compiled.querySelector<HTMLInputElement>('input[name="courseId"]')!;
-  const topicInput = compiled.querySelector<HTMLInputElement>('input[name="topicId"]')!;
+  const courseSelect = compiled.querySelector<HTMLSelectElement>('select[name="courseId"]')!;
+  const topicSelect = compiled.querySelector<HTMLSelectElement>('select[name="topicId"]')!;
   const difficultySelect = compiled.querySelector<HTMLSelectElement>('select[name="difficulty"]')!;
   const gradeLevelSelect = compiled.querySelector<HTMLSelectElement>('select[name="gradeLevel"]')!;
   const countInput = compiled.querySelector<HTMLInputElement>('input[name="count"]')!;
   const withFigureCheckbox = compiled.querySelector<HTMLInputElement>('input[name="withFigure"]')!;
   const form = compiled.querySelector<HTMLFormElement>('form')!;
+
+  function selectCourse(courseId: string) {
+    courseSelect.value = courseId;
+    courseSelect.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+  }
 
   function fillForm(overrides: {
     courseId?: string;
@@ -34,10 +54,9 @@ function setup(generateImpl: (...args: unknown[]) => unknown) {
     count?: number;
     withFigure?: boolean;
   }) {
-    courseInput.value = overrides.courseId ?? 'course-1';
-    courseInput.dispatchEvent(new Event('input'));
-    topicInput.value = overrides.topicId ?? 'topic-1';
-    topicInput.dispatchEvent(new Event('input'));
+    selectCourse(overrides.courseId ?? 'course-1');
+    topicSelect.value = overrides.topicId ?? 'topic-1';
+    topicSelect.dispatchEvent(new Event('change'));
     difficultySelect.value = overrides.difficulty ?? 'medium';
     difficultySelect.dispatchEvent(new Event('change'));
     gradeLevelSelect.value = overrides.gradeLevel ?? 'primaria_3';
@@ -57,27 +76,43 @@ function setup(generateImpl: (...args: unknown[]) => unknown) {
     fixture.detectChanges();
   }
 
-  return { fixture, compiled, generateQuestions, fillForm, submit };
+  return { fixture, compiled, generateQuestions, getCourses, getTopics, fillForm, submit, selectCourse, topicSelect };
 }
 
 describe('AiGenerateComponent', () => {
-  it('renders course/topic/difficulty/gradeLevel/count/withFigure fields', () => {
+  it('renders course/topic dropdowns plus difficulty/gradeLevel/count/withFigure fields', () => {
     const { compiled } = setup(() => of({ created: [], failed: [] }));
 
-    expect(compiled.querySelector('input[name="courseId"]')).toBeTruthy();
-    expect(compiled.querySelector('input[name="topicId"]')).toBeTruthy();
+    expect(compiled.querySelector('select[name="courseId"]')).toBeTruthy();
+    expect(compiled.querySelector('select[name="topicId"]')).toBeTruthy();
     expect(compiled.querySelector('select[name="difficulty"]')).toBeTruthy();
     expect(compiled.querySelector('select[name="gradeLevel"]')).toBeTruthy();
     expect(compiled.querySelector('input[name="count"]')).toBeTruthy();
     expect(compiled.querySelector('input[name="withFigure"]')).toBeTruthy();
   });
 
+  it('loads courses from TaxonomyService and populates the course dropdown', () => {
+    const { compiled, getCourses } = setup(() => of({ created: [], failed: [] }));
+
+    expect(getCourses).toHaveBeenCalledTimes(1);
+    const options = compiled.querySelectorAll('select[name="courseId"] option');
+    expect(Array.from(options).some((o) => o.textContent === 'Aritmética')).toBe(true);
+  });
+
+  it('loads topics for the selected course', () => {
+    const { getTopics, selectCourse } = setup(() => of({ created: [], failed: [] }));
+
+    selectCourse('course-1');
+
+    expect(getTopics).toHaveBeenCalledWith('course-1');
+  });
+
   it('calls AiService.generateQuestions with the form values on submit', () => {
     const { generateQuestions, fillForm, submit } = setup(() => of({ created: [], failed: [] }));
 
     fillForm({
-      courseId: 'course-9',
-      topicId: 'topic-9',
+      courseId: 'course-1',
+      topicId: 'topic-1',
       difficulty: 'hard',
       gradeLevel: 'secundaria_1',
       count: 8,
@@ -86,8 +121,8 @@ describe('AiGenerateComponent', () => {
     submit();
 
     expect(generateQuestions).toHaveBeenCalledWith({
-      courseId: 'course-9',
-      topicId: 'topic-9',
+      courseId: 'course-1',
+      topicId: 'topic-1',
       difficulty: 'hard',
       gradeLevel: 'secundaria_1',
       count: 8,

@@ -1,19 +1,24 @@
 <section class="ai-generate">
   <h1>Generate Questions with AI</h1>
 
-  <p class="ai-generate__gap-note" role="note">
-    GAP: there is no course/topic catalog endpoint yet — enter the raw course
-    and topic IDs.
-  </p>
-
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <label>
-      Course ID
-      <input type="text" name="courseId" formControlName="courseId" />
+      Course
+      <select name="courseId" formControlName="courseId">
+        <option value="">Select...</option>
+        @for (course of courses(); track course.id) {
+          <option [value]="course.id">{{ course.name }}</option>
+        }
+      </select>
     </label>
     <label>
-      Topic ID
-      <input type="text" name="topicId" formControlName="topicId" />
+      Topic
+      <select name="topicId" formControlName="topicId" [disabled]="!form.controls.courseId.value">
+        <option value="">Select...</option>
+        @for (topic of topics(); track topic.id) {
+          <option [value]="topic.id">{{ topic.name }}</option>
+        }
+      </select>
     </label>
     <label>
       Difficulty

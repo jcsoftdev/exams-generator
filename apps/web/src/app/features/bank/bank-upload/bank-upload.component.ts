@@ -4,6 +4,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Difficulty } from '@exams-generator/shared';
 import { BankService } from '../bank.service';
 import { GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
+import { TaxonomyService } from '../../taxonomy/taxonomy.service';
+import { Course, Topic } from '../../taxonomy/taxonomy.models';
 
 @Component({
   selector: 'app-bank-upload',
@@ -13,10 +15,14 @@ import { GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
 export class BankUploadComponent {
   private readonly formBuilder = inject(FormBuilder);
   private readonly bankService = inject(BankService);
+  private readonly taxonomyService = inject(TaxonomyService);
 
   protected readonly difficulties = Object.values(Difficulty);
   protected readonly gradeLevels = GRADE_LEVELS;
   protected readonly gradeLevelLabels = GRADE_LEVEL_LABELS;
+
+  protected readonly courses = signal<Course[]>([]);
+  protected readonly topics = signal<Topic[]>([]);
 
   protected readonly submitting = signal(false);
   protected readonly successMessage = signal<string | null>(null);
@@ -30,6 +36,19 @@ export class BankUploadComponent {
     gradeLevel: ['', [Validators.required]],
     correctAnswer: ['', [Validators.required]],
   });
+
+  constructor() {
+    this.taxonomyService.getCourses().subscribe((courses) => this.courses.set(courses));
+
+    this.form.controls.courseId.valueChanges.subscribe((courseId) => {
+      this.form.controls.topicId.setValue('');
+      if (!courseId) {
+        this.topics.set([]);
+        return;
+      }
+      this.taxonomyService.getTopics(courseId).subscribe((topics) => this.topics.set(topics));
+    });
+  }
 
   protected onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
