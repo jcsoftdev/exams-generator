@@ -1,8 +1,8 @@
-import { Component, DestroyRef, inject, signal } from '@angular/core';
+import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Difficulty } from '@exams-generator/shared';
 import { Router } from '@angular/router';
-import { LucideAngularModule, Search, Inbox } from 'lucide-angular';
+import { LucideAngularModule } from 'lucide-angular';
+import { Difficulty } from '@exams-generator/shared';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
 import { InputComponent } from '../../../ui/input/input.component';
@@ -25,28 +25,44 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
   [Difficulty.Hard]: 'hard',
 };
 
+const PAGE_SIZE = 12;
+
 /**
- * Question-bank list screen (design doc §4, spec QB-R1..R3). Redesigned with
- * `ui/*` primitives — free-text course/topic filters plus difficulty/grado
- * selects, difficulty tags per question, and thumbnails fetched as
- * authenticated blobs (see `loadImages` — `/assets/:id` is Bearer-JWT
- * protected, a raw `<img src>` never sends that header).
+ * Question-bank screen (design doc §4, spec QB-R1..R3, Task 5): a 55%/45%
+ * list + detail-panel split. Left column is the paginated list (reuses
+ * `data-testid="bank-question"`, `loading-indicator`, `empty-bank`,
+ * `empty-no-results`, `error-state`, `retry-button`, plus new
+ * `bank-pagination`/`bank-page-prev`/`bank-page-next`); right column is the
+ * `bank-panel` detail view with badges/metadata and gated actions
+ * (`panel-edit`, `panel-archive`, `panel-delete`, `panel-readonly`).
  *
  * Distinguishes TWO empty states (QB-R2): "banco vacío" (the tenant's bank
  * has zero questions at all, regardless of filters) vs "sin resultados"
- * (the bank has questions, but the current filters match none). This is
- * tracked via `bankHasAnyQuestions`, set `true` the first time ANY
- * `listQuestions()` response — filtered or not — returns a non-empty array.
+ * (the bank has questions, but the current filters match none). Tracked via
+ * `bankHasAnyQuestions`, set `true` the first time ANY paginated response
+ * (filtered or not) returns `total > 0`.
+ *
+ * Thumbnails are fetched as authenticated blobs (see `loadImages` —
+ * `/assets/:id` is Bearer-JWT protected, a raw `<img src>` never sends that
+ * header).
+ *
+ * Action gating (`canArchive`/`canDelete`/`isCentral`) mirrors the backend's
+ * own rules (Lane D4: S4 archives only `approved`, S5 deletes only own
+ * `draft`; `origin === 'central'`/`tenantId === null` is always read-only) —
+ * this is UX gating only, the backend is still the source of truth and
+ * re-validates on every call.
  */
 @Component({
   selector: 'app-bank-list',
   standalone: true,
-  // `<lucide-icon>` is only used inside the nested `ui-empty-state` primitive
-  // (not directly in this component's own template), so only the icon
-  // providers are needed here — `.pick()`'s `ModuleWithProviders` cannot go
-  // in `imports` (NG2012).
-  imports: [ButtonComponent, EmptyStateComponent, InputComponent, SelectComponent, TagComponent],
-  providers: [LucideAngularModule.pick({ Search, Inbox }).providers ?? []],
+  imports: [
+    ButtonComponent,
+    EmptyStateComponent,
+    InputComponent,
+    SelectComponent,
+    TagComponent,
+    LucideAngularModule,
+  ],
   templateUrl: './bank-list.component.html',
 })
 export class BankListComponent {
@@ -71,15 +87,23 @@ export class BankListComponent {
   protected readonly gradeLevel = signal<string | null>(null);
 
   protected readonly questions = signal<BankQuestion[]>([]);
+  protected readonly total = signal(0);
+  protected readonly page = signal(1);
   protected readonly loading = signal(false);
   protected readonly errorMessage = signal<string | null>(null);
   /** Set true the first time ANY response (filtered or not) is non-empty — drives QB-R2's two-empty-states split. */
   protected readonly bankHasAnyQuestions = signal(false);
 
+  protected readonly selected = signal<BankQuestion | null>(null);
+  protected readonly actionError = signal<string | null>(null);
+
   /** `imageAssetId` -> `blob:` object URL, populated lazily by `loadImages`. */
   protected readonly imageUrls = signal<Record<string, string>>({});
   /** Every object URL this component has ever created, revoked on destroy. */
   private readonly objectUrls: string[] = [];
+
+  protected readonly pageSize = PAGE_SIZE;
+  protected readonly lastPage = computed(() => Math.max(1, Math.ceil(this.total() / this.pageSize)));
 
   constructor() {
     this.search();
@@ -91,31 +115,106 @@ export class BankListComponent {
   }
 
   protected search(): void {
+    this.page.set(1);
+    this.load();
+  }
+
+  private load(): void {
     this.loading.set(true);
     this.errorMessage.set(null);
     this.questions.set([]);
 
     this.bankService
-      .listQuestions({
-        courseId: this.courseId() || undefined,
-        topicId: this.topicId() || undefined,
-        difficulty: this.difficulty() ?? undefined,
-        gradeLevel: this.gradeLevel() ?? undefined,
-      })
+      .listQuestionsPaged(
+        {
+          courseId: this.courseId() || undefined,
+          topicId: this.topicId() || undefined,
+          difficulty: this.difficulty() ?? undefined,
+          gradeLevel: this.gradeLevel() ?? undefined,
+        },
+        this.page(),
+        this.pageSize,
+      )
       .subscribe({
-        next: (questions) => {
+        next: (res) => {
           this.loading.set(false);
-          this.questions.set(questions);
-          if (questions.length > 0) {
+          this.questions.set([...res.items]);
+          this.total.set(res.total);
+          if (res.total > 0) {
             this.bankHasAnyQuestions.set(true);
           }
-          this.loadImages(questions);
+          this.loadImages(res.items);
         },
         error: (_error: HttpErrorResponse) => {
           this.loading.set(false);
           this.errorMessage.set('No se pudieron cargar las preguntas. Inténtalo de nuevo.');
         },
       });
+  }
+
+  protected retry(): void {
+    this.load();
+  }
+
+  protected prevPage(): void {
+    if (this.page() > 1) {
+      this.page.update((p) => p - 1);
+      this.load();
+    }
+  }
+
+  protected nextPage(): void {
+    if (this.page() < this.lastPage()) {
+      this.page.update((p) => p + 1);
+      this.load();
+    }
+  }
+
+  protected select(question: BankQuestion): void {
+    this.actionError.set(null);
+    this.selected.set(question);
+    this.bankService.getQuestion(question.id).subscribe({
+      next: (full) => this.selected.set(full),
+      error: () => {},
+    });
+  }
+
+  protected isCentral(question: BankQuestion): boolean {
+    return question.origin === 'central' || question.tenantId === null;
+  }
+
+  protected canArchive(question: BankQuestion): boolean {
+    return !this.isCentral(question) && question.status === 'approved';
+  }
+
+  protected canDelete(question: BankQuestion): boolean {
+    return !this.isCentral(question) && question.status === 'draft';
+  }
+
+  protected archive(question: BankQuestion): void {
+    this.actionError.set(null);
+    this.bankService.archiveQuestion(question.id).subscribe({
+      next: () => {
+        this.selected.set(null);
+        this.load();
+      },
+      error: () => this.actionError.set('No se pudo archivar la pregunta. Inténtalo de nuevo.'),
+    });
+  }
+
+  protected remove(question: BankQuestion): void {
+    this.actionError.set(null);
+    this.bankService.deleteQuestion(question.id).subscribe({
+      next: () => {
+        this.selected.set(null);
+        this.load();
+      },
+      error: () => this.actionError.set('No se pudo borrar la pregunta. Inténtalo de nuevo.'),
+    });
+  }
+
+  protected edit(question: BankQuestion): void {
+    this.router.navigate(['/app/bank/new'], { queryParams: { edit: question.id } });
   }
 
   /**
@@ -148,7 +247,11 @@ export class BankListComponent {
     return DIFFICULTY_TAG_VARIANT[difficulty];
   }
 
-  protected goToUpload(): void {
-    this.router.navigate(['/app/bank/upload']);
+  protected difficultyLabel(difficulty: Difficulty): string {
+    return DIFFICULTY_LABELS[difficulty];
+  }
+
+  protected goToNew(): void {
+    this.router.navigate(['/app/bank/new']);
   }
 }

@@ -50,6 +50,9 @@ export const GRADE_LEVEL_LABELS: Record<GradeLevel, string> = {
  * UUID), not a URL or mime type/dimensions. `GET /assets/:id` serves the
  * actual bytes — see `BankService.buildImageAssetUrl`/`fetchQuestionImage`.
  */
+export type QuestionStatus = 'draft' | 'approved' | 'archived';
+export type QuestionOrigin = 'school' | 'ai' | 'central';
+
 export interface BankQuestion {
   readonly id: string;
   readonly tenantId: string | null;
@@ -59,6 +62,22 @@ export interface BankQuestion {
   readonly gradeLevel: string;
   readonly correctAnswer: string;
   readonly imageAssetId: string | null;
+  /**
+   * Optional (retro-compat): the unpaginated `GET /bank/questions` legacy
+   * shape doesn't send these. Populated by the paginated Task 5 flow — see
+   * GAP backend #3 in the plan (`docs/superpowers/plans/2026-07-18-screens-frontend.md`)
+   * re: `origin` deriving from `tenantId === null` (never truly `'ai'` yet).
+   */
+  readonly status?: QuestionStatus;
+  readonly type?: 'image' | 'structured';
+  readonly origin?: QuestionOrigin;
+  readonly usedInExamCount?: number;
+}
+
+/** S6: paginated envelope for `GET /bank/questions?page=&pageSize=`. */
+export interface PagedQuestions {
+  readonly items: readonly BankQuestion[];
+  readonly total: number;
 }
 
 export interface BankQuestionFilters {

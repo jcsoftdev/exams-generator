@@ -5,7 +5,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { Difficulty } from '@exams-generator/shared';
 import { BankService } from './bank.service';
 import { environment } from '../../../environments/environment';
-import { BankQuestion } from './bank.models';
+import { BankQuestion, PagedQuestions } from './bank.models';
 
 describe('BankService', () => {
   let service: BankService;
@@ -136,6 +136,65 @@ describe('BankService', () => {
   describe('buildImageAssetUrl', () => {
     it('builds a URL from the apiBaseUrl and the imageAssetId', () => {
       expect(service.buildImageAssetUrl('asset-1')).toBe(`${environment.apiBaseUrl}/assets/asset-1`);
+    });
+  });
+
+  describe('listQuestionsPaged', () => {
+    it('hits /bank/questions with page params and returns {items,total}', () => {
+      let result: PagedQuestions | undefined;
+
+      service.listQuestionsPaged({ courseId: 'c1' }, 2, 20).subscribe((r) => (result = r));
+
+      const req = httpMock.expectOne(
+        (r) =>
+          r.url === `${environment.apiBaseUrl}/bank/questions` &&
+          r.params.get('page') === '2' &&
+          r.params.get('pageSize') === '20' &&
+          r.params.get('courseId') === 'c1',
+      );
+      expect(req.request.method).toBe('GET');
+      req.flush({ items: [], total: 0 });
+
+      expect(result).toEqual({ items: [], total: 0 });
+    });
+  });
+
+  describe('archiveQuestion', () => {
+    it('PATCHes /bank/questions/:id/archive', () => {
+      service.archiveQuestion('q1').subscribe();
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/bank/questions/q1/archive`);
+      expect(req.request.method).toBe('PATCH');
+      req.flush({ id: 'q1', status: 'archived' });
+    });
+  });
+
+  describe('deleteQuestion', () => {
+    it('DELETEs /bank/questions/:id', () => {
+      service.deleteQuestion('q1').subscribe();
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/bank/questions/q1`);
+      expect(req.request.method).toBe('DELETE');
+      req.flush(null);
+    });
+  });
+
+  describe('getQuestion', () => {
+    it('GETs /bank/questions/:id', () => {
+      service.getQuestion('q1').subscribe();
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/bank/questions/q1`);
+      expect(req.request.method).toBe('GET');
+      req.flush({
+        id: 'q1',
+        tenantId: 't1',
+        courseId: 'c1',
+        topicId: 'tp1',
+        difficulty: 'easy',
+        gradeLevel: 'pre',
+        correctAnswer: 'a',
+        imageAssetId: null,
+      });
     });
   });
 

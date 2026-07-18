@@ -2,7 +2,12 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import { BankQuestion, BankQuestionFilters, CreateImageQuestionPayload } from './bank.models';
+import {
+  BankQuestion,
+  BankQuestionFilters,
+  CreateImageQuestionPayload,
+  PagedQuestions,
+} from './bank.models';
 
 /**
  * Angular client for the Fase 1 bank API (design doc §9):
@@ -31,6 +36,51 @@ export class BankService {
     }
 
     return this.http.get<BankQuestion[]>(`${environment.apiBaseUrl}/bank/questions`, { params });
+  }
+
+  /**
+   * S6: paginated variant of `listQuestions` — `GET /bank/questions` with
+   * `page`/`pageSize` params returns `{ items, total }` instead of the
+   * legacy bare array (see `listQuestions` above, kept for other callers).
+   */
+  listQuestionsPaged(
+    filters: BankQuestionFilters,
+    page: number,
+    pageSize: number,
+  ): Observable<PagedQuestions> {
+    let params = new HttpParams().set('page', String(page)).set('pageSize', String(pageSize));
+    if (filters.courseId) {
+      params = params.set('courseId', filters.courseId);
+    }
+    if (filters.topicId) {
+      params = params.set('topicId', filters.topicId);
+    }
+    if (filters.difficulty) {
+      params = params.set('difficulty', filters.difficulty);
+    }
+    if (filters.gradeLevel) {
+      params = params.set('gradeLevel', filters.gradeLevel);
+    }
+
+    return this.http.get<PagedQuestions>(`${environment.apiBaseUrl}/bank/questions`, { params });
+  }
+
+  /** Direct-by-id fetch for the detail panel — S6/Task 5. */
+  getQuestion(id: string): Observable<BankQuestion> {
+    return this.http.get<BankQuestion>(`${environment.apiBaseUrl}/bank/questions/${id}`);
+  }
+
+  /** S4: soft-removes an `approved` question (never a draft). */
+  archiveQuestion(id: string): Observable<{ id: string; status: 'archived' }> {
+    return this.http.patch<{ id: string; status: 'archived' }>(
+      `${environment.apiBaseUrl}/bank/questions/${id}/archive`,
+      {},
+    );
+  }
+
+  /** S5: permanently deletes an own `draft` question. */
+  deleteQuestion(id: string): Observable<void> {
+    return this.http.delete<void>(`${environment.apiBaseUrl}/bank/questions/${id}`);
   }
 
   uploadImageQuestion(payload: CreateImageQuestionPayload): Observable<{ id: string }> {
