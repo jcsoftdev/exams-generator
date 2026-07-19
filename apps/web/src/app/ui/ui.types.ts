@@ -15,6 +15,8 @@ export interface NavItem {
   readonly label: string;
   readonly route: string;
   readonly icon?: string;
+  /** Optional pending-count pill rendered at the end of the label (e.g. "Cola de revisión · 7"). */
+  readonly badge?: string | number;
 }
 
 /** One of the sidebar's three groups: Principal / Inteligencia / Colegio. */

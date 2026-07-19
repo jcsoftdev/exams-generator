@@ -42,6 +42,10 @@
   --color-warn-bg: #fff8f1;
   --color-warn-text: #9a3412;
 
+  /* "Papel" — vista previa impresa WYSIWYG (Cola de revisión, §4 pantalla 4) */
+  --color-paper-bg: #fdfdfc;
+  --color-paper-border: #e8e5df;
+
   /* Radii 8–12px (§3.3) */
   --radius-field: 8px;
   --radius-card: 12px;

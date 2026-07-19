@@ -29,9 +29,16 @@ import { NavGroup } from '../ui.types';
                   routerLinkActive="bg-tint-activo text-tint-texto"
                   [routerLinkActiveOptions]="{ exact: false }"
                   (click)="navigate.emit(item.route)"
-                  class="block rounded-field px-3 py-2 text-sm text-primary-100 hover:bg-primary-800"
+                  class="flex items-center justify-between gap-2 rounded-field px-3 py-2 text-sm text-primary-100 hover:bg-primary-800"
                 >
-                  {{ item.label }}
+                  <span>{{ item.label }}</span>
+                  @if (item.badge !== undefined) {
+                    <span
+                      data-testid="nav-item-badge"
+                      class="rounded-full bg-primary-500 px-2 py-0.5 text-xs font-semibold text-white"
+                      >{{ item.badge }}</span
+                    >
+                  }
                 </a>
               </li>
             }

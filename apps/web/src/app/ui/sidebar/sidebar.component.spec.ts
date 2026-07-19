@@ -18,7 +18,7 @@ const GROUPS: NavGroup[] = [
     title: 'Inteligencia',
     items: [
       { label: 'Generar con IA', route: '/app/ai/generate' },
-      { label: 'Cola de revisión', route: '/app/ai/review' },
+      { label: 'Cola de revisión', route: '/app/ai/review', badge: 7 },
     ],
   },
   {
@@ -70,5 +70,33 @@ describe('SidebarComponent', () => {
     expect(active.length).toBe(1);
     expect(active[0].textContent).toContain('Exámenes');
     expect(active[0].className).toContain('text-tint-texto');
+  });
+
+  it('renders a badge pill next to the label when the item has a badge', async () => {
+    TestBed.configureTestingModule({
+      imports: [HostComponent],
+      providers: [provideRouter([])],
+    });
+    const fixture = TestBed.createComponent(HostComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    const badge = compiled.querySelector('[data-testid="nav-item-badge"]');
+    expect(badge).toBeTruthy();
+    expect(badge?.textContent?.trim()).toBe('7');
+  });
+
+  it('does not render a badge pill for items without one', async () => {
+    TestBed.configureTestingModule({
+      imports: [HostComponent],
+      providers: [provideRouter([])],
+    });
+    const fixture = TestBed.createComponent(HostComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    const links = Array.from(compiled.querySelectorAll('a[data-testid="nav-item"]'));
+    const bankLink = links.find((l) => l.textContent?.includes('Banco de preguntas'));
+    expect(bankLink?.querySelector('[data-testid="nav-item-badge"]')).toBeFalsy();
   });
 });

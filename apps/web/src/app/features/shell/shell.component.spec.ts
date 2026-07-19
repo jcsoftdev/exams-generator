@@ -31,14 +31,16 @@ import { Role } from '@exams-generator/shared';
 import { ShellComponent } from './shell.component';
 import { AuthService } from '../../core/auth/auth.service';
 import { TenantSettingsService } from '../../features/tenant-settings/tenant-settings.service';
+import { DraftCountService } from '../ai/draft-count.service';
 
-function setup(role: Role | null) {
+function setup(role: Role | null, draftCount: number | null = 7) {
   const logout = vi.fn();
   const navigateByUrl = vi.fn();
   TestBed.configureTestingModule({
     imports: [ShellComponent],
     providers: [
       provideRouter([]),
+      { provide: DraftCountService, useValue: { count: signal(draftCount) } },
       importProvidersFrom(
         LucideAngularModule.pick({
           Menu,
@@ -155,5 +157,21 @@ describe('ShellComponent', () => {
     (compiled.querySelector('[data-testid="logout-button"]') as HTMLButtonElement).click();
     expect(logout).toHaveBeenCalledTimes(1);
     expect(navigateByUrl).toHaveBeenCalledWith('/login');
+  });
+
+  it('shows the pending-drafts count as a badge on "Cola de revisión"', () => {
+    const { compiled } = setup(Role.Teacher, 7);
+
+    const links = Array.from(compiled.querySelectorAll('a[data-testid="nav-item"]'));
+    const reviewLink = links.find((l) => l.textContent?.includes('Cola de revisión'));
+    expect(reviewLink?.querySelector('[data-testid="nav-item-badge"]')?.textContent?.trim()).toBe('7');
+  });
+
+  it('omits the badge while the pending-drafts count has not loaded yet', () => {
+    const { compiled } = setup(Role.Teacher, null);
+
+    const links = Array.from(compiled.querySelectorAll('a[data-testid="nav-item"]'));
+    const reviewLink = links.find((l) => l.textContent?.includes('Cola de revisión'));
+    expect(reviewLink?.querySelector('[data-testid="nav-item-badge"]')).toBeFalsy();
   });
 });
