@@ -41,6 +41,7 @@ import { LucideAngularModule } from 'lucide-angular';
             data-testid="topbar-search"
             type="search"
             placeholder="Buscar..."
+            aria-label="Buscar"
             class="h-8 w-full rounded-field border-none bg-n50 pl-9 pr-3 text-sm text-n900 placeholder:text-n400 focus:outline-none focus:ring-2 focus:ring-primary-300"
           />
         </div>

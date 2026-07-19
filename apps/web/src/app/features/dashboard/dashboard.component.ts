@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Difficulty } from '@exams-generator/shared';
@@ -24,7 +25,7 @@ const ERROR_MESSAGE = 'No se pudieron cargar las estadísticas. Inténtalo de nu
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CardComponent, BarChartComponent, DonutChartComponent, RouterLink],
+  imports: [CardComponent, BarChartComponent, DonutChartComponent, RouterLink, DatePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './dashboard.component.html',
 })
