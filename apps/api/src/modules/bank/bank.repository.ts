@@ -412,44 +412,100 @@ export class BankRepository {
   }
 
   /**
-   * Persists taxonomy fields for `editQuestion` (design doc: question
-   * editing). Same tenant-visibility scoping as the other question writes in
-   * this class — a tenant can only retaxonomize its own (or central)
-   * questions. Unlike `updateStructuredQuestion`, this does NOT constrain by
-   * `status` — the service (`requireManageableQuestion`) has already
-   * resolved the draft/approved precondition, so this is a plain scoped
-   * `UPDATE`. Only fields present in `patch` are set; an empty patch is a
-   * no-op (no DB round-trip).
+   * FK existence check for `topicId` (design doc: question editing, review
+   * fix). `questions.topic_id` references `topics.id` — a syntactically
+   * valid but nonexistent `topicId` would otherwise reach the DB as a raw
+   * FK-violation error. Called by the service UP FRONT, before any write, so
+   * a bad `topicId` fails fast with a mapped 400 instead of leaving a
+   * partial update behind.
+   */
+  async topicExists(topicId: string): Promise<boolean> {
+    const [row] = await db.select({ id: topics.id }).from(topics).where(eq(topics.id, topicId)).limit(1);
+    return row !== undefined;
+  }
+
+  /**
+   * Atomically persists BOTH the structured content patch AND the taxonomy
+   * patch for `editQuestion` (design doc: question editing, review fix) in a
+   * single `db.transaction` — `updateStructuredQuestion` and taxonomy used
+   * to be two independent sequential writes, so a taxonomy failure (e.g. a
+   * bad FK) could leave the content half of the edit already committed.
+   * Same tenant-visibility scoping as the other question writes in this
+   * class. Only taxonomy fields present in `taxonomyPatch` are set; an empty
+   * taxonomy patch skips that second `UPDATE` entirely.
    *
-   * NOTE: `patch.courseId` is intentionally NOT written here — `questions`
-   * has no `course_id` column (see `questions.schema.ts`); a question's
-   * course is always derived by joining `topics.course_id` via `topic_id`,
-   * exactly like `createStructuredQuestion`/`validateCreateStructuredQuestionInput`
-   * already accept-but-don't-persist `courseId` on creation. Moving a
+   * NOTE: `taxonomyPatch.courseId` is not a thing — `questions` has no
+   * `course_id` column (see `questions.schema.ts`); a question's course is
+   * always derived by joining `topics.course_id` via `topic_id`. Moving a
    * question to a different course means moving it to a topic under that
    * course, i.e. changing `topicId`.
    */
-  async updateQuestionTaxonomy(
+  async updateStructuredQuestionAndTaxonomy(
     id: string,
     currentTenantId: string | null,
-    patch: { courseId?: string; topicId?: string; difficulty?: string; gradeLevel?: string },
-  ): Promise<void> {
-    const set: Partial<{ topicId: string; difficulty: Difficulty; gradeLevel: string }> = {};
-    if (patch.topicId !== undefined) set.topicId = patch.topicId;
-    if (patch.difficulty !== undefined) set.difficulty = patch.difficulty as Difficulty;
-    if (patch.gradeLevel !== undefined) set.gradeLevel = patch.gradeLevel;
-    if (Object.keys(set).length === 0) {
-      return;
-    }
+    contentPatch: UpdateStructuredQuestionRecord,
+    taxonomyPatch: { topicId?: string; difficulty?: string; gradeLevel?: string },
+  ): Promise<QuestionListItem | undefined> {
+    return db.transaction(async (tx) => {
+      const visibility: SQL = currentTenantId
+        ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
+        : (isNull(questions.tenantId) as SQL);
 
-    const visibility: SQL = currentTenantId
-      ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
-      : (isNull(questions.tenantId) as SQL);
+      const returning = {
+        id: questions.id,
+        tenantId: questions.tenantId,
+        topicId: questions.topicId,
+        difficulty: questions.difficulty,
+        gradeLevel: questions.gradeLevel,
+        correctAnswer: questions.correctAnswer,
+        type: questions.type,
+        status: questions.status,
+        aiGenerated: questions.aiGenerated,
+        imageAssetId: questions.imageAssetId,
+        bodyTypst: questions.bodyTypst,
+        alternatives: questions.alternatives,
+        figureCode: questions.figureCode,
+      };
 
-    await db
-      .update(questions)
-      .set(set)
-      .where(and(eq(questions.id, id), visibility));
+      const [row] = await tx
+        .update(questions)
+        .set({
+          bodyTypst: contentPatch.bodyTypst,
+          alternatives: contentPatch.alternatives,
+          correctAnswer: contentPatch.correctAnswer,
+          figureCode: contentPatch.figureCode,
+        })
+        .where(and(eq(questions.id, id), visibility))
+        .returning(returning);
+
+      if (!row) {
+        return undefined;
+      }
+
+      const set: Partial<{ topicId: string; difficulty: Difficulty; gradeLevel: string }> = {};
+      if (taxonomyPatch.topicId !== undefined) set.topicId = taxonomyPatch.topicId;
+      if (taxonomyPatch.difficulty !== undefined) set.difficulty = taxonomyPatch.difficulty as Difficulty;
+      if (taxonomyPatch.gradeLevel !== undefined) set.gradeLevel = taxonomyPatch.gradeLevel;
+
+      let finalRow = row;
+      if (Object.keys(set).length > 0) {
+        const [taxRow] = await tx
+          .update(questions)
+          .set(set)
+          .where(and(eq(questions.id, id), visibility))
+          .returning(returning);
+        if (taxRow) {
+          finalRow = taxRow;
+        }
+      }
+
+      const [topicRow] = await tx
+        .select({ courseId: topics.courseId })
+        .from(topics)
+        .where(eq(topics.id, finalRow.topicId));
+
+      return { ...finalRow, courseId: topicRow?.courseId ?? "" };
+    });
   }
 
   /**

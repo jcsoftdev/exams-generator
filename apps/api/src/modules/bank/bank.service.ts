@@ -57,12 +57,17 @@ export interface CreateStructuredQuestionDto {
   readonly figureCode: string | undefined;
 }
 
+/**
+ * `courseId` is intentionally NOT editable here — `questions` has no
+ * `course_id` column; course is always derived by joining `topics.course_id`
+ * through `topicId`. To move a question to a different course, change its
+ * `topicId` to a topic that belongs to that course.
+ */
 export interface EditQuestionDto {
   readonly bodyTypst?: string;
   readonly alternatives?: readonly string[];
   readonly correctAnswer?: string;
   readonly figureCode?: string;
-  readonly courseId?: string;
   readonly topicId?: string;
   readonly difficulty?: string;
   readonly gradeLevel?: string;
@@ -369,9 +374,17 @@ export class BankService {
    * Re-validates the merged content, then recompiles a Typst PREVIEW via
    * `PdfCompilerPort` — exactly like AI generation itself — so an edit can
    * never leave the question in an uncompilable state either. On a compile
-   * failure, nothing is persisted. Taxonomy fields (`courseId`/`topicId`/
-   * `difficulty`/`gradeLevel`) are validated separately (400 on failure) and
-   * persisted via `repository.updateQuestionTaxonomy`.
+   * failure, nothing is persisted. Taxonomy fields (`topicId`/`difficulty`/
+   * `gradeLevel`; NOT `courseId` — see `EditQuestionDto`) are validated
+   * separately (400 on failure). `topicId` and `gradeLevel` are FK columns,
+   * so BEFORE any write this also checks `topicId` exists (DB) and
+   * `gradeLevel` is a valid catalog value (`validateQuestionTaxonomy`,
+   * in-memory) — a syntactically-valid-but-nonexistent value would otherwise
+   * surface as an unmapped 500 from a raw Postgres FK error. The content
+   * update and the taxonomy update are then persisted together via
+   * `repository.updateStructuredQuestionAndTaxonomy`, in a single DB
+   * transaction, so a taxonomy failure can never leave a partial (content
+   * committed, taxonomy not) edit behind.
    */
   async editQuestion(
     user: AuthTokenPayload,
@@ -395,7 +408,6 @@ export class BankService {
     }
 
     const taxonomyValidation = validateQuestionTaxonomy({
-      courseId: dto.courseId,
       topicId: dto.topicId,
       difficulty: dto.difficulty,
       gradeLevel: dto.gradeLevel,
@@ -403,6 +415,13 @@ export class BankService {
 
     if (!taxonomyValidation.ok) {
       throw new BadRequestException(taxonomyValidation.errors);
+    }
+
+    if (dto.topicId !== undefined) {
+      const topicExists = await this.repository.topicExists(dto.topicId);
+      if (!topicExists) {
+        throw new BadRequestException(`topicId does not exist: ${dto.topicId}`);
+      }
     }
 
     const { merged } = validation;
@@ -428,17 +447,14 @@ export class BankService {
       throw error;
     }
 
-    const updated = await this.repository.updateStructuredQuestion(id, user.tenantId, merged);
-    if (!updated) {
-      throw new NotFoundException(`Question not found: ${id}`);
-    }
-
-    await this.repository.updateQuestionTaxonomy(id, user.tenantId, {
-      courseId: dto.courseId,
+    const updated = await this.repository.updateStructuredQuestionAndTaxonomy(id, user.tenantId, merged, {
       topicId: dto.topicId,
       difficulty: dto.difficulty,
       gradeLevel: dto.gradeLevel,
     });
+    if (!updated) {
+      throw new NotFoundException(`Question not found: ${id}`);
+    }
 
     this.previewCache.delete(id);
     return updated;

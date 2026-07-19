@@ -169,4 +169,21 @@ describe("Bank module — edit approved questions + taxonomy (e2e)", () => {
 
     await editRequest(tenantAToken, id).send({ bodyTypst: "no debería aplicar" }).expect(409);
   });
+
+  it("4xx on a nonexistent topicId, and leaves the question's content untouched (atomic — no partial write)", async () => {
+    const id = await createApprovedQuestion(tenantAToken);
+    const bogusTopicId = randomUUID();
+
+    const response = await editRequest(tenantAToken, id).send({
+      bodyTypst: "este cambio NO debería persistir",
+      topicId: bogusTopicId,
+    });
+    expect(response.status).toBeGreaterThanOrEqual(400);
+    expect(response.status).toBeLessThan(500);
+
+    const fetched = await getByIdRequest(tenantAToken, id).expect(200);
+    expect(fetched.body.bodyTypst).toBe("pregunta aprobada para edit tests");
+    expect(fetched.body.alternatives).toEqual(["a", "b"]);
+    expect(fetched.body.topicId).toBe(topicId);
+  });
 });

@@ -44,12 +44,17 @@ interface CreateStructuredQuestionBody {
   readonly figureCode?: string;
 }
 
+/**
+ * `courseId` is intentionally not accepted here — `questions` has no
+ * `course_id` column; course is derived by joining `topics.course_id`
+ * through `topicId`. To move a question to a different course, PATCH its
+ * `topicId` to a topic under that course instead.
+ */
 interface EditDraftQuestionBody {
   readonly bodyTypst?: string;
   readonly alternatives?: readonly string[];
   readonly correctAnswer?: string;
   readonly figureCode?: string;
-  readonly courseId?: string;
   readonly topicId?: string;
   readonly difficulty?: string;
   readonly gradeLevel?: string;
@@ -213,7 +218,6 @@ export class BankController {
       alternatives: body.alternatives,
       correctAnswer: body.correctAnswer,
       figureCode: body.figureCode,
-      courseId: body.courseId,
       topicId: body.topicId,
       difficulty: body.difficulty,
       gradeLevel: body.gradeLevel,

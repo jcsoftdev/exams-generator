@@ -45,8 +45,8 @@ function buildDeps() {
     findQuestionById: jest.fn().mockResolvedValue(undefined as QuestionListItem | undefined),
     approveQuestion: jest.fn().mockResolvedValue(undefined as { id: string; status: string } | undefined),
     rejectQuestion: jest.fn().mockResolvedValue(false),
-    updateStructuredQuestion: jest.fn().mockResolvedValue(undefined as QuestionListItem | undefined),
-    updateQuestionTaxonomy: jest.fn().mockResolvedValue(undefined),
+    topicExists: jest.fn().mockResolvedValue(true),
+    updateStructuredQuestionAndTaxonomy: jest.fn().mockResolvedValue(undefined as QuestionListItem | undefined),
   } as unknown as jest.Mocked<BankRepository>;
 
   const storage = {
@@ -421,7 +421,7 @@ describe("BankService.editQuestion", () => {
   it("recompiles the Typst preview and persists the merged edit", async () => {
     const { service, repository, pdfCompiler } = buildDeps();
     repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
-    repository.updateStructuredQuestion.mockResolvedValue({
+    repository.updateStructuredQuestionAndTaxonomy.mockResolvedValue({
       ...DRAFT_QUESTION,
       bodyTypst: "edited body",
     });
@@ -431,10 +431,11 @@ describe("BankService.editQuestion", () => {
     });
 
     expect(pdfCompiler.compileExam).toHaveBeenCalledTimes(1);
-    expect(repository.updateStructuredQuestion).toHaveBeenCalledWith(
+    expect(repository.updateStructuredQuestionAndTaxonomy).toHaveBeenCalledWith(
       "draft-1",
       "tenant-1",
       expect.objectContaining({ bodyTypst: "edited body", alternatives: ["1", "2", "3"] }),
+      expect.objectContaining({ topicId: undefined, difficulty: undefined, gradeLevel: undefined }),
     );
     expect(result.bodyTypst).toBe("edited body");
   });
@@ -450,7 +451,7 @@ describe("BankService.editQuestion", () => {
       service.editQuestion(TEACHER_USER, "draft-1", { bodyTypst: "#broken{" }),
     ).rejects.toBeInstanceOf(BadRequestException);
 
-    expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
+    expect(repository.updateStructuredQuestionAndTaxonomy).not.toHaveBeenCalled();
   });
 
   it("throws NotFoundException when the question doesn't exist or isn't visible to the requester", async () => {
@@ -465,7 +466,7 @@ describe("BankService.editQuestion", () => {
   it("edits an already-approved question too (not just draft)", async () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, status: "approved" });
-    repository.updateStructuredQuestion.mockResolvedValue({
+    repository.updateStructuredQuestionAndTaxonomy.mockResolvedValue({
       ...DRAFT_QUESTION,
       status: "approved",
       bodyTypst: "edited approved body",
@@ -475,7 +476,7 @@ describe("BankService.editQuestion", () => {
       bodyTypst: "edited approved body",
     });
 
-    expect(repository.updateStructuredQuestion).toHaveBeenCalled();
+    expect(repository.updateStructuredQuestionAndTaxonomy).toHaveBeenCalled();
     expect(result.bodyTypst).toBe("edited approved body");
   });
 
@@ -486,7 +487,7 @@ describe("BankService.editQuestion", () => {
     await expect(
       service.editQuestion(TEACHER_USER, "draft-1", { bodyTypst: "x" }),
     ).rejects.toBeInstanceOf(ConflictException);
-    expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
+    expect(repository.updateStructuredQuestionAndTaxonomy).not.toHaveBeenCalled();
   });
 
   it("throws BadRequestException when the merged content fails validation", async () => {
@@ -496,7 +497,7 @@ describe("BankService.editQuestion", () => {
     await expect(
       service.editQuestion(TEACHER_USER, "draft-1", { bodyTypst: "   " }),
     ).rejects.toBeInstanceOf(BadRequestException);
-    expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
+    expect(repository.updateStructuredQuestionAndTaxonomy).not.toHaveBeenCalled();
   });
 
   it("throws ForbiddenException when a tenant role (teacher) tries to edit a central draft", async () => {
@@ -506,7 +507,7 @@ describe("BankService.editQuestion", () => {
     await expect(
       service.editQuestion(TEACHER_USER, "draft-1", { bodyTypst: "x" }),
     ).rejects.toBeInstanceOf(ForbiddenException);
-    expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
+    expect(repository.updateStructuredQuestionAndTaxonomy).not.toHaveBeenCalled();
   });
 
   it("throws BadRequestException and does NOT persist when the taxonomy patch is invalid", async () => {
@@ -516,22 +517,46 @@ describe("BankService.editQuestion", () => {
     await expect(
       service.editQuestion(TEACHER_USER, "draft-1", { difficulty: "trivial" }),
     ).rejects.toBeInstanceOf(BadRequestException);
-    expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
-    expect(repository.updateQuestionTaxonomy).not.toHaveBeenCalled();
+    expect(repository.updateStructuredQuestionAndTaxonomy).not.toHaveBeenCalled();
   });
 
-  it("persists provided taxonomy fields via repository.updateQuestionTaxonomy", async () => {
+  it("persists provided taxonomy fields via repository.updateStructuredQuestionAndTaxonomy", async () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
-    repository.updateStructuredQuestion.mockResolvedValue(DRAFT_QUESTION);
+    repository.updateStructuredQuestionAndTaxonomy.mockResolvedValue(DRAFT_QUESTION);
 
     await service.editQuestion(TEACHER_USER, "draft-1", { difficulty: "hard" });
 
-    expect(repository.updateQuestionTaxonomy).toHaveBeenCalledWith(
+    expect(repository.updateStructuredQuestionAndTaxonomy).toHaveBeenCalledWith(
       "draft-1",
       "tenant-1",
+      expect.anything(),
       expect.objectContaining({ difficulty: "hard" }),
     );
+  });
+
+  it("throws BadRequestException and does NOT persist when topicId doesn't exist (FK pre-check, before any write)", async () => {
+    const { service, repository, pdfCompiler } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
+    repository.topicExists.mockResolvedValue(false);
+
+    await expect(
+      service.editQuestion(TEACHER_USER, "draft-1", { topicId: "nonexistent-topic" }),
+    ).rejects.toBeInstanceOf(BadRequestException);
+
+    expect(repository.topicExists).toHaveBeenCalledWith("nonexistent-topic");
+    expect(pdfCompiler.compileExam).not.toHaveBeenCalled();
+    expect(repository.updateStructuredQuestionAndTaxonomy).not.toHaveBeenCalled();
+  });
+
+  it("does not call topicExists when topicId is not part of the patch", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
+    repository.updateStructuredQuestionAndTaxonomy.mockResolvedValue(DRAFT_QUESTION);
+
+    await service.editQuestion(TEACHER_USER, "draft-1", { difficulty: "hard" });
+
+    expect(repository.topicExists).not.toHaveBeenCalled();
   });
 });
 
