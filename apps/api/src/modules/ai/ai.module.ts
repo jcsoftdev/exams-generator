@@ -5,6 +5,7 @@ import { AiController } from "./ai.controller";
 import { QUESTION_GENERATOR_PORT } from "./ai.constants";
 import { resolveQuestionGeneratorAdapter } from "./ai-provider";
 import { GenerateQuestionsService } from "./generate-questions.service";
+import { ReviseQuestionService } from "./revise-question.service";
 
 /**
  * Provides `QuestionGeneratorPort` (bound to `OpenRouterAdapter`, wrapped in
@@ -26,6 +27,7 @@ import { GenerateQuestionsService } from "./generate-questions.service";
   controllers: [AiController],
   providers: [
     GenerateQuestionsService,
+    ReviseQuestionService,
     {
       provide: QUESTION_GENERATOR_PORT,
       useFactory: () => new LazyQuestionGeneratorAdapter(resolveQuestionGeneratorAdapter),

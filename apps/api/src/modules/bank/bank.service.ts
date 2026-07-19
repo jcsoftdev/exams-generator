@@ -15,6 +15,7 @@ import { QuestionStatus } from "../../db/schema/enums";
 import { PDF_COMPILER_PORT, STORAGE_PORT } from "./bank.constants";
 import { BankRepository, QuestionListItem, QuestionListPagination } from "./bank.repository";
 import { canManageQuestionTenant } from "./domain/can-manage-question-tenant";
+import { compilePreviewFromContent } from "./domain/compile-preview-from-content";
 import { validateCreateImageQuestionInput } from "./domain/validate-create-image-question";
 import { validateCreateStructuredQuestionInput } from "./domain/validate-create-structured-question";
 import { validateQuestionTaxonomy } from "./domain/validate-question-taxonomy";
@@ -336,19 +337,13 @@ export class BankService {
     }
 
     try {
-      const pdf = await this.pdfCompiler.compileExam({
-        title: "Vista previa",
-        versionLabel: "preview",
-        questions: [
-          {
-            id: question.id,
-            type: "structured",
-            bodyTypst: question.bodyTypst,
-            alternatives: (question.alternatives ?? []) as string[],
-            figureCode: question.figureCode ?? undefined,
-          },
-        ],
-      });
+      const pdf = await compilePreviewFromContent(
+        this.pdfCompiler,
+        question.id,
+        question.bodyTypst,
+        (question.alternatives ?? []) as string[],
+        question.figureCode ?? undefined,
+      );
       if (this.previewCache.size >= MAX_PREVIEW_CACHE) {
         const oldestKey = this.previewCache.keys().next().value;
         if (oldestKey !== undefined) {
