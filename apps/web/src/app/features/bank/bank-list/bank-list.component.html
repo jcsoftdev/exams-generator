@@ -330,7 +330,7 @@
 
                 <div class="flex gap-2">
                   <div data-testid="edit-save">
-                    <ui-button variant="primary" [loading]="editSaving()" (clicked)="saveEdit()">Guardar</ui-button>
+                    <ui-button variant="primary" [loading]="editSaving()" [disabled]="editSaving() || !editTopicId()" (clicked)="saveEdit()">Guardar</ui-button>
                   </div>
                   <div data-testid="edit-cancel">
                     <ui-button variant="ghost" [disabled]="editSaving()" (clicked)="cancelEdit()">Cancelar</ui-button>

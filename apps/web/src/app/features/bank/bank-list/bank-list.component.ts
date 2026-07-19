@@ -204,11 +204,14 @@ export class BankListComponent {
   protected readonly editDifficulty = signal<Difficulty | null>(null);
   protected readonly editGradeLevel = signal<string | null>(null);
   /**
-   * Canonical format is a 0-based INDEX string ("0".."4") into
-   * `editAlternatives` — the backend's format, see `normalizeCorrectAnswer`.
-   * `startEdit` normalizes legacy letter rows into an index when seeding
-   * this; `reviseWithAi` populates it directly from the AI response (already
-   * an index); `saveEdit` sends it as-is, no per-save conversion.
+   * TYPE-DEPENDENT clave. For `structured` questions this is a 0-based INDEX
+   * string ("0".."4") into `editAlternatives` — the backend's format, see
+   * `normalizeCorrectAnswer`; `startEdit` normalizes legacy letter rows into
+   * an index when seeding it, `reviseWithAi`/`extractFromImage` populate it
+   * directly from the AI response (already an index). For `image` questions
+   * this is the LETTER of the marked option (a/b/c/d) — image rows have no
+   * `alternatives` to index into, so `startEdit` seeds (and `saveEdit` sends)
+   * the letter verbatim, NEVER normalized to an index.
    */
   protected readonly editCorrectAnswer = signal('');
   protected readonly editBody = signal('');
@@ -525,7 +528,14 @@ export class BankListComponent {
     this.editTopicId.set(question.topicId);
     this.editDifficulty.set(question.difficulty);
     this.editGradeLevel.set(question.gradeLevel);
-    this.editCorrectAnswer.set(normalizeCorrectAnswer(question.correctAnswer));
+    // correctAnswer format is TYPE-DEPENDENT: structured questions store a
+    // 0-based INDEX into `alternatives` (normalized from any legacy letter),
+    // but image questions store the LETTER of the marked option (a/b/c/d) and
+    // have no `alternatives` to index into — so a letter is CORRECT there and
+    // must NOT be normalized to an index (that would corrupt the clave).
+    this.editCorrectAnswer.set(
+      question.type === 'structured' ? normalizeCorrectAnswer(question.correctAnswer) : question.correctAnswer,
+    );
     this.editBody.set(question.bodyTypst ?? '');
     this.editAlternatives.set((question.alternatives ?? []).join('\n'));
     this.discardEditImage();
@@ -590,8 +600,9 @@ export class BankListComponent {
    * `saveEdit` itself, so the teacher always reviews the AI's suggestion
    * before it's persisted. `alternatives` is joined one-per-line to match
    * `editAlternativesList`'s parsing, and the response's 0-based INDEX
-   * `correctAnswer` (see `AiRevisedQuestion`) is converted to the edit form's
-   * lettered format (a/b/c…, matching `alternativeRows`).
+   * `correctAnswer` (see `AiRevisedQuestion`) is set DIRECTLY — it is already
+   * the edit form's canonical INDEX format (structured stays index), no
+   * letter conversion.
    */
   protected reviseWithAi(): void {
     const question = this.selected();
@@ -657,14 +668,23 @@ export class BankListComponent {
   /**
    * Builds `UpdateQuestionPayload` (NEVER `courseId` — the backend moves a
    * question's course via `topicId`, see `UpdateQuestionPayload`'s doc) and
-   * calls `updateQuestion`; `bodyTypst`/`alternatives` are only included for
-   * `type: 'structured'` questions. If the user picked a new image file,
-   * `replaceQuestionImage` runs AFTER the patch succeeds. Either way, on
-   * success the tree + selected detail are reloaded and edit mode exits.
+   * calls `updateQuestion`. The payload is TYPE-DEPENDENT:
+   * - `structured`: taxonomy + `bodyTypst` + `alternatives` + an INDEX
+   *   `correctAnswer` (no image).
+   * - `image`: taxonomy + a LETTER `correctAnswer` ONLY (never
+   *   `bodyTypst`/`alternatives`); and if the user picked a replacement file,
+   *   `replaceQuestionImage` runs AFTER the patch succeeds so BOTH the
+   *   taxonomy/clave edit and the image swap land.
+   * Either way, on success the tree + selected detail are reloaded and edit
+   * mode exits.
    */
   protected saveEdit(): void {
     const question = this.selected();
-    if (!question || this.editSaving()) {
+    // Guard the empty-topic dead-end: changing Curso resets `editTopicId` to
+    // '' (tema is course-scoped), and a PATCH with `topicId: ''` 400s. The
+    // save button is also `[disabled]` in this state — this is the belt to
+    // that suspenders.
+    if (!question || this.editSaving() || !this.editTopicId()) {
       return;
     }
     this.editSaving.set(true);

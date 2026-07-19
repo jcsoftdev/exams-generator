@@ -766,6 +766,73 @@ describe('BankListComponent', () => {
       expect(textarea.value).toBe('Enunciado original');
     });
 
+    it('edits an IMAGE question: PATCHes the LETTER correctAnswer (no bodyTypst/alternatives) and swaps the picked image', () => {
+      const { compiled, fixture, updateQuestion, replaceQuestionImage } = setup({
+        getQuestionImpl: (id) =>
+          of(
+            makeQuestion({
+              id,
+              type: 'image',
+              imageAssetId: 'asset-1',
+              correctAnswer: 'b', // image clave is a LETTER, never an index
+            }),
+          ),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="panel-edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      // No structured content controls for an image question.
+      expect(compiled.querySelector('[data-testid="edit-enunciado"]')).toBeFalsy();
+
+      const file = new File(['bytes'], 'nueva.png', { type: 'image/png' });
+      const imageInput = compiled.querySelector('[data-testid="edit-image"]') as HTMLInputElement;
+      Object.defineProperty(imageInput, 'files', { value: [file], configurable: true });
+      imageInput.dispatchEvent(new Event('change'));
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(updateQuestion).toHaveBeenCalledTimes(1);
+      const patch = updateQuestion.mock.calls[0][1] as Record<string, unknown>;
+      // LETTER preserved (NOT normalized to an index), and NO structured content in the payload.
+      expect(patch['correctAnswer']).toBe('b');
+      expect(patch['bodyTypst']).toBeUndefined();
+      expect(patch['alternatives']).toBeUndefined();
+      // The picked replacement image is uploaded too — the swap is not gated out.
+      expect(replaceQuestionImage).toHaveBeenCalledWith('q1', file);
+    });
+
+    it('does not save when the topic is empty (curso changed but tema not re-picked)', () => {
+      const { compiled, fixture, updateQuestion } = setup({
+        getQuestionImpl: (id) =>
+          of(makeQuestion({ id, type: 'structured', imageAssetId: null, bodyTypst: 'Original', alternatives: ['Uno', 'Dos'] })),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="panel-edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      // Changing curso resets tema to '' — the user must re-pick it before saving.
+      (fixture.componentInstance as unknown as { onEditCourseChange(v: string | null): void }).onEditCourseChange('c2');
+      fixture.detectChanges();
+
+      const saveButton = compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement;
+      expect(saveButton.disabled).toBe(true);
+
+      saveButton.click();
+      fixture.detectChanges();
+      expect(updateQuestion).not.toHaveBeenCalled();
+    });
+
     it('archives the selected approved question and reloads the tree', () => {
       const { compiled, fixture, archiveQuestion, listQuestions } = setup();
       expandCourse(compiled, fixture, 'c1');
