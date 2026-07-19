@@ -3,12 +3,18 @@ import { QuestionGeneratorPort } from "./domain/ports/question-generator.port";
 
 /**
  * Resolves the real `OpenRouterAdapter` from env, mirroring
- * `resolveStorageAdapter` in the bank module. `AI_MODEL` is read here and
- * ONLY here for production wiring — it is NEVER hardcoded, because
- * OpenRouter's free-tier model list rotates (see design doc §4/§6 and
- * `infra/env.example`). Throws a clear, actionable error if either
- * required env var is missing, instead of silently defaulting (unlike
- * `resolveStorageAdapter`, there is no safe default for an AI model/key).
+ * `resolveStorageAdapter` in the bank module. Models are read here and ONLY
+ * here for production wiring — NEVER hardcoded, because OpenRouter's free-tier
+ * model list rotates (see design doc §4/§6 and `infra/env.example`).
+ *
+ * Two models, each routed to what it does best:
+ *  - `AI_MODEL` (required) — text ops (`generate`, `reviseQuestion`); pick the
+ *    strongest academic/reasoning model.
+ *  - `AI_VISION_MODEL` (optional) — `extractFromImage` only, which needs a
+ *    vision-capable model. Falls back to `AI_MODEL` when unset (fine only if
+ *    `AI_MODEL` itself has vision; otherwise image extraction will fail).
+ *
+ * Throws a clear, actionable error if a required env var is missing.
  */
 export function resolveQuestionGeneratorAdapter(): QuestionGeneratorPort {
   const model = process.env.AI_MODEL;
@@ -25,5 +31,7 @@ export function resolveQuestionGeneratorAdapter(): QuestionGeneratorPort {
     );
   }
 
-  return new OpenRouterAdapter({ apiKey, model });
+  const visionModel = process.env.AI_VISION_MODEL;
+
+  return new OpenRouterAdapter({ apiKey, model, visionModel });
 }

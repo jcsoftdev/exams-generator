@@ -59,7 +59,7 @@ const RESPONSE_JSON_SCHEMA: OpenRouterJsonSchema = {
       bodyTypst: {
         type: "string",
         description:
-          "Enunciado de la pregunta en marcado Typst. Usa $...$ para matemáticas inline y $ ... $ en bloque cuando corresponda.",
+          "Enunciado en marcado Typst (NO LaTeX). Matemáticas dentro de $...$ con sintaxis Typst: $frac(a, b)$, $sqrt(x)$, $x^2$, $a times b$. Prohibido \\frac, \\sqrt, \\times y cualquier comando con barra invertida.",
       },
       alternatives: {
         type: "array",
@@ -83,10 +83,27 @@ const RESPONSE_JSON_SCHEMA: OpenRouterJsonSchema = {
   },
 };
 
+/**
+ * Shared math-formatting contract for every system prompt. The generated
+ * `bodyTypst` is compiled by the real `typst` binary downstream; models default
+ * to LaTeX inside `$...$` (\frac, \sqrt, \times), which Typst CANNOT compile and
+ * fails the whole question. Typst's math syntax is different, so we spell it out
+ * with examples — this is the single biggest cause of "Typst compile failed".
+ */
+const TYPST_MATH_RULES = [
+  "El enunciado (bodyTypst) va en español.",
+  "Para matemáticas usa SINTAXIS TYPST, NUNCA LaTeX, dentro de $...$:",
+  "fracciones $frac(a, b)$ (no \\frac); raíz $sqrt(x)$ (no \\sqrt); potencia $x^2$; subíndice $x_1$;",
+  "multiplicación $a dot b$ o $a times b$ (no \\cdot ni \\times);",
+  "símbolos como palabras: $pi$, $alpha$, $<=$, $>=$, $!=$, $infinity$.",
+  "PROHIBIDO cualquier comando con barra invertida (\\frac, \\sqrt, \\times, \\left, \\right...) — Typst no los compila.",
+  "Ejemplos válidos: $1/2 + 1/4$, $frac(3, 4)$, $sqrt(2)$, $x^2 - 5x + 6 = 0$, $3 times 10^8$.",
+].join(" ");
+
 const SYSTEM_PROMPT = [
   "Eres un generador de preguntas tipo examen de admisión para colegios/academias peruanas.",
   "Responde EXCLUSIVAMENTE con el objeto JSON solicitado por el schema, sin explicaciones ni texto adicional.",
-  "El enunciado (bodyTypst) debe estar en español y usar marcado Typst para cualquier expresión matemática.",
+  TYPST_MATH_RULES,
 ].join(" ");
 
 /**
@@ -136,7 +153,7 @@ const REVISE_SYSTEM_PROMPT = [
   "Eres un editor experto de preguntas tipo examen de admisión para colegios/academias peruanas.",
   "Se te dará una pregunta existente y una instrucción de edición del profesor; produce una NUEVA versión de la pregunta que cumpla la instrucción.",
   "Responde EXCLUSIVAMENTE con el objeto JSON solicitado por el schema, sin explicaciones ni texto adicional.",
-  "El enunciado (bodyTypst) debe estar en español y usar marcado Typst para cualquier expresión matemática.",
+  TYPST_MATH_RULES,
 ].join(" ");
 
 /**
@@ -195,7 +212,7 @@ const EXTRACT_SYSTEM_PROMPT = [
   "Eres un asistente que extrae preguntas tipo examen de admisión desde fotos de material impreso o manuscrito peruano.",
   "Lee la imagen y transcribe la pregunta que contiene: enunciado, alternativas y, si es identificable, la alternativa correcta.",
   "Responde EXCLUSIVAMENTE con el objeto JSON solicitado por el schema, sin explicaciones ni texto adicional.",
-  "El enunciado (bodyTypst) debe estar en español y usar marcado Typst para cualquier expresión matemática.",
+  TYPST_MATH_RULES,
 ].join(" ");
 
 /**

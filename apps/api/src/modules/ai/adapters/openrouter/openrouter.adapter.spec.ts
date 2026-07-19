@@ -251,6 +251,40 @@ describe("OpenRouterAdapter", () => {
   });
 
   describe("extractFromImage", () => {
+    it("routes to the configured visionModel, while text ops stay on `model`", async () => {
+      const httpClient = jest
+        .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+        .mockReturnValue(jsonResponse(200, chatCompletion({ content: JSON.stringify(VALID_QUESTION_JSON) })));
+      const adapter = new OpenRouterAdapter({
+        apiKey: "sk-test-key",
+        model: "text/academic-model:free",
+        visionModel: "vision/model:free",
+        httpClient,
+      });
+
+      await adapter.extractFromImage(EXTRACT_INPUT);
+      expect(JSON.parse(httpClient.mock.calls[0][1].body).model).toBe("vision/model:free");
+
+      await adapter.generate(INPUT);
+      expect(JSON.parse(httpClient.mock.calls[1][1].body).model).toBe("text/academic-model:free");
+    });
+
+    it("falls back to `model` for extractFromImage when no visionModel is configured", async () => {
+      const httpClient = jest
+        .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+        .mockReturnValueOnce(
+          jsonResponse(200, chatCompletion({ content: JSON.stringify(VALID_QUESTION_JSON) })),
+        );
+      const adapter = new OpenRouterAdapter({
+        apiKey: "sk-test-key",
+        model: "solo/model:free",
+        httpClient,
+      });
+
+      await adapter.extractFromImage(EXTRACT_INPUT);
+      expect(JSON.parse(httpClient.mock.calls[0][1].body).model).toBe("solo/model:free");
+    });
+
     it("returns the validated question and sends a multimodal message with an image_url data URI", async () => {
       const httpClient = jest
         .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()

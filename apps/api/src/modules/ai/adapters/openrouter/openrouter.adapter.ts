@@ -48,6 +48,13 @@ export interface OpenRouterAdapterConfig {
    * list rotates; see design doc §4/§6).
    */
   readonly model: string;
+  /**
+   * Separate model for `extractFromImage` (multimodal): the best free
+   * academic text model has no vision, so image extraction routes to a
+   * vision-capable model instead. Resolved from `process.env.AI_VISION_MODEL`;
+   * falls back to `model` when unset. Never hardcoded (free list rotates).
+   */
+  readonly visionModel?: string;
   readonly httpClient?: HttpClient;
   readonly baseUrl?: string;
 }
@@ -77,10 +84,13 @@ interface AttemptOutcome {
 export class OpenRouterAdapter implements QuestionGeneratorPort {
   private readonly httpClient: HttpClient;
   private readonly baseUrl: string;
+  /** Model used by `extractFromImage` — the vision model, or `model` when none is configured. */
+  private readonly visionModel: string;
 
   constructor(private readonly config: OpenRouterAdapterConfig) {
     this.httpClient = config.httpClient ?? fetchHttpClient;
     this.baseUrl = config.baseUrl ?? OPENROUTER_CHAT_COMPLETIONS_URL;
+    this.visionModel = config.visionModel ?? config.model;
   }
 
   async generate(input: GenerateQuestionInput): Promise<GeneratedQuestion> {
@@ -110,7 +120,7 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
    */
   async extractFromImage(input: ExtractQuestionInput): Promise<GeneratedQuestion> {
     return this.runWithRetries((previousError) =>
-      buildOpenRouterExtractRequestBody(this.config.model, input, { previousError }),
+      buildOpenRouterExtractRequestBody(this.visionModel, input, { previousError }),
     );
   }
 
