@@ -6,18 +6,28 @@ import { ButtonComponent } from '../../../ui/button/button.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
+import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { ExamVersionsService } from '../exam-versions.service';
 import { ExamVersion } from '../exam-versions.models';
 import { ExamsService } from '../../exams/exams.service';
 import { ExamDetail, ExamDetailQuestion, GRADE_LEVEL_LABELS, GradeLevel } from '../../exams/exams.models';
 
+/** "¿Cuántas formas?" mockup step 3 (design doc §5.2) — only these counts are offered. */
+const VERSION_COUNT_OPTIONS: readonly number[] = [2, 3, 4, 5];
+const DEFAULT_VERSION_COUNT = 2;
+
 /**
- * Standalone versions screen (design doc §6, spec VS-R1..R3). Display-only:
- * generation happens on the exam-builder screen (`POST /exams/:id/versions`,
- * B3 auto-confirm), which navigates HERE afterward. This screen's only job
- * is to read the authoritative list via `GET /exams/:id/versions` (B4) and
- * build authenticated `blob:` download links (DECISION B4-A/G3 — `/assets/:id`
- * is Bearer-JWT protected, a plain `<a href>` can't send that header).
+ * Standalone versions screen (design doc §6, spec VS-R1..R3). Reads the
+ * authoritative list via `GET /exams/:id/versions` (B4) and builds
+ * authenticated `blob:` download links (DECISION B4-A/G3 — `/assets/:id` is
+ * Bearer-JWT protected, a plain `<a href>` can't send that header).
+ *
+ * "Generar más formas" (design doc §2.3/5.2) regenerates INLINE here via
+ * `ExamVersionsService.generateVersions` — it used to navigate to
+ * `ExamReviewComponent` (`/app/exams/:id`), but that screen disables
+ * everything once the exam is `ready`, making it a dead end. The backend
+ * regeneration is idempotent (B4 ⚠): confirming REPLACES the exam's
+ * existing formas, hence the inline warning before firing the request.
  *
  * 404 (exam not found / cross-tenant, B4-R2) renders a state DISTINCT from
  * "zero versions" (B4-R3, both are valid non-error outcomes) and from a
@@ -29,7 +39,7 @@ import { ExamDetail, ExamDetailQuestion, GRADE_LEVEL_LABELS, GradeLevel } from '
   // `<lucide-icon>` is used both here (plantilla/generar/colapsable icons)
   // and inside the nested `ui-empty-state` primitive, so the module itself
   // goes in `imports` this time (not just `.pick()`'s providers).
-  imports: [ButtonComponent, EmptyStateComponent, TagComponent, LucideAngularModule],
+  imports: [ButtonComponent, EmptyStateComponent, TagComponent, SelectComponent, LucideAngularModule],
   providers: [LucideAngularModule.pick({ Folder, CopyPlus, ChevronDown, Plus }).providers ?? []],
   templateUrl: './exam-versions-panel.component.html',
 })
@@ -60,6 +70,17 @@ export class ExamVersionsPanelComponent {
 
   // "Ver contenido" — collapsed by default (design doc §2.4).
   protected readonly contentOpen = signal(false);
+
+  // "Generar más formas" inline regeneration (design doc §2.3/5.2).
+  protected readonly versionCountOptions: readonly SelectOption<number>[] = VERSION_COUNT_OPTIONS.map((n) => ({
+    value: n,
+    label: String(n),
+  }));
+  protected readonly showGenerateForm = signal(false);
+  protected readonly versionCount = signal(DEFAULT_VERSION_COUNT);
+  protected readonly generating = signal(false);
+  protected readonly generateError = signal<string | null>(null);
+  protected readonly skeletonRows = [0, 1, 2];
 
   constructor() {
     this.load();
@@ -146,13 +167,34 @@ export class ExamVersionsPanelComponent {
     });
   }
 
+  /** "Generar más formas" (design doc §2.3) — toggles the inline count-picker panel. */
+  protected toggleGenerateForm(): void {
+    this.generateError.set(null);
+    this.showGenerateForm.update((open) => !open);
+  }
+
   /**
-   * "Generar más formas" (design doc §2.3) — reuses the existing generation
-   * flow (exam-review/builder at `/app/exams/:examId`) instead of
-   * reimplementing `POST /exams/:examId/versions` here.
+   * Confirms the inline regeneration — calls the SAME idempotent endpoint
+   * the exam-builder screen uses (`ExamVersionsService.generateVersions`,
+   * B3). The backend REPLACES the exam's existing formas, so the panel
+   * warns about that before this fires (see template). On success, reload
+   * `listVersions` (B4, the single source of truth for download links) so
+   * the list reflects the freshly-generated formas.
    */
-  protected generateMore(): void {
-    this.router.navigate(['/app/exams', this.examId()]);
+  protected confirmGenerate(): void {
+    this.generateError.set(null);
+    this.generating.set(true);
+    this.examVersionsService.generateVersions(this.examId(), this.versionCount()).subscribe({
+      next: () => {
+        this.generating.set(false);
+        this.showGenerateForm.set(false);
+        this.load();
+      },
+      error: () => {
+        this.generating.set(false);
+        this.generateError.set('No se pudieron generar las formas. Inténtalo de nuevo.');
+      },
+    });
   }
 
   protected toggleContent(): void {

@@ -25,19 +25,55 @@
     </p>
   }
 
-  <div class="mb-4 flex items-center justify-between">
-    <div data-testid="generate-more-versions">
-      <ui-button variant="ghost" (clicked)="generateMore()">
-        <lucide-icon name="plus" class="h-4 w-4"></lucide-icon>
-        Generar más formas
-      </ui-button>
+  <div class="mb-4 flex flex-col gap-3">
+    <div class="flex items-center justify-between">
+      <div data-testid="generate-more-versions">
+        <ui-button variant="ghost" (clicked)="toggleGenerateForm()" [disabled]="generating()">
+          <lucide-icon name="plus" class="h-4 w-4"></lucide-icon>
+          Generar más formas
+        </ui-button>
+      </div>
+      <span data-testid="download-zip" [title]="'Disponible próximamente'">
+        <ui-button variant="ghost" [disabled]="true">Descargar todo (ZIP)</ui-button>
+      </span>
     </div>
-    <span data-testid="download-zip" [title]="'Disponible próximamente'">
-      <ui-button variant="ghost" [disabled]="true">Descargar todo (ZIP)</ui-button>
-    </span>
+
+    @if (showGenerateForm()) {
+      <div class="rounded-card border border-n200 bg-white px-4 py-3" data-testid="generate-count-panel">
+        <p class="mb-2 text-sm text-hard-text" data-testid="generate-warning">
+          Se reemplazarán las formas actuales.
+        </p>
+        <div class="flex items-end gap-3">
+          <div data-testid="version-count-select">
+            <ui-select
+              [options]="versionCountOptions"
+              [(value)]="versionCount"
+              label="¿Cuántas formas?"
+            ></ui-select>
+          </div>
+          <ui-button data-testid="confirm-generate-versions" (clicked)="confirmGenerate()" [loading]="generating()">
+            Generar
+          </ui-button>
+        </div>
+        @if (generateError()) {
+          <div class="mt-3 rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" data-testid="generate-error">
+            {{ generateError() }}
+            <button type="button" class="ml-2 underline" data-testid="retry-generate" (click)="confirmGenerate()">
+              Reintentar
+            </button>
+          </div>
+        }
+      </div>
+    }
   </div>
 
-  @if (loading()) {
+  @if (generating()) {
+    <ul class="flex flex-col gap-3" data-testid="versions-skeleton">
+      @for (row of skeletonRows; track row) {
+        <li class="h-14 animate-pulse rounded-card border border-n200 bg-n100"></li>
+      }
+    </ul>
+  } @else if (loading()) {
     <div data-testid="loading-indicator" class="py-6 text-sm text-n600">Cargando versiones…</div>
   } @else if (notFound()) {
     <div data-testid="not-found-state" class="rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text">

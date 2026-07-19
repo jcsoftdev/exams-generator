@@ -54,6 +54,7 @@ const EXAM_DETAIL: ExamDetail = {
 function setup(overrides: {
   listVersionsImpl?: (...args: unknown[]) => unknown;
   downloadAssetImpl?: (assetUrl: string) => unknown;
+  generateVersionsImpl?: (...args: unknown[]) => unknown;
   getExamImpl?: (...args: unknown[]) => unknown;
   duplicateExamImpl?: (...args: unknown[]) => unknown;
 }) {
@@ -61,6 +62,10 @@ function setup(overrides: {
   const downloadAsset = vi.fn(
     overrides.downloadAssetImpl ??
       ((assetUrl: string) => of(new Blob([`fake-bytes-${assetUrl}`], { type: 'application/pdf' }))),
+  );
+  const generateVersions = vi.fn(
+    overrides.generateVersionsImpl ??
+      (() => of([{ code: 'A', pdfUrl: '/assets/pdf-a', answerSheetUrl: '/assets/answer-a' }])),
   );
   const getExam = vi.fn(overrides.getExamImpl ?? (() => of(EXAM_DETAIL)));
   const duplicateExam = vi.fn(
@@ -75,7 +80,7 @@ function setup(overrides: {
   TestBed.configureTestingModule({
     imports: [ExamVersionsPanelComponent],
     providers: [
-      { provide: ExamVersionsService, useValue: { listVersions, downloadAsset } },
+      { provide: ExamVersionsService, useValue: { listVersions, downloadAsset, generateVersions } },
       { provide: ExamsService, useValue: { getExam, duplicateExam } },
       { provide: Router, useValue: { navigate } },
       {
@@ -89,7 +94,22 @@ function setup(overrides: {
   fixture.detectChanges();
   const compiled = fixture.nativeElement as HTMLElement;
 
-  return { fixture, compiled, listVersions, downloadAsset, getExam, duplicateExam, navigate };
+  return { fixture, compiled, listVersions, downloadAsset, generateVersions, getExam, duplicateExam, navigate };
+}
+
+function openGeneratePanel(compiled: HTMLElement, fixture: { detectChanges: () => void }): void {
+  (compiled.querySelector('[data-testid="generate-more-versions"] button') as HTMLButtonElement).click();
+  fixture.detectChanges();
+}
+
+function selectVersionCount(compiled: HTMLElement, fixture: { detectChanges: () => void }, value: string): void {
+  const select = compiled.querySelector<HTMLSelectElement>('[data-testid="version-count-select"] select');
+  if (!select) {
+    throw new Error('version count select not found');
+  }
+  select.value = value;
+  select.dispatchEvent(new Event('change'));
+  fixture.detectChanges();
 }
 
 describe('ExamVersionsPanelComponent', () => {
@@ -214,13 +234,86 @@ describe('ExamVersionsPanelComponent', () => {
     });
   });
 
-  describe('generar más formas (F8)', () => {
-    it('navigates to the existing generation flow for this exam (exam-review/builder), without calling any generation endpoint', () => {
-      const { compiled, navigate } = setup({});
+describe('generar más formas — regeneración inline (F8 fix)', () => {
+    it('shows the inline "¿Cuántas formas?" selector (2/3/4/5) with a replace warning on click, without navigating anywhere', () => {
+      const { compiled, fixture, navigate } = setup({});
 
-      (compiled.querySelector('[data-testid="generate-more-versions"] button') as HTMLButtonElement).click();
+      expect(compiled.querySelector('[data-testid="generate-count-panel"]')).toBeFalsy();
 
-      expect(navigate).toHaveBeenCalledWith(['/app/exams', 'exam-1']);
+      openGeneratePanel(compiled, fixture);
+
+      expect(navigate).not.toHaveBeenCalled();
+      expect(compiled.querySelector('[data-testid="generate-count-panel"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="generate-warning"]')?.textContent).toContain(
+        'Se reemplazarán las formas actuales',
+      );
+
+      const options = compiled.querySelectorAll<HTMLOptionElement>(
+        '[data-testid="version-count-select"] select option',
+      );
+      expect(Array.from(options).map((o) => o.value)).toEqual(['2', '3', '4', '5']);
+    });
+
+    it('clicking the toggle again hides the panel', () => {
+      const { compiled, fixture } = setup({});
+
+      openGeneratePanel(compiled, fixture);
+      expect(compiled.querySelector('[data-testid="generate-count-panel"]')).toBeTruthy();
+
+      openGeneratePanel(compiled, fixture);
+      expect(compiled.querySelector('[data-testid="generate-count-panel"]')).toBeFalsy();
+    });
+
+    it('confirming calls generateVersions(examId, n) with the selected count', () => {
+      const { compiled, fixture, generateVersions } = setup({});
+
+      openGeneratePanel(compiled, fixture);
+      selectVersionCount(compiled, fixture, '4');
+      (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+
+      expect(generateVersions).toHaveBeenCalledWith('exam-1', 4);
+    });
+
+    it('shows a loading confirm button and a skeleton list while generating, then reloads listVersions and closes the panel on success', () => {
+      const subject = new Subject<unknown>();
+      const { compiled, fixture, listVersions } = setup({ generateVersionsImpl: () => subject.asObservable() });
+
+      openGeneratePanel(compiled, fixture);
+      (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(listVersions).toHaveBeenCalledTimes(1);
+      expect(
+        (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).disabled,
+      ).toBe(true);
+      expect(compiled.querySelector('[data-testid="versions-skeleton"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="version-row"]')).toBeFalsy();
+
+      subject.next([{ code: 'A', pdfUrl: '/assets/pdf-a', answerSheetUrl: '/assets/answer-a' }]);
+      subject.complete();
+      fixture.detectChanges();
+
+      expect(listVersions).toHaveBeenCalledTimes(2);
+      expect(compiled.querySelector('[data-testid="generate-count-panel"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="versions-skeleton"]')).toBeFalsy();
+    });
+
+    it('shows an error banner with a retry action on failure, keeping the existing versions visible', () => {
+      const { compiled, fixture, generateVersions, listVersions } = setup({
+        generateVersionsImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+
+      openGeneratePanel(compiled, fixture);
+      (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="generate-error"]')).toBeTruthy();
+      expect(compiled.querySelectorAll('[data-testid="version-row"]').length).toBe(3);
+      expect(listVersions).toHaveBeenCalledTimes(1);
+
+      (compiled.querySelector('[data-testid="retry-generate"]') as HTMLButtonElement).click();
+
+      expect(generateVersions).toHaveBeenCalledTimes(2);
     });
   });
 
