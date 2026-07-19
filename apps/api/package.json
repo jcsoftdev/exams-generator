@@ -4,17 +4,17 @@
   "private": true,
   "scripts": {
     "start": "node dist/main.js",
-    "start:dev": "PORT=3012 ts-node -r tsconfig-paths/register src/main.ts",
-    "dev": "PORT=3012 ts-node -r tsconfig-paths/register src/main.ts",
+    "start:dev": "DOTENV_CONFIG_PATH=../../.env PORT=3012 ts-node -r dotenv/config -r tsconfig-paths/register src/main.ts",
+    "dev": "DOTENV_CONFIG_PATH=../../.env PORT=3012 ts-node -r dotenv/config -r tsconfig-paths/register src/main.ts",
     "build": "tsc -p tsconfig.build.json",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint .",
     "db:generate": "drizzle-kit generate --schema=./src/db/schema/index.ts --dialect=postgresql --out=./drizzle",
-    "db:migrate": "ts-node -r tsconfig-paths/register src/db/migrate.ts",
-    "db:seed": "ts-node -r tsconfig-paths/register src/db/seed.ts",
-    "db:seed:bank-sample": "ts-node -r tsconfig-paths/register src/scripts/seed-bank-sample.ts",
-    "db:purge-test-taxonomy": "ts-node -r tsconfig-paths/register src/scripts/purge-test-taxonomy.ts"
+    "db:migrate": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/db/migrate.ts",
+    "db:seed": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/db/seed.ts",
+    "db:seed:bank-sample": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/scripts/seed-bank-sample.ts",
+    "db:purge-test-taxonomy": "DOTENV_CONFIG_PATH=../../.env ts-node -r dotenv/config -r tsconfig-paths/register src/scripts/purge-test-taxonomy.ts"
   },
   "dependencies": {
     "@exams-generator/shared": "workspace:*",
@@ -23,6 +23,7 @@
     "@nestjs/platform-express": "^10.4.4",
     "archiver": "^7.0.1",
     "bcryptjs": "^3.0.3",
+    "dotenv": "^16.4.5",
     "drizzle-orm": "^0.33.0",
     "jsonwebtoken": "^9.0.2",
     "minio": "^8.0.7",
