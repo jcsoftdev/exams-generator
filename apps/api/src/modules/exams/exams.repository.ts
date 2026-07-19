@@ -69,6 +69,20 @@ export interface BlueprintRowRecord {
   readonly count: number;
 }
 
+/** One `{status}` bucket from `countByStatus` — feeds the dashboard's exams card. */
+export interface ExamStatusCount {
+  readonly status: ExamStatus;
+  readonly total: number;
+}
+
+/** One row from `listRecent` — feeds the dashboard's "recent exams" list. */
+export interface RecentExamRecord {
+  readonly id: string;
+  readonly title: string;
+  readonly status: ExamStatus;
+  readonly createdAt: string;
+}
+
 /**
  * One candidate in the pool handed to `BlueprintSelector.select()`. This is
  * the exact shape the domain function needs — nothing more.
@@ -361,6 +375,29 @@ export class ExamsRepository {
       items: rows.map((r) => ({ ...r, createdAt: r.createdAt.toISOString() })),
       total,
     };
+  }
+
+  /** Dashboard aggregate (design doc §2): grouped exam count by status for a tenant. */
+  async countByStatus(tenantId: string): Promise<ExamStatusCount[]> {
+    const rows = await db
+      .select({ status: exams.status, total: count() })
+      .from(exams)
+      .where(eq(exams.tenantId, tenantId))
+      .groupBy(exams.status);
+
+    return rows.map((row) => ({ status: row.status, total: Number(row.total) }));
+  }
+
+  /** Dashboard aggregate (design doc §2): the tenant's `limit` most recent exams, newest first. */
+  async listRecent(tenantId: string, limit: number): Promise<RecentExamRecord[]> {
+    const rows = await db
+      .select({ id: exams.id, title: exams.title, status: exams.status, createdAt: exams.createdAt })
+      .from(exams)
+      .where(eq(exams.tenantId, tenantId))
+      .orderBy(desc(exams.createdAt))
+      .limit(limit);
+
+    return rows.map((row) => ({ ...row, createdAt: row.createdAt.toISOString() }));
   }
 
   /** Blueprint rows for an exam, with course/topic names resolved for human-readable shortage messages. */

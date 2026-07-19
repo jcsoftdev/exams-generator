@@ -17,5 +17,6 @@ import { resolvePdfCompilerAdapter } from "./pdf-compiler-provider";
     { provide: STORAGE_PORT, useFactory: resolveStorageAdapter },
     { provide: PDF_COMPILER_PORT, useFactory: resolvePdfCompilerAdapter },
   ],
+  exports: [ExamsRepository],
 })
 export class ExamsModule {}

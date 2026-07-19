@@ -806,4 +806,107 @@ describe("ExamsRepository", () => {
       expect(await repository.getVersions(randomUUID(), tenantAId)).toBeUndefined();
     });
   });
+
+  describe("countByStatus() / listRecent() — dashboard aggregate", () => {
+    let dashboardTenantId: string;
+    let dashboardTeacherId: string;
+    const dashboardExamIds: string[] = [];
+
+    beforeAll(async () => {
+      const suffix = randomUUID();
+      const [tenant] = await db
+        .insert(tenants)
+        .values({ name: `Dashboard Agg Tenant ${suffix}`, slug: `dashboard-agg-${suffix}` })
+        .returning({ id: tenants.id });
+      dashboardTenantId = tenant!.id;
+
+      const [teacher] = await db
+        .insert(users)
+        .values({
+          tenantId: dashboardTenantId,
+          email: `dashboard-agg-teacher-${suffix}@exams-generator.test`,
+          passwordHash: "test-hash",
+          role: Role.Teacher,
+        })
+        .returning({ id: users.id });
+      dashboardTeacherId = teacher!.id;
+    });
+
+    afterAll(async () => {
+      for (const examId of dashboardExamIds) {
+        await repository.deleteExam(examId, dashboardTenantId);
+      }
+      await db.delete(users).where(eq(users.id, dashboardTeacherId));
+      await db.delete(tenants).where(eq(tenants.id, dashboardTenantId));
+    });
+
+    it("groups the tenant's exams by status", async () => {
+      const draft = await repository.createExam({
+        tenantId: dashboardTenantId,
+        title: "Draft Exam",
+        gradeLevel: "primaria_1",
+        createdBy: dashboardTeacherId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      dashboardExamIds.push(draft.id);
+
+      const ready = await repository.createExam({
+        tenantId: dashboardTenantId,
+        title: "Ready Exam",
+        gradeLevel: "primaria_1",
+        createdBy: dashboardTeacherId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      dashboardExamIds.push(ready.id);
+      await repository.confirmExam(ready.id);
+
+      const groups = await repository.countByStatus(dashboardTenantId);
+
+      expect(groups).toEqual(
+        expect.arrayContaining([
+          { status: "draft", total: 1 },
+          { status: "ready", total: 1 },
+        ]),
+      );
+    });
+
+    it("scopes strictly to the given tenant — a new exam in tenant B never affects tenant A's (or dashboardTenant's) aggregate", async () => {
+      const before = await repository.countByStatus(dashboardTenantId);
+      const beforeReady = before.find((g) => g.status === "ready")?.total ?? 0;
+
+      const tenantBExam = await repository.createExam({
+        tenantId: tenantBId,
+        title: "Tenant B Exam (isolation check)",
+        gradeLevel: "primaria_1",
+        createdBy: tenantBUserId,
+        blueprint: [{ courseId, count: 1 }],
+      });
+      // Pushed to the FILE-LEVEL `createdExamIds` (declared near the top of
+      // this file, swept by the outer `afterAll`) — NOT `dashboardExamIds`,
+      // since this exam belongs to `tenantBId`, and this block's own
+      // `afterAll` only cleans up via `deleteExam(id, dashboardTenantId)`.
+      createdExamIds.push(tenantBExam.id);
+      await repository.confirmExam(tenantBExam.id);
+
+      const after = await repository.countByStatus(dashboardTenantId);
+      const afterReady = after.find((g) => g.status === "ready")?.total ?? 0;
+
+      expect(afterReady).toBe(beforeReady);
+    });
+
+    it("listRecent() returns the tenant's exams ordered by createdAt desc, capped at limit", async () => {
+      const recent = await repository.listRecent(dashboardTenantId, 1);
+
+      expect(recent).toHaveLength(1);
+      expect(recent[0]!.title).toBe("Ready Exam"); // created after "Draft Exam" -> newest first
+    });
+
+    it("listRecent() returns every exam (up to limit) with id/title/status/createdAt as an ISO string", async () => {
+      const recent = await repository.listRecent(dashboardTenantId, 10);
+
+      expect(recent).toHaveLength(2);
+      expect(recent.map((r) => r.title).sort()).toEqual(["Draft Exam", "Ready Exam"]);
+      expect(typeof recent[0]!.createdAt).toBe("string");
+    });
+  });
 });
