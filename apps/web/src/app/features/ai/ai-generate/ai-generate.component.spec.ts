@@ -74,6 +74,7 @@ describe('AiGenerateComponent', () => {
     const subject = new Subject<GenerateQuestionsResult>();
     const { compiled, fixture } = setup({ genImpl: () => subject.asObservable() });
     fillForm(fixture);
+    set(fixture, 'count', 1); // one request so the single Subject drives the whole run
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(compiled.querySelector('[data-testid="batch-progress"]')).toBeTruthy();
@@ -104,7 +105,8 @@ describe('AiGenerateComponent', () => {
     generateQuestions.mockReturnValue(of({ created: [{ id: 'z' }, { id: 'w' }], failed: [] }));
     (compiled.querySelector('[data-testid="retry-failed"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
-    expect(generateQuestions).toHaveBeenCalledWith(expect.objectContaining({ count: 2 }));
+    // Sequential model: each request is a single question (count: 1), one per failed item.
+    expect(generateQuestions).toHaveBeenCalledWith(expect.objectContaining({ count: 1 }));
   });
 
   it('shows only the warning banner (no status card) when ALL questions fail validation on a 200 response', () => {
@@ -112,6 +114,7 @@ describe('AiGenerateComponent', () => {
       genImpl: () => of({ created: [], failed: [{ index: 0, error: 'x' }, { index: 1, error: 'y' }] }),
     });
     fillForm(fixture);
+    set(fixture, 'count', 1); // single request → exactly the 2 failures this genImpl returns
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
@@ -153,6 +156,7 @@ describe('AiGenerateComponent', () => {
       listDraftsImpl: () => of([draft]),
     });
     fillForm(fixture);
+    set(fixture, 'count', 1); // one question so exactly one card renders
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 

@@ -96,6 +96,8 @@ export class AiGenerateComponent {
   // Batch state.
   protected readonly generating = signal(false);
   protected readonly requested = signal(0);
+  /** How many of `requested` have come back so far — drives the live progress bar. */
+  protected readonly completed = signal(0);
   protected readonly allCreated = signal<readonly GenerateQuestionsCreatedItem[]>([]);
   protected readonly failed = signal<readonly GenerateQuestionsFailedItem[]>([]);
   protected readonly batchQuestions = signal<readonly DraftQuestion[]>([]);
@@ -190,7 +192,6 @@ export class AiGenerateComponent {
 
   protected generate(): void {
     if (this.generating() || !this.valid()) return;
-    this.requested.set(this.count());
     this.allCreated.set([]);
     this.failed.set([]);
     this.batchQuestions.set([]);
@@ -203,6 +204,8 @@ export class AiGenerateComponent {
     const failedCount = this.failedCount();
     const snapshot = this.lastRequest();
     if (this.generating() || failedCount === 0 || !snapshot) return;
+    // Re-attempting these — clear so they re-accumulate as they come back.
+    this.failed.set([]);
     this.run(failedCount);
   }
 
@@ -222,29 +225,47 @@ export class AiGenerateComponent {
   // count, a retry uses the number of failed items. Every other param comes
   // from the immutable `lastRequest` snapshot — never from the live form
   // signals — so retryFailed() always resends what was actually requested.
-  private run(count: number): void {
+  // Generates ONE question per request (count=1) in sequence, so the UI shows
+  // live progress and each question appears the moment it's ready — instead of
+  // one long opaque wait for the whole batch. `total` is the requested count,
+  // or the number of failed items on a retry.
+  private run(total: number): void {
     const snapshot = this.lastRequest();
-    if (!snapshot) return;
+    if (!snapshot || total <= 0) return;
     this.generating.set(true);
     this.errorMessage.set(null);
+    this.requested.set(total);
+    this.completed.set(0);
+    this.generateOne(total);
+  }
+
+  private generateOne(remaining: number): void {
+    const snapshot = this.lastRequest();
+    if (remaining <= 0 || !snapshot) {
+      this.generating.set(false);
+      return;
+    }
     this.aiService
       .generateQuestions({
         courseId: snapshot.courseId,
         topicId: snapshot.topicId,
         difficulty: snapshot.difficulty,
         gradeLevel: snapshot.gradeLevel,
-        count,
+        count: 1,
         withFigure: snapshot.withFigure,
       })
       .subscribe({
         next: (res: GenerateQuestionsResult) => {
-          this.generating.set(false);
           this.result.set(res);
           this.allCreated.update((prev) => [...prev, ...res.created]);
-          this.failed.set(res.failed);
+          if (res.failed.length > 0) {
+            this.failed.update((prev) => [...prev, ...res.failed]);
+          }
           if (res.created.length > 0) {
             this.loadBatchQuestions(res.created.map((c) => c.id));
           }
+          this.completed.update((c) => c + 1);
+          this.generateOne(remaining - 1);
         },
         error: (_e: HttpErrorResponse) => {
           this.generating.set(false);

@@ -94,13 +94,13 @@
       <ui-banner variant="error" [message]="errorMessage()!"></ui-banner>
     }
 
+    <!-- Header: live progress while generating, final status when done -->
     @if (generating()) {
       <div data-testid="batch-progress" class="rounded-card border border-n200 bg-white p-4">
-        <p class="mb-2 text-sm font-medium text-n700">Generando {{ requested() || count() }} preguntas…</p>
-        <ui-progress [current]="0" [total]="requested() || count()"></ui-progress>
+        <p class="mb-2 text-sm font-medium text-n700">Generando {{ completed() }}/{{ requested() }} preguntas…</p>
+        <ui-progress [current]="completed()" [total]="requested()"></ui-progress>
       </div>
     } @else if (hasResult() && !totalFailure()) {
-      <!-- Tarjeta de estado -->
       <div class="flex items-center gap-3 rounded-card border border-n200 bg-white px-4 py-3">
         <div class="text-2xl font-extrabold text-primary-900">
           {{ createdCount() }}<span class="text-sm font-medium text-n500">/{{ requested() }}</span>
@@ -116,17 +116,26 @@
           <div class="h-full rounded-full bg-primary-500" [style.width.%]="resultPct()"></div>
         </div>
       </div>
+    }
 
-      @if (failedCount() > 0) {
-        <div
-          data-testid="batch-failures"
-          class="flex items-center gap-2 rounded-field border border-warn-text/20 bg-warn-bg px-3 py-2 text-xs text-warn-text"
-        >
-          <lucide-angular name="triangle-alert" class="h-4 w-4 shrink-0"></lucide-angular>
-          <p class="flex-1">
+    <!-- Failures — accumulate live; retry only once the run has finished -->
+    @if (failedCount() > 0) {
+      <div
+        data-testid="batch-failures"
+        class="flex items-center gap-2 rounded-field border border-warn-text/20 bg-warn-bg px-3 py-2 text-xs text-warn-text"
+      >
+        <lucide-angular name="triangle-alert" class="h-4 w-4 shrink-0"></lucide-angular>
+        <p class="flex-1">
+          @if (totalFailure()) {
+            <span class="font-bold">Ninguna pregunta pasó la validación.</span>
+          } @else {
             <span class="font-bold">{{ failedCount() }} no {{ failedCount() === 1 ? 'pasó' : 'pasaron' }} la validación.</span>
+          }
+          @if (!generating()) {
             Puedes reintentarla{{ failedCount() === 1 ? '' : 's' }} con los mismos parámetros.
-          </p>
+          }
+        </p>
+        @if (!generating()) {
           <div data-testid="retry-failed">
             <button
               type="button"
@@ -136,34 +145,37 @@
               Reintentar {{ failedCount() }}
             </button>
           </div>
-        </div>
-      }
+        }
+      </div>
+    }
 
-      <!-- Preguntas legibles de la tanda -->
-      @for (q of batchQuestions(); track q.id; let i = $index) {
-        <div data-testid="batch-question" class="rounded-card border border-n200 bg-white p-3">
-          <div class="mb-1.5 flex items-center gap-2">
-            <span class="flex h-5 w-5 items-center justify-center rounded-[7px] bg-ai-bg text-[11px] font-extrabold text-ai-text">
-              {{ i + 1 }}
-            </span>
-            <ui-tag variant="ai">Borrador IA</ui-tag>
-            <span class="ml-auto text-[10px] text-n500">clave: {{ letterFor(q) }}</span>
-          </div>
-          <p class="text-sm leading-snug text-n900">{{ q.bodyTypst }}</p>
-          @if (q.alternatives) {
-            <div class="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-n600">
-              @for (alt of q.alternatives; track $index; let altIndex = $index) {
-                @if (isCorrect(q, altIndex)) {
-                  <span data-testid="alt-correct" class="font-bold text-easy-text">{{ letterAt(altIndex) }}) {{ alt }} ✓</span>
-                } @else {
-                  <span>{{ letterAt(altIndex) }}) {{ alt }}</span>
-                }
+    <!-- Question cards — accumulate live, each appears the moment it's ready -->
+    @for (q of batchQuestions(); track q.id; let i = $index) {
+      <div data-testid="batch-question" class="rounded-card border border-n200 bg-white p-3">
+        <div class="mb-1.5 flex items-center gap-2">
+          <span class="flex h-5 w-5 items-center justify-center rounded-[7px] bg-ai-bg text-[11px] font-extrabold text-ai-text">
+            {{ i + 1 }}
+          </span>
+          <ui-tag variant="ai">Borrador IA</ui-tag>
+          <span class="ml-auto text-[10px] text-n500">clave: {{ letterFor(q) }}</span>
+        </div>
+        <p class="text-sm leading-snug text-n900">{{ q.bodyTypst }}</p>
+        @if (q.alternatives) {
+          <div class="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-n600">
+            @for (alt of q.alternatives; track $index; let altIndex = $index) {
+              @if (isCorrect(q, altIndex)) {
+                <span data-testid="alt-correct" class="font-bold text-easy-text">{{ letterAt(altIndex) }}) {{ alt }} ✓</span>
+              } @else {
+                <span>{{ letterAt(altIndex) }}) {{ alt }}</span>
               }
-            </div>
-          }
-        </div>
-      }
+            }
+          </div>
+        }
+      </div>
+    }
 
+    <!-- Footer / review — once the run finished with at least one created -->
+    @if (!generating() && createdCount() > 0) {
       <p class="text-xs text-n500">Lo generado entra como borrador a tu cola de revisión — nada se publica solo.</p>
       <div data-testid="go-review" class="flex justify-end">
         <button
@@ -174,29 +186,10 @@
           Revisar los {{ createdCount() }} en la cola →
         </button>
       </div>
-    } @else {
-      @if (totalFailure()) {
-        <!-- Ninguna pregunta pasó la validación: sin tarjeta de estado (confunde con 0/N), solo el banner. -->
-        <div
-          data-testid="batch-failures"
-          class="flex items-center gap-2 rounded-field border border-warn-text/20 bg-warn-bg px-3 py-2 text-xs text-warn-text"
-        >
-          <lucide-angular name="triangle-alert" class="h-4 w-4 shrink-0"></lucide-angular>
-          <p class="flex-1">
-            <span class="font-bold">Ninguna pregunta pasó la validación.</span>
-            Puedes reintentarlas con los mismos parámetros.
-          </p>
-          <div data-testid="retry-failed">
-            <button
-              type="button"
-              class="whitespace-nowrap rounded-field border border-warn-text/30 bg-white px-2.5 py-1 text-[11px] font-bold text-warn-text"
-              (click)="retryFailed()"
-            >
-              Reintentar {{ failedCount() }}
-            </button>
-          </div>
-        </div>
-      }
+    }
+
+    <!-- Empty state — before anything happens, or when nothing was created -->
+    @if (!generating() && createdCount() === 0) {
       <div data-testid="batch-empty" class="flex flex-col items-center gap-3 rounded-card border border-dashed border-n300 p-10 text-center">
         <span class="flex h-10 w-10 items-center justify-center rounded-card bg-ai-bg text-ai-text">
           <lucide-angular name="sparkles" class="h-5 w-5"></lucide-angular>
