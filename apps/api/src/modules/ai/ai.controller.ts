@@ -1,7 +1,19 @@
-import { Body, Controller, HttpCode, Param, Post, UseGuards } from "@nestjs/common";
+import {
+  BadRequestException,
+  Body,
+  Controller,
+  HttpCode,
+  Param,
+  Post,
+  UploadedFile,
+  UseGuards,
+  UseInterceptors,
+} from "@nestjs/common";
+import { FileInterceptor } from "@nestjs/platform-express";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../auth/token.service";
+import { ExtractQuestionService } from "./extract-question.service";
 import { GenerateQuestionsResult, GenerateQuestionsService } from "./generate-questions.service";
 import { GeneratedQuestion } from "./domain/ports/question-generator.port";
 import { ReviseQuestionService } from "./revise-question.service";
@@ -34,6 +46,7 @@ export class AiController {
   constructor(
     private readonly service: GenerateQuestionsService,
     private readonly reviseService: ReviseQuestionService,
+    private readonly extractService: ExtractQuestionService,
   ) {}
 
   @Post("generate")
@@ -65,5 +78,22 @@ export class AiController {
     @Body() body: ReviseQuestionBody,
   ): Promise<GeneratedQuestion> {
     return this.reviseService.revise(user, id, body.instruction ?? "");
+  }
+
+  /**
+   * `POST /ai/questions/extract` (question editing, Task 5): OCR/vision
+   * extraction of a question from a photo. Always 200 (not 201) — nothing is
+   * created, the response is a brand-new, unsaved draft the caller may later
+   * persist via the existing bank creation endpoints. No `:id` — unlike
+   * `revise`, there is no existing question to look up.
+   */
+  @Post("extract")
+  @HttpCode(200)
+  @UseInterceptors(FileInterceptor("file"))
+  async extract(@UploadedFile() file: Express.Multer.File): Promise<GeneratedQuestion> {
+    if (!file) {
+      throw new BadRequestException("file is required");
+    }
+    return this.extractService.extract({ buffer: file.buffer, mimetype: file.mimetype });
   }
 }

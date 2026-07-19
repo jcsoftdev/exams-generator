@@ -4,6 +4,7 @@ import { LazyQuestionGeneratorAdapter } from "./adapters/lazy-question-generator
 import { AiController } from "./ai.controller";
 import { QUESTION_GENERATOR_PORT } from "./ai.constants";
 import { resolveQuestionGeneratorAdapter } from "./ai-provider";
+import { ExtractQuestionService } from "./extract-question.service";
 import { GenerateQuestionsService } from "./generate-questions.service";
 import { ReviseQuestionService } from "./revise-question.service";
 
@@ -28,6 +29,7 @@ import { ReviseQuestionService } from "./revise-question.service";
   providers: [
     GenerateQuestionsService,
     ReviseQuestionService,
+    ExtractQuestionService,
     {
       provide: QUESTION_GENERATOR_PORT,
       useFactory: () => new LazyQuestionGeneratorAdapter(resolveQuestionGeneratorAdapter),
