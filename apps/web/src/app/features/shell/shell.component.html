@@ -18,29 +18,40 @@
 
   <div class="flex flex-1 flex-col overflow-hidden">
     <ui-topbar [title]="schoolName()" (menuToggle)="toggleMobileMenu()">
-      <div actions class="relative">
+      <div actions class="flex items-center gap-2">
         <button
           type="button"
-          data-testid="user-menu-button"
-          class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-700 hover:bg-primary-200"
-          (click)="toggleUserMenu()"
-          aria-label="Menú de usuario"
+          data-testid="notifications-button"
+          class="relative flex h-8 w-8 items-center justify-center rounded-full text-n600 hover:bg-n100"
+          aria-label="Notificaciones"
         >
-          <lucide-angular name="user" class="h-5 w-5"></lucide-angular>
+          <lucide-angular name="bell" class="h-5 w-5"></lucide-angular>
+          <span class="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-hard-text"></span>
         </button>
-        @if (userMenuOpen()) {
-          <div class="absolute right-0 z-50 mt-2 w-48 rounded-card border border-n200 bg-white py-1 shadow-lg">
-            <button
-              type="button"
-              data-testid="logout-button"
-              class="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-n800 hover:bg-n50"
-              (click)="logout()"
-            >
-              <lucide-angular name="log-out" class="h-4 w-4"></lucide-angular>
-              Cerrar sesión
-            </button>
-          </div>
-        }
+        <div class="relative">
+          <button
+            type="button"
+            data-testid="user-menu-button"
+            class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-700 hover:bg-primary-200"
+            (click)="toggleUserMenu()"
+            aria-label="Menú de usuario"
+          >
+            <lucide-angular name="user" class="h-5 w-5"></lucide-angular>
+          </button>
+          @if (userMenuOpen()) {
+            <div class="absolute right-0 z-50 mt-2 w-48 rounded-card border border-n200 bg-white py-1 shadow-lg">
+              <button
+                type="button"
+                data-testid="logout-button"
+                class="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-n800 hover:bg-n50"
+                (click)="logout()"
+              >
+                <lucide-angular name="log-out" class="h-4 w-4"></lucide-angular>
+                Cerrar sesión
+              </button>
+            </div>
+          }
+        </div>
       </div>
     </ui-topbar>
     <main class="flex-1 overflow-auto p-4">

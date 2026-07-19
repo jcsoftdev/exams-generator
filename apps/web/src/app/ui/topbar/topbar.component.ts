@@ -31,8 +31,8 @@ import { LucideAngularModule } from 'lucide-angular';
           <h1 class="text-base font-semibold text-n900">{{ title() }}</h1>
         }
       </div>
-      <div class="hidden min-w-0 flex-1 justify-center px-6 md:flex">
-        <div class="relative w-full max-w-sm">
+      <div class="hidden min-w-0 flex-1 px-6 md:flex">
+        <div class="relative w-full max-w-xl">
           <lucide-angular
             name="search"
             class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-n400"
