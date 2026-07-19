@@ -30,12 +30,16 @@
 
   @if (tab() === 'photo') {
     <div data-testid="tab-photo-panel" class="flex flex-col gap-3 rounded-card border border-n200 bg-white p-4">
+      <div data-testid="photo-grade-select">
+        <ui-select label="Grado" [options]="gradeLevelOptions" [value]="pGradeLevel()" (valueChange)="pGradeLevel.set($event)" placeholder="Elige un grado"></ui-select>
+      </div>
       <div data-testid="photo-course-select">
         <ui-select
           label="Curso"
-          placeholder="Elige un curso"
-          [options]="courseOptions()"
+          [placeholder]="pGradeLevel() ? 'Elige un curso' : 'Primero elige un grado'"
+          [options]="pCourseOptions()"
           [value]="pCourseId()"
+          [disabled]="!pGradeLevel()"
           (valueChange)="pCourseId.set($event ?? '')"
         ></ui-select>
       </div>
@@ -50,7 +54,6 @@
         ></ui-select>
       </div>
       <ui-select label="Nivel" [options]="difficultyOptions" [value]="pDifficulty()" (valueChange)="pDifficulty.set($event)" placeholder="Elige"></ui-select>
-      <ui-select label="Grado" [options]="gradeLevelOptions" [value]="pGradeLevel()" (valueChange)="pGradeLevel.set($event)" placeholder="Elige"></ui-select>
       <ui-input label="Clave (respuesta correcta)" [value]="pCorrectAnswer()" (valueChange)="pCorrectAnswer.set($event)"></ui-input>
 
       <div data-testid="image-upload" class="flex flex-col gap-2">
@@ -83,12 +86,16 @@
     </div>
   } @else {
     <div data-testid="tab-structured-panel" class="flex flex-col gap-3 rounded-card border border-n200 bg-white p-4">
+      <div data-testid="structured-grade-select">
+        <ui-select label="Grado" [options]="gradeLevelOptions" [value]="sGradeLevel()" (valueChange)="sGradeLevel.set($event)" placeholder="Elige un grado"></ui-select>
+      </div>
       <div data-testid="structured-course-select">
         <ui-select
           label="Curso"
-          placeholder="Elige un curso"
-          [options]="courseOptions()"
+          [placeholder]="sGradeLevel() ? 'Elige un curso' : 'Primero elige un grado'"
+          [options]="sCourseOptions()"
           [value]="sCourseId()"
+          [disabled]="!sGradeLevel()"
           (valueChange)="sCourseId.set($event ?? '')"
         ></ui-select>
       </div>
@@ -103,7 +110,6 @@
         ></ui-select>
       </div>
       <ui-select label="Nivel" [options]="difficultyOptions" [value]="sDifficulty()" (valueChange)="sDifficulty.set($event)" placeholder="Elige"></ui-select>
-      <ui-select label="Grado" [options]="gradeLevelOptions" [value]="sGradeLevel()" (valueChange)="sGradeLevel.set($event)" placeholder="Elige"></ui-select>
       <label class="text-sm text-n700">Enunciado
         <textarea class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm" rows="3" [value]="sBody()" (input)="sBody.set($any($event.target).value)"></textarea>
       </label>

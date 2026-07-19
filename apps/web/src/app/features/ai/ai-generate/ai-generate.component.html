@@ -4,11 +4,20 @@
     <h2 class="text-base font-extrabold tracking-tight text-primary-900">Generar con IA</h2>
 
     <ui-select
+      label="Grado"
+      [options]="gradeLevelOptions"
+      [value]="gradeLevel()"
+      (valueChange)="onGradeLevelChange($event)"
+      placeholder="Elige un grado"
+    ></ui-select>
+
+    <ui-select
       label="Curso"
       [options]="courseOptions()"
       [value]="courseId()"
       (valueChange)="onCourseChange($event)"
-      placeholder="Elige un curso"
+      [disabled]="!gradeLevel()"
+      [placeholder]="gradeLevel() ? 'Elige un curso' : 'Elige un grado primero'"
     ></ui-select>
 
     <ui-select
@@ -39,38 +48,27 @@
       </div>
     </div>
 
-    <div class="flex gap-2">
-      <div class="flex-1">
-        <ui-select
-          label="Grado"
-          [options]="gradeLevelOptions"
-          [value]="gradeLevel()"
-          (valueChange)="gradeLevel.set($event)"
-          placeholder="Elige"
-        ></ui-select>
-      </div>
-      <div>
-        <p class="mb-1 text-xs font-bold uppercase tracking-wide text-n600">Cantidad</p>
-        <div class="flex w-[104px] items-center overflow-hidden rounded-field border border-n300">
-          <button
-            type="button"
-            class="flex w-8 items-center justify-center bg-primary-50 py-2 text-primary-600"
-            (click)="decCount()"
-            aria-label="Menos"
-          >
-            <lucide-angular name="minus" class="h-3.5 w-3.5"></lucide-angular>
-          </button>
-          <span class="flex-1 text-center text-sm font-bold text-n900">{{ count() }}</span>
-          <button
-            type="button"
-            class="flex w-8 items-center justify-center bg-primary-50 py-2 text-primary-600 disabled:cursor-not-allowed disabled:opacity-40"
-            (click)="incCount()"
-            [disabled]="count() >= maxStepperCount"
-            aria-label="Más"
-          >
-            <lucide-angular name="plus" class="h-3.5 w-3.5"></lucide-angular>
-          </button>
-        </div>
+    <div>
+      <p class="mb-1 text-xs font-bold uppercase tracking-wide text-n600">Cantidad</p>
+      <div class="flex w-[104px] items-center overflow-hidden rounded-field border border-n300">
+        <button
+          type="button"
+          class="flex w-8 items-center justify-center bg-primary-50 py-2 text-primary-600"
+          (click)="decCount()"
+          aria-label="Menos"
+        >
+          <lucide-angular name="minus" class="h-3.5 w-3.5"></lucide-angular>
+        </button>
+        <span class="flex-1 text-center text-sm font-bold text-n900">{{ count() }}</span>
+        <button
+          type="button"
+          class="flex w-8 items-center justify-center bg-primary-50 py-2 text-primary-600 disabled:cursor-not-allowed disabled:opacity-40"
+          (click)="incCount()"
+          [disabled]="count() >= maxStepperCount"
+          aria-label="Más"
+        >
+          <lucide-angular name="plus" class="h-3.5 w-3.5"></lucide-angular>
+        </button>
       </div>
     </div>
 

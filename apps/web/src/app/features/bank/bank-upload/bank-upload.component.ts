@@ -30,7 +30,11 @@ export class BankUploadComponent {
   protected readonly selectedFile = signal<File | null>(null);
 
   protected readonly form = this.formBuilder.nonNullable.group({
-    courseId: ['', [Validators.required]],
+    // Starts disabled: a native <select> combined with [disabled] AND
+    // formControlName fights the reactive-forms directive (it wins and
+    // resets the DOM property), so Curso is gated via
+    // FormControl.disable()/enable() below instead of a template binding.
+    courseId: [{ value: '', disabled: true }, [Validators.required]],
     topicId: ['', [Validators.required]],
     difficulty: ['', [Validators.required]],
     gradeLevel: ['', [Validators.required]],
@@ -38,7 +42,23 @@ export class BankUploadComponent {
   });
 
   constructor() {
-    this.taxonomyService.getCourses().subscribe((courses) => this.courses.set(courses));
+    // Courses are loaded per selected grade — the catalog is divided by
+    // educational stage, so loading it up front (no grade) would list every
+    // stage's courses at once and repeat shared names (Matemática,
+    // Comunicación…) once per stage. Picking a grade first scopes the
+    // dropdown to one stage (same fix as ai-generate.component.ts).
+    this.form.controls.gradeLevel.valueChanges.subscribe((gradeLevel) => {
+      this.form.controls.courseId.setValue('');
+      this.form.controls.topicId.setValue('');
+      this.courses.set([]);
+      this.topics.set([]);
+      if (!gradeLevel) {
+        this.form.controls.courseId.disable();
+        return;
+      }
+      this.form.controls.courseId.enable();
+      this.taxonomyService.getCourses(gradeLevel).subscribe((courses) => this.courses.set(courses));
+    });
 
     this.form.controls.courseId.valueChanges.subscribe((courseId) => {
       this.form.controls.topicId.setValue('');
@@ -46,7 +66,9 @@ export class BankUploadComponent {
         this.topics.set([]);
         return;
       }
-      this.taxonomyService.getTopics(courseId).subscribe((topics) => this.topics.set(topics));
+      this.taxonomyService
+        .getTopics(courseId, this.form.controls.gradeLevel.value || undefined)
+        .subscribe((topics) => this.topics.set(topics));
     });
   }
 

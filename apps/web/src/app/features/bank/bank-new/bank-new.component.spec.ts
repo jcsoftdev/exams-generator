@@ -73,10 +73,10 @@ describe('BankNewComponent', () => {
     const { fixture, compiled, createStructuredQuestion, navigate } = setup();
     (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
     fixture.detectChanges();
+    set(fixture, 'sGradeLevel', 'pre');
     set(fixture, 'sCourseId', 'c1');
     set(fixture, 'sTopicId', 't1');
     set(fixture, 'sDifficulty', 'easy');
-    set(fixture, 'sGradeLevel', 'pre');
     set(fixture, 'sBody', '¿Cuánto es 2+2?');
     set(fixture, 'sAlternatives', '4\n3\n5\n6');
     set(fixture, 'sCorrectAnswer', 'a');
@@ -99,10 +99,10 @@ describe('BankNewComponent', () => {
     });
     (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
     fixture.detectChanges();
+    set(fixture, 'sGradeLevel', 'pre');
     set(fixture, 'sCourseId', 'c1');
     set(fixture, 'sTopicId', 't1');
     set(fixture, 'sDifficulty', 'easy');
-    set(fixture, 'sGradeLevel', 'pre');
     set(fixture, 'sBody', 'x');
     set(fixture, 'sAlternatives', 'a\nb');
     set(fixture, 'sCorrectAnswer', 'a');
@@ -113,16 +113,26 @@ describe('BankNewComponent', () => {
   });
 
   describe('taxonomy dropdowns (no raw UUID text inputs)', () => {
-    it('loads courses from TaxonomyService and renders them as select options, no free-text course/topic inputs', () => {
+    it('does not load courses until a grade level is picked, and disables the course select (photo tab)', () => {
       const { compiled, getCourses } = setup();
-      expect(getCourses).toHaveBeenCalled();
+      expect(getCourses).not.toHaveBeenCalled();
       const courseSelect = compiled.querySelector('[data-testid="photo-course-select"] select') as HTMLSelectElement;
       expect(courseSelect).toBeTruthy();
+      expect(courseSelect.disabled).toBe(true);
+    });
+
+    it('loads courses scoped to the picked grade level and renders them as select options, no free-text course/topic inputs (photo tab)', () => {
+      const { fixture, compiled, getCourses } = setup();
+      set(fixture, 'pGradeLevel', 'pre');
+
+      expect(getCourses).toHaveBeenCalledWith('pre');
+      const courseSelect = compiled.querySelector('[data-testid="photo-course-select"] select') as HTMLSelectElement;
+      expect(courseSelect.disabled).toBe(false);
       const optionLabels = Array.from(courseSelect.options).map((o) => o.textContent?.trim());
       expect(optionLabels).toContain('Matemática');
       expect(optionLabels).toContain('Comunicación');
       // Only one free text input remains in the photo panel: the answer
-      // key ("Clave"). Course/Tema must be selects, never typed text.
+      // key ("Clave"). Grado/Curso/Tema must be selects, never typed text.
       const photoPanel = compiled.querySelector('[data-testid="tab-photo-panel"]') as HTMLElement;
       expect(photoPanel.querySelectorAll('input[type="text"]').length).toBe(1);
       expect(photoPanel.querySelector('[data-testid="photo-course-select"] input')).toBeFalsy();
@@ -138,15 +148,33 @@ describe('BankNewComponent', () => {
       expect(optionLabels).not.toContain('Comprensión lectora');
     });
 
-    it('loads topics for the selected course and enables the topic select (photo tab)', () => {
+    it('loads topics for the selected course, scoped to the picked grade, and enables the topic select (photo tab)', () => {
       const { fixture, compiled, getTopics } = setup();
+      set(fixture, 'pGradeLevel', 'pre');
       set(fixture, 'pCourseId', 'c1');
       fixture.detectChanges();
-      expect(getTopics).toHaveBeenCalledWith('c1');
+      expect(getTopics).toHaveBeenCalledWith('c1', 'pre');
       const topicSelect = compiled.querySelector('[data-testid="photo-topic-select"] select') as HTMLSelectElement;
       expect(topicSelect.disabled).toBe(false);
       const optionLabels = Array.from(topicSelect.options).map((o) => o.textContent?.trim());
       expect(optionLabels).toContain('Álgebra');
+    });
+
+    it('reloads courses and resets the selected course when the grade level changes (structured tab)', () => {
+      const { fixture, compiled, getCourses } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      fixture.detectChanges();
+      expect((fixture.componentInstance as unknown as { sCourseId: () => string }).sCourseId()).toBe('c1');
+
+      set(fixture, 'sGradeLevel', 'esc');
+      fixture.detectChanges();
+
+      expect(getCourses).toHaveBeenNthCalledWith(2, 'esc');
+      expect((fixture.componentInstance as unknown as { sCourseId: () => string }).sCourseId()).toBe('');
     });
 
     it('reloads topics and resets the selected topic when the course changes (structured tab)', () => {
@@ -154,17 +182,18 @@ describe('BankNewComponent', () => {
       (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
       fixture.detectChanges();
 
+      set(fixture, 'sGradeLevel', 'pre');
       set(fixture, 'sCourseId', 'c1');
       fixture.detectChanges();
       set(fixture, 'sTopicId', 't1');
       fixture.detectChanges();
-      expect(getTopics).toHaveBeenCalledWith('c1');
+      expect(getTopics).toHaveBeenCalledWith('c1', 'pre');
       expect((fixture.componentInstance as unknown as { sTopicId: () => string }).sTopicId()).toBe('t1');
 
       set(fixture, 'sCourseId', 'c2');
       fixture.detectChanges();
 
-      expect(getTopics).toHaveBeenCalledWith('c2');
+      expect(getTopics).toHaveBeenCalledWith('c2', 'pre');
       expect((fixture.componentInstance as unknown as { sTopicId: () => string }).sTopicId()).toBe('');
       const topicSelect = compiled.querySelector(
         '[data-testid="structured-topic-select"] select',
@@ -177,11 +206,11 @@ describe('BankNewComponent', () => {
       const { fixture, compiled, createStructuredQuestion } = setup();
       (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
       fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
       set(fixture, 'sCourseId', 'c1');
       fixture.detectChanges();
       set(fixture, 'sTopicId', 't1');
       set(fixture, 'sDifficulty', 'easy');
-      set(fixture, 'sGradeLevel', 'pre');
       set(fixture, 'sBody', 'x');
       set(fixture, 'sAlternatives', 'a\nb');
       set(fixture, 'sCorrectAnswer', 'a');

@@ -20,7 +20,7 @@ const TOPICS_COURSE_2: Topic[] = [{ id: 'topic-2', name: 'Ecuaciones', courseId:
 function setup(createExamImpl: (...args: unknown[]) => unknown) {
   const createExam = vi.fn(createExamImpl);
   const getCourses = vi.fn(() => of(COURSES));
-  const getTopics = vi.fn((courseId: string) =>
+  const getTopics = vi.fn((courseId: string, _gradeLevel?: string) =>
     of(courseId === 'course-2' ? TOPICS_COURSE_2 : TOPICS_COURSE_1),
   );
 
@@ -39,6 +39,13 @@ function setup(createExamImpl: (...args: unknown[]) => unknown) {
   return { fixture, compiled, createExam, getCourses, getTopics };
 }
 
+function selectGradeLevel(compiled: HTMLElement, fixture: { detectChanges(): void }, gradeLevel: string) {
+  const gradeLevelSelect = compiled.querySelector<HTMLSelectElement>('select[name="gradeLevel"]')!;
+  gradeLevelSelect.value = gradeLevel;
+  gradeLevelSelect.dispatchEvent(new Event('change'));
+  fixture.detectChanges();
+}
+
 function selectCourseForRow(compiled: HTMLElement, fixture: { detectChanges(): void }, rowIndex: number, courseId: string) {
   const rows = compiled.querySelectorAll('[data-testid="blueprint-row"]');
   const courseSelect = rows[rowIndex].querySelector<HTMLSelectElement>('select[name="courseId"]')!;
@@ -49,13 +56,11 @@ function selectCourseForRow(compiled: HTMLElement, fixture: { detectChanges(): v
 
 function fillFirstRow(compiled: HTMLElement, fixture: { detectChanges(): void }) {
   const titleInput = compiled.querySelector<HTMLInputElement>('input[name="title"]')!;
-  const gradeLevelSelect = compiled.querySelector<HTMLSelectElement>('select[name="gradeLevel"]')!;
   const countInput = compiled.querySelector<HTMLInputElement>('[data-testid="blueprint-row"] input[name="count"]')!;
 
   titleInput.value = 'Admisión 2026';
   titleInput.dispatchEvent(new Event('input'));
-  gradeLevelSelect.value = 'secundaria_5';
-  gradeLevelSelect.dispatchEvent(new Event('change'));
+  selectGradeLevel(compiled, fixture, 'secundaria_5');
   selectCourseForRow(compiled, fixture, 0, 'course-1');
   countInput.value = '5';
   countInput.dispatchEvent(new Event('input'));
@@ -77,18 +82,46 @@ describe('ExamBlueprintComponent', () => {
     expect(row.querySelector('input[name="courseId"]')).toBeFalsy();
   });
 
-  it('loads courses from TaxonomyService on init', () => {
-    const { getCourses } = setup(() => of({}));
+  it('does not load courses until a grade level is picked, and disables each row\'s course dropdown', () => {
+    const { compiled, getCourses } = setup(() => of({}));
 
-    expect(getCourses).toHaveBeenCalledTimes(1);
+    expect(getCourses).not.toHaveBeenCalled();
+    const row = compiled.querySelector('[data-testid="blueprint-row"]')!;
+    expect(row.querySelector<HTMLSelectElement>('select[name="courseId"]')!.disabled).toBe(true);
   });
 
-  it('loads topics for the row when its course is selected', () => {
-    const { compiled, fixture, getTopics } = setup(() => of({}));
+  it('loads courses scoped to the selected grade level and enables the course dropdown', () => {
+    const { compiled, fixture, getCourses } = setup(() => of({}));
 
+    selectGradeLevel(compiled, fixture, 'secundaria_5');
+
+    expect(getCourses).toHaveBeenCalledTimes(1);
+    expect(getCourses).toHaveBeenCalledWith('secundaria_5');
+    const row = compiled.querySelector('[data-testid="blueprint-row"]')!;
+    expect(row.querySelector<HTMLSelectElement>('select[name="courseId"]')!.disabled).toBe(false);
+  });
+
+  it('reloads courses and resets every row\'s course/topic when the grade level changes', () => {
+    const { compiled, fixture, getCourses } = setup(() => of({}));
+
+    selectGradeLevel(compiled, fixture, 'secundaria_5');
     selectCourseForRow(compiled, fixture, 0, 'course-1');
 
-    expect(getTopics).toHaveBeenCalledWith('course-1');
+    selectGradeLevel(compiled, fixture, 'primaria_3');
+
+    expect(getCourses).toHaveBeenCalledTimes(2);
+    expect(getCourses).toHaveBeenNthCalledWith(2, 'primaria_3');
+    const row = compiled.querySelector('[data-testid="blueprint-row"]')!;
+    expect(row.querySelector<HTMLSelectElement>('select[name="courseId"]')!.value).toBe('');
+  });
+
+  it('loads topics for the row when its course is selected, scoped to the exam grade level', () => {
+    const { compiled, fixture, getTopics } = setup(() => of({}));
+
+    selectGradeLevel(compiled, fixture, 'secundaria_5');
+    selectCourseForRow(compiled, fixture, 0, 'course-1');
+
+    expect(getTopics).toHaveBeenCalledWith('course-1', 'secundaria_5');
     const row = compiled.querySelector('[data-testid="blueprint-row"]')!;
     const options = row.querySelectorAll('select[name="topicId"] option');
     expect(Array.from(options).some((o) => o.textContent === 'Fracciones')).toBe(true);
@@ -97,6 +130,7 @@ describe('ExamBlueprintComponent', () => {
   it('adds a new blueprint row when "Add row" is clicked, with its own independent course/topic dropdowns', () => {
     const { compiled, fixture, getTopics } = setup(() => of({}));
 
+    selectGradeLevel(compiled, fixture, 'secundaria_5');
     compiled.querySelector<HTMLButtonElement>('[data-testid="add-row-button"]')!.click();
     fixture.detectChanges();
 
@@ -105,8 +139,8 @@ describe('ExamBlueprintComponent', () => {
     selectCourseForRow(compiled, fixture, 0, 'course-1');
     selectCourseForRow(compiled, fixture, 1, 'course-2');
 
-    expect(getTopics).toHaveBeenCalledWith('course-1');
-    expect(getTopics).toHaveBeenCalledWith('course-2');
+    expect(getTopics).toHaveBeenCalledWith('course-1', 'secundaria_5');
+    expect(getTopics).toHaveBeenCalledWith('course-2', 'secundaria_5');
 
     const rows = compiled.querySelectorAll('[data-testid="blueprint-row"]');
     const row0Options = rows[0].querySelectorAll('select[name="topicId"] option');

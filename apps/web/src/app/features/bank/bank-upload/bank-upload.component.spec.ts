@@ -42,6 +42,12 @@ function setup(
   const fileInput = compiled.querySelector<HTMLInputElement>('input[type="file"]')!;
   const form = compiled.querySelector<HTMLFormElement>('form')!;
 
+  function selectGrade(gradeLevel: string) {
+    gradeLevelSelect.value = gradeLevel;
+    gradeLevelSelect.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+  }
+
   function selectCourse(courseId: string) {
     courseSelect.value = courseId;
     courseSelect.dispatchEvent(new Event('change'));
@@ -56,13 +62,12 @@ function setup(
     correctAnswer?: string;
     file?: File;
   }) {
+    selectGrade(overrides.gradeLevel ?? 'primaria_3');
     selectCourse(overrides.courseId ?? 'course-1');
     topicSelect.value = overrides.topicId ?? 'topic-1';
     topicSelect.dispatchEvent(new Event('change'));
     difficultySelect.value = overrides.difficulty ?? 'medium';
     difficultySelect.dispatchEvent(new Event('change'));
-    gradeLevelSelect.value = overrides.gradeLevel ?? 'primaria_3';
-    gradeLevelSelect.dispatchEvent(new Event('change'));
     answerInput.value = overrides.correctAnswer ?? 'b';
     answerInput.dispatchEvent(new Event('input'));
 
@@ -89,7 +94,9 @@ function setup(
     fileInput,
     courseSelect,
     topicSelect,
+    gradeLevelSelect,
     selectCourse,
+    selectGrade,
   };
 }
 
@@ -105,28 +112,59 @@ describe('BankUploadComponent', () => {
     expect(compiled.querySelector('input[type="file"]')).toBeTruthy();
   });
 
-  it('loads courses from TaxonomyService and populates the course dropdown', () => {
-    const { compiled, getCourses } = setup(() => of({ id: 'new-id' }));
+  it('does not load courses until a grade level is picked, and disables the course dropdown', () => {
+    const { compiled, getCourses, courseSelect } = setup(() => of({ id: 'new-id' }));
+
+    expect(getCourses).not.toHaveBeenCalled();
+    expect(courseSelect.disabled).toBe(true);
+    const options = compiled.querySelectorAll('select[name="courseId"] option');
+    expect(options.length).toBe(1);
+  });
+
+  it('loads courses scoped to the selected grade level and populates the course dropdown', () => {
+    const { compiled, getCourses, courseSelect, selectGrade } = setup(() => of({ id: 'new-id' }));
+
+    selectGrade('primaria_3');
 
     expect(getCourses).toHaveBeenCalledTimes(1);
+    expect(getCourses).toHaveBeenCalledWith('primaria_3');
+    expect(courseSelect.disabled).toBe(false);
     const options = compiled.querySelectorAll('select[name="courseId"] option');
     expect(Array.from(options).some((o) => o.textContent === 'Aritmética')).toBe(true);
     expect(Array.from(options).some((o) => o.textContent === 'Álgebra')).toBe(true);
   });
 
-  it('loads topics for the selected course and populates the topic dropdown', () => {
-    const { compiled, getTopics, selectCourse } = setup(() => of({ id: 'new-id' }));
+  it('reloads courses and resets course/topic when the grade level changes', () => {
+    const { getCourses, selectGrade, selectCourse, courseSelect, topicSelect } = setup(() => of({ id: 'new-id' }));
 
+    selectGrade('primaria_3');
+    selectCourse('course-1');
+    topicSelect.value = 'topic-1';
+    topicSelect.dispatchEvent(new Event('change'));
+
+    selectGrade('secundaria_1');
+
+    expect(getCourses).toHaveBeenCalledTimes(2);
+    expect(getCourses).toHaveBeenNthCalledWith(2, 'secundaria_1');
+    expect(courseSelect.value).toBe('');
+    expect(topicSelect.value).toBe('');
+  });
+
+  it('loads topics for the selected course and populates the topic dropdown', () => {
+    const { compiled, getTopics, selectGrade, selectCourse } = setup(() => of({ id: 'new-id' }));
+
+    selectGrade('primaria_3');
     selectCourse('course-1');
 
-    expect(getTopics).toHaveBeenCalledWith('course-1');
+    expect(getTopics).toHaveBeenCalledWith('course-1', 'primaria_3');
     const options = compiled.querySelectorAll('select[name="topicId"] option');
     expect(Array.from(options).some((o) => o.textContent === 'Fracciones')).toBe(true);
   });
 
   it('resets the selected topic when the course changes', () => {
-    const { topicSelect, selectCourse, fixture } = setup(() => of({ id: 'new-id' }));
+    const { topicSelect, selectGrade, selectCourse, fixture } = setup(() => of({ id: 'new-id' }));
 
+    selectGrade('primaria_3');
     selectCourse('course-1');
     topicSelect.value = 'topic-1';
     topicSelect.dispatchEvent(new Event('change'));

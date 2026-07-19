@@ -45,6 +45,12 @@ export class ExamBlueprintComponent {
 
   protected readonly courses = signal<Course[]>([]);
   private readonly rowTopics = new WeakMap<AbstractControl, WritableSignal<Topic[]>>();
+  // Mirrors `form.controls.gradeLevel.value`, tracked outside the form
+  // itself so `buildRow()` (referenced from `form`'s own field initializer,
+  // building the first row) never reads `this.form` — doing so creates a
+  // circular type-inference error (TS7022) since `form`'s type would depend
+  // on `buildRow()`'s return type, which would depend on `form`'s type.
+  private currentGradeLevel: string | null = null;
 
   protected readonly submitting = signal(false);
   protected readonly errorMessage = signal<string | null>(null);
@@ -59,7 +65,32 @@ export class ExamBlueprintComponent {
   });
 
   constructor() {
-    this.taxonomyService.getCourses().subscribe((courses) => this.courses.set(courses));
+    // Courses are loaded per selected grade — the catalog is divided by
+    // educational stage, so loading it up front (no grade) would list every
+    // stage's courses at once and repeat shared names (Matemática,
+    // Comunicación…) once per stage. Picking a grade first scopes the
+    // dropdown to one stage (same fix as ai-generate.component.ts). Since
+    // `gradeLevel` is exam-level (not per-row), a grade change resets every
+    // row's course/topic selection — a row can't keep referencing a course
+    // from a stage that's no longer selected.
+    this.form.controls.gradeLevel.valueChanges.subscribe((gradeLevel) => {
+      this.currentGradeLevel = gradeLevel;
+      this.courses.set([]);
+      for (const row of this.rows.controls) {
+        row.controls.courseId.setValue('');
+        row.controls.topicId.setValue('');
+        this.rowTopics.get(row)?.set([]);
+        if (gradeLevel) {
+          row.controls.courseId.enable();
+        } else {
+          row.controls.courseId.disable();
+        }
+      }
+      if (!gradeLevel) {
+        return;
+      }
+      this.taxonomyService.getCourses(gradeLevel).subscribe((courses) => this.courses.set(courses));
+    });
   }
 
   protected get rows() {
@@ -67,8 +98,13 @@ export class ExamBlueprintComponent {
   }
 
   private buildRow() {
+    // Curso starts disabled until a grade level is picked — [disabled] on a
+    // native <select> fights the reactive-forms directive (it wins and
+    // resets the DOM property), so it's gated via
+    // FormControl.disable()/enable() instead of a template binding.
+    const gradeLevelAlreadySet = !!this.currentGradeLevel;
     const row = this.formBuilder.nonNullable.group({
-      courseId: ['', [Validators.required]],
+      courseId: [{ value: '', disabled: !gradeLevelAlreadySet }, [Validators.required]],
       topicId: [''],
       difficulty: [''],
       count: [1, [Validators.required, Validators.min(1)]],
@@ -83,7 +119,9 @@ export class ExamBlueprintComponent {
         topics.set([]);
         return;
       }
-      this.taxonomyService.getTopics(courseId).subscribe((result) => topics.set(result));
+      this.taxonomyService
+        .getTopics(courseId, this.currentGradeLevel || undefined)
+        .subscribe((result) => topics.set(result));
     });
 
     return row;

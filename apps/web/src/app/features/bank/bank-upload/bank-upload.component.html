@@ -4,13 +4,27 @@
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()" class="flex flex-col gap-4 rounded-card border border-n200 bg-white p-5">
     <label class="text-sm font-medium text-n700">
+      Grado
+      <select
+        name="gradeLevel"
+        formControlName="gradeLevel"
+        class="mt-1 block w-full rounded-field border border-n200 bg-white px-3 py-2 text-sm text-n900 focus:border-primary-400 focus:outline-none"
+      >
+        <option value="">Selecciona...</option>
+        @for (gradeLevel of gradeLevels; track gradeLevel) {
+          <option [value]="gradeLevel">{{ gradeLevelLabels[gradeLevel] }}</option>
+        }
+      </select>
+    </label>
+
+    <label class="text-sm font-medium text-n700">
       Curso
       <select
         name="courseId"
         formControlName="courseId"
-        class="mt-1 block w-full rounded-field border border-n200 bg-white px-3 py-2 text-sm text-n900 focus:border-primary-400 focus:outline-none"
+        class="mt-1 block w-full rounded-field border border-n200 bg-white px-3 py-2 text-sm text-n900 focus:border-primary-400 focus:outline-none disabled:cursor-not-allowed disabled:bg-n50 disabled:text-n400"
       >
-        <option value="">Selecciona...</option>
+        <option value="">{{ form.controls.gradeLevel.value ? 'Selecciona...' : 'Elige un grado primero' }}</option>
         @for (course of courses(); track course.id) {
           <option [value]="course.id">{{ course.name }}</option>
         }
@@ -48,29 +62,15 @@
       </label>
 
       <label class="text-sm font-medium text-n700">
-        Grado
-        <select
-          name="gradeLevel"
-          formControlName="gradeLevel"
-          class="mt-1 block w-full rounded-field border border-n200 bg-white px-3 py-2 text-sm text-n900 focus:border-primary-400 focus:outline-none"
-        >
-          <option value="">Selecciona...</option>
-          @for (gradeLevel of gradeLevels; track gradeLevel) {
-            <option [value]="gradeLevel">{{ gradeLevelLabels[gradeLevel] }}</option>
-          }
-        </select>
+        Clave (respuesta correcta)
+        <input
+          type="text"
+          name="correctAnswer"
+          formControlName="correctAnswer"
+          class="mt-1 block w-full rounded-field border border-n200 px-3 py-2 text-sm text-n900 placeholder:text-n400 focus:border-primary-400 focus:outline-none"
+        />
       </label>
     </div>
-
-    <label class="text-sm font-medium text-n700">
-      Clave (respuesta correcta)
-      <input
-        type="text"
-        name="correctAnswer"
-        formControlName="correctAnswer"
-        class="mt-1 block w-full rounded-field border border-n200 px-3 py-2 text-sm text-n900 placeholder:text-n400 focus:border-primary-400 focus:outline-none"
-      />
-    </label>
 
     <div class="flex flex-col gap-2">
       <span class="text-sm font-medium text-n700">Imagen del enunciado</span>

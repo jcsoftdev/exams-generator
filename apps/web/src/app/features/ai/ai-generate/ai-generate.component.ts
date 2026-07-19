@@ -134,8 +134,21 @@ export class AiGenerateComponent {
     return [snapshot.courseName, snapshot.topicName, diff, grade].filter((v): v is string => !!v).join(' · ');
   });
 
-  constructor() {
-    this.taxonomyService.getCourses().subscribe((courses) => this.courses.set(courses));
+  /**
+   * Courses are loaded per selected grade — the catalog is divided by
+   * educational stage, so loading it up front (no grade) would list every
+   * stage's courses at once and repeat shared names (Matemática, Comunicación…)
+   * once per stage. Picking a grade first scopes the dropdown to one stage.
+   */
+  protected onGradeLevelChange(gradeLevel: string | null): void {
+    this.gradeLevel.set(gradeLevel);
+    this.courseId.set('');
+    this.topicId.set('');
+    this.topics.set([]);
+    this.courses.set([]);
+    if (gradeLevel) {
+      this.taxonomyService.getCourses(gradeLevel).subscribe((courses) => this.courses.set(courses));
+    }
   }
 
   protected onCourseChange(courseId: string | null): void {
@@ -144,7 +157,9 @@ export class AiGenerateComponent {
     this.topicId.set('');
     this.topics.set([]);
     if (id) {
-      this.taxonomyService.getTopics(id).subscribe((topics) => this.topics.set(topics));
+      this.taxonomyService
+        .getTopics(id, this.gradeLevel() ?? undefined)
+        .subscribe((topics) => this.topics.set(topics));
     }
   }
 

@@ -60,10 +60,9 @@ export class BankNewComponent {
   protected readonly saving = signal(false);
   protected readonly saveError = signal<string | null>(null);
 
-  protected readonly courses = signal<Course[]>([]);
-  protected readonly courseOptions = computed(() => toOptions(this.courses()));
-
   // Foto
+  protected readonly pCourses = signal<Course[]>([]);
+  protected readonly pCourseOptions = computed(() => toOptions(this.pCourses()));
   protected readonly pCourseId = signal('');
   protected readonly pTopicId = signal('');
   protected readonly pTopics = signal<Topic[]>([]);
@@ -75,6 +74,8 @@ export class BankNewComponent {
   protected readonly pImagePreviewUrl = signal<string | null>(null);
 
   // Estructurada
+  protected readonly sCourses = signal<Course[]>([]);
+  protected readonly sCourseOptions = computed(() => toOptions(this.sCourses()));
   protected readonly sCourseId = signal('');
   protected readonly sTopicId = signal('');
   protected readonly sTopics = signal<Topic[]>([]);
@@ -86,9 +87,34 @@ export class BankNewComponent {
   protected readonly sCorrectAnswer = signal('');
 
   constructor() {
-    this.taxonomyService.getCourses().subscribe({
-      next: (courses) => this.courses.set(courses),
-      error: () => this.saveError.set('No se pudieron cargar los cursos. Recarga la página.'),
+    // Courses are loaded per selected grade — the catalog is divided by
+    // educational stage, so loading it up front (no grade) would list every
+    // stage's courses at once and repeat shared names (Matemática,
+    // Comunicación…) once per stage (same fix as ai-generate.component.ts).
+    // Photo and structured tabs each have their OWN grade field
+    // (pGradeLevel/sGradeLevel), so each path loads and resets its own
+    // course list independently — picking a grade on one tab never touches
+    // the other tab's course selection.
+    effect(() => {
+      const gradeLevel = this.pGradeLevel();
+      this.pCourseId.set('');
+      this.pCourses.set([]);
+      if (!gradeLevel) return;
+      this.taxonomyService.getCourses(gradeLevel).subscribe({
+        next: (courses) => this.pCourses.set(courses),
+        error: () => this.saveError.set('No se pudieron cargar los cursos. Recarga la página.'),
+      });
+    });
+
+    effect(() => {
+      const gradeLevel = this.sGradeLevel();
+      this.sCourseId.set('');
+      this.sCourses.set([]);
+      if (!gradeLevel) return;
+      this.taxonomyService.getCourses(gradeLevel).subscribe({
+        next: (courses) => this.sCourses.set(courses),
+        error: () => this.saveError.set('No se pudieron cargar los cursos. Recarga la página.'),
+      });
     });
 
     // Dependent Tema dropdown (photo tab): reloads whenever the course
@@ -99,7 +125,7 @@ export class BankNewComponent {
       this.pTopicId.set('');
       this.pTopics.set([]);
       if (!courseId) return;
-      this.taxonomyService.getTopics(courseId).subscribe({
+      this.taxonomyService.getTopics(courseId, this.pGradeLevel() ?? undefined).subscribe({
         next: (topics) => this.pTopics.set(topics),
         error: () => this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.'),
       });
@@ -111,7 +137,7 @@ export class BankNewComponent {
       this.sTopicId.set('');
       this.sTopics.set([]);
       if (!courseId) return;
-      this.taxonomyService.getTopics(courseId).subscribe({
+      this.taxonomyService.getTopics(courseId, this.sGradeLevel() ?? undefined).subscribe({
         next: (topics) => this.sTopics.set(topics),
         error: () => this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.'),
       });
