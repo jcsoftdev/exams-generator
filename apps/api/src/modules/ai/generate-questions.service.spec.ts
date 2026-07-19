@@ -116,14 +116,34 @@ describe("GenerateQuestionsService.generateQuestions", () => {
     );
   });
 
-  it("does NOT save a question whose Typst preview fails to compile, and reports the per-item error", async () => {
-    const { service, pdfCompiler, bankRepository } = buildDeps();
+  it("retries generation once when the Typst preview fails to compile, and persists the question that compiles on retry", async () => {
+    const { service, generator, pdfCompiler, bankRepository } = buildDeps();
     pdfCompiler.compileExam.mockRejectedValueOnce(
       new TypstCompilationError("typst compile failed", undefined, "syntax error"),
     );
 
+    const result = await service.generateQuestions(TEACHER_USER, { ...VALID_DTO, count: 1 });
+
+    expect(generator.generate).toHaveBeenCalledTimes(2);
+    expect(pdfCompiler.compileExam).toHaveBeenCalledTimes(2);
+    expect(bankRepository.createStructuredQuestion).toHaveBeenCalledTimes(1);
+    expect(result.created).toHaveLength(1);
+    expect(result.failed).toHaveLength(0);
+  });
+
+  it("does NOT save a question whose Typst preview keeps failing to compile after exhausting all retry attempts", async () => {
+    const { service, generator, pdfCompiler, bankRepository } = buildDeps();
+    const compileError = new TypstCompilationError("typst compile failed", undefined, "syntax error");
+    pdfCompiler.compileExam
+      .mockRejectedValueOnce(compileError)
+      .mockRejectedValueOnce(compileError);
+
     const result = await service.generateQuestions(TEACHER_USER, { ...VALID_DTO, count: 2 });
 
+    // The first item exhausts both attempts (2 generate calls, 2 compile
+    // calls) before giving up; the second item succeeds on its first try.
+    expect(generator.generate).toHaveBeenCalledTimes(3);
+    expect(pdfCompiler.compileExam).toHaveBeenCalledTimes(3);
     expect(bankRepository.createStructuredQuestion).toHaveBeenCalledTimes(1);
     expect(result.created).toHaveLength(1);
     expect(result.failed).toEqual([
