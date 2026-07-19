@@ -1,0 +1,39 @@
+@if (loading()) {
+  <p data-testid="dashboard-loading" class="text-sm text-n600">Cargando estadísticas…</p>
+} @else if (errorMessage()) {
+  <p data-testid="dashboard-error" class="text-sm text-hard-text">{{ errorMessage() }}</p>
+} @else if (stats(); as s) {
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+    <ui-card data-testid="dashboard-card-bank">
+      <div header><p class="text-sm font-medium text-n600">Banco de preguntas</p></div>
+      <p class="text-2xl font-semibold text-n900">{{ s.bank.total }}</p>
+      <ui-bar-chart [data]="bankChartData()"></ui-bar-chart>
+    </ui-card>
+
+    <ui-card data-testid="dashboard-card-exams">
+      <div header><p class="text-sm font-medium text-n600">Exámenes</p></div>
+      <p class="text-2xl font-semibold text-n900">{{ s.exams.total }}</p>
+      <ui-donut-chart [data]="examChartData()"></ui-donut-chart>
+      <ul class="mt-3 flex flex-col gap-2">
+        @for (exam of s.exams.recent; track exam.id) {
+          <li data-testid="dashboard-recent-exam" class="flex items-center justify-between text-sm">
+            <span class="text-n800">{{ exam.title }}</span>
+            <span
+              class="rounded-full px-2 py-0.5 text-xs font-medium"
+              [class]="exam.status === 'ready' ? 'bg-tint-activo text-tint-texto' : 'bg-n100 text-n700'"
+              >{{ examStatusLabel(exam.status) }}</span
+            >
+          </li>
+        }
+      </ul>
+    </ui-card>
+
+    <ui-card data-testid="dashboard-card-ai">
+      <div header><p class="text-sm font-medium text-n600">Cola de revisión IA</p></div>
+      <p class="text-2xl font-semibold text-n900">{{ s.aiDrafts.pending }}</p>
+      <a routerLink="/app/ai/review" data-testid="dashboard-ai-link" class="text-sm text-primary-600 hover:underline"
+        >Revisar drafts</a
+      >
+    </ui-card>
+  </div>
+}
