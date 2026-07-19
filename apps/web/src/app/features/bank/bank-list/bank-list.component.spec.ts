@@ -14,6 +14,11 @@ import {
   ChevronLeft,
   ChevronRight,
   ChevronDown,
+  Image,
+  FileText,
+  Expand,
+  Minimize2,
+  X,
 } from 'lucide-angular';
 import { Difficulty } from '@exams-generator/shared';
 import { BankListComponent } from './bank-list.component';
@@ -51,7 +56,7 @@ const TOPICS_C2: Topic[] = [{ id: 't3', name: 'Ecuaciones', courseId: 'c2' }];
 
 const QUESTIONS: BankQuestion[] = [
   makeQuestion({ id: 'q1', courseId: 'c1', topicId: 't1', imageAssetId: 'asset-1' }),
-  makeQuestion({ id: 'q2', courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium }),
+  makeQuestion({ id: 'q2', courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, type: 'structured', imageAssetId: null }),
   makeQuestion({ id: 'q3', courseId: 'c1', topicId: 't2', difficulty: Difficulty.Hard }),
   makeQuestion({ id: 'q4', courseId: 'c2', topicId: 't3' }),
 ];
@@ -94,6 +99,11 @@ function setup(
           ChevronLeft,
           ChevronRight,
           ChevronDown,
+          Image,
+          FileText,
+          Expand,
+          Minimize2,
+          X,
         }),
       ),
       {
@@ -194,6 +204,91 @@ describe('BankListComponent', () => {
       expandTopic(compiled, fixture, 't1');
       expect(fetchQuestionImage).toHaveBeenCalledWith('asset-1');
       expect(compiled.querySelector('img')?.getAttribute('src')).toMatch(/^blob:/);
+    });
+
+    it('does NOT fetch thumbnails for a topic that has never been expanded (lazy-load)', () => {
+      const { fetchQuestionImage } = setup();
+      expect(fetchQuestionImage).not.toHaveBeenCalled();
+    });
+
+    it('shows a neutral file-text placeholder (never blank gray) for a structured question with no image', () => {
+      const { compiled, fixture } = setup();
+      expandTopic(compiled, fixture, 't1');
+      const leaves = compiled.querySelectorAll('[data-testid="bank-question"]');
+      const structuredLeaf = leaves[1]; // q2 is type: 'structured', imageAssetId: null
+      const placeholder = structuredLeaf.querySelector('[data-testid="question-placeholder"]');
+      expect(placeholder).toBeTruthy();
+      expect(placeholder?.getAttribute('data-icon')).toBe('file-text');
+    });
+
+    it('shows an image placeholder icon (never blank gray) for an image-type question with no thumbnail asset', () => {
+      const { compiled, fixture } = setup();
+      expandTopic(compiled, fixture, 't2'); // q3: type 'image', imageAssetId null
+      const leaf = compiled.querySelector('[data-testid="bank-question"]');
+      const placeholder = leaf?.querySelector('[data-testid="question-placeholder"]');
+      expect(placeholder).toBeTruthy();
+      expect(placeholder?.getAttribute('data-icon')).toBe('image');
+    });
+  });
+
+  describe('search filter', () => {
+    function searchInput(compiled: HTMLElement): HTMLInputElement {
+      return compiled.querySelector('[data-testid="tree-search"] input') as HTMLInputElement;
+    }
+
+    function typeSearch(
+      compiled: HTMLElement,
+      fixture: { detectChanges(): void },
+      value: string,
+    ): void {
+      const input = searchInput(compiled);
+      input.value = value;
+      input.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+    }
+
+    it('filters the tree live by course name, hiding non-matching branches', () => {
+      const { compiled, fixture } = setup();
+      typeSearch(compiled, fixture, 'Álgebra');
+      const headers = compiled.querySelectorAll('[data-testid="course-header"]');
+      expect(headers.length).toBe(1);
+      expect(courseHeader(compiled, 'c2')).toBeTruthy();
+      expect(courseHeader(compiled, 'c1')).toBeFalsy();
+    });
+
+    it('filters by question clave and auto-expands the matching branch to reveal the leaf', () => {
+      const { compiled, fixture } = setup();
+      typeSearch(compiled, fixture, 'a'); // q1's correctAnswer is 'a'
+      // matching branches auto-expand: leaves render without a manual topic click
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBeGreaterThan(0);
+    });
+
+    it('restores the full tree when the search box is cleared', () => {
+      const { compiled, fixture } = setup();
+      typeSearch(compiled, fixture, 'Álgebra');
+      expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(1);
+      typeSearch(compiled, fixture, '');
+      expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(2);
+    });
+  });
+
+  describe('expand all / collapse all', () => {
+    it('expand all reveals every topic and leaf without manual clicks', () => {
+      const { compiled, fixture } = setup();
+      (compiled.querySelector('[data-testid="expand-all"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('true');
+      expect(topicHeader(compiled, 't2').getAttribute('aria-expanded')).toBe('true');
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(4);
+    });
+
+    it('collapse all hides every topic', () => {
+      const { compiled, fixture } = setup();
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="collapse-all"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      expect(compiled.querySelectorAll('[data-testid="topic-header"]').length).toBe(0);
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
     });
   });
 

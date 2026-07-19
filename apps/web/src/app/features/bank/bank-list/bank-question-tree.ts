@@ -73,3 +73,54 @@ export function buildQuestionTree(
 
   return courses;
 }
+
+
+function normalize(value: string): string {
+  return value.trim().toLowerCase();
+}
+
+/**
+ * Filters an already-built tree by a free-text query, matched
+ * case-insensitively (substring) against the question clave
+ * (`correctAnswer`), course name, or topic name.
+ *
+ * "Matching branches stay, non-matching hide" (search UX requirement):
+ * when a course's own NAME matches, the whole course branch survives with
+ * ALL its topics/questions untouched. Otherwise only the topics that match
+ * (by topic name, or by containing at least one leaf question whose clave
+ * matches) survive, and `questionCount` is recomputed from the surviving
+ * topics. A blank/whitespace-only query returns the tree unchanged.
+ */
+export function filterQuestionTree(
+  tree: readonly QuestionTreeCourseNode[],
+  query: string,
+): QuestionTreeCourseNode[] {
+  const needle = normalize(query);
+  if (!needle) {
+    return [...tree];
+  }
+
+  const result: QuestionTreeCourseNode[] = [];
+  for (const course of tree) {
+    const courseNameMatches = normalize(course.name).includes(needle);
+    const topics = courseNameMatches
+      ? course.topics
+      : course.topics.filter(
+          (topic) =>
+            normalize(topic.name).includes(needle) ||
+            topic.questions.some((question) => normalize(question.correctAnswer).includes(needle)),
+        );
+
+    if (topics.length === 0) {
+      continue;
+    }
+
+    result.push({
+      ...course,
+      topics,
+      questionCount: topics.reduce((sum, topic) => sum + topic.questions.length, 0),
+    });
+  }
+
+  return result;
+}

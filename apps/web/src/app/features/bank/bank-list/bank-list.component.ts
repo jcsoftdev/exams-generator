@@ -1,17 +1,31 @@
-import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
+import { Component, DestroyRef, computed, effect, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, forkJoin, map, of, switchMap } from 'rxjs';
-import { LucideAngularModule } from 'lucide-angular';
+import {
+  LucideAngularModule,
+  Search,
+  ChevronDown,
+  ChevronRight,
+  Lock,
+  Pencil,
+  Archive,
+  Trash2,
+  Image,
+  FileText,
+  Expand,
+  Minimize2,
+} from 'lucide-angular';
 import { Difficulty } from '@exams-generator/shared';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
+import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent } from '../../../ui/select/select.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { BankService } from '../bank.service';
 import { BankQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
-import { buildQuestionTree, QuestionTreeCourseNode } from './bank-question-tree';
+import { buildQuestionTree, filterQuestionTree, QuestionTreeCourseNode, QuestionTreeTopicNode } from './bank-question-tree';
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
   [Difficulty.Easy]: 'Fácil',
@@ -54,7 +68,18 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
  *
  * Thumbnails are fetched as authenticated blobs (see `loadImages` —
  * `/assets/:id` is Bearer-JWT protected, a raw `<img src>` never sends that
- * header).
+ * header), lazily: only for topics that are actually expanded/visible
+ * (`visibleExpandedTopics` + an `effect` that fires `loadImages` once per
+ * newly-visible topic) — avoids up to 71 parallel fetches on initial load.
+ * Structured questions (no `imageAssetId`) and image questions with no
+ * asset yet get a neutral lucide placeholder icon instead of a blank box.
+ *
+ * The free-text search box (`filterQuery`) filters the tree live via the
+ * pure `filterQuestionTree` transform (clave/course/topic substring match);
+ * while a query is active, every surviving branch renders force-expanded
+ * (`isFiltering()` short-circuits `isCourseExpanded`/`isTopicExpanded`) so
+ * matches are always visible without extra clicks. Expand-all/collapse-all
+ * operate on the underlying expand-state signals directly.
  *
  * Action gating (`canArchive`/`canDelete`/`isCentral`) mirrors the backend's
  * own rules (Lane D4: S4 archives only `approved`, S5 deletes only own
@@ -65,7 +90,27 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
 @Component({
   selector: 'app-bank-list',
   standalone: true,
-  imports: [ButtonComponent, EmptyStateComponent, SelectComponent, TagComponent, LucideAngularModule],
+  imports: [ButtonComponent, EmptyStateComponent, InputComponent, SelectComponent, TagComponent, LucideAngularModule],
+  // Local (component-scoped) icon pick — Angular's Lucide icon token is NOT a multi-provider, so a
+  // local `pick()` SHADOWS (does not merge with) the app-level one in app.config.ts. This must list
+  // every icon the template uses, including ones the global config also registers (search,
+  // chevron-down/right, lock, pencil, archive, trash-2), plus the new ones (image, file-text,
+  // expand, minimize-2) — otherwise those would 404 at runtime ("icon has not been provided").
+  providers: [
+    LucideAngularModule.pick({
+      Search,
+      ChevronDown,
+      ChevronRight,
+      Lock,
+      Pencil,
+      Archive,
+      Trash2,
+      Image,
+      FileText,
+      Expand,
+      Minimize2,
+    }).providers ?? [],
+  ],
   templateUrl: './bank-list.component.html',
 })
 export class BankListComponent {
@@ -109,16 +154,55 @@ export class BankListComponent {
   private readonly expandedCourses = signal<ReadonlySet<string>>(new Set());
   private readonly expandedTopics = signal<ReadonlySet<string>>(new Set());
 
+  /** Free-text search box value — filters the tree live (clave, course name, or topic name). */
+  protected readonly filterQuery = signal('');
+  /** True while a non-blank search query is active — forces every surviving branch open. */
+  protected readonly isFiltering = computed(() => this.filterQuery().trim().length > 0);
+
+  /** Every `topicId` an image fetch has already been requested for — guards the lazy-load effect against duplicate HTTP calls. */
+  private readonly requestedImageTopics = new Set<string>();
+
   /** Curso -> Tema -> preguntas, grouped/sorted/name-resolved from the flat question list (QB tree redesign). */
   protected readonly tree = computed<QuestionTreeCourseNode[]>(() =>
     buildQuestionTree(this.questions(), this.courseNames(), this.topicNames()),
   );
+
+  /** `tree()` filtered live by `filterQuery()` — matching branches stay, non-matching hide. */
+  protected readonly filteredTree = computed<QuestionTreeCourseNode[]>(() =>
+    filterQuestionTree(this.tree(), this.filterQuery()),
+  );
+
+  /** Topics currently rendered AND expanded (manual toggle, or force-expanded while filtering) — drives lazy thumbnail loading. */
+  private readonly visibleExpandedTopics = computed<readonly QuestionTreeTopicNode[]>(() => {
+    const visible: QuestionTreeTopicNode[] = [];
+    for (const course of this.filteredTree()) {
+      if (!this.isCourseExpanded(course.courseId)) {
+        continue;
+      }
+      for (const topic of course.topics) {
+        if (this.isTopicExpanded(topic.topicId)) {
+          visible.push(topic);
+        }
+      }
+    }
+    return visible;
+  });
 
   constructor() {
     this.loadInitial();
     this.destroyRef.onDestroy(() => {
       for (const url of this.objectUrls) {
         URL.revokeObjectURL(url);
+      }
+    });
+    // Lazy thumbnail loading: fetch a topic's images the first time it becomes visible+expanded
+    // (manual toggle, "expand all", or auto-expand while filtering) — never all 71 up front.
+    effect(() => {
+      for (const topic of this.visibleExpandedTopics()) {
+        if (!this.requestedImageTopics.has(topic.topicId)) {
+          this.requestedImageTopics.add(topic.topicId);
+          this.loadImages(topic.questions);
+        }
       }
     });
   }
@@ -204,10 +288,11 @@ export class BankListComponent {
     if (questions.length > 0) {
       this.bankHasAnyQuestions.set(true);
     }
-    // Courses default expanded (discoverability); topics reset to collapsed (scannability) on every fetch.
+    // Courses default expanded (discoverability); topics reset to collapsed (scannability) on every
+    // fetch. Thumbnails are NOT loaded here — the `visibleExpandedTopics` effect lazy-loads a
+    // topic's images the first time it actually becomes visible+expanded.
     this.expandedCourses.set(new Set(questions.map((q) => q.courseId)));
     this.expandedTopics.set(new Set());
-    this.loadImages(questions);
   }
 
   protected toggleCourse(courseId: string): void {
@@ -219,15 +304,32 @@ export class BankListComponent {
   }
 
   protected isCourseExpanded(courseId: string): boolean {
-    return this.expandedCourses().has(courseId);
+    return this.isFiltering() || this.expandedCourses().has(courseId);
   }
 
   protected isTopicExpanded(topicId: string): boolean {
-    return this.expandedTopics().has(topicId);
+    return this.isFiltering() || this.expandedTopics().has(topicId);
+  }
+
+  /** Expands every course and topic currently in the (unfiltered) tree. */
+  protected expandAll(): void {
+    this.expandedCourses.set(new Set(this.tree().map((course) => course.courseId)));
+    this.expandedTopics.set(new Set(this.tree().flatMap((course) => course.topics.map((topic) => topic.topicId))));
+  }
+
+  /** Collapses every course and topic. */
+  protected collapseAll(): void {
+    this.expandedCourses.set(new Set());
+    this.expandedTopics.set(new Set());
   }
 
   protected chevronFor(expanded: boolean): string {
     return expanded ? 'chevron-down' : 'chevron-right';
+  }
+
+  /** Neutral lucide placeholder for a leaf with no loaded thumbnail: `file-text` for structured questions (no image asset at all), `image` otherwise (image-type question, thumbnail pending or missing). */
+  protected leafPlaceholderIcon(question: BankQuestion): string {
+    return question.type === 'structured' ? 'file-text' : 'image';
   }
 
   protected select(question: BankQuestion): void {
