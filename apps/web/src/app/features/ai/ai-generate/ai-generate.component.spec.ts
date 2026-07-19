@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { LucideAngularModule, Sparkles, TriangleAlert, Plus, Minus } from 'lucide-angular';
 import { AiGenerateComponent } from './ai-generate.component';
 import { AiService } from '../ai.service';
+import { DraftCountService } from '../draft-count.service';
 import { DraftQuestion, GenerateQuestionsResult } from '../ai.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
@@ -186,5 +187,37 @@ describe('AiGenerateComponent', () => {
     expect(compiled.querySelector('[data-testid="batch-question"]')).toBeFalsy();
     expect(compiled.querySelector('.text-2xl.font-extrabold.text-primary-900')).toBeFalsy();
     expect(compiled.querySelector('[data-testid="batch-empty"]')).toBeTruthy();
+  });
+
+  it('syncs the sidebar draft-count badge (DraftCountService) after generating (F8 fix)', () => {
+    const draftStub: DraftQuestion = {
+      id: 'a',
+      tenantId: null,
+      courseId: 'c1',
+      topicId: 't1',
+      difficulty: Difficulty.Easy,
+      gradeLevel: 'pre',
+      correctAnswer: '1',
+      bodyTypst: '¿Cuánto es 2+2?',
+      alternatives: ['3', '4'],
+      figureCode: null,
+    };
+    // First listDrafts() call is DraftCountService's own initial fetch (on
+    // construction, BEFORE anything is generated) — must return a DIFFERENT
+    // count than the post-generate call so this test actually exercises the
+    // sync, not just the constructor's own baseline fetch.
+    let call = 0;
+    const { compiled, fixture } = setup({
+      genImpl: () => of({ created: [{ id: 'a' }, { id: 'b' }, { id: 'c' }], failed: [] }),
+      listDraftsImpl: () => of(call++ === 0 ? [] : [draftStub, draftStub, draftStub]),
+    });
+    const draftCountService = TestBed.inject(DraftCountService);
+    expect(draftCountService.count()).toBe(0);
+
+    fillForm(fixture);
+    (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(draftCountService.count()).toBe(3);
   });
 });

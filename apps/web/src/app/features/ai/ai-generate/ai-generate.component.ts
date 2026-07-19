@@ -9,6 +9,7 @@ import { ProgressComponent } from '../../../ui/progress/progress.component';
 import { BannerComponent } from '../../../ui/banner/banner.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { AiService } from '../ai.service';
+import { DraftCountService } from '../draft-count.service';
 import {
   DraftQuestion,
   GenerateQuestionsCreatedItem,
@@ -62,6 +63,7 @@ export class AiGenerateComponent {
   private readonly aiService = inject(AiService);
   private readonly taxonomyService = inject(TaxonomyService);
   private readonly router = inject(Router);
+  private readonly draftCountService = inject(DraftCountService);
 
   protected readonly maxStepperCount = MAX_STEPPER_COUNT;
 
@@ -231,6 +233,13 @@ export class AiGenerateComponent {
 
   private loadBatchQuestions(newIds: string[]): void {
     this.aiService.listDrafts().subscribe((drafts) => {
+      // Sync the sidebar "Cola de revisión · N" badge (DraftCountService) —
+      // this response IS the full pending-drafts list, same shape the
+      // review queue uses to keep the badge in sync, so it's a free update
+      // (no extra request). Without this the badge only reflected the
+      // queue's own approve/reject actions and drifted stale right after a
+      // Taller generation added new drafts (F8 fix).
+      this.draftCountService.set(drafts.length);
       const idSet = new Set(newIds);
       const newlyLoaded = drafts.filter((d) => idSet.has(d.id));
       this.batchQuestions.update((prev) => [...prev, ...newlyLoaded]);
