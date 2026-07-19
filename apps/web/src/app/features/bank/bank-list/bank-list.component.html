@@ -154,7 +154,12 @@
                                 </div>
                               }
                               <div class="min-w-0 flex-1">
-                                <p class="truncate text-sm font-medium text-n900">Clave: {{ q.correctAnswer }}</p>
+                                @if (questionSnippet(q); as snippet) {
+                                  <p data-testid="question-snippet" class="truncate text-sm font-medium text-n900">{{ snippet }}</p>
+                                  <p class="truncate text-xs text-n500">Clave: {{ q.correctAnswer }}</p>
+                                } @else {
+                                  <p class="truncate text-sm font-medium text-n900">Clave: {{ q.correctAnswer }}</p>
+                                }
                               </div>
                               <ui-tag [variant]="tagVariantFor(q.difficulty)">{{ difficultyLabel(q.difficulty) }}</ui-tag>
                             </button>
@@ -177,6 +182,33 @@
             @if (imageUrl(q); as url) {
               <img [src]="url" [alt]="'Pregunta ' + q.id" class="mb-3 max-h-64 w-full rounded object-contain" />
             }
+
+            @if (q.bodyTypst) {
+              <div data-testid="panel-enunciado" class="mb-3">
+                <p class="mb-1 text-xs font-medium text-n500">Enunciado</p>
+                <p class="whitespace-pre-wrap rounded-field bg-n50 px-3 py-2 text-sm text-n900">{{ q.bodyTypst }}</p>
+              </div>
+            }
+
+            @if (alternativeRows(q).length > 0) {
+              <ul data-testid="panel-alternatives" class="mb-3 space-y-1">
+                @for (alt of alternativeRows(q); track alt.letter) {
+                  <li
+                    class="flex items-start gap-2 rounded-field px-2 py-1 text-sm"
+                    [class.bg-easy-bg]="alt.correct"
+                    [class.text-easy-text]="alt.correct"
+                    [class.text-n700]="!alt.correct"
+                  >
+                    <span class="font-medium">{{ alt.letter }})</span>
+                    <span class="min-w-0 flex-1">{{ alt.text }}</span>
+                    @if (alt.correct) {
+                      <lucide-angular name="check" class="mt-0.5 h-4 w-4 shrink-0"></lucide-angular>
+                    }
+                  </li>
+                }
+              </ul>
+            }
+
             <div class="mb-3 flex flex-wrap items-center gap-2">
               <ui-tag [variant]="tagVariantFor(q.difficulty)">{{ difficultyLabel(q.difficulty) }}</ui-tag>
               @if (isCentral(q)) {

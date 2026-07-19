@@ -39,3 +39,7 @@ apps/api/drizzle/meta/_journal.json.bak
 
 # Local object storage data (native MinIO run outside docker)
 minio-data/
+
+# Playwright MCP session artifacts + ad-hoc smoke screenshots (root-level)
+.playwright-mcp/
+/*.png

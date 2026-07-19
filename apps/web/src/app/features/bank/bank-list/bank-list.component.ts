@@ -14,6 +14,7 @@ import {
   FileText,
   Expand,
   Minimize2,
+  Check,
 } from 'lucide-angular';
 import { Difficulty } from '@exams-generator/shared';
 import { ButtonComponent } from '../../../ui/button/button.component';
@@ -114,6 +115,7 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
       FileText,
       Expand,
       Minimize2,
+      Check,
     }).providers ?? [],
   ],
   templateUrl: './bank-list.component.html',
@@ -335,6 +337,30 @@ export class BankListComponent {
   /** Neutral lucide placeholder for a leaf with no loaded thumbnail: `file-text` for structured questions (no image asset at all), `image` otherwise (image-type question, thumbnail pending or missing). */
   protected leafPlaceholderIcon(question: BankQuestion): string {
     return question.type === 'structured' ? 'file-text' : 'image';
+  }
+
+  /**
+   * Short one-line preview of a structured question's statement for the tree
+   * leaf — `bodyTypst` is raw Typst, so it's shown as-is (collapsed whitespace,
+   * truncated). `null` for image questions (they have no statement text; the
+   * leaf falls back to the answer key), so text questions stop rendering as
+   * blank cards.
+   */
+  protected questionSnippet(question: BankQuestion): string | null {
+    const raw = (question.bodyTypst ?? '').replace(/\s+/g, ' ').trim();
+    if (!raw) {
+      return null;
+    }
+    return raw.length > 70 ? `${raw.slice(0, 70)}…` : raw;
+  }
+
+  /** Alternatives of a structured question, lettered a/b/c…, with the `correctAnswer` one flagged. Empty for image questions. */
+  protected alternativeRows(question: BankQuestion): { letter: string; text: string; correct: boolean }[] {
+    const alternatives = question.alternatives ?? [];
+    return alternatives.map((text, index) => {
+      const letter = String.fromCharCode(97 + index);
+      return { letter, text, correct: letter === question.correctAnswer.toLowerCase() };
+    });
   }
 
   protected select(question: BankQuestion): void {

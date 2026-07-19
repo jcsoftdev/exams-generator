@@ -234,4 +234,71 @@ describe("GET /exams/:examId/versions (e2e, B4)", () => {
 
     expect(response.body).toEqual([]);
   });
+
+  describe("GET /exams/:examId/versions/zip (N1)", () => {
+    async function createReadyExamWithVersions(gradeLevel: string, versionCount: number): Promise<string> {
+      const [topic] = await db
+        .insert(topics)
+        .values({ courseId, name: `VersionsZipE2E Topic ${randomUUID()}` })
+        .returning({ id: topics.id });
+      const topicId = topic!.id;
+      createdTopicIds.push(topicId);
+      await createApprovedQuestion(topicId, gradeLevel);
+
+      const createResponse = await request(app.getHttpServer())
+        .post("/exams")
+        .set("Authorization", `Bearer ${tenantAToken}`)
+        .send({ title: "Zip exam", gradeLevel, blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }] })
+        .expect(201);
+      const examId = createResponse.body.id;
+      createdExamIds.push(examId);
+
+      if (versionCount > 0) {
+        await request(app.getHttpServer())
+          .post(`/exams/${examId}/versions`)
+          .set("Authorization", `Bearer ${tenantAToken}`)
+          .send({ versionCount })
+          .expect(201);
+      }
+      return examId;
+    }
+
+    function zipRequest(token: string, examId: string) {
+      return request(app.getHttpServer())
+        .get(`/exams/${examId}/versions/zip`)
+        .set("Authorization", `Bearer ${token}`)
+        .responseType("blob");
+    }
+
+    it("scenario 1: an exam with 2 versions -> 200 application/zip whose bytes are a real ZIP naming each form", async () => {
+      const examId = await createReadyExamWithVersions("secundaria_1", 2);
+
+      const response = await zipRequest(tenantAToken, examId).expect(200);
+
+      expect(response.headers["content-type"]).toContain("application/zip");
+      const body = response.body as Buffer;
+      expect(Buffer.isBuffer(body)).toBe(true);
+      // ZIP local-file-header magic "PK\x03\x04".
+      expect(body.subarray(0, 4)).toEqual(Buffer.from([0x50, 0x4b, 0x03, 0x04]));
+      for (const name of ["Examen-A.pdf", "Claves-A.pdf", "Examen-B.pdf", "Claves-B.pdf"]) {
+        expect(body.includes(Buffer.from(name))).toBe(true);
+      }
+    });
+
+    it("scenario 2: a cross-tenant exam -> 404 (existence not leaked)", async () => {
+      const examId = await createReadyExamWithVersions("secundaria_2", 2);
+
+      await zipRequest(tenantBToken, examId).expect(404);
+    });
+
+    it("scenario 3: a ready exam with zero generated versions -> 409 (nothing to download)", async () => {
+      const examId = await createReadyExamWithVersions("secundaria_3", 0);
+
+      await zipRequest(tenantAToken, examId).expect(409);
+    });
+
+    it("scenario 4: a nonexistent examId -> 404", async () => {
+      await zipRequest(tenantAToken, randomUUID()).expect(404);
+    });
+  });
 });

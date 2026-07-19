@@ -40,6 +40,18 @@ export class TenantsController {
     return this.tenantsService.create(dto);
   }
 
+  /**
+   * `GET /tenants` (N3) — full tenant list for the `platform_admin` colegio
+   * selector. `platform_admin`-only, same as `create`/`remove`: the param-
+   * less route never reaches `TenantGuard`'s `:id` scoping branch (the guard
+   * bypasses global roles first), so no `@TenantParam()` override is needed.
+   */
+  @Get()
+  @Roles(Role.PlatformAdmin)
+  findAll() {
+    return this.tenantsService.findAll();
+  }
+
   @Get(":id")
   @Roles(Role.PlatformAdmin, Role.SchoolAdmin)
   findOne(@Param("id") id: string) {

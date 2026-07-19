@@ -87,6 +87,29 @@ describe("Tenants (e2e)", () => {
     });
   });
 
+  describe("GET /tenants (list, N3)", () => {
+    it("allows platform_admin to list all tenants", async () => {
+      const token = await loginAs(platformAdmin);
+      const res = await request(app.getHttpServer())
+        .get("/tenants")
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      expect(Array.isArray(res.body)).toBe(true);
+      const ids = res.body.map((t: { id: string }) => t.id);
+      expect(ids).toEqual(expect.arrayContaining([tenantA.id, tenantB.id]));
+    });
+
+    it("forbids school_admin from listing all tenants", async () => {
+      const token = await loginAs(schoolAdminA);
+      const res = await request(app.getHttpServer())
+        .get("/tenants")
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(403);
+    });
+  });
+
   describe("GET /tenants/:id (read)", () => {
     it("allows school_admin to read their own tenant", async () => {
       const token = await loginAs(schoolAdminA);

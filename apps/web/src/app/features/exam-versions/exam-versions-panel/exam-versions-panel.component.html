@@ -33,8 +33,14 @@
           Generar más formas
         </ui-button>
       </div>
-      <span data-testid="download-zip" [title]="'Disponible próximamente'">
-        <ui-button variant="ghost" [disabled]="true">Descargar todo (ZIP)</ui-button>
+      <span data-testid="download-zip">
+        <ui-button
+          variant="ghost"
+          [loading]="downloadingZip()"
+          [disabled]="versions().length === 0 || downloadingZip()"
+          (clicked)="downloadZip()"
+          >Descargar todo (ZIP)</ui-button
+        >
       </span>
     </div>
 

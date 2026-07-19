@@ -42,4 +42,16 @@ export class ExamVersionsService {
   downloadAsset(assetUrl: string): Observable<Blob> {
     return this.http.get(`${environment.apiBaseUrl}${assetUrl}`, { responseType: 'blob' });
   }
+
+  /**
+   * `GET /exams/:examId/versions/zip` (N1) — every form + answer sheet as one
+   * ZIP. Bearer-JWT protected like `downloadAsset`, so it goes through
+   * `HttpClient` (a plain `<a href>` can't send the auth header) and the
+   * caller turns the `Blob` into a `blob:` object URL to trigger the save.
+   */
+  downloadVersionsZip(examId: string): Observable<Blob> {
+    return this.http.get(`${environment.apiBaseUrl}/exams/${examId}/versions/zip`, {
+      responseType: 'blob',
+    });
+  }
 }

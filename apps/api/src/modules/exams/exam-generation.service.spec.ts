@@ -1,5 +1,5 @@
 import { Role } from "@exams-generator/shared";
-import { ConflictException, NotFoundException } from "@nestjs/common";
+import { BadRequestException, ConflictException, NotFoundException } from "@nestjs/common";
 import { InMemoryStorageAdapter } from "./adapters/storage/in-memory-storage.adapter";
 import { createSeededRng } from "./domain/ports/random.port";
 import {
@@ -80,6 +80,7 @@ function buildDeps() {
     saveVersion: jest.fn().mockResolvedValue(undefined),
     confirmExam: jest.fn().mockResolvedValue(undefined),
     clearVersions: jest.fn().mockResolvedValue([]),
+    getVersionAssetRecords: jest.fn(),
   } as unknown as jest.Mocked<ExamsRepository>;
 
   const storage = new InMemoryStorageAdapter();
@@ -299,5 +300,78 @@ describe("ExamVersionGenerationService.generateVersions", () => {
 
       expect(callOrder).toEqual(["confirmExam", "clearVersions"]);
     });
+  });
+});
+
+describe("ExamVersionGenerationService.buildVersionsZip (N1)", () => {
+  const STAFF: AuthTokenPayload = { sub: "staff-1", tenantId: null, role: Role.PlatformAdmin };
+
+  it("rejects platform staff (no tenant) with 400 before touching the repository", async () => {
+    const { service, repository } = buildDeps();
+
+    await expect(service.buildVersionsZip(STAFF, "exam-1")).rejects.toBeInstanceOf(BadRequestException);
+    expect(repository.getVersionAssetRecords).not.toHaveBeenCalled();
+  });
+
+  it("rejects a missing/cross-tenant exam with 404 (getVersionAssetRecords -> undefined)", async () => {
+    const { service, repository } = buildDeps();
+    repository.getVersionAssetRecords.mockResolvedValue(undefined);
+
+    await expect(service.buildVersionsZip(TEACHER, "exam-1")).rejects.toBeInstanceOf(NotFoundException);
+  });
+
+  it("rejects an exam with zero generated versions with 409 (nothing to download)", async () => {
+    const { service, repository } = buildDeps();
+    repository.getVersionAssetRecords.mockResolvedValue([]);
+
+    await expect(service.buildVersionsZip(TEACHER, "exam-1")).rejects.toBeInstanceOf(ConflictException);
+  });
+
+  it("bundles each version's exam PDF + answer sheet into one ZIP buffer, named by code", async () => {
+    const { service, repository, storage } = buildDeps();
+    await storage.put("exams/exam-1/versions/A/exam.pdf", Buffer.from("pdf-A"), "application/pdf");
+    await storage.put("exams/exam-1/versions/A/answer-key.pdf", Buffer.from("key-A"), "application/pdf");
+    await storage.put("exams/exam-1/versions/B/exam.pdf", Buffer.from("pdf-B"), "application/pdf");
+    await storage.put("exams/exam-1/versions/B/answer-key.pdf", Buffer.from("key-B"), "application/pdf");
+    repository.getVersionAssetRecords.mockResolvedValue([
+      {
+        code: "A",
+        pdfStorageKey: "exams/exam-1/versions/A/exam.pdf",
+        pdfMime: "application/pdf",
+        answerSheetStorageKey: "exams/exam-1/versions/A/answer-key.pdf",
+        answerSheetMime: "application/pdf",
+      },
+      {
+        code: "B",
+        pdfStorageKey: "exams/exam-1/versions/B/exam.pdf",
+        pdfMime: "application/pdf",
+        answerSheetStorageKey: "exams/exam-1/versions/B/answer-key.pdf",
+        answerSheetMime: "application/pdf",
+      },
+    ]);
+
+    const zip = await service.buildVersionsZip(TEACHER, "exam-1");
+
+    // Valid ZIP local-file-header magic ("PK\x03\x04").
+    expect(zip.subarray(0, 4)).toEqual(Buffer.from([0x50, 0x4b, 0x03, 0x04]));
+    // Filenames are stored uncompressed in the (level 0) local headers.
+    for (const name of ["Examen-A.pdf", "Claves-A.pdf", "Examen-B.pdf", "Claves-B.pdf"]) {
+      expect(zip.includes(Buffer.from(name))).toBe(true);
+    }
+  });
+
+  it("maps a missing storage object to 404 (integrity fault, same as AssetsService)", async () => {
+    const { service, repository } = buildDeps();
+    repository.getVersionAssetRecords.mockResolvedValue([
+      {
+        code: "A",
+        pdfStorageKey: "exams/exam-1/versions/A/does-not-exist.pdf",
+        pdfMime: "application/pdf",
+        answerSheetStorageKey: "exams/exam-1/versions/A/answer-key.pdf",
+        answerSheetMime: "application/pdf",
+      },
+    ]);
+
+    await expect(service.buildVersionsZip(TEACHER, "exam-1")).rejects.toBeInstanceOf(NotFoundException);
   });
 });

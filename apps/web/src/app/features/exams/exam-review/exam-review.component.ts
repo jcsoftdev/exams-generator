@@ -1,9 +1,25 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { Difficulty } from '@exams-generator/shared';
+import { LucideAngularModule, Shuffle, Check, Lock } from 'lucide-angular';
+import { TagComponent } from '../../../ui/tag/tag.component';
+import { BannerComponent } from '../../../ui/banner/banner.component';
+import { TagVariant } from '../../../ui/ui.types';
 import { ExamsService } from '../exams.service';
 import { ExamDetailQuestion, ExamStatus } from '../exams.models';
+
+const DIFFICULTY_LABELS: Record<Difficulty, string> = {
+  [Difficulty.Easy]: 'Fácil',
+  [Difficulty.Medium]: 'Media',
+  [Difficulty.Hard]: 'Difícil',
+};
+
+const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
+  [Difficulty.Easy]: 'easy',
+  [Difficulty.Medium]: 'medium',
+  [Difficulty.Hard]: 'hard',
+};
 
 /**
  * Review + replace + confirm (design doc §5.3 steps 4-5). Reads the exam id
@@ -15,7 +31,8 @@ import { ExamDetailQuestion, ExamStatus } from '../exams.models';
  */
 @Component({
   selector: 'app-exam-review',
-  imports: [FormsModule],
+  imports: [LucideAngularModule, TagComponent, BannerComponent],
+  providers: [LucideAngularModule.pick({ Shuffle, Check, Lock }).providers ?? []],
   templateUrl: './exam-review.component.html',
 })
 export class ExamReviewComponent implements OnInit {
@@ -96,5 +113,25 @@ export class ExamReviewComponent implements OnInit {
         this.errorMessage.set('No se pudo confirmar el examen. Inténtalo de nuevo.');
       },
     });
+  }
+
+  protected isReady(): boolean {
+    return this.status() === 'ready';
+  }
+
+  protected statusLabel(status: ExamStatus): string {
+    return status === 'ready' ? 'Listo' : 'Borrador';
+  }
+
+  protected statusTag(status: ExamStatus): TagVariant {
+    return status === 'ready' ? 'easy' : 'medium';
+  }
+
+  protected difficultyLabel(difficulty: Difficulty): string {
+    return DIFFICULTY_LABELS[difficulty];
+  }
+
+  protected difficultyVariant(difficulty: Difficulty): TagVariant {
+    return DIFFICULTY_TAG_VARIANT[difficulty];
   }
 }

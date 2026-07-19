@@ -72,6 +72,15 @@ export interface BankQuestion {
   readonly type?: 'image' | 'structured';
   readonly origin?: QuestionOrigin;
   readonly usedInExamCount?: number;
+  /**
+   * Structured (`type: 'structured'`) questions carry their statement +
+   * options directly on the row (`image` questions leave these `null`).
+   * `GET /bank/questions` returns them (see `QuestionListItem` in
+   * apps/api/src/modules/bank/bank.repository.ts) — the bank UI renders them
+   * so text questions aren't shown as blank cards.
+   */
+  readonly bodyTypst?: string | null;
+  readonly alternatives?: readonly string[] | null;
 }
 
 /** S6: paginated envelope for `GET /bank/questions?page=&pageSize=`. */

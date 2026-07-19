@@ -54,6 +54,7 @@ const EXAM_DETAIL: ExamDetail = {
 function setup(overrides: {
   listVersionsImpl?: (...args: unknown[]) => unknown;
   downloadAssetImpl?: (assetUrl: string) => unknown;
+  downloadVersionsZipImpl?: (...args: unknown[]) => unknown;
   generateVersionsImpl?: (...args: unknown[]) => unknown;
   getExamImpl?: (...args: unknown[]) => unknown;
   duplicateExamImpl?: (...args: unknown[]) => unknown;
@@ -62,6 +63,9 @@ function setup(overrides: {
   const downloadAsset = vi.fn(
     overrides.downloadAssetImpl ??
       ((assetUrl: string) => of(new Blob([`fake-bytes-${assetUrl}`], { type: 'application/pdf' }))),
+  );
+  const downloadVersionsZip = vi.fn(
+    overrides.downloadVersionsZipImpl ?? (() => of(new Blob(['fake-zip-bytes'], { type: 'application/zip' }))),
   );
   const generateVersions = vi.fn(
     overrides.generateVersionsImpl ??
@@ -80,7 +84,10 @@ function setup(overrides: {
   TestBed.configureTestingModule({
     imports: [ExamVersionsPanelComponent],
     providers: [
-      { provide: ExamVersionsService, useValue: { listVersions, downloadAsset, generateVersions } },
+      {
+        provide: ExamVersionsService,
+        useValue: { listVersions, downloadAsset, downloadVersionsZip, generateVersions },
+      },
       { provide: ExamsService, useValue: { getExam, duplicateExam } },
       { provide: Router, useValue: { navigate } },
       {
@@ -94,7 +101,17 @@ function setup(overrides: {
   fixture.detectChanges();
   const compiled = fixture.nativeElement as HTMLElement;
 
-  return { fixture, compiled, listVersions, downloadAsset, generateVersions, getExam, duplicateExam, navigate };
+  return {
+    fixture,
+    compiled,
+    listVersions,
+    downloadAsset,
+    downloadVersionsZip,
+    generateVersions,
+    getExam,
+    duplicateExam,
+    navigate,
+  };
 }
 
 function openGeneratePanel(compiled: HTMLElement, fixture: { detectChanges: () => void }): void {
@@ -140,12 +157,20 @@ describe('ExamVersionsPanelComponent', () => {
       expect(answerLinks[0].getAttribute('href')).toMatch(/^blob:/);
     });
 
-    it('renders a disabled "Descargar todo (ZIP)" placeholder button (N1 out of scope)', () => {
-      const { compiled } = setup({});
+    it('downloads all versions as a ZIP via a blob: object URL when the button is clicked (N1)', () => {
+      const clickSpy = vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(() => undefined);
+      const { compiled, fixture, downloadVersionsZip } = setup({});
 
       const zipButton = compiled.querySelector<HTMLButtonElement>('[data-testid="download-zip"] button');
-      expect(zipButton).toBeTruthy();
-      expect(zipButton?.disabled).toBe(true);
+      expect(zipButton?.disabled).toBe(false);
+
+      zipButton!.click();
+      fixture.detectChanges();
+
+      expect(downloadVersionsZip).toHaveBeenCalledWith('exam-1');
+      expect(URL.createObjectURL).toHaveBeenCalled();
+      expect(clickSpy).toHaveBeenCalled();
+      clickSpy.mockRestore();
     });
   });
 

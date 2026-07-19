@@ -143,7 +143,7 @@ describe('ExamReviewComponent', () => {
     fixture.detectChanges();
 
     expect(confirmExam).toHaveBeenCalledWith('exam-1');
-    expect(compiled.textContent).toMatch(/ready/i);
+    expect(compiled.textContent).toMatch(/listo/i);
     expect(compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"]')!.disabled).toBe(true);
   });
 

@@ -41,6 +41,8 @@ function makeQuestion(o: Partial<BankQuestion> & { id: string }): BankQuestion {
     type: o.type ?? 'image',
     origin: o.origin ?? 'school',
     usedInExamCount: o.usedInExamCount ?? 0,
+    bodyTypst: o.bodyTypst ?? null,
+    alternatives: o.alternatives ?? null,
   };
 }
 
@@ -260,6 +262,24 @@ describe('BankListComponent', () => {
       expect(placeholder).toBeTruthy();
       expect(placeholder?.getAttribute('data-icon')).toBe('image');
     });
+
+    it('previews a structured question statement in the leaf instead of only its answer key', () => {
+      const structured = makeQuestion({
+        id: 'qs',
+        courseId: 'c1',
+        topicId: 't1',
+        type: 'structured',
+        imageAssetId: null,
+        bodyTypst: '¿Cuál es el resultado de 2 + 3 × 4?',
+        alternatives: ['14', '20', '24', '10'],
+      });
+      const { compiled, fixture } = setup({ listImpl: () => of([structured]) });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+
+      const snippet = compiled.querySelector('[data-testid="question-snippet"]');
+      expect(snippet?.textContent).toContain('¿Cuál es el resultado de 2 + 3 × 4?');
+    });
   });
 
   describe('search filter', () => {
@@ -360,6 +380,34 @@ describe('BankListComponent', () => {
       expect(compiled.querySelector('[data-testid="panel-readonly"]')).toBeTruthy();
       expect(compiled.querySelector('[data-testid="panel-archive"]')).toBeFalsy();
       expect(compiled.querySelector('[data-testid="panel-delete"]')).toBeFalsy();
+    });
+
+    it('renders the statement + lettered alternatives (correct one marked) for a structured question', () => {
+      const { compiled, fixture } = setup({
+        getQuestionImpl: (id) =>
+          of(
+            makeQuestion({
+              id,
+              type: 'structured',
+              imageAssetId: null,
+              correctAnswer: 'b',
+              bodyTypst: 'Si un tren viaja a 60 km/h, ¿cuánto recorre en 2.5 horas?',
+              alternatives: ['120 km', '150 km', '180 km', '90 km'],
+            }),
+          ),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      const enunciado = compiled.querySelector('[data-testid="panel-enunciado"]');
+      expect(enunciado?.textContent).toContain('Si un tren viaja a 60 km/h');
+
+      const alts = compiled.querySelector('[data-testid="panel-alternatives"]');
+      expect(alts?.textContent).toContain('150 km');
+      const correctRow = Array.from(alts!.querySelectorAll('li')).find((li) => li.textContent?.includes('150 km'));
+      expect(correctRow?.className).toContain('bg-easy-bg');
     });
 
     it('archives the selected approved question and reloads the tree', () => {

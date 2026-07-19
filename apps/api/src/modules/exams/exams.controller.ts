@@ -10,9 +10,11 @@ import {
   Param,
   Post,
   Query,
+  Res,
   UnprocessableEntityException,
   UseGuards,
 } from "@nestjs/common";
+import { Response } from "express";
 import { clampPagination } from "../../common/pagination.util";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
@@ -185,6 +187,25 @@ export class ExamsController {
     @Param("examId") examId: string,
   ): Promise<DuplicateExamResult> {
     return this.examsService.duplicateExam(user, examId);
+  }
+
+  /**
+   * `GET /exams/:examId/versions/zip` (N1) — bundles every generated form +
+   * answer sheet into one ZIP download. Declared BEFORE `:examId/versions`
+   * so Nest matches this literal-suffixed route first (both live under the
+   * same `:examId` prefix). `@Res()` is used to set the binary
+   * `Content-Type`/`Content-Disposition` headers directly.
+   */
+  @Get(":examId/versions/zip")
+  async downloadVersionsZip(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("examId") examId: string,
+    @Res() res: Response,
+  ): Promise<void> {
+    const zip = await this.generationService.buildVersionsZip(user, examId);
+    res.set("Content-Type", "application/zip");
+    res.set("Content-Disposition", `attachment; filename="examen-${examId}-versiones.zip"`);
+    res.send(zip);
   }
 
   /** `GET /exams/:examId/versions` (B4) — read-only history, distinct from `POST /versions` (generate). */

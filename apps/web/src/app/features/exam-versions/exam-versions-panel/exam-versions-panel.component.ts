@@ -82,6 +82,9 @@ export class ExamVersionsPanelComponent {
   protected readonly generateError = signal<string | null>(null);
   protected readonly skeletonRows = [0, 1, 2];
 
+  // "Descargar todo (ZIP)" (design doc §5.2, N1).
+  protected readonly downloadingZip = signal(false);
+
   constructor() {
     this.load();
     this.loadExamDetail();
@@ -193,6 +196,36 @@ export class ExamVersionsPanelComponent {
       error: () => {
         this.generating.set(false);
         this.generateError.set('No se pudieron generar las formas. Inténtalo de nuevo.');
+      },
+    });
+  }
+
+  /**
+   * "Descargar todo (ZIP)" (design doc §5.2, N1) — fetches the ZIP through
+   * `HttpClient` (Bearer-JWT protected, so no plain `<a href>`), turns it into
+   * a `blob:` object URL, and triggers a browser save via a transient anchor.
+   * The object URL is revoked right after to avoid leaking (unlike the
+   * per-version links, which stay alive for the page's lifetime).
+   */
+  protected downloadZip(): void {
+    if (this.downloadingZip() || this.versions().length === 0) {
+      return;
+    }
+    this.actionError.set(null);
+    this.downloadingZip.set(true);
+    this.examVersionsService.downloadVersionsZip(this.examId()).subscribe({
+      next: (blob) => {
+        this.downloadingZip.set(false);
+        const url = URL.createObjectURL(blob);
+        const anchor = document.createElement('a');
+        anchor.href = url;
+        anchor.download = `examen-${this.examId()}-versiones.zip`;
+        anchor.click();
+        URL.revokeObjectURL(url);
+      },
+      error: () => {
+        this.downloadingZip.set(false);
+        this.actionError.set('No se pudo descargar el ZIP. Inténtalo de nuevo.');
       },
     });
   }

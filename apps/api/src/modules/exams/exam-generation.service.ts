@@ -19,10 +19,16 @@ import {
   PdfCompilerPort,
   TypstCompilationError,
 } from "./domain/ports/pdf-compiler.port";
-import { StoragePort } from "./domain/ports/storage.port";
+import { StorageObjectNotFoundError, StoragePort } from "./domain/ports/storage.port";
 import { STORAGE_PORT } from "../bank/bank.constants";
 import { PDF_COMPILER_PORT } from "./exams.constants";
 import { ExamForGenerationRecord, ExamsRepository, SelectedQuestionForGeneration } from "./exams.repository";
+import type { Archiver, ArchiverOptions } from "archiver";
+
+// `archiver`'s CommonJS entry IS the vending factory `archiver(format, opts)`,
+// but @types/archiver@8 only ships the class/interface types (no callable),
+// so type the `require` result against them directly.
+const createArchive = require("archiver") as (format: "zip", options?: ArchiverOptions) => Archiver;
 
 export interface GeneratedVersionResult {
   readonly code: string;
@@ -167,6 +173,66 @@ export class ExamVersionGenerationService {
       return results;
     } finally {
       await fs.rm(workDir, { recursive: true, force: true });
+    }
+  }
+
+  /**
+   * `GET /exams/:examId/versions/zip` (N1) — bundles every generated form
+   * (exam PDF + answer sheet) into a single ZIP, returned as an in-memory
+   * `Buffer`. Tenant-scoped 404-on-mismatch, same pattern as `listVersions`
+   * (B4): `getVersionAssetRecords()` returns `undefined` for a
+   * missing/cross-tenant exam. A `ready` exam with zero generated versions
+   * is a 409 (nothing to download) — distinct from the 200 `[]` the history
+   * endpoint returns, because a download of nothing is not a useful success.
+   *
+   * `zlib.level: 0` (store, no compression) — the PDFs are already
+   * compressed, so deflating them again only burns CPU for no size win. An
+   * exam has at most a handful of versions, so buffering the whole archive
+   * in memory is fine (no streaming needed).
+   */
+  async buildVersionsZip(user: AuthTokenPayload, examId: string): Promise<Buffer> {
+    const tenantId = user.tenantId;
+    if (!tenantId) {
+      throw new BadRequestException("Only tenant users can download exam versions");
+    }
+
+    const records = await this.repository.getVersionAssetRecords(examId, tenantId);
+    if (records === undefined) {
+      throw new NotFoundException(`Exam not found: ${examId}`);
+    }
+    if (records.length === 0) {
+      throw new ConflictException("Exam has no generated versions to download");
+    }
+
+    const archive = createArchive("zip", { zlib: { level: 0 } });
+    const chunks: Buffer[] = [];
+    const zipped = new Promise<Buffer>((resolve, reject) => {
+      archive.on("data", (chunk: Buffer) => chunks.push(chunk));
+      archive.on("warning", reject);
+      archive.on("error", reject);
+      archive.on("end", () => resolve(Buffer.concat(chunks)));
+    });
+
+    for (const record of records) {
+      const examPdf = await this.fetchVersionAsset(record.pdfStorageKey, examId);
+      const answerSheet = await this.fetchVersionAsset(record.answerSheetStorageKey, examId);
+      archive.append(examPdf, { name: `Examen-${record.code}.pdf` });
+      archive.append(answerSheet, { name: `Claves-${record.code}.pdf` });
+    }
+
+    await archive.finalize();
+    return zipped;
+  }
+
+  /** Pulls one version asset's bytes; a missing storage object is an integrity fault surfaced as 404 (same mapping as `AssetsService`). */
+  private async fetchVersionAsset(storageKey: string, examId: string): Promise<Buffer> {
+    try {
+      return await this.storage.get(storageKey);
+    } catch (error) {
+      if (error instanceof StorageObjectNotFoundError) {
+        throw new NotFoundException(`Exam not found: ${examId}`);
+      }
+      throw error;
     }
   }
 

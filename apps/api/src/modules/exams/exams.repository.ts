@@ -178,6 +178,15 @@ export interface VersionSummaryRecord {
   readonly answerSheetUrl: string;
 }
 
+/** `GET /exams/:examId/versions/zip` (N1) row shape — see `getVersionAssetRecords()`. Carries the raw storage coordinates the ZIP builder needs to pull bytes. */
+export interface VersionAssetRecord {
+  readonly code: string;
+  readonly pdfStorageKey: string;
+  readonly pdfMime: string;
+  readonly answerSheetStorageKey: string;
+  readonly answerSheetMime: string;
+}
+
 const logoAssets = alias(assets, "logo_assets");
 
 /**
@@ -745,5 +754,43 @@ export class ExamsRepository {
       pdfUrl: row.pdfAssetId ? `/assets/${row.pdfAssetId}` : "",
       answerSheetUrl: row.answerSheetAssetId ? `/assets/${row.answerSheetAssetId}` : "",
     }));
+  }
+
+  /**
+   * `GET /exams/:examId/versions/zip` (N1): tenant-scoped like `getVersions`
+   * (returns `undefined` for a missing/cross-tenant exam — never leak
+   * existence). Unlike `getVersions` (which only needs asset ids for URLs),
+   * the ZIP download needs the actual `storageKey`/`mime` to pull bytes from
+   * `StoragePort`, so this joins `exam_versions` -> `assets` twice (pdf +
+   * answer sheet). `innerJoin` skips any half-generated version missing an
+   * asset — a fully generated version always has both. Ordered by `code ASC`.
+   */
+  async getVersionAssetRecords(
+    examId: string,
+    tenantId: string,
+  ): Promise<VersionAssetRecord[] | undefined> {
+    const exam = await this.getExamById(examId, tenantId);
+    if (!exam) {
+      return undefined;
+    }
+
+    const pdfAssets = alias(assets, "pdf_assets");
+    const answerSheetAssets = alias(assets, "answer_sheet_assets");
+
+    const rows = await db
+      .select({
+        code: examVersions.code,
+        pdfStorageKey: pdfAssets.storageKey,
+        pdfMime: pdfAssets.mime,
+        answerSheetStorageKey: answerSheetAssets.storageKey,
+        answerSheetMime: answerSheetAssets.mime,
+      })
+      .from(examVersions)
+      .innerJoin(pdfAssets, eq(examVersions.pdfAssetId, pdfAssets.id))
+      .innerJoin(answerSheetAssets, eq(examVersions.answerSheetAssetId, answerSheetAssets.id))
+      .where(eq(examVersions.examId, examId))
+      .orderBy(asc(examVersions.code));
+
+    return rows;
   }
 }
