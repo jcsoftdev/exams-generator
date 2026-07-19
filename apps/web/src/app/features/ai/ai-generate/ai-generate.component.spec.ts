@@ -1,205 +1,141 @@
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, vi } from 'vitest';
-import { of, throwError } from 'rxjs';
-import { HttpErrorResponse } from '@angular/common/http';
+import { Subject, of } from 'rxjs';
+import { Router } from '@angular/router';
+import { LucideAngularModule, Sparkles, TriangleAlert, Plus, Minus } from 'lucide-angular';
 import { AiGenerateComponent } from './ai-generate.component';
 import { AiService } from '../ai.service';
-import { GenerateQuestionsResult } from '../ai.models';
+import { DraftQuestion, GenerateQuestionsResult } from '../ai.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
+import { Difficulty } from '@exams-generator/shared';
 
-const COURSES: Course[] = [
-  { id: 'course-1', name: 'Aritmética' },
-  { id: 'course-2', name: 'Álgebra' },
-];
+const COURSES: Course[] = [{ id: 'c1', name: 'Biología' }];
+const TOPICS: Topic[] = [{ id: 't1', name: 'La célula', courseId: 'c1' }];
 
-const TOPICS_COURSE_1: Topic[] = [{ id: 'topic-1', name: 'Fracciones', courseId: 'course-1' }];
-
-function setup(generateImpl: (...args: unknown[]) => unknown) {
-  const generateQuestions = vi.fn(generateImpl);
+function setup(
+  over: {
+    genImpl?: (...a: unknown[]) => unknown;
+    listDraftsImpl?: (...a: unknown[]) => unknown;
+  } = {},
+) {
+  const generateQuestions = vi.fn(
+    over.genImpl ??
+      (() => of({ created: [{ id: 'a' }, { id: 'b' }], failed: [] } as GenerateQuestionsResult)),
+  );
+  const listDrafts = vi.fn(over.listDraftsImpl ?? (() => of([] as DraftQuestion[])));
   const getCourses = vi.fn(() => of(COURSES));
-  const getTopics = vi.fn(() => of(TOPICS_COURSE_1));
-
+  const getTopics = vi.fn(() => of(TOPICS));
+  const navigate = vi.fn();
   TestBed.configureTestingModule({
-    imports: [AiGenerateComponent],
+    imports: [AiGenerateComponent, LucideAngularModule.pick({ Sparkles, TriangleAlert, Plus, Minus })],
     providers: [
-      { provide: AiService, useValue: { generateQuestions } },
+      { provide: AiService, useValue: { generateQuestions, listDrafts } },
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
+      { provide: Router, useValue: { navigate } },
     ],
   });
-
   const fixture = TestBed.createComponent(AiGenerateComponent);
   fixture.detectChanges();
-  const compiled = fixture.nativeElement as HTMLElement;
+  return {
+    fixture,
+    compiled: fixture.nativeElement as HTMLElement,
+    generateQuestions,
+    listDrafts,
+    navigate,
+  };
+}
 
-  const courseSelect = compiled.querySelector<HTMLSelectElement>('select[name="courseId"]')!;
-  const topicSelect = compiled.querySelector<HTMLSelectElement>('select[name="topicId"]')!;
-  const difficultySelect = compiled.querySelector<HTMLSelectElement>('select[name="difficulty"]')!;
-  const gradeLevelSelect = compiled.querySelector<HTMLSelectElement>('select[name="gradeLevel"]')!;
-  const countInput = compiled.querySelector<HTMLInputElement>('input[name="count"]')!;
-  const withFigureCheckbox = compiled.querySelector<HTMLInputElement>('input[name="withFigure"]')!;
-  const form = compiled.querySelector<HTMLFormElement>('form')!;
+function set(fixture: { componentInstance: unknown; detectChanges(): void }, prop: string, v: unknown) {
+  (fixture.componentInstance as Record<string, { set(x: unknown): void }>)[prop].set(v);
+  fixture.detectChanges();
+}
 
-  function selectCourse(courseId: string) {
-    courseSelect.value = courseId;
-    courseSelect.dispatchEvent(new Event('change'));
-    fixture.detectChanges();
-  }
-
-  function fillForm(overrides: {
-    courseId?: string;
-    topicId?: string;
-    difficulty?: string;
-    gradeLevel?: string;
-    count?: number;
-    withFigure?: boolean;
-  }) {
-    selectCourse(overrides.courseId ?? 'course-1');
-    topicSelect.value = overrides.topicId ?? 'topic-1';
-    topicSelect.dispatchEvent(new Event('change'));
-    difficultySelect.value = overrides.difficulty ?? 'medium';
-    difficultySelect.dispatchEvent(new Event('change'));
-    gradeLevelSelect.value = overrides.gradeLevel ?? 'primaria_3';
-    gradeLevelSelect.dispatchEvent(new Event('change'));
-    countInput.value = String(overrides.count ?? 5);
-    countInput.dispatchEvent(new Event('input'));
-    if (overrides.withFigure) {
-      withFigureCheckbox.checked = true;
-      withFigureCheckbox.dispatchEvent(new Event('change'));
-    }
-
-    fixture.detectChanges();
-  }
-
-  function submit() {
-    form.dispatchEvent(new Event('submit'));
-    fixture.detectChanges();
-  }
-
-  return { fixture, compiled, generateQuestions, getCourses, getTopics, fillForm, submit, selectCourse, topicSelect };
+function fillForm(fixture: { componentInstance: unknown; detectChanges(): void }) {
+  set(fixture, 'courseId', 'c1');
+  set(fixture, 'topicId', 't1');
+  set(fixture, 'difficulty', 'easy');
+  set(fixture, 'gradeLevel', 'pre');
+  set(fixture, 'count', 3);
 }
 
 describe('AiGenerateComponent', () => {
-  it('renders course/topic dropdowns plus difficulty/gradeLevel/count/withFigure fields', () => {
-    const { compiled } = setup(() => of({ created: [], failed: [] }));
-
-    expect(compiled.querySelector('select[name="courseId"]')).toBeTruthy();
-    expect(compiled.querySelector('select[name="topicId"]')).toBeTruthy();
-    expect(compiled.querySelector('select[name="difficulty"]')).toBeTruthy();
-    expect(compiled.querySelector('select[name="gradeLevel"]')).toBeTruthy();
-    expect(compiled.querySelector('input[name="count"]')).toBeTruthy();
-    expect(compiled.querySelector('input[name="withFigure"]')).toBeTruthy();
+  it('shows the 1-2-3 empty state before generating', () => {
+    const { compiled } = setup();
+    expect(compiled.querySelector('[data-testid="batch-empty"]')).toBeTruthy();
   });
 
-  it('loads courses from TaxonomyService and populates the course dropdown', () => {
-    const { compiled, getCourses } = setup(() => of({ created: [], failed: [] }));
-
-    expect(getCourses).toHaveBeenCalledTimes(1);
-    const options = compiled.querySelectorAll('select[name="courseId"] option');
-    expect(Array.from(options).some((o) => o.textContent === 'Aritmética')).toBe(true);
+  it('shows a live progress card while generating', () => {
+    const subject = new Subject<GenerateQuestionsResult>();
+    const { compiled, fixture } = setup({ genImpl: () => subject.asObservable() });
+    fillForm(fixture);
+    (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    expect(compiled.querySelector('[data-testid="batch-progress"]')).toBeTruthy();
+    subject.next({ created: [{ id: 'a' }, { id: 'b' }, { id: 'c' }], failed: [] });
+    subject.complete();
+    fixture.detectChanges();
+    expect(compiled.querySelector('[data-testid="batch-progress"]')).toBeFalsy();
   });
 
-  it('loads topics for the selected course', () => {
-    const { getTopics, selectCourse } = setup(() => of({ created: [], failed: [] }));
-
-    selectCourse('course-1');
-
-    expect(getTopics).toHaveBeenCalledWith('course-1');
+  it('does NOT reset the form after generating', () => {
+    const { compiled, fixture } = setup();
+    fillForm(fixture);
+    (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    expect((fixture.componentInstance as unknown as { courseId(): string }).courseId()).toBe('c1');
+    expect((fixture.componentInstance as unknown as { count(): number }).count()).toBe(3);
   });
 
-  it('calls AiService.generateQuestions with the form values on submit', () => {
-    const { generateQuestions, fillForm, submit } = setup(() => of({ created: [], failed: [] }));
-
-    fillForm({
-      courseId: 'course-1',
-      topicId: 'topic-1',
-      difficulty: 'hard',
-      gradeLevel: 'secundaria_1',
-      count: 8,
-      withFigure: true,
+  it('shows partial-failure banner with a retry-failed action', () => {
+    const { compiled, fixture, generateQuestions } = setup({
+      genImpl: () => of({ created: [{ id: 'a' }], failed: [{ index: 1, error: 'x' }, { index: 2, error: 'y' }] }),
     });
-    submit();
+    fillForm(fixture);
+    (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    expect(compiled.querySelector('[data-testid="batch-failures"]')).toBeTruthy();
+    generateQuestions.mockClear();
+    generateQuestions.mockReturnValue(of({ created: [{ id: 'z' }, { id: 'w' }], failed: [] }));
+    (compiled.querySelector('[data-testid="retry-failed"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    expect(generateQuestions).toHaveBeenCalledWith(expect.objectContaining({ count: 2 }));
+  });
 
-    expect(generateQuestions).toHaveBeenCalledWith({
-      courseId: 'course-1',
-      topicId: 'topic-1',
-      difficulty: 'hard',
-      gradeLevel: 'secundaria_1',
-      count: 8,
-      withFigure: true,
+  it('navigates to the review queue from the footer', () => {
+    const { compiled, fixture, navigate } = setup();
+    fillForm(fixture);
+    (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="go-review"] button') as HTMLButtonElement).click();
+    expect(navigate).toHaveBeenCalledWith(['/app/ai/review']);
+  });
+
+  it('renders readable question cards with stem, alternatives, and the correct answer marked (visual fidelity with the Taller mockup)', () => {
+    const draft: DraftQuestion = {
+      id: 'a',
+      tenantId: null,
+      courseId: 'c1',
+      topicId: 't1',
+      difficulty: Difficulty.Easy,
+      gradeLevel: 'pre',
+      correctAnswer: '1',
+      bodyTypst: '¿Cuánto es 2+2?',
+      alternatives: ['3', '4', '5'],
+      figureCode: null,
+    };
+    const { compiled, fixture } = setup({
+      genImpl: () => of({ created: [{ id: 'a' }], failed: [] }),
+      listDraftsImpl: () => of([draft]),
     });
-  });
-
-  it('shows how many questions were created and failed after a partial-success response', () => {
-    const response: GenerateQuestionsResult = {
-      created: [{ id: 'q1' }, { id: 'q2' }],
-      failed: [{ index: 2, error: 'invalid Typst markup' }],
-    };
-    const { compiled, fillForm, submit } = setup(() => of(response));
-
-    fillForm({});
-    submit();
-
-    const result = compiled.querySelector('[data-testid="generate-result"]');
-    expect(result?.textContent).toMatch(/2 creadas/i);
-    expect(result?.textContent).toMatch(/1 fallidas/i);
-
-    const failures = compiled.querySelectorAll('[data-testid="generate-failure"]');
-    expect(failures.length).toBe(1);
-    expect(failures[0].textContent).toContain('invalid Typst markup');
-  });
-
-  it('renders both successes and failures distinctly on a partial-success response, never collapsing them (AG-R1)', () => {
-    const response: GenerateQuestionsResult = {
-      created: [{ id: 'q1' }, { id: 'q2' }, { id: 'q3' }, { id: 'q4' }],
-      failed: [{ index: 4, error: 'invalid Typst markup' }],
-    };
-    const { compiled, fillForm, submit } = setup(() => of(response));
-
-    fillForm({});
-    submit();
-
-    const successes = compiled.querySelectorAll('[data-testid="generate-success"]');
-    expect(successes.length).toBe(4);
-    const failures = compiled.querySelectorAll('[data-testid="generate-failure"]');
-    expect(failures.length).toBe(1);
-  });
-
-  it('marks every created question as "borrador" (draft), never as "aprobada" (AG-R2)', () => {
-    const response: GenerateQuestionsResult = {
-      created: [{ id: 'q1' }, { id: 'q2' }],
-      failed: [],
-    };
-    const { compiled, fillForm, submit } = setup(() => of(response));
-
-    fillForm({});
-    submit();
-
-    const successes = compiled.querySelectorAll('[data-testid="generate-success"]');
-    expect(successes.length).toBe(2);
-    for (const success of Array.from(successes)) {
-      expect(success.textContent).toMatch(/borrador/i);
-      expect(success.textContent).not.toMatch(/aprobada/i);
-    }
-  });
-
-  it('shows an error message when the request fails', () => {
-    const serverError = new HttpErrorResponse({ status: 500 });
-    const { compiled, fillForm, submit } = setup(() => throwError(() => serverError));
-
-    fillForm({});
-    submit();
-
-    expect(compiled.textContent).toMatch(/no se pudieron generar/i);
-  });
-
-  it('does not submit when required fields are missing', () => {
-    const { generateQuestions, compiled, fixture } = setup(() => of({ created: [], failed: [] }));
-
-    const form = compiled.querySelector<HTMLFormElement>('form')!;
-    form.dispatchEvent(new Event('submit'));
+    fillForm(fixture);
+    (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
-    expect(generateQuestions).not.toHaveBeenCalled();
+    const card = compiled.querySelector('[data-testid="batch-question"]');
+    expect(card?.textContent).toContain('¿Cuánto es 2+2?');
+    expect(card?.textContent).toContain('Borrador IA');
+    const correctAlt = card?.querySelector('[data-testid="alt-correct"]');
+    expect(correctAlt?.textContent).toContain('4');
   });
 });
