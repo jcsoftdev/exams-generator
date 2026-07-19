@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, vi } from 'vitest';
-import { of, throwError } from 'rxjs';
+import { of, throwError, Subject } from 'rxjs';
 import { provideRouter } from '@angular/router';
 import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 import { DashboardComponent } from './dashboard.component';
@@ -66,5 +66,22 @@ describe('DashboardComponent', () => {
 
     const link = compiled.querySelector('[data-testid="dashboard-ai-link"]');
     expect(link?.getAttribute('href')).toBe('/app/ai/review');
+  });
+
+  describe('loading', () => {
+    it('shows a loading indicator while the initial fetch is pending, then renders content once it resolves', () => {
+      const subject = new Subject<DashboardStats>();
+      const { compiled, fixture } = setup(() => subject.asObservable());
+
+      expect(compiled.querySelector('[data-testid="dashboard-loading"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="dashboard-card-bank"]')).toBeFalsy();
+
+      subject.next(STATS);
+      subject.complete();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="dashboard-loading"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="dashboard-card-bank"]')?.textContent).toContain('12');
+    });
   });
 });
