@@ -87,29 +87,33 @@
           </div>
         </div>
 
-        <div data-testid="bank-tree" class="flex flex-col gap-2">
+        <div data-testid="bank-tree" class="flex max-h-[70vh] flex-col gap-2 overflow-y-auto">
           @if (isFiltering() && filteredTree().length === 0) {
             <div data-testid="tree-no-matches" class="rounded-card border border-dashed border-n200 p-6 text-center text-sm text-n500">
               No se encontraron preguntas para tu búsqueda.
             </div>
           }
           @for (course of filteredTree(); track course.courseId) {
-            <div class="overflow-hidden rounded-card border border-n200 bg-white transition-colors hover:border-n300">
+            <!-- Nivel 1 · Curso: ancla dominante — banda sólida, chevron grande, label en negrita. -->
+            <div class="rounded-card border border-n200 bg-white transition-colors hover:border-n300">
               <button
                 type="button"
                 data-testid="course-header"
                 [attr.data-course-id]="course.courseId"
                 [attr.aria-expanded]="isCourseExpanded(course.courseId)"
-                class="flex w-full items-center gap-2 px-3 py-2 text-left transition-colors hover:bg-n50 focus:bg-n50 focus:outline-none"
+                class="sticky top-0 z-10 flex w-full items-center gap-3 rounded-t-card border-b border-n200 bg-n100 px-4 py-3 text-left transition-colors hover:bg-n200/60 focus:bg-n200/60 focus:outline-none"
+                [class.rounded-b-card]="!isCourseExpanded(course.courseId)"
+                [class.border-b-0]="!isCourseExpanded(course.courseId)"
                 (click)="toggleCourse(course.courseId)"
               >
-                <lucide-angular [name]="chevronFor(isCourseExpanded(course.courseId))" class="h-4 w-4 shrink-0 text-n500"></lucide-angular>
-                <span class="font-semibold text-n900">{{ course.name }}</span>
-                <span class="text-xs text-n500">· {{ course.questionCount }}</span>
+                <lucide-angular [name]="chevronFor(isCourseExpanded(course.courseId))" class="h-5 w-5 shrink-0 text-n700"></lucide-angular>
+                <span class="text-base font-bold text-n900">{{ course.name }}</span>
+                <span class="ml-1 shrink-0 rounded-full bg-white px-2 py-0.5 text-xs font-medium text-n600">{{ course.questionCount }}</span>
               </button>
 
               @if (isCourseExpanded(course.courseId)) {
-                <div class="border-t border-n200 pl-5">
+                <!-- Nivel 2 · Tema: indentado con guía vertical bajo el curso. -->
+                <div class="ml-4 border-l border-n200">
                   @for (topic of course.topics; track topic.topicId) {
                     <div class="border-b border-n100 last:border-b-0">
                       <button
@@ -117,21 +121,22 @@
                         data-testid="topic-header"
                         [attr.data-topic-id]="topic.topicId"
                         [attr.aria-expanded]="isTopicExpanded(topic.topicId)"
-                        class="flex w-full items-center gap-2 px-3 py-2 text-left transition-colors hover:bg-n50 focus:bg-n50 focus:outline-none"
+                        class="flex w-full items-center gap-2 py-2 pl-8 pr-3 text-left transition-colors hover:bg-n50 focus:bg-n50 focus:outline-none"
                         (click)="toggleTopic(topic.topicId)"
                       >
-                        <lucide-angular [name]="chevronFor(isTopicExpanded(topic.topicId))" class="h-4 w-4 shrink-0 text-n400"></lucide-angular>
-                        <span class="text-sm font-medium text-n800">{{ topic.name }}</span>
-                        <span class="text-xs text-n500">· {{ topic.questions.length }}</span>
+                        <lucide-angular [name]="chevronFor(isTopicExpanded(topic.topicId))" class="h-3.5 w-3.5 shrink-0 text-n400"></lucide-angular>
+                        <span class="text-sm font-medium text-n700">{{ topic.name }}</span>
+                        <span class="text-xs text-n400">· {{ topic.questions.length }}</span>
                       </button>
 
                       @if (isTopicExpanded(topic.topicId)) {
-                        <div class="flex flex-col gap-1 pb-2 pl-6">
+                        <!-- Nivel 3 · Pregunta: indentado adicional con su propia guía vertical bajo el tema. -->
+                        <div class="ml-4 flex flex-col gap-1 border-l border-n200 pb-2">
                           @for (q of topic.questions; track q.id) {
                             <button
                               type="button"
                               data-testid="bank-question"
-                              class="flex items-center gap-3 rounded-field border bg-white p-2 text-left transition-colors hover:border-primary-300 hover:bg-primary-50/40 focus:outline-none focus:ring-2 focus:ring-primary-300"
+                              class="flex items-center gap-3 rounded-field border bg-white p-2 pl-14 text-left transition-colors hover:border-primary-300 hover:bg-primary-50/40 focus:outline-none focus:ring-2 focus:ring-primary-300"
                               [class.border-primary-500]="selected()?.id === q.id"
                               [class.bg-primary-50]="selected()?.id === q.id"
                               [class.border-n200]="selected()?.id !== q.id"

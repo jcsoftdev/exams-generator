@@ -56,9 +56,14 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
  * fetches all courses' topics via `forkJoin` instead of a single unscoped
  * call — see apply-progress deviations).
  *
- * Courses default EXPANDED (discoverability); topics default COLLAPSED
- * (scannability — resets on every fetch). Only branches with at least one
- * question render (empty branches never appear).
+ * Courses AND topics default COLLAPSED on every fetch (progressive
+ * disclosure — avoids dumping every topic of every course on load, which
+ * for a bank of ~19 courses/40+ topics per course was an unscannable wall).
+ * Expanding a course reveals only its topic list (still collapsed);
+ * expanding a topic reveals its leaf questions. Search force-expands
+ * matching branches (`isFiltering()`), and "Expandir todo" still opens
+ * everything at once. Only branches with at least one question render
+ * (empty branches never appear).
  *
  * Distinguishes TWO empty states (QB-R2): "banco vacío" (the tenant's bank
  * has zero questions at all, regardless of filters) vs "sin resultados"
@@ -288,10 +293,10 @@ export class BankListComponent {
     if (questions.length > 0) {
       this.bankHasAnyQuestions.set(true);
     }
-    // Courses default expanded (discoverability); topics reset to collapsed (scannability) on every
-    // fetch. Thumbnails are NOT loaded here — the `visibleExpandedTopics` effect lazy-loads a
-    // topic's images the first time it actually becomes visible+expanded.
-    this.expandedCourses.set(new Set(questions.map((q) => q.courseId)));
+    // Courses AND topics reset to collapsed (progressive disclosure) on every fetch — see class doc.
+    // Thumbnails are NOT loaded here — the `visibleExpandedTopics` effect lazy-loads a topic's
+    // images the first time it actually becomes visible+expanded.
+    this.expandedCourses.set(new Set());
     this.expandedTopics.set(new Set());
   }
 

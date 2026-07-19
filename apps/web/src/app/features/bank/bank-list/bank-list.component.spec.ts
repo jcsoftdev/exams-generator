@@ -145,6 +145,11 @@ function topicHeader(compiled: HTMLElement, topicId: string): HTMLElement {
   return compiled.querySelector(`[data-testid="topic-header"][data-topic-id="${topicId}"]`) as HTMLElement;
 }
 
+function expandCourse(compiled: HTMLElement, fixture: { detectChanges(): void }, courseId: string): void {
+  courseHeader(compiled, courseId).click();
+  fixture.detectChanges();
+}
+
 function expandTopic(compiled: HTMLElement, fixture: { detectChanges(): void }, topicId: string): void {
   topicHeader(compiled, topicId).click();
   fixture.detectChanges();
@@ -164,14 +169,33 @@ describe('BankListComponent', () => {
       expect(compiled.textContent).not.toMatch(/\bt1\b/);
     });
 
-    it('topics are collapsed by default — no question leaves render until a topic is expanded', () => {
+    it('renders ALL courses collapsed by default — no topics or leaves visible until a course is expanded (avoids the initial wall)', () => {
       const { compiled } = setup();
+      expect(compiled.querySelectorAll('[data-testid="course-header"]').length).toBe(2);
+      expect(compiled.querySelectorAll('[data-testid="topic-header"]').length).toBe(0);
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
+      expect(courseHeader(compiled, 'c1').getAttribute('aria-expanded')).toBe('false');
+      expect(courseHeader(compiled, 'c2').getAttribute('aria-expanded')).toBe('false');
+    });
+
+    it('expanding a course reveals its topics, still collapsed — progressive disclosure', () => {
+      const { compiled, fixture } = setup();
+      expandCourse(compiled, fixture, 'c1');
+      expect(compiled.querySelectorAll('[data-testid="topic-header"]').length).toBe(2);
+      expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
+      expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('false');
+    });
+
+    it('topics are collapsed by default — no question leaves render until a topic is expanded', () => {
+      const { compiled, fixture } = setup();
+      expandCourse(compiled, fixture, 'c1');
       expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(0);
       expect(topicHeader(compiled, 't1')).toBeTruthy();
     });
 
     it('expanding a topic reveals its questions with clave and a difficulty tag', () => {
       const { compiled, fixture } = setup();
+      expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
       const leaves = compiled.querySelectorAll('[data-testid="bank-question"]');
       expect(leaves.length).toBe(2);
@@ -181,6 +205,7 @@ describe('BankListComponent', () => {
 
     it('collapsing a course hides its topics and their expanded questions', () => {
       const { compiled, fixture } = setup();
+      expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
       expect(compiled.querySelectorAll('[data-testid="bank-question"]').length).toBe(2);
 
@@ -192,6 +217,9 @@ describe('BankListComponent', () => {
 
     it('reflects expand/collapse state via aria-expanded on headers', () => {
       const { compiled, fixture } = setup();
+      expect(courseHeader(compiled, 'c1').getAttribute('aria-expanded')).toBe('false');
+
+      expandCourse(compiled, fixture, 'c1');
       expect(courseHeader(compiled, 'c1').getAttribute('aria-expanded')).toBe('true');
       expect(topicHeader(compiled, 't1').getAttribute('aria-expanded')).toBe('false');
 
@@ -201,6 +229,7 @@ describe('BankListComponent', () => {
 
     it('fetches thumbnails through an authenticated blob for a leaf question', () => {
       const { compiled, fixture, fetchQuestionImage } = setup();
+      expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
       expect(fetchQuestionImage).toHaveBeenCalledWith('asset-1');
       expect(compiled.querySelector('img')?.getAttribute('src')).toMatch(/^blob:/);
@@ -213,6 +242,7 @@ describe('BankListComponent', () => {
 
     it('shows a neutral file-text placeholder (never blank gray) for a structured question with no image', () => {
       const { compiled, fixture } = setup();
+      expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
       const leaves = compiled.querySelectorAll('[data-testid="bank-question"]');
       const structuredLeaf = leaves[1]; // q2 is type: 'structured', imageAssetId: null
@@ -223,6 +253,7 @@ describe('BankListComponent', () => {
 
     it('shows an image placeholder icon (never blank gray) for an image-type question with no thumbnail asset', () => {
       const { compiled, fixture } = setup();
+      expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't2'); // q3: type 'image', imageAssetId null
       const leaf = compiled.querySelector('[data-testid="bank-question"]');
       const placeholder = leaf?.querySelector('[data-testid="question-placeholder"]');
@@ -284,6 +315,7 @@ describe('BankListComponent', () => {
 
     it('collapse all hides every topic', () => {
       const { compiled, fixture } = setup();
+      expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
       (compiled.querySelector('[data-testid="collapse-all"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
@@ -295,6 +327,7 @@ describe('BankListComponent', () => {
   describe('detail panel', () => {
     it('opens the detail panel with actions when a leaf question is selected', () => {
       const { compiled, fixture, getQuestion } = setup();
+      expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
@@ -308,6 +341,7 @@ describe('BankListComponent', () => {
       const { compiled, fixture } = setup({
         getQuestionImpl: (id) => of(makeQuestion({ id, status: 'draft' })),
       });
+      expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
@@ -319,6 +353,7 @@ describe('BankListComponent', () => {
       const { compiled, fixture } = setup({
         getQuestionImpl: (id) => of(makeQuestion({ id, tenantId: null, origin: 'central' })),
       });
+      expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
@@ -329,6 +364,7 @@ describe('BankListComponent', () => {
 
     it('archives the selected approved question and reloads the tree', () => {
       const { compiled, fixture, archiveQuestion, listQuestions } = setup();
+      expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
       (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
       fixture.detectChanges();
