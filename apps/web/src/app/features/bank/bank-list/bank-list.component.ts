@@ -20,12 +20,13 @@ import { Difficulty } from '@exams-generator/shared';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
 import { InputComponent } from '../../../ui/input/input.component';
-import { SelectComponent } from '../../../ui/select/select.component';
+import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { BankService } from '../bank.service';
-import { BankQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
+import { BankQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, UpdateQuestionPayload } from '../bank.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
+import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { buildQuestionTree, filterQuestionTree, QuestionTreeCourseNode, QuestionTreeTopicNode } from './bank-question-tree';
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
@@ -92,6 +93,18 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
  * `draft`; `origin === 'central'`/`tenantId === null` is always read-only) —
  * this is UX gating only, the backend is still the source of truth and
  * re-validates on every call.
+ *
+ * Task 8: the "Editar" action no longer navigates to the `bank-new` stub —
+ * it flips the detail panel into an inline edit form (`editing` signal).
+ * Curso/tema reuse the SAME full taxonomy already loaded for the tree
+ * (`courses`/`topics`, fetched once in `fetchTaxonomy`) instead of issuing
+ * new HTTP calls, so changing curso in the form just re-filters the local
+ * `topics` array by `courseId` (`editTopicOptions`). `saveEdit()` never
+ * sends `courseId` (backend contract: course moves via `topicId` only) and
+ * only includes `bodyTypst`/`alternatives` for `type: 'structured'`
+ * questions. A new image file (if picked) is uploaded via
+ * `replaceQuestionImage` AFTER `updateQuestion` succeeds, then the tree +
+ * selected detail are both reloaded and the panel exits edit mode.
  */
 @Component({
   selector: 'app-bank-list',
@@ -143,6 +156,9 @@ export class BankListComponent {
   protected readonly questions = signal<BankQuestion[]>([]);
   private readonly courseNames = signal<ReadonlyMap<string, string>>(new Map());
   private readonly topicNames = signal<ReadonlyMap<string, string>>(new Map());
+  /** Full taxonomy (every course/topic, unscoped by grade) loaded once in `fetchTaxonomy` — reused by the edit form's curso/tema selects instead of new HTTP calls. */
+  private readonly courses = signal<readonly Course[]>([]);
+  private readonly topics = signal<readonly Topic[]>([]);
   private readonly taxonomyLoaded = signal(false);
 
   protected readonly loading = signal(false);
@@ -152,6 +168,35 @@ export class BankListComponent {
 
   protected readonly selected = signal<BankQuestion | null>(null);
   protected readonly actionError = signal<string | null>(null);
+
+  // --- Task 8: inline edit mode -------------------------------------------------
+  protected readonly editing = signal(false);
+  protected readonly editSaving = signal(false);
+  protected readonly editError = signal<string | null>(null);
+  protected readonly editCourseId = signal('');
+  protected readonly editTopicId = signal('');
+  protected readonly editDifficulty = signal<Difficulty | null>(null);
+  protected readonly editGradeLevel = signal<string | null>(null);
+  protected readonly editCorrectAnswer = signal('');
+  protected readonly editBody = signal('');
+  protected readonly editAlternatives = signal('');
+  protected readonly editImageFile = signal<File | null>(null);
+  protected readonly editImagePreviewUrl = signal<string | null>(null);
+
+  protected readonly courseOptions = computed<SelectOption<string>[]>(() =>
+    this.courses().map((course) => ({ value: course.id, label: course.name })),
+  );
+  /** `topics()` (the full unscoped catalog) filtered live to the edit form's currently selected curso — no extra HTTP call on curso change. */
+  protected readonly editTopicOptions = computed<SelectOption<string>[]>(() =>
+    this.topics()
+      .filter((topic) => topic.courseId === this.editCourseId())
+      .map((topic) => ({ value: topic.id, label: topic.name })),
+  );
+  /** Amber used-in-exams warning (edit form only): only for an `approved` question already referenced by at least one exam. */
+  protected readonly editShowUsedWarning = computed(() => {
+    const question = this.selected();
+    return !!question && question.status === 'approved' && (question.usedInExamCount ?? 0) > 0;
+  });
 
   /** `imageAssetId` -> `blob:` object URL, populated lazily by `loadImages`. */
   protected readonly imageUrls = signal<Record<string, string>>({});
@@ -222,6 +267,8 @@ export class BankListComponent {
       next: ({ taxonomy, questions }) => {
         this.courseNames.set(taxonomy.courseNames);
         this.topicNames.set(taxonomy.topicNames);
+        this.courses.set(taxonomy.courses);
+        this.topics.set(taxonomy.topics);
         this.taxonomyLoaded.set(true);
         this.applyQuestions(questions);
         this.loading.set(false);
@@ -274,6 +321,8 @@ export class BankListComponent {
   private fetchTaxonomy(): Observable<{
     courseNames: ReadonlyMap<string, string>;
     topicNames: ReadonlyMap<string, string>;
+    courses: readonly Course[];
+    topics: readonly Topic[];
   }> {
     return this.taxonomyService.getCourses().pipe(
       switchMap((courses) => {
@@ -281,10 +330,15 @@ export class BankListComponent {
           ? forkJoin(courses.map((course) => this.taxonomyService.getTopics(course.id)))
           : of([]);
         return topics$.pipe(
-          map((topicsByCourse) => ({
-            courseNames: new Map(courses.map((course) => [course.id, course.name])),
-            topicNames: new Map(topicsByCourse.flat().map((topic) => [topic.id, topic.name])),
-          })),
+          map((topicsByCourse) => {
+            const topics = topicsByCourse.flat();
+            return {
+              courseNames: new Map(courses.map((course) => [course.id, course.name])),
+              topicNames: new Map(topics.map((topic) => [topic.id, topic.name])),
+              courses,
+              topics,
+            };
+          }),
         );
       }),
     );
@@ -365,6 +419,7 @@ export class BankListComponent {
 
   protected select(question: BankQuestion): void {
     this.actionError.set(null);
+    this.cancelEdit();
     this.selected.set(question);
     this.bankService.getQuestion(question.id).subscribe({
       next: (full) => this.selected.set(full),
@@ -406,8 +461,118 @@ export class BankListComponent {
     });
   }
 
-  protected edit(question: BankQuestion): void {
-    this.router.navigate(['/app/bank/new'], { queryParams: { edit: question.id } });
+  /** Flips the detail panel into edit mode, seeding every edit signal from the currently selected (full-detail) question. */
+  protected startEdit(question: BankQuestion): void {
+    this.editError.set(null);
+    this.editCourseId.set(question.courseId);
+    this.editTopicId.set(question.topicId);
+    this.editDifficulty.set(question.difficulty);
+    this.editGradeLevel.set(question.gradeLevel);
+    this.editCorrectAnswer.set(question.correctAnswer);
+    this.editBody.set(question.bodyTypst ?? '');
+    this.editAlternatives.set((question.alternatives ?? []).join('\n'));
+    this.discardEditImage();
+    this.editing.set(true);
+  }
+
+  /** Curso changed in the edit form: tema is scoped to a course, so it's always reset — the user must re-pick it. */
+  protected onEditCourseChange(courseId: string | null): void {
+    this.editCourseId.set(courseId ?? '');
+    this.editTopicId.set('');
+  }
+
+  protected onEditImageSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0] ?? null;
+    const previousPreview = this.editImagePreviewUrl();
+    if (previousPreview) {
+      URL.revokeObjectURL(previousPreview);
+    }
+    this.editImageFile.set(file);
+    this.editImagePreviewUrl.set(file ? URL.createObjectURL(file) : null);
+  }
+
+  private discardEditImage(): void {
+    const previousPreview = this.editImagePreviewUrl();
+    if (previousPreview) {
+      URL.revokeObjectURL(previousPreview);
+    }
+    this.editImageFile.set(null);
+    this.editImagePreviewUrl.set(null);
+  }
+
+  protected cancelEdit(): void {
+    this.editing.set(false);
+    this.editError.set(null);
+    this.discardEditImage();
+  }
+
+  private editAlternativesList(): string[] {
+    return this.editAlternatives()
+      .split('\n')
+      .map((line) => line.trim())
+      .filter((line) => line.length > 0);
+  }
+
+  /**
+   * Builds `UpdateQuestionPayload` (NEVER `courseId` — the backend moves a
+   * question's course via `topicId`, see `UpdateQuestionPayload`'s doc) and
+   * calls `updateQuestion`; `bodyTypst`/`alternatives` are only included for
+   * `type: 'structured'` questions. If the user picked a new image file,
+   * `replaceQuestionImage` runs AFTER the patch succeeds. Either way, on
+   * success the tree + selected detail are reloaded and edit mode exits.
+   */
+  protected saveEdit(): void {
+    const question = this.selected();
+    if (!question || this.editSaving()) {
+      return;
+    }
+    this.editSaving.set(true);
+    this.editError.set(null);
+
+    const patch: UpdateQuestionPayload = {
+      topicId: this.editTopicId(),
+      difficulty: this.editDifficulty() ?? undefined,
+      gradeLevel: this.editGradeLevel() ?? undefined,
+      correctAnswer: this.editCorrectAnswer(),
+      ...(question.type === 'structured'
+        ? { bodyTypst: this.editBody(), alternatives: this.editAlternativesList() }
+        : {}),
+    };
+
+    this.bankService.updateQuestion(question.id, patch).subscribe({
+      next: () => {
+        const file = this.editImageFile();
+        if (!file) {
+          this.finishSaveEdit(question.id);
+          return;
+        }
+        this.bankService.replaceQuestionImage(question.id, file).subscribe({
+          next: () => this.finishSaveEdit(question.id),
+          error: () => {
+            this.editSaving.set(false);
+            this.editError.set(
+              'Se guardaron los cambios, pero no se pudo reemplazar la imagen. Inténtalo de nuevo.',
+            );
+          },
+        });
+      },
+      error: () => {
+        this.editSaving.set(false);
+        this.editError.set('No se pudo guardar la pregunta. Inténtalo de nuevo.');
+      },
+    });
+  }
+
+  private finishSaveEdit(id: string): void {
+    this.editing.set(false);
+    this.editSaving.set(false);
+    this.discardEditImage();
+    this.search();
+    this.bankService.getQuestion(id).subscribe({
+      next: (full) => this.selected.set(full),
+      error: () => {},
+    });
   }
 
   /**

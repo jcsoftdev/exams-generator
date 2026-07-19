@@ -77,6 +77,8 @@ function setup(
   const getQuestion = vi.fn(over.getQuestionImpl ?? ((id: string) => of(makeQuestion({ id }))));
   const archiveQuestion = vi.fn(over.archiveImpl ?? ((id: string) => of({ id, status: 'archived' })));
   const deleteQuestion = vi.fn(over.deleteImpl ?? (() => of(void 0)));
+  const updateQuestion = vi.fn((id: string, _patch: unknown) => of(makeQuestion({ id })));
+  const replaceQuestionImage = vi.fn((id: string, _file: File) => of({ id }));
   const buildImageAssetUrl = vi.fn((id: string) => `http://api.test/assets/${id}`);
   const fetchQuestionImage = vi.fn((id: string) => of(new Blob([`b-${id}`], { type: 'image/png' })));
   const getCourses = vi.fn(over.getCoursesImpl ?? (() => of(COURSES)));
@@ -115,6 +117,8 @@ function setup(
           getQuestion,
           archiveQuestion,
           deleteQuestion,
+          updateQuestion,
+          replaceQuestionImage,
           buildImageAssetUrl,
           fetchQuestionImage,
         },
@@ -132,6 +136,8 @@ function setup(
     getQuestion,
     archiveQuestion,
     deleteQuestion,
+    updateQuestion,
+    replaceQuestionImage,
     fetchQuestionImage,
     getCourses,
     getTopics,
@@ -408,6 +414,82 @@ describe('BankListComponent', () => {
       expect(alts?.textContent).toContain('150 km');
       const correctRow = Array.from(alts!.querySelectorAll('li')).find((li) => li.textContent?.includes('150 km'));
       expect(correctRow?.className).toContain('bg-easy-bg');
+    });
+
+    it('enters edit mode from panel-edit, edits the enunciado, and saves via updateQuestion', () => {
+      const { compiled, fixture, updateQuestion } = setup({
+        getQuestionImpl: (id) =>
+          of(
+            makeQuestion({
+              id,
+              type: 'structured',
+              imageAssetId: null,
+              bodyTypst: 'Enunciado original',
+              alternatives: ['Uno', 'Dos'],
+            }),
+          ),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="panel-edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      const form = compiled.querySelector('[data-testid="panel-edit-form"]');
+      expect(form).toBeTruthy();
+      const textarea = form!.querySelector('textarea') as HTMLTextAreaElement;
+      expect(textarea.value).toBe('Enunciado original');
+
+      textarea.value = 'Enunciado editado';
+      textarea.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(updateQuestion).toHaveBeenCalledWith(
+        'q1',
+        expect.objectContaining({ bodyTypst: 'Enunciado editado' }),
+      );
+    });
+
+    it('shows a used-in-exams warning in edit mode for an approved question already used in exams', () => {
+      const { compiled, fixture } = setup({
+        getQuestionImpl: (id) => of(makeQuestion({ id, status: 'approved', usedInExamCount: 2 })),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="panel-edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      const warning = compiled.querySelector('[data-testid="edit-warning"]');
+      expect(warning).toBeTruthy();
+      expect(warning?.textContent).toMatch(/2 exámenes/);
+    });
+
+    it('cancelling edit mode discards changes and restores the read-only panel', () => {
+      const { compiled, fixture } = setup({
+        getQuestionImpl: (id) =>
+          of(makeQuestion({ id, type: 'structured', imageAssetId: null, bodyTypst: 'Original' })),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="panel-edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeTruthy();
+
+      (compiled.querySelector('[data-testid="edit-cancel"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeFalsy();
+      expect(compiled.querySelector('[data-testid="panel-enunciado"]')?.textContent).toContain('Original');
     });
 
     it('archives the selected approved question and reloads the tree', () => {
