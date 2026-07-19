@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, vi } from 'vitest';
-import { Subject, of } from 'rxjs';
+import { Subject, of, throwError } from 'rxjs';
+import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { LucideAngularModule, Sparkles, TriangleAlert, Plus, Minus } from 'lucide-angular';
 import { AiGenerateComponent } from './ai-generate.component';
@@ -10,7 +11,10 @@ import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { Difficulty } from '@exams-generator/shared';
 
-const COURSES: Course[] = [{ id: 'c1', name: 'Biología' }];
+const COURSES: Course[] = [
+  { id: 'c1', name: 'Biología' },
+  { id: 'c2', name: 'Química' },
+];
 const TOPICS: Topic[] = [{ id: 't1', name: 'La célula', courseId: 'c1' }];
 
 function setup(
@@ -137,5 +141,50 @@ describe('AiGenerateComponent', () => {
     expect(card?.textContent).toContain('Borrador IA');
     const correctAlt = card?.querySelector('[data-testid="alt-correct"]');
     expect(correctAlt?.textContent).toContain('4');
+  });
+
+  it('clamps the quantity stepper to the backend max of 10 and disables the + button at the cap', () => {
+    const { compiled, fixture } = setup();
+    const plusButton = compiled.querySelector('button[aria-label="Más"]') as HTMLButtonElement;
+    for (let i = 0; i < 10; i++) {
+      plusButton.click();
+      fixture.detectChanges();
+    }
+    expect((fixture.componentInstance as unknown as { count(): number }).count()).toBe(10);
+    expect(plusButton.disabled).toBe(true);
+  });
+
+  it('retries with the ORIGINAL request params (snapshot), even if the form is edited afterward', () => {
+    const { compiled, fixture, generateQuestions } = setup({
+      genImpl: () => of({ created: [{ id: 'a' }], failed: [{ index: 1, error: 'x' }] }),
+    });
+    fillForm(fixture);
+    (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    // User edits the form AFTER generating but BEFORE retrying.
+    set(fixture, 'courseId', 'c2');
+
+    generateQuestions.mockClear();
+    generateQuestions.mockReturnValue(of({ created: [{ id: 'z' }], failed: [] }));
+    (compiled.querySelector('[data-testid="retry-failed"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(generateQuestions).toHaveBeenCalledWith(expect.objectContaining({ courseId: 'c1', count: 1 }));
+  });
+
+  it('shows only the error banner (no status card, empty state intact) when the whole request fails', () => {
+    const serverError = new HttpErrorResponse({ status: 500 });
+    const { compiled, fixture } = setup({
+      genImpl: () => throwError(() => serverError),
+    });
+    fillForm(fixture);
+    (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(compiled.textContent).toMatch(/no se pudieron generar/i);
+    expect(compiled.querySelector('[data-testid="batch-question"]')).toBeFalsy();
+    expect(compiled.querySelector('.text-2xl.font-extrabold.text-primary-900')).toBeFalsy();
+    expect(compiled.querySelector('[data-testid="batch-empty"]')).toBeTruthy();
   });
 });

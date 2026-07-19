@@ -63,8 +63,9 @@
           <span class="flex-1 text-center text-sm font-bold text-n900">{{ count() }}</span>
           <button
             type="button"
-            class="flex w-8 items-center justify-center bg-primary-50 py-2 text-primary-600"
+            class="flex w-8 items-center justify-center bg-primary-50 py-2 text-primary-600 disabled:cursor-not-allowed disabled:opacity-40"
             (click)="incCount()"
+            [disabled]="count() >= maxStepperCount"
             aria-label="Más"
           >
             <lucide-angular name="plus" class="h-3.5 w-3.5"></lucide-angular>

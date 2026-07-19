@@ -29,6 +29,20 @@ const DIFFICULTY_LABELS: Record<Difficulty, string> = {
 
 const ALTERNATIVE_LETTERS = ['a', 'b', 'c', 'd', 'e'];
 
+// Mirrors the backend cap in validate-generate-questions-input.ts (MAX_COUNT).
+// POST /ai/questions/generate rejects count > 10 with a 400.
+const MAX_STEPPER_COUNT = 10;
+
+interface GenerateSnapshot {
+  readonly courseId: string;
+  readonly topicId: string;
+  readonly difficulty: Difficulty;
+  readonly gradeLevel: string;
+  readonly withFigure: boolean;
+  readonly courseName?: string;
+  readonly topicName?: string;
+}
+
 /**
  * Taller layout (Task 9, mockup `ia-generar-v2.html` option A-taller): a
  * persistent form on the left (never resets — you tweak and re-ask without
@@ -48,6 +62,8 @@ export class AiGenerateComponent {
   private readonly aiService = inject(AiService);
   private readonly taxonomyService = inject(TaxonomyService);
   private readonly router = inject(Router);
+
+  protected readonly maxStepperCount = MAX_STEPPER_COUNT;
 
   protected readonly difficultyOptions: SelectOption<Difficulty>[] = Object.values(Difficulty).map((d) => ({
     value: d,
@@ -82,8 +98,19 @@ export class AiGenerateComponent {
   protected readonly failed = signal<readonly GenerateQuestionsFailedItem[]>([]);
   protected readonly batchQuestions = signal<readonly DraftQuestion[]>([]);
   protected readonly errorMessage = signal<string | null>(null);
+  // The last GenerateQuestionsResult ever received (null until the first
+  // successful response). Used as the guard for the status card so a total
+  // failure (thrown error, no response) never renders it — only a fully
+  // reset requested/errorMessage pair should, and requested() alone isn't a
+  // safe guard because it's set *before* the request fires.
+  protected readonly result = signal<GenerateQuestionsResult | null>(null);
+  // Immutable snapshot of the params used for the request that produced the
+  // current batch. Captured once in generate() and reused as-is by
+  // retryFailed() — never re-read from the live form signals — so editing
+  // the form after generating can't leak new params into a "Reintentar".
+  private readonly lastRequest = signal<GenerateSnapshot | null>(null);
 
-  protected readonly hasResult = computed(() => this.requested() > 0);
+  protected readonly hasResult = computed(() => this.result() !== null);
   protected readonly createdCount = computed(() => this.allCreated().length);
   protected readonly failedCount = computed(() => this.failed().length);
   protected readonly resultPct = computed(() => {
@@ -91,11 +118,11 @@ export class AiGenerateComponent {
     return total > 0 ? (this.createdCount() / total) * 100 : 0;
   });
   protected readonly batchDescription = computed(() => {
-    const course = this.courses().find((c) => c.id === this.courseId())?.name;
-    const topic = this.topics().find((t) => t.id === this.topicId())?.name;
-    const diff = this.difficulty() ? DIFFICULTY_LABELS[this.difficulty()!] : undefined;
-    const grade = this.gradeLevel() ? GRADE_LEVEL_LABELS[this.gradeLevel() as GradeLevel] : undefined;
-    return [course, topic, diff, grade].filter((v): v is string => !!v).join(' · ');
+    const snapshot = this.lastRequest();
+    if (!snapshot) return '';
+    const diff = DIFFICULTY_LABELS[snapshot.difficulty];
+    const grade = GRADE_LEVEL_LABELS[snapshot.gradeLevel as GradeLevel];
+    return [snapshot.courseName, snapshot.topicName, diff, grade].filter((v): v is string => !!v).join(' · ');
   });
 
   constructor() {
@@ -120,7 +147,7 @@ export class AiGenerateComponent {
     this.count.update((c) => Math.max(1, c - 1));
   }
   protected incCount(): void {
-    this.count.update((c) => Math.min(50, c + 1));
+    this.count.update((c) => Math.min(MAX_STEPPER_COUNT, c + 1));
   }
 
   protected letterAt(index: number): string {
@@ -143,30 +170,52 @@ export class AiGenerateComponent {
     this.allCreated.set([]);
     this.failed.set([]);
     this.batchQuestions.set([]);
+    this.result.set(null);
+    this.lastRequest.set(this.captureSnapshot());
     this.run(this.count());
   }
 
   protected retryFailed(): void {
     const failedCount = this.failedCount();
-    if (this.generating() || failedCount === 0) return;
+    const snapshot = this.lastRequest();
+    if (this.generating() || failedCount === 0 || !snapshot) return;
     this.run(failedCount);
   }
 
+  private captureSnapshot(): GenerateSnapshot {
+    return {
+      courseId: this.courseId(),
+      topicId: this.topicId(),
+      difficulty: this.difficulty()!,
+      gradeLevel: this.gradeLevel()!,
+      withFigure: this.withFigure(),
+      courseName: this.courses().find((c) => c.id === this.courseId())?.name,
+      topicName: this.topics().find((t) => t.id === this.topicId())?.name,
+    };
+  }
+
+  // `count` is the only per-call value: the initial request uses the form's
+  // count, a retry uses the number of failed items. Every other param comes
+  // from the immutable `lastRequest` snapshot — never from the live form
+  // signals — so retryFailed() always resends what was actually requested.
   private run(count: number): void {
+    const snapshot = this.lastRequest();
+    if (!snapshot) return;
     this.generating.set(true);
     this.errorMessage.set(null);
     this.aiService
       .generateQuestions({
-        courseId: this.courseId(),
-        topicId: this.topicId(),
-        difficulty: this.difficulty()!,
-        gradeLevel: this.gradeLevel()!,
+        courseId: snapshot.courseId,
+        topicId: snapshot.topicId,
+        difficulty: snapshot.difficulty,
+        gradeLevel: snapshot.gradeLevel,
         count,
-        withFigure: this.withFigure(),
+        withFigure: snapshot.withFigure,
       })
       .subscribe({
         next: (res: GenerateQuestionsResult) => {
           this.generating.set(false);
+          this.result.set(res);
           this.allCreated.update((prev) => [...prev, ...res.created]);
           this.failed.set(res.failed);
           if (res.created.length > 0) {
