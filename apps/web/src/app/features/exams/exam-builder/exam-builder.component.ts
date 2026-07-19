@@ -2,7 +2,7 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { forkJoin, map, switchMap } from 'rxjs';
 import { Difficulty } from '@exams-generator/shared';
-import { LucideAngularModule, Sparkles, TriangleAlert, Lock, Inbox } from 'lucide-angular';
+import { LucideAngularModule, Sparkles, TriangleAlert, Lock, Inbox, ChevronDown, ChevronRight } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { CardComponent } from '../../../ui/card/card.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
@@ -36,6 +36,17 @@ const DIFFICULTY_LABELS: Record<Difficulty, string> = {
 function parseCellKey(key: CellKey): { courseId: string; topicId: string; difficulty: Difficulty } {
   const [courseId, topicId, difficulty] = key.split(':') as [string, string, Difficulty];
   return { courseId, topicId, difficulty };
+}
+
+/** Toggle a course id's membership in the collapsed set (immutable copy — signal-friendly). */
+function toggleInSet(current: ReadonlySet<string>, id: string): ReadonlySet<string> {
+  const next = new Set(current);
+  if (next.has(id)) {
+    next.delete(id);
+  } else {
+    next.add(id);
+  }
+  return next;
 }
 
 /** One course's contiguous run of `ContentRow`s — powers the course subheading grouping (design doc §5.1's "árbol"). */
@@ -88,7 +99,10 @@ function groupRowsByCourse(rows: readonly ContentRow[]): readonly RowGroup[] {
     TableComponent,
     TagComponent,
   ],
-  providers: [ExamBuilderStore, LucideAngularModule.pick({ Sparkles, TriangleAlert, Lock, Inbox }).providers ?? []],
+  providers: [
+    ExamBuilderStore,
+    LucideAngularModule.pick({ Sparkles, TriangleAlert, Lock, Inbox, ChevronDown, ChevronRight }).providers ?? [],
+  ],
   templateUrl: './exam-builder.component.html',
 })
 export class ExamBuilderComponent {
@@ -122,6 +136,34 @@ export class ExamBuilderComponent {
   /** Rows grouped by course, for the "read like the tree" course subheading (design doc §5.1). */
   protected readonly groupedRows = computed<readonly RowGroup[]>(() => groupRowsByCourse(this.store.rows()));
 
+  /**
+   * Courses the user has manually collapsed. Default-empty means every course
+   * starts EXPANDED (the grid is a fill-in matrix — hiding rows by default would
+   * bury the work). Collapse is opt-in, to fold away courses the teacher isn't
+   * touching. Mirrors the bank tree's `expand/collapse` affordance (commit 50dcff5).
+   */
+  private readonly collapsedCourses = signal<ReadonlySet<string>>(new Set());
+
+  protected toggleCourse(courseId: string): void {
+    this.collapsedCourses.update((current) => toggleInSet(current, courseId));
+  }
+
+  protected isCourseExpanded(courseId: string): boolean {
+    return !this.collapsedCourses().has(courseId);
+  }
+
+  protected expandAll(): void {
+    this.collapsedCourses.set(new Set());
+  }
+
+  protected collapseAll(): void {
+    this.collapsedCourses.set(new Set(this.groupedRows().map((group) => group.courseId)));
+  }
+
+  protected chevronFor(expanded: boolean): string {
+    return expanded ? 'chevron-down' : 'chevron-right';
+  }
+
   protected onGradeLevelChange(gradeLevel: GradeLevel | null): void {
     this.selectedGradeLevel.set(gradeLevel);
     if (!gradeLevel) {
@@ -136,7 +178,7 @@ export class ExamBuilderComponent {
     this.emptyBank.set(false);
     this.store.setGradeLevel(gradeLevel);
 
-    this.taxonomyService.getCourses().subscribe({
+    this.taxonomyService.getCourses(gradeLevel).subscribe({
       next: (courses) => {
         this.courses.set(courses);
         if (courses.length === 0) {
@@ -157,7 +199,7 @@ export class ExamBuilderComponent {
     forkJoin(
       courses.map((course) =>
         this.taxonomyService
-          .getTopics(course.id)
+          .getTopics(course.id, gradeLevel)
           .pipe(map((topics) => topics.map((topic) => ({ course, topic })))),
       ),
     ).subscribe({

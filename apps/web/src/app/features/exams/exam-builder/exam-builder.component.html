@@ -31,6 +31,12 @@
         </div>
       }
 
+      <!-- Expand/collapse controls — fold away courses the teacher isn't filling (design doc §5.1 "árbol") -->
+      <div data-testid="tree-controls" class="flex items-center gap-2">
+        <ui-button data-testid="expand-all" variant="ghost" (clicked)="expandAll()">Expandir todo</ui-button>
+        <ui-button data-testid="collapse-all" variant="ghost" (clicked)="collapseAll()">Colapsar todo</ui-button>
+      </div>
+
       <!-- Desktop: full grid table (curso · tema rows x dificultad columns), grouped by course, sticky header -->
       <div data-testid="content-table-desktop" class="hidden overflow-hidden rounded-card border border-n200 bg-white md:block">
         <div class="max-h-[70vh] overflow-y-auto">
@@ -41,10 +47,21 @@
             }
             @for (group of groupedRows(); track group.courseId) {
               <ng-container body>
-                <tr data-testid="course-group-header" class="bg-n100">
-                  <td colspan="4" class="px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-n700">{{ group.courseName }}</td>
+                <tr
+                  data-testid="course-group-header"
+                  class="cursor-pointer bg-n100 hover:bg-n200"
+                  (click)="toggleCourse(group.courseId)"
+                >
+                  <td colspan="4" class="px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-n700">
+                    <span class="flex items-center gap-2">
+                      <lucide-icon [name]="chevronFor(isCourseExpanded(group.courseId))" [size]="16" class="shrink-0 text-n600"></lucide-icon>
+                      {{ group.courseName }}
+                      <span class="text-n500">· {{ group.rows.length }}</span>
+                    </span>
+                  </td>
                 </tr>
-                @for (row of group.rows; track row.id) {
+                @if (isCourseExpanded(group.courseId)) {
+                  @for (row of group.rows; track row.id) {
                   <tr data-testid="builder-row" class="border-b border-n100 odd:bg-white even:bg-n50 hover:bg-primary-50">
                     <td class="px-3 py-2 text-n800">{{ row.topicName }}</td>
                     @for (difficulty of difficulties; track difficulty) {
@@ -87,6 +104,7 @@
                       </td>
                     }
                   </tr>
+                  }
                 }
               </ng-container>
             }
@@ -111,7 +129,17 @@
       <!-- Mobile: stacked per-topic cards grouped by course, totals summary + preview panel below the cards -->
       <div data-testid="content-cards-mobile" class="md:hidden flex flex-col gap-4">
         @for (group of groupedRows(); track group.courseId) {
-          <p class="px-1 text-xs font-semibold uppercase tracking-wide text-n600">{{ group.courseName }}</p>
+          <button
+            type="button"
+            data-testid="course-group-header"
+            class="flex w-full items-center gap-2 px-1 py-1 text-left text-xs font-semibold uppercase tracking-wide text-n600 hover:text-n800"
+            (click)="toggleCourse(group.courseId)"
+          >
+            <lucide-icon [name]="chevronFor(isCourseExpanded(group.courseId))" [size]="14" class="shrink-0"></lucide-icon>
+            {{ group.courseName }}
+            <span class="text-n400">· {{ group.rows.length }}</span>
+          </button>
+          @if (isCourseExpanded(group.courseId)) {
           @for (row of group.rows; track row.id) {
             <ui-card data-testid="builder-card">
               <p class="font-medium text-n900">{{ row.topicName }}</p>
@@ -156,6 +184,7 @@
                 </div>
               }
             </ui-card>
+          }
           }
         }
 

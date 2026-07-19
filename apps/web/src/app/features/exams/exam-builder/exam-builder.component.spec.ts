@@ -440,10 +440,68 @@ describe('ExamBuilderComponent', () => {
 
       selectGradeLevel(compiled, fixture, 'secundaria_1');
 
-      const headers = compiled.querySelectorAll('[data-testid="course-group-header"]');
+      const desktop = compiled.querySelector('[data-testid="content-table-desktop"]')!;
+      const headers = desktop.querySelectorAll('[data-testid="course-group-header"]');
       expect(headers.length).toBe(2);
       expect(headers[0].textContent).toContain('Matemática');
       expect(headers[1].textContent).toContain('Comunicación');
+    });
+
+    it('collapses a course when its header is clicked, hiding that course rows only', () => {
+      const courses: Course[] = [
+        { id: 'c1', name: 'Matemática' },
+        { id: 'c2', name: 'Comunicación' },
+      ];
+      const topicsByCourse: Record<string, Topic[]> = {
+        c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1' }],
+        c2: [{ id: 't2', name: 'Lectura', courseId: 'c2' }],
+      };
+      const stock: StockBatchResult = {
+        results: [
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 },
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, available: 18 },
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Hard, available: 18 },
+          { courseId: 'c2', topicId: 't2', difficulty: Difficulty.Easy, available: 18 },
+          { courseId: 'c2', topicId: 't2', difficulty: Difficulty.Medium, available: 18 },
+          { courseId: 'c2', topicId: 't2', difficulty: Difficulty.Hard, available: 18 },
+        ],
+      };
+      const { compiled, fixture } = setup({
+        getCourses: () => of(courses),
+        getTopics: (courseId: string) => of(topicsByCourse[courseId]),
+        stockBatch: () => of(stock),
+      });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      const desktop = compiled.querySelector('[data-testid="content-table-desktop"]')!;
+      expect(desktop.querySelectorAll('[data-testid="builder-row"]').length).toBe(2);
+
+      const firstHeader = desktop.querySelector('[data-testid="course-group-header"]') as HTMLElement;
+      firstHeader.click();
+      fixture.detectChanges();
+
+      const rows = desktop.querySelectorAll('[data-testid="builder-row"]');
+      expect(rows.length).toBe(1);
+      expect(rows[0].textContent).toContain('Lectura');
+    });
+
+    it('collapses every course with "Colapsar todo" and restores them with "Expandir todo"', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      const desktop = compiled.querySelector('[data-testid="content-table-desktop"]')!;
+      const initialRows = desktop.querySelectorAll('[data-testid="builder-row"]').length;
+      expect(initialRows).toBeGreaterThan(0);
+
+      (compiled.querySelector('[data-testid="collapse-all"] button') as HTMLElement).click();
+      fixture.detectChanges();
+      expect(desktop.querySelectorAll('[data-testid="builder-row"]').length).toBe(0);
+
+      (compiled.querySelector('[data-testid="expand-all"] button') as HTMLElement).click();
+      fixture.detectChanges();
+      expect(desktop.querySelectorAll('[data-testid="builder-row"]').length).toBe(initialRows);
     });
   });
 
