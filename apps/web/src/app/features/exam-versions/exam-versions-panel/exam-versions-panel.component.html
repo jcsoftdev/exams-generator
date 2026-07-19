@@ -1,10 +1,41 @@
 <section class="exam-versions-panel p-6" data-testid="exam-versions-panel">
-  <header class="mb-4 flex items-center justify-between">
-    <h1 class="text-xl font-semibold text-n900">Versiones del examen</h1>
+  @if (examDetail(); as exam) {
+    <header class="mb-4 flex flex-col gap-1" data-testid="exam-header">
+      <div class="flex items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <h1 class="text-xl font-semibold text-n900" data-testid="exam-title">{{ exam.title }}</h1>
+          <ui-tag data-testid="exam-status-tag" [variant]="statusTag(exam.status)">{{
+            statusLabel(exam.status)
+          }}</ui-tag>
+        </div>
+        <div data-testid="use-as-template">
+          <ui-button variant="ghost" (clicked)="useAsTemplate()">
+            <lucide-icon name="copy-plus" class="h-4 w-4"></lucide-icon>
+            Usar de plantilla
+          </ui-button>
+        </div>
+      </div>
+      <p class="text-sm text-n600" data-testid="exam-grade">{{ gradeLabel(exam.gradeLevel) }}</p>
+    </header>
+  }
+
+  @if (actionError()) {
+    <p class="mb-4 rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text" data-testid="action-error">
+      {{ actionError() }}
+    </p>
+  }
+
+  <div class="mb-4 flex items-center justify-between">
+    <div data-testid="generate-more-versions">
+      <ui-button variant="ghost" (clicked)="generateMore()">
+        <lucide-icon name="plus" class="h-4 w-4"></lucide-icon>
+        Generar más formas
+      </ui-button>
+    </div>
     <span data-testid="download-zip" [title]="'Disponible próximamente'">
       <ui-button variant="ghost" [disabled]="true">Descargar todo (ZIP)</ui-button>
     </span>
-  </header>
+  </div>
 
   @if (loading()) {
     <div data-testid="loading-indicator" class="py-6 text-sm text-n600">Cargando versiones…</div>
@@ -48,5 +79,34 @@
         </li>
       }
     </ul>
+  }
+
+  @if (examDetail(); as exam) {
+    <div class="mt-6 rounded-card border border-n200 bg-white" data-testid="exam-content-section">
+      <button
+        type="button"
+        class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-n900"
+        data-testid="toggle-content"
+        [attr.aria-expanded]="contentOpen()"
+        (click)="toggleContent()"
+      >
+        Ver contenido
+        <lucide-icon
+          name="chevron-down"
+          class="h-4 w-4 transition-transform"
+          [class.rotate-180]="contentOpen()"
+        ></lucide-icon>
+      </button>
+      @if (contentOpen()) {
+        <ul class="flex flex-col gap-2 border-t border-n200 px-4 py-3" data-testid="exam-content-list">
+          @for (question of exam.questions; track question.id) {
+            <li class="text-sm text-n700" data-testid="exam-content-item">
+              <span class="font-medium text-n900">{{ question.position + 1 }}.</span>
+              {{ questionSummary(question) }}
+            </li>
+          }
+        </ul>
+      }
+    </div>
   }
 </section>
