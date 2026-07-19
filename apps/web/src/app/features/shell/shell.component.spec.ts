@@ -26,6 +26,12 @@ import {
   ChevronDown,
   Plus,
   Minus,
+  Bell,
+  LayoutDashboard,
+  BookOpen,
+  FileText,
+  Inbox,
+  Settings,
 } from 'lucide-angular';
 import { Role } from '@exams-generator/shared';
 import { ShellComponent } from './shell.component';
@@ -64,6 +70,12 @@ function setup(role: Role | null, draftCount: number | null = 7) {
           ChevronDown,
           Plus,
           Minus,
+          Bell,
+          LayoutDashboard,
+          BookOpen,
+          FileText,
+          Inbox,
+          Settings,
         }),
       ),
       { provide: AuthService, useValue: { currentRole: signal(role), logout } },
@@ -102,6 +114,14 @@ describe('ShellComponent', () => {
     expect(compiled.querySelector('ui-sidebar')).toBeTruthy();
     expect(compiled.querySelector('ui-topbar')).toBeTruthy();
     expect(compiled.querySelector('router-outlet')).toBeTruthy();
+  });
+
+  it('renders a decorative notifications button matching the Figma reference (no wired output)', () => {
+    const { compiled } = setup(Role.Teacher);
+
+    const button = compiled.querySelector<HTMLButtonElement>('[data-testid="notifications-button"]');
+    expect(button).toBeTruthy();
+    expect(button?.getAttribute('aria-label')).toBe('Notificaciones');
   });
 
   it('renders the three nav groups: Principal, Inteligencia and Colegio (for school_admin)', () => {

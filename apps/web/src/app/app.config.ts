@@ -5,7 +5,8 @@ import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 import {
   LucideAngularModule,
   Menu, X, Sparkles, Lock, Download, Ellipsis, Check, TriangleAlert, Search, School,
-  LogOut, User, Users, Trash2, Pencil, Archive, ChevronLeft, ChevronRight, ChevronDown, Plus, Minus,
+  LogOut, User, Users, Trash2, Pencil, Archive, ChevronLeft, ChevronRight, ChevronDown, Plus, Minus, Bell,
+  LayoutDashboard, BookOpen, FileText, Inbox, Settings,
 } from 'lucide-angular';
 import { routes } from './app.routes';
 import { authInterceptor } from './core/auth/auth.interceptor';
@@ -20,7 +21,8 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(
       LucideAngularModule.pick({
         Menu, X, Sparkles, Lock, Download, Ellipsis, Check, TriangleAlert, Search, School,
-        LogOut, User, Users, Trash2, Pencil, Archive, ChevronLeft, ChevronRight, ChevronDown, Plus, Minus,
+        LogOut, User, Users, Trash2, Pencil, Archive, ChevronLeft, ChevronRight, ChevronDown, Plus, Minus, Bell,
+        LayoutDashboard, BookOpen, FileText, Inbox, Settings,
       }),
     ),
   ],

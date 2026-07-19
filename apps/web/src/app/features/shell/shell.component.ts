@@ -12,15 +12,15 @@ import { DraftCountService } from '../ai/draft-count.service';
 const PRINCIPAL_GROUP: NavGroup = {
   title: 'Principal',
   items: [
-    { label: 'Dashboard', route: '/app/dashboard' },
-    { label: 'Banco de preguntas', route: '/app/bank' },
-    { label: 'Mis exámenes', route: '/app/exams' },
+    { label: 'Dashboard', route: '/app/dashboard', icon: 'layout-dashboard' },
+    { label: 'Banco de preguntas', route: '/app/bank', icon: 'book-open' },
+    { label: 'Mis exámenes', route: '/app/exams', icon: 'file-text' },
   ],
 };
 
 const COLEGIO_GROUP: NavGroup = {
   title: 'Colegio',
-  items: [{ label: 'Configuración', route: '/app/settings' }],
+  items: [{ label: 'Configuración', route: '/app/settings', icon: 'settings' }],
 };
 
 /**
@@ -59,10 +59,11 @@ export class ShellComponent {
     const inteligenciaGroup: NavGroup = {
       title: 'Inteligencia',
       items: [
-        { label: 'Generar con IA', route: '/app/ai/generate' },
+        { label: 'Generar con IA', route: '/app/ai/generate', icon: 'sparkles' },
         {
           label: 'Cola de revisión',
           route: '/app/ai/review',
+          icon: 'inbox',
           ...(pendingDrafts !== null ? { badge: pendingDrafts } : {}),
         },
       ],

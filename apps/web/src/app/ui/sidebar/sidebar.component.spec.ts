@@ -37,6 +37,20 @@ class HostComponent {
 }
 
 describe('SidebarComponent', () => {
+  it('renders the product logo/wordmark above the nav groups (Figma reference)', async () => {
+    TestBed.configureTestingModule({
+      imports: [HostComponent],
+      providers: [provideRouter([])],
+    });
+    const fixture = TestBed.createComponent(HostComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    const logo = compiled.querySelector('[data-testid="sidebar-logo"]');
+    expect(logo).toBeTruthy();
+    expect(logo?.textContent).toContain('Exams Generator');
+  });
+
   it('renders the 3 nav groups (Principal/Inteligencia/Colegio)', async () => {
     TestBed.configureTestingModule({
       imports: [HostComponent],
