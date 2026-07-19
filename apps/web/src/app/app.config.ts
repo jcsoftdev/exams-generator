@@ -1,6 +1,7 @@
 import { ApplicationConfig, importProvidersFrom, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 import {
   LucideAngularModule,
   Menu, X, Sparkles, Lock, Download, Ellipsis, Check, TriangleAlert, Search, School,
@@ -15,6 +16,7 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     provideHttpClient(withInterceptors([authInterceptor, authErrorInterceptor])),
+    provideCharts(withDefaultRegisterables()),
     importProvidersFrom(
       LucideAngularModule.pick({
         Menu, X, Sparkles, Lock, Download, Ellipsis, Check, TriangleAlert, Search, School,
