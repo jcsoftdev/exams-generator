@@ -15,7 +15,8 @@ const EXISTING_QUESTION: QuestionListItem = {
   topicId: "topic-1",
   difficulty: Difficulty.Easy,
   gradeLevel: "primaria_1",
-  correctAnswer: "1",
+  // 0-based INDEX (bank storage convention) — letter "a".
+  correctAnswer: "0",
   type: "structured",
   status: "draft",
   aiGenerated: true,
@@ -28,7 +29,8 @@ const EXISTING_QUESTION: QuestionListItem = {
 const REVISED_QUESTION: GeneratedQuestion = {
   bodyTypst: "¿Cuánto es $1+1$? (más difícil)",
   alternatives: ["1", "2", "3", "4", "5"],
-  correctAnswer: "1",
+  // LETTER (QuestionGeneratorPort contract) — "b" is index 1.
+  correctAnswer: "b",
 };
 
 function buildDeps() {
@@ -61,22 +63,33 @@ function buildDeps() {
 
 describe("ReviseQuestionService.revise", () => {
   it("returns the generator's validated, UNSAVED output and never writes to the repository", async () => {
-    const { service, bankRepository, generator } = buildDeps();
+    const { service, bankRepository } = buildDeps();
 
     const result = await service.revise(TEACHER_USER, "q1", "más difícil");
 
-    expect(result).toEqual(REVISED_QUESTION);
+    expect(result).toEqual({ ...REVISED_QUESTION, correctAnswer: "1" });
+    expect(bankRepository.updateStructuredQuestionAndTaxonomy).not.toHaveBeenCalled();
+    expect(bankRepository.createStructuredQuestion).not.toHaveBeenCalled();
+  });
+
+  it("converts the DB question's INDEX correctAnswer to a LETTER before calling the generator, and the generator's LETTER back to an INDEX in the response (Task 4 review fix)", async () => {
+    const { service, generator } = buildDeps();
+
+    const result = await service.revise(TEACHER_USER, "q1", "más difícil");
+
+    // Generator port contract expects a LETTER ("a".."e"), matching GeneratedQuestion.
     expect(generator.reviseQuestion).toHaveBeenCalledWith({
       current: {
         bodyTypst: EXISTING_QUESTION.bodyTypst,
         alternatives: EXISTING_QUESTION.alternatives,
-        correctAnswer: EXISTING_QUESTION.correctAnswer,
+        correctAnswer: "a", // index "0" -> letter "a"
       },
       instruction: "más difícil",
       difficulty: EXISTING_QUESTION.difficulty,
     });
-    expect(bankRepository.updateStructuredQuestionAndTaxonomy).not.toHaveBeenCalled();
-    expect(bankRepository.createStructuredQuestion).not.toHaveBeenCalled();
+
+    // Bank storage/PATCH convention expects a 0-based INDEX — letter "b" -> "1".
+    expect(result.correctAnswer).toBe("1");
   });
 
   it("throws BadRequestException when the instruction is blank", async () => {
@@ -104,7 +117,7 @@ describe("ReviseQuestionService.revise", () => {
       bodyTypst: "¿Cuánto es $1+1$?",
       // Only 1 alternative — fails validateStructuredContent's MIN_ALTERNATIVES=2 rule.
       alternatives: ["1"] as unknown as GeneratedQuestion["alternatives"],
-      correctAnswer: "0",
+      correctAnswer: "a",
     });
 
     await expect(service.revise(TEACHER_USER, "q1", "más difícil")).rejects.toBeInstanceOf(

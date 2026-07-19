@@ -13,6 +13,8 @@ import { validateStructuredContent } from "../bank/domain/validate-structured-co
 import { PdfCompilerPort, TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
 import { QUESTION_GENERATOR_PORT } from "./ai.constants";
+import { correctAnswerIndexToLetter } from "./domain/correct-answer-index-to-letter";
+import { correctAnswerLetterToIndex } from "./domain/correct-answer-letter-to-index";
 
 /**
  * The `POST /ai/questions/:id/revise` use case (question editing, Task 4):
@@ -23,6 +25,13 @@ import { QUESTION_GENERATOR_PORT } from "./ai.constants";
  * flow in `BankService`) — this service never writes to the DB, mirroring
  * the design doc §7 rule that AI output is never saved unvalidated (here:
  * never saved at all, validated or not).
+ *
+ * `correctAnswer` is a LETTER ("a".."e") on the `QuestionGeneratorPort`
+ * contract but a 0-based INDEX in bank storage/the PATCH edit contract —
+ * this service converts both directions (`correctAnswerIndexToLetter` /
+ * `correctAnswerLetterToIndex`, mirroring `GenerateQuestionsService`) so
+ * neither the generator nor `validateStructuredContent` ever see the wrong
+ * representation.
  *
  * Validation is two-layered, same as `GenerateQuestionsService` /
  * `BankService.editQuestion`:
@@ -56,25 +65,34 @@ export class ReviseQuestionService {
       current: {
         bodyTypst: question.bodyTypst ?? "",
         alternatives: (question.alternatives as string[]) ?? [],
-        correctAnswer: question.correctAnswer,
+        // Bank storage holds a 0-based INDEX, but the port contract expects
+        // a LETTER (matches `GeneratedQuestion.correctAnswer`).
+        correctAnswer: correctAnswerIndexToLetter(question.correctAnswer),
       },
       instruction,
       difficulty: question.difficulty,
     });
 
+    // The generator returns a LETTER; convert back to the 0-based INDEX
+    // bank storage/PATCH convention expects BEFORE validating or returning.
+    const revisedWithIndex: GeneratedQuestion = {
+      ...revised,
+      correctAnswer: correctAnswerLetterToIndex(revised.correctAnswer),
+    };
+
     const errors = validateStructuredContent({
-      bodyTypst: revised.bodyTypst,
-      alternatives: revised.alternatives,
-      correctAnswer: revised.correctAnswer,
+      bodyTypst: revisedWithIndex.bodyTypst,
+      alternatives: revisedWithIndex.alternatives,
+      correctAnswer: revisedWithIndex.correctAnswer,
     });
     if (errors.length > 0) {
       throw new UnprocessableEntityException({ message: "AI produced invalid content", errors });
     }
 
     // Compile-guard, same as manual structured edits — reject non-compiling markup.
-    await this.compileOrThrow(id, revised);
+    await this.compileOrThrow(id, revisedWithIndex);
 
-    return revised;
+    return revisedWithIndex;
   }
 
   private async compileOrThrow(id: string, revised: GeneratedQuestion): Promise<void> {

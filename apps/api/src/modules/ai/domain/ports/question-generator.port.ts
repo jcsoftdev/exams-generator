@@ -46,6 +46,7 @@ export interface ReviseQuestionInput {
   readonly current: {
     readonly bodyTypst: string;
     readonly alternatives: readonly string[];
+    /** Letter of the correct alternative: "a" | "b" | "c" | "d" | "e" — same convention as `GeneratedQuestion.correctAnswer`. */
     readonly correctAnswer: string;
   };
   /** Free-text instruction from the human editor, e.g. "hazla más difícil". */
