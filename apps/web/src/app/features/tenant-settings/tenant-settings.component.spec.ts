@@ -3,19 +3,20 @@ import { describe, it, expect, vi } from 'vitest';
 import { Subject, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
-import { LucideAngularModule, Ellipsis, Plus } from 'lucide-angular';
+import { LucideAngularModule, Ellipsis, Plus, School } from 'lucide-angular';
 import { TenantSettingsComponent } from './tenant-settings.component';
 import { TenantSettingsService } from './tenant-settings.service';
 import { TenantSettings } from './tenant-settings.models';
 import { UsersService } from '../users/users.service';
 import { TenantUser } from '../users/users.models';
 
-const SETTINGS: TenantSettings = { id: 'tenant-1', name: 'Colegio X', logoAssetId: null };
+const SETTINGS: TenantSettings = { id: 'tenant-1', name: 'Colegio X', city: 'Arequipa', logoAssetId: null };
 
 function user(o: Partial<TenantUser> & { id: string }): TenantUser {
   return {
     id: o.id,
     email: o.email ?? 'p@col.pe',
+    name: o.name ?? 'Profesor Prueba',
     role: o.role ?? 'teacher',
     active: o.active ?? true,
     createdAt: '2026-07-18T00:00:00Z',
@@ -25,6 +26,7 @@ function user(o: Partial<TenantUser> & { id: string }): TenantUser {
 function setup(overrides: {
   getSettingsImpl?: (...args: unknown[]) => unknown;
   updateSettingsImpl?: (...args: unknown[]) => unknown;
+  fetchLogoImpl?: (...args: unknown[]) => unknown;
   usersImpl?: () => unknown;
   createImpl?: () => unknown;
   setActiveImpl?: () => unknown;
@@ -32,10 +34,12 @@ function setup(overrides: {
 } = {}) {
   const getSettings = vi.fn(overrides.getSettingsImpl ?? (() => of(SETTINGS)));
   const updateSettings = vi.fn(overrides.updateSettingsImpl ?? ((payload: TenantSettings) => of(payload)));
+  const fetchLogo = vi.fn(overrides.fetchLogoImpl ?? (() => of(new Blob(['fake'], { type: 'image/png' }))));
   const list = vi.fn(overrides.usersImpl ?? (() => of([user({ id: 'u1' }), user({ id: 'u2', active: false })])));
   const create = vi.fn(
     overrides.createImpl ??
-      (() => of({ id: 'u3', email: 'n@col.pe', role: 'teacher', temporaryPassword: 'temp12345678' })),
+      (() =>
+        of({ id: 'u3', email: 'n@col.pe', name: 'Nuevo Profesor', role: 'teacher', temporaryPassword: 'temp12345678' })),
   );
   const setActive = vi.fn(overrides.setActiveImpl ?? ((id: string, active: boolean) => of({ id, active })));
   const resetPassword = vi.fn(overrides.resetImpl ?? ((id: string) => of({ id, temporaryPassword: 'reset1234567' })));
@@ -47,8 +51,8 @@ function setup(overrides: {
   TestBed.configureTestingModule({
     imports: [TenantSettingsComponent],
     providers: [
-      importProvidersFrom(LucideAngularModule.pick({ Ellipsis, Plus })),
-      { provide: TenantSettingsService, useValue: { getSettings, updateSettings } },
+      importProvidersFrom(LucideAngularModule.pick({ Ellipsis, Plus, School })),
+      { provide: TenantSettingsService, useValue: { getSettings, updateSettings, fetchLogo } },
       { provide: UsersService, useValue: { list, create, setActive, resetPassword } },
     ],
   });
@@ -57,7 +61,7 @@ function setup(overrides: {
   fixture.detectChanges();
   const compiled = fixture.nativeElement as HTMLElement;
 
-  return { fixture, compiled, getSettings, updateSettings, list, create, setActive, resetPassword };
+  return { fixture, compiled, getSettings, updateSettings, fetchLogo, list, create, setActive, resetPassword };
 }
 
 function selectLogoFile(compiled: HTMLElement, fixture: { detectChanges: () => void }, file: File): void {
@@ -69,12 +73,36 @@ function selectLogoFile(compiled: HTMLElement, fixture: { detectChanges: () => v
 
 describe('TenantSettingsComponent', () => {
   describe('with-data', () => {
-    it('loads the current tenant name on init', () => {
+    it('loads the current tenant name and city on init', () => {
       const { compiled, getSettings } = setup();
 
       expect(getSettings).toHaveBeenCalled();
       const nameInput = compiled.querySelector<HTMLInputElement>('input[name="name"]')!;
       expect(nameInput.value).toBe('Colegio X');
+      const cityInput = compiled.querySelector<HTMLInputElement>('input[name="city"]')!;
+      expect(cityInput.value).toBe('Arequipa');
+    });
+  });
+
+  describe('logo placeholder / saved-logo preview', () => {
+    it('shows a placeholder (school icon) when the tenant has no logo yet', () => {
+      const { compiled, fetchLogo } = setup();
+
+      expect(fetchLogo).not.toHaveBeenCalled();
+      expect(compiled.querySelector('[data-testid="logo-placeholder"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="logo-preview"]')).toBeFalsy();
+    });
+
+    it('fetches and shows the 64px preview of the logo already saved on the tenant', () => {
+      const { compiled, fetchLogo } = setup({
+        getSettingsImpl: () => of({ ...SETTINGS, logoAssetId: 'asset-9' }),
+      });
+
+      expect(fetchLogo).toHaveBeenCalledWith('asset-9');
+      const preview = compiled.querySelector<HTMLImageElement>('[data-testid="logo-preview"]');
+      expect(preview).toBeTruthy();
+      expect(preview?.getAttribute('src')).toMatch(/^blob:/);
+      expect(compiled.querySelector('[data-testid="logo-placeholder"]')).toBeFalsy();
     });
   });
 
@@ -163,7 +191,56 @@ describe('TenantSettingsComponent — tabs', () => {
     expect(compiled.querySelectorAll('[data-testid="teacher-row"]').length).toBe(2);
   });
 
-  it('adds a teacher and shows the temporary password once', () => {
+  it('shows the teacher name (falling back to email only when name is missing) and the email alongside it', () => {
+    const { compiled, fixture } = setup({
+      usersImpl: () => of([user({ id: 'u1', name: 'María Rojas', email: 'mrojas@sanmartin.edu.pe' })]),
+    });
+    (compiled.querySelector('[data-testid="tab-teachers"]') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    const name = compiled.querySelector('[data-testid="teacher-name"]')!;
+    expect(name.textContent).toContain('María Rojas');
+    expect(name.textContent).toContain('mrojas@sanmartin.edu.pe');
+  });
+
+  it('renders the role chip with the primary-100/tint-texto token pair (not the ai/easy tag variants)', () => {
+    const { compiled, fixture } = setup({
+      usersImpl: () => of([user({ id: 'u1', role: 'school_admin' })]),
+    });
+    (compiled.querySelector('[data-testid="tab-teachers"]') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    const chip = compiled.querySelector('[data-testid="teacher-role-chip"]')!;
+    expect(chip.className).toContain('bg-primary-100');
+    expect(chip.className).toContain('text-tint-texto');
+    expect(chip.textContent).toContain('Administra');
+  });
+
+  it('pluralizes the active-count label: singular for 1, plural otherwise', () => {
+    const { compiled, fixture } = setup({ usersImpl: () => of([user({ id: 'u1', active: true })]) });
+    (compiled.querySelector('[data-testid="tab-teachers"]') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    expect(compiled.querySelector('[data-testid="active-count"]')?.textContent?.trim()).toBe('1 profesor activo');
+  });
+
+  it('adds a teacher (name required) and shows the temporary password once', () => {
+    const { compiled, fixture, create } = setup();
+    (compiled.querySelector('[data-testid="tab-teachers"]') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="add-teacher"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    const instance = fixture.componentInstance as unknown as {
+      newName: { set(v: string): void };
+      newEmail: { set(v: string): void };
+    };
+    instance.newName.set('Nuevo Profesor');
+    instance.newEmail.set('n@col.pe');
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="add-teacher-submit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    expect(create).toHaveBeenCalledWith({ email: 'n@col.pe', name: 'Nuevo Profesor', role: 'teacher' });
+    expect(compiled.querySelector('[data-testid="temp-password"]')?.textContent).toContain('temp12345678');
+  });
+
+  it('does not submit when the name field is blank', () => {
     const { compiled, fixture, create } = setup();
     (compiled.querySelector('[data-testid="tab-teachers"]') as HTMLButtonElement).click();
     fixture.detectChanges();
@@ -173,8 +250,7 @@ describe('TenantSettingsComponent — tabs', () => {
     fixture.detectChanges();
     (compiled.querySelector('[data-testid="add-teacher-submit"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
-    expect(create).toHaveBeenCalledWith({ email: 'n@col.pe', role: 'teacher' });
-    expect(compiled.querySelector('[data-testid="temp-password"]')?.textContent).toContain('temp12345678');
+    expect(create).not.toHaveBeenCalled();
   });
 
   it('deactivates a teacher from the row menu', () => {

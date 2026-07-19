@@ -10,10 +10,12 @@
 export interface TenantSettings {
   readonly id: string;
   readonly name: string;
+  readonly city: string | null;
   readonly logoAssetId: string | null;
 }
 
 export interface UpdateTenantSettingsPayload {
   readonly name: string;
+  readonly city: string;
   readonly logo?: File;
 }

@@ -21,12 +21,12 @@ describe('UsersService', () => {
     req.flush([]);
   });
 
-  it('create POSTs /users with email and role', () => {
-    service.create({ email: 'a@b.pe', role: 'teacher' }).subscribe();
+  it('create POSTs /users with email, name and role', () => {
+    service.create({ email: 'a@b.pe', name: 'Ana Beltrán', role: 'teacher' }).subscribe();
     const req = httpMock.expectOne('/api/users');
     expect(req.request.method).toBe('POST');
-    expect(req.request.body).toEqual({ email: 'a@b.pe', role: 'teacher' });
-    req.flush({ id: 'u1', email: 'a@b.pe', role: 'teacher', temporaryPassword: 'abc123def456' });
+    expect(req.request.body).toEqual({ email: 'a@b.pe', name: 'Ana Beltrán', role: 'teacher' });
+    req.flush({ id: 'u1', email: 'a@b.pe', name: 'Ana Beltrán', role: 'teacher', temporaryPassword: 'abc123def456' });
   });
 
   it('setActive PATCHes /users/:id', () => {

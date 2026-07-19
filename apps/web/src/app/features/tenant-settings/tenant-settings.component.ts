@@ -41,7 +41,9 @@ export class TenantSettingsComponent {
   protected readonly loading = signal(false);
   protected readonly loadError = signal<string | null>(null);
   protected readonly name = signal('');
+  protected readonly city = signal('');
   protected readonly selectedLogo = signal<File | null>(null);
+  /** Preview from a just-picked file (highest priority) or from the logo already saved on the tenant. */
   protected readonly logoPreviewUrl = signal<string | null>(null);
   protected readonly saving = signal(false);
   protected readonly saveError = signal<string | null>(null);
@@ -55,6 +57,7 @@ export class TenantSettingsComponent {
   protected readonly teachersLoaded = signal(false);
   protected readonly openMenuId = signal<string | null>(null);
   protected readonly addOpen = signal(false);
+  protected readonly newName = signal('');
   protected readonly newEmail = signal('');
   protected readonly newRole = signal<UserRole>('teacher');
   protected readonly tempPassword = signal<string | null>(null);
@@ -65,6 +68,10 @@ export class TenantSettingsComponent {
     { value: 'school_admin' as UserRole, label: 'Administrador' },
   ];
   protected readonly activeCount = computed(() => this.teachers().filter((t) => t.active).length);
+  protected readonly activeCountLabel = computed(() => {
+    const count = this.activeCount();
+    return count === 1 ? '1 profesor activo' : `${count} profesores activos`;
+  });
 
   constructor() {
     this.load();
@@ -85,11 +92,31 @@ export class TenantSettingsComponent {
       next: (s: TenantSettings) => {
         this.loading.set(false);
         this.name.set(s.name);
+        this.city.set(s.city ?? '');
+        if (s.logoAssetId) {
+          this.loadSavedLogo(s.logoAssetId);
+        }
       },
       error: () => {
         this.loading.set(false);
         this.loadError.set('No se pudo cargar la configuración. Inténtalo de nuevo.');
       },
+    });
+  }
+
+  /**
+   * `GET /assets/:id` is Bearer-JWT protected — a plain `<img src>` bound to
+   * that URL would 401, same reasoning as the bank feature's image preview
+   * (`bank-list.component.ts#loadImages`). Fetches the bytes through
+   * `TenantSettingsService.fetchLogo` and turns them into a `blob:` object
+   * URL so the 64px preview box can show the logo ALREADY saved on the
+   * tenant, not just one the admin just picked in this session.
+   */
+  private loadSavedLogo(logoAssetId: string): void {
+    this.tenantSettingsService.fetchLogo(logoAssetId).subscribe((blob) => {
+      const url = URL.createObjectURL(blob);
+      this.objectUrls.push(url);
+      this.logoPreviewUrl.set(url);
     });
   }
 
@@ -113,7 +140,7 @@ export class TenantSettingsComponent {
     this.saveSuccess.set(false);
     this.saving.set(true);
     const logo = this.selectedLogo();
-    this.tenantSettingsService.updateSettings({ name: this.name(), ...(logo ? { logo } : {}) }).subscribe({
+    this.tenantSettingsService.updateSettings({ name: this.name(), city: this.city(), ...(logo ? { logo } : {}) }).subscribe({
       next: () => {
         this.saving.set(false);
         this.saveSuccess.set(true);
@@ -141,12 +168,19 @@ export class TenantSettingsComponent {
     });
   }
 
-  protected initials(email: string): string {
-    return email.slice(0, 2).toUpperCase();
+  /** Two-letter avatar initials from the teacher's name (falls back to the email if a legacy row has no name). */
+  protected initials(u: Pick<TenantUser, 'name' | 'email'>): string {
+    const source = u.name?.trim();
+    if (!source) {
+      return u.email.slice(0, 2).toUpperCase();
+    }
+    const parts = source.split(/\s+/).filter(Boolean);
+    const letters = parts.length >= 2 ? `${parts[0]![0]}${parts[1]![0]}` : source.slice(0, 2);
+    return letters.toUpperCase();
   }
 
   protected roleLabel(role: string): string {
-    return role === 'school_admin' ? 'Administrador' : 'Profesor';
+    return role === 'school_admin' ? 'Administra' : 'Profesor';
   }
 
   protected toggleMenu(id: string): void {
@@ -154,6 +188,7 @@ export class TenantSettingsComponent {
   }
 
   protected openAdd(): void {
+    this.newName.set('');
     this.newEmail.set('');
     this.newRole.set('teacher');
     this.tempPassword.set(null);
@@ -172,11 +207,11 @@ export class TenantSettingsComponent {
   }
 
   protected submitAdd(): void {
-    if (!/\S+@\S+\.\S+/.test(this.newEmail())) {
+    if (this.newName().trim().length === 0 || !/\S+@\S+\.\S+/.test(this.newEmail())) {
       return;
     }
     this.usersActionError.set(null);
-    this.usersService.create({ email: this.newEmail(), role: this.newRole() }).subscribe({
+    this.usersService.create({ email: this.newEmail(), name: this.newName().trim(), role: this.newRole() }).subscribe({
       next: (res) => {
         this.tempPassword.set(res.temporaryPassword);
         this.loadTeachers();

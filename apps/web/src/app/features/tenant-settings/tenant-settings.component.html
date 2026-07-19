@@ -39,21 +39,32 @@
         </div>
       } @else {
         <div class="flex max-w-md flex-col gap-4">
-          <ui-input label="Nombre del colegio" name="name" [value]="name()" (valueChange)="name.set($event)"></ui-input>
+          <div class="flex gap-3">
+            <ui-input label="Nombre del colegio" name="name" [value]="name()" (valueChange)="name.set($event)"></ui-input>
+            <ui-input label="Ciudad" name="city" [value]="city()" (valueChange)="city.set($event)"></ui-input>
+          </div>
 
-          <label class="flex flex-col gap-2 text-sm font-medium text-n700">
-            Logo
-            <input type="file" accept="image/*" (change)="onLogoSelected($event)" />
-          </label>
-
-          @if (logoPreviewUrl(); as url) {
-            <img
-              [src]="url"
-              alt="Vista previa del logo"
-              data-testid="logo-preview"
-              class="h-24 w-24 rounded-field object-cover"
-            />
-          }
+          <div class="flex items-center gap-3">
+            @if (logoPreviewUrl(); as url) {
+              <img
+                [src]="url"
+                alt="Vista previa del logo"
+                data-testid="logo-preview"
+                class="h-16 w-16 rounded-field border border-n200 object-cover"
+              />
+            } @else {
+              <div
+                data-testid="logo-placeholder"
+                class="flex h-16 w-16 items-center justify-center rounded-field border border-n200 bg-primary-50 text-n400"
+              >
+                <lucide-angular name="school" class="h-6 w-6"></lucide-angular>
+              </div>
+            }
+            <label class="flex flex-col gap-2 text-sm font-medium text-tint-texto">
+              Cambiar logo
+              <input type="file" accept="image/*" (change)="onLogoSelected($event)" />
+            </label>
+          </div>
           <p class="text-xs text-n500">Sale en el encabezado de cada examen PDF.</p>
 
           @if (saveError()) {
@@ -76,7 +87,7 @@
   } @else {
     <div data-testid="tab-teachers-panel" class="flex flex-col gap-3">
       <div class="flex items-center justify-between">
-        <p class="text-sm text-n600">{{ activeCount() }} profesores activos</p>
+        <p data-testid="active-count" class="text-sm text-n600">{{ activeCountLabel() }}</p>
         <div data-testid="add-teacher">
           <ui-button variant="primary" (clicked)="openAdd()">+ Agregar profesor</ui-button>
         </div>
@@ -104,12 +115,21 @@
           @for (u of teachers(); track u.id) {
             <div data-testid="teacher-row" class="flex items-center gap-3 rounded-card border border-n200 bg-white p-3">
               <div class="flex h-9 w-9 items-center justify-center rounded-full bg-primary-100 text-xs font-semibold text-primary-700">
-                {{ initials(u.email) }}
+                {{ initials(u) }}
               </div>
               <div class="min-w-0 flex-1">
-                <p class="truncate text-sm text-n900">{{ u.email }}</p>
+                <p data-testid="teacher-name" class="truncate text-sm text-n900">
+                  <span>{{ u.name || u.email }}</span>
+                  @if (u.name) {
+                    <span class="text-n500">— {{ u.email }}</span>
+                  }
+                </p>
               </div>
-              <ui-tag [variant]="u.role === 'school_admin' ? 'ai' : 'easy'">{{ roleLabel(u.role) }}</ui-tag>
+              <span
+                data-testid="teacher-role-chip"
+                class="inline-flex items-center rounded-field bg-primary-100 px-2 py-0.5 text-xs font-medium text-tint-texto"
+                >{{ roleLabel(u.role) }}</span
+              >
               <ui-tag [variant]="u.active ? 'easy' : 'warning-stock'">{{ u.active ? 'Activo' : 'Desactivado' }}</ui-tag>
               <div class="relative">
                 <button
@@ -141,6 +161,7 @@
 
   <ui-modal [open]="addOpen()" title="Agregar profesor">
     <div class="flex flex-col gap-3">
+      <ui-input label="Nombre" name="new-teacher-name" [value]="newName()" (valueChange)="newName.set($event)"></ui-input>
       <ui-input label="Correo" type="email" [value]="newEmail()" (valueChange)="newEmail.set($event)"></ui-input>
       <ui-select label="Rol" [options]="roleOptions" [value]="newRole()" (valueChange)="onRoleChange($event)"></ui-select>
       @if (tempPassword(); as pw) {

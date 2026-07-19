@@ -9,6 +9,7 @@ export type UserRole = 'teacher' | 'school_admin';
 export interface TenantUser {
   readonly id: string;
   readonly email: string;
+  readonly name: string | null;
   readonly role: string;
   readonly active: boolean;
   readonly createdAt: string;
@@ -16,12 +17,14 @@ export interface TenantUser {
 
 export interface CreateUserPayload {
   readonly email: string;
+  readonly name: string;
   readonly role: UserRole;
 }
 
 export interface CreateUserResult {
   readonly id: string;
   readonly email: string;
+  readonly name: string;
   readonly role: UserRole;
   readonly temporaryPassword: string;
 }

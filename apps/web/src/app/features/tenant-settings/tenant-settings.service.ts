@@ -30,7 +30,10 @@ export class TenantSettingsService {
     const tenantId = this.requireTenantId();
 
     return this.http
-      .patch<TenantSettings>(`${environment.apiBaseUrl}/tenants/${tenantId}`, { name: payload.name })
+      .patch<TenantSettings>(`${environment.apiBaseUrl}/tenants/${tenantId}`, {
+        name: payload.name,
+        city: payload.city,
+      })
       .pipe(switchMap((tenant) => (payload.logo ? this.uploadLogo(tenantId, payload.logo) : of(tenant))));
   }
 
@@ -38,6 +41,17 @@ export class TenantSettingsService {
     const formData = new FormData();
     formData.set('file', logo);
     return this.http.post<TenantSettings>(`${environment.apiBaseUrl}/tenants/${tenantId}/logo`, formData);
+  }
+
+  /**
+   * `GET /assets/:id` is Bearer-JWT protected, so a plain `<img src>` bound
+   * to the URL would 401 (same reason `bank.service.ts#fetchQuestionImage`
+   * fetches through `HttpClient` instead) — fetches the SAVED logo's bytes
+   * as a blob so the "Datos y logo" tab can show a 64px preview of the
+   * logo that's already on the tenant, not just one just picked locally.
+   */
+  fetchLogo(logoAssetId: string): Observable<Blob> {
+    return this.http.get(`${environment.apiBaseUrl}/assets/${logoAssetId}`, { responseType: 'blob' });
   }
 
   private requireTenantId(): string {
