@@ -357,10 +357,13 @@ export class BankRepository {
   }
 
   /**
-   * Human edit of a structured draft's content before approval (Lane D3:
-   * "un humano pueda editar el draft antes de aprobar"). Same
-   * tenant-visibility + `status = 'draft'` scoping as `approveQuestion` —
-   * only an editable draft the requester can see gets updated.
+   * Human edit of a structured question's content — a `draft` (Lane D3:
+   * "un humano pueda editar el draft antes de aprobar") OR an already
+   * `approved` question (post-approval correction, question editing). Same
+   * tenant-visibility scoping as `approveQuestion`; unlike the original
+   * draft-only version, this does NOT constrain by `status` — the service
+   * (`requireManageableQuestion`) has already resolved the draft/approved/
+   * not-archived precondition, so this is a plain scoped `UPDATE`.
    */
   async updateStructuredQuestion(
     id: string,
@@ -379,7 +382,7 @@ export class BankRepository {
         correctAnswer: patch.correctAnswer,
         figureCode: patch.figureCode,
       })
-      .where(and(eq(questions.id, id), eq(questions.status, "draft"), visibility))
+      .where(and(eq(questions.id, id), visibility))
       .returning({
         id: questions.id,
         tenantId: questions.tenantId,
@@ -406,6 +409,47 @@ export class BankRepository {
       .where(eq(topics.id, row.topicId));
 
     return { ...row, courseId: topicRow?.courseId ?? "" };
+  }
+
+  /**
+   * Persists taxonomy fields for `editQuestion` (design doc: question
+   * editing). Same tenant-visibility scoping as the other question writes in
+   * this class — a tenant can only retaxonomize its own (or central)
+   * questions. Unlike `updateStructuredQuestion`, this does NOT constrain by
+   * `status` — the service (`requireManageableQuestion`) has already
+   * resolved the draft/approved precondition, so this is a plain scoped
+   * `UPDATE`. Only fields present in `patch` are set; an empty patch is a
+   * no-op (no DB round-trip).
+   *
+   * NOTE: `patch.courseId` is intentionally NOT written here — `questions`
+   * has no `course_id` column (see `questions.schema.ts`); a question's
+   * course is always derived by joining `topics.course_id` via `topic_id`,
+   * exactly like `createStructuredQuestion`/`validateCreateStructuredQuestionInput`
+   * already accept-but-don't-persist `courseId` on creation. Moving a
+   * question to a different course means moving it to a topic under that
+   * course, i.e. changing `topicId`.
+   */
+  async updateQuestionTaxonomy(
+    id: string,
+    currentTenantId: string | null,
+    patch: { courseId?: string; topicId?: string; difficulty?: string; gradeLevel?: string },
+  ): Promise<void> {
+    const set: Partial<{ topicId: string; difficulty: Difficulty; gradeLevel: string }> = {};
+    if (patch.topicId !== undefined) set.topicId = patch.topicId;
+    if (patch.difficulty !== undefined) set.difficulty = patch.difficulty as Difficulty;
+    if (patch.gradeLevel !== undefined) set.gradeLevel = patch.gradeLevel;
+    if (Object.keys(set).length === 0) {
+      return;
+    }
+
+    const visibility: SQL = currentTenantId
+      ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
+      : (isNull(questions.tenantId) as SQL);
+
+    await db
+      .update(questions)
+      .set(set)
+      .where(and(eq(questions.id, id), visibility));
   }
 
   /**

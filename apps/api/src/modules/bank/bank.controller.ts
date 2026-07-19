@@ -49,6 +49,10 @@ interface EditDraftQuestionBody {
   readonly alternatives?: readonly string[];
   readonly correctAnswer?: string;
   readonly figureCode?: string;
+  readonly courseId?: string;
+  readonly topicId?: string;
+  readonly difficulty?: string;
+  readonly gradeLevel?: string;
 }
 
 interface ListQuestionsQueryParams {
@@ -192,9 +196,11 @@ export class BankController {
   }
 
   /**
-   * Lane D3: human edit of a draft's structured content before approval.
-   * Recompiles the Typst preview server-side; a broken edit is rejected
-   * with 400 and never persisted.
+   * Lane D3 + question editing: human edit of a question's structured
+   * content and/or taxonomy — a `draft` (before approval) or an already
+   * `approved` question (post-approval correction). Recompiles the Typst
+   * preview server-side; a broken edit is rejected with 400 and never
+   * persisted. 409 if the question is `archived`.
    */
   @Patch(":id")
   async editDraftQuestion(
@@ -202,11 +208,15 @@ export class BankController {
     @Param("id") id: string,
     @Body() body: EditDraftQuestionBody,
   ): Promise<QuestionListItem> {
-    return this.service.editDraftQuestion(user, id, {
+    return this.service.editQuestion(user, id, {
       bodyTypst: body.bodyTypst,
       alternatives: body.alternatives,
       correctAnswer: body.correctAnswer,
       figureCode: body.figureCode,
+      courseId: body.courseId,
+      topicId: body.topicId,
+      difficulty: body.difficulty,
+      gradeLevel: body.gradeLevel,
     });
   }
 

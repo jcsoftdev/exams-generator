@@ -17,6 +17,7 @@ import { BankRepository, QuestionListItem, QuestionListPagination } from "./bank
 import { canManageQuestionTenant } from "./domain/can-manage-question-tenant";
 import { validateCreateImageQuestionInput } from "./domain/validate-create-image-question";
 import { validateCreateStructuredQuestionInput } from "./domain/validate-create-structured-question";
+import { validateQuestionTaxonomy } from "./domain/validate-question-taxonomy";
 import { validateUpdateStructuredQuestionInput } from "./domain/validate-update-structured-question";
 
 /**
@@ -56,11 +57,15 @@ export interface CreateStructuredQuestionDto {
   readonly figureCode: string | undefined;
 }
 
-export interface EditDraftQuestionDto {
+export interface EditQuestionDto {
   readonly bodyTypst?: string;
   readonly alternatives?: readonly string[];
   readonly correctAnswer?: string;
   readonly figureCode?: string;
+  readonly courseId?: string;
+  readonly topicId?: string;
+  readonly difficulty?: string;
+  readonly gradeLevel?: string;
 }
 
 export interface ListQuestionsQuery {
@@ -94,7 +99,7 @@ export class BankService {
    * S7: in-memory Typst-compile cache for single-question previews, keyed by
    * question id. Deliberately NOT persisted/shared across instances — a
    * cold cache just means one extra Typst compile, never a correctness
-   * issue. Invalidated in `editDraftQuestion` on every successful edit so a
+   * issue. Invalidated in `editQuestion` on every successful edit so a
    * re-fetched preview never serves a stale compile. Bounded to
    * `MAX_PREVIEW_CACHE` entries with FIFO eviction (see `previewQuestion`) —
    * a `Map` preserves insertion order, so `.keys().next().value` is always
@@ -236,8 +241,7 @@ export class BankService {
    * requester's role is allowed to MANAGE it (403 — central bank drafts are
    * staff-only even though tenants can VIEW them, design doc §2), and
    * asserts it's still `status='draft'` (409 otherwise) — shared
-   * precondition for approve/reject/edit, all of which only ever act on
-   * drafts.
+   * precondition for approve/reject, both of which only ever act on drafts.
    */
   private async requireVisibleDraft(
     user: AuthTokenPayload,
@@ -250,6 +254,26 @@ export class BankService {
     assertCanManageTenant(user.role, question.tenantId);
     if (question.status !== "draft") {
       throw new ConflictException(`Question ${id} is not a draft (status=${question.status})`);
+    }
+    return question;
+  }
+
+  /**
+   * Edit precondition (broader than requireVisibleDraft): a question the caller
+   * can MANAGE and that is still editable content-wise — `draft` OR `approved`
+   * (never `archived`; never central-bank, which is read-only for tenants).
+   */
+  private async requireManageableQuestion(
+    user: AuthTokenPayload,
+    id: string,
+  ): Promise<QuestionListItem> {
+    const question = await this.repository.findQuestionById(id, user.tenantId);
+    if (!question) {
+      throw new NotFoundException(`Question not found: ${id}`);
+    }
+    assertCanManageTenant(user.role, question.tenantId);
+    if (question.status === "archived") {
+      throw new ConflictException(`Question ${id} is archived and cannot be edited`);
     }
     return question;
   }
@@ -337,19 +361,24 @@ export class BankService {
   }
 
   /**
-   * Human edit of a draft's structured content BEFORE approval (Lane D3:
-   * "un humano pueda editar el draft antes de aprobar"). Re-validates the
-   * merged content, then recompiles a Typst PREVIEW via `PdfCompilerPort` —
-   * exactly like AI generation itself — so an edit can never leave the
-   * draft in an uncompilable state either. On a compile failure, nothing is
-   * persisted.
+   * Human edit of a question's structured content AND/OR taxonomy — draft
+   * (Lane D3: "un humano pueda editar el draft antes de aprobar") OR already
+   * `approved` (post-approval correction, e.g. fixing a typo or reclassifying
+   * a published question). Uses `requireManageableQuestion` (draft/approved,
+   * never archived/central-read-only) rather than `requireVisibleDraft`.
+   * Re-validates the merged content, then recompiles a Typst PREVIEW via
+   * `PdfCompilerPort` — exactly like AI generation itself — so an edit can
+   * never leave the question in an uncompilable state either. On a compile
+   * failure, nothing is persisted. Taxonomy fields (`courseId`/`topicId`/
+   * `difficulty`/`gradeLevel`) are validated separately (400 on failure) and
+   * persisted via `repository.updateQuestionTaxonomy`.
    */
-  async editDraftQuestion(
+  async editQuestion(
     user: AuthTokenPayload,
     id: string,
-    dto: EditDraftQuestionDto,
+    dto: EditQuestionDto,
   ): Promise<QuestionListItem> {
-    const question = await this.requireVisibleDraft(user, id);
+    const question = await this.requireManageableQuestion(user, id);
     if (question.type !== "structured") {
       throw new BadRequestException("Only structured questions can be edited");
     }
@@ -363,6 +392,17 @@ export class BankService {
 
     if (!validation.ok) {
       throw new BadRequestException(validation.errors);
+    }
+
+    const taxonomyValidation = validateQuestionTaxonomy({
+      courseId: dto.courseId,
+      topicId: dto.topicId,
+      difficulty: dto.difficulty,
+      gradeLevel: dto.gradeLevel,
+    });
+
+    if (!taxonomyValidation.ok) {
+      throw new BadRequestException(taxonomyValidation.errors);
     }
 
     const { merged } = validation;
@@ -392,6 +432,14 @@ export class BankService {
     if (!updated) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
+
+    await this.repository.updateQuestionTaxonomy(id, user.tenantId, {
+      courseId: dto.courseId,
+      topicId: dto.topicId,
+      difficulty: dto.difficulty,
+      gradeLevel: dto.gradeLevel,
+    });
+
     this.previewCache.delete(id);
     return updated;
   }
@@ -425,7 +473,7 @@ export class BankService {
   /**
    * Lane D4 (S5): permanently deletes a `draft` question. Reuses
    * `requireVisibleDraft` — the SAME 404/403/409 gate `approveQuestion`/
-   * `rejectQuestion`/`editDraftQuestion` already share — so a draft can only
+   * `rejectQuestion` already share — so a draft can only
    * be deleted by whoever is allowed to manage it, and only while it's still
    * a draft (an `approved`/`archived` question is never deletable this way;
    * use `archiveQuestion` instead).

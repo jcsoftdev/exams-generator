@@ -46,6 +46,7 @@ function buildDeps() {
     approveQuestion: jest.fn().mockResolvedValue(undefined as { id: string; status: string } | undefined),
     rejectQuestion: jest.fn().mockResolvedValue(false),
     updateStructuredQuestion: jest.fn().mockResolvedValue(undefined as QuestionListItem | undefined),
+    updateQuestionTaxonomy: jest.fn().mockResolvedValue(undefined),
   } as unknown as jest.Mocked<BankRepository>;
 
   const storage = {
@@ -416,7 +417,7 @@ describe("BankService.rejectQuestion", () => {
   });
 });
 
-describe("BankService.editDraftQuestion", () => {
+describe("BankService.editQuestion", () => {
   it("recompiles the Typst preview and persists the merged edit", async () => {
     const { service, repository, pdfCompiler } = buildDeps();
     repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
@@ -425,7 +426,7 @@ describe("BankService.editDraftQuestion", () => {
       bodyTypst: "edited body",
     });
 
-    const result = await service.editDraftQuestion(TEACHER_USER, "draft-1", {
+    const result = await service.editQuestion(TEACHER_USER, "draft-1", {
       bodyTypst: "edited body",
     });
 
@@ -446,7 +447,7 @@ describe("BankService.editDraftQuestion", () => {
     );
 
     await expect(
-      service.editDraftQuestion(TEACHER_USER, "draft-1", { bodyTypst: "#broken{" }),
+      service.editQuestion(TEACHER_USER, "draft-1", { bodyTypst: "#broken{" }),
     ).rejects.toBeInstanceOf(BadRequestException);
 
     expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
@@ -457,17 +458,35 @@ describe("BankService.editDraftQuestion", () => {
     repository.findQuestionById.mockResolvedValue(undefined);
 
     await expect(
-      service.editDraftQuestion(TEACHER_USER, "missing", { bodyTypst: "x" }),
+      service.editQuestion(TEACHER_USER, "missing", { bodyTypst: "x" }),
     ).rejects.toBeInstanceOf(NotFoundException);
   });
 
-  it("throws ConflictException when the question is already approved", async () => {
+  it("edits an already-approved question too (not just draft)", async () => {
     const { service, repository } = buildDeps();
     repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, status: "approved" });
+    repository.updateStructuredQuestion.mockResolvedValue({
+      ...DRAFT_QUESTION,
+      status: "approved",
+      bodyTypst: "edited approved body",
+    });
+
+    const result = await service.editQuestion(TEACHER_USER, "draft-1", {
+      bodyTypst: "edited approved body",
+    });
+
+    expect(repository.updateStructuredQuestion).toHaveBeenCalled();
+    expect(result.bodyTypst).toBe("edited approved body");
+  });
+
+  it("throws ConflictException when the question is archived", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, status: "archived" });
 
     await expect(
-      service.editDraftQuestion(TEACHER_USER, "draft-1", { bodyTypst: "x" }),
+      service.editQuestion(TEACHER_USER, "draft-1", { bodyTypst: "x" }),
     ).rejects.toBeInstanceOf(ConflictException);
+    expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
   });
 
   it("throws BadRequestException when the merged content fails validation", async () => {
@@ -475,7 +494,7 @@ describe("BankService.editDraftQuestion", () => {
     repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
 
     await expect(
-      service.editDraftQuestion(TEACHER_USER, "draft-1", { bodyTypst: "   " }),
+      service.editQuestion(TEACHER_USER, "draft-1", { bodyTypst: "   " }),
     ).rejects.toBeInstanceOf(BadRequestException);
     expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
   });
@@ -485,9 +504,34 @@ describe("BankService.editDraftQuestion", () => {
     repository.findQuestionById.mockResolvedValue({ ...DRAFT_QUESTION, tenantId: null });
 
     await expect(
-      service.editDraftQuestion(TEACHER_USER, "draft-1", { bodyTypst: "x" }),
+      service.editQuestion(TEACHER_USER, "draft-1", { bodyTypst: "x" }),
     ).rejects.toBeInstanceOf(ForbiddenException);
     expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
+  });
+
+  it("throws BadRequestException and does NOT persist when the taxonomy patch is invalid", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
+
+    await expect(
+      service.editQuestion(TEACHER_USER, "draft-1", { difficulty: "trivial" }),
+    ).rejects.toBeInstanceOf(BadRequestException);
+    expect(repository.updateStructuredQuestion).not.toHaveBeenCalled();
+    expect(repository.updateQuestionTaxonomy).not.toHaveBeenCalled();
+  });
+
+  it("persists provided taxonomy fields via repository.updateQuestionTaxonomy", async () => {
+    const { service, repository } = buildDeps();
+    repository.findQuestionById.mockResolvedValue(DRAFT_QUESTION);
+    repository.updateStructuredQuestion.mockResolvedValue(DRAFT_QUESTION);
+
+    await service.editQuestion(TEACHER_USER, "draft-1", { difficulty: "hard" });
+
+    expect(repository.updateQuestionTaxonomy).toHaveBeenCalledWith(
+      "draft-1",
+      "tenant-1",
+      expect.objectContaining({ difficulty: "hard" }),
+    );
   });
 });
 
