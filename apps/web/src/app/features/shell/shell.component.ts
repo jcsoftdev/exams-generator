@@ -12,6 +12,7 @@ import { DraftCountService } from '../ai/draft-count.service';
 const PRINCIPAL_GROUP: NavGroup = {
   title: 'Principal',
   items: [
+    { label: 'Dashboard', route: '/app/dashboard' },
     { label: 'Banco de preguntas', route: '/app/bank' },
     { label: 'Mis exámenes', route: '/app/exams' },
   ],

@@ -5,6 +5,7 @@ import { roleGuard } from './core/auth/role.guard';
 import { LoginComponent } from './features/login/login.component';
 import { ShellComponent } from './features/shell/shell.component';
 import { ForbiddenComponent } from './features/forbidden/forbidden.component';
+import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { BankListComponent } from './features/bank/bank-list/bank-list.component';
 import { BankUploadComponent } from './features/bank/bank-upload/bank-upload.component';
 import { BankNewComponent } from './features/bank/bank-new/bank-new.component';
@@ -24,6 +25,8 @@ export const routes: Routes = [
     component: ShellComponent,
     canActivate: [authGuard],
     children: [
+      { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+      { path: 'dashboard', component: DashboardComponent },
       { path: 'bank', component: BankListComponent },
       { path: 'bank/upload', component: BankUploadComponent },
       { path: 'bank/new', component: BankNewComponent },

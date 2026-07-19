@@ -89,4 +89,18 @@ describe('app routes', () => {
     const wildcardRoute = routes.find((route) => route.path === '**');
     expect(wildcardRoute?.redirectTo).toBe('login');
   });
+
+  it('exposes /app/dashboard under the protected /app shell', () => {
+    const appRoute = routes.find((route) => route.path === 'app');
+    const dashboardRoute = appRoute?.children?.find((route) => route.path === 'dashboard');
+    expect(dashboardRoute).toBeTruthy();
+  });
+
+  it('redirects the empty /app child path to dashboard (design doc §4)', () => {
+    const appRoute = routes.find((route) => route.path === 'app');
+    const indexRoute = appRoute?.children?.find(
+      (route) => route.path === '' && route.redirectTo,
+    );
+    expect(indexRoute?.redirectTo).toBe('dashboard');
+  });
 });

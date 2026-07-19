@@ -174,4 +174,15 @@ describe('ShellComponent', () => {
     const reviewLink = links.find((l) => l.textContent?.includes('Cola de revisión'));
     expect(reviewLink?.querySelector('[data-testid="nav-item-badge"]')).toBeFalsy();
   });
+
+  it('lists "Dashboard" as the first item of the Principal group', () => {
+    const { compiled } = setup(Role.Teacher);
+
+    // NOTE: this file's Router mock stubs `serializeUrl: () => ''`, so
+    // `RouterLink`'s computed `href` is always empty here — assert on the
+    // rendered label/order instead (same style as this file's other tests),
+    // not on `getAttribute('href')`.
+    const links = Array.from(compiled.querySelectorAll('a[data-testid="nav-item"]'));
+    expect(links[0]?.textContent).toContain('Dashboard');
+  });
 });
