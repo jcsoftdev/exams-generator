@@ -14,7 +14,7 @@ import { NavGroup } from '../ui.types';
   imports: [RouterLink, RouterLinkActive],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <nav class="flex h-full flex-col gap-6 bg-primary-900 p-4 text-primary-100">
+    <nav class="flex h-full flex-col gap-8 bg-primary-900 p-4 text-primary-100">
       @for (group of groups(); track group.title) {
         <div>
           <p class="mb-2 px-2 text-xs font-semibold uppercase tracking-wide text-primary-300">
@@ -29,7 +29,7 @@ import { NavGroup } from '../ui.types';
                   routerLinkActive="bg-tint-activo text-tint-texto"
                   [routerLinkActiveOptions]="{ exact: false }"
                   (click)="navigate.emit(item.route)"
-                  class="flex items-center justify-between gap-2 rounded-field px-3 py-2 text-sm text-primary-100 hover:bg-primary-800"
+                  class="flex h-[42px] items-center justify-between gap-2 rounded-field px-3 text-sm text-primary-100 hover:bg-primary-800"
                 >
                   <span>{{ item.label }}</span>
                   @if (item.badge !== undefined) {

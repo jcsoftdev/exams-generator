@@ -1,7 +1,7 @@
 import { Component, importProvidersFrom } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect } from 'vitest';
-import { LucideAngularModule, Menu } from 'lucide-angular';
+import { LucideAngularModule, Menu, Search } from 'lucide-angular';
 import { TopbarComponent } from './topbar.component';
 
 @Component({
@@ -20,7 +20,7 @@ class HostComponent {
 function setup() {
   TestBed.configureTestingModule({
     imports: [HostComponent],
-    providers: [importProvidersFrom(LucideAngularModule.pick({ Menu }))],
+    providers: [importProvidersFrom(LucideAngularModule.pick({ Menu, Search }))],
   });
   const fixture = TestBed.createComponent(HostComponent);
   fixture.detectChanges();
@@ -54,5 +54,12 @@ describe('TopbarComponent', () => {
     const button = compiled.querySelector('[data-testid="topbar-menu-button"]')!;
     expect(button.querySelector('lucide-angular,i-lucide')).toBeTruthy();
     expect(button.textContent).not.toContain('☰');
+  });
+
+  it('renders a decorative search field matching the Figma reference (no wired output)', () => {
+    const { compiled } = setup();
+    const search = compiled.querySelector<HTMLInputElement>('[data-testid="topbar-search"]');
+    expect(search).toBeTruthy();
+    expect(search?.className).toContain('bg-n50');
   });
 });

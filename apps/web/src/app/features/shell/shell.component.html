@@ -1,5 +1,5 @@
 <div class="flex h-screen bg-n50">
-  <aside data-testid="shell-sidebar-desktop" class="hidden w-64 shrink-0 md:block">
+  <aside data-testid="shell-sidebar-desktop" class="hidden w-60 shrink-0 md:block">
     <ui-sidebar [groups]="navGroups()"></ui-sidebar>
   </aside>
 
@@ -10,7 +10,7 @@
         class="absolute inset-0 bg-primary-900/40"
         (click)="closeMobileMenu()"
       ></div>
-      <div class="relative h-full w-64">
+      <div class="relative h-full w-60">
         <ui-sidebar [groups]="navGroups()"></ui-sidebar>
       </div>
     </div>
@@ -22,7 +22,7 @@
         <button
           type="button"
           data-testid="user-menu-button"
-          class="flex h-9 w-9 items-center justify-center rounded-full bg-primary-100 text-primary-700 hover:bg-primary-200"
+          class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-100 text-primary-700 hover:bg-primary-200"
           (click)="toggleUserMenu()"
           aria-label="Menú de usuario"
         >
