@@ -25,7 +25,11 @@ const GENERATED_QUESTION = {
 };
 
 function buildDeps() {
-  const generator = { generate: jest.fn().mockResolvedValue(GENERATED_QUESTION) };
+  const generator = {
+    generate: jest.fn().mockResolvedValue(GENERATED_QUESTION),
+    reviseQuestion: jest.fn().mockResolvedValue(GENERATED_QUESTION),
+    extractFromImage: jest.fn().mockResolvedValue(GENERATED_QUESTION),
+  };
   const pdfCompiler = {
     compileExam: jest.fn().mockResolvedValue(Buffer.from("fake-pdf")),
     compileAnswerKey: jest.fn().mockResolvedValue(Buffer.from("fake-pdf")),

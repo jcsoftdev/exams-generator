@@ -33,6 +33,14 @@ class ScriptedQuestionGeneratorAdapter implements QuestionGeneratorPort {
   async generate(): Promise<GeneratedQuestion> {
     return this.question;
   }
+
+  async reviseQuestion(): Promise<GeneratedQuestion> {
+    throw new Error("ScriptedQuestionGeneratorAdapter.reviseQuestion is not used in this suite");
+  }
+
+  async extractFromImage(): Promise<GeneratedQuestion> {
+    throw new Error("ScriptedQuestionGeneratorAdapter.extractFromImage is not used in this suite");
+  }
 }
 
 const VALID_STRUCTURED_QUESTION: GeneratedQuestion = {

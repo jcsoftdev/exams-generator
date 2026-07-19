@@ -40,6 +40,14 @@ class ScriptedQuestionGeneratorAdapter implements QuestionGeneratorPort {
     this.callCount += 1;
     return result as GeneratedQuestion;
   }
+
+  async reviseQuestion(): Promise<GeneratedQuestion> {
+    throw new Error("ScriptedQuestionGeneratorAdapter.reviseQuestion is not used in this suite");
+  }
+
+  async extractFromImage(): Promise<GeneratedQuestion> {
+    throw new Error("ScriptedQuestionGeneratorAdapter.extractFromImage is not used in this suite");
+  }
 }
 
 /**

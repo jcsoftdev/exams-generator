@@ -2,9 +2,11 @@ import {
   AiGenerationError,
   AiInvalidResponseError,
   AiRateLimitError,
+  ExtractQuestionInput,
   GenerateQuestionInput,
   GeneratedQuestion,
   QuestionGeneratorPort,
+  ReviseQuestionInput,
 } from "../../domain/ports/question-generator.port";
 import { buildOpenRouterRequestBody } from "./openrouter-request-builder";
 import { parseGeneratedQuestionContent } from "./openrouter-response-parser";
@@ -91,6 +93,18 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
       `AI response failed validation after ${MAX_ATTEMPTS} attempt(s): ${lastOutcome?.error}`,
       lastOutcome?.rawContent ?? "",
     );
+  }
+
+  // TODO(task: revise/extract OpenRouter impl): stubbed to satisfy
+  // `QuestionGeneratorPort` — real implementation is a later task.
+  async reviseQuestion(_input: ReviseQuestionInput): Promise<GeneratedQuestion> {
+    throw new Error("OpenRouterAdapter.reviseQuestion is not implemented yet");
+  }
+
+  // TODO(task: revise/extract OpenRouter impl): stubbed to satisfy
+  // `QuestionGeneratorPort` — real implementation is a later task.
+  async extractFromImage(_input: ExtractQuestionInput): Promise<GeneratedQuestion> {
+    throw new Error("OpenRouterAdapter.extractFromImage is not implemented yet");
   }
 
   private async attempt(

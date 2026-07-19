@@ -41,6 +41,24 @@ export interface GeneratedQuestion {
   readonly figureCode?: string;
 }
 
+/** Input for `QuestionGeneratorPort.reviseQuestion()` — AI-assisted edit of an existing question. */
+export interface ReviseQuestionInput {
+  readonly current: {
+    readonly bodyTypst: string;
+    readonly alternatives: readonly string[];
+    readonly correctAnswer: string;
+  };
+  /** Free-text instruction from the human editor, e.g. "hazla más difícil". */
+  readonly instruction: string;
+  readonly difficulty: Difficulty;
+}
+
+/** Input for `QuestionGeneratorPort.extractFromImage()` — OCR/vision extraction of a question from a photo. */
+export interface ExtractQuestionInput {
+  readonly image: Buffer;
+  readonly mimeType: string;
+}
+
 export interface QuestionGeneratorPort {
   /**
    * Produces one AI-generated question. Implementations MUST validate their
@@ -55,6 +73,28 @@ export interface QuestionGeneratorPort {
    *   retry the adapter performs.
    */
   generate(input: GenerateQuestionInput): Promise<GeneratedQuestion>;
+
+  /**
+   * Applies a human-authored edit instruction to an existing question and
+   * returns a new, fully-validated `GeneratedQuestion` (same shape/validation
+   * guarantees as `generate()`).
+   *
+   * @throws AiRateLimitError when the provider is rate-limited.
+   * @throws AiInvalidResponseError when the provider's output can't be
+   *   parsed/validated into a `GeneratedQuestion`.
+   */
+  reviseQuestion(input: ReviseQuestionInput): Promise<GeneratedQuestion>;
+
+  /**
+   * Extracts a question (body, alternatives, correct answer) from a photo of
+   * a printed/handwritten question, returning a fully-validated
+   * `GeneratedQuestion` (same shape/validation guarantees as `generate()`).
+   *
+   * @throws AiRateLimitError when the provider is rate-limited.
+   * @throws AiInvalidResponseError when the provider's output can't be
+   *   parsed/validated into a `GeneratedQuestion`.
+   */
+  extractFromImage(input: ExtractQuestionInput): Promise<GeneratedQuestion>;
 }
 
 export class AiGenerationError extends Error {

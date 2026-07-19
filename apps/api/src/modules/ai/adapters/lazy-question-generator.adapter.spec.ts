@@ -31,7 +31,11 @@ describe("LazyQuestionGeneratorAdapter", () => {
   });
 
   it("calls the resolver only on the first generate() call, then delegates to the resolved adapter", async () => {
-    const fakeAdapter: QuestionGeneratorPort = { generate: jest.fn().mockResolvedValue(RESULT) };
+    const fakeAdapter: QuestionGeneratorPort = {
+      generate: jest.fn().mockResolvedValue(RESULT),
+      reviseQuestion: jest.fn().mockResolvedValue(RESULT),
+      extractFromImage: jest.fn().mockResolvedValue(RESULT),
+    };
     const resolver = jest.fn().mockReturnValue(fakeAdapter);
 
     const lazy = new LazyQuestionGeneratorAdapter(resolver);
@@ -45,7 +49,11 @@ describe("LazyQuestionGeneratorAdapter", () => {
   });
 
   it("caches the resolved adapter — resolver is called only once across multiple generate() calls", async () => {
-    const fakeAdapter: QuestionGeneratorPort = { generate: jest.fn().mockResolvedValue(RESULT) };
+    const fakeAdapter: QuestionGeneratorPort = {
+      generate: jest.fn().mockResolvedValue(RESULT),
+      reviseQuestion: jest.fn().mockResolvedValue(RESULT),
+      extractFromImage: jest.fn().mockResolvedValue(RESULT),
+    };
     const resolver = jest.fn().mockReturnValue(fakeAdapter);
     const lazy = new LazyQuestionGeneratorAdapter(resolver);
 

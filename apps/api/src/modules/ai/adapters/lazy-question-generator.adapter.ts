@@ -1,7 +1,9 @@
 import {
+  ExtractQuestionInput,
   GenerateQuestionInput,
   GeneratedQuestion,
   QuestionGeneratorPort,
+  ReviseQuestionInput,
 } from "../domain/ports/question-generator.port";
 
 /**
@@ -25,5 +27,19 @@ export class LazyQuestionGeneratorAdapter implements QuestionGeneratorPort {
       this.resolved = this.resolve();
     }
     return this.resolved.generate(input);
+  }
+
+  async reviseQuestion(input: ReviseQuestionInput): Promise<GeneratedQuestion> {
+    if (!this.resolved) {
+      this.resolved = this.resolve();
+    }
+    return this.resolved.reviseQuestion(input);
+  }
+
+  async extractFromImage(input: ExtractQuestionInput): Promise<GeneratedQuestion> {
+    if (!this.resolved) {
+      this.resolved = this.resolve();
+    }
+    return this.resolved.extractFromImage(input);
   }
 }
