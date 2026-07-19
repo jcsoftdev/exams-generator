@@ -101,7 +101,7 @@
         <p class="mb-2 text-sm font-medium text-n700">Generando {{ requested() || count() }} preguntas…</p>
         <ui-progress [current]="0" [total]="requested() || count()"></ui-progress>
       </div>
-    } @else if (hasResult()) {
+    } @else if (hasResult() && !totalFailure()) {
       <!-- Tarjeta de estado -->
       <div class="flex items-center gap-3 rounded-card border border-n200 bg-white px-4 py-3">
         <div class="text-2xl font-extrabold text-primary-900">
@@ -177,6 +177,28 @@
         </button>
       </div>
     } @else {
+      @if (totalFailure()) {
+        <!-- Ninguna pregunta pasó la validación: sin tarjeta de estado (confunde con 0/N), solo el banner. -->
+        <div
+          data-testid="batch-failures"
+          class="flex items-center gap-2 rounded-field border border-warn-text/20 bg-warn-bg px-3 py-2 text-xs text-warn-text"
+        >
+          <lucide-angular name="triangle-alert" class="h-4 w-4 shrink-0"></lucide-angular>
+          <p class="flex-1">
+            <span class="font-bold">Ninguna pregunta pasó la validación.</span>
+            Puedes reintentarlas con los mismos parámetros.
+          </p>
+          <div data-testid="retry-failed">
+            <button
+              type="button"
+              class="whitespace-nowrap rounded-field border border-warn-text/30 bg-white px-2.5 py-1 text-[11px] font-bold text-warn-text"
+              (click)="retryFailed()"
+            >
+              Reintentar {{ failedCount() }}
+            </button>
+          </div>
+        </div>
+      }
       <div data-testid="batch-empty" class="flex flex-col items-center gap-3 rounded-card border border-dashed border-n300 p-10 text-center">
         <span class="flex h-10 w-10 items-center justify-center rounded-card bg-ai-bg text-ai-text">
           <lucide-angular name="sparkles" class="h-5 w-5"></lucide-angular>

@@ -240,6 +240,37 @@ describe('TenantSettingsComponent — tabs', () => {
     expect(compiled.querySelector('[data-testid="temp-password"]')?.textContent).toContain('temp12345678');
   });
 
+  it('creates a teacher by typing into the real form fields and shows the name (+ initials) in the row after reload', () => {
+    let listCall = 0;
+    const { compiled, fixture } = setup({
+      usersImpl: () =>
+        of(listCall++ === 0 ? [] : [user({ id: 'u9', name: 'Profesor Prueba QA', email: 'qa-visual@col.pe' })]),
+      createImpl: () =>
+        of({ id: 'u9', email: 'qa-visual@col.pe', name: 'Profesor Prueba QA', role: 'teacher', temporaryPassword: 'temp12345678' }),
+    });
+    (compiled.querySelector('[data-testid="tab-teachers"]') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="add-teacher"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    const nameInput = compiled.querySelector<HTMLInputElement>('input[name="new-teacher-name"]')!;
+    nameInput.value = 'Profesor Prueba QA';
+    nameInput.dispatchEvent(new Event('input'));
+    const emailInput = compiled.querySelector<HTMLInputElement>('input[type="email"]')!;
+    emailInput.value = 'qa-visual@col.pe';
+    emailInput.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+
+    (compiled.querySelector('[data-testid="add-teacher-submit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    const nameCell = compiled.querySelector('[data-testid="teacher-name"]')!;
+    expect(nameCell.textContent).toContain('Profesor Prueba QA');
+    expect(nameCell.textContent).toContain('qa-visual@col.pe');
+    const avatar = compiled.querySelector('.h-9.w-9.rounded-full')!;
+    expect(avatar.textContent?.trim()).toBe('PP');
+  });
+
   it('does not submit when the name field is blank', () => {
     const { compiled, fixture, create } = setup();
     (compiled.querySelector('[data-testid="tab-teachers"]') as HTMLButtonElement).click();

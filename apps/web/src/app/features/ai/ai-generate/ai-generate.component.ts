@@ -115,6 +115,13 @@ export class AiGenerateComponent {
   protected readonly hasResult = computed(() => this.result() !== null);
   protected readonly createdCount = computed(() => this.allCreated().length);
   protected readonly failedCount = computed(() => this.failed().length);
+  // A response arrived (200) but every question failed validation
+  // (created=[], failed=N). Showing the "0/N preguntas generadas" status
+  // card in that case is confusing — nothing was generated — so this guards
+  // the template into showing only the warning banner + the empty state
+  // instead of the status card. Partial failures (created > 0) are
+  // unaffected and keep showing the status card + banner together.
+  protected readonly totalFailure = computed(() => this.hasResult() && this.createdCount() === 0 && this.failedCount() > 0);
   protected readonly resultPct = computed(() => {
     const total = this.requested();
     return total > 0 ? (this.createdCount() / total) * 100 : 0;

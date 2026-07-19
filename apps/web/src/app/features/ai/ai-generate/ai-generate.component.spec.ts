@@ -107,6 +107,25 @@ describe('AiGenerateComponent', () => {
     expect(generateQuestions).toHaveBeenCalledWith(expect.objectContaining({ count: 2 }));
   });
 
+  it('shows only the warning banner (no status card) when ALL questions fail validation on a 200 response', () => {
+    const { compiled, fixture } = setup({
+      genImpl: () => of({ created: [], failed: [{ index: 0, error: 'x' }, { index: 1, error: 'y' }] }),
+    });
+    fillForm(fixture);
+    (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    // No confusing "0/N preguntas generadas" status card.
+    expect(compiled.querySelector('.text-2xl.font-extrabold.text-primary-900')).toBeFalsy();
+    // Warning banner with a "Reintentar N" action IS shown.
+    const banner = compiled.querySelector('[data-testid="batch-failures"]');
+    expect(banner).toBeTruthy();
+    expect(banner?.textContent).toMatch(/ninguna pregunta pasó la validación/i);
+    expect(compiled.querySelector('[data-testid="retry-failed"] button')?.textContent).toContain('Reintentar 2');
+    // The 1-2-3 empty state stays visible underneath.
+    expect(compiled.querySelector('[data-testid="batch-empty"]')).toBeTruthy();
+  });
+
   it('navigates to the review queue from the footer', () => {
     const { compiled, fixture, navigate } = setup();
     fillForm(fixture);
