@@ -15,6 +15,7 @@ export const tenants = pgTable("tenants", {
   id: uuid("id").primaryKey().defaultRandom(),
   name: text("name").notNull(),
   slug: text("slug").notNull().unique(),
+  city: text("city"),
   logoAssetId: uuid("logo_asset_id").references((): AnyPgColumn => assets.id),
   active: boolean("active").notNull().default(true),
 });

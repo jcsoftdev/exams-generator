@@ -117,6 +117,22 @@ describe("Users module (e2e)", () => {
     expect(res.body.every((u: { id: string }) => tenantAUserIds.includes(u.id))).toBe(true);
   });
 
+  it("GET /users returns the name field for a created teacher", async () => {
+    const email = `named-${suffix}@e2e.test`;
+    const created = await request(app.getHttpServer())
+      .post("/users")
+      .set("Authorization", `Bearer ${schoolAdminAToken}`)
+      .send({ email, name: "Lucía Campos", role: "teacher" })
+      .expect(201);
+
+    const res = await request(app.getHttpServer())
+      .get("/users")
+      .set("Authorization", `Bearer ${schoolAdminAToken}`)
+      .expect(200);
+    const listed = res.body.find((u: { id: string }) => u.id === created.body.id);
+    expect(listed.name).toBe("Lucía Campos");
+  });
+
   it("teacher gets 403", async () => {
     await request(app.getHttpServer()).get("/users").set("Authorization", `Bearer ${teacherAToken}`).expect(403);
   });
@@ -126,9 +142,10 @@ describe("Users module (e2e)", () => {
     const res = await request(app.getHttpServer())
       .post("/users")
       .set("Authorization", `Bearer ${schoolAdminAToken}`)
-      .send({ email, role: "teacher" })
+      .send({ email, name: "Jorge Quispe", role: "teacher" })
       .expect(201);
     expect(res.body.temporaryPassword).toHaveLength(12);
+    expect(res.body.name).toBe("Jorge Quispe");
 
     createdTeacherId = res.body.id;
     createdTeacherEmail = email;
@@ -144,7 +161,20 @@ describe("Users module (e2e)", () => {
     await request(app.getHttpServer())
       .post("/users")
       .set("Authorization", `Bearer ${schoolAdminAToken}`)
-      .send({ email: `escalate-${suffix}@e2e.test`, role: "platform_admin" })
+      .send({ email: `escalate-${suffix}@e2e.test`, name: "Escalate", role: "platform_admin" })
+      .expect(400);
+  });
+
+  it("400 when name is missing or blank", async () => {
+    await request(app.getHttpServer())
+      .post("/users")
+      .set("Authorization", `Bearer ${schoolAdminAToken}`)
+      .send({ email: `noname-${suffix}@e2e.test`, role: "teacher" })
+      .expect(400);
+    await request(app.getHttpServer())
+      .post("/users")
+      .set("Authorization", `Bearer ${schoolAdminAToken}`)
+      .send({ email: `blankname-${suffix}@e2e.test`, name: "   ", role: "teacher" })
       .expect(400);
   });
 
@@ -153,12 +183,12 @@ describe("Users module (e2e)", () => {
     await request(app.getHttpServer())
       .post("/users")
       .set("Authorization", `Bearer ${schoolAdminAToken}`)
-      .send({ email, role: "teacher" })
+      .send({ email, name: "Duplicado", role: "teacher" })
       .expect(201);
     await request(app.getHttpServer())
       .post("/users")
       .set("Authorization", `Bearer ${schoolAdminAToken}`)
-      .send({ email, role: "teacher" })
+      .send({ email, name: "Duplicado", role: "teacher" })
       .expect(409);
   });
 

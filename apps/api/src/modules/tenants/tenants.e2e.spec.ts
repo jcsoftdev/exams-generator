@@ -139,6 +139,23 @@ describe("Tenants (e2e)", () => {
 
       expect(res.status).toBe(403);
     });
+
+    it("allows school_admin to update their own tenant's city, and GET reflects it", async () => {
+      const token = await loginAs(schoolAdminA);
+      const res = await request(app.getHttpServer())
+        .patch(`/tenants/${tenantA.id}`)
+        .set("Authorization", `Bearer ${token}`)
+        .send({ city: "Arequipa" });
+
+      expect(res.status).toBe(200);
+      expect(res.body.city).toBe("Arequipa");
+
+      const getRes = await request(app.getHttpServer())
+        .get(`/tenants/${tenantA.id}`)
+        .set("Authorization", `Bearer ${token}`);
+      expect(getRes.status).toBe(200);
+      expect(getRes.body.city).toBe("Arequipa");
+    });
   });
 
   describe("DELETE /tenants/:id", () => {

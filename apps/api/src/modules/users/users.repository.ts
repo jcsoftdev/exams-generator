@@ -5,6 +5,7 @@ import { users } from "../../db/schema";
 export interface TenantUser {
   readonly id: string;
   readonly email: string;
+  readonly name: string | null;
   readonly role: string;
   readonly active: boolean;
   readonly createdAt: string;
@@ -13,7 +14,14 @@ export interface TenantUser {
 export class UsersRepository {
   async listByTenant(tenantId: string): Promise<TenantUser[]> {
     const rows = await db.select().from(users).where(eq(users.tenantId, tenantId));
-    return rows.map((r) => ({ id: r.id, email: r.email, role: r.role, active: r.active, createdAt: r.createdAt.toISOString() }));
+    return rows.map((r) => ({
+      id: r.id,
+      email: r.email,
+      name: r.name,
+      role: r.role,
+      active: r.active,
+      createdAt: r.createdAt.toISOString(),
+    }));
   }
 
   async findByIdInTenant(id: string, tenantId: string) {
@@ -26,8 +34,11 @@ export class UsersRepository {
     return row;
   }
 
-  async create(tenantId: string, email: string, role: string, passwordHash: string): Promise<{ id: string }> {
-    const [row] = await db.insert(users).values({ tenantId, email, passwordHash, role: role as never }).returning({ id: users.id });
+  async create(tenantId: string, email: string, name: string, role: string, passwordHash: string): Promise<{ id: string }> {
+    const [row] = await db
+      .insert(users)
+      .values({ tenantId, email, name, passwordHash, role: role as never })
+      .returning({ id: users.id });
     return row!;
   }
 

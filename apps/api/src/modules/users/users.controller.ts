@@ -19,8 +19,11 @@ export class UsersController {
   }
 
   @Post()
-  create(@CurrentUser() user: AuthTokenPayload, @Body() body: { email: string; role: "teacher" | "school_admin" }) {
-    return this.service.create(user, body.email, body.role);
+  create(
+    @CurrentUser() user: AuthTokenPayload,
+    @Body() body: { email: string; name: string; role: "teacher" | "school_admin" },
+  ) {
+    return this.service.create(user, body.email, body.name, body.role);
   }
 
   @Patch(":id")

@@ -23,17 +23,20 @@ export class UsersService {
     return this.repository.listByTenant(requireTenant(user));
   }
 
-  async create(user: AuthTokenPayload, email: string, role: "teacher" | "school_admin") {
+  async create(user: AuthTokenPayload, email: string, name: string, role: "teacher" | "school_admin") {
     if (role !== Role.Teacher && role !== Role.SchoolAdmin) {
       throw new BadRequestException("role must be teacher or school_admin");
+    }
+    if (typeof name !== "string" || name.trim().length === 0) {
+      throw new BadRequestException("name is required");
     }
     const tenantId = requireTenant(user);
     if (await this.repository.findByEmail(email)) {
       throw new ConflictException(`Email already in use: ${email}`);
     }
     const temporaryPassword = generateTemporaryPassword();
-    const { id } = await this.repository.create(tenantId, email, role, await hashPassword(temporaryPassword));
-    return { id, email, role, temporaryPassword };
+    const { id } = await this.repository.create(tenantId, email, name.trim(), role, await hashPassword(temporaryPassword));
+    return { id, email, name: name.trim(), role, temporaryPassword };
   }
 
   async setActive(user: AuthTokenPayload, targetId: string, active: boolean) {

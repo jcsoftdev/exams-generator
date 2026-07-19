@@ -15,6 +15,13 @@
       "when": 1784405948244,
       "tag": "0001_sparkling_groot",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1784421893002,
+      "tag": "0002_nosy_jackpot",
+      "breakpoints": true
     }
   ]
 }
