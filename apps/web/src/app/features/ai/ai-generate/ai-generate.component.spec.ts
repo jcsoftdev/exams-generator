@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, vi } from 'vitest';
 import { Subject, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { ActivatedRoute, convertToParamMap, Router } from '@angular/router';
 import { LucideAngularModule, Sparkles, TriangleAlert, Plus, Minus } from 'lucide-angular';
 import { AiGenerateComponent } from './ai-generate.component';
 import { AiService } from '../ai.service';
@@ -22,6 +22,7 @@ function setup(
   over: {
     genImpl?: (...a: unknown[]) => unknown;
     listDraftsImpl?: (...a: unknown[]) => unknown;
+    queryParams?: Record<string, string>;
   } = {},
 ) {
   const generateQuestions = vi.fn(
@@ -38,6 +39,7 @@ function setup(
       { provide: AiService, useValue: { generateQuestions, listDrafts } },
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
       { provide: Router, useValue: { navigate } },
+      { provide: ActivatedRoute, useValue: { snapshot: { queryParamMap: convertToParamMap(over.queryParams ?? {}) } } },
     ],
   });
   const fixture = TestBed.createComponent(AiGenerateComponent);
@@ -48,6 +50,8 @@ function setup(
     generateQuestions,
     listDrafts,
     navigate,
+    getCourses,
+    getTopics,
   };
 }
 
@@ -68,6 +72,26 @@ describe('AiGenerateComponent', () => {
   it('shows the 1-2-3 empty state before generating', () => {
     const { compiled } = setup();
     expect(compiled.querySelector('[data-testid="batch-empty"]')).toBeTruthy();
+  });
+
+  it('prefills grade, course, topic and difficulty from query params (exam-builder bridge)', () => {
+    const { fixture, getCourses, getTopics } = setup({
+      queryParams: { gradeLevel: 'secundaria_3', courseId: 'c1', topicId: 't1', difficulty: 'medium' },
+    });
+    const ci = fixture.componentInstance as unknown as {
+      gradeLevel(): string | null;
+      courseId(): string;
+      topicId(): string;
+      difficulty(): string | null;
+    };
+
+    expect(ci.gradeLevel()).toBe('secundaria_3');
+    expect(ci.courseId()).toBe('c1');
+    expect(ci.topicId()).toBe('t1');
+    expect(ci.difficulty()).toBe('medium');
+    // Catalog is scoped to the incoming grade, not loaded blind.
+    expect(getCourses).toHaveBeenCalledWith('secundaria_3');
+    expect(getTopics).toHaveBeenCalledWith('c1', 'secundaria_3');
   });
 
   it('shows a live progress card while generating', () => {

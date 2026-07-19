@@ -1,6 +1,6 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Difficulty } from '@exams-generator/shared';
 import { LucideAngularModule, Sparkles, TriangleAlert, Plus, Minus } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
@@ -63,6 +63,7 @@ export class AiGenerateComponent {
   private readonly aiService = inject(AiService);
   private readonly taxonomyService = inject(TaxonomyService);
   private readonly router = inject(Router);
+  private readonly route = inject(ActivatedRoute);
   private readonly draftCountService = inject(DraftCountService);
 
   protected readonly maxStepperCount = MAX_STEPPER_COUNT;
@@ -135,6 +136,33 @@ export class AiGenerateComponent {
     const grade = GRADE_LEVEL_LABELS[snapshot.gradeLevel as GradeLevel];
     return [snapshot.courseName, snapshot.topicName, diff, grade].filter((v): v is string => !!v).join(' · ');
   });
+
+  /**
+   * Prefill from query params when the generator is opened from a context that
+   * already knows what to make (e.g. the exam builder's "Generar N con IA"
+   * bridge on a shortage cell): grade → course → topic → difficulty, in that
+   * order (each step's setter resets the ones below it, so order matters).
+   */
+  constructor() {
+    const params = this.route.snapshot.queryParamMap;
+    const gradeLevel = params.get('gradeLevel');
+    const courseId = params.get('courseId');
+    const topicId = params.get('topicId');
+    const difficulty = params.get('difficulty');
+
+    if (gradeLevel) {
+      this.onGradeLevelChange(gradeLevel);
+    }
+    if (courseId) {
+      this.onCourseChange(courseId);
+    }
+    if (topicId) {
+      this.topicId.set(topicId);
+    }
+    if (difficulty && (Object.values(Difficulty) as string[]).includes(difficulty)) {
+      this.difficulty.set(difficulty as Difficulty);
+    }
+  }
 
   /**
    * Courses are loaded per selected grade — the catalog is divided by

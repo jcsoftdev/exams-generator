@@ -341,10 +341,20 @@ export class ExamBuilderComponent {
     this.router.navigate(['/app/bank/upload']);
   }
 
+  /**
+   * Bridge to the AI generator. When launched from a specific shortage cell we
+   * carry its curso·tema·dificultad·grado as query params so the generator opens
+   * pre-filled — the teacher shouldn't re-pick what they already chose here. From
+   * the empty-state button (no row) we still carry the selected grade.
+   */
   protected goToAiGenerate(row?: ContentRow, difficulty?: Difficulty): void {
-    void row;
-    void difficulty;
-    this.router.navigate(['/app/ai/generate']);
+    const gradeLevel = this.selectedGradeLevel();
+    const queryParams = row
+      ? { courseId: row.courseId, topicId: row.topicId, difficulty, gradeLevel }
+      : gradeLevel
+        ? { gradeLevel }
+        : {};
+    this.router.navigate(['/app/ai/generate'], { queryParams });
   }
 
   protected goToBank(): void {

@@ -245,6 +245,27 @@ describe('ExamBuilderComponent', () => {
       expect(cell.querySelector('[data-testid="bridge-choose-bank"]')).toBeTruthy();
       expect(cell.querySelector('[data-testid="bridge-lower-count"]')).toBeTruthy();
     });
+
+    it('carries the cell curso·tema·dificultad·grado to the AI generator so it opens pre-filled', () => {
+      const shortStock: StockBatchResult = {
+        results: [
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 },
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, available: 2 },
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Hard, available: 18 },
+        ],
+      };
+      const { compiled, fixture, navigate } = setup({ stockBatch: () => of(shortStock) });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:medium', '6');
+
+      const cell = compiled.querySelector('[data-cell-key="c1:t1:medium"]')!;
+      (cell.querySelector('[data-testid="bridge-generate-ai"] button') as HTMLButtonElement).click();
+
+      expect(navigate).toHaveBeenCalledWith(['/app/ai/generate'], {
+        queryParams: { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, gradeLevel: 'secundaria_1' },
+      });
+    });
   });
 
   describe('lock / unlock "Generar versiones" (EB-R3/R4)', () => {
