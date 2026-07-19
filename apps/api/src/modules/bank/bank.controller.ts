@@ -224,6 +224,25 @@ export class BankController {
     });
   }
 
+  /**
+   * Task 2 (question editing): swaps an image question's backing image.
+   * `type='structured'` -> 400; archived/central-read-only -> 409 (via
+   * `requireManageableQuestion`); cross-tenant -> 404. Mirrors `POST
+   * /bank/questions/image`'s `FileInterceptor` usage, but the field name
+   * here is `file` (this endpoint has no other multipart fields to
+   * disambiguate from, unlike creation's `image` alongside taxonomy fields).
+   */
+  @Post(":id/image")
+  @HttpCode(HttpStatus.CREATED)
+  @UseInterceptors(FileInterceptor("file"))
+  async replaceImage(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("id") id: string,
+    @UploadedFile() file: Express.Multer.File,
+  ): Promise<{ id: string }> {
+    return this.service.replaceImage(user, id, file);
+  }
+
   /** Lane D4 (S4): soft-removes an `approved` question — never a draft. */
   @Patch(":id/archive")
   async archive(

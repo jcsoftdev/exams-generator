@@ -509,6 +509,51 @@ export class BankRepository {
   }
 
   /**
+   * Swaps an image question's backing asset (Task 2, question editing):
+   * inserts a NEW `assets` row (tenant-scoped, same as `createImageQuestion`)
+   * then points the question's `imageAssetId` at it, in a single transaction
+   * — so a failure between the two never leaves the question referencing a
+   * half-written asset. Same tenant-visibility scoping as the other question
+   * writes in this class. The old asset row is intentionally left in place
+   * (no cleanup here — out of scope for this task, mirrors how no other
+   * write path in this class deletes orphaned assets either). Returns the
+   * question id, or `undefined` if no row matched (not found / not visible
+   * to `currentTenantId`) — the caller (service) turns that into a 404.
+   */
+  async replaceImageAsset(
+    id: string,
+    currentTenantId: string | null,
+    image: { readonly storageKey: string; readonly mime: string },
+  ): Promise<string | undefined> {
+    return db.transaction(async (tx) => {
+      const [asset] = await tx
+        .insert(assets)
+        .values({
+          tenantId: currentTenantId,
+          storageKey: image.storageKey,
+          mime: image.mime,
+        })
+        .returning({ id: assets.id });
+
+      if (!asset) {
+        throw new Error("Insert invariant violated: asset row missing after insert");
+      }
+
+      const visibility: SQL = currentTenantId
+        ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
+        : (isNull(questions.tenantId) as SQL);
+
+      const [row] = await tx
+        .update(questions)
+        .set({ imageAssetId: asset.id })
+        .where(and(eq(questions.id, id), visibility))
+        .returning({ id: questions.id });
+
+      return row?.id;
+    });
+  }
+
+  /**
    * Soft-remove: `approved` -> `archived` (Lane D4, S4). The caller (service)
    * has already resolved visibility + the `status='approved'` precondition
    * via `findQuestionById`, so this is a plain unconditional status flip.

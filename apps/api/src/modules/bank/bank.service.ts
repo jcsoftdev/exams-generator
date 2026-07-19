@@ -461,6 +461,43 @@ export class BankService {
   }
 
   /**
+   * Task 2 (question editing): swaps an image question's backing image
+   * asset. Reuses `requireManageableQuestion` — the SAME 404/403/409 gate
+   * `editQuestion` uses — so only a draft/approved question the caller can
+   * manage (never archived/central-read-only) is eligible. Only
+   * `type='image'` questions have an image to replace (400 otherwise, mirror
+   * of `previewQuestion`'s `type='structured'`-only check). Uploads the new
+   * object to storage BEFORE writing to the DB, same ordering as
+   * `createImageQuestion` (a rejected/failed DB write never leaves a
+   * question referencing a missing DB row, though — unlike creation — an
+   * orphaned MinIO object on a later DB failure is accepted here, same as
+   * `createImageQuestion`'s tradeoff).
+   */
+  async replaceImage(
+    user: AuthTokenPayload,
+    id: string,
+    file: Express.Multer.File,
+  ): Promise<{ id: string }> {
+    const question = await this.requireManageableQuestion(user, id);
+    if (question.type !== "image") {
+      throw new BadRequestException("Only image questions have an image to replace");
+    }
+
+    const storageKey = `bank/questions/${randomUUID()}`;
+    await this.storage.put(storageKey, file.buffer, file.mimetype);
+
+    const updatedId = await this.repository.replaceImageAsset(id, user.tenantId, {
+      storageKey,
+      mime: file.mimetype,
+    });
+    if (!updatedId) {
+      throw new NotFoundException(`Question not found: ${id}`);
+    }
+
+    return { id: updatedId };
+  }
+
+  /**
    * Lane D4 (S4): soft-removes an `approved` question from the bank —
    * `archived` questions are excluded from `getQuestionPool`
    * (`ExamsRepository`, `status = 'approved'` filter) but never deleted, so
