@@ -30,20 +30,78 @@
 
   @if (tab() === 'photo') {
     <div data-testid="tab-photo-panel" class="flex flex-col gap-3 rounded-card border border-n200 bg-white p-4">
-      <ui-input label="Curso" [value]="pCourseId()" (valueChange)="pCourseId.set($event)"></ui-input>
-      <ui-input label="Tema" [value]="pTopicId()" (valueChange)="pTopicId.set($event)"></ui-input>
+      <div data-testid="photo-course-select">
+        <ui-select
+          label="Curso"
+          placeholder="Elige un curso"
+          [options]="courseOptions()"
+          [value]="pCourseId()"
+          (valueChange)="pCourseId.set($event ?? '')"
+        ></ui-select>
+      </div>
+      <div data-testid="photo-topic-select">
+        <ui-select
+          label="Tema"
+          [placeholder]="pCourseId() ? 'Elige un tema' : 'Primero elige un curso'"
+          [options]="pTopicOptions()"
+          [value]="pTopicId()"
+          [disabled]="!pCourseId()"
+          (valueChange)="pTopicId.set($event ?? '')"
+        ></ui-select>
+      </div>
       <ui-select label="Nivel" [options]="difficultyOptions" [value]="pDifficulty()" (valueChange)="pDifficulty.set($event)" placeholder="Elige"></ui-select>
       <ui-select label="Grado" [options]="gradeLevelOptions" [value]="pGradeLevel()" (valueChange)="pGradeLevel.set($event)" placeholder="Elige"></ui-select>
       <ui-input label="Clave (respuesta correcta)" [value]="pCorrectAnswer()" (valueChange)="pCorrectAnswer.set($event)"></ui-input>
-      <label class="text-sm text-n700">Imagen del enunciado
-        <input type="file" accept="image/*" class="mt-1 block w-full text-sm" (change)="onImageSelected($event)" />
-      </label>
+
+      <div data-testid="image-upload" class="flex flex-col gap-2">
+        <span class="text-sm font-medium text-n700">Imagen del enunciado</span>
+        <label
+          class="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-card border-2 border-dashed border-n300 bg-n50 px-4 py-6 text-center transition-colors hover:border-primary-400 hover:bg-primary-50"
+        >
+          <input type="file" accept="image/*" class="sr-only" (change)="onImageSelected($event)" />
+          @if (pImagePreviewUrl()) {
+            <img
+              data-testid="image-upload-preview"
+              [src]="pImagePreviewUrl()"
+              alt="Vista previa de la imagen del enunciado"
+              class="h-24 w-24 rounded-field object-cover"
+            />
+            <span data-testid="image-upload-filename" class="flex items-center gap-1.5 text-sm font-medium text-n900">
+              <lucide-angular name="image" class="h-4 w-4 text-primary-500"></lucide-angular>
+              {{ pImage()?.name }}
+            </span>
+            <span data-testid="image-upload-change" class="text-sm font-medium text-primary-500">Cambiar imagen</span>
+          } @else {
+            <lucide-angular name="upload" class="h-6 w-6 text-n500"></lucide-angular>
+            <span class="text-sm text-n700">Arrastra una imagen o haz clic para elegirla</span>
+            <span class="text-xs text-n500">PNG o JPG</span>
+          }
+        </label>
+      </div>
+
       <div data-testid="photo-submit"><ui-button variant="primary" [loading]="saving()" (clicked)="submitPhoto()">Guardar pregunta</ui-button></div>
     </div>
   } @else {
     <div data-testid="tab-structured-panel" class="flex flex-col gap-3 rounded-card border border-n200 bg-white p-4">
-      <ui-input label="Curso" [value]="sCourseId()" (valueChange)="sCourseId.set($event)"></ui-input>
-      <ui-input label="Tema" [value]="sTopicId()" (valueChange)="sTopicId.set($event)"></ui-input>
+      <div data-testid="structured-course-select">
+        <ui-select
+          label="Curso"
+          placeholder="Elige un curso"
+          [options]="courseOptions()"
+          [value]="sCourseId()"
+          (valueChange)="sCourseId.set($event ?? '')"
+        ></ui-select>
+      </div>
+      <div data-testid="structured-topic-select">
+        <ui-select
+          label="Tema"
+          [placeholder]="sCourseId() ? 'Elige un tema' : 'Primero elige un curso'"
+          [options]="sTopicOptions()"
+          [value]="sTopicId()"
+          [disabled]="!sCourseId()"
+          (valueChange)="sTopicId.set($event ?? '')"
+        ></ui-select>
+      </div>
       <ui-select label="Nivel" [options]="difficultyOptions" [value]="sDifficulty()" (valueChange)="sDifficulty.set($event)" placeholder="Elige"></ui-select>
       <ui-select label="Grado" [options]="gradeLevelOptions" [value]="sGradeLevel()" (valueChange)="sGradeLevel.set($event)" placeholder="Elige"></ui-select>
       <label class="text-sm text-n700">Enunciado
