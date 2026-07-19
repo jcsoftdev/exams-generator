@@ -30,6 +30,14 @@ const ZERO_STOCK: StockBatchResult = {
   ],
 };
 
+const MIXED_STOCK: StockBatchResult = {
+  results: [
+    { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 },
+    { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, available: 0 },
+    { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Hard, available: 18 },
+  ],
+};
+
 function setup(overrides: {
   getCourses?(): unknown;
   getTopics?(courseId: string): unknown;
@@ -325,6 +333,128 @@ describe('ExamBuilderComponent', () => {
       expect(previewPanel).toBeTruthy();
       const previewIndex = Array.from(mobile.children).indexOf(previewPanel as Element);
       expect(previewIndex).toBeGreaterThan(cardsIndex);
+    });
+  });
+
+  describe('sticky column header', () => {
+    it('keeps every column header cell sticky at the top so it stays visible while scrolling the grid', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      const headers = compiled.querySelectorAll('[data-testid="content-table-desktop"] thead th');
+      expect(headers.length).toBeGreaterThan(0);
+      headers.forEach((th) => {
+        expect(th.className).toContain('sticky');
+        expect(th.className).toContain('top-0');
+      });
+    });
+  });
+
+  describe('per-level totals', () => {
+    it('shows live per-difficulty totals and a grand total that update as requested counts change', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+      setCellCount(compiled, fixture, 'c1:t1:medium', '3');
+
+      expect(compiled.querySelector('[data-testid="total-easy"]')!.textContent).toContain('6');
+      expect(compiled.querySelector('[data-testid="total-medium"]')!.textContent).toContain('3');
+      expect(compiled.querySelector('[data-testid="total-hard"]')!.textContent).toContain('0');
+      expect(compiled.querySelector('[data-testid="grand-total"]')!.textContent).toContain('9');
+
+      setCellCount(compiled, fixture, 'c1:t1:hard', '2');
+
+      expect(compiled.querySelector('[data-testid="total-hard"]')!.textContent).toContain('2');
+      expect(compiled.querySelector('[data-testid="grand-total"]')!.textContent).toContain('11');
+    });
+  });
+
+  describe('shortage highlight', () => {
+    it('visually tints a shortage cell with the warning-stock token', () => {
+      const shortStock: StockBatchResult = {
+        results: [
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 },
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, available: 2 },
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Hard, available: 18 },
+        ],
+      };
+      const { compiled, fixture } = setup({ stockBatch: () => of(shortStock) });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:medium', '6');
+
+      const cell = compiled.querySelector('[data-cell-key="c1:t1:medium"]')!;
+      expect(cell.className).toContain('bg-warn-bg');
+    });
+
+    it('keeps a fully satisfied cell free of the shortage tint', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+      setCellCount(compiled, fixture, 'c1:t1:easy', '6');
+
+      const cell = compiled.querySelector('[data-cell-key="c1:t1:easy"]')!;
+      expect(cell.className).not.toContain('bg-warn-bg');
+    });
+
+    it('renders a muted "de 0" stock label (not alarming) for an untouched zero-stock cell', () => {
+      const { compiled, fixture } = setup({ stockBatch: () => of(MIXED_STOCK) });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      const cell = compiled.querySelector('[data-cell-key="c1:t1:medium"]')!;
+      const stockOk = cell.querySelector('[data-testid="stock-ok"]')!;
+      expect(stockOk.textContent).toContain('de 0');
+      expect(stockOk.className).toContain('text-n400');
+      expect(cell.className).not.toContain('bg-warn-bg');
+    });
+  });
+
+  describe('course grouping', () => {
+    it('renders a course subheading row before each course\'s topics when the grid spans multiple courses', () => {
+      const courses: Course[] = [
+        { id: 'c1', name: 'Matemática' },
+        { id: 'c2', name: 'Comunicación' },
+      ];
+      const topicsByCourse: Record<string, Topic[]> = {
+        c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1' }],
+        c2: [{ id: 't2', name: 'Lectura', courseId: 'c2' }],
+      };
+      const stock: StockBatchResult = {
+        results: [
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Easy, available: 18 },
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Medium, available: 18 },
+          { courseId: 'c1', topicId: 't1', difficulty: Difficulty.Hard, available: 18 },
+          { courseId: 'c2', topicId: 't2', difficulty: Difficulty.Easy, available: 18 },
+          { courseId: 'c2', topicId: 't2', difficulty: Difficulty.Medium, available: 18 },
+          { courseId: 'c2', topicId: 't2', difficulty: Difficulty.Hard, available: 18 },
+        ],
+      };
+      const { compiled, fixture } = setup({
+        getCourses: () => of(courses),
+        getTopics: (courseId: string) => of(topicsByCourse[courseId]),
+        stockBatch: () => of(stock),
+      });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      const headers = compiled.querySelectorAll('[data-testid="course-group-header"]');
+      expect(headers.length).toBe(2);
+      expect(headers[0].textContent).toContain('Matemática');
+      expect(headers[1].textContent).toContain('Comunicación');
+    });
+  });
+
+  describe('row density', () => {
+    it('applies a hover affordance class to each content row', () => {
+      const { compiled, fixture } = setup();
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      const row = compiled.querySelector('[data-testid="builder-row"]')!;
+      expect(row.className).toContain('hover:bg-primary-50');
     });
   });
 

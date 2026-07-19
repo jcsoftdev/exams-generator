@@ -90,6 +90,28 @@ describe('ExamBuilderStore', () => {
     });
   });
 
+  describe('totalsByDifficulty / grandTotal', () => {
+    it('sums requested counts per difficulty and a grand total across all cells, live as counts change', () => {
+      const easy = buildCellKey('c1', 't1', Difficulty.Easy);
+      const medium = buildCellKey('c1', 't1', Difficulty.Medium);
+      const easyOtherTopic = buildCellKey('c2', 't2', Difficulty.Easy);
+
+      store.setRequested(easy, 6);
+      store.setRequested(medium, 3);
+      store.setRequested(easyOtherTopic, 4);
+
+      expect(store.totalsByDifficulty().get(Difficulty.Easy)).toBe(10);
+      expect(store.totalsByDifficulty().get(Difficulty.Medium)).toBe(3);
+      expect(store.totalsByDifficulty().get(Difficulty.Hard) ?? 0).toBe(0);
+      expect(store.grandTotal()).toBe(13);
+
+      store.setRequested(medium, 0);
+
+      expect(store.totalsByDifficulty().get(Difficulty.Medium) ?? 0).toBe(0);
+      expect(store.grandTotal()).toBe(10);
+    });
+  });
+
   describe('mergePreview (EB-R5 — critical)', () => {
     it('editing cell 2 and merging its B2 result leaves cell 1 cached questionIds byte-identical', () => {
       const cell1 = buildCellKey('c1', 't1', Difficulty.Easy);

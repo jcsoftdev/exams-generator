@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { forkJoin, map, switchMap } from 'rxjs';
 import { Difficulty } from '@exams-generator/shared';
@@ -36,6 +36,27 @@ const DIFFICULTY_LABELS: Record<Difficulty, string> = {
 function parseCellKey(key: CellKey): { courseId: string; topicId: string; difficulty: Difficulty } {
   const [courseId, topicId, difficulty] = key.split(':') as [string, string, Difficulty];
   return { courseId, topicId, difficulty };
+}
+
+/** One course's contiguous run of `ContentRow`s — powers the course subheading grouping (design doc §5.1's "árbol"). */
+interface RowGroup {
+  readonly courseId: string;
+  readonly courseName: string;
+  readonly rows: readonly ContentRow[];
+}
+
+/** Groups rows by course, preserving arrival order — `store.rows()` is already course-then-topic ordered (see `loadTopicsAndStock`). */
+function groupRowsByCourse(rows: readonly ContentRow[]): readonly RowGroup[] {
+  const groups: { courseId: string; courseName: string; rows: ContentRow[] }[] = [];
+  for (const row of rows) {
+    const lastGroup = groups[groups.length - 1];
+    if (lastGroup && lastGroup.courseId === row.courseId) {
+      lastGroup.rows.push(row);
+    } else {
+      groups.push({ courseId: row.courseId, courseName: row.courseName, rows: [row] });
+    }
+  }
+  return groups;
 }
 
 /**
@@ -97,6 +118,9 @@ export class ExamBuilderComponent {
 
   protected readonly generating = signal(false);
   protected readonly generateError = signal<string | null>(null);
+
+  /** Rows grouped by course, for the "read like the tree" course subheading (design doc §5.1). */
+  protected readonly groupedRows = computed<readonly RowGroup[]>(() => groupRowsByCourse(this.store.rows()));
 
   protected onGradeLevelChange(gradeLevel: GradeLevel | null): void {
     this.selectedGradeLevel.set(gradeLevel);
@@ -207,6 +231,29 @@ export class ExamBuilderComponent {
 
   protected statusFor(row: ContentRow, difficulty: Difficulty): CellStatus {
     return this.store.cellStatus(this.cellKey(row, difficulty));
+  }
+
+  /** Cell wrapper classes — shortage cells get an unmissable warning-stock tint + border (improvement 3). */
+  protected cellClasses(row: ContentRow, difficulty: Difficulty): string {
+    const base = 'px-3 py-2 align-top transition-colors';
+    return this.statusFor(row, difficulty) === 'short'
+      ? `${base} rounded-field border border-warn-text bg-warn-bg`
+      : base;
+  }
+
+  /** Muted (not alarming) styling for an untouched zero-stock "de 0" label vs. the normal "de N" (improvement 4). */
+  protected stockOkClasses(row: ContentRow, difficulty: Difficulty): string {
+    return this.stockFor(row, difficulty) === 0 ? 'text-sm text-n400' : 'text-sm text-n600';
+  }
+
+  /** Per-difficulty column total for the totals row/footer (improvement 2). */
+  protected totalFor(difficulty: Difficulty): number {
+    return this.store.totalsByDifficulty().get(difficulty) ?? 0;
+  }
+
+  /** Grand total across every requested cell (improvement 2). */
+  protected grandTotalValue(): number {
+    return this.store.grandTotal();
   }
 
   protected onRequestedChange(row: ContentRow, difficulty: Difficulty, rawValue: string): void {

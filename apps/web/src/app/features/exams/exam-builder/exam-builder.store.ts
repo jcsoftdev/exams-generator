@@ -67,6 +67,24 @@ export class ExamBuilderStore {
     return { current, total: cells.length };
   });
 
+  /** Live per-difficulty column totals for the "Totales por nivel" row (design doc §5.1). */
+  readonly totalsByDifficulty = computed<ReadonlyMap<Difficulty, number>>(() => {
+    const totals = new Map<Difficulty, number>();
+    for (const [key, count] of this.requested().entries()) {
+      if (count <= 0) {
+        continue;
+      }
+      const difficulty = key.split(':')[2] as Difficulty;
+      totals.set(difficulty, (totals.get(difficulty) ?? 0) + count);
+    }
+    return totals;
+  });
+
+  /** Grand total requested across every cell — sums `totalsByDifficulty`. */
+  readonly grandTotal = computed<number>(() =>
+    Array.from(this.requested().values()).reduce((sum, count) => sum + Math.max(count, 0), 0),
+  );
+
   setGradeLevel(gradeLevel: GradeLevel | null): void {
     this.gradeLevel.set(gradeLevel);
   }

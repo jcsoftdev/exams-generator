@@ -31,22 +31,97 @@
         </div>
       }
 
-      <!-- Desktop: full grid table (curso · tema rows x dificultad columns) -->
-      <div data-testid="content-table-desktop" class="hidden md:block">
-        <ui-table>
-          <th head class="border-b border-n200 px-3 py-2 font-semibold text-n700">Curso · Tema</th>
-          @for (difficulty of difficulties; track difficulty) {
-            <th head class="border-b border-n200 px-3 py-2 font-semibold text-n700">{{ difficultyLabels[difficulty] }}</th>
-          }
-          @for (row of store.rows(); track row.id) {
-            <tr body data-testid="builder-row">
-              <td class="px-3 py-2">{{ row.courseName }} · {{ row.topicName }}</td>
+      <!-- Desktop: full grid table (curso · tema rows x dificultad columns), grouped by course, sticky header -->
+      <div data-testid="content-table-desktop" class="hidden overflow-hidden rounded-card border border-n200 bg-white md:block">
+        <div class="max-h-[70vh] overflow-y-auto">
+          <ui-table>
+            <th head class="sticky top-0 z-10 border-b border-n200 bg-white px-3 py-2 font-semibold text-n700">Curso · Tema</th>
+            @for (difficulty of difficulties; track difficulty) {
+              <th head class="sticky top-0 z-10 border-b border-n200 bg-white px-3 py-2 text-right font-semibold text-n700">{{ difficultyLabels[difficulty] }}</th>
+            }
+            @for (group of groupedRows(); track group.courseId) {
+              <ng-container body>
+                <tr data-testid="course-group-header" class="bg-n100">
+                  <td colspan="4" class="px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-n700">{{ group.courseName }}</td>
+                </tr>
+                @for (row of group.rows; track row.id) {
+                  <tr data-testid="builder-row" class="border-b border-n100 odd:bg-white even:bg-n50 hover:bg-primary-50">
+                    <td class="px-3 py-2 text-n800">{{ row.topicName }}</td>
+                    @for (difficulty of difficulties; track difficulty) {
+                      <td
+                        data-testid="builder-cell"
+                        [attr.data-cell-key]="cellKey(row, difficulty)"
+                        [class]="cellClasses(row, difficulty)"
+                      >
+                        <ui-input
+                          type="number"
+                          [name]="'requested-' + cellKey(row, difficulty)"
+                          [value]="requestedStrFor(row, difficulty)"
+                          (valueChange)="onRequestedChange(row, difficulty, $event)"
+                        ></ui-input>
+
+                        @if (statusFor(row, difficulty) === 'ok') {
+                          <span data-testid="stock-ok" [class]="stockOkClasses(row, difficulty)">de {{ stockFor(row, difficulty) }}</span>
+                        } @else {
+                          <ui-tag data-testid="stock-warning" variant="warning-stock"
+                            >solo {{ stockFor(row, difficulty) }}
+                            <lucide-icon name="triangle-alert" data-testid="stock-warning-icon" [size]="14"></lucide-icon
+                          ></ui-tag>
+                          <div data-testid="bridge-to-ai" class="mt-2 flex flex-col gap-1">
+                            <ui-button
+                              data-testid="bridge-generate-ai"
+                              variant="ghost"
+                              (clicked)="goToAiGenerate(row, difficulty)"
+                            >
+                              <lucide-icon name="sparkles" [size]="16"></lucide-icon>
+                              Generar {{ requestedFor(row, difficulty) - stockFor(row, difficulty) }} con IA
+                            </ui-button>
+                            <ui-button data-testid="bridge-choose-bank" variant="ghost" (clicked)="goToBank()">Elegir del banco</ui-button>
+                            <ui-button data-testid="bridge-lower-count" variant="ghost" (clicked)="lowerToStock(row, difficulty)">Bajar la cantidad</ui-button>
+                          </div>
+                        }
+
+                        <div data-testid="preview-ids" [attr.data-cell-key]="cellKey(row, difficulty)" class="mt-1 text-xs text-n500">
+                          {{ previewFor(row, difficulty).join(',') }}
+                        </div>
+                      </td>
+                    }
+                  </tr>
+                }
+              </ng-container>
+            }
+            <tr body data-testid="totals-row" class="border-t-2 border-n300 bg-n50 font-semibold">
+              <td class="px-3 py-2 text-n700">Total</td>
               @for (difficulty of difficulties; track difficulty) {
-                <td
+                <td [attr.data-testid]="'total-' + difficulty" class="px-3 py-2 text-right text-n700">{{ totalFor(difficulty) }}</td>
+              }
+            </tr>
+          </ui-table>
+        </div>
+
+        <div data-testid="grand-total" class="border-t border-n200 bg-n50 px-3 py-2 text-right text-sm font-semibold text-n700">
+          Total general: {{ grandTotalValue() }}
+        </div>
+
+        <div data-testid="preview-panel" class="border-t border-n200 px-3 py-3 text-sm text-n600">
+          Vista previa: selección indicativa, la selección final se confirma al generar versiones.
+        </div>
+      </div>
+
+      <!-- Mobile: stacked per-topic cards grouped by course, totals summary + preview panel below the cards -->
+      <div data-testid="content-cards-mobile" class="md:hidden flex flex-col gap-4">
+        @for (group of groupedRows(); track group.courseId) {
+          <p class="px-1 text-xs font-semibold uppercase tracking-wide text-n600">{{ group.courseName }}</p>
+          @for (row of group.rows; track row.id) {
+            <ui-card data-testid="builder-card">
+              <p class="font-medium text-n900">{{ row.topicName }}</p>
+              @for (difficulty of difficulties; track difficulty) {
+                <div
                   data-testid="builder-cell"
                   [attr.data-cell-key]="cellKey(row, difficulty)"
-                  class="px-3 py-2 align-top"
+                  [class]="cellClasses(row, difficulty) + ' mt-2 border-t border-n100 pt-2'"
                 >
+                  <p class="text-sm font-medium text-n700">{{ difficultyLabels[difficulty] }}</p>
                   <ui-input
                     type="number"
                     [name]="'requested-' + cellKey(row, difficulty)"
@@ -55,7 +130,7 @@
                   ></ui-input>
 
                   @if (statusFor(row, difficulty) === 'ok') {
-                    <span data-testid="stock-ok" class="text-sm text-n600">de {{ stockFor(row, difficulty) }}</span>
+                    <span data-testid="stock-ok" [class]="stockOkClasses(row, difficulty)">de {{ stockFor(row, difficulty) }}</span>
                   } @else {
                     <ui-tag data-testid="stock-warning" variant="warning-stock"
                       >solo {{ stockFor(row, difficulty) }}
@@ -78,64 +153,20 @@
                   <div data-testid="preview-ids" [attr.data-cell-key]="cellKey(row, difficulty)" class="mt-1 text-xs text-n500">
                     {{ previewFor(row, difficulty).join(',') }}
                   </div>
-                </td>
-              }
-            </tr>
-          }
-        </ui-table>
-
-        <div data-testid="preview-panel" class="mt-4 text-sm text-n600">
-          Vista previa: selección indicativa, la selección final se confirma al generar versiones.
-        </div>
-      </div>
-
-      <!-- Mobile: stacked per-topic cards, preview panel below the cards -->
-      <div data-testid="content-cards-mobile" class="md:hidden flex flex-col gap-4">
-        @for (row of store.rows(); track row.id) {
-          <ui-card data-testid="builder-card">
-            <p class="font-medium text-n900">{{ row.courseName }} · {{ row.topicName }}</p>
-            @for (difficulty of difficulties; track difficulty) {
-              <div
-                data-testid="builder-cell"
-                [attr.data-cell-key]="cellKey(row, difficulty)"
-                class="mt-2 border-t border-n100 pt-2"
-              >
-                <p class="text-sm font-medium text-n700">{{ difficultyLabels[difficulty] }}</p>
-                <ui-input
-                  type="number"
-                  [name]="'requested-' + cellKey(row, difficulty)"
-                  [value]="requestedStrFor(row, difficulty)"
-                  (valueChange)="onRequestedChange(row, difficulty, $event)"
-                ></ui-input>
-
-                @if (statusFor(row, difficulty) === 'ok') {
-                  <span data-testid="stock-ok" class="text-sm text-n600">de {{ stockFor(row, difficulty) }}</span>
-                } @else {
-                  <ui-tag data-testid="stock-warning" variant="warning-stock"
-                    >solo {{ stockFor(row, difficulty) }}
-                    <lucide-icon name="triangle-alert" data-testid="stock-warning-icon" [size]="14"></lucide-icon
-                  ></ui-tag>
-                  <div data-testid="bridge-to-ai" class="mt-2 flex flex-col gap-1">
-                    <ui-button
-                      data-testid="bridge-generate-ai"
-                      variant="ghost"
-                      (clicked)="goToAiGenerate(row, difficulty)"
-                    >
-                      <lucide-icon name="sparkles" [size]="16"></lucide-icon>
-                      Generar {{ requestedFor(row, difficulty) - stockFor(row, difficulty) }} con IA
-                    </ui-button>
-                    <ui-button data-testid="bridge-choose-bank" variant="ghost" (clicked)="goToBank()">Elegir del banco</ui-button>
-                    <ui-button data-testid="bridge-lower-count" variant="ghost" (clicked)="lowerToStock(row, difficulty)">Bajar la cantidad</ui-button>
-                  </div>
-                }
-
-                <div data-testid="preview-ids" [attr.data-cell-key]="cellKey(row, difficulty)" class="mt-1 text-xs text-n500">
-                  {{ previewFor(row, difficulty).join(',') }}
                 </div>
-              </div>
-            }
-          </ui-card>
+              }
+            </ui-card>
+          }
         }
+
+        <ui-card data-testid="totals-mobile" [tone]="'muted'">
+          <div class="flex flex-wrap items-center justify-between gap-2 text-sm text-n700">
+            <span>Total: <strong>{{ grandTotalValue() }}</strong></span>
+            @for (difficulty of difficulties; track difficulty) {
+              <span>{{ difficultyLabels[difficulty] }}: <strong>{{ totalFor(difficulty) }}</strong></span>
+            }
+          </div>
+        </ui-card>
 
         <div data-testid="preview-panel" class="text-sm text-n600">
           Vista previa: selección indicativa, la selección final se confirma al generar versiones.
