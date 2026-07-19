@@ -16,6 +16,7 @@ import {
   Minimize2,
   Check,
   Sparkles,
+  Upload,
 } from 'lucide-angular';
 import { Difficulty } from '@exams-generator/shared';
 import { ButtonComponent } from '../../../ui/button/button.component';
@@ -119,6 +120,14 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
  * `reviseWithAi` populates it directly, no conversion. See
  * `normalizeCorrectAnswer` for why the edit form standardizes on index
  * instead of the legacy letter format.
+ *
+ * Task 10: the same edit form also has an OCR box (`ocr-upload`/`ocr-run`)
+ * that reads a photographed question via
+ * `AiService.extractQuestionFromImage(file)` and POPULATES the same
+ * structured signals `reviseWithAi` does, the same way (including
+ * `correctAnswer` as a direct index, no conversion) — it's the sibling
+ * entry point into the same review-before-save flow, and shares `aiError`/
+ * `ai-error` for failures.
  */
 @Component({
   selector: 'app-bank-list',
@@ -144,6 +153,7 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
       Minimize2,
       Check,
       Sparkles,
+      Upload,
     }).providers ?? [],
   ],
   templateUrl: './bank-list.component.html',
@@ -211,6 +221,11 @@ export class BankListComponent {
   protected readonly aiInstruction = signal('');
   protected readonly revising = signal(false);
   protected readonly aiError = signal<string | null>(null);
+
+  // --- Task 10: OCR extraction inside the same edit form -------------------------
+  /** The photographed-question file picked in `[data-testid="ocr-upload"]`, sent to `extractFromImage`. */
+  protected readonly ocrFile = signal<File | null>(null);
+  protected readonly extracting = signal(false);
 
   protected readonly courseOptions = computed<SelectOption<string>[]>(() =>
     this.courses().map((course) => ({ value: course.id, label: course.name })),
@@ -551,10 +566,13 @@ export class BankListComponent {
     this.resetAiRevise();
   }
 
+  /** Resets both AI-assist affordances in the edit form (Task 9's revise box AND Task 10's OCR box) — called on `startEdit`/`cancelEdit`. */
   private resetAiRevise(): void {
     this.aiInstruction.set('');
     this.revising.set(false);
     this.aiError.set(null);
+    this.ocrFile.set(null);
+    this.extracting.set(false);
   }
 
   private editAlternativesList(): string[] {
@@ -593,6 +611,45 @@ export class BankListComponent {
       error: () => {
         this.revising.set(false);
         this.aiError.set('No se pudo revisar la pregunta con IA. Inténtalo de nuevo.');
+      },
+    });
+  }
+
+  protected onOcrFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.ocrFile.set(input.files?.[0] ?? null);
+  }
+
+  /**
+   * Task 10: OCR extraction of a structured question from a photographed
+   * image — `AiService.extractQuestionFromImage`. POPULATES the SAME
+   * edit-form signals `reviseWithAi` does (`editBody`/`editAlternatives`/
+   * `editCorrectAnswer`), the same way: it never calls `saveEdit` itself, so
+   * the teacher still reviews the extracted text/alternatives/clave in the
+   * form before clicking Guardar. `alternatives` is joined one-per-line to
+   * match `editAlternativesList`'s parsing, and `AiRevisedQuestion.correctAnswer`
+   * is already a 0-based INDEX (same canonical format as `editCorrectAnswer`
+   * everywhere else) — populated DIRECTLY, no letter conversion. Failures
+   * reuse `aiError`/`ai-error` from Task 9.
+   */
+  protected extractFromImage(): void {
+    const file = this.ocrFile();
+    if (!file || this.extracting()) {
+      return;
+    }
+    this.extracting.set(true);
+    this.aiError.set(null);
+
+    this.aiService.extractQuestionFromImage(file).subscribe({
+      next: (extracted) => {
+        this.editBody.set(extracted.bodyTypst);
+        this.editAlternatives.set(extracted.alternatives.join('\n'));
+        this.editCorrectAnswer.set(extracted.correctAnswer);
+        this.extracting.set(false);
+      },
+      error: () => {
+        this.extracting.set(false);
+        this.aiError.set('No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.');
       },
     });
   }

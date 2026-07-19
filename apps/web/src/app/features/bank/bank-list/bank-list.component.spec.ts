@@ -74,6 +74,7 @@ function setup(
     getCoursesImpl?: () => unknown;
     getTopicsImpl?: (courseId: string) => unknown;
     reviseQuestionImpl?: (id: string, instruction: string) => unknown;
+    extractQuestionFromImageImpl?: (image: File) => unknown;
   } = {},
 ) {
   const listQuestions = vi.fn(over.listImpl ?? (() => of(QUESTIONS)));
@@ -94,6 +95,15 @@ function setup(
         of({
           bodyTypst: 'Enunciado revisado por IA',
           alternatives: ['Uno revisado', 'Dos revisado'],
+          correctAnswer: '1',
+        } satisfies AiRevisedQuestion)),
+  );
+  const extractQuestionFromImage = vi.fn(
+    over.extractQuestionFromImageImpl ??
+      ((_image: File) =>
+        of({
+          bodyTypst: 'Enunciado desde imagen',
+          alternatives: ['Alt A extraída', 'Alt B extraída'],
           correctAnswer: '1',
         } satisfies AiRevisedQuestion)),
   );
@@ -136,7 +146,7 @@ function setup(
         },
       },
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
-      { provide: AiService, useValue: { reviseQuestion } },
+      { provide: AiService, useValue: { reviseQuestion, extractQuestionFromImage } },
       { provide: Router, useValue: { navigate } },
     ],
   });
@@ -155,6 +165,7 @@ function setup(
     getCourses,
     getTopics,
     reviseQuestion,
+    extractQuestionFromImage,
     navigate,
   };
 }
@@ -652,6 +663,99 @@ describe('BankListComponent', () => {
       expect(compiled.querySelector('[data-testid="ai-error"]')).toBeFalsy();
 
       (compiled.querySelector('[data-testid="ai-revise"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="ai-error"]')).toBeTruthy();
+      const form = compiled.querySelector('[data-testid="panel-edit-form"]');
+      const textarea = form!.querySelector(
+        '[data-testid="edit-enunciado"]',
+      ) as HTMLTextAreaElement;
+      expect(textarea.value).toBe('Enunciado original');
+    });
+
+    it('extracts from an uploaded image: fills the edit form from the mocked OCR response', () => {
+      const { compiled, fixture, extractQuestionFromImage, updateQuestion } = setup({
+        getQuestionImpl: (id) =>
+          of(
+            makeQuestion({
+              id,
+              type: 'structured',
+              imageAssetId: null,
+              correctAnswer: 'a',
+              bodyTypst: 'Enunciado original',
+              alternatives: ['Uno', 'Dos'],
+            }),
+          ),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="panel-edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      const file = new File(['bytes'], 'foto.png', { type: 'image/png' });
+      const fileInput = compiled.querySelector('[data-testid="ocr-upload"]') as HTMLInputElement;
+      Object.defineProperty(fileInput, 'files', { value: [file], configurable: true });
+      fileInput.dispatchEvent(new Event('change'));
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="ocr-run"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(extractQuestionFromImage).toHaveBeenCalledWith(file);
+
+      const form = compiled.querySelector('[data-testid="panel-edit-form"]');
+      const textarea = form!.querySelector(
+        '[data-testid="edit-enunciado"]',
+      ) as HTMLTextAreaElement;
+      expect(textarea.value).toBe('Enunciado desde imagen');
+      const alternatives = form!.querySelector(
+        '[data-testid="edit-alternatives"]',
+      ) as HTMLTextAreaElement;
+      expect(alternatives.value).toBe('Alt A extraída\nAlt B extraída');
+      // correctAnswer '1' is ALREADY a 0-based index — populated directly, no letter conversion.
+      expect(
+        (fixture.componentInstance as unknown as { editCorrectAnswer: { (): string } })
+          .editCorrectAnswer(),
+      ).toBe('1');
+
+      // OCR extraction never auto-saves — the teacher still has to click Guardar.
+      expect(updateQuestion).not.toHaveBeenCalled();
+    });
+
+    it('shows ai-error when extractQuestionFromImage fails, without touching the edit form', () => {
+      const { compiled, fixture } = setup({
+        getQuestionImpl: (id) =>
+          of(
+            makeQuestion({
+              id,
+              type: 'structured',
+              imageAssetId: null,
+              bodyTypst: 'Enunciado original',
+              alternatives: ['Uno', 'Dos'],
+            }),
+          ),
+        extractQuestionFromImageImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="panel-edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      const file = new File(['bytes'], 'foto.png', { type: 'image/png' });
+      const fileInput = compiled.querySelector('[data-testid="ocr-upload"]') as HTMLInputElement;
+      Object.defineProperty(fileInput, 'files', { value: [file], configurable: true });
+      fileInput.dispatchEvent(new Event('change'));
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="ai-error"]')).toBeFalsy();
+
+      (compiled.querySelector('[data-testid="ocr-run"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
 
       expect(compiled.querySelector('[data-testid="ai-error"]')).toBeTruthy();

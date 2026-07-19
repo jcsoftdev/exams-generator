@@ -278,6 +278,34 @@
                       <p data-testid="ai-error" class="text-sm text-hard-text" role="alert">{{ aiError() }}</p>
                     }
                   </div>
+
+                  <!-- Task 10: OCR extraction — reads a photographed question and fills the form above for review, same as "Editar con IA". -->
+                  <div class="flex flex-col gap-2 rounded-field border border-dashed border-primary-300 bg-primary-50/40 p-3">
+                    <span class="flex items-center gap-1 text-xs font-medium text-primary-700">
+                      <lucide-angular name="upload" class="h-3.5 w-3.5"></lucide-angular>
+                      Leer desde imagen
+                    </span>
+                    <input
+                      data-testid="ocr-upload"
+                      type="file"
+                      accept="image/*"
+                      class="text-sm text-n700"
+                      (change)="onOcrFileSelected($event)"
+                    />
+                    <div data-testid="ocr-run" class="self-start">
+                      <ui-button
+                        variant="ghost"
+                        [loading]="extracting()"
+                        [disabled]="extracting() || !ocrFile()"
+                        (clicked)="extractFromImage()"
+                      >
+                        <span class="flex items-center gap-1">
+                          <lucide-angular name="upload" class="h-4 w-4"></lucide-angular>
+                          Leer desde imagen
+                        </span>
+                      </ui-button>
+                    </div>
+                  </div>
                 } @else {
                   <ui-input
                     label="Clave (respuesta correcta)"
