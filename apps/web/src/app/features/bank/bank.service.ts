@@ -8,6 +8,7 @@ import {
   CreateImageQuestionPayload,
   CreateStructuredQuestionPayload,
   PagedQuestions,
+  UpdateQuestionPayload,
 } from './bank.models';
 
 /**
@@ -106,6 +107,33 @@ export class BankService {
     return this.http.post<{ id: string }>(
       `${environment.apiBaseUrl}/bank/questions/structured`,
       payload,
+    );
+  }
+
+  /**
+   * Task 7: partial update for the inline question editor. See
+   * `UpdateQuestionPayload` — no `courseId`, move courses via `topicId`.
+   */
+  updateQuestion(id: string, patch: UpdateQuestionPayload): Observable<BankQuestion> {
+    return this.http.patch<BankQuestion>(
+      `${environment.apiBaseUrl}/bank/questions/${id}`,
+      patch,
+    );
+  }
+
+  /**
+   * Task 7: swaps the image behind an `image`-type question. Multipart
+   * field name is `"file"` — NOTE this differs from `uploadImageQuestion`'s
+   * `POST /bank/questions/image` (create), which uses `"image"`; the two
+   * endpoints intentionally use different field names on the backend.
+   */
+  replaceQuestionImage(id: string, image: File): Observable<{ id: string }> {
+    const formData = new FormData();
+    formData.set('file', image);
+
+    return this.http.post<{ id: string }>(
+      `${environment.apiBaseUrl}/bank/questions/${id}/image`,
+      formData,
     );
   }
 

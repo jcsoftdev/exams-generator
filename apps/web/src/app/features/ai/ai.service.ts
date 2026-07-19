@@ -3,6 +3,7 @@ import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import {
+  AiRevisedQuestion,
   DraftQuestion,
   EditDraftPayload,
   GenerateQuestionsPayload,
@@ -63,5 +64,32 @@ export class AiService {
     return this.http.get(`${environment.apiBaseUrl}/bank/questions/${id}/preview`, {
       responseType: 'blob',
     });
+  }
+
+  /**
+   * Task 7: AI-assisted revision of an existing bank question ("make this
+   * harder", etc.) — `POST /ai/questions/:id/revise`. See
+   * `AiRevisedQuestion` re: `correctAnswer` already being a 0-based index.
+   */
+  reviseQuestion(id: string, instruction: string): Observable<AiRevisedQuestion> {
+    return this.http.post<AiRevisedQuestion>(
+      `${environment.apiBaseUrl}/ai/questions/${id}/revise`,
+      { instruction },
+    );
+  }
+
+  /**
+   * Task 7: OCR extraction of a structured question from a photographed
+   * image — `POST /ai/questions/extract`. Multipart field name is `"file"`
+   * (same convention as `BankService.replaceQuestionImage`).
+   */
+  extractQuestionFromImage(image: File): Observable<AiRevisedQuestion> {
+    const formData = new FormData();
+    formData.set('file', image);
+
+    return this.http.post<AiRevisedQuestion>(
+      `${environment.apiBaseUrl}/ai/questions/extract`,
+      formData,
+    );
   }
 }

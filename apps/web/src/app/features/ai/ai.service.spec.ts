@@ -5,7 +5,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { Difficulty } from '@exams-generator/shared';
 import { AiService } from './ai.service';
 import { environment } from '../../../environments/environment';
-import { DraftQuestion, GenerateQuestionsResult } from './ai.models';
+import { AiRevisedQuestion, DraftQuestion, GenerateQuestionsResult } from './ai.models';
 
 describe('AiService', () => {
   let service: AiService;
@@ -171,6 +171,55 @@ describe('AiService', () => {
       req.flush(updated);
 
       expect(result).toEqual(updated);
+    });
+  });
+
+  describe('reviseQuestion', () => {
+    it('POSTs /ai/questions/:id/revise with the instruction and resolves with the revised question', () => {
+      const revised: AiRevisedQuestion = {
+        bodyTypst: 'revised body',
+        alternatives: ['a', 'b', 'c', 'd', 'e'],
+        correctAnswer: '0',
+      };
+      let result: AiRevisedQuestion | undefined;
+
+      service
+        .reviseQuestion('q1', 'más difícil')
+        .subscribe((response) => (result = response));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/q1/revise`);
+      expect(req.request.method).toBe('POST');
+      expect(req.request.body).toEqual({ instruction: 'más difícil' });
+      req.flush(revised);
+
+      expect(result).toEqual(revised);
+    });
+  });
+
+  describe('extractQuestionFromImage', () => {
+    it('POSTs a multipart FormData with the image under "file" and resolves with the extracted question', () => {
+      const image = new File(['fake-bytes'], 'question.png', { type: 'image/png' });
+      const extracted: AiRevisedQuestion = {
+        bodyTypst: 'extracted body',
+        alternatives: ['a', 'b', 'c', 'd', 'e'],
+        correctAnswer: '2',
+      };
+      let result: AiRevisedQuestion | undefined;
+
+      service
+        .extractQuestionFromImage(image)
+        .subscribe((response) => (result = response));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/extract`);
+      expect(req.request.method).toBe('POST');
+      expect(req.request.body).toBeInstanceOf(FormData);
+
+      const body = req.request.body as FormData;
+      expect(body.get('file')).toBe(image);
+
+      req.flush(extracted);
+
+      expect(result).toEqual(extracted);
     });
   });
 });

@@ -115,3 +115,19 @@ export interface CreateStructuredQuestionPayload {
   readonly bodyTypst: string;
   readonly alternatives: readonly string[];
 }
+
+/**
+ * Task 7: `PATCH /bank/questions/:id` request body for the inline question
+ * editor. NOTE: no `courseId` — the backend dropped it (see
+ * `EditDraftQuestionBody` in apps/api/src/modules/bank/bank.controller.ts):
+ * a question's course is derived from `topicId`, so moving a question to
+ * another course means PATCHing `topicId`, not `courseId`.
+ */
+export interface UpdateQuestionPayload {
+  readonly topicId?: string;
+  readonly difficulty?: Difficulty;
+  readonly gradeLevel?: string;
+  readonly correctAnswer?: string;
+  readonly bodyTypst?: string;
+  readonly alternatives?: readonly string[];
+}

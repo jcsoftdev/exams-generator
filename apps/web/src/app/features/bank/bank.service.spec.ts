@@ -219,6 +219,55 @@ describe('BankService', () => {
     });
   });
 
+  describe('updateQuestion', () => {
+    it('PATCHes /bank/questions/:id with the patch and resolves with the updated question', () => {
+      const updated: BankQuestion = {
+        id: 'q1',
+        tenantId: null,
+        courseId: 'course-1',
+        topicId: 'topic-1',
+        difficulty: Difficulty.Hard,
+        gradeLevel: 'pre',
+        correctAnswer: 'a',
+        imageAssetId: null,
+      };
+      let result: BankQuestion | undefined;
+
+      service
+        .updateQuestion('q1', { difficulty: Difficulty.Hard })
+        .subscribe((response) => (result = response));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/bank/questions/q1`);
+      expect(req.request.method).toBe('PATCH');
+      expect(req.request.body).toEqual({ difficulty: Difficulty.Hard });
+      req.flush(updated);
+
+      expect(result).toEqual(updated);
+    });
+  });
+
+  describe('replaceQuestionImage', () => {
+    it('POSTs a multipart FormData with the image under "file" and resolves with the id', () => {
+      const image = new File(['fake-bytes'], 'question.png', { type: 'image/png' });
+      let result: { id: string } | undefined;
+
+      service
+        .replaceQuestionImage('q1', image)
+        .subscribe((response) => (result = response));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/bank/questions/q1/image`);
+      expect(req.request.method).toBe('POST');
+      expect(req.request.body).toBeInstanceOf(FormData);
+
+      const body = req.request.body as FormData;
+      expect(body.get('file')).toBe(image);
+
+      req.flush({ id: 'q1' });
+
+      expect(result).toEqual({ id: 'q1' });
+    });
+  });
+
   describe('fetchQuestionImage', () => {
     it('GETs /assets/:id as a blob (authInterceptor attaches the Bearer header; <img src> cannot)', () => {
       let result: Blob | undefined;

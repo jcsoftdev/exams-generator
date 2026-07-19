@@ -109,3 +109,18 @@ export interface EditDraftPayload {
   readonly correctAnswer?: string;
   readonly figureCode?: string;
 }
+
+/**
+ * Task 7: response shape shared by `POST /ai/questions/:id/revise` and
+ * `POST /ai/questions/extract` — mirrors `GeneratedQuestion`
+ * (apps/api/src/modules/ai/ports/question-generator.port.ts). The backend
+ * already converts the model's letter answer ("a"-"e") to a 0-based INDEX
+ * string ("0"-"4") via `correctAnswerLetterToIndex` before responding, so
+ * `correctAnswer` here is an index, not a letter — do not re-convert on
+ * the client.
+ */
+export interface AiRevisedQuestion {
+  readonly bodyTypst: string;
+  readonly alternatives: readonly string[];
+  readonly correctAnswer: string;
+}
