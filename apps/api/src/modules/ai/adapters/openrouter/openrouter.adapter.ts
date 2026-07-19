@@ -8,7 +8,12 @@ import {
   QuestionGeneratorPort,
   ReviseQuestionInput,
 } from "../../domain/ports/question-generator.port";
-import { buildOpenRouterRequestBody } from "./openrouter-request-builder";
+import {
+  buildOpenRouterExtractRequestBody,
+  buildOpenRouterRequestBody,
+  buildOpenRouterReviseRequestBody,
+  OpenRouterRequestBody,
+} from "./openrouter-request-builder";
 import { parseGeneratedQuestionContent } from "./openrouter-response-parser";
 import { validateGeneratedQuestionShape } from "./openrouter-response-validator";
 
@@ -79,10 +84,50 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
   }
 
   async generate(input: GenerateQuestionInput): Promise<GeneratedQuestion> {
+    return this.runWithRetries((previousError) =>
+      buildOpenRouterRequestBody(this.config.model, input, { previousError }),
+    );
+  }
+
+  /**
+   * Same retry/parse/validate pipeline as `generate()` — only the request
+   * body differs: the user message carries the CURRENT question (statement +
+   * alternatives + correct-answer LETTER, per the port contract) plus the
+   * human editor's instruction, and asks for the SAME JSON schema. Returns
+   * `correctAnswer` as a LETTER — this adapter never converts letter/index,
+   * that's the calling service's job.
+   */
+  async reviseQuestion(input: ReviseQuestionInput): Promise<GeneratedQuestion> {
+    return this.runWithRetries((previousError) =>
+      buildOpenRouterReviseRequestBody(this.config.model, input, { previousError }),
+    );
+  }
+
+  /**
+   * Same retry/parse/validate pipeline as `generate()` — the request is a
+   * MULTIMODAL chat message with an `image_url` data-URI part built from the
+   * raw image bytes, asking for the SAME JSON schema.
+   */
+  async extractFromImage(input: ExtractQuestionInput): Promise<GeneratedQuestion> {
+    return this.runWithRetries((previousError) =>
+      buildOpenRouterExtractRequestBody(this.config.model, input, { previousError }),
+    );
+  }
+
+  /**
+   * Shared retry loop for `generate`/`reviseQuestion`/`extractFromImage`:
+   * builds a fresh request body for each attempt (the previous attempt's
+   * validation error, if any, is fed back into the prompt), and only ever
+   * resolves with a fully parsed+validated `GeneratedQuestion` — per design
+   * doc §7 this port NEVER returns unvalidated content.
+   */
+  private async runWithRetries(
+    buildRequestBody: (previousError: string | undefined) => OpenRouterRequestBody,
+  ): Promise<GeneratedQuestion> {
     let lastOutcome: AttemptOutcome | undefined;
 
     for (let attemptNumber = 1; attemptNumber <= MAX_ATTEMPTS; attemptNumber++) {
-      const outcome = await this.attempt(input, lastOutcome?.error);
+      const outcome = await this.attempt(buildRequestBody(lastOutcome?.error));
       if (outcome.ok && outcome.question) {
         return outcome.question;
       }
@@ -95,26 +140,7 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
     );
   }
 
-  // TODO(task: revise/extract OpenRouter impl): stubbed to satisfy
-  // `QuestionGeneratorPort` — real implementation is a later task.
-  async reviseQuestion(_input: ReviseQuestionInput): Promise<GeneratedQuestion> {
-    throw new Error("OpenRouterAdapter.reviseQuestion is not implemented yet");
-  }
-
-  // TODO(task: revise/extract OpenRouter impl): stubbed to satisfy
-  // `QuestionGeneratorPort` — real implementation is a later task.
-  async extractFromImage(_input: ExtractQuestionInput): Promise<GeneratedQuestion> {
-    throw new Error("OpenRouterAdapter.extractFromImage is not implemented yet");
-  }
-
-  private async attempt(
-    input: GenerateQuestionInput,
-    previousError: string | undefined,
-  ): Promise<AttemptOutcome> {
-    const requestBody = buildOpenRouterRequestBody(this.config.model, input, {
-      previousError,
-    });
-
+  private async attempt(requestBody: OpenRouterRequestBody): Promise<AttemptOutcome> {
     const response = await this.httpClient(this.baseUrl, {
       method: "POST",
       headers: {
