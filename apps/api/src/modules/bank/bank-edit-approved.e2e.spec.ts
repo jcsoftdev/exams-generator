@@ -7,7 +7,7 @@ import request from "supertest";
 import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
-import { courses, questions, tenants, topics, users } from "../../db/schema";
+import { assets, courses, questions, tenants, topics, users } from "../../db/schema";
 import { TokenService } from "../auth/token.service";
 
 /**
@@ -33,6 +33,7 @@ describe("Bank module — edit approved questions + taxonomy (e2e)", () => {
   let tenantBToken: string;
 
   const createdQuestionIds: string[] = [];
+  const createdAssetIds: string[] = [];
 
   beforeAll(async () => {
     await runMigrations();
@@ -98,6 +99,9 @@ describe("Bank module — edit approved questions + taxonomy (e2e)", () => {
     if (createdQuestionIds.length > 0) {
       await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
     }
+    if (createdAssetIds.length > 0) {
+      await db.delete(assets).where(inArray(assets.id, createdAssetIds));
+    }
     await db.delete(users).where(inArray(users.id, [tenantATeacherId, tenantBTeacherId]));
     await db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]));
     await db.delete(topics).where(inArray(topics.id, [topicId]));
@@ -136,6 +140,29 @@ describe("Bank module — edit approved questions + taxonomy (e2e)", () => {
     return response.body.id;
   }
 
+  async function createImageQuestion(token: string): Promise<string> {
+    const response = await request(app.getHttpServer())
+      .post("/bank/questions/image")
+      .set("Authorization", `Bearer ${token}`)
+      .field("courseId", courseId)
+      .field("topicId", topicId)
+      .field("difficulty", Difficulty.Easy)
+      .field("gradeLevel", "primaria_1")
+      .field("correctAnswer", "b")
+      .attach("image", Buffer.from("fake-png-bytes"), "q.png")
+      .expect(201);
+    const id = response.body.id as string;
+    createdQuestionIds.push(id);
+    const [row] = await db
+      .select({ imageAssetId: questions.imageAssetId })
+      .from(questions)
+      .where(inArray(questions.id, [id]));
+    if (row?.imageAssetId) {
+      createdAssetIds.push(row.imageAssetId);
+    }
+    return id;
+  }
+
   async function createArchivedQuestion(token: string): Promise<string> {
     const id = await createApprovedQuestion(token);
     await request(app.getHttpServer())
@@ -156,6 +183,27 @@ describe("Bank module — edit approved questions + taxonomy (e2e)", () => {
     const fetched = await getByIdRequest(tenantAToken, id).expect(200);
     expect(fetched.body.bodyTypst).toBe("Nuevo enunciado $2+2$");
     expect(fetched.body.difficulty).toBe("hard");
+  });
+
+  it("edits an OWN image question's difficulty + correctAnswer LETTER, reflected on a follow-up GET (no Typst compile)", async () => {
+    const id = await createImageQuestion(tenantAToken);
+
+    const edited = await editRequest(tenantAToken, id)
+      .send({ difficulty: "hard", correctAnswer: "c" })
+      .expect(200);
+    expect(edited.body.status).toBe("approved");
+    expect(edited.body.type).toBe("image");
+
+    const fetched = await getByIdRequest(tenantAToken, id).expect(200);
+    expect(fetched.body.difficulty).toBe("hard");
+    // Image questions keep a LETTER correctAnswer (the marked option), never a 0-based index.
+    expect(fetched.body.correctAnswer).toBe("c");
+  });
+
+  it("404 when editing an image question belonging to another tenant", async () => {
+    const id = await createImageQuestion(tenantAToken);
+
+    await editRequest(tenantBToken, id).send({ difficulty: "hard", correctAnswer: "d" }).expect(404);
   });
 
   it("404 when editing an approved question belonging to another tenant", async () => {

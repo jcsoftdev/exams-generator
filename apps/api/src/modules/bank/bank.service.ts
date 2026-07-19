@@ -379,7 +379,9 @@ export class BankService {
    * update and the taxonomy update are then persisted together via
    * `repository.updateStructuredQuestionAndTaxonomy`, in a single DB
    * transaction, so a taxonomy failure can never leave a partial (content
-   * committed, taxonomy not) edit behind.
+   * committed, taxonomy not) edit behind. IMAGE questions take a different
+   * path (`editImageQuestion`): no `alternatives`, a LETTER `correctAnswer`,
+   * and no Typst compile (there is no statement to compile).
    */
   async editQuestion(
     user: AuthTokenPayload,
@@ -387,8 +389,8 @@ export class BankService {
     dto: EditQuestionDto,
   ): Promise<QuestionListItem> {
     const question = await this.requireManageableQuestion(user, id);
-    if (question.type !== "structured") {
-      throw new BadRequestException("Only structured questions can be edited");
+    if (question.type === "image") {
+      return this.editImageQuestion(user, id, dto);
     }
 
     const validation = validateUpdateStructuredQuestionInput(dto, {
@@ -452,6 +454,58 @@ export class BankService {
     }
 
     this.previewCache.delete(id);
+    return updated;
+  }
+
+  /**
+   * Image-question branch of `editQuestion` (design §2/§3.1: BOTH structured
+   * and image questions are editable). An image question has NO
+   * `alternatives`, and its `correctAnswer` is the LETTER of the marked
+   * option (a/b/c/d) — NOT a 0-based index — so the structured-content
+   * validation + Typst compile that guard structured edits do NOT apply here
+   * (there is no `bodyTypst` to compile). Only taxonomy
+   * (`topicId`/`difficulty`/`gradeLevel`) and the `correctAnswer` letter are
+   * editable; any `bodyTypst`/`alternatives` in the DTO are ignored. All the
+   * guards already ran in `requireManageableQuestion` (tenant 404, central
+   * 403, archived 409). Taxonomy is validated the same way as the structured
+   * path (400 on bad value; FK-existence check on `topicId` before any write).
+   */
+  private async editImageQuestion(
+    user: AuthTokenPayload,
+    id: string,
+    dto: EditQuestionDto,
+  ): Promise<QuestionListItem> {
+    if (dto.correctAnswer !== undefined && dto.correctAnswer.trim().length === 0) {
+      throw new BadRequestException("correctAnswer must not be empty");
+    }
+
+    const taxonomyValidation = validateQuestionTaxonomy({
+      topicId: dto.topicId,
+      difficulty: dto.difficulty,
+      gradeLevel: dto.gradeLevel,
+    });
+
+    if (!taxonomyValidation.ok) {
+      throw new BadRequestException(taxonomyValidation.errors);
+    }
+
+    if (dto.topicId !== undefined) {
+      const topicExists = await this.repository.topicExists(dto.topicId);
+      if (!topicExists) {
+        throw new BadRequestException(`topicId does not exist: ${dto.topicId}`);
+      }
+    }
+
+    const updated = await this.repository.updateImageQuestionTaxonomyAndCorrectAnswer(id, user.tenantId, {
+      correctAnswer: dto.correctAnswer,
+      topicId: dto.topicId,
+      difficulty: dto.difficulty,
+      gradeLevel: dto.gradeLevel,
+    });
+    if (!updated) {
+      throw new NotFoundException(`Question not found: ${id}`);
+    }
+
     return updated;
   }
 

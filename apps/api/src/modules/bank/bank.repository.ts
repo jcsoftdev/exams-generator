@@ -509,6 +509,74 @@ export class BankRepository {
   }
 
   /**
+   * Edits an IMAGE question's taxonomy (`topicId`/`difficulty`/`gradeLevel`)
+   * and/or its `correctAnswer` — the LETTER of the marked option (a/b/c/d),
+   * NOT a 0-based index (image questions have no `alternatives` to index
+   * into). Deliberately never touches `bodyTypst`/`alternatives`/`figureCode`
+   * (all null on an image row) or the image asset itself (that is a separate
+   * `POST /:id/image` flow). Only sets the fields actually provided in the
+   * patch, tenant-visibility-scoped like every other write here. Returns the
+   * refreshed `QuestionListItem` (course re-derived from `topics.course_id`),
+   * or `undefined` if no row matched — the caller turns that into a 404.
+   */
+  async updateImageQuestionTaxonomyAndCorrectAnswer(
+    id: string,
+    currentTenantId: string | null,
+    patch: { correctAnswer?: string; topicId?: string; difficulty?: string; gradeLevel?: string },
+  ): Promise<QuestionListItem | undefined> {
+    const visibility: SQL = currentTenantId
+      ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
+      : (isNull(questions.tenantId) as SQL);
+
+    const set: Partial<{ correctAnswer: string; topicId: string; difficulty: Difficulty; gradeLevel: string }> = {};
+    if (patch.correctAnswer !== undefined) set.correctAnswer = patch.correctAnswer;
+    if (patch.topicId !== undefined) set.topicId = patch.topicId;
+    if (patch.difficulty !== undefined) set.difficulty = patch.difficulty as Difficulty;
+    if (patch.gradeLevel !== undefined) set.gradeLevel = patch.gradeLevel;
+
+    const returning = {
+      id: questions.id,
+      tenantId: questions.tenantId,
+      topicId: questions.topicId,
+      difficulty: questions.difficulty,
+      gradeLevel: questions.gradeLevel,
+      correctAnswer: questions.correctAnswer,
+      type: questions.type,
+      status: questions.status,
+      aiGenerated: questions.aiGenerated,
+      imageAssetId: questions.imageAssetId,
+      bodyTypst: questions.bodyTypst,
+      alternatives: questions.alternatives,
+      figureCode: questions.figureCode,
+    };
+
+    // Nothing to change: still verify the row exists+is visible (so the caller
+    // gets a truthful 404 vs a silent success) by reading it back.
+    const [row] =
+      Object.keys(set).length > 0
+        ? await db
+            .update(questions)
+            .set(set)
+            .where(and(eq(questions.id, id), visibility))
+            .returning(returning)
+        : await db
+            .select(returning)
+            .from(questions)
+            .where(and(eq(questions.id, id), visibility));
+
+    if (!row) {
+      return undefined;
+    }
+
+    const [topicRow] = await db
+      .select({ courseId: topics.courseId })
+      .from(topics)
+      .where(eq(topics.id, row.topicId));
+
+    return { ...row, courseId: topicRow?.courseId ?? "" };
+  }
+
+  /**
    * Swaps an image question's backing asset (Task 2, question editing):
    * inserts a NEW `assets` row (tenant-scoped, same as `createImageQuestion`)
    * then points the question's `imageAssetId` at it, in a single transaction
