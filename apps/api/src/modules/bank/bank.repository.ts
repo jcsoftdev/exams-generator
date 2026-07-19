@@ -79,6 +79,13 @@ export interface QuestionListPagination {
   readonly pageSize: number;
 }
 
+/** One `{difficulty, status}` bucket from `countByDifficultyAndStatus` — feeds the dashboard's bank card. */
+export interface BankStatusDifficultyCount {
+  readonly difficulty: Difficulty;
+  readonly status: QuestionStatus;
+  readonly total: number;
+}
+
 /**
  * Drizzle-backed persistence for the bank module. Kept as a thin class
  * (no repository port/interface) — unlike `StoragePort`, nothing in this
@@ -637,5 +644,26 @@ export class BankRepository {
    */
   async deleteQuestion(id: string): Promise<void> {
     await db.delete(questions).where(eq(questions.id, id));
+  }
+
+  /**
+   * Dashboard aggregate (design doc §2): one grouped count per
+   * {difficulty, status} pair, visible to `tenantId` — SAME visibility
+   * predicate as `listQuestions`/`findQuestionById` (`tenant_id IS NULL OR
+   * tenant_id = :current`, or `IS NULL` only for platform staff). Mirrors
+   * `ExamsRepository.countStock()`'s `groupBy` + `count()` shape.
+   */
+  async countByDifficultyAndStatus(tenantId: string | null): Promise<BankStatusDifficultyCount[]> {
+    const visibility: SQL = tenantId
+      ? (or(isNull(questions.tenantId), eq(questions.tenantId, tenantId)) as SQL)
+      : (isNull(questions.tenantId) as SQL);
+
+    const rows = await db
+      .select({ difficulty: questions.difficulty, status: questions.status, total: count() })
+      .from(questions)
+      .where(visibility)
+      .groupBy(questions.difficulty, questions.status);
+
+    return rows.map((row) => ({ difficulty: row.difficulty, status: row.status, total: Number(row.total) }));
   }
 }

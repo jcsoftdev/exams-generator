@@ -515,4 +515,93 @@ describe("BankRepository", () => {
       expect(ids).not.toContain(wrongDifficulty);
     });
   });
+
+  describe("countByDifficultyAndStatus() — dashboard aggregate", () => {
+    // Every assertion below is DELTA-based (before/after the same query),
+    // never a raw total — this file runs against a SHARED dev Postgres, so
+    // other spec files' central (tenantId=null) rows are always present and
+    // would make an absolute-count assertion flaky.
+
+    it("includes a newly created own-tenant question in the caller's aggregate", async () => {
+      const before = await repository.countByDifficultyAndStatus(tenantAId);
+      const beforeTotal =
+        before.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
+
+      await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, difficulty: Difficulty.Hard });
+
+      const after = await repository.countByDifficultyAndStatus(tenantAId);
+      const afterTotal =
+        after.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
+
+      expect(afterTotal).toBe(beforeTotal + 1);
+    });
+
+    it("includes a newly created central question in every tenant's aggregate", async () => {
+      const before = await repository.countByDifficultyAndStatus(tenantAId);
+      const beforeTotal =
+        before.find((g) => g.difficulty === Difficulty.Easy && g.status === "approved")?.total ?? 0;
+
+      await createQuestion({ tenantId: null, createdBy: centralUserId, difficulty: Difficulty.Easy });
+
+      const after = await repository.countByDifficultyAndStatus(tenantAId);
+      const afterTotal =
+        after.find((g) => g.difficulty === Difficulty.Easy && g.status === "approved")?.total ?? 0;
+
+      expect(afterTotal).toBe(beforeTotal + 1);
+    });
+
+    it("excludes another tenant's private question from the caller's aggregate", async () => {
+      const before = await repository.countByDifficultyAndStatus(tenantAId);
+      const beforeTotal =
+        before.find((g) => g.difficulty === Difficulty.Medium && g.status === "approved")?.total ?? 0;
+
+      await createQuestion({ tenantId: tenantBId, createdBy: tenantBUserId, difficulty: Difficulty.Medium });
+
+      const after = await repository.countByDifficultyAndStatus(tenantAId);
+      const afterTotal =
+        after.find((g) => g.difficulty === Difficulty.Medium && g.status === "approved")?.total ?? 0;
+
+      expect(afterTotal).toBe(beforeTotal);
+    });
+
+    it("groups by status independently of difficulty (a draft never counts as approved)", async () => {
+      const before = await repository.countByDifficultyAndStatus(tenantAId);
+      const beforeDraft =
+        before.find((g) => g.difficulty === Difficulty.Medium && g.status === "draft")?.total ?? 0;
+
+      const draft = await repository.createStructuredQuestion({
+        tenantId: tenantAId,
+        topicId,
+        difficulty: Difficulty.Medium,
+        gradeLevel: "primaria_1",
+        bodyTypst: "$x + 1 = 2$",
+        alternatives: ["1", "2"],
+        correctAnswer: "0",
+        figureCode: undefined,
+        createdBy: tenantAUserId,
+        status: "draft",
+      });
+      createdQuestionIds.push(draft.id);
+
+      const after = await repository.countByDifficultyAndStatus(tenantAId);
+      const afterDraft =
+        after.find((g) => g.difficulty === Difficulty.Medium && g.status === "draft")?.total ?? 0;
+
+      expect(afterDraft).toBe(beforeDraft + 1);
+    });
+
+    it("scopes to central-only (tenant_id IS NULL) when tenantId is null (platform staff) — a tenant-private question never leaks in", async () => {
+      const before = await repository.countByDifficultyAndStatus(null);
+      const beforeTotal =
+        before.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
+
+      await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, difficulty: Difficulty.Hard });
+
+      const after = await repository.countByDifficultyAndStatus(null);
+      const afterTotal =
+        after.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
+
+      expect(afterTotal).toBe(beforeTotal);
+    });
+  });
 });
