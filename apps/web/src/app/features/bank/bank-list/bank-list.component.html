@@ -224,8 +224,6 @@
                   [value]="editGradeLevel()"
                   (valueChange)="editGradeLevel.set($event)"
                 ></ui-select>
-                <ui-input label="Clave (respuesta correcta)" [value]="editCorrectAnswer()" (valueChange)="editCorrectAnswer.set($event)"></ui-input>
-
                 @if (q.type === 'structured') {
                   <label class="text-sm text-n700">Enunciado
                     <textarea
@@ -245,6 +243,15 @@
                       (input)="editAlternatives.set($any($event.target).value)"
                     ></textarea>
                   </label>
+                  <div data-testid="edit-correct-answer">
+                    <ui-select
+                      label="Clave (respuesta correcta)"
+                      placeholder="Elige la alternativa correcta"
+                      [options]="editCorrectAnswerOptions()"
+                      [value]="editCorrectAnswer()"
+                      (valueChange)="editCorrectAnswer.set($event ?? '')"
+                    ></ui-select>
+                  </div>
 
                   <!-- Task 9: AI instruction box — never auto-saves, only fills the form above for review. -->
                   <div class="flex flex-col gap-2 rounded-field border border-dashed border-primary-300 bg-primary-50/40 p-3">
@@ -271,6 +278,12 @@
                       <p data-testid="ai-error" class="text-sm text-hard-text" role="alert">{{ aiError() }}</p>
                     }
                   </div>
+                } @else {
+                  <ui-input
+                    label="Clave (respuesta correcta)"
+                    [value]="editCorrectAnswer()"
+                    (valueChange)="editCorrectAnswer.set($event)"
+                  ></ui-input>
                 }
 
                 @if (editShowUsedWarning()) {

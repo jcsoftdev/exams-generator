@@ -113,9 +113,12 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
  * `AiService.reviseQuestion(selected().id, instruction)` and, on success,
  * POPULATES `editBody`/`editAlternatives`/`editCorrectAnswer` — it never
  * calls `saveEdit` itself, so the AI never auto-saves; the teacher still
- * reviews the suggestion in the form and clicks Guardar. See
- * `reviseWithAi`/`indexToLetter` for the 0-based-index -> letter conversion
- * (`AiRevisedQuestion.correctAnswer` is an index, the edit form uses a letter).
+ * reviews the suggestion in the form and clicks Guardar.
+ * `AiRevisedQuestion.correctAnswer` is already a 0-based index — same
+ * canonical format `editCorrectAnswer` uses everywhere else — so
+ * `reviseWithAi` populates it directly, no conversion. See
+ * `normalizeCorrectAnswer` for why the edit form standardizes on index
+ * instead of the legacy letter format.
  */
 @Component({
   selector: 'app-bank-list',
@@ -190,6 +193,13 @@ export class BankListComponent {
   protected readonly editTopicId = signal('');
   protected readonly editDifficulty = signal<Difficulty | null>(null);
   protected readonly editGradeLevel = signal<string | null>(null);
+  /**
+   * Canonical format is a 0-based INDEX string ("0".."4") into
+   * `editAlternatives` — the backend's format, see `normalizeCorrectAnswer`.
+   * `startEdit` normalizes legacy letter rows into an index when seeding
+   * this; `reviseWithAi` populates it directly from the AI response (already
+   * an index); `saveEdit` sends it as-is, no per-save conversion.
+   */
   protected readonly editCorrectAnswer = signal('');
   protected readonly editBody = signal('');
   protected readonly editAlternatives = signal('');
@@ -210,6 +220,18 @@ export class BankListComponent {
     this.topics()
       .filter((topic) => topic.courseId === this.editCourseId())
       .map((topic) => ({ value: topic.id, label: topic.name })),
+  );
+  /**
+   * Clave (respuesta correcta) options for the structured edit form's
+   * `<select>`: one option per line of `editAlternatives`, lettered a/b/c…
+   * for the label but valued by 0-based INDEX (the canonical
+   * `editCorrectAnswer` format — see `normalizeCorrectAnswer`).
+   */
+  protected readonly editCorrectAnswerOptions = computed<SelectOption<string>[]>(() =>
+    this.editAlternativesList().map((text, index) => ({
+      value: String(index),
+      label: `${String.fromCharCode(97 + index)}) ${text}`,
+    })),
   );
   /** Amber used-in-exams warning (edit form only): only for an `approved` question already referenced by at least one exam. */
   protected readonly editShowUsedWarning = computed(() => {
@@ -430,9 +452,10 @@ export class BankListComponent {
   /** Alternatives of a structured question, lettered a/b/c…, with the `correctAnswer` one flagged. Empty for image questions. */
   protected alternativeRows(question: BankQuestion): { letter: string; text: string; correct: boolean }[] {
     const alternatives = question.alternatives ?? [];
+    const correctIndex = normalizeCorrectAnswer(question.correctAnswer);
     return alternatives.map((text, index) => {
       const letter = String.fromCharCode(97 + index);
-      return { letter, text, correct: letter === question.correctAnswer.toLowerCase() };
+      return { letter, text, correct: String(index) === correctIndex };
     });
   }
 
@@ -487,7 +510,7 @@ export class BankListComponent {
     this.editTopicId.set(question.topicId);
     this.editDifficulty.set(question.difficulty);
     this.editGradeLevel.set(question.gradeLevel);
-    this.editCorrectAnswer.set(question.correctAnswer);
+    this.editCorrectAnswer.set(normalizeCorrectAnswer(question.correctAnswer));
     this.editBody.set(question.bodyTypst ?? '');
     this.editAlternatives.set((question.alternatives ?? []).join('\n'));
     this.discardEditImage();
@@ -564,7 +587,7 @@ export class BankListComponent {
       next: (revised) => {
         this.editBody.set(revised.bodyTypst);
         this.editAlternatives.set(revised.alternatives.join('\n'));
-        this.editCorrectAnswer.set(indexToLetter(revised.correctAnswer));
+        this.editCorrectAnswer.set(revised.correctAnswer);
         this.revising.set(false);
       },
       error: () => {
@@ -674,10 +697,19 @@ export class BankListComponent {
   }
 }
 
-/** `AiRevisedQuestion.correctAnswer` is a 0-based index ("0"-"4"); the edit form (and `alternativeRows`) use a letter (a/b/c…). */
-function indexToLetter(index: string): string {
-  const parsed = Number(index);
-  return Number.isFinite(parsed) && parsed >= 0 ? String.fromCharCode(97 + parsed) : '';
+/**
+ * Normalizes a stored `correctAnswer` to a 0-based index string. The backend
+ * (`PATCH /bank/questions/:id`, `AiRevisedQuestion`) treats structured
+ * `correctAnswer` as a 0-based INDEX into `alternatives` ("0".."4") and 400s
+ * on anything else — but legacy rows (seeded/manually-created) store a
+ * LETTER (a..e) instead. The frontend standardizes on INDEX everywhere
+ * (`alternativeRows`, the edit form) and normalizes legacy letters
+ * defensively here rather than migrating existing data. Non-letter values
+ * (already an index, or free-text answers on image questions) pass through
+ * unchanged.
+ */
+function normalizeCorrectAnswer(value: string): string {
+  return /^[a-e]$/i.test(value) ? String(value.toLowerCase().charCodeAt(0) - 97) : value;
 }
 
 function toggleInSet(current: ReadonlySet<string>, id: string): ReadonlySet<string> {

@@ -430,6 +430,32 @@ describe('BankListComponent', () => {
       expect(correctRow?.className).toContain('bg-easy-bg');
     });
 
+    it('marks the correct alternative via a 0-based INDEX correctAnswer (backend/AI format), not a letter', () => {
+      const { compiled, fixture } = setup({
+        getQuestionImpl: (id) =>
+          of(
+            makeQuestion({
+              id,
+              type: 'structured',
+              imageAssetId: null,
+              correctAnswer: '1', // index 1 -> second alternative ("150 km")
+              bodyTypst: 'Si un tren viaja a 60 km/h, ¿cuánto recorre en 2.5 horas?',
+              alternatives: ['120 km', '150 km', '180 km', '90 km'],
+            }),
+          ),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      const alts = compiled.querySelector('[data-testid="panel-alternatives"]');
+      const correctRow = Array.from(alts!.querySelectorAll('li')).find((li) => li.textContent?.includes('150 km'));
+      expect(correctRow?.className).toContain('bg-easy-bg');
+      const wrongRow = Array.from(alts!.querySelectorAll('li')).find((li) => li.textContent?.includes('120 km'));
+      expect(wrongRow?.className).not.toContain('bg-easy-bg');
+    });
+
     it('enters edit mode from panel-edit, edits the enunciado, and saves via updateQuestion', () => {
       const { compiled, fixture, updateQuestion } = setup({
         getQuestionImpl: (id) =>
@@ -467,6 +493,35 @@ describe('BankListComponent', () => {
         'q1',
         expect.objectContaining({ bodyTypst: 'Enunciado editado' }),
       );
+    });
+
+    it('normalizes a legacy LETTER correctAnswer to an INDEX before saving — the backend 400s on letters', () => {
+      const { compiled, fixture, updateQuestion } = setup({
+        getQuestionImpl: (id) =>
+          of(
+            makeQuestion({
+              id,
+              type: 'structured',
+              imageAssetId: null,
+              correctAnswer: 'a', // legacy letter format — index 0
+              bodyTypst: 'Enunciado original',
+              alternatives: ['Uno', 'Dos'],
+            }),
+          ),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="panel-edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      // Save WITHOUT touching the clave control — startEdit must have already normalized it to an index.
+      (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(updateQuestion).toHaveBeenCalledWith('q1', expect.objectContaining({ correctAnswer: '0' }));
     });
 
     it('shows a used-in-exams warning in edit mode for an approved question already used in exams', () => {
@@ -549,14 +604,20 @@ describe('BankListComponent', () => {
         '[data-testid="edit-alternatives"]',
       ) as HTMLTextAreaElement;
       expect(alternatives.value).toBe('Uno revisado\nDos revisado');
-      // correctAnswer '1' (0-based index, per AiRevisedQuestion) -> letter 'b' (edit form's format).
+      // correctAnswer '1' is ALREADY a 0-based index (AiRevisedQuestion's format = the edit form's
+      // canonical format) — populated directly, no letter conversion.
       expect(
         (fixture.componentInstance as unknown as { editCorrectAnswer: { (): string } })
           .editCorrectAnswer(),
-      ).toBe('b');
+      ).toBe('1');
 
       // AI revise never auto-saves — the teacher still has to click Guardar.
       expect(updateQuestion).not.toHaveBeenCalled();
+
+      // Clicking Guardar afterward sends the AI's index straight through — no per-save conversion.
+      (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      expect(updateQuestion).toHaveBeenCalledWith('q1', expect.objectContaining({ correctAnswer: '1' }));
     });
 
     it('shows ai-error when reviseQuestion fails, without touching the edit form', () => {
