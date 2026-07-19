@@ -1,4 +1,5 @@
 import { Injectable } from "@nestjs/common";
+import type { Stage } from "../exams/domain/value-objects/grade-level";
 import { CourseListItem, TaxonomyRepository, TopicListItem } from "./taxonomy.repository";
 
 /**
@@ -11,11 +12,11 @@ import { CourseListItem, TaxonomyRepository, TopicListItem } from "./taxonomy.re
 export class TaxonomyService {
   constructor(private readonly repository: TaxonomyRepository) {}
 
-  async listCourses(): Promise<CourseListItem[]> {
-    return this.repository.findAllCourses();
+  async listCourses(stage?: Stage): Promise<CourseListItem[]> {
+    return this.repository.findAllCourses(stage);
   }
 
-  async listTopics(courseId?: string): Promise<TopicListItem[]> {
-    return this.repository.findTopics(courseId);
+  async listTopics(courseId?: string, gradeLevel?: string): Promise<TopicListItem[]> {
+    return this.repository.findTopics(courseId, gradeLevel);
   }
 }

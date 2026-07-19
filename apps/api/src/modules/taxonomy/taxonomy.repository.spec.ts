@@ -25,25 +25,25 @@ describe("TaxonomyRepository", () => {
 
     const [courseA] = await db
       .insert(courses)
-      .values({ name: `Course A ${suffix}` })
+      .values({ name: `Course A ${suffix}`, stage: "colegio" })
       .returning({ id: courses.id });
     courseAId = courseA!.id;
 
     const [courseB] = await db
       .insert(courses)
-      .values({ name: `Course B ${suffix}` })
+      .values({ name: `Course B ${suffix}`, stage: "preuniversitario" })
       .returning({ id: courses.id });
     courseBId = courseB!.id;
 
     const [topicA] = await db
       .insert(topics)
-      .values({ courseId: courseAId, name: `Topic A ${suffix}` })
+      .values({ courseId: courseAId, name: `Topic A ${suffix}`, gradeLevel: "secundaria_1" })
       .returning({ id: topics.id });
     topicAId = topicA!.id;
 
     const [topicB] = await db
       .insert(topics)
-      .values({ courseId: courseBId, name: `Topic B ${suffix}` })
+      .values({ courseId: courseBId, name: `Topic B ${suffix}`, gradeLevel: "pre" })
       .returning({ id: topics.id });
     topicBId = topicB!.id;
   });
@@ -55,7 +55,7 @@ describe("TaxonomyRepository", () => {
   });
 
   describe("findAllCourses", () => {
-    it("returns every course, including the ones just created", async () => {
+    it("returns every course when no stage filter is given", async () => {
       const result = await repository.findAllCourses();
       const ids = result.map((c) => c.id);
 
@@ -63,10 +63,18 @@ describe("TaxonomyRepository", () => {
       expect(ids).toContain(courseBId);
       expect(result.find((c) => c.id === courseAId)?.name).toBe(`Course A ${suffix}`);
     });
+
+    it("filters courses by stage", async () => {
+      const result = await repository.findAllCourses("colegio");
+      const ids = result.map((c) => c.id);
+
+      expect(ids).toContain(courseAId);
+      expect(ids).not.toContain(courseBId);
+    });
   });
 
   describe("findTopics", () => {
-    it("returns every topic when no courseId filter is given", async () => {
+    it("returns every topic when no filter is given", async () => {
       const result = await repository.findTopics();
       const ids = result.map((t) => t.id);
 
@@ -81,6 +89,14 @@ describe("TaxonomyRepository", () => {
       expect(result[0]!.id).toBe(topicAId);
       expect(result[0]!.courseId).toBe(courseAId);
       expect(result[0]!.name).toBe(`Topic A ${suffix}`);
+    });
+
+    it("filters topics by grade level", async () => {
+      const bySecundaria = await repository.findTopics(courseAId, "secundaria_1");
+      expect(bySecundaria.map((t) => t.id)).toEqual([topicAId]);
+
+      const byPre = await repository.findTopics(courseAId, "pre");
+      expect(byPre).toHaveLength(0);
     });
   });
 });

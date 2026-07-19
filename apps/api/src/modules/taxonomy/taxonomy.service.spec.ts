@@ -13,36 +13,44 @@ function buildDeps() {
 
 describe("TaxonomyService", () => {
   describe("listCourses", () => {
-    it("delegates to TaxonomyRepository.findAllCourses", async () => {
+    it("delegates to TaxonomyRepository.findAllCourses with no stage when omitted", async () => {
       const { service, repository } = buildDeps();
       const courses: CourseListItem[] = [{ id: "course-1", name: "Aritmética" }];
       repository.findAllCourses.mockResolvedValue(courses);
 
       const result = await service.listCourses();
 
-      expect(repository.findAllCourses).toHaveBeenCalledTimes(1);
+      expect(repository.findAllCourses).toHaveBeenCalledWith(undefined);
       expect(result).toEqual(courses);
+    });
+
+    it("forwards the stage to TaxonomyRepository.findAllCourses when provided", async () => {
+      const { service, repository } = buildDeps();
+
+      await service.listCourses("colegio");
+
+      expect(repository.findAllCourses).toHaveBeenCalledWith("colegio");
     });
   });
 
   describe("listTopics", () => {
-    it("delegates to TaxonomyRepository.findTopics with no filter when courseId is omitted", async () => {
+    it("delegates to TaxonomyRepository.findTopics with no filter when both args are omitted", async () => {
       const { service, repository } = buildDeps();
       const topics: TopicListItem[] = [{ id: "topic-1", name: "Fracciones", courseId: "course-1" }];
       repository.findTopics.mockResolvedValue(topics);
 
       const result = await service.listTopics();
 
-      expect(repository.findTopics).toHaveBeenCalledWith(undefined);
+      expect(repository.findTopics).toHaveBeenCalledWith(undefined, undefined);
       expect(result).toEqual(topics);
     });
 
-    it("forwards courseId to TaxonomyRepository.findTopics when provided", async () => {
+    it("forwards courseId and gradeLevel to TaxonomyRepository.findTopics when provided", async () => {
       const { service, repository } = buildDeps();
 
-      await service.listTopics("course-1");
+      await service.listTopics("course-1", "secundaria_2");
 
-      expect(repository.findTopics).toHaveBeenCalledWith("course-1");
+      expect(repository.findTopics).toHaveBeenCalledWith("course-1", "secundaria_2");
     });
   });
 });

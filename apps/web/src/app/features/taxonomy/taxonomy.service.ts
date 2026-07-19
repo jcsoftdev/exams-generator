@@ -17,12 +17,25 @@ import { Course, Topic } from './taxonomy.models';
 export class TaxonomyService {
   private readonly http = inject(HttpClient);
 
-  getCourses(): Observable<Course[]> {
-    return this.http.get<Course[]>(`${environment.apiBaseUrl}/courses`);
+  /**
+   * `gradeLevel` scopes the catalog to that grade's educational stage
+   * (escuela | colegio | preuniversitario). Omitted → the full catalog, so
+   * callers without a grade context keep working unchanged.
+   */
+  getCourses(gradeLevel?: string): Observable<Course[]> {
+    let params = new HttpParams();
+    if (gradeLevel) {
+      params = params.set('gradeLevel', gradeLevel);
+    }
+    return this.http.get<Course[]>(`${environment.apiBaseUrl}/courses`, { params });
   }
 
-  getTopics(courseId: string): Observable<Topic[]> {
-    const params = new HttpParams().set('courseId', courseId);
+  /** `gradeLevel` returns only the topics assessed at that grade; omitted → every topic of the course. */
+  getTopics(courseId: string, gradeLevel?: string): Observable<Topic[]> {
+    let params = new HttpParams().set('courseId', courseId);
+    if (gradeLevel) {
+      params = params.set('gradeLevel', gradeLevel);
+    }
     return this.http.get<Topic[]>(`${environment.apiBaseUrl}/topics`, { params });
   }
 }

@@ -33,3 +33,32 @@ export type GradeLevel = (typeof GRADE_LEVELS)[number];
 export function isGradeLevel(value: string): value is GradeLevel {
   return (GRADE_LEVELS as readonly string[]).includes(value);
 }
+
+/**
+ * Educational stage — the coarse grouping of grade levels that the course
+ * catalog is divided by (courses belong to exactly one stage):
+ *   escuela         → primaria_1..6   (áreas CNEB, temas iniciales)
+ *   colegio         → secundaria_1..5 (áreas CNEB, temas completos)
+ *   preuniversitario→ pre             (desglose académico de admisión)
+ */
+export const STAGES = ["escuela", "colegio", "preuniversitario"] as const;
+
+export type Stage = (typeof STAGES)[number];
+
+export const STAGE_LABELS: Record<Stage, string> = {
+  escuela: "Escuela (Primaria)",
+  colegio: "Colegio (Secundaria)",
+  preuniversitario: "Preuniversitario",
+};
+
+export function isStage(value: string): value is Stage {
+  return (STAGES as readonly string[]).includes(value);
+}
+
+/** Maps a grade level to its educational stage — the axis the course catalog is divided by. */
+export function stageForGrade(grade: GradeLevel): Stage {
+  if (grade === "pre") {
+    return "preuniversitario";
+  }
+  return grade.startsWith("secundaria_") ? "colegio" : "escuela";
+}

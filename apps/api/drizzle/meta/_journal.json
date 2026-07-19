@@ -22,6 +22,20 @@
       "when": 1784421893002,
       "tag": "0002_nosy_jackpot",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1784488069711,
+      "tag": "0003_real_blindfold",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1784488803184,
+      "tag": "0004_solid_vulcan",
+      "breakpoints": true
     }
   ]
 }

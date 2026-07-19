@@ -44,6 +44,30 @@ export const GRADE_LEVEL_LABELS: Record<GradeLevel, string> = {
   pre: 'Pre-admisión',
 };
 
+/**
+ * Educational stage — mirrors the backend's `Stage` catalog at
+ * apps/api/src/modules/exams/domain/value-objects/grade-level.ts. Courses
+ * belong to exactly one stage; the exam builder filters the catalog by the
+ * stage derived from the selected grade level.
+ */
+export const STAGES = ['escuela', 'colegio', 'preuniversitario'] as const;
+
+export type Stage = (typeof STAGES)[number];
+
+export const STAGE_LABELS: Record<Stage, string> = {
+  escuela: 'Escuela (Primaria)',
+  colegio: 'Colegio (Secundaria)',
+  preuniversitario: 'Preuniversitario',
+};
+
+/** Maps a grade level to its educational stage — the axis the course catalog is divided by. */
+export function stageForGrade(grade: GradeLevel): Stage {
+  if (grade === 'pre') {
+    return 'preuniversitario';
+  }
+  return grade.startsWith('secundaria_') ? 'colegio' : 'escuela';
+}
+
 export type ExamStatus = 'draft' | 'ready';
 
 /**

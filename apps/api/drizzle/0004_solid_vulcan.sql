@@ -1,0 +1,1 @@
+ALTER TABLE "courses" ALTER COLUMN "stage" SET DEFAULT 'preuniversitario';
