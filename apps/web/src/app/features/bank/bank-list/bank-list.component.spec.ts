@@ -26,6 +26,8 @@ import { BankService } from '../bank.service';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { BankQuestion } from '../bank.models';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
+import { AiService } from '../../ai/ai.service';
+import { AiRevisedQuestion } from '../../ai/ai.models';
 
 function makeQuestion(o: Partial<BankQuestion> & { id: string }): BankQuestion {
   return {
@@ -71,6 +73,7 @@ function setup(
     deleteImpl?: (id: string) => unknown;
     getCoursesImpl?: () => unknown;
     getTopicsImpl?: (courseId: string) => unknown;
+    reviseQuestionImpl?: (id: string, instruction: string) => unknown;
   } = {},
 ) {
   const listQuestions = vi.fn(over.listImpl ?? (() => of(QUESTIONS)));
@@ -84,6 +87,15 @@ function setup(
   const getCourses = vi.fn(over.getCoursesImpl ?? (() => of(COURSES)));
   const getTopics = vi.fn(
     over.getTopicsImpl ?? ((courseId: string) => of(courseId === 'c1' ? TOPICS_C1 : TOPICS_C2)),
+  );
+  const reviseQuestion = vi.fn(
+    over.reviseQuestionImpl ??
+      ((_id: string, _instruction: string) =>
+        of({
+          bodyTypst: 'Enunciado revisado por IA',
+          alternatives: ['Uno revisado', 'Dos revisado'],
+          correctAnswer: '1',
+        } satisfies AiRevisedQuestion)),
   );
   const navigate = vi.fn();
   let n = 0;
@@ -124,6 +136,7 @@ function setup(
         },
       },
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
+      { provide: AiService, useValue: { reviseQuestion } },
       { provide: Router, useValue: { navigate } },
     ],
   });
@@ -141,6 +154,7 @@ function setup(
     fetchQuestionImage,
     getCourses,
     getTopics,
+    reviseQuestion,
     navigate,
   };
 }
@@ -490,6 +504,101 @@ describe('BankListComponent', () => {
       fixture.detectChanges();
       expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeFalsy();
       expect(compiled.querySelector('[data-testid="panel-enunciado"]')?.textContent).toContain('Original');
+    });
+
+    it('revises with AI: fills the edit form from the mocked response without auto-saving', () => {
+      const { compiled, fixture, reviseQuestion, updateQuestion } = setup({
+        getQuestionImpl: (id) =>
+          of(
+            makeQuestion({
+              id,
+              type: 'structured',
+              imageAssetId: null,
+              correctAnswer: 'a',
+              bodyTypst: 'Enunciado original',
+              alternatives: ['Uno', 'Dos'],
+            }),
+          ),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="panel-edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      const instructionInput = compiled.querySelector(
+        '[data-testid="ai-instruction"] input',
+      ) as HTMLInputElement;
+      instructionInput.value = 'más difícil';
+      instructionInput.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="ai-revise"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(reviseQuestion).toHaveBeenCalledWith('q1', 'más difícil');
+
+      const form = compiled.querySelector('[data-testid="panel-edit-form"]');
+      const textarea = form!.querySelector(
+        '[data-testid="edit-enunciado"]',
+      ) as HTMLTextAreaElement;
+      expect(textarea.value).toBe('Enunciado revisado por IA');
+      const alternatives = form!.querySelector(
+        '[data-testid="edit-alternatives"]',
+      ) as HTMLTextAreaElement;
+      expect(alternatives.value).toBe('Uno revisado\nDos revisado');
+      // correctAnswer '1' (0-based index, per AiRevisedQuestion) -> letter 'b' (edit form's format).
+      expect(
+        (fixture.componentInstance as unknown as { editCorrectAnswer: { (): string } })
+          .editCorrectAnswer(),
+      ).toBe('b');
+
+      // AI revise never auto-saves — the teacher still has to click Guardar.
+      expect(updateQuestion).not.toHaveBeenCalled();
+    });
+
+    it('shows ai-error when reviseQuestion fails, without touching the edit form', () => {
+      const { compiled, fixture } = setup({
+        getQuestionImpl: (id) =>
+          of(
+            makeQuestion({
+              id,
+              type: 'structured',
+              imageAssetId: null,
+              bodyTypst: 'Enunciado original',
+              alternatives: ['Uno', 'Dos'],
+            }),
+          ),
+        reviseQuestionImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="panel-edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      const instructionInput = compiled.querySelector(
+        '[data-testid="ai-instruction"] input',
+      ) as HTMLInputElement;
+      instructionInput.value = 'más difícil';
+      instructionInput.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="ai-error"]')).toBeFalsy();
+
+      (compiled.querySelector('[data-testid="ai-revise"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="ai-error"]')).toBeTruthy();
+      const form = compiled.querySelector('[data-testid="panel-edit-form"]');
+      const textarea = form!.querySelector(
+        '[data-testid="edit-enunciado"]',
+      ) as HTMLTextAreaElement;
+      expect(textarea.value).toBe('Enunciado original');
     });
 
     it('archives the selected approved question and reloads the tree', () => {

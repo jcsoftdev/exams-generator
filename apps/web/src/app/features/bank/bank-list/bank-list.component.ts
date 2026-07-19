@@ -15,6 +15,7 @@ import {
   Expand,
   Minimize2,
   Check,
+  Sparkles,
 } from 'lucide-angular';
 import { Difficulty } from '@exams-generator/shared';
 import { ButtonComponent } from '../../../ui/button/button.component';
@@ -27,6 +28,7 @@ import { BankService } from '../bank.service';
 import { BankQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, UpdateQuestionPayload } from '../bank.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
+import { AiService } from '../../ai/ai.service';
 import { buildQuestionTree, filterQuestionTree, QuestionTreeCourseNode, QuestionTreeTopicNode } from './bank-question-tree';
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
@@ -105,6 +107,15 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
  * questions. A new image file (if picked) is uploaded via
  * `replaceQuestionImage` AFTER `updateQuestion` succeeds, then the tree +
  * selected detail are both reloaded and the panel exits edit mode.
+ *
+ * Task 9: the edit form (structured questions only) also has an "Editar con
+ * IA" box (`aiInstruction`/`ai-revise`) that calls
+ * `AiService.reviseQuestion(selected().id, instruction)` and, on success,
+ * POPULATES `editBody`/`editAlternatives`/`editCorrectAnswer` — it never
+ * calls `saveEdit` itself, so the AI never auto-saves; the teacher still
+ * reviews the suggestion in the form and clicks Guardar. See
+ * `reviseWithAi`/`indexToLetter` for the 0-based-index -> letter conversion
+ * (`AiRevisedQuestion.correctAnswer` is an index, the edit form uses a letter).
  */
 @Component({
   selector: 'app-bank-list',
@@ -129,6 +140,7 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
       Expand,
       Minimize2,
       Check,
+      Sparkles,
     }).providers ?? [],
   ],
   templateUrl: './bank-list.component.html',
@@ -136,6 +148,7 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
 export class BankListComponent {
   private readonly bankService = inject(BankService);
   private readonly taxonomyService = inject(TaxonomyService);
+  private readonly aiService = inject(AiService);
   private readonly destroyRef = inject(DestroyRef);
   private readonly router = inject(Router);
 
@@ -182,6 +195,12 @@ export class BankListComponent {
   protected readonly editAlternatives = signal('');
   protected readonly editImageFile = signal<File | null>(null);
   protected readonly editImagePreviewUrl = signal<string | null>(null);
+
+  // --- Task 9: AI instruction box inside the edit form ---------------------------
+  /** Free-text instruction ("hazla más difícil…") sent verbatim to `AiService.reviseQuestion`. */
+  protected readonly aiInstruction = signal('');
+  protected readonly revising = signal(false);
+  protected readonly aiError = signal<string | null>(null);
 
   protected readonly courseOptions = computed<SelectOption<string>[]>(() =>
     this.courses().map((course) => ({ value: course.id, label: course.name })),
@@ -472,6 +491,7 @@ export class BankListComponent {
     this.editBody.set(question.bodyTypst ?? '');
     this.editAlternatives.set((question.alternatives ?? []).join('\n'));
     this.discardEditImage();
+    this.resetAiRevise();
     this.editing.set(true);
   }
 
@@ -505,6 +525,13 @@ export class BankListComponent {
     this.editing.set(false);
     this.editError.set(null);
     this.discardEditImage();
+    this.resetAiRevise();
+  }
+
+  private resetAiRevise(): void {
+    this.aiInstruction.set('');
+    this.revising.set(false);
+    this.aiError.set(null);
   }
 
   private editAlternativesList(): string[] {
@@ -512,6 +539,39 @@ export class BankListComponent {
       .split('\n')
       .map((line) => line.trim())
       .filter((line) => line.length > 0);
+  }
+
+  /**
+   * Task 9: AI-assisted revision of the question currently being edited.
+   * Calls `AiService.reviseQuestion` with the free-text `aiInstruction` and,
+   * on success, POPULATES the edit-form signals (`editBody`/`editAlternatives`/
+   * `editCorrectAnswer`) the same way `startEdit` seeds them — it never calls
+   * `saveEdit` itself, so the teacher always reviews the AI's suggestion
+   * before it's persisted. `alternatives` is joined one-per-line to match
+   * `editAlternativesList`'s parsing, and the response's 0-based INDEX
+   * `correctAnswer` (see `AiRevisedQuestion`) is converted to the edit form's
+   * lettered format (a/b/c…, matching `alternativeRows`).
+   */
+  protected reviseWithAi(): void {
+    const question = this.selected();
+    if (!question || this.revising()) {
+      return;
+    }
+    this.revising.set(true);
+    this.aiError.set(null);
+
+    this.aiService.reviseQuestion(question.id, this.aiInstruction()).subscribe({
+      next: (revised) => {
+        this.editBody.set(revised.bodyTypst);
+        this.editAlternatives.set(revised.alternatives.join('\n'));
+        this.editCorrectAnswer.set(indexToLetter(revised.correctAnswer));
+        this.revising.set(false);
+      },
+      error: () => {
+        this.revising.set(false);
+        this.aiError.set('No se pudo revisar la pregunta con IA. Inténtalo de nuevo.');
+      },
+    });
   }
 
   /**
@@ -612,6 +672,12 @@ export class BankListComponent {
   protected goToNew(): void {
     this.router.navigate(['/app/bank/new']);
   }
+}
+
+/** `AiRevisedQuestion.correctAnswer` is a 0-based index ("0"-"4"); the edit form (and `alternativeRows`) use a letter (a/b/c…). */
+function indexToLetter(index: string): string {
+  const parsed = Number(index);
+  return Number.isFinite(parsed) && parsed >= 0 ? String.fromCharCode(97 + parsed) : '';
 }
 
 function toggleInSet(current: ReadonlySet<string>, id: string): ReadonlySet<string> {
