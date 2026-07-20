@@ -3,7 +3,7 @@ ENV CI=true
 
 # Install the typst CLI binary (PdfCompilerPort adapter dependency).
 # Pinned version — bump deliberately when upgrading Typst.
-ARG TYPST_VERSION=0.12.0
+ARG TYPST_VERSION=0.15.1
 RUN apt-get update \
   && apt-get install -y --no-install-recommends curl ca-certificates xz-utils \
   && curl -fsSL "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz" \

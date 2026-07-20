@@ -13,7 +13,7 @@ import { ExamPdfDocumentInput } from "../../domain/ports/pdf-compiler.port";
  *
  * Guarded with `describe.skip` (not a fake pass) when the `typst` binary
  * isn't installed — see infra/Dockerfile.api for the pinned version this
- * project expects (0.12.0 at time of writing).
+ * project expects (0.15.1 at time of writing).
  */
 const FIXTURES_DIR = path.join(__dirname, "fixtures");
 
