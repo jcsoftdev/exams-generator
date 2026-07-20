@@ -231,7 +231,7 @@ export class AiReviewQueueComponent {
   /**
    * `DraftQuestion.correctAnswer` is a 0-based INDEX string ("0"-"4"), not a
    * letter — the backend converts the AI's letter answer before storing
-   * (see ai.models.ts). Same conversion as `AiGenerateComponent.letterFor`.
+   * (see ai.models.ts). Same conversion as `GenerationJobDetailComponent.letterFor()`.
    */
   protected letterFor(draft: DraftQuestion): string {
     return ALTERNATIVE_LETTERS[Number(draft.correctAnswer)] ?? draft.correctAnswer;
