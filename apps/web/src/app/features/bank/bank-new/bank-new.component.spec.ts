@@ -9,6 +9,8 @@ import { BankNewComponent } from './bank-new.component';
 import { BankService } from '../bank.service';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
+import { AiService } from '../../ai/ai.service';
+import { AiRevisedQuestion } from '../../ai/ai.models';
 
 const COURSES: Course[] = [
   { id: 'c1', name: 'Matemática' },
@@ -23,6 +25,7 @@ function setup(
     structuredImpl?: () => unknown;
     getCourses?: () => unknown;
     getTopics?: (courseId: string) => unknown;
+    extractQuestionFromImageImpl?: (image: File) => unknown;
   } = {},
 ) {
   const uploadImageQuestion = vi.fn(over.uploadImpl ?? (() => of({ id: 'img-q' })));
@@ -31,12 +34,21 @@ function setup(
   const getTopics = vi.fn(
     over.getTopics ?? ((courseId: string) => of(courseId === 'c1' ? TOPICS_C1 : TOPICS_C2)),
   );
+  const extracted: AiRevisedQuestion = {
+    bodyTypst: 'Enunciado desde imagen',
+    alternatives: ['Alt A extraída', 'Alt B extraída'],
+    correctAnswer: '1',
+  };
+  const extractQuestionFromImage = vi.fn(
+    over.extractQuestionFromImageImpl ?? (() => of(extracted)),
+  );
   const navigate = vi.fn();
   TestBed.configureTestingModule({
     imports: [BankNewComponent],
     providers: [
       { provide: BankService, useValue: { uploadImageQuestion, createStructuredQuestion } },
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
+      { provide: AiService, useValue: { extractQuestionFromImage } },
       { provide: Router, useValue: { navigate } },
     ],
   });
@@ -49,6 +61,7 @@ function setup(
     createStructuredQuestion,
     getCourses,
     getTopics,
+    extractQuestionFromImage,
     navigate,
   };
 }
@@ -84,6 +97,24 @@ function selectOptionsOf(fixture: { debugElement: { query(pred: unknown): { comp
   const debugEl = fixture.debugElement.query(By.css(`[data-testid="${testid}"] ui-select`));
   const instance = debugEl!.componentInstance as SelectComponent<unknown>;
   return instance.options();
+}
+
+function fillPhotoTaxonomy(fixture: { componentInstance: unknown; detectChanges(): void }) {
+  set(fixture, 'pGradeLevel', 'pre');
+  set(fixture, 'pCourseId', 'c1');
+  set(fixture, 'pTopicId', 't1');
+  set(fixture, 'pDifficulty', 'easy');
+}
+
+function pickImage(fixture: { detectChanges(): void }, compiled: HTMLElement): File {
+  const file = new File(['bytes'], 'foto.png', { type: 'image/png' });
+  const nativeFileInput = compiled.querySelector(
+    '[data-testid="tab-photo-panel"] input[type="file"]',
+  ) as HTMLInputElement;
+  Object.defineProperty(nativeFileInput, 'files', { value: [file], configurable: true });
+  nativeFileInput.dispatchEvent(new Event('change'));
+  fixture.detectChanges();
+  return file;
 }
 
 describe('BankNewComponent', () => {
@@ -282,6 +313,79 @@ describe('BankNewComponent', () => {
       );
       expect(compiled.querySelector('[data-testid="image-upload-preview"]')).toBeTruthy();
       expect(compiled.querySelector('[data-testid="image-upload-change"]')).toBeTruthy();
+    });
+  });
+
+  describe('extractWithAi (photo tab AI shortcut)', () => {
+    it('calls extractQuestionFromImage with the picked file when photo taxonomy + image are complete', () => {
+      const { fixture, compiled, extractQuestionFromImage } = setup();
+      fillPhotoTaxonomy(fixture);
+      const file = pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+
+      expect(extractQuestionFromImage).toHaveBeenCalledWith(file);
+    });
+
+    it('does nothing if photo taxonomy is incomplete (no image picked)', () => {
+      const { fixture, extractQuestionFromImage } = setup();
+      fillPhotoTaxonomy(fixture);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+
+      expect(extractQuestionFromImage).not.toHaveBeenCalled();
+    });
+
+    it('on success: fills sBody/sAlternatives/sCorrectAnswer/sDifficulty, copies course/topic/grade from the photo tab, and switches to the structured tab', () => {
+      const { fixture, compiled, getCourses, getTopics } = setup();
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as {
+        sBody: () => string;
+        sAlternatives: () => string;
+        sCorrectAnswer: () => string;
+        sDifficulty: () => string;
+        sGradeLevel: () => string | null;
+        sCourseId: () => string;
+        sTopicId: () => string;
+        tab: () => string;
+        extracting: () => boolean;
+      };
+      expect(instance.sBody()).toBe('Enunciado desde imagen');
+      expect(instance.sAlternatives()).toBe('Alt A extraída\nAlt B extraída');
+      expect(instance.sCorrectAnswer()).toBe('1');
+      expect(instance.sDifficulty()).toBe('easy');
+      expect(instance.sGradeLevel()).toBe('pre');
+      expect(getCourses).toHaveBeenCalledWith('pre');
+      expect(instance.sCourseId()).toBe('c1');
+      expect(getTopics).toHaveBeenCalledWith('c1', 'pre');
+      expect(instance.sTopicId()).toBe('t1');
+      expect(instance.tab()).toBe('structured');
+      expect(instance.extracting()).toBe(false);
+    });
+
+    it('on error: sets extractError, stays on the photo tab, and resets extracting()', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as {
+        extractError: () => string | null;
+        tab: () => string;
+        extracting: () => boolean;
+      };
+      expect(instance.extractError()).toBe('No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.');
+      expect(instance.tab()).toBe('photo');
+      expect(instance.extracting()).toBe(false);
     });
   });
 });

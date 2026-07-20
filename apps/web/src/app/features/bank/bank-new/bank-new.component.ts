@@ -10,6 +10,7 @@ import { BankService } from '../bank.service';
 import { GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
+import { AiService } from '../../ai/ai.service';
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
   [Difficulty.Easy]: 'Fácil',
@@ -48,6 +49,7 @@ function toOptions(items: readonly { id: string; name: string }[]): SelectOption
 export class BankNewComponent {
   private readonly bankService = inject(BankService);
   private readonly taxonomyService = inject(TaxonomyService);
+  private readonly aiService = inject(AiService);
   private readonly router = inject(Router);
 
   protected readonly gradeLevelOptions = GRADE_LEVELS.map((g) => ({
@@ -62,6 +64,8 @@ export class BankNewComponent {
   protected readonly tab = signal<Tab>('photo');
   protected readonly saving = signal(false);
   protected readonly saveError = signal<string | null>(null);
+  protected readonly extracting = signal(false);
+  protected readonly extractError = signal<string | null>(null);
 
   // Foto
   protected readonly pCourses = signal<Course[]>([]);
@@ -89,6 +93,16 @@ export class BankNewComponent {
   protected readonly sAlternatives = signal('');
   protected readonly sCorrectAnswer = signal('');
 
+  /**
+   * Consumed once by the `sGradeLevel`/`sCourseId` effects below — lets
+   * `extractWithAi()` tell those effects which course/topic id to
+   * preselect instead of blanking to `''` on the next reset. See design
+   * doc `docs/superpowers/specs/2026-07-20-bank-new-photo-ai-extract-design.md`
+   * §3.1-3.2 for why this can't be done by racing `.subscribe()` calls.
+   */
+  private pendingStructuredCourseId: string | null = null;
+  private pendingStructuredTopicId: string | null = null;
+
   constructor() {
     // Courses are loaded per selected grade — the catalog is divided by
     // educational stage, so loading it up front (no grade) would list every
@@ -111,7 +125,9 @@ export class BankNewComponent {
 
     effect(() => {
       const gradeLevel = this.sGradeLevel();
-      this.sCourseId.set('');
+      const preselectCourseId = this.pendingStructuredCourseId ?? '';
+      this.pendingStructuredCourseId = null;
+      this.sCourseId.set(preselectCourseId);
       this.sCourses.set([]);
       if (!gradeLevel) return;
       this.taxonomyService.getCourses(gradeLevel).subscribe({
@@ -137,7 +153,9 @@ export class BankNewComponent {
     // Same dependent behavior for the structured tab.
     effect(() => {
       const courseId = this.sCourseId();
-      this.sTopicId.set('');
+      const preselectTopicId = this.pendingStructuredTopicId ?? '';
+      this.pendingStructuredTopicId = null;
+      this.sTopicId.set(preselectTopicId);
       this.sTopics.set([]);
       if (!courseId) return;
       this.taxonomyService.getTopics(courseId, this.sGradeLevel() ?? undefined).subscribe({
@@ -177,6 +195,16 @@ export class BankNewComponent {
     );
   }
 
+  private photoTaxonomyValid(): boolean {
+    return (
+      !!this.pCourseId() &&
+      !!this.pTopicId() &&
+      !!this.pDifficulty() &&
+      !!this.pGradeLevel() &&
+      !!this.pImage()
+    );
+  }
+
   protected submitPhoto(): void {
     if (this.saving() || !this.photoValid()) return;
     this.saving.set(true);
@@ -200,6 +228,36 @@ export class BankNewComponent {
           this.saveError.set('No se pudo guardar la pregunta. Revisa los datos e inténtalo de nuevo.');
         },
       });
+  }
+
+  protected extractWithAi(): void {
+    const image = this.pImage();
+    const gradeLevel = this.pGradeLevel();
+    const courseId = this.pCourseId();
+    const topicId = this.pTopicId();
+    if (!image || this.extracting() || !this.photoTaxonomyValid()) return;
+    this.extracting.set(true);
+    this.extractError.set(null);
+
+    this.aiService.extractQuestionFromImage(image).subscribe({
+      next: (extracted) => {
+        this.sDifficulty.set(this.pDifficulty());
+        this.sBody.set(extracted.bodyTypst);
+        this.sAlternatives.set(extracted.alternatives.join('\n'));
+        this.sCorrectAnswer.set(extracted.correctAnswer);
+
+        this.pendingStructuredCourseId = courseId;
+        this.pendingStructuredTopicId = topicId;
+        this.sGradeLevel.set(gradeLevel);
+
+        this.extracting.set(false);
+        this.setTab('structured');
+      },
+      error: () => {
+        this.extracting.set(false);
+        this.extractError.set('No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.');
+      },
+    });
   }
 
   private structuredValid(): boolean {
