@@ -235,13 +235,14 @@ export class BankNewComponent {
     const gradeLevel = this.pGradeLevel();
     const courseId = this.pCourseId();
     const topicId = this.pTopicId();
+    const difficulty = this.pDifficulty();
     if (!image || this.extracting() || !this.photoTaxonomyValid()) return;
     this.extracting.set(true);
     this.extractError.set(null);
 
     this.aiService.extractQuestionFromImage(image).subscribe({
       next: (extracted) => {
-        this.sDifficulty.set(this.pDifficulty());
+        this.sDifficulty.set(difficulty);
         this.sBody.set(extracted.bodyTypst);
         this.sAlternatives.set(extracted.alternatives.join('\n'));
         this.sCorrectAnswer.set(extracted.correctAnswer);
