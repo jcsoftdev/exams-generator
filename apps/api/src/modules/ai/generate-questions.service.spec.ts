@@ -1,10 +1,11 @@
 import { Difficulty, Role } from "@exams-generator/shared";
 import { BadRequestException, NotFoundException } from "@nestjs/common";
+import { firstValueFrom, toArray } from "rxjs";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankRepository } from "../bank/bank.repository";
 import { TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { AiInvalidResponseError } from "./domain/ports/question-generator.port";
-import { GenerateQuestionsService } from "./generate-questions.service";
+import { GenerateQuestionsService, GenerateQuestionStreamEvent } from "./generate-questions.service";
 
 const TEACHER_USER: AuthTokenPayload = { sub: "teacher-1", tenantId: "tenant-1", role: Role.Teacher };
 const STAFF_USER: AuthTokenPayload = { sub: "staff-1", tenantId: null, role: Role.ContentEditor };
@@ -164,5 +165,86 @@ describe("GenerateQuestionsService.generateQuestions", () => {
     expect(bankRepository.createStructuredQuestion).toHaveBeenCalledTimes(1);
     expect(result.created).toHaveLength(1);
     expect(result.failed).toEqual([expect.objectContaining({ index: 0 })]);
+  });
+});
+
+describe("GenerateQuestionsService.generateQuestionStream", () => {
+  const STREAM_DTO = {
+    courseId: "course-1",
+    topicId: "topic-1",
+    difficulty: Difficulty.Easy,
+    gradeLevel: "primaria_1",
+    withFigure: false,
+  };
+
+  async function collect(service: GenerateQuestionsService, dto: typeof STREAM_DTO) {
+    return firstValueFrom(service.generateQuestionStream(TEACHER_USER, dto).pipe(toArray()));
+  }
+
+  it("emits delta events as they arrive, then a terminal done event with the created id", async () => {
+    const { service, generator } = buildDeps();
+    generator.generate.mockImplementation(async (_input, onProgress) => {
+      onProgress?.({ type: "delta", text: "¿Cuánto" });
+      onProgress?.({ type: "delta", text: " es 1+1?" });
+      return GENERATED_QUESTION;
+    });
+
+    const events = await collect(service, STREAM_DTO);
+
+    expect(events.slice(0, 2)).toEqual([
+      { type: "delta", text: "¿Cuánto" },
+      { type: "delta", text: " es 1+1?" },
+    ]);
+    const last = events[events.length - 1] as GenerateQuestionStreamEvent & { type: "done" };
+    expect(last.type).toBe("done");
+    expect(last.result.created).toHaveLength(1);
+    expect(last.result.failed).toHaveLength(0);
+  });
+
+  it("emits a done event with a failed item — never an Observable error — when generation fails", async () => {
+    const { service, generator } = buildDeps();
+    generator.generate.mockRejectedValue(new AiInvalidResponseError("bad json", "{}"));
+
+    const events = await collect(service, STREAM_DTO);
+
+    expect(events).toEqual([
+      { type: "done", result: { created: [], failed: [{ index: 0, error: "bad json" }] } },
+    ]);
+  });
+
+  it("emits a done/failed event when courseId/topicId don't resolve", async () => {
+    const { service, bankRepository } = buildDeps();
+    bankRepository.findCourseAndTopicNames.mockResolvedValue(undefined);
+
+    const events = await collect(service, STREAM_DTO);
+
+    expect(events).toHaveLength(1);
+    expect(events[0]).toEqual({
+      type: "done",
+      result: {
+        created: [],
+        failed: [{ index: 0, error: "courseId/topicId not found, or topicId does not belong to courseId" }],
+      },
+    });
+  });
+
+  it("emits a done/failed event (not a thrown exception) when required fields are missing", async () => {
+    const { service } = buildDeps();
+
+    const events = await collect(service, { ...STREAM_DTO, courseId: undefined as unknown as string });
+
+    expect(events).toHaveLength(1);
+    expect((events[0] as GenerateQuestionStreamEvent & { type: "done" }).result.failed).toHaveLength(1);
+  });
+
+  it("emits a terminal done/failed event (not a hang, not a thrown exception) when the taxonomy lookup rejects unexpectedly", async () => {
+    const { service, bankRepository } = buildDeps();
+    bankRepository.findCourseAndTopicNames.mockRejectedValue(new Error("db timeout"));
+
+    const events = await collect(service, STREAM_DTO);
+
+    expect(events).toEqual([
+      { type: "done", result: { created: [], failed: [{ index: 0, error: "db timeout" }] } },
+    ]);
   });
 });

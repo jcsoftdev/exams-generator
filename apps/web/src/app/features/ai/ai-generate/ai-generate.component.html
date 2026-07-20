@@ -99,6 +99,13 @@
       <div data-testid="batch-progress" class="rounded-card border border-n200 bg-surface p-4">
         <p class="mb-2 text-sm font-medium text-n700">Generando {{ completed() }}/{{ requested() }} preguntas…</p>
         <ui-progress [current]="completed()" [total]="requested()"></ui-progress>
+        @if (liveChars() > 0) {
+          <p data-testid="stream-live-indicator" class="mt-2 text-xs text-n500">
+            Escribiendo pregunta… {{ liveChars() }} caracteres recibidos
+          </p>
+        } @else {
+          <p data-testid="stream-live-indicator" class="mt-2 text-xs text-n500">Conectando con el modelo…</p>
+        }
       </div>
     } @else if (hasResult() && !totalFailure()) {
       <div class="flex items-center gap-3 rounded-card border border-n200 bg-surface px-4 py-3">

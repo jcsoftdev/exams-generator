@@ -7,7 +7,7 @@ import { LucideAngularModule, Sparkles, TriangleAlert, Plus, Minus } from 'lucid
 import { AiGenerateComponent } from './ai-generate.component';
 import { AiService } from '../ai.service';
 import { DraftCountService } from '../draft-count.service';
-import { DraftQuestion, GenerateQuestionsResult } from '../ai.models';
+import { DraftQuestion, GenerateQuestionsResult, GenerateQuestionStreamEvent } from '../ai.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { Difficulty } from '@exams-generator/shared';
@@ -18,6 +18,11 @@ const COURSES: Course[] = [
 ];
 const TOPICS: Topic[] = [{ id: 't1', name: 'La célula', courseId: 'c1' }];
 
+/** Every existing test drove `generateQuestions()` with a bare `GenerateQuestionsResult`; the streaming API instead resolves via a terminal `done` event carrying that same result — this wraps it so the rest of the suite reads the same as before. */
+function doneEvent(result: GenerateQuestionsResult): GenerateQuestionStreamEvent {
+  return { type: 'done', result };
+}
+
 function setup(
   over: {
     genImpl?: (...a: unknown[]) => unknown;
@@ -25,9 +30,8 @@ function setup(
     queryParams?: Record<string, string>;
   } = {},
 ) {
-  const generateQuestions = vi.fn(
-    over.genImpl ??
-      (() => of({ created: [{ id: 'a' }, { id: 'b' }], failed: [] } as GenerateQuestionsResult)),
+  const generateQuestionStream = vi.fn(
+    over.genImpl ?? (() => of(doneEvent({ created: [{ id: 'a' }, { id: 'b' }], failed: [] }))),
   );
   const listDrafts = vi.fn(over.listDraftsImpl ?? (() => of([] as DraftQuestion[])));
   const getCourses = vi.fn(() => of(COURSES));
@@ -36,7 +40,7 @@ function setup(
   TestBed.configureTestingModule({
     imports: [AiGenerateComponent, LucideAngularModule.pick({ Sparkles, TriangleAlert, Plus, Minus })],
     providers: [
-      { provide: AiService, useValue: { generateQuestions, listDrafts } },
+      { provide: AiService, useValue: { generateQuestionStream, listDrafts } },
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
       { provide: Router, useValue: { navigate } },
       { provide: ActivatedRoute, useValue: { snapshot: { queryParamMap: convertToParamMap(over.queryParams ?? {}) } } },
@@ -47,7 +51,7 @@ function setup(
   return {
     fixture,
     compiled: fixture.nativeElement as HTMLElement,
-    generateQuestions,
+    generateQuestionStream,
     listDrafts,
     navigate,
     getCourses,
@@ -89,23 +93,48 @@ describe('AiGenerateComponent', () => {
     expect(ci.courseId()).toBe('c1');
     expect(ci.topicId()).toBe('t1');
     expect(ci.difficulty()).toBe('medium');
-    // Catalog is scoped to the incoming grade, not loaded blind.
     expect(getCourses).toHaveBeenCalledWith('secundaria_3');
     expect(getTopics).toHaveBeenCalledWith('c1', 'secundaria_3');
   });
 
   it('shows a live progress card while generating', () => {
-    const subject = new Subject<GenerateQuestionsResult>();
+    const subject = new Subject<GenerateQuestionStreamEvent>();
     const { compiled, fixture } = setup({ genImpl: () => subject.asObservable() });
     fillForm(fixture);
     set(fixture, 'count', 1); // one request so the single Subject drives the whole run
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(compiled.querySelector('[data-testid="batch-progress"]')).toBeTruthy();
-    subject.next({ created: [{ id: 'a' }, { id: 'b' }, { id: 'c' }], failed: [] });
+    subject.next(doneEvent({ created: [{ id: 'a' }, { id: 'b' }, { id: 'c' }], failed: [] }));
     subject.complete();
     fixture.detectChanges();
     expect(compiled.querySelector('[data-testid="batch-progress"]')).toBeFalsy();
+  });
+
+  it('ticks the live character counter up as delta events arrive, and resets it on restart', () => {
+    const subject = new Subject<GenerateQuestionStreamEvent>();
+    const { compiled, fixture } = setup({ genImpl: () => subject.asObservable() });
+    fillForm(fixture);
+    set(fixture, 'count', 1);
+    (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('[data-testid="stream-live-indicator"]')?.textContent).toMatch(/conectando/i);
+
+    subject.next({ type: 'delta', text: 'Hola' });
+    fixture.detectChanges();
+    expect(compiled.querySelector('[data-testid="stream-live-indicator"]')?.textContent).toContain('4');
+
+    subject.next({ type: 'delta', text: ' mundo' });
+    fixture.detectChanges();
+    expect(compiled.querySelector('[data-testid="stream-live-indicator"]')?.textContent).toContain('10');
+
+    subject.next({ type: 'restart' });
+    fixture.detectChanges();
+    expect(compiled.querySelector('[data-testid="stream-live-indicator"]')?.textContent).toMatch(/conectando/i);
+
+    subject.next(doneEvent({ created: [{ id: 'a' }], failed: [] }));
+    subject.complete();
   });
 
   it('does NOT reset the form after generating', () => {
@@ -118,38 +147,38 @@ describe('AiGenerateComponent', () => {
   });
 
   it('shows partial-failure banner with a retry-failed action', () => {
-    const { compiled, fixture, generateQuestions } = setup({
-      genImpl: () => of({ created: [{ id: 'a' }], failed: [{ index: 1, error: 'x' }, { index: 2, error: 'y' }] }),
+    const { compiled, fixture, generateQuestionStream } = setup({
+      genImpl: () =>
+        of(doneEvent({ created: [{ id: 'a' }], failed: [{ index: 1, error: 'x' }, { index: 2, error: 'y' }] })),
     });
     fillForm(fixture);
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(compiled.querySelector('[data-testid="batch-failures"]')).toBeTruthy();
-    generateQuestions.mockClear();
-    generateQuestions.mockReturnValue(of({ created: [{ id: 'z' }, { id: 'w' }], failed: [] }));
+    generateQuestionStream.mockClear();
+    generateQuestionStream.mockReturnValue(of(doneEvent({ created: [{ id: 'z' }, { id: 'w' }], failed: [] })));
     (compiled.querySelector('[data-testid="retry-failed"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
-    // Sequential model: each request is a single question (count: 1), one per failed item.
-    expect(generateQuestions).toHaveBeenCalledWith(expect.objectContaining({ count: 1 }));
+    // Sequential model: each request is a single question, one per failed item — count is no longer part of the payload at all.
+    expect(generateQuestionStream).toHaveBeenCalledWith(
+      expect.not.objectContaining({ count: expect.anything() }),
+    );
   });
 
   it('shows only the warning banner (no status card) when ALL questions fail validation on a 200 response', () => {
     const { compiled, fixture } = setup({
-      genImpl: () => of({ created: [], failed: [{ index: 0, error: 'x' }, { index: 1, error: 'y' }] }),
+      genImpl: () => of(doneEvent({ created: [], failed: [{ index: 0, error: 'x' }, { index: 1, error: 'y' }] })),
     });
     fillForm(fixture);
-    set(fixture, 'count', 1); // single request → exactly the 2 failures this genImpl returns
+    set(fixture, 'count', 1);
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
-    // No confusing "0/N preguntas generadas" status card.
     expect(compiled.querySelector('.text-2xl.font-extrabold.text-primary-900')).toBeFalsy();
-    // Warning banner with a "Reintentar N" action IS shown.
     const banner = compiled.querySelector('[data-testid="batch-failures"]');
     expect(banner).toBeTruthy();
     expect(banner?.textContent).toMatch(/ninguna pregunta pasó la validación/i);
     expect(compiled.querySelector('[data-testid="retry-failed"] button')?.textContent).toContain('Reintentar 2');
-    // The 1-2-3 empty state stays visible underneath.
     expect(compiled.querySelector('[data-testid="batch-empty"]')).toBeTruthy();
   });
 
@@ -176,11 +205,11 @@ describe('AiGenerateComponent', () => {
       figureCode: null,
     };
     const { compiled, fixture } = setup({
-      genImpl: () => of({ created: [{ id: 'a' }], failed: [] }),
+      genImpl: () => of(doneEvent({ created: [{ id: 'a' }], failed: [] })),
       listDraftsImpl: () => of([draft]),
     });
     fillForm(fixture);
-    set(fixture, 'count', 1); // one question so exactly one card renders
+    set(fixture, 'count', 1);
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
@@ -203,22 +232,21 @@ describe('AiGenerateComponent', () => {
   });
 
   it('retries with the ORIGINAL request params (snapshot), even if the form is edited afterward', () => {
-    const { compiled, fixture, generateQuestions } = setup({
-      genImpl: () => of({ created: [{ id: 'a' }], failed: [{ index: 1, error: 'x' }] }),
+    const { compiled, fixture, generateQuestionStream } = setup({
+      genImpl: () => of(doneEvent({ created: [{ id: 'a' }], failed: [{ index: 1, error: 'x' }] })),
     });
     fillForm(fixture);
     (compiled.querySelector('[data-testid="generate-button"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
-    // User edits the form AFTER generating but BEFORE retrying.
     set(fixture, 'courseId', 'c2');
 
-    generateQuestions.mockClear();
-    generateQuestions.mockReturnValue(of({ created: [{ id: 'z' }], failed: [] }));
+    generateQuestionStream.mockClear();
+    generateQuestionStream.mockReturnValue(of(doneEvent({ created: [{ id: 'z' }], failed: [] })));
     (compiled.querySelector('[data-testid="retry-failed"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
-    expect(generateQuestions).toHaveBeenCalledWith(expect.objectContaining({ courseId: 'c1', count: 1 }));
+    expect(generateQuestionStream).toHaveBeenCalledWith(expect.objectContaining({ courseId: 'c1' }));
   });
 
   it('shows only the error banner (no status card, empty state intact) when the whole request fails', () => {
@@ -249,13 +277,9 @@ describe('AiGenerateComponent', () => {
       alternatives: ['3', '4'],
       figureCode: null,
     };
-    // First listDrafts() call is DraftCountService's own initial fetch (on
-    // construction, BEFORE anything is generated) — must return a DIFFERENT
-    // count than the post-generate call so this test actually exercises the
-    // sync, not just the constructor's own baseline fetch.
     let call = 0;
     const { compiled, fixture } = setup({
-      genImpl: () => of({ created: [{ id: 'a' }, { id: 'b' }, { id: 'c' }], failed: [] }),
+      genImpl: () => of(doneEvent({ created: [{ id: 'a' }, { id: 'b' }, { id: 'c' }], failed: [] })),
       listDraftsImpl: () => of(call++ === 0 ? [] : [draftStub, draftStub, draftStub]),
     });
     const draftCountService = TestBed.inject(DraftCountService);

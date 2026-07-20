@@ -1,5 +1,6 @@
 import {
   ExtractQuestionInput,
+  GenerateProgressEvent,
   GenerateQuestionInput,
   GeneratedQuestion,
   QuestionGeneratorPort,
@@ -22,11 +23,14 @@ export class LazyQuestionGeneratorAdapter implements QuestionGeneratorPort {
 
   constructor(private readonly resolve: () => QuestionGeneratorPort) {}
 
-  async generate(input: GenerateQuestionInput): Promise<GeneratedQuestion> {
+  async generate(
+    input: GenerateQuestionInput,
+    onProgress?: (event: GenerateProgressEvent) => void,
+  ): Promise<GeneratedQuestion> {
     if (!this.resolved) {
       this.resolved = this.resolve();
     }
-    return this.resolved.generate(input);
+    return this.resolved.generate(input, onProgress);
   }
 
   async reviseQuestion(input: ReviseQuestionInput): Promise<GeneratedQuestion> {
