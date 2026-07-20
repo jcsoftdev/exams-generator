@@ -3,7 +3,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { Subject, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
-import { LucideAngularModule, Check, Pencil, X, Sparkles } from 'lucide-angular';
+import { LucideAngularModule, Check, Pencil, X, Sparkles, ChevronDown } from 'lucide-angular';
 import { Difficulty } from '@exams-generator/shared';
 import { AiReviewQueueComponent } from './ai-review-queue.component';
 import { AiService } from '../ai.service';
@@ -67,7 +67,7 @@ function setup(
   TestBed.configureTestingModule({
     imports: [AiReviewQueueComponent],
     providers: [
-      importProvidersFrom(LucideAngularModule.pick({ Check, Pencil, X, Sparkles })),
+      importProvidersFrom(LucideAngularModule.pick({ Check, Pencil, X, Sparkles, ChevronDown })),
       { provide: AiService, useValue: { listDrafts, previewDraft, approveQuestion, rejectQuestion } },
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
       { provide: DraftCountService, useValue: { set: draftCountSet } },
@@ -232,5 +232,41 @@ describe('AiReviewQueueComponent', () => {
     (compiled.querySelector('[data-testid="reject-confirm-yes"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(draftCountSet).toHaveBeenCalledWith(1);
+  });
+
+  it('starts edit mode from the Editar button, seeding every field from the selected draft', () => {
+    const { compiled, fixture } = setup();
+    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeTruthy();
+    const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+    expect(enunciado.value).toBe('7. ¿Cuál organelo sintetiza proteínas?\na) Lisosoma b) Ribosoma');
+    const alternatives = compiled.querySelector('[data-testid="edit-alternatives"]') as HTMLTextAreaElement;
+    expect(alternatives.value).toBe('4\n3');
+  });
+
+  it('cancels edit mode without saving, restoring the read-only preview', () => {
+    const { compiled, fixture } = setup();
+    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="edit-cancel"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeFalsy();
+    expect(compiled.querySelector('[data-testid="paper-preview"]')).toBeTruthy();
+  });
+
+  it('filters the tema dropdown to the edit form\'s selected curso, with no extra HTTP call', () => {
+    const { compiled, fixture, getTopics } = setup();
+    getTopics.mockClear();
+    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    const component = fixture.componentInstance as unknown as {
+      editTopicOptions: () => { value: string; label: string }[];
+    };
+    expect(component.editTopicOptions()).toEqual([{ value: 't1', label: 'Célula' }]);
+    expect(getTopics).not.toHaveBeenCalled();
   });
 });

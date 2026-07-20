@@ -10,7 +10,6 @@ import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { ModalComponent } from '../../../ui/modal/modal.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
-import { InputComponent } from '../../../ui/input/input.component';
 import { AiService } from '../ai.service';
 import { DraftQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from '../ai.models';
 import { DraftCountService } from '../draft-count.service';
@@ -68,7 +67,6 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
     TagComponent,
     ModalComponent,
     SelectComponent,
-    InputComponent,
     LucideAngularModule,
   ],
   templateUrl: './ai-review-queue.component.html',
@@ -229,6 +227,39 @@ export class AiReviewQueueComponent {
    */
   protected letterFor(draft: DraftQuestion): string {
     return ALTERNATIVE_LETTERS[Number(draft.correctAnswer)] ?? draft.correctAnswer;
+  }
+
+  /** Flips the panel into edit mode, seeding every edit signal from the given draft. Course/topic options come from the already-cached full taxonomy (Task 1) — no HTTP call. */
+  protected startEdit(draft: DraftQuestion): void {
+    this.editError.set(null);
+    this.editCourseId.set(draft.courseId);
+    this.editTopicId.set(draft.topicId);
+    this.editDifficulty.set(draft.difficulty);
+    this.editGradeLevel.set(draft.gradeLevel);
+    this.editCorrectAnswer.set(draft.correctAnswer);
+    this.editBody.set(draft.bodyTypst ?? '');
+    this.editAlternatives.set((draft.alternatives ?? []).join('\n'));
+    this.editFigureCode.set(draft.figureCode ?? '');
+    this.resetAiRevise();
+    this.editing.set(true);
+  }
+
+  /** Curso changed in the edit form: tema is scoped to a course, so it's always reset — the user must re-pick it. */
+  protected onEditCourseChange(courseId: string | null): void {
+    this.editCourseId.set(courseId ?? '');
+    this.editTopicId.set('');
+  }
+
+  protected cancelEdit(): void {
+    this.editing.set(false);
+    this.editError.set(null);
+    this.resetAiRevise();
+  }
+
+  private resetAiRevise(): void {
+    this.aiInstruction.set('');
+    this.revising.set(false);
+    this.aiError.set(null);
   }
 
   /** Parses the newline-separated `editAlternatives` string into an array of trimmed strings. */
