@@ -406,7 +406,7 @@ describe("OpenRouterAdapter", () => {
       const result = await adapter.generate(INPUT, (event) => events.push(event));
 
       expect(sseHttpClient).toHaveBeenCalledTimes(2);
-      expect(events.some((e) => e.type === "restart")).toBe(true);
+      expect(events.map((e) => e.type)).toEqual(["delta", "restart", "delta"]);
       expect(result.bodyTypst).toBe(VALID_QUESTION_JSON.bodyTypst);
     });
 
