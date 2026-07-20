@@ -77,4 +77,24 @@ describeIfTypst("TypstCliAdapter golden compile (real typst binary)", () => {
 
     expect(pdf.subarray(0, 5).toString("ascii")).toBe("%PDF-");
   });
+
+  it("compiles a structured question using LaTeX math via mitex into a valid PDF", async () => {
+    const adapter = new TypstCliAdapter();
+
+    const pdf = await adapter.compileExam({
+      title: "Simulacro San Marcos",
+      versionLabel: "Version A",
+      questions: [
+        {
+          id: "q-mitex",
+          type: "structured",
+          bodyTypst:
+            '#import "@preview/mitex:0.2.7": mi; Si el ángulo mide 70 grados, halla #mi("\\frac{1}{2} \\cdot 70^\\circ").',
+          alternatives: ["35", "70", "140", "17.5", "N.A."],
+        },
+      ],
+    });
+
+    expect(pdf.subarray(0, 5).toString("ascii")).toBe("%PDF-");
+  });
 });

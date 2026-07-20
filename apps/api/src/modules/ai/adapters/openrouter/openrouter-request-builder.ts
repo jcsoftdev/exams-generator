@@ -116,7 +116,8 @@ const MITEX_RULES = [
   "Si prefieres escribir una expresión matemática en LaTeX en vez de sintaxis Typst, está permitido, pero SOLO envuelta explícitamente — LaTeX suelto dentro de $...$ sigue prohibido y no compila:",
   'expresión inline: #mi("\\frac{1}{2}") — expresión en bloque: #mitex(`\\int_0^1 x^2 dx`).',
   'Para usar #mi()/#mitex() debes incluir, dentro de bodyTypst, ANTES del primer uso, exactamente: #import "@preview/mitex:0.2.7": mi, mitex — solo si de hecho los usas, nunca si toda la pregunta usa sintaxis Typst nativa.',
-  'Ejemplo válido completo: #import "@preview/mitex:0.2.7": mi Si #mi("\\angle BAD = 70^\\circ") entonces...',
+  "El import SIEMPRE termina en punto y coma (;) antes de seguir con el resto del enunciado en la MISMA línea — sin el ; Typst intenta leer las siguientes palabras como más nombres a importar y el compile falla.",
+  'Ejemplo válido completo: #import "@preview/mitex:0.2.7": mi; Si #mi("\\angle BAD = 70^\\circ") entonces...',
 ].join(" ");
 
 /**
