@@ -16,8 +16,6 @@ import { DraftQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from '../
 import { DraftCountService } from '../draft-count.service';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
-import { BankService } from '../../bank/bank.service';
-import { UpdateQuestionPayload } from '../../bank/bank.models';
 
 /** Chrome-less PDF viewer fragment (S7 preview) — hides the native toolbar/thumbnails/scrollbar so it reads as a printed "paper", not a browser PDF viewer. */
 const PREVIEW_FRAGMENT = '#toolbar=0&navpanes=0&scrollbar=0';
@@ -77,14 +75,10 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
 })
 export class AiReviewQueueComponent {
   private readonly aiService = inject(AiService);
-  // @ts-expect-error — used in Task 2 edit form implementation
-  private readonly bankService = inject(BankService);
   private readonly taxonomyService = inject(TaxonomyService);
   private readonly draftCountService = inject(DraftCountService);
   private readonly destroyRef = inject(DestroyRef);
   private readonly sanitizer = inject(DomSanitizer);
-  /** Type for Task 2 edit form — declared to satisfy TypeScript; actual usage in Task 2. */
-  private declare _updatePayloadType: UpdateQuestionPayload;
 
   protected readonly drafts = signal<DraftQuestion[]>([]);
   protected readonly loading = signal(false);
