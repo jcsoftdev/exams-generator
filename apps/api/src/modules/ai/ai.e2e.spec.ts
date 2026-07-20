@@ -1,13 +1,13 @@
 import { randomUUID } from "node:crypto";
 import { Difficulty, Role } from "@exams-generator/shared";
 import { INestApplication } from "@nestjs/common";
-import { Test } from "@nestjs/testing";
+import { Test, TestingModule } from "@nestjs/testing";
 import { inArray } from "drizzle-orm";
 import request from "supertest";
 import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
-import { courses, questions, tenants, topics, users } from "../../db/schema";
+import { courses, generationJobs, questions, tenants, topics, users } from "../../db/schema";
 import { TokenService } from "../auth/token.service";
 import { isTypstAvailableSync } from "../exams/adapters/pdf/test-utils/typst-availability";
 import {
@@ -63,6 +63,7 @@ const describeIfTypst = isTypstAvailableSync() ? describe : describe.skip;
 
 describeIfTypst("AI generation workflow (e2e)", () => {
   let app: INestApplication;
+  let bootstrapModule: TestingModule;
   let tokenService: TokenService;
 
   let courseId: string;
@@ -89,7 +90,7 @@ describeIfTypst("AI generation workflow (e2e)", () => {
   beforeAll(async () => {
     await runMigrations();
 
-    const bootstrapModule = await Test.createTestingModule({ imports: [AppModule] }).compile();
+    bootstrapModule = await Test.createTestingModule({ imports: [AppModule] }).compile();
     tokenService = bootstrapModule.get(TokenService);
 
     const suffix = randomUUID();
@@ -154,35 +155,46 @@ describeIfTypst("AI generation workflow (e2e)", () => {
     if (createdQuestionIds.length > 0) {
       await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
     }
+    // Every draft created via `generateOneDraft()` now goes through the real
+    // `/ai/questions/jobs` flow, which persists a `generation_jobs` row
+    // FK-referencing `users` (`created_by`) — it must be cleared before
+    // `users`, same fix as `ai-jobs.e2e.spec.ts` (Task 4).
+    await db.delete(generationJobs).where(inArray(generationJobs.tenantId, [tenantAId, tenantBId]));
     await db.delete(users).where(inArray(users.id, [tenantATeacherId, tenantBTeacherId]));
     await db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]));
     await db.delete(topics).where(inArray(topics.id, [topicId]));
     await db.delete(courses).where(inArray(courses.id, [courseId]));
+    await bootstrapModule.close();
     await pool.end();
   });
 
-  function generateRequest(token: string) {
-    return request(app.getHttpServer())
-      .post("/ai/questions/generate")
-      .set("Authorization", `Bearer ${token}`);
+  async function generateOneDraft(token: string): Promise<string> {
+    const created = await request(app.getHttpServer())
+      .post("/ai/questions/jobs")
+      .set("Authorization", `Bearer ${token}`)
+      .send({ courseId, topicId, difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 1, withFigure: false })
+      .expect(202);
+
+    const deadline = Date.now() + 15000;
+    while (Date.now() < deadline) {
+      const res = await request(app.getHttpServer())
+        .get(`/ai/questions/jobs/${created.body.id}`)
+        .set("Authorization", `Bearer ${token}`);
+      if (res.body.status === "completed") {
+        return res.body.createdQuestionIds[0];
+      }
+      if (res.body.status === "failed") {
+        throw new Error("Generation job failed unexpectedly in test setup");
+      }
+      await new Promise((resolve) => setTimeout(resolve, 200));
+    }
+    throw new Error("Generation job did not complete in time");
   }
 
   it("generate -> draft -> approve: a valid AI question compiles, saves as draft, and can be approved", async () => {
     app = await buildApp(new ScriptedQuestionGeneratorAdapter([VALID_QUESTION]));
 
-    const response = await generateRequest(tenantAToken)
-      .send({
-        courseId,
-        topicId,
-        difficulty: Difficulty.Easy,
-        gradeLevel: "primaria_1",
-        count: 1,
-      })
-      .expect(201);
-
-    expect(response.body.created).toHaveLength(1);
-    expect(response.body.failed).toHaveLength(0);
-    const id = response.body.created[0].id;
+    const id = await generateOneDraft(tenantAToken);
     createdQuestionIds.push(id);
 
     const fetched = await request(app.getHttpServer())
@@ -216,23 +228,32 @@ describeIfTypst("AI generation workflow (e2e)", () => {
     expect(approved.body.status).toBe("approved");
   });
 
-  it("generate -> (invalid Typst markup) -> does NOT save, and reports the per-item compile error", async () => {
+  it("generate -> (invalid Typst markup) -> does NOT save, and the job reports the per-item compile error", async () => {
     app = await buildApp(new ScriptedQuestionGeneratorAdapter([INVALID_TYPST_QUESTION]));
 
-    const response = await generateRequest(tenantAToken)
-      .send({
-        courseId,
-        topicId,
-        difficulty: Difficulty.Easy,
-        gradeLevel: "primaria_1",
-        count: 1,
-      })
-      .expect(201);
+    const created = await request(app.getHttpServer())
+      .post("/ai/questions/jobs")
+      .set("Authorization", `Bearer ${tenantAToken}`)
+      .send({ courseId, topicId, difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 1, withFigure: false })
+      .expect(202);
 
-    expect(response.body.created).toHaveLength(0);
-    expect(response.body.failed).toHaveLength(1);
-    expect(response.body.failed[0].index).toBe(0);
-    expect(response.body.failed[0].error).toContain("Typst compile failed");
+    const deadline = Date.now() + 15000;
+    let final: { status: string; createdCount: number; failedCount: number; failedItems: { index: number; error: string }[] } | undefined;
+    while (Date.now() < deadline) {
+      const res = await request(app.getHttpServer())
+        .get(`/ai/questions/jobs/${created.body.id}`)
+        .set("Authorization", `Bearer ${tenantAToken}`);
+      if (res.body.status === "completed") {
+        final = res.body;
+        break;
+      }
+      await new Promise((resolve) => setTimeout(resolve, 200));
+    }
+
+    expect(final).toBeDefined();
+    expect(final!.createdCount).toBe(0);
+    expect(final!.failedCount).toBe(1);
+    expect(final!.failedItems[0]!.error).toContain("Typst compile failed");
 
     const drafts = await request(app.getHttpServer())
       .get("/bank/questions")
@@ -246,10 +267,7 @@ describeIfTypst("AI generation workflow (e2e)", () => {
   it("persists the requester's tenant on the generated draft — never visible to another tenant", async () => {
     app = await buildApp(new ScriptedQuestionGeneratorAdapter([VALID_QUESTION]));
 
-    const response = await generateRequest(tenantAToken)
-      .send({ courseId, topicId, difficulty: Difficulty.Medium, gradeLevel: "secundaria_1", count: 1 })
-      .expect(201);
-    const id = response.body.created[0].id;
+    const id = await generateOneDraft(tenantAToken);
     createdQuestionIds.push(id);
 
     await request(app.getHttpServer())
@@ -258,25 +276,10 @@ describeIfTypst("AI generation workflow (e2e)", () => {
       .expect(404);
   });
 
-  it("rejects with 400 when required fields are missing", async () => {
-    app = await buildApp(new ScriptedQuestionGeneratorAdapter([VALID_QUESTION]));
-
-    await generateRequest(tenantAToken).send({}).expect(400);
-  });
-
-  it("rejects with 401 when no Authorization header is sent", async () => {
-    app = await buildApp(new ScriptedQuestionGeneratorAdapter([VALID_QUESTION]));
-
-    await request(app.getHttpServer()).post("/ai/questions/generate").send({}).expect(401);
-  });
-
   it("approve/reject/edit: a draft can be rejected (deleted) instead of approved", async () => {
     app = await buildApp(new ScriptedQuestionGeneratorAdapter([VALID_QUESTION]));
 
-    const response = await generateRequest(tenantAToken)
-      .send({ courseId, topicId, difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 1 })
-      .expect(201);
-    const id = response.body.created[0].id;
+    const id = await generateOneDraft(tenantAToken);
 
     await request(app.getHttpServer())
       .post(`/bank/questions/${id}/reject`)
@@ -292,10 +295,7 @@ describeIfTypst("AI generation workflow (e2e)", () => {
   it("approve/reject/edit: a human can edit a draft's content before approving, recompiling the preview", async () => {
     app = await buildApp(new ScriptedQuestionGeneratorAdapter([VALID_QUESTION]));
 
-    const response = await generateRequest(tenantAToken)
-      .send({ courseId, topicId, difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 1 })
-      .expect(201);
-    const id = response.body.created[0].id;
+    const id = await generateOneDraft(tenantAToken);
     createdQuestionIds.push(id);
 
     const edited = await request(app.getHttpServer())
@@ -316,10 +316,7 @@ describeIfTypst("AI generation workflow (e2e)", () => {
   it("approve/reject/edit: an edit with invalid Typst markup is rejected (400) and NOT persisted", async () => {
     app = await buildApp(new ScriptedQuestionGeneratorAdapter([VALID_QUESTION]));
 
-    const response = await generateRequest(tenantAToken)
-      .send({ courseId, topicId, difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 1 })
-      .expect(201);
-    const id = response.body.created[0].id;
+    const id = await generateOneDraft(tenantAToken);
     createdQuestionIds.push(id);
 
     await request(app.getHttpServer())
@@ -338,10 +335,7 @@ describeIfTypst("AI generation workflow (e2e)", () => {
   it("approve/reject/edit: tenant B cannot approve/reject/edit tenant A's draft (404)", async () => {
     app = await buildApp(new ScriptedQuestionGeneratorAdapter([VALID_QUESTION]));
 
-    const response = await generateRequest(tenantAToken)
-      .send({ courseId, topicId, difficulty: Difficulty.Easy, gradeLevel: "primaria_1", count: 1 })
-      .expect(201);
-    const id = response.body.created[0].id;
+    const id = await generateOneDraft(tenantAToken);
     createdQuestionIds.push(id);
 
     await request(app.getHttpServer())
