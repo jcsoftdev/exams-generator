@@ -137,3 +137,46 @@ export interface AiRevisedQuestion {
   readonly alternatives: readonly string[];
   readonly correctAnswer: string;
 }
+
+export type GenerationJobStatus = 'pending' | 'running' | 'completed' | 'failed' | 'cancelled';
+
+export interface GenerationJobFailedItem {
+  readonly index: number;
+  readonly error: string;
+}
+
+/** Mirrors `GenerationJobRecord` (apps/api ai module) — a durable AI-generation batch job. */
+export interface GenerationJob {
+  readonly id: string;
+  readonly tenantId: string;
+  readonly courseId: string;
+  readonly topicId: string;
+  readonly difficulty: Difficulty;
+  readonly gradeLevel: string;
+  readonly count: number;
+  readonly withFigure: boolean;
+  readonly status: GenerationJobStatus;
+  readonly createdCount: number;
+  readonly failedCount: number;
+  readonly createdQuestionIds: readonly string[];
+  readonly failedItems: readonly GenerationJobFailedItem[];
+  readonly cancelRequested: boolean;
+  readonly createdAt: string;
+  readonly updatedAt: string;
+  readonly completedAt: string | null;
+}
+
+/** `POST /ai/questions/jobs` request body. */
+export interface CreateGenerationJobPayload {
+  readonly courseId: string;
+  readonly topicId: string;
+  readonly difficulty: Difficulty;
+  readonly gradeLevel: string;
+  readonly count: number;
+  readonly withFigure: boolean;
+}
+
+export interface GenerationJobListResult {
+  readonly items: readonly GenerationJob[];
+  readonly total: number;
+}
