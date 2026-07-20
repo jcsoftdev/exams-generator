@@ -119,13 +119,20 @@ function openGeneratePanel(compiled: HTMLElement, fixture: { detectChanges: () =
   fixture.detectChanges();
 }
 
-function selectVersionCount(compiled: HTMLElement, fixture: { detectChanges: () => void }, value: string): void {
-  const select = compiled.querySelector<HTMLSelectElement>('[data-testid="version-count-select"] select');
-  if (!select) {
+function selectVersionCount(compiled: HTMLElement, fixture: { detectChanges: () => void }, label: string): void {
+  const container = compiled.querySelector('[data-testid="version-count-select"]') as HTMLElement;
+  if (!container) {
     throw new Error('version count select not found');
   }
-  select.value = value;
-  select.dispatchEvent(new Event('change'));
+  (container.querySelector('button[role="combobox"]') as HTMLButtonElement).click();
+  fixture.detectChanges();
+  const option = Array.from(container.querySelectorAll('[data-testid="select-option"]')).find(
+    (li) => li.textContent?.trim() === label,
+  ) as HTMLElement | undefined;
+  if (!option) {
+    throw new Error(`version count option "${label}" not found`);
+  }
+  option.click();
   fixture.detectChanges();
 }
 
@@ -273,10 +280,13 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
         'Se reemplazarán las formas actuales',
       );
 
-      const options = compiled.querySelectorAll<HTMLOptionElement>(
-        '[data-testid="version-count-select"] select option',
+      const container = compiled.querySelector('[data-testid="version-count-select"]') as HTMLElement;
+      (container.querySelector('button[role="combobox"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      const labels = Array.from(container.querySelectorAll('[data-testid="select-option"]')).map((o) =>
+        o.textContent?.trim(),
       );
-      expect(Array.from(options).map((o) => o.value)).toEqual(['2', '3', '4', '5']);
+      expect(labels).toEqual(['2', '3', '4', '5']);
     });
 
     it('clicking the toggle again hides the panel', () => {

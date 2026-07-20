@@ -1,8 +1,10 @@
 import { TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { describe, it, expect, vi } from 'vitest';
 import { of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { BankNewComponent } from './bank-new.component';
 import { BankService } from '../bank.service';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
@@ -54,6 +56,34 @@ function setup(
 function set(fixture: { componentInstance: unknown; detectChanges(): void }, prop: string, value: unknown) {
   (fixture.componentInstance as Record<string, { set(v: unknown): void }>)[prop].set(value);
   fixture.detectChanges();
+}
+
+/** Opens the `ui-select` scoped under `testid`, reads the rendered option labels, then leaves it open. */
+function openAndReadOptionLabels(
+  compiled: HTMLElement,
+  fixture: { detectChanges(): void },
+  testid: string,
+): (string | undefined)[] {
+  const container = compiled.querySelector(`[data-testid="${testid}"]`) as HTMLElement;
+  (container.querySelector('button[role="combobox"]') as HTMLButtonElement).click();
+  fixture.detectChanges();
+  return Array.from(container.querySelectorAll('[data-testid="select-option"]')).map((o) => o.textContent?.trim());
+}
+
+/** The trigger button for the `ui-select` scoped under `testid` — mirrors the old `<select>` element for disabled checks. */
+function selectTrigger(compiled: HTMLElement, testid: string): HTMLButtonElement {
+  return compiled.querySelector(`[data-testid="${testid}"] button[role="combobox"]`) as HTMLButtonElement;
+}
+
+/**
+ * Reads the `options()` bound to the `ui-select` scoped under `testid` directly off the
+ * component instance — the DISABLED trigger can't be opened via click, so this is the
+ * equivalent of reading a disabled native `<select>`'s (still-present) `<option>` list.
+ */
+function selectOptionsOf(fixture: { debugElement: { query(pred: unknown): { componentInstance: unknown } | null } }, testid: string): readonly SelectOption<unknown>[] {
+  const debugEl = fixture.debugElement.query(By.css(`[data-testid="${testid}"] ui-select`));
+  const instance = debugEl!.componentInstance as SelectComponent<unknown>;
+  return instance.options();
 }
 
 describe('BankNewComponent', () => {
@@ -116,9 +146,9 @@ describe('BankNewComponent', () => {
     it('does not load courses until a grade level is picked, and disables the course select (photo tab)', () => {
       const { compiled, getCourses } = setup();
       expect(getCourses).not.toHaveBeenCalled();
-      const courseSelect = compiled.querySelector('[data-testid="photo-course-select"] select') as HTMLSelectElement;
-      expect(courseSelect).toBeTruthy();
-      expect(courseSelect.disabled).toBe(true);
+      const courseTrigger = selectTrigger(compiled, 'photo-course-select');
+      expect(courseTrigger).toBeTruthy();
+      expect(courseTrigger.disabled).toBe(true);
     });
 
     it('loads courses scoped to the picked grade level and renders them as select options, no free-text course/topic inputs (photo tab)', () => {
@@ -126,9 +156,9 @@ describe('BankNewComponent', () => {
       set(fixture, 'pGradeLevel', 'pre');
 
       expect(getCourses).toHaveBeenCalledWith('pre');
-      const courseSelect = compiled.querySelector('[data-testid="photo-course-select"] select') as HTMLSelectElement;
-      expect(courseSelect.disabled).toBe(false);
-      const optionLabels = Array.from(courseSelect.options).map((o) => o.textContent?.trim());
+      const courseTrigger = selectTrigger(compiled, 'photo-course-select');
+      expect(courseTrigger.disabled).toBe(false);
+      const optionLabels = openAndReadOptionLabels(compiled, fixture, 'photo-course-select');
       expect(optionLabels).toContain('Matemática');
       expect(optionLabels).toContain('Comunicación');
       // Only one free text input remains in the photo panel: the answer
@@ -140,10 +170,12 @@ describe('BankNewComponent', () => {
     });
 
     it('keeps the topic select disabled/empty until a course is picked (photo tab)', () => {
-      const { compiled } = setup();
-      const topicSelect = compiled.querySelector('[data-testid="photo-topic-select"] select') as HTMLSelectElement;
-      expect(topicSelect.disabled).toBe(true);
-      const optionLabels = Array.from(topicSelect.options).map((o) => o.textContent?.trim());
+      const { fixture, compiled } = setup();
+      const topicTrigger = selectTrigger(compiled, 'photo-topic-select');
+      expect(topicTrigger.disabled).toBe(true);
+      // Disabled — can't open it via click, so read the bound `options()` directly
+      // (the same public data a disabled native <select> would still carry).
+      const optionLabels = selectOptionsOf(fixture, 'photo-topic-select').map((o) => o.label);
       expect(optionLabels).not.toContain('Álgebra');
       expect(optionLabels).not.toContain('Comprensión lectora');
     });
@@ -154,9 +186,9 @@ describe('BankNewComponent', () => {
       set(fixture, 'pCourseId', 'c1');
       fixture.detectChanges();
       expect(getTopics).toHaveBeenCalledWith('c1', 'pre');
-      const topicSelect = compiled.querySelector('[data-testid="photo-topic-select"] select') as HTMLSelectElement;
-      expect(topicSelect.disabled).toBe(false);
-      const optionLabels = Array.from(topicSelect.options).map((o) => o.textContent?.trim());
+      const topicTrigger = selectTrigger(compiled, 'photo-topic-select');
+      expect(topicTrigger.disabled).toBe(false);
+      const optionLabels = openAndReadOptionLabels(compiled, fixture, 'photo-topic-select');
       expect(optionLabels).toContain('Álgebra');
     });
 
@@ -195,10 +227,7 @@ describe('BankNewComponent', () => {
 
       expect(getTopics).toHaveBeenCalledWith('c2', 'pre');
       expect((fixture.componentInstance as unknown as { sTopicId: () => string }).sTopicId()).toBe('');
-      const topicSelect = compiled.querySelector(
-        '[data-testid="structured-topic-select"] select',
-      ) as HTMLSelectElement;
-      const optionLabels = Array.from(topicSelect.options).map((o) => o.textContent?.trim());
+      const optionLabels = openAndReadOptionLabels(compiled, fixture, 'structured-topic-select');
       expect(optionLabels).toContain('Comprensión lectora');
     });
 

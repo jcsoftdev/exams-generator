@@ -3,7 +3,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { Subject, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
-import { LucideAngularModule, Ellipsis, Plus, School } from 'lucide-angular';
+import { LucideAngularModule, Ellipsis, Plus, School, Check, ChevronDown } from 'lucide-angular';
 import { TenantSettingsComponent } from './tenant-settings.component';
 import { TenantSettingsService } from './tenant-settings.service';
 import { TenantSettings } from './tenant-settings.models';
@@ -51,7 +51,7 @@ function setup(overrides: {
   TestBed.configureTestingModule({
     imports: [TenantSettingsComponent],
     providers: [
-      importProvidersFrom(LucideAngularModule.pick({ Ellipsis, Plus, School })),
+      importProvidersFrom(LucideAngularModule.pick({ Ellipsis, Plus, School, Check, ChevronDown })),
       { provide: TenantSettingsService, useValue: { getSettings, updateSettings, fetchLogo } },
       { provide: UsersService, useValue: { list, create, setActive, resetPassword } },
     ],
