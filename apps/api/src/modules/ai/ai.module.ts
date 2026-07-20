@@ -8,6 +8,7 @@ import { resolveQuestionGeneratorAdapter } from "./ai-provider";
 import { resolveRedisConnection } from "./generation-jobs.env";
 import { GenerationJobsProcessor } from "./generation-jobs.processor";
 import { GenerationJobsRepository } from "./generation-jobs.repository";
+import { GenerationJobsService } from "./generation-jobs.service";
 import { ExtractQuestionService } from "./extract-question.service";
 import { GenerateQuestionsService } from "./generate-questions.service";
 import { ReviseQuestionService } from "./revise-question.service";
@@ -39,12 +40,13 @@ import { ReviseQuestionService } from "./revise-question.service";
     ReviseQuestionService,
     ExtractQuestionService,
     GenerationJobsRepository,
+    GenerationJobsService,
     GenerationJobsProcessor,
     {
       provide: QUESTION_GENERATOR_PORT,
       useFactory: () => new LazyQuestionGeneratorAdapter(resolveQuestionGeneratorAdapter),
     },
   ],
-  exports: [QUESTION_GENERATOR_PORT, GenerationJobsRepository],
+  exports: [QUESTION_GENERATOR_PORT, GenerationJobsRepository, GenerationJobsService],
 })
 export class AiModule {}
