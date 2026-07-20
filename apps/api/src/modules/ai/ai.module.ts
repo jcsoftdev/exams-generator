@@ -3,6 +3,7 @@ import { BullModule } from "@nestjs/bullmq";
 import { BankModule } from "../bank/bank.module";
 import { LazyQuestionGeneratorAdapter } from "./adapters/lazy-question-generator.adapter";
 import { AiController } from "./ai.controller";
+import { AiJobsController } from "./ai-jobs.controller";
 import { QUESTION_GENERATOR_PORT } from "./ai.constants";
 import { resolveQuestionGeneratorAdapter } from "./ai-provider";
 import { resolveRedisConnection } from "./generation-jobs.env";
@@ -34,7 +35,7 @@ import { ReviseQuestionService } from "./revise-question.service";
     }),
     BullModule.registerQueue({ name: "generation" }),
   ],
-  controllers: [AiController],
+  controllers: [AiController, AiJobsController],
   providers: [
     GenerateQuestionsService,
     ReviseQuestionService,
