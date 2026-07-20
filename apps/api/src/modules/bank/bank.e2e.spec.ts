@@ -146,26 +146,50 @@ describe("Bank module (e2e)", () => {
   });
 
   afterAll(async () => {
-    if (createdQuestionIds.length > 0) {
-      await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
+    const cleanupSteps: Array<[string, () => Promise<unknown>]> = [
+      [
+        "delete questions",
+        async () => {
+          if (createdQuestionIds.length > 0) {
+            await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
+          }
+        },
+      ],
+      [
+        "delete assets",
+        async () => {
+          if (createdAssetIds.length > 0) {
+            await db.delete(assets).where(inArray(assets.id, createdAssetIds));
+          }
+        },
+      ],
+      [
+        "delete users",
+        () =>
+          db
+            .delete(users)
+            .where(
+              inArray(users.id, [
+                staffUserId,
+                tenantATeacherId,
+                tenantASchoolAdminId,
+                tenantBTeacherId,
+              ]),
+            ),
+      ],
+      ["delete tenants", () => db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]))],
+      ["delete topics", () => db.delete(topics).where(inArray(topics.id, [topicId]))],
+      ["delete courses", () => db.delete(courses).where(inArray(courses.id, [courseId]))],
+      ["close app", () => app.close()],
+    ];
+    for (const [label, step] of cleanupSteps) {
+      try {
+        await step();
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.error(`[afterAll cleanup] "${label}" failed, continuing with remaining steps:`, err);
+      }
     }
-    if (createdAssetIds.length > 0) {
-      await db.delete(assets).where(inArray(assets.id, createdAssetIds));
-    }
-    await db
-      .delete(users)
-      .where(
-        inArray(users.id, [
-          staffUserId,
-          tenantATeacherId,
-          tenantASchoolAdminId,
-          tenantBTeacherId,
-        ]),
-      );
-    await db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]));
-    await db.delete(topics).where(inArray(topics.id, [topicId]));
-    await db.delete(courses).where(inArray(courses.id, [courseId]));
-    await app.close();
     await pool.end();
   });
 

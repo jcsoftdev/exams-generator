@@ -136,22 +136,42 @@ describe("GET /dashboard/stats (e2e)", () => {
   });
 
   afterAll(async () => {
-    await app.close();
-    for (const id of createdExamIds) {
-      await examsRepository.deleteExam(id, tenantId);
+    const cleanupSteps: Array<[string, () => Promise<unknown>]> = [
+      ["close app", () => app.close()],
+      [
+        "delete exams",
+        async () => {
+          for (const id of createdExamIds) {
+            await examsRepository.deleteExam(id, tenantId);
+          }
+        },
+      ],
+      [
+        "delete questions",
+        async () => {
+          if (createdQuestionIds.length > 0) {
+            await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
+          }
+        },
+      ],
+      // `createImageQuestion` also inserts a backing `assets` row (tenant-scoped
+      // FK) — must be cleared before deleting `tenants`, or the delete below
+      // violates `assets_tenant_id_tenants_id_fk` (mirrors `bank.e2e.spec.ts`'s
+      // own asset cleanup convention).
+      ["delete assets", () => db.delete(assets).where(inArray(assets.tenantId, [tenantId]))],
+      ["delete users", () => db.delete(users).where(inArray(users.id, [teacherId, staffId]))],
+      ["delete tenants", () => db.delete(tenants).where(inArray(tenants.id, [tenantId]))],
+      ["delete topics", () => db.delete(topics).where(inArray(topics.id, [topicId]))],
+      ["delete courses", () => db.delete(courses).where(inArray(courses.id, [courseId]))],
+    ];
+    for (const [label, step] of cleanupSteps) {
+      try {
+        await step();
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.error(`[afterAll cleanup] "${label}" failed, continuing with remaining steps:`, err);
+      }
     }
-    if (createdQuestionIds.length > 0) {
-      await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
-    }
-    // `createImageQuestion` also inserts a backing `assets` row (tenant-scoped
-    // FK) — must be cleared before deleting `tenants`, or the delete below
-    // violates `assets_tenant_id_tenants_id_fk` (mirrors `bank.e2e.spec.ts`'s
-    // own asset cleanup convention).
-    await db.delete(assets).where(inArray(assets.tenantId, [tenantId]));
-    await db.delete(users).where(inArray(users.id, [teacherId, staffId]));
-    await db.delete(tenants).where(inArray(tenants.id, [tenantId]));
-    await db.delete(topics).where(inArray(topics.id, [topicId]));
-    await db.delete(courses).where(inArray(courses.id, [courseId]));
     await pool.end();
   });
 
