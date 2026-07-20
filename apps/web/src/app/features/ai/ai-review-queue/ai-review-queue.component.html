@@ -97,6 +97,15 @@
                 (valueChange)="editCorrectAnswer.set($event ?? '')"
               ></ui-select>
             </div>
+            <label class="text-sm text-n700">Figura (CeTZ) — opcional
+              <textarea
+                data-testid="edit-figure-code"
+                class="mt-1 block w-full rounded-field border border-n200 p-2 font-mono text-xs"
+                rows="4"
+                [value]="editFigureCode()"
+                (input)="editFigureCode.set($any($event.target).value)"
+              ></textarea>
+            </label>
 
             @if (editError()) {
               <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">{{ editError() }}</p>
@@ -104,7 +113,7 @@
 
             <div class="flex gap-2">
               <div data-testid="edit-save">
-                <ui-button variant="primary" [disabled]="!editTopicId()" (clicked)="cancelEdit()">Guardar</ui-button>
+                <ui-button variant="primary" [loading]="editSaving()" [disabled]="editSaving() || !editTopicId()" (clicked)="saveEdit()">Guardar</ui-button>
               </div>
               <div data-testid="edit-cancel">
                 <ui-button variant="ghost" (clicked)="cancelEdit()">Cancelar</ui-button>

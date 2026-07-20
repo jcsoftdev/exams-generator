@@ -15,6 +15,8 @@ import { DraftQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from '../
 import { DraftCountService } from '../draft-count.service';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
+import { BankService } from '../../bank/bank.service';
+import { UpdateQuestionPayload } from '../../bank/bank.models';
 
 /** Chrome-less PDF viewer fragment (S7 preview) — hides the native toolbar/thumbnails/scrollbar so it reads as a printed "paper", not a browser PDF viewer. */
 const PREVIEW_FRAGMENT = '#toolbar=0&navpanes=0&scrollbar=0';
@@ -73,6 +75,7 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
 })
 export class AiReviewQueueComponent {
   private readonly aiService = inject(AiService);
+  private readonly bankService = inject(BankService);
   private readonly taxonomyService = inject(TaxonomyService);
   private readonly draftCountService = inject(DraftCountService);
   private readonly destroyRef = inject(DestroyRef);
@@ -254,6 +257,45 @@ export class AiReviewQueueComponent {
     this.editing.set(false);
     this.editError.set(null);
     this.resetAiRevise();
+  }
+
+  /**
+   * Builds `UpdateQuestionPayload` — NEVER `courseId` (the backend derives
+   * course from `topicId`, see UpdateQuestionPayload's doc) — and calls
+   * `BankService.updateQuestion`. On success: exits edit mode, reloads the
+   * queue (`load()`, same as approve/reject), and recompiles the preview for
+   * this draft if it's still selected.
+   */
+  protected saveEdit(): void {
+    const draft = this.selected();
+    if (!draft || this.editSaving() || !this.editTopicId()) {
+      return;
+    }
+    this.editSaving.set(true);
+    this.editError.set(null);
+
+    const patch: UpdateQuestionPayload = {
+      topicId: this.editTopicId(),
+      difficulty: this.editDifficulty() ?? undefined,
+      gradeLevel: this.editGradeLevel() ?? undefined,
+      correctAnswer: this.editCorrectAnswer(),
+      bodyTypst: this.editBody(),
+      alternatives: this.editAlternativesList(),
+      figureCode: this.editFigureCode() || undefined,
+    };
+
+    this.bankService.updateQuestion(draft.id, patch).subscribe({
+      next: () => {
+        this.editing.set(false);
+        this.editSaving.set(false);
+        this.load();
+        this.compilePreview(draft.id);
+      },
+      error: () => {
+        this.editSaving.set(false);
+        this.editError.set('No se pudo guardar la pregunta. Inténtalo de nuevo.');
+      },
+    });
   }
 
   private resetAiRevise(): void {

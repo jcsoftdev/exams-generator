@@ -11,6 +11,7 @@ import { DraftQuestion } from '../ai.models';
 import { DraftCountService } from '../draft-count.service';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
+import { BankService } from '../../bank/bank.service';
 
 function draft(o: Partial<DraftQuestion> & { id: string }): DraftQuestion {
   return {
@@ -50,6 +51,8 @@ function setup(
     approveImpl?: () => unknown;
     getCoursesImpl?: () => unknown;
     getTopicsImpl?: (courseId: string) => unknown;
+    updateQuestionImpl?: (id: string, patch: unknown) => unknown;
+    reviseQuestionImpl?: (id: string, instruction: string) => unknown;
   } = {},
 ) {
   const listDrafts = vi.fn(over.listImpl ?? (() => of(DRAFTS)));
@@ -58,8 +61,16 @@ function setup(
   );
   const approveQuestion = vi.fn(over.approveImpl ?? ((id: string) => of({ id })));
   const rejectQuestion = vi.fn((id: string) => of({ id }));
+  const reviseQuestion = vi.fn(
+    over.reviseQuestionImpl ??
+      ((_id: string) =>
+        of({ bodyTypst: 'revisado', alternatives: ['1', '2'], correctAnswer: '0', figureCode: null })),
+  );
   const getCourses = vi.fn(over.getCoursesImpl ?? (() => of(COURSES)));
   const getTopics = vi.fn(over.getTopicsImpl ?? (() => of(TOPICS_C1)));
+  const updateQuestion = vi.fn(
+    over.updateQuestionImpl ?? ((id: string) => of({ id } as unknown)),
+  );
   const draftCountSet = vi.fn();
   let n = 0;
   vi.spyOn(URL, 'createObjectURL').mockImplementation(() => `blob:pdf-${n++}`);
@@ -68,7 +79,11 @@ function setup(
     imports: [AiReviewQueueComponent],
     providers: [
       importProvidersFrom(LucideAngularModule.pick({ Check, Pencil, X, Sparkles, ChevronDown })),
-      { provide: AiService, useValue: { listDrafts, previewDraft, approveQuestion, rejectQuestion } },
+      {
+        provide: AiService,
+        useValue: { listDrafts, previewDraft, approveQuestion, rejectQuestion, reviseQuestion },
+      },
+      { provide: BankService, useValue: { updateQuestion } },
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
       { provide: DraftCountService, useValue: { set: draftCountSet } },
     ],
@@ -82,8 +97,10 @@ function setup(
     previewDraft,
     approveQuestion,
     rejectQuestion,
+    reviseQuestion,
     getCourses,
     getTopics,
+    updateQuestion,
     draftCountSet,
   };
 }
@@ -268,5 +285,73 @@ describe('AiReviewQueueComponent', () => {
     };
     expect(component.editTopicOptions()).toEqual([{ value: 't1', label: 'Célula' }]);
     expect(getTopics).not.toHaveBeenCalled();
+  });
+
+  it('saves the edited draft via BankService.updateQuestion with the full payload including figureCode, then exits edit mode', () => {
+    const { compiled, fixture, updateQuestion } = setup();
+    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+    enunciado.value = 'Enunciado corregido';
+    enunciado.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+
+    (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(updateQuestion).toHaveBeenCalledWith('d1', {
+      topicId: 't1',
+      difficulty: Difficulty.Medium,
+      gradeLevel: 'secundaria_3',
+      correctAnswer: '0',
+      bodyTypst: 'Enunciado corregido',
+      alternatives: ['4', '3'],
+      figureCode: undefined,
+    });
+    expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeFalsy();
+  });
+
+  it('sends figureCode in the save payload when the draft has one', () => {
+    const { compiled, fixture, updateQuestion } = setup({
+      listImpl: () => of([draft({ id: 'd1', figureCode: '#circle((0,0))' })]),
+    });
+    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(updateQuestion).toHaveBeenCalledWith(
+      'd1',
+      expect.objectContaining({ figureCode: '#circle((0,0))' }),
+    );
+  });
+
+  it('shows an error and stays in edit mode when saving fails', () => {
+    const { compiled, fixture } = setup({
+      updateQuestionImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+    });
+    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeTruthy();
+    const error = compiled.querySelector('[role="alert"]');
+    expect(error?.textContent).toContain('No se pudo guardar');
+  });
+
+  it('reloads the queue and refreshes the preview after a successful save', () => {
+    const { compiled, fixture, listDrafts, previewDraft } = setup();
+    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    listDrafts.mockClear();
+    previewDraft.mockClear();
+
+    (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(listDrafts).toHaveBeenCalledTimes(1);
+    expect(previewDraft).toHaveBeenCalledWith('d1');
   });
 });
