@@ -133,9 +133,9 @@ import { DraftQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from '../
 import { DraftCountService } from '../draft-count.service';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
-import { BankService } from '../../bank/bank.service';
-import { UpdateQuestionPayload } from '../../bank/bank.models';
 ```
+
+**Do NOT add `BankService`/`UpdateQuestionPayload` imports or a `bankService` injection here.** They belong in Task 3 (where `saveEdit()` actually calls `bankService.updateQuestion(...)`), not this task. This repo's `tsconfig.base.json` has `noUnusedLocals: true`, which rejects (TS6133) a private field or import that's never read — adding the injection here, unused until Task 3, does not compile without an ugly suppression workaround. (Corrected after Task 1's first implementation attempt hit exactly this — see `.superpowers/sdd/progress.md`.)
 
 Update the `@Component` decorator's `imports` array — find:
 
@@ -808,7 +808,38 @@ Expected: FAIL — `saveEdit` isn't wired, `edit-save` still calls `cancelEdit()
 
 - [ ] **Step 3: Implement `saveEdit()`**
 
-In `ai-review-queue.component.ts`, add after `cancelEdit()`:
+In `ai-review-queue.component.ts`, add the `BankService`/`UpdateQuestionPayload` imports (NOT added in Task 1 — deliberately deferred here, since this is the first step that actually reads them; adding an injected-but-unused field earlier fails to compile under this repo's `noUnusedLocals: true`). Find:
+
+```ts
+import { TaxonomyService } from '../../taxonomy/taxonomy.service';
+import { Course, Topic } from '../../taxonomy/taxonomy.models';
+```
+
+Replace with:
+
+```ts
+import { TaxonomyService } from '../../taxonomy/taxonomy.service';
+import { Course, Topic } from '../../taxonomy/taxonomy.models';
+import { BankService } from '../../bank/bank.service';
+import { UpdateQuestionPayload } from '../../bank/bank.models';
+```
+
+Add the injection next to `taxonomyService` — find:
+
+```ts
+  private readonly aiService = inject(AiService);
+  private readonly taxonomyService = inject(TaxonomyService);
+```
+
+Replace with:
+
+```ts
+  private readonly aiService = inject(AiService);
+  private readonly bankService = inject(BankService);
+  private readonly taxonomyService = inject(TaxonomyService);
+```
+
+Then add after `cancelEdit()`:
 
 ```ts
   /**
