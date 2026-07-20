@@ -29,7 +29,7 @@
   <ul class="flex flex-col gap-3">
     @for (question of questions(); track question.id; let i = $index) {
       <li
-        class="rounded-card border border-n200 bg-white p-4"
+        class="rounded-card border border-n200 bg-surface p-4"
         data-testid="exam-question"
         [attr.data-question-id]="question.id"
       >
@@ -92,7 +92,7 @@
   </ul>
 
   <footer
-    class="sticky bottom-0 mt-6 flex items-center justify-between gap-3 rounded-card border border-n200 bg-white px-4 py-3"
+    class="sticky bottom-0 mt-6 flex items-center justify-between gap-3 rounded-card border border-n200 bg-surface px-4 py-3"
   >
     <span class="text-sm text-n600">{{ questions().length }} preguntas</span>
     <button

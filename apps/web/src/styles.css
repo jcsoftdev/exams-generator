@@ -42,6 +42,10 @@
   --color-warn-bg: #fff8f1;
   --color-warn-text: #9a3412;
 
+  /* Superficie — fondo de tarjetas/paneles/inputs (reemplaza el literal
+     bg-white para que participe del theme-switching). */
+  --color-surface: #ffffff;
+
   /* "Papel" — vista previa impresa WYSIWYG. Fixed regardless of theme
      (design doc §3, "Unchanged in both modes") — never repeated below. */
   --color-paper-bg: #fdfdfc;
@@ -85,6 +89,8 @@
     --color-n100: #1c2127;
     --color-n50: #14181d;
 
+    --color-surface: #1c2127;
+
     --color-easy-bg: #14532d;
     --color-easy-text: #86efac;
     --color-medium-bg: #78350f;
@@ -127,6 +133,8 @@
   --color-n100: #1c2127;
   --color-n50: #14181d;
 
+  --color-surface: #1c2127;
+
   --color-easy-bg: #14532d;
   --color-easy-text: #86efac;
   --color-medium-bg: #78350f;
@@ -168,6 +176,8 @@
   --color-n700: #4e545c;
   --color-n800: #363b41;
   --color-n900: #20242a;
+
+  --color-surface: #ffffff;
 
   --color-easy-bg: #dcfce7;
   --color-easy-text: #166534;

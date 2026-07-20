@@ -19,7 +19,7 @@ import { ChangeDetectionStrategy, Component, input, model } from '@angular/core'
       [disabled]="disabled()"
       [value]="value()"
       (input)="onInput($event)"
-      class="w-full rounded-field border border-n300 bg-white px-3 py-2 text-sm text-n900 disabled:cursor-not-allowed disabled:bg-n100"
+      class="w-full rounded-field border border-n300 bg-surface px-3 py-2 text-sm text-n900 disabled:cursor-not-allowed disabled:bg-n100"
     />
     @if (error()) {
       <p data-testid="input-error" class="mt-1 text-sm text-hard-text">{{ error() }}</p>

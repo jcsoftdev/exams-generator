@@ -21,6 +21,6 @@ export class CardComponent {
 
   protected classes(): string {
     const base = 'rounded-card border border-n200 p-4';
-    return this.tone() === 'muted' ? `${base} bg-n50` : `${base} bg-white`;
+    return this.tone() === 'muted' ? `${base} bg-n50` : `${base} bg-surface`;
   }
 }

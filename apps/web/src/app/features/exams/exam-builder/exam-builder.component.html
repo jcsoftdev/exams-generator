@@ -38,12 +38,12 @@
       </div>
 
       <!-- Desktop: full grid table (curso · tema rows x dificultad columns), grouped by course, sticky header -->
-      <div data-testid="content-table-desktop" class="hidden overflow-hidden rounded-card border border-n200 bg-white md:block">
+      <div data-testid="content-table-desktop" class="hidden overflow-hidden rounded-card border border-n200 bg-surface md:block">
         <div class="max-h-[70vh] overflow-y-auto">
           <ui-table>
-            <th head class="sticky top-0 z-10 border-b border-n200 bg-white px-3 py-2 font-semibold text-n700">Curso · Tema</th>
+            <th head class="sticky top-0 z-10 border-b border-n200 bg-surface px-3 py-2 font-semibold text-n700">Curso · Tema</th>
             @for (difficulty of difficulties; track difficulty) {
-              <th head class="sticky top-0 z-10 border-b border-n200 bg-white px-3 py-2 text-right font-semibold text-n700">{{ difficultyLabels[difficulty] }}</th>
+              <th head class="sticky top-0 z-10 border-b border-n200 bg-surface px-3 py-2 text-right font-semibold text-n700">{{ difficultyLabels[difficulty] }}</th>
             }
             @for (group of groupedRows(); track group.courseId) {
               <ng-container body>
@@ -62,7 +62,7 @@
                 </tr>
                 @if (isCourseExpanded(group.courseId)) {
                   @for (row of group.rows; track row.id) {
-                  <tr data-testid="builder-row" class="border-b border-n100 odd:bg-white even:bg-n50 hover:bg-primary-50">
+                  <tr data-testid="builder-row" class="border-b border-n100 odd:bg-surface even:bg-n50 hover:bg-primary-50">
                     <td class="px-3 py-2 text-n800">{{ row.topicName }}</td>
                     @for (difficulty of difficulties; track difficulty) {
                       <td

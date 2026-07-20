@@ -12,7 +12,7 @@
         <button
           type="button"
           data-testid="review-item"
-          class="rounded-field border bg-white p-2 text-left"
+          class="rounded-field border bg-surface p-2 text-left"
           [class.border-primary-500]="selected()?.id === d.id"
           [class.border-n200]="selected()?.id !== d.id"
           (click)="select(d)"
@@ -30,7 +30,7 @@
   <!-- Panel -->
   <div>
     @if (selected(); as d) {
-      <div class="rounded-card border border-n200 bg-white p-4">
+      <div class="rounded-card border border-n200 bg-surface p-4">
         <div data-testid="panel-header" class="mb-3 flex flex-wrap items-center gap-2">
           <ui-tag variant="ai">Borrador IA</ui-tag>
           <ui-tag [variant]="tagVariantFor(d.difficulty)">{{ difficultyLabel(d.difficulty) }}</ui-tag>

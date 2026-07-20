@@ -2,7 +2,7 @@
   <h1 class="text-xl font-semibold text-n900">Banco de preguntas</h1>
 
   <!-- Barra de filtros -->
-  <div class="flex flex-wrap items-end gap-3 rounded-card border border-n200 bg-white p-3" data-testid="bank-filters">
+  <div class="flex flex-wrap items-end gap-3 rounded-card border border-n200 bg-surface p-3" data-testid="bank-filters">
     <div class="w-36">
       <ui-select
         label="Nivel"
@@ -39,7 +39,7 @@
       }
     </div>
   } @else if (errorMessage()) {
-    <div data-testid="error-state" class="rounded-card border border-n200 bg-white p-8 text-center">
+    <div data-testid="error-state" class="rounded-card border border-n200 bg-surface p-8 text-center">
       <p class="text-n700">{{ errorMessage() }}</p>
       <div data-testid="retry-button" class="mt-3 inline-block">
         <ui-button variant="primary" (clicked)="retry()">Reintentar</ui-button>
@@ -95,7 +95,7 @@
           }
           @for (course of filteredTree(); track course.courseId) {
             <!-- Nivel 1 · Curso: ancla dominante — banda sólida, chevron grande, label en negrita. -->
-            <div class="rounded-card border border-n200 bg-white transition-colors hover:border-n300">
+            <div class="rounded-card border border-n200 bg-surface transition-colors hover:border-n300">
               <button
                 type="button"
                 data-testid="course-header"
@@ -108,7 +108,7 @@
               >
                 <lucide-angular [name]="chevronFor(isCourseExpanded(course.courseId))" class="h-5 w-5 shrink-0 text-n700"></lucide-angular>
                 <span class="text-base font-bold text-n900">{{ course.name }}</span>
-                <span class="ml-1 shrink-0 rounded-full bg-white px-2 py-0.5 text-xs font-medium text-n600">{{ course.questionCount }}</span>
+                <span class="ml-1 shrink-0 rounded-full bg-surface px-2 py-0.5 text-xs font-medium text-n600">{{ course.questionCount }}</span>
               </button>
 
               @if (isCourseExpanded(course.courseId)) {
@@ -136,7 +136,7 @@
                             <button
                               type="button"
                               data-testid="bank-question"
-                              class="flex items-center gap-3 rounded-field border bg-white p-2 pl-14 text-left transition-colors hover:border-primary-300 hover:bg-primary-50/40 focus:outline-none focus:ring-2 focus:ring-primary-300"
+                              class="flex items-center gap-3 rounded-field border bg-surface p-2 pl-14 text-left transition-colors hover:border-primary-300 hover:bg-primary-50/40 focus:outline-none focus:ring-2 focus:ring-primary-300"
                               [class.border-primary-500]="selected()?.id === q.id"
                               [class.bg-primary-50]="selected()?.id === q.id"
                               [class.border-n200]="selected()?.id !== q.id"
@@ -178,7 +178,7 @@
       <!-- Panel -->
       <div>
         @if (selected(); as q) {
-          <div data-testid="bank-panel" class="rounded-card border border-n200 bg-white p-4">
+          <div data-testid="bank-panel" class="rounded-card border border-n200 bg-surface p-4">
             @if (editing() && !isCentral(q)) {
               <!-- Task 8: inline edit form — replaces the read-only view below while editing() is true. -->
               <div data-testid="panel-edit-form" class="flex flex-col gap-3">

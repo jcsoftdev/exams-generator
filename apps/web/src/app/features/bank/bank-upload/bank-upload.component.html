@@ -2,13 +2,13 @@
   <h1 class="mb-1 text-xl font-semibold text-n900">Subir pregunta</h1>
   <p class="mb-5 text-sm text-n600">Sube la foto del enunciado y clasifícala para tu banco.</p>
 
-  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="flex flex-col gap-4 rounded-card border border-n200 bg-white p-5">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="flex flex-col gap-4 rounded-card border border-n200 bg-surface p-5">
     <label class="text-sm font-medium text-n700">
       Grado
       <select
         name="gradeLevel"
         formControlName="gradeLevel"
-        class="mt-1 block w-full rounded-field border border-n200 bg-white px-3 py-2 text-sm text-n900 focus:border-primary-400 focus:outline-none"
+        class="mt-1 block w-full rounded-field border border-n200 bg-surface px-3 py-2 text-sm text-n900 focus:border-primary-400 focus:outline-none"
       >
         <option value="">Selecciona...</option>
         @for (gradeLevel of gradeLevels; track gradeLevel) {
@@ -22,7 +22,7 @@
       <select
         name="courseId"
         formControlName="courseId"
-        class="mt-1 block w-full rounded-field border border-n200 bg-white px-3 py-2 text-sm text-n900 focus:border-primary-400 focus:outline-none disabled:cursor-not-allowed disabled:bg-n50 disabled:text-n400"
+        class="mt-1 block w-full rounded-field border border-n200 bg-surface px-3 py-2 text-sm text-n900 focus:border-primary-400 focus:outline-none disabled:cursor-not-allowed disabled:bg-n50 disabled:text-n400"
       >
         <option value="">{{ form.controls.gradeLevel.value ? 'Selecciona...' : 'Elige un grado primero' }}</option>
         @for (course of courses(); track course.id) {
@@ -37,7 +37,7 @@
         name="topicId"
         formControlName="topicId"
         [disabled]="!form.controls.courseId.value"
-        class="mt-1 block w-full rounded-field border border-n200 bg-white px-3 py-2 text-sm text-n900 focus:border-primary-400 focus:outline-none disabled:cursor-not-allowed disabled:bg-n50 disabled:text-n400"
+        class="mt-1 block w-full rounded-field border border-n200 bg-surface px-3 py-2 text-sm text-n900 focus:border-primary-400 focus:outline-none disabled:cursor-not-allowed disabled:bg-n50 disabled:text-n400"
       >
         <option value="">Selecciona...</option>
         @for (topic of topics(); track topic.id) {
@@ -52,7 +52,7 @@
         <select
           name="difficulty"
           formControlName="difficulty"
-          class="mt-1 block w-full rounded-field border border-n200 bg-white px-3 py-2 text-sm text-n900 focus:border-primary-400 focus:outline-none"
+          class="mt-1 block w-full rounded-field border border-n200 bg-surface px-3 py-2 text-sm text-n900 focus:border-primary-400 focus:outline-none"
         >
           <option value="">Selecciona...</option>
           @for (difficulty of difficulties; track difficulty) {

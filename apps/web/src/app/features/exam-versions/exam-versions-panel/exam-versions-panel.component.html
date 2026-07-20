@@ -45,7 +45,7 @@
     </div>
 
     @if (showGenerateForm()) {
-      <div class="rounded-card border border-n200 bg-white px-4 py-3" data-testid="generate-count-panel">
+      <div class="rounded-card border border-n200 bg-surface px-4 py-3" data-testid="generate-count-panel">
         <p class="mb-2 text-sm text-hard-text" data-testid="generate-warning">
           Se reemplazarán las formas actuales.
         </p>
@@ -97,7 +97,7 @@
     <ul class="flex flex-col gap-3" data-testid="exam-versions-list">
       @for (version of versions(); track version.code) {
         <li
-          class="flex items-center justify-between rounded-card border border-n200 bg-white px-4 py-3"
+          class="flex items-center justify-between rounded-card border border-n200 bg-surface px-4 py-3"
           data-testid="version-row"
         >
           <span class="font-medium text-n900">Forma {{ version.code }}</span>
@@ -124,7 +124,7 @@
   }
 
   @if (examDetail(); as exam) {
-    <div class="mt-6 rounded-card border border-n200 bg-white" data-testid="exam-content-section">
+    <div class="mt-6 rounded-card border border-n200 bg-surface" data-testid="exam-content-section">
       <button
         type="button"
         class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-medium text-n900"

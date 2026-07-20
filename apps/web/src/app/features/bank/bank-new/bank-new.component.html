@@ -29,7 +29,7 @@
   }
 
   @if (tab() === 'photo') {
-    <div data-testid="tab-photo-panel" class="flex flex-col gap-3 rounded-card border border-n200 bg-white p-4">
+    <div data-testid="tab-photo-panel" class="flex flex-col gap-3 rounded-card border border-n200 bg-surface p-4">
       <div data-testid="photo-grade-select">
         <ui-select label="Grado" [options]="gradeLevelOptions" [value]="pGradeLevel()" (valueChange)="pGradeLevel.set($event)" placeholder="Elige un grado"></ui-select>
       </div>
@@ -85,7 +85,7 @@
       <div data-testid="photo-submit"><ui-button variant="primary" [loading]="saving()" (clicked)="submitPhoto()">Guardar pregunta</ui-button></div>
     </div>
   } @else {
-    <div data-testid="tab-structured-panel" class="flex flex-col gap-3 rounded-card border border-n200 bg-white p-4">
+    <div data-testid="tab-structured-panel" class="flex flex-col gap-3 rounded-card border border-n200 bg-surface p-4">
       <div data-testid="structured-grade-select">
         <ui-select label="Grado" [options]="gradeLevelOptions" [value]="sGradeLevel()" (valueChange)="sGradeLevel.set($event)" placeholder="Elige un grado"></ui-select>
       </div>

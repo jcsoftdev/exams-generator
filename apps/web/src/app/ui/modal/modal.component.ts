@@ -22,7 +22,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, effect, input, model, v
         role="dialog"
         aria-modal="true"
         tabindex="-1"
-        class="fixed inset-0 z-50 m-auto h-fit w-fit max-w-lg rounded-card bg-white p-6 shadow-lg"
+        class="fixed inset-0 z-50 m-auto h-fit w-fit max-w-lg rounded-card bg-surface p-6 shadow-lg"
         (keydown.escape)="close()"
       >
         @if (title()) {
