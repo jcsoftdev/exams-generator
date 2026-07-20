@@ -96,9 +96,27 @@ const TYPST_MATH_RULES = [
   "fracciones $frac(a, b)$ (no \\frac); raíz $sqrt(x)$ (no \\sqrt); potencia $x^2$; subíndice $x_1$;",
   "multiplicación $a dot b$ o $a times b$ (no \\cdot ni \\times);",
   "símbolos como palabras: $pi$, $alpha$, $<=$, $>=$, $!=$, $infinity$.",
-  "PROHIBIDO cualquier comando con barra invertida (\\frac, \\sqrt, \\times, \\left, \\right...) — Typst no los compila.",
+  "PROHIBIDO cualquier comando con barra invertida (\\frac, \\sqrt, \\times, \\left, \\right...) SUELTO dentro de $...$ — Typst no lo compila así. Si necesitas esos comandos, usa LaTeX vía mitex (ver regla siguiente).",
   "En geometría, un nombre de lado/segmento de dos o más letras (AB, BC, AC) va SIEMPRE FUERA de $...$, como texto normal: 'El segmento AB mide $8$' — NUNCA '$AB = 8$' (Typst lo lee como A por B y falla) y NUNCA con comillas dentro de $...$ tampoco (ej. $\"AB\" = 8$) — un string con comillas anidadas dentro de otro string JSON es fácil de escribir mal y corrompe toda la respuesta.",
   "Ejemplos válidos: $1/2 + 1/4$, $frac(3, 4)$, $sqrt(2)$, $x^2 - 5x + 6 = 0$, $3 times 10^8$. El segmento AB mide $8$ cm (AB fuera del $...$).",
+].join(" ");
+
+/**
+ * Typst's native math mode CANNOT parse LaTeX commands (`\frac`, `\circ`,
+ * `\angle`...) — confirmed in production ("unknown variable: circ" when a
+ * model wrote `$70^{\circ}$`). `TYPST_MATH_RULES` bans that pattern, but
+ * models are trained overwhelmingly on LaTeX, so instead of only banning it,
+ * give an explicit escape hatch: `@preview/mitex` compiles real LaTeX when
+ * called through its own functions. The import is INLINE per question (same
+ * pattern as CETZ_RULES for figureCode), not global in the document
+ * template — so a question that never uses LaTeX has zero dependency on
+ * mitex being reachable.
+ */
+const MITEX_RULES = [
+  "Si prefieres escribir una expresión matemática en LaTeX en vez de sintaxis Typst, está permitido, pero SOLO envuelta explícitamente — LaTeX suelto dentro de $...$ sigue prohibido y no compila:",
+  'expresión inline: #mi("\\frac{1}{2}") — expresión en bloque: #mitex(`\\int_0^1 x^2 dx`).',
+  'Para usar #mi()/#mitex() debes incluir, dentro de bodyTypst, ANTES del primer uso, exactamente: #import "@preview/mitex:0.2.7": mi, mitex — solo si de hecho los usas, nunca si toda la pregunta usa sintaxis Typst nativa.',
+  'Ejemplo válido completo: #import "@preview/mitex:0.2.7": mi Si #mi("\\angle BAD = 70^\\circ") entonces...',
 ].join(" ");
 
 /**
@@ -176,6 +194,7 @@ const SYSTEM_PROMPT = [
   "Eres un generador de preguntas tipo examen de admisión para colegios/academias peruanas.",
   "Responde EXCLUSIVAMENTE con el objeto JSON solicitado por el schema, sin explicaciones ni texto adicional.",
   TYPST_MATH_RULES,
+  MITEX_RULES,
   CETZ_RULES,
   ALTERNATIVES_RULES,
   DIFFICULTY_CALIBRATION_RULES,
@@ -229,6 +248,7 @@ const REVISE_SYSTEM_PROMPT = [
   "Se te dará una pregunta existente y una instrucción de edición del profesor; produce una NUEVA versión de la pregunta que cumpla la instrucción.",
   "Responde EXCLUSIVAMENTE con el objeto JSON solicitado por el schema, sin explicaciones ni texto adicional.",
   TYPST_MATH_RULES,
+  MITEX_RULES,
   CETZ_RULES,
   ALTERNATIVES_RULES,
   DIFFICULTY_CALIBRATION_RULES,
@@ -291,6 +311,7 @@ const EXTRACT_SYSTEM_PROMPT = [
   "Lee la imagen y transcribe la pregunta que contiene: enunciado, alternativas y, si es identificable, la alternativa correcta.",
   "Responde EXCLUSIVAMENTE con el objeto JSON solicitado por el schema, sin explicaciones ni texto adicional.",
   TYPST_MATH_RULES,
+  MITEX_RULES,
   CETZ_RULES,
   ALTERNATIVES_RULES,
 ].join(" ");

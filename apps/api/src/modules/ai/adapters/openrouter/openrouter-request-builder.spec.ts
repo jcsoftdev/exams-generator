@@ -124,6 +124,15 @@ describe("buildOpenRouterRequestBody", () => {
     expect(promptText).toContain("@preview/cetz:0.5.2");
   });
 
+  it("tells the model it may use LaTeX math via mitex, wrapped explicitly", () => {
+    const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
+
+    const promptText = promptTextOf(body);
+    expect(promptText).toContain("@preview/mitex:0.2.7");
+    expect(promptText).toContain("#mi(");
+    expect(promptText).toContain("#mitex(");
+  });
+
   it("instructs the model to connect a named polygon's vertices in perimeter order with ONE line()+close:true call, not separate calls that can mix up diagonals with sides", () => {
     const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
 
@@ -208,6 +217,13 @@ describe("buildOpenRouterReviseRequestBody", () => {
     const promptText = promptTextOf(body);
     expect(promptText).toContain("@preview/cetz:0.5.2");
   });
+
+  it("tells the model it may use LaTeX math via mitex, wrapped explicitly", () => {
+    const body = buildOpenRouterReviseRequestBody("some/free-model:free", REVISE_INPUT);
+
+    const promptText = promptTextOf(body);
+    expect(promptText).toContain("@preview/mitex:0.2.7");
+  });
 });
 
 describe("buildOpenRouterExtractRequestBody", () => {
@@ -266,5 +282,12 @@ describe("buildOpenRouterExtractRequestBody", () => {
 
     const systemMessage = body.messages.find((m) => m.role === "system");
     expect(systemMessage!.content as string).toContain("@preview/cetz:0.5.2");
+  });
+
+  it("tells the model it may use LaTeX math via mitex, wrapped explicitly", () => {
+    const body = buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT);
+
+    const systemMessage = body.messages.find((m) => m.role === "system");
+    expect(systemMessage!.content as string).toContain("@preview/mitex:0.2.7");
   });
 });
