@@ -72,6 +72,15 @@ export function runQuestionGeneratorPortContract(
       expect((result.figureCode as string).length).toBeGreaterThan(0);
     });
 
+    it("generate() accepts a previousCompileError hint and still resolves a valid question", async () => {
+      const adapter = createAdapter();
+
+      const result = await adapter.generate(BASE_INPUT, undefined, "Typst compile failed: unknown variable x");
+
+      expect(typeof result.bodyTypst).toBe("string");
+      expect(result.bodyTypst.length).toBeGreaterThan(0);
+    });
+
     it("generate() invokes onProgress with at least one non-empty delta when provided", async () => {
       const adapter = createAdapter();
       const events: GenerateProgressEvent[] = [];

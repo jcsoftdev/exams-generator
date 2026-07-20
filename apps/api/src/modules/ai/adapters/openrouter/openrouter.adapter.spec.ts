@@ -176,6 +176,26 @@ describe("OpenRouterAdapter", () => {
     expect(httpClient).toHaveBeenCalledTimes(2);
   });
 
+  it("seeds the FIRST attempt's prompt with a caller-supplied previousCompileError (an informed retry, not a blind re-roll)", async () => {
+    const httpClient = jest
+      .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+      .mockReturnValueOnce(
+        jsonResponse(200, chatCompletion({ content: JSON.stringify(VALID_QUESTION_JSON) })),
+      );
+    const adapter = new OpenRouterAdapter({
+      apiKey: "sk-test-key",
+      model: "deepseek/deepseek-r1:free",
+      httpClient,
+    });
+
+    await adapter.generate(INPUT, undefined, "Typst compile failed: unknown variable x, line 3");
+
+    expect(httpClient).toHaveBeenCalledTimes(1);
+    const firstCallBody = JSON.parse(httpClient.mock.calls[0][1].body);
+    const firstPrompt = firstCallBody.messages.map((m: { content: string }) => m.content).join("\n");
+    expect(firstPrompt).toContain("Typst compile failed: unknown variable x, line 3");
+  });
+
   it("throws AiRateLimitError immediately on 429 without retrying", async () => {
     const httpClient = jest
       .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()

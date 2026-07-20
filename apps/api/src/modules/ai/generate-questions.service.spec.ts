@@ -90,6 +90,8 @@ describe("GenerateQuestionsService.generateQuestions", () => {
         gradeLevel: "primaria_1",
         withFigure: false,
       }),
+      undefined,
+      undefined,
     );
     expect(pdfCompiler.compileExam).toHaveBeenCalledTimes(2);
     expect(bankRepository.createStructuredQuestion).toHaveBeenCalledTimes(2);
@@ -134,6 +136,30 @@ describe("GenerateQuestionsService.generateQuestions", () => {
     expect(bankRepository.createStructuredQuestion).toHaveBeenCalledTimes(1);
     expect(result.created).toHaveLength(1);
     expect(result.failed).toHaveLength(0);
+  });
+
+  it("feeds the actual Typst compiler error back into the retry, instead of a blind re-roll of the same prompt", async () => {
+    const { service, generator, pdfCompiler } = buildDeps();
+    pdfCompiler.compileExam.mockRejectedValueOnce(
+      new TypstCompilationError("typst compile failed", undefined, "error: unknown variable x, line 3"),
+    );
+
+    await service.generateQuestions(TEACHER_USER, { ...VALID_DTO, count: 1 });
+
+    // First attempt: no prior error yet.
+    expect(generator.generate).toHaveBeenNthCalledWith(
+      1,
+      expect.objectContaining({ topic: "Fracciones" }),
+      undefined,
+      undefined,
+    );
+    // Second attempt: must see the actual compiler diagnostic, not a generic message.
+    expect(generator.generate).toHaveBeenNthCalledWith(
+      2,
+      expect.objectContaining({ topic: "Fracciones" }),
+      undefined,
+      expect.stringContaining("error: unknown variable x, line 3"),
+    );
   });
 
   it("does NOT save a question whose Typst preview keeps failing to compile after exhausting all retry attempts", async () => {

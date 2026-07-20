@@ -44,8 +44,25 @@ describe("LazyQuestionGeneratorAdapter", () => {
     const result = await lazy.generate(INPUT);
 
     expect(resolver).toHaveBeenCalledTimes(1);
-    expect(fakeAdapter.generate).toHaveBeenCalledWith(INPUT, undefined);
+    expect(fakeAdapter.generate).toHaveBeenCalledWith(INPUT, undefined, undefined);
     expect(result).toEqual(RESULT);
+  });
+
+  it("forwards previousCompileError to the resolved adapter's generate()", async () => {
+    const fakeAdapter: QuestionGeneratorPort = {
+      generate: jest.fn().mockResolvedValue(RESULT),
+      reviseQuestion: jest.fn().mockResolvedValue(RESULT),
+      extractFromImage: jest.fn().mockResolvedValue(RESULT),
+    };
+    const lazy = new LazyQuestionGeneratorAdapter(() => fakeAdapter);
+
+    await lazy.generate(INPUT, undefined, "Typst compile failed: unknown variable x");
+
+    expect(fakeAdapter.generate).toHaveBeenCalledWith(
+      INPUT,
+      undefined,
+      "Typst compile failed: unknown variable x",
+    );
   });
 
   it("caches the resolved adapter — resolver is called only once across multiple generate() calls", async () => {

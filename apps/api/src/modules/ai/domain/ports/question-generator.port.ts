@@ -87,6 +87,12 @@ export interface QuestionGeneratorPort {
    * never part of the resolved value. Implementations that can't stream MAY
    * call it once with the full text, or not at all.
    *
+   * `previousCompileError`, when provided, is a Typst compiler error from a
+   * PRIOR call with this exact same `input` (fed back by the caller after its
+   * own downstream compile step failed — this port has no PDF compiler of its
+   * own). Implementations SHOULD surface it to the model so the retry is
+   * informed rather than a blind re-roll of the same prompt.
+   *
    * @throws AiRateLimitError when the provider is rate-limited (e.g. 429 on
    *   OpenRouter's free tier).
    * @throws AiInvalidResponseError when the provider's output can't be
@@ -96,6 +102,7 @@ export interface QuestionGeneratorPort {
   generate(
     input: GenerateQuestionInput,
     onProgress?: (event: GenerateProgressEvent) => void,
+    previousCompileError?: string,
   ): Promise<GeneratedQuestion>;
 
   /**

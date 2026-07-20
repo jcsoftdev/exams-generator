@@ -116,10 +116,12 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
   async generate(
     input: GenerateQuestionInput,
     onProgress?: (event: GenerateProgressEvent) => void,
+    previousCompileError?: string,
   ): Promise<GeneratedQuestion> {
     return this.runWithRetries(
       (previousError) => buildOpenRouterRequestBody(this.config.model, input, { previousError }),
       onProgress,
+      previousCompileError,
     );
   }
 
@@ -154,12 +156,19 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
    * validation error, if any, is fed back into the prompt), and only ever
    * resolves with a fully parsed+validated `GeneratedQuestion` — per design
    * doc §7 this port NEVER returns unvalidated content.
+   *
+   * `seedError`, when given, primes attempt 1 with an error from OUTSIDE this
+   * loop (e.g. `generate()`'s `previousCompileError` — a Typst failure from a
+   * prior call the caller made with this same input). It's just the initial
+   * value of `lastOutcome.error`; the adapter's own validation-retry error
+   * (if attempt 1 fails differently) overwrites it for attempt 2, same as always.
    */
   private async runWithRetries(
     buildRequestBody: (previousError: string | undefined) => OpenRouterRequestBody,
     onProgress?: (event: GenerateProgressEvent) => void,
+    seedError?: string,
   ): Promise<GeneratedQuestion> {
-    let lastOutcome: AttemptOutcome | undefined;
+    let lastOutcome: AttemptOutcome | undefined = seedError ? { ok: false, error: seedError } : undefined;
 
     for (let attemptNumber = 1; attemptNumber <= MAX_ATTEMPTS; attemptNumber++) {
       if (attemptNumber > 1) {

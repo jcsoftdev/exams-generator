@@ -209,6 +209,10 @@ export class GenerateQuestionsService {
    * above and `generateQuestionStream()` (streaming, single-item) — the
    * ONLY difference between the two callers is whether `onProgress` is
    * passed through to `QuestionGeneratorPort.generate()`.
+   *
+   * A retry after a failed compile feeds the actual Typst `stderr` back into
+   * `generate()` as `previousCompileError` — an informed retry, not a blind
+   * re-roll of the same prompt.
    */
   private async generateOneItem(
     user: AuthTokenPayload,
@@ -230,26 +234,17 @@ export class GenerateQuestionsService {
         if (attempt > 1) {
           onProgress?.({ type: "restart" });
         }
-        if (onProgress) {
-          generated = await this.generator.generate(
-            {
-              course: params.courseName,
-              topic: params.topicName,
-              difficulty: params.difficulty,
-              gradeLevel: params.gradeLevel,
-              withFigure: params.withFigure,
-            },
-            onProgress,
-          );
-        } else {
-          generated = await this.generator.generate({
+        generated = await this.generator.generate(
+          {
             course: params.courseName,
             topic: params.topicName,
             difficulty: params.difficulty,
             gradeLevel: params.gradeLevel,
             withFigure: params.withFigure,
-          });
-        }
+          },
+          onProgress,
+          lastCompileError?.stderr,
+        );
 
         try {
           await this.pdfCompiler.compileExam({

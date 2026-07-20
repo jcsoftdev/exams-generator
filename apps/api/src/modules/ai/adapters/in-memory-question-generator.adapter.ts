@@ -21,6 +21,7 @@ export class InMemoryQuestionGeneratorAdapter implements QuestionGeneratorPort {
   async generate(
     input: GenerateQuestionInput,
     onProgress?: (event: GenerateProgressEvent) => void,
+    _previousCompileError?: string,
   ): Promise<GeneratedQuestion> {
     const question: GeneratedQuestion = {
       bodyTypst: `¿Cuál es el resultado de la operación sobre ${input.topic}? $ 1/2 + 1/4 $`,
