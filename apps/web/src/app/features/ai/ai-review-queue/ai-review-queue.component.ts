@@ -55,10 +55,6 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
  * The pending-drafts count is pushed to `DraftCountService.set()` whenever
  * the queue loads or a draft is approved/rejected, keeping the shell
  * sidebar's "Cola de revisión · N" badge in sync without it polling itself.
- *
- * "Editar" is wired but intentionally inert here — the full structured
- * editor (form + re-validation + preview-cache invalidation) is out of
- * scope for this task; see the note above the template's edit button.
  */
 @Component({
   selector: 'app-ai-review-queue',
@@ -262,9 +258,9 @@ export class AiReviewQueueComponent {
   /**
    * Builds `UpdateQuestionPayload` — NEVER `courseId` (the backend derives
    * course from `topicId`, see UpdateQuestionPayload's doc) — and calls
-   * `BankService.updateQuestion`. On success: exits edit mode, reloads the
-   * queue (`load()`, same as approve/reject), and recompiles the preview for
-   * this draft if it's still selected.
+   * `BankService.updateQuestion`. On success: exits edit mode and refreshes
+   * the queue via `reloadAfterSave`, which keeps the just-edited draft
+   * selected instead of resetting to the first item (see its doc).
    */
   protected saveEdit(): void {
     const draft = this.selected();
@@ -288,12 +284,36 @@ export class AiReviewQueueComponent {
       next: () => {
         this.editing.set(false);
         this.editSaving.set(false);
-        this.load();
-        this.compilePreview(draft.id);
+        this.reloadAfterSave(draft.id);
       },
       error: () => {
         this.editSaving.set(false);
         this.editError.set('No se pudo guardar la pregunta. Inténtalo de nuevo.');
+      },
+    });
+  }
+
+  /**
+   * Refreshes the drafts list after a successful save WITHOUT resetting
+   * selection to the first item — unlike `load()`, which is only correct
+   * for the initial mount. Keeps the just-edited draft selected (with its
+   * fresh saved content) and recompiles its preview exactly once.
+   */
+  private reloadAfterSave(savedId: string): void {
+    this.aiService.listDrafts().subscribe({
+      next: (drafts) => {
+        this.drafts.set([...drafts]);
+        this.draftCountService.set(drafts.length);
+        const stillThere = drafts.find((d) => d.id === savedId);
+        if (stillThere) {
+          this.selected.set(stillThere);
+          this.compilePreview(stillThere.id);
+        } else {
+          this.selected.set(null);
+        }
+      },
+      error: () => {
+        /* row list falls out of sync until the next natural reload — the save itself already succeeded, so this is non-fatal */
       },
     });
   }

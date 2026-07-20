@@ -353,5 +353,25 @@ describe('AiReviewQueueComponent', () => {
 
     expect(listDrafts).toHaveBeenCalledTimes(1);
     expect(previewDraft).toHaveBeenCalledWith('d1');
+    expect(previewDraft).toHaveBeenCalledTimes(1);
+  });
+
+  it('keeps the edited draft selected after saving, even when it is not the first item in the queue', () => {
+    const { compiled, fixture } = setup();
+    const secondItem = compiled.querySelectorAll('[data-testid="review-item"]')[1] as HTMLButtonElement;
+    secondItem.click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    // d2's panel (Fácil / Pre-admisión) must still be showing after save —
+    // NOT reset to d1's (Media / 3° secundaria). Row list keeps both items
+    // (a plain save, unlike approve/reject, never removes drafts from the
+    // queue), so this must be scoped to panel-header, not the whole page.
+    const header = compiled.querySelector('[data-testid="panel-header"]')!;
+    expect(header.textContent).toContain('Pre-admisión');
+    expect(header.textContent).not.toContain('3° secundaria');
   });
 });
