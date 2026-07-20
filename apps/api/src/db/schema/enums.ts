@@ -49,3 +49,20 @@ export const questionStatusEnum = pgEnum("question_status", QUESTION_STATUSES);
 export const EXAM_STATUSES = ["draft", "ready"] as const;
 export type ExamStatus = (typeof EXAM_STATUSES)[number];
 export const examStatusEnum = pgEnum("exam_status", EXAM_STATUSES);
+
+/**
+ * A generation job's lifecycle (design doc:
+ * docs/superpowers/specs/2026-07-19-ai-generation-history-design.md §3).
+ * `failed` means the JOB errored out (crash, exhausted BullMQ retries) —
+ * a job that ran to completion with some per-item failures is still
+ * `completed`, with `createdCount < count`.
+ */
+export const GENERATION_JOB_STATUSES = [
+  "pending",
+  "running",
+  "completed",
+  "failed",
+  "cancelled",
+] as const;
+export type GenerationJobStatus = (typeof GENERATION_JOB_STATUSES)[number];
+export const generationJobStatusEnum = pgEnum("generation_job_status", GENERATION_JOB_STATUSES);
