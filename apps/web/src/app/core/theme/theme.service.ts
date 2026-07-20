@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, Signal, signal } from '@angular/core';
 
 export type ThemeMode = 'light' | 'dark';
 
@@ -23,7 +23,8 @@ const THEME_STORAGE_KEY = 'theme';
 export class ThemeService {
   private readonly initialStoredMode = this.readStoredMode();
 
-  readonly mode = signal<ThemeMode>(this.initialStoredMode ?? this.resolveSystemMode());
+  private readonly _mode = signal<ThemeMode>(this.initialStoredMode ?? this.resolveSystemMode());
+  readonly mode: Signal<ThemeMode> = this._mode.asReadonly();
 
   constructor() {
     if (this.initialStoredMode !== null) {
@@ -32,8 +33,8 @@ export class ThemeService {
   }
 
   toggle(): void {
-    const next: ThemeMode = this.mode() === 'dark' ? 'light' : 'dark';
-    this.mode.set(next);
+    const next: ThemeMode = this._mode() === 'dark' ? 'light' : 'dark';
+    this._mode.set(next);
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem(THEME_STORAGE_KEY, next);
   }
