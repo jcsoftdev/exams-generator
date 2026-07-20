@@ -15,6 +15,7 @@ import {
   GenerateQuestionsCreatedItem,
   GenerateQuestionsFailedItem,
   GenerateQuestionsResult,
+  GenerateQuestionStreamEvent,
   GradeLevel,
   GRADE_LEVELS,
   GRADE_LEVEL_LABELS,
@@ -99,6 +100,8 @@ export class AiGenerateComponent {
   protected readonly requested = signal(0);
   /** How many of `requested` have come back so far — drives the live progress bar. */
   protected readonly completed = signal(0);
+  /** Characters streamed in for the question CURRENTLY generating — reset on every new item and on every `restart` event. Proof-of-life for the live indicator (design: streaming progress). */
+  protected readonly liveChars = signal(0);
   protected readonly allCreated = signal<readonly GenerateQuestionsCreatedItem[]>([]);
   protected readonly failed = signal<readonly GenerateQuestionsFailedItem[]>([]);
   protected readonly batchQuestions = signal<readonly DraftQuestion[]>([]);
@@ -273,17 +276,26 @@ export class AiGenerateComponent {
       this.generating.set(false);
       return;
     }
+    this.liveChars.set(0);
     this.aiService
-      .generateQuestions({
+      .generateQuestionStream({
         courseId: snapshot.courseId,
         topicId: snapshot.topicId,
         difficulty: snapshot.difficulty,
         gradeLevel: snapshot.gradeLevel,
-        count: 1,
         withFigure: snapshot.withFigure,
       })
       .subscribe({
-        next: (res: GenerateQuestionsResult) => {
+        next: (event: GenerateQuestionStreamEvent) => {
+          if (event.type === 'delta') {
+            this.liveChars.update((chars) => chars + event.text.length);
+            return;
+          }
+          if (event.type === 'restart') {
+            this.liveChars.set(0);
+            return;
+          }
+          const res = event.result;
           this.result.set(res);
           this.allCreated.update((prev) => [...prev, ...res.created]);
           if (res.failed.length > 0) {
