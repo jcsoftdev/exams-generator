@@ -74,6 +74,20 @@ describe("buildOpenRouterRequestBody", () => {
     expect(promptText).toContain("secundaria_3");
   });
 
+  it("instructs the model to keep multi-letter labels (AB, BC, AC) OUTSIDE math mode, as plain text", () => {
+    const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
+
+    const promptText = promptTextOf(body);
+    expect(promptText).toContain("El segmento AB mide $8$");
+  });
+
+  it("does not recommend quoting labels inside math mode — nested quotes inside a JSON string are fragile for weaker models", () => {
+    const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
+
+    const promptText = promptTextOf(body);
+    expect(promptText).not.toContain('overline("AB")');
+  });
+
   it("appends the previous validation error to the prompt when retrying", () => {
     const body = buildOpenRouterRequestBody("some/free-model:free", INPUT, {
       previousError: "alternatives must be an array of exactly 5 non-empty strings",
@@ -81,6 +95,46 @@ describe("buildOpenRouterRequestBody", () => {
 
     const promptText = promptTextOf(body);
     expect(promptText).toContain("alternatives must be an array of exactly 5 non-empty strings");
+  });
+
+  it("calibrates each difficulty label to a concrete rigor criterion, not just the bare word", () => {
+    const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
+
+    const promptText = promptTextOf(body);
+    expect(promptText).toContain("aplicación DIRECTA de una única fórmula");
+    expect(promptText).toContain("1-2 pasos intermedios");
+    expect(promptText).toContain("3 o más conceptos");
+  });
+
+  it("pins the CeTZ package version compatible with the deployed typst binary (infra/Dockerfile.api TYPST_VERSION)", () => {
+    const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
+
+    const promptText = promptTextOf(body);
+    expect(promptText).toContain("@preview/cetz:0.5.2");
+  });
+
+  it("instructs the model to connect a named polygon's vertices in perimeter order with ONE line()+close:true call, not separate calls that can mix up diagonals with sides", () => {
+    const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
+
+    const promptText = promptTextOf(body);
+    expect(promptText).toContain("UNA sola llamada a line()");
+    expect(promptText).toContain("orden del perímetro");
+    expect(promptText).toContain("NUNCA conectes diagonales");
+  });
+
+  it("instructs the model not to write the answer letter inside the alternative text", () => {
+    const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
+
+    const promptText = promptTextOf(body);
+    expect(promptText).toContain("NUNCA escribas la letra dentro del texto");
+  });
+
+  it("explicitly forbids wrapping an alternative in a {texto, letra} JSON object", () => {
+    const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
+
+    const promptText = promptTextOf(body);
+    expect(promptText).toContain('NUNCA envuelvas el valor en un objeto');
+    expect(promptText).toContain('"texto": "5/2√7", "letra": "A"');
   });
 
   it("does not append retry guidance when there is no previous error", () => {
@@ -128,6 +182,20 @@ describe("buildOpenRouterReviseRequestBody", () => {
 
     const promptText = promptTextOf(body);
     expect(promptText).toContain("boom");
+  });
+
+  it("also calibrates difficulty labels to a concrete rigor criterion", () => {
+    const body = buildOpenRouterReviseRequestBody("some/free-model:free", REVISE_INPUT);
+
+    const promptText = promptTextOf(body);
+    expect(promptText).toContain("aplicación DIRECTA de una única fórmula");
+  });
+
+  it("pins the CeTZ package version compatible with the deployed typst binary", () => {
+    const body = buildOpenRouterReviseRequestBody("some/free-model:free", REVISE_INPUT);
+
+    const promptText = promptTextOf(body);
+    expect(promptText).toContain("@preview/cetz:0.5.2");
   });
 });
 
@@ -180,5 +248,12 @@ describe("buildOpenRouterExtractRequestBody", () => {
     const parts = userMessage!.content as ReadonlyArray<{ type: string; text?: string }>;
     const textPart = parts.find((p) => p.type === "text");
     expect(textPart!.text).toContain("boom");
+  });
+
+  it("pins the CeTZ package version compatible with the deployed typst binary", () => {
+    const body = buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT);
+
+    const systemMessage = body.messages.find((m) => m.role === "system");
+    expect(systemMessage!.content as string).toContain("@preview/cetz:0.5.2");
   });
 });

@@ -97,13 +97,88 @@ const TYPST_MATH_RULES = [
   "multiplicación $a dot b$ o $a times b$ (no \\cdot ni \\times);",
   "símbolos como palabras: $pi$, $alpha$, $<=$, $>=$, $!=$, $infinity$.",
   "PROHIBIDO cualquier comando con barra invertida (\\frac, \\sqrt, \\times, \\left, \\right...) — Typst no los compila.",
-  "Ejemplos válidos: $1/2 + 1/4$, $frac(3, 4)$, $sqrt(2)$, $x^2 - 5x + 6 = 0$, $3 times 10^8$.",
+  "En geometría, un nombre de lado/segmento de dos o más letras (AB, BC, AC) va SIEMPRE FUERA de $...$, como texto normal: 'El segmento AB mide $8$' — NUNCA '$AB = 8$' (Typst lo lee como A por B y falla) y NUNCA con comillas dentro de $...$ tampoco (ej. $\"AB\" = 8$) — un string con comillas anidadas dentro de otro string JSON es fácil de escribir mal y corrompe toda la respuesta.",
+  "Ejemplos válidos: $1/2 + 1/4$, $frac(3, 4)$, $sqrt(2)$, $x^2 - 5x + 6 = 0$, $3 times 10^8$. El segmento AB mide $8$ cm (AB fuera del $...$).",
+].join(" ");
+
+/**
+ * `@preview/cetz:0.5.2` is the LATEST cetz release as of this pin, verified
+ * directly against the typst binary pinned in `infra/Dockerfile.api`
+ * (`TYPST_VERSION=0.15.1`, matched by `apps/api/scripts/install-typst-dev.sh`
+ * for local dev). A version mismatch here (model emits an incompatible cetz
+ * version) reliably fails compile regardless of how correct the CeTZ
+ * drawing code itself is — this was the actual root cause behind "Typst
+ * compile failed" on every figure/diagram generation. If `TYPST_VERSION` is
+ * ever bumped, re-verify this pin against it (and re-check
+ * install-typst-dev.sh's pin, which must always match).
+ */
+const CETZ_EXAMPLE = [
+  '#import "@preview/cetz:0.5.2": canvas, draw',
+  "",
+  "#canvas({",
+  "  import draw: *",
+  "  line((0,0), (4,0), (4,3), close: true)",
+  "  content((2,-0.4), [Base])",
+  "  circle((1,1), radius: 0.3)",
+  "})",
+].join("\n");
+
+const CETZ_RULES = [
+  "Si figureCode incluye una figura, usa EXCLUSIVAMENTE esta versión exacta de CeTZ (otras versiones no compilan con el typst instalado):",
+  '`#import "@preview/cetz:0.5.2": canvas, draw`',
+  "Estructura obligatoria: `#canvas({ import draw: *  ...dibujos... })`. Coordenadas como tuplas `(x, y)`.",
+  "Funciones disponibles: `line((x1,y1), (x2,y2), .., close: true)`, `circle((x,y), radius: r)`, `content((x,y), [texto])`, `rect((x1,y1), (x2,y2))`.",
+  "PROHIBIDO devolver un placeholder o solo la palabra 'CeTZ'/'figura' en figureCode — o es código real que empieza con el import de arriba, o es null.",
+  "Si dibujas un polígono con vértices nombrados (ej. un cuadrilátero ABCD, un triángulo PQR), usa UNA sola llamada a line() con TODOS los vértices en el orden del perímetro (el mismo orden en que aparecen en el nombre, ej. ABCD → A, B, C, D) y close: true al final — NUNCA generes los lados con varias llamadas line() separadas, porque así es fácil conectar dos vértices que en realidad son una DIAGONAL (ej. A con C en un cuadrilátero ABCD) creyendo que es un lado. NUNCA conectes diagonales como si fueran lados del perímetro.",
+  "Ejemplo válido completo:",
+  CETZ_EXAMPLE,
+].join(" ");
+
+/**
+ * `typst-template.ts` ALWAYS prepends its own letter (`A)`, `B)`, ...) when
+ * rendering each alternative — a model that also writes the letter into the
+ * alternative text itself produces a visible duplicate ("A) A: √5"). The
+ * backend strips a leading letter marker defensively
+ * (`openrouter-response-validator.ts`), but telling the model not to write
+ * one in the first place avoids relying on that safety net.
+ *
+ * The explicit "NUNCA... {\"texto\":...}" line exists because an earlier,
+ * shorter version of this rule ("no escribas la letra dentro del texto")
+ * caused a weaker model to "overcorrect": instead of a plain string it
+ * started emitting each alternative as a JSON-string-encoded object like
+ * `{"texto": "5/2√7", "letra": "A"}` — satisfies the schema's `string` type
+ * literally, but is garbage once rendered. The backend also defensively
+ * unwraps that exact shape (`unwrapJsonWrappedAlternative` in
+ * `openrouter-response-validator.ts`), but the instruction has to rule it
+ * out explicitly too, not just imply it.
+ */
+const ALTERNATIVES_RULES =
+  'Cada elemento de "alternatives" es un STRING PLANO con el valor de la respuesta y NADA MÁS. NUNCA escribas la letra dentro del texto (prohibido \'A)\', \'a:\', \'B.\' al inicio) — la letra la agrega el sistema según la posición en el array. Y NUNCA envuelvas el valor en un objeto, ej. NUNCA \'{"texto": "5/2√7", "letra": "A"}\' — eso NO es un string plano y rompe el examen. Correcto: "5/2√7". Incorrecto: "A) 5/2√7", {"texto": "5/2√7", "letra": "A"}.';
+
+/**
+ * The "Dificultad" field alone is just a label — without a rigor anchor the
+ * model calibrates "easy"/"medium"/"hard" against its own generic sense of
+ * difficulty, not this exam's actual standard. This gave us an "easy"
+ * geometry question dressed up with harder-than-intended reasoning. Anchor
+ * each label to a concrete, checkable criterion (step count + concept count),
+ * with a worked reference example for "easy" — the same technique
+ * `TYPST_MATH_RULES` uses (concrete examples beat vague adjectives).
+ */
+const DIFFICULTY_CALIBRATION_RULES = [
+  "Calibra el NIVEL DE EXIGENCIA real de la pregunta según la dificultad pedida — la etiqueta debe coincidir con cuánto esfuerzo toma resolverla, no solo con el tema:",
+  '"easy": aplicación DIRECTA de una única fórmula o propiedad conocida, con números que dan un resultado limpio (entero o fracción simple), SIN pasos intermedios ni combinar más de un concepto. Ejemplo de calibre: en un triángulo rectángulo con altura trazada a la hipotenusa, dados los segmentos 4 y 9, hallar la altura (una sola relación: altura² = producto de los segmentos → altura = 6).',
+  '"medium": requiere 1-2 pasos intermedios antes de poder aplicar la fórmula final (ej. hallar primero un dato que falta con una relación distinta), o combinar dos conceptos relacionados, o números que no dan un resultado limpio a la primera.',
+  '"hard": requiere combinar 3 o más conceptos, encadenar varias fórmulas, decidir la estrategia de solución sin que sea evidente cuál usar, o manipulación algebraica no trivial.',
+  'NUNCA generes una pregunta "easy" que en realidad exige razonamiento de varios pasos, ni una "hard" que se resuelve con una sola sustitución directa.',
 ].join(" ");
 
 const SYSTEM_PROMPT = [
   "Eres un generador de preguntas tipo examen de admisión para colegios/academias peruanas.",
   "Responde EXCLUSIVAMENTE con el objeto JSON solicitado por el schema, sin explicaciones ni texto adicional.",
   TYPST_MATH_RULES,
+  CETZ_RULES,
+  ALTERNATIVES_RULES,
+  DIFFICULTY_CALIBRATION_RULES,
 ].join(" ");
 
 /**
@@ -154,6 +229,9 @@ const REVISE_SYSTEM_PROMPT = [
   "Se te dará una pregunta existente y una instrucción de edición del profesor; produce una NUEVA versión de la pregunta que cumpla la instrucción.",
   "Responde EXCLUSIVAMENTE con el objeto JSON solicitado por el schema, sin explicaciones ni texto adicional.",
   TYPST_MATH_RULES,
+  CETZ_RULES,
+  ALTERNATIVES_RULES,
+  DIFFICULTY_CALIBRATION_RULES,
 ].join(" ");
 
 /**
@@ -213,6 +291,8 @@ const EXTRACT_SYSTEM_PROMPT = [
   "Lee la imagen y transcribe la pregunta que contiene: enunciado, alternativas y, si es identificable, la alternativa correcta.",
   "Responde EXCLUSIVAMENTE con el objeto JSON solicitado por el schema, sin explicaciones ni texto adicional.",
   TYPST_MATH_RULES,
+  CETZ_RULES,
+  ALTERNATIVES_RULES,
 ].join(" ");
 
 /**
