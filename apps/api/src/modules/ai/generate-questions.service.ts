@@ -7,7 +7,7 @@ import { PDF_COMPILER_PORT } from "../bank/bank.constants";
 import { GradeLevel } from "../exams/domain/value-objects/grade-level";
 import { PdfCompilerPort, TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { correctAnswerLetterToIndex } from "./domain/correct-answer-letter-to-index";
-import { GeneratedQuestion, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
+import { GeneratedQuestion, GenerateProgressEvent, QuestionGeneratorPort } from "./domain/ports/question-generator.port";
 import {
   GenerateQuestionsInput,
   validateGenerateQuestionsInput,
@@ -98,77 +98,119 @@ export class GenerateQuestionsService {
     const failed: GenerateQuestionsFailedItem[] = [];
 
     for (let index = 0; index < count; index += 1) {
-      try {
-        let generated: GeneratedQuestion | undefined;
-        let lastCompileError: TypstCompilationError | undefined;
-
-        for (let attempt = 1; attempt <= MAX_COMPILE_ATTEMPTS; attempt += 1) {
-          generated = await this.generator.generate({
-            course: taxonomy.courseName,
-            topic: taxonomy.topicName,
-            difficulty,
-            gradeLevel,
-            withFigure,
-          });
-
-          try {
-            await this.pdfCompiler.compileExam({
-              title: "AI generation preview",
-              versionLabel: "preview",
-              questions: [
-                {
-                  id: randomUUID(),
-                  type: "structured",
-                  bodyTypst: generated.bodyTypst,
-                  alternatives: generated.alternatives,
-                  figureCode: generated.figureCode,
-                },
-              ],
-            });
-            lastCompileError = undefined;
-            break;
-          } catch (compileError) {
-            if (compileError instanceof TypstCompilationError) {
-              lastCompileError = compileError;
-              // Bounded retry: regenerate (fresh AI call) and recompile,
-              // up to MAX_COMPILE_ATTEMPTS total. Non-compile errors are
-              // NOT retried here — they're re-thrown and handled by the
-              // outer catch below.
-              continue;
-            }
-            throw compileError;
-          }
-        }
-
-        if (lastCompileError) {
-          failed.push({
-            index,
-            error: `Typst compile failed: ${lastCompileError.message}`,
-          });
-          continue;
-        }
-
-        const question = generated as GeneratedQuestion;
-        const { id } = await this.bankRepository.createStructuredQuestion({
-          tenantId: user.tenantId,
-          topicId,
-          difficulty,
-          gradeLevel,
-          bodyTypst: question.bodyTypst,
-          alternatives: question.alternatives,
-          correctAnswer: correctAnswerLetterToIndex(question.correctAnswer),
-          figureCode: question.figureCode,
-          createdBy: user.sub,
-          status: "draft",
-          aiGenerated: true,
-        });
-        created.push({ id });
-      } catch (error) {
-        const message = error instanceof Error ? error.message : String(error);
-        failed.push({ index, error: message });
+      const outcome = await this.generateOneItem(user, {
+        topicId,
+        courseName: taxonomy.courseName,
+        topicName: taxonomy.topicName,
+        difficulty,
+        gradeLevel,
+        withFigure,
+      });
+      if (outcome.ok) {
+        created.push({ id: outcome.id });
+      } else {
+        failed.push({ index, error: outcome.error });
       }
     }
 
     return { created, failed };
+  }
+
+  /**
+   * One requested question, end to end: generate → (retry-compile up to
+   * `MAX_COMPILE_ATTEMPTS`) → persist as a `draft`. Shared by the batch loop
+   * above and `generateQuestionStream()` (streaming, single-item) — the
+   * ONLY difference between the two callers is whether `onProgress` is
+   * passed through to `QuestionGeneratorPort.generate()`.
+   */
+  private async generateOneItem(
+    user: AuthTokenPayload,
+    params: {
+      readonly topicId: string;
+      readonly courseName: string;
+      readonly topicName: string;
+      readonly difficulty: Difficulty;
+      readonly gradeLevel: GradeLevel;
+      readonly withFigure: boolean;
+    },
+    onProgress?: (event: GenerateProgressEvent) => void,
+  ): Promise<{ readonly ok: true; readonly id: string } | { readonly ok: false; readonly error: string }> {
+    try {
+      let generated: GeneratedQuestion | undefined;
+      let lastCompileError: TypstCompilationError | undefined;
+
+      for (let attempt = 1; attempt <= MAX_COMPILE_ATTEMPTS; attempt += 1) {
+        if (attempt > 1) {
+          onProgress?.({ type: "restart" });
+        }
+        if (onProgress) {
+          generated = await this.generator.generate(
+            {
+              course: params.courseName,
+              topic: params.topicName,
+              difficulty: params.difficulty,
+              gradeLevel: params.gradeLevel,
+              withFigure: params.withFigure,
+            },
+            onProgress,
+          );
+        } else {
+          generated = await this.generator.generate({
+            course: params.courseName,
+            topic: params.topicName,
+            difficulty: params.difficulty,
+            gradeLevel: params.gradeLevel,
+            withFigure: params.withFigure,
+          });
+        }
+
+        try {
+          await this.pdfCompiler.compileExam({
+            title: "AI generation preview",
+            versionLabel: "preview",
+            questions: [
+              {
+                id: randomUUID(),
+                type: "structured",
+                bodyTypst: generated.bodyTypst,
+                alternatives: generated.alternatives,
+                figureCode: generated.figureCode,
+              },
+            ],
+          });
+          lastCompileError = undefined;
+          break;
+        } catch (compileError) {
+          if (compileError instanceof TypstCompilationError) {
+            lastCompileError = compileError;
+            continue;
+          }
+          throw compileError;
+        }
+      }
+
+      if (lastCompileError) {
+        return { ok: false, error: `Typst compile failed: ${lastCompileError.message}` };
+      }
+
+      const question = generated as GeneratedQuestion;
+      const { id } = await this.bankRepository.createStructuredQuestion({
+        tenantId: user.tenantId,
+        topicId: params.topicId,
+        difficulty: params.difficulty,
+        gradeLevel: params.gradeLevel,
+        bodyTypst: question.bodyTypst,
+        alternatives: question.alternatives,
+        correctAnswer: correctAnswerLetterToIndex(question.correctAnswer),
+        figureCode: question.figureCode,
+        createdBy: user.sub,
+        status: "draft",
+        aiGenerated: true,
+      });
+      return { ok: true, id };
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      return { ok: false, error: message };
+    }
   }
 }
