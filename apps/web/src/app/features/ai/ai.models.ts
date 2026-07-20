@@ -136,6 +136,7 @@ export interface AiRevisedQuestion {
   readonly bodyTypst: string;
   readonly alternatives: readonly string[];
   readonly correctAnswer: string;
+  readonly figureCode?: string | null;
 }
 
 export type GenerationJobStatus = 'pending' | 'running' | 'completed' | 'failed' | 'cancelled';

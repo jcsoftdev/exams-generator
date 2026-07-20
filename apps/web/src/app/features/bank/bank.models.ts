@@ -130,4 +130,5 @@ export interface UpdateQuestionPayload {
   readonly correctAnswer?: string;
   readonly bodyTypst?: string;
   readonly alternatives?: readonly string[];
+  readonly figureCode?: string;
 }

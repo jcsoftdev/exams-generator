@@ -1,4 +1,4 @@
-import { Component, DestroyRef, inject, signal } from '@angular/core';
+import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { forkJoin, map, of, switchMap } from 'rxjs';
@@ -9,13 +9,18 @@ import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.compone
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { ModalComponent } from '../../../ui/modal/modal.component';
+import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
+import { InputComponent } from '../../../ui/input/input.component';
 import { AiService } from '../ai.service';
-import { DraftQuestion, GRADE_LEVEL_LABELS, GradeLevel } from '../ai.models';
+import { DraftQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from '../ai.models';
 import { DraftCountService } from '../draft-count.service';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
+import { Course, Topic } from '../../taxonomy/taxonomy.models';
 
 /** Chrome-less PDF viewer fragment (S7 preview) — hides the native toolbar/thumbnails/scrollbar so it reads as a printed "paper", not a browser PDF viewer. */
 const PREVIEW_FRAGMENT = '#toolbar=0&navpanes=0&scrollbar=0';
+
+const ALTERNATIVE_LETTERS = ['a', 'b', 'c', 'd', 'e'];
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
   [Difficulty.Easy]: 'Fácil',
@@ -57,7 +62,15 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
 @Component({
   selector: 'app-ai-review-queue',
   standalone: true,
-  imports: [ButtonComponent, EmptyStateComponent, TagComponent, ModalComponent, LucideAngularModule],
+  imports: [
+    ButtonComponent,
+    EmptyStateComponent,
+    TagComponent,
+    ModalComponent,
+    SelectComponent,
+    InputComponent,
+    LucideAngularModule,
+  ],
   templateUrl: './ai-review-queue.component.html',
 })
 export class AiReviewQueueComponent {
@@ -73,6 +86,53 @@ export class AiReviewQueueComponent {
 
   protected readonly courseNames = signal<ReadonlyMap<string, string>>(new Map());
   protected readonly topicNames = signal<ReadonlyMap<string, string>>(new Map());
+  /** Full taxonomy (every course/topic), cached from the same `loadTaxonomy()` fetch already used for row labels — reused by the edit form's selects so opening the editor never triggers a new HTTP call (same pattern as bank-list.component). */
+  private readonly courses = signal<readonly Course[]>([]);
+  private readonly topics = signal<readonly Topic[]>([]);
+
+  protected readonly gradeLevelOptions: SelectOption<string>[] = GRADE_LEVELS.map((gradeLevel) => ({
+    value: gradeLevel,
+    label: GRADE_LEVEL_LABELS[gradeLevel],
+  }));
+  protected readonly difficultyOptions: SelectOption<Difficulty>[] = Object.values(Difficulty).map(
+    (difficulty) => ({ value: difficulty, label: DIFFICULTY_LABELS[difficulty] }),
+  );
+
+  protected readonly courseOptions = computed<SelectOption<string>[]>(() =>
+    this.courses().map((course) => ({ value: course.id, label: course.name })),
+  );
+
+  // --- Draft editing ---------------------------------------------------------
+  protected readonly editing = signal(false);
+  protected readonly editSaving = signal(false);
+  protected readonly editError = signal<string | null>(null);
+  protected readonly editCourseId = signal('');
+  protected readonly editTopicId = signal('');
+  protected readonly editDifficulty = signal<Difficulty | null>(null);
+  protected readonly editGradeLevel = signal<string | null>(null);
+  /** 0-based INDEX string ("0"-"4") — same canonical format as `UpdateQuestionPayload.correctAnswer`, never a letter. See Global Constraints. */
+  protected readonly editCorrectAnswer = signal('');
+  protected readonly editBody = signal('');
+  protected readonly editAlternatives = signal('');
+  protected readonly editFigureCode = signal('');
+
+  /** `topics()` (the full unscoped catalog) filtered live to the edit form's currently selected curso — no extra HTTP call on curso change (mirrors bank-list.component). */
+  protected readonly editTopicOptions = computed<SelectOption<string>[]>(() =>
+    this.topics()
+      .filter((topic) => topic.courseId === this.editCourseId())
+      .map((topic) => ({ value: topic.id, label: topic.name })),
+  );
+  protected readonly editCorrectAnswerOptions = computed<SelectOption<string>[]>(() =>
+    this.editAlternativesList().map((text, index) => ({
+      value: String(index),
+      label: `${String.fromCharCode(97 + index)}) ${text}`,
+    })),
+  );
+
+  // --- Editar con IA -----------------------------------------------------------
+  protected readonly aiInstruction = signal('');
+  protected readonly revising = signal(false);
+  protected readonly aiError = signal<string | null>(null);
 
   protected readonly selected = signal<DraftQuestion | null>(null);
   protected readonly previewUrl = signal<SafeResourceUrl | null>(null);
@@ -100,6 +160,8 @@ export class AiReviewQueueComponent {
             : of([]);
           return topics$.pipe(
             map((topicsByCourse) => ({
+              courses,
+              topics: topicsByCourse.flat(),
               courseNames: new Map(courses.map((course) => [course.id, course.name])),
               topicNames: new Map(topicsByCourse.flat().map((topic) => [topic.id, topic.name])),
             })),
@@ -107,7 +169,9 @@ export class AiReviewQueueComponent {
         }),
       )
       .subscribe({
-        next: ({ courseNames, topicNames }) => {
+        next: ({ courses, topics, courseNames, topicNames }) => {
+          this.courses.set(courses);
+          this.topics.set(topics);
           this.courseNames.set(courseNames);
           this.topicNames.set(topicNames);
         },
@@ -156,6 +220,23 @@ export class AiReviewQueueComponent {
 
   protected gradeLabel(gradeLevel: string): string {
     return GRADE_LEVEL_LABELS[gradeLevel as GradeLevel] ?? gradeLevel;
+  }
+
+  /**
+   * `DraftQuestion.correctAnswer` is a 0-based INDEX string ("0"-"4"), not a
+   * letter — the backend converts the AI's letter answer before storing
+   * (see ai.models.ts). Same conversion as `AiGenerateComponent.letterFor`.
+   */
+  protected letterFor(draft: DraftQuestion): string {
+    return ALTERNATIVE_LETTERS[Number(draft.correctAnswer)] ?? draft.correctAnswer;
+  }
+
+  /** Parses the newline-separated `editAlternatives` string into an array of trimmed strings. */
+  private editAlternativesList(): string[] {
+    return this.editAlternatives()
+      .split('\n')
+      .map((line) => line.trim())
+      .filter((line) => line.length > 0);
   }
 
   protected select(draft: DraftQuestion): void {

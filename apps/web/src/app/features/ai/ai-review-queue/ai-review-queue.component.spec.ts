@@ -20,7 +20,9 @@ function draft(o: Partial<DraftQuestion> & { id: string }): DraftQuestion {
     topicId: o.topicId ?? 't1',
     difficulty: o.difficulty ?? Difficulty.Easy,
     gradeLevel: o.gradeLevel ?? 'pre',
-    correctAnswer: o.correctAnswer ?? 'a',
+    // Real shape per ai.models.ts: a 0-based INDEX string ("0"-"4"), not a
+    // letter — the backend converts the AI's letter answer before storing.
+    correctAnswer: o.correctAnswer ?? '0',
     bodyTypst: o.bodyTypst ?? '¿2+2?',
     alternatives: o.alternatives ?? ['4', '3'],
     figureCode: o.figureCode ?? null,
@@ -149,6 +151,22 @@ describe('AiReviewQueueComponent', () => {
     expect(items[0].textContent).not.toContain('t1 ');
   });
 
+  it('exposes the full taxonomy as select options for the edit form (no extra HTTP call beyond the initial load)', () => {
+    const { fixture, getCourses } = setup();
+    const component = fixture.componentInstance as unknown as {
+      courseOptions: () => { value: string; label: string }[];
+      editTopicOptions: () => { value: string; label: string }[];
+      editCourseId: { set: (v: string) => void };
+    };
+
+    expect(component.courseOptions()).toEqual([{ value: 'c1', label: 'Biología' }]);
+
+    component.editCourseId.set('c1');
+    expect(component.editTopicOptions()).toEqual([{ value: 't1', label: 'Célula' }]);
+
+    expect(getCourses).toHaveBeenCalledTimes(1);
+  });
+
   it('shows only the first line of the enunciado (truncated) per row', () => {
     const { compiled } = setup();
     const items = compiled.querySelectorAll('[data-testid="review-item"]');
@@ -169,6 +187,16 @@ describe('AiReviewQueueComponent', () => {
     expect(header.textContent).toContain('Media');
     expect(header.textContent).toContain('3° secundaria');
     expect(header.textContent).not.toContain('secundaria_3');
+  });
+
+  it('shows the correct-answer LETTER in the panel header, not the raw stored index', () => {
+    // correctAnswer is stored as a 0-based index ("0"-"4") — the panel must
+    // convert it to a letter (a-e) the same way ai-generate.component.ts
+    // does, not render the raw digit.
+    const { compiled } = setup({ listImpl: () => of([draft({ id: 'd1', correctAnswer: '1' })]) });
+    const header = compiled.querySelector('[data-testid="panel-header"]')!;
+    expect(header.textContent).toContain('clave: b');
+    expect(header.textContent).not.toContain('clave: 1');
   });
 
   it('presents the preview as a styled "paper" with a bare, chromeless PDF viewer', () => {
