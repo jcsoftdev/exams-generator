@@ -15,16 +15,16 @@ import { NavGroup } from '../ui.types';
   imports: [RouterLink, RouterLinkActive, LucideAngularModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <nav class="flex h-full flex-col gap-6 bg-primary-900 p-5 text-primary-100">
+    <nav class="flex h-full flex-col gap-6 bg-n100 p-5 text-n900">
       <div class="flex items-center gap-2 px-2" data-testid="sidebar-logo">
         <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">
           E
         </span>
-        <span class="text-xs font-bold tracking-wide text-primary-100">Exams Generator</span>
+        <span class="text-xs font-bold tracking-wide text-n900">Exams Generator</span>
       </div>
       @for (group of groups(); track group.title) {
         <div>
-          <p class="mb-3 px-3 text-xs font-semibold uppercase tracking-wide text-primary-300">
+          <p class="mb-3 px-3 text-xs font-semibold uppercase tracking-wide text-n500">
             {{ group.title }}
           </p>
           <ul class="flex flex-col">
@@ -36,7 +36,7 @@ import { NavGroup } from '../ui.types';
                   routerLinkActive="bg-tint-activo text-tint-texto"
                   [routerLinkActiveOptions]="{ exact: false }"
                   (click)="navigate.emit(item.route)"
-                  class="flex h-[42px] items-center gap-2 rounded-field px-3 text-sm text-primary-100 hover:bg-primary-800"
+                  class="flex h-[42px] items-center gap-2 rounded-field px-3 text-sm text-n700 hover:bg-n200"
                 >
                   @if (item.icon) {
                     <lucide-angular [name]="item.icon" class="h-5 w-5 shrink-0"></lucide-angular>
