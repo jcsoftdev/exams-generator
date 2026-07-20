@@ -34,7 +34,7 @@
         <div data-testid="panel-header" class="mb-3 flex flex-wrap items-center gap-2">
           <ui-tag variant="ai">Borrador IA</ui-tag>
           <ui-tag [variant]="tagVariantFor(d.difficulty)">{{ difficultyLabel(d.difficulty) }}</ui-tag>
-          <span class="text-sm text-n600">{{ gradeLabel(d.gradeLevel) }} · clave: {{ d.correctAnswer }}</span>
+          <span class="text-sm text-n600">{{ gradeLabel(d.gradeLevel) }} · clave: {{ letterFor(d) }}</span>
         </div>
 
         @if (actionError()) {
