@@ -861,9 +861,9 @@ Then add after `cancelEdit()`:
   /**
    * Builds `UpdateQuestionPayload` — NEVER `courseId` (the backend derives
    * course from `topicId`, see UpdateQuestionPayload's doc) — and calls
-   * `BankService.updateQuestion`. On success: exits edit mode, reloads the
-   * queue (`load()`, same as approve/reject), and recompiles the preview for
-   * this draft if it's still selected.
+   * `BankService.updateQuestion`. On success: exits edit mode and refreshes
+   * the queue via `reloadAfterSave`, which keeps the just-edited draft
+   * selected instead of resetting to the first item (see its doc).
    */
   protected saveEdit(): void {
     const draft = this.selected();
