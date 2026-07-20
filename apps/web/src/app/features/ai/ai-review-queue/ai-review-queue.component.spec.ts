@@ -374,4 +374,50 @@ describe('AiReviewQueueComponent', () => {
     expect(header.textContent).toContain('Pre-admisión');
     expect(header.textContent).not.toContain('3° secundaria');
   });
+
+  it('revises the draft with AI, populating the edit form WITHOUT saving', () => {
+    const { compiled, fixture, reviseQuestion, updateQuestion } = setup({
+      reviseQuestionImpl: () =>
+        of({
+          bodyTypst: 'Enunciado revisado por IA',
+          alternatives: ['10', '20', '30'],
+          correctAnswer: '2',
+          figureCode: '#import "@preview/cetz:0.5.2": canvas, draw',
+        }),
+    });
+    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    const instructionInput = compiled.querySelector('[data-testid="ai-instruction"] input') as HTMLInputElement;
+    instructionInput.value = 'hazla más difícil';
+    instructionInput.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+
+    (compiled.querySelector('[data-testid="ai-revise"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(reviseQuestion).toHaveBeenCalledWith('d1', 'hazla más difícil');
+    const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+    expect(enunciado.value).toBe('Enunciado revisado por IA');
+    const alternatives = compiled.querySelector('[data-testid="edit-alternatives"]') as HTMLTextAreaElement;
+    expect(alternatives.value).toBe('10\n20\n30');
+    const figureCode = compiled.querySelector('[data-testid="edit-figure-code"]') as HTMLTextAreaElement;
+    expect(figureCode.value).toBe('#import "@preview/cetz:0.5.2": canvas, draw');
+    expect(updateQuestion).not.toHaveBeenCalled();
+  });
+
+  it('shows an error when AI revision fails, without touching the current form values', () => {
+    const { compiled, fixture } = setup({
+      reviseQuestionImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+    });
+    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="ai-revise"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    const error = compiled.querySelector('[data-testid="ai-error"]');
+    expect(error?.textContent).toContain('No se pudo revisar');
+    const enunciado = compiled.querySelector('[data-testid="edit-enunciado"]') as HTMLTextAreaElement;
+    expect(enunciado.value).toBe('7. ¿Cuál organelo sintetiza proteínas?\na) Lisosoma b) Ribosoma');
+  });
 });

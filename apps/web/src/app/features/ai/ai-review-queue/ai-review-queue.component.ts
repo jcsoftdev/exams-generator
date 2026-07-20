@@ -10,6 +10,7 @@ import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { ModalComponent } from '../../../ui/modal/modal.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
+import { InputComponent } from '../../../ui/input/input.component';
 import { AiService } from '../ai.service';
 import { DraftQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from '../ai.models';
 import { DraftCountService } from '../draft-count.service';
@@ -65,6 +66,7 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
     TagComponent,
     ModalComponent,
     SelectComponent,
+    InputComponent,
     LucideAngularModule,
   ],
   templateUrl: './ai-review-queue.component.html',
@@ -314,6 +316,37 @@ export class AiReviewQueueComponent {
       },
       error: () => {
         /* row list falls out of sync until the next natural reload — the save itself already succeeded, so this is non-fatal */
+      },
+    });
+  }
+
+  /**
+   * AI-assisted revision of the draft currently being edited. Populates the
+   * edit-form signals (editBody/editAlternatives/editCorrectAnswer/
+   * editFigureCode) the same way `startEdit` seeds them — NEVER calls
+   * `saveEdit()` itself, so the teacher always reviews the AI's suggestion
+   * before it's persisted (same guarantee as bank-list.component's
+   * reviseWithAi — see Global Constraints).
+   */
+  protected reviseWithAi(): void {
+    const draft = this.selected();
+    if (!draft || this.revising()) {
+      return;
+    }
+    this.revising.set(true);
+    this.aiError.set(null);
+
+    this.aiService.reviseQuestion(draft.id, this.aiInstruction()).subscribe({
+      next: (revised) => {
+        this.editBody.set(revised.bodyTypst);
+        this.editAlternatives.set(revised.alternatives.join('\n'));
+        this.editCorrectAnswer.set(revised.correctAnswer);
+        this.editFigureCode.set(revised.figureCode ?? '');
+        this.revising.set(false);
+      },
+      error: () => {
+        this.revising.set(false);
+        this.aiError.set('No se pudo revisar la pregunta con IA. Inténtalo de nuevo.');
       },
     });
   }
