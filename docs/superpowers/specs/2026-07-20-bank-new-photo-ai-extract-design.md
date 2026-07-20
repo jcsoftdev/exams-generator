@@ -18,7 +18,77 @@ Nuevos signals (mismo patrón que `bank-list.component.ts`'s Task 10 OCR box):
 - `extracting = signal(false)`
 - `extractError = signal<string | null>(null)`
 
-Nuevo método:
+### 3.1 Por qué NO alcanza con encadenar `.subscribe()` y confiar en el orden
+
+Los `effect()` de `sGradeLevel`/`sCourseId` (líneas 112-147 del componente actual) SIEMPRE resetean el id dependiente a `''` en cuanto el signal padre cambia, y solo DESPUÉS relanzan el fetch. Un `effect()` de Angular nunca corre de forma síncrona dentro del mismo `.set()` que lo disparó — corre después, en el siguiente flush del scheduler. Eso significa que si intentamos "ganarle" al effect encadenando nuestros propios `subscribe()` justo después de `sGradeLevel.set(...)`, el resultado depende de si el `Observable` es síncrono o asíncrono:
+
+- Con un `Observable` síncrono (`of(...)`, como en los tests con Vitest) nuestro `subscribe()` corre YA, dentro del mismo tick — ANTES de que el effect llegue a ejecutarse. El effect corre después y resetea `sCourseId`/`sTopicId` de vuelta a `''`, pisando lo que acabamos de copiar.
+- Con HTTP real (asíncrono) el orden final no está garantizado tampoco — depende de cómo Angular agenda el flush de effects (microtask/zona) vs. cuándo resuelve la promesa/observable HTTP.
+
+En ningún caso "nuestro `.set()` es la última escritura" es una garantía real. Necesitamos un mecanismo que no dependa de timing.
+
+### 3.2 Mecanismo correcto: un valor "preseleccionado" que el propio `effect()` consume
+
+En vez de competir con los efectos, les pasamos el valor que deben usar AL RESETEAR, en lugar de `''`. Dos campos privados nuevos (no son signals — no necesitan reactividad propia, solo persisten un valor hasta que el effect los lee una vez):
+
+```ts
+private pendingStructuredCourseId: string | null = null;
+private pendingStructuredTopicId: string | null = null;
+```
+
+Los dos `effect()` existentes se modifican para leer y consumir ese valor en vez de resetear siempre a `''`:
+
+```ts
+// ANTES (efecto de sGradeLevel → cursos del tab Estructurada):
+effect(() => {
+  const gradeLevel = this.sGradeLevel();
+  this.sCourseId.set('');
+  this.sCourses.set([]);
+  if (!gradeLevel) return;
+  this.taxonomyService.getCourses(gradeLevel).subscribe({
+    next: (courses) => this.sCourses.set(courses),
+    error: () => this.saveError.set('No se pudieron cargar los cursos. Recarga la página.'),
+  });
+});
+
+// DESPUÉS:
+effect(() => {
+  const gradeLevel = this.sGradeLevel();
+  const preselectCourseId = this.pendingStructuredCourseId ?? '';
+  this.pendingStructuredCourseId = null;
+  this.sCourseId.set(preselectCourseId);
+  this.sCourses.set([]);
+  if (!gradeLevel) return;
+  this.taxonomyService.getCourses(gradeLevel).subscribe({
+    next: (courses) => this.sCourses.set(courses),
+    error: () => this.saveError.set('No se pudieron cargar los cursos. Recarga la página.'),
+  });
+});
+```
+
+Mismo cambio, mismo patrón, para el effect de `sCourseId` → temas:
+
+```ts
+// DESPUÉS:
+effect(() => {
+  const courseId = this.sCourseId();
+  const preselectTopicId = this.pendingStructuredTopicId ?? '';
+  this.pendingStructuredTopicId = null;
+  this.sTopicId.set(preselectTopicId);
+  this.sTopics.set([]);
+  if (!courseId) return;
+  this.taxonomyService.getTopics(courseId, this.sGradeLevel() ?? undefined).subscribe({
+    next: (topics) => this.sTopics.set(topics),
+    error: () => this.saveError.set('No se pudieron cargar los temas. Inténtalo de nuevo.'),
+  });
+});
+```
+
+Por qué esto SÍ es determinístico: ya no competimos en timing con el effect — le decimos DIRECTAMENTE qué valor debe usar la próxima vez que se dispare por el cambio de `sGradeLevel`/`sCourseId`, sin importar si el effect corre en 1ms o en 100ms, ni si el fetch de cursos/temas es síncrono (test) o asíncrono (prod). El comportamiento normal (usuario cambiando el dropdown a mano) no se altera: `pendingStructuredCourseId`/`pendingStructuredTopicId` quedan en `null` salvo el instante en que `extractWithAi()` los setea, así que el `?? ''` cubre el caso normal exactamente como el reset original.
+
+**Límite aceptado (edge case raro, documentado, no se resuelve)**: si el profe YA había elegido a mano el mismo Grado en el tab Estructurada antes de usar "Extraer con IA" en Foto, `sGradeLevel.set(gradeLevel)` es un no-op (mismo valor, Angular no notifica) y el effect no vuelve a correr — `pendingStructuredCourseId`/`pendingStructuredTopicId` quedan sin consumir, y Curso/Tema no se prellenan (el profe los reelige a mano). El enunciado/alternativas/clave de la IA sí se prellenan igual — no se pierde nada crítico. No vale la pena la complejidad extra para este caso.
+
+### 3.3 `extractWithAi()`
 
 ```ts
 protected extractWithAi(): void {
@@ -32,29 +102,14 @@ protected extractWithAi(): void {
 
   this.aiService.extractQuestionFromImage(image).subscribe({
     next: (extracted) => {
+      this.sDifficulty.set(this.pDifficulty());
       this.sBody.set(extracted.bodyTypst);
       this.sAlternatives.set(extracted.alternatives.join('\n'));
       this.sCorrectAnswer.set(extracted.correctAnswer);
-      this.sDifficulty.set(this.pDifficulty());
 
-      // `sGradeLevel`/`sCourseId` each drive an existing `effect()` (lines
-      // 112-147) that RESETS the dependent id/list as soon as the signal
-      // changes, then async-refetches via `taxonomyService`. Setting
-      // `sCourseId`/`sTopicId` directly right after `sGradeLevel` would race
-      // that reset and get clobbered. Instead, mirror exactly what a user
-      // does by hand: change grade → wait for courses to load → pick course →
-      // wait for topics to load → pick topic. Our own explicit fetch below
-      // always resolves AFTER the effect's synchronous reset, so our
-      // `.set()` calls are the last write and win.
+      this.pendingStructuredCourseId = courseId;
+      this.pendingStructuredTopicId = topicId;
       this.sGradeLevel.set(gradeLevel);
-      this.taxonomyService.getCourses(gradeLevel!).subscribe((courses) => {
-        this.sCourses.set(courses);
-        this.sCourseId.set(courseId);
-        this.taxonomyService.getTopics(courseId, gradeLevel ?? undefined).subscribe((topics) => {
-          this.sTopics.set(topics);
-          this.sTopicId.set(topicId);
-        });
-      });
 
       this.extracting.set(false);
       this.setTab('structured');
