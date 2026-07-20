@@ -6,7 +6,7 @@ import {
   LucideAngularModule,
   Menu, X, Sparkles, Lock, Download, Ellipsis, Check, TriangleAlert, Search, School,
   LogOut, User, Users, Trash2, Pencil, Archive, ChevronLeft, ChevronRight, ChevronDown, Plus, Minus, Bell,
-  LayoutDashboard, BookOpen, FileText, Inbox, Settings,
+  LayoutDashboard, BookOpen, FileText, Inbox, Settings, History,
   Sun, Moon,
 } from 'lucide-angular';
 import { routes } from './app.routes';
@@ -23,7 +23,7 @@ export const appConfig: ApplicationConfig = {
       LucideAngularModule.pick({
         Menu, X, Sparkles, Lock, Download, Ellipsis, Check, TriangleAlert, Search, School,
         LogOut, User, Users, Trash2, Pencil, Archive, ChevronLeft, ChevronRight, ChevronDown, Plus, Minus, Bell,
-        LayoutDashboard, BookOpen, FileText, Inbox, Settings,
+        LayoutDashboard, BookOpen, FileText, Inbox, Settings, History,
         Sun, Moon,
       }),
     ),
