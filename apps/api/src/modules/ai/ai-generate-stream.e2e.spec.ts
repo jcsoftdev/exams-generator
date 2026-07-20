@@ -102,6 +102,7 @@ describeIfTypst("POST /ai/questions/generate/stream (e2e)", () => {
     expect(response.headers["content-type"]).toContain("text/event-stream");
     const frames = parseFrames(response.text);
     expect(frames.length).toBeGreaterThan(0);
+    expect(frames.some((f) => f.type === "delta")).toBe(true);
     const last = frames[frames.length - 1];
     expect(last.type).toBe("done");
     const result = last.result as { created: Array<{ id: string }>; failed: unknown[] };

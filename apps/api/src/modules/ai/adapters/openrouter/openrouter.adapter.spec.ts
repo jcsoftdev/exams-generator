@@ -1,5 +1,6 @@
 import { Difficulty } from "@exams-generator/shared";
 import {
+  AiGenerationError,
   AiInvalidResponseError,
   AiRateLimitError,
   ExtractQuestionInput,
@@ -434,6 +435,20 @@ describe("OpenRouterAdapter", () => {
       });
 
       await expect(adapter.generate(INPUT, () => {})).rejects.toBeInstanceOf(AiRateLimitError);
+      expect(sseHttpClient).toHaveBeenCalledTimes(1);
+    });
+
+    it("throws AiGenerationError immediately when the streaming response has no body, without retrying", async () => {
+      const sseHttpClient = jest
+        .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
+        .mockReturnValueOnce(Promise.resolve({ status: 200, body: null } satisfies HttpSseResponse));
+      const adapter = new OpenRouterAdapter({
+        apiKey: "sk-test-key",
+        model: "deepseek/deepseek-r1:free",
+        sseHttpClient,
+      });
+
+      await expect(adapter.generate(INPUT, () => {})).rejects.toBeInstanceOf(AiGenerationError);
       expect(sseHttpClient).toHaveBeenCalledTimes(1);
     });
 

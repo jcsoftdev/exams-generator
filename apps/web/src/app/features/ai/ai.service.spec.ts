@@ -1,11 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
-import { provideHttpClient } from '@angular/common/http';
+import { HttpDownloadProgressEvent, HttpEventType, provideHttpClient } from '@angular/common/http';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { Difficulty } from '@exams-generator/shared';
 import { AiService } from './ai.service';
 import { environment } from '../../../environments/environment';
-import { AiRevisedQuestion, DraftQuestion, GenerateQuestionsResult } from './ai.models';
+import {
+  AiRevisedQuestion,
+  DraftQuestion,
+  GenerateQuestionsResult,
+  GenerateQuestionStreamEvent,
+} from './ai.models';
 
 describe('AiService', () => {
   let service: AiService;
@@ -71,6 +76,101 @@ describe('AiService', () => {
       req.flush(apiResponse);
 
       expect(result).toEqual(apiResponse);
+    });
+  });
+
+  describe('generateQuestionStream', () => {
+    const payload = {
+      courseId: 'course-1',
+      topicId: 'topic-1',
+      difficulty: Difficulty.Medium,
+      gradeLevel: 'secundaria_2',
+      withFigure: false,
+    };
+
+    function downloadProgressEvent(partialText: string): HttpDownloadProgressEvent {
+      return {
+        type: HttpEventType.DownloadProgress,
+        loaded: partialText.length,
+        total: partialText.length,
+        partialText,
+      };
+    }
+
+    it('emits the parsed event for a single complete SSE frame delivered in one DownloadProgress tick', () => {
+      const events: GenerateQuestionStreamEvent[] = [];
+      service.generateQuestionStream(payload).subscribe((event) => events.push(event));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/generate/stream`);
+      expect(req.request.method).toBe('POST');
+      expect(req.request.body).toEqual(payload);
+
+      const partialText = 'data: {"type":"delta","text":"Hola"}\n\n';
+      req.event(downloadProgressEvent(partialText));
+
+      expect(events).toEqual([{ type: 'delta', text: 'Hola' }]);
+
+      req.flush(partialText);
+    });
+
+    it('buffers an incomplete frame split across two DownloadProgress ticks and emits it only once it is complete', () => {
+      const events: GenerateQuestionStreamEvent[] = [];
+      service.generateQuestionStream(payload).subscribe((event) => events.push(event));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/generate/stream`);
+
+      // partialText is CUMULATIVE — this first tick's text has no closing "\n\n" yet.
+      const firstPartial = 'data: {"type":"delta","tex';
+      req.event(downloadProgressEvent(firstPartial));
+      expect(events).toEqual([]);
+
+      // Second tick's partialText is the full cumulative text so far: the first
+      // tick's text PLUS the rest of the frame PLUS the closing "\n\n".
+      const fullText = `${firstPartial}t":"Hola"}\n\n`;
+      req.event(downloadProgressEvent(fullText));
+
+      expect(events).toEqual([{ type: 'delta', text: 'Hola' }]);
+
+      req.flush(fullText);
+
+      // Still just the one event — the terminal flush must not re-emit it.
+      expect(events).toEqual([{ type: 'delta', text: 'Hola' }]);
+    });
+
+    it('emits multiple complete frames arriving in the same DownloadProgress tick, in order', () => {
+      const events: GenerateQuestionStreamEvent[] = [];
+      service.generateQuestionStream(payload).subscribe((event) => events.push(event));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/generate/stream`);
+
+      const partialText =
+        'data: {"type":"delta","text":"Hola"}\n\n' + 'data: {"type":"restart"}\n\n';
+      req.event(downloadProgressEvent(partialText));
+
+      expect(events).toEqual([{ type: 'delta', text: 'Hola' }, { type: 'restart' }]);
+
+      req.flush(partialText);
+    });
+
+    it('flushes any remaining buffered text and completes the stream on the terminal Response event', () => {
+      const events: GenerateQuestionStreamEvent[] = [];
+      let completed = false;
+
+      service.generateQuestionStream(payload).subscribe({
+        next: (event) => events.push(event),
+        complete: () => (completed = true),
+      });
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/generate/stream`);
+
+      // No DownloadProgress tick ever carried these final bytes — they only
+      // ever show up in the terminal Response body.
+      const fullResponseBodyText =
+        'data: {"type":"done","result":{"created":[{"id":"q1"}],"failed":[]}}\n\n';
+      req.flush(fullResponseBodyText);
+
+      expect(events).toEqual([{ type: 'done', result: { created: [{ id: 'q1' }], failed: [] } }]);
+      expect(completed).toBe(true);
     });
   });
 
