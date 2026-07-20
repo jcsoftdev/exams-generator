@@ -102,8 +102,16 @@ describe("buildOpenRouterRequestBody", () => {
 
     const promptText = promptTextOf(body);
     expect(promptText).toContain("aplicación DIRECTA de una única fórmula");
-    expect(promptText).toContain("1-2 pasos intermedios");
-    expect(promptText).toContain("3 o más conceptos");
+    expect(promptText).toContain("exige ANÁLISIS");
+    expect(promptText).toContain("análisis más profundo");
+  });
+
+  it("frames medium/hard as reasoning demand, not just extra mechanical steps", () => {
+    const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
+
+    const promptText = promptTextOf(body);
+    expect(promptText).toContain("interpretar el enunciado");
+    expect(promptText).toContain("evaluar varios casos o condiciones");
   });
 
   it("pins the CeTZ package version compatible with the deployed typst binary (infra/Dockerfile.api TYPST_VERSION)", () => {

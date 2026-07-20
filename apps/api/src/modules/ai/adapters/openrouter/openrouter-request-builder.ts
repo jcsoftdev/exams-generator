@@ -165,11 +165,11 @@ const ALTERNATIVES_RULES =
  * `TYPST_MATH_RULES` uses (concrete examples beat vague adjectives).
  */
 const DIFFICULTY_CALIBRATION_RULES = [
-  "Calibra el NIVEL DE EXIGENCIA real de la pregunta según la dificultad pedida — la etiqueta debe coincidir con cuánto esfuerzo toma resolverla, no solo con el tema:",
-  '"easy": aplicación DIRECTA de una única fórmula o propiedad conocida, con números que dan un resultado limpio (entero o fracción simple), SIN pasos intermedios ni combinar más de un concepto. Ejemplo de calibre: en un triángulo rectángulo con altura trazada a la hipotenusa, dados los segmentos 4 y 9, hallar la altura (una sola relación: altura² = producto de los segmentos → altura = 6).',
-  '"medium": requiere 1-2 pasos intermedios antes de poder aplicar la fórmula final (ej. hallar primero un dato que falta con una relación distinta), o combinar dos conceptos relacionados, o números que no dan un resultado limpio a la primera.',
-  '"hard": requiere combinar 3 o más conceptos, encadenar varias fórmulas, decidir la estrategia de solución sin que sea evidente cuál usar, o manipulación algebraica no trivial.',
-  'NUNCA generes una pregunta "easy" que en realidad exige razonamiento de varios pasos, ni una "hard" que se resuelve con una sola sustitución directa.',
+  "Calibra el NIVEL DE EXIGENCIA real de la pregunta según la dificultad pedida — la etiqueta debe reflejar cuánto RAZONAMIENTO exige resolverla, no solo el tema o la cantidad de cálculos:",
+  '"easy": aplicación DIRECTA de una única fórmula o propiedad conocida, explícitamente identificable en el enunciado, con números que dan un resultado limpio (entero o fracción simple) — el estudiante reconoce de inmediato qué usar, sin analizar nada. Ejemplo de calibre: en un triángulo rectángulo con altura trazada a la hipotenusa, dados los segmentos 4 y 9, hallar la altura (una sola relación: altura² = producto de los segmentos → altura = 6).',
+  '"medium": exige ANÁLISIS — el estudiante debe interpretar el enunciado para identificar qué relación o propiedad aplica (no se declara explícitamente), o combinar dos conceptos cuya conexión no es evidente a primera vista, o interpretar un dato indirecto antes de poder plantear la solución.',
+  '"hard": exige análisis más profundo — evaluar varios casos o condiciones antes de decidir cuál aplica, justificar por qué una estrategia es válida sobre otra, interpretar información no explícita en un problema contextualizado, o sintetizar 3 o más conceptos cuya conexión el estudiante debe descubrir por sí mismo.',
+  'NUNCA generes una pregunta "easy" que en realidad exige interpretar o analizar el enunciado, ni una "medium"/"hard" que se resuelve con una sola sustitución mecánica sin razonar.',
 ].join(" ");
 
 const SYSTEM_PROMPT = [
