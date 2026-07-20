@@ -32,21 +32,26 @@ import {
   FileText,
   Inbox,
   Settings,
+  Sun,
+  Moon,
 } from 'lucide-angular';
 import { Role } from '@exams-generator/shared';
 import { ShellComponent } from './shell.component';
 import { AuthService } from '../../core/auth/auth.service';
 import { TenantSettingsService } from '../../features/tenant-settings/tenant-settings.service';
 import { DraftCountService } from '../ai/draft-count.service';
+import { ThemeService } from '../../core/theme/theme.service';
 
 function setup(role: Role | null, draftCount: number | null = 7) {
   const logout = vi.fn();
   const navigateByUrl = vi.fn();
+  const toggleTheme = vi.fn();
   TestBed.configureTestingModule({
     imports: [ShellComponent],
     providers: [
       provideRouter([]),
       { provide: DraftCountService, useValue: { count: signal(draftCount) } },
+      { provide: ThemeService, useValue: { mode: signal<'light' | 'dark'>('light'), toggle: toggleTheme } },
       importProvidersFrom(
         LucideAngularModule.pick({
           Menu,
@@ -76,6 +81,8 @@ function setup(role: Role | null, draftCount: number | null = 7) {
           FileText,
           Inbox,
           Settings,
+          Sun,
+          Moon,
         }),
       ),
       { provide: AuthService, useValue: { currentRole: signal(role), logout } },
@@ -104,7 +111,7 @@ function setup(role: Role | null, draftCount: number | null = 7) {
   });
   const fixture = TestBed.createComponent(ShellComponent);
   fixture.detectChanges();
-  return { fixture, compiled: fixture.nativeElement as HTMLElement, logout, navigateByUrl };
+  return { fixture, compiled: fixture.nativeElement as HTMLElement, logout, navigateByUrl, toggleTheme };
 }
 
 describe('ShellComponent', () => {
@@ -204,5 +211,15 @@ describe('ShellComponent', () => {
     // not on `getAttribute('href')`.
     const links = Array.from(compiled.querySelectorAll('a[data-testid="nav-item"]'));
     expect(links[0]?.textContent).toContain('Dashboard');
+  });
+
+  it('renders a theme toggle button that calls ThemeService.toggle() on click', () => {
+    const { compiled, toggleTheme } = setup(Role.Teacher);
+
+    const button = compiled.querySelector<HTMLButtonElement>('[data-testid="theme-toggle-button"]');
+    expect(button).toBeTruthy();
+
+    button!.click();
+    expect(toggleTheme).toHaveBeenCalledTimes(1);
   });
 });

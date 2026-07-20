@@ -8,6 +8,7 @@ import { NavGroup } from '../../ui/ui.types';
 import { AuthService } from '../../core/auth/auth.service';
 import { TenantSettingsService } from '../tenant-settings/tenant-settings.service';
 import { DraftCountService } from '../ai/draft-count.service';
+import { ThemeService } from '../../core/theme/theme.service';
 
 const PRINCIPAL_GROUP: NavGroup = {
   title: 'Principal',
@@ -49,10 +50,12 @@ export class ShellComponent {
   private readonly tenantSettings = inject(TenantSettingsService);
   private readonly router = inject(Router);
   private readonly draftCount = inject(DraftCountService);
+  private readonly themeService = inject(ThemeService);
 
   protected readonly mobileOpen = signal(false);
   protected readonly userMenuOpen = signal(false);
   protected readonly schoolName = signal('Exams Generator');
+  protected readonly themeMode = computed(() => this.themeService.mode());
 
   protected readonly navGroups = computed<NavGroup[]>(() => {
     const pendingDrafts = this.draftCount.count();
@@ -92,6 +95,10 @@ export class ShellComponent {
 
   protected toggleUserMenu(): void {
     this.userMenuOpen.update((open) => !open);
+  }
+
+  protected toggleTheme(): void {
+    this.themeService.toggle();
   }
 
   protected logout(): void {

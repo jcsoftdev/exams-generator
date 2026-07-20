@@ -21,6 +21,19 @@
       <div actions class="flex items-center gap-2">
         <button
           type="button"
+          data-testid="theme-toggle-button"
+          class="relative flex h-8 w-8 items-center justify-center rounded-full text-n600 hover:bg-n100"
+          [attr.aria-label]="themeMode() === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
+          (click)="toggleTheme()"
+        >
+          @if (themeMode() === 'dark') {
+            <lucide-angular name="sun" class="h-5 w-5"></lucide-angular>
+          } @else {
+            <lucide-angular name="moon" class="h-5 w-5"></lucide-angular>
+          }
+        </button>
+        <button
+          type="button"
           data-testid="notifications-button"
           class="relative flex h-8 w-8 items-center justify-center rounded-full text-n600 hover:bg-n100"
           aria-label="Notificaciones"
