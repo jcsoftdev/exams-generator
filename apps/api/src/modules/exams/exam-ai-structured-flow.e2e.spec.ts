@@ -128,28 +128,48 @@ describeIfTypst("AI-generated structured question -> approved -> exam version (e
   });
 
   afterAll(async () => {
-    if (createdExamIds.length > 0) {
-      await db.delete(examVersions).where(inArray(examVersions.examId, createdExamIds));
-      await db.delete(examQuestions).where(inArray(examQuestions.examId, createdExamIds));
-      await db.delete(examBlueprintRows).where(inArray(examBlueprintRows.examId, createdExamIds));
-      await db.delete(exams).where(inArray(exams.id, createdExamIds));
+    const cleanupSteps: Array<[string, () => Promise<unknown>]> = [
+      [
+        "delete exams",
+        async () => {
+          if (createdExamIds.length > 0) {
+            await db.delete(examVersions).where(inArray(examVersions.examId, createdExamIds));
+            await db.delete(examQuestions).where(inArray(examQuestions.examId, createdExamIds));
+            await db.delete(examBlueprintRows).where(inArray(examBlueprintRows.examId, createdExamIds));
+            await db.delete(exams).where(inArray(exams.id, createdExamIds));
+          }
+        },
+      ],
+      [
+        "delete questions",
+        async () => {
+          if (createdQuestionIds.length > 0) {
+            await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
+          }
+        },
+      ],
+      // `generateVersions()` creates its own PDF/answer-key asset rows
+      // (`ExamsRepository.createAsset`), tenant-scoped but not individually
+      // tracked here — sweep by tenantId (mirrors `exams.e2e.spec.ts`).
+      ["delete assets", () => db.delete(assets).where(eq(assets.tenantId, tenantId))],
+      // The draft is now created via the real `/ai/questions/jobs` flow, which
+      // persists a `generation_jobs` row FK-referencing `users` (`created_by`)
+      // — clear it before `users`, same fix as `ai-jobs.e2e.spec.ts` (Task 4).
+      ["delete generation jobs", () => db.delete(generationJobs).where(eq(generationJobs.tenantId, tenantId))],
+      ["delete users", () => db.delete(users).where(inArray(users.id, [teacherId]))],
+      ["delete tenants", () => db.delete(tenants).where(inArray(tenants.id, [tenantId]))],
+      ["delete topics", () => db.delete(topics).where(inArray(topics.id, [topicId]))],
+      ["delete courses", () => db.delete(courses).where(inArray(courses.id, [courseId]))],
+      ["close app", () => app.close()],
+    ];
+    for (const [label, step] of cleanupSteps) {
+      try {
+        await step();
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.error(`[afterAll cleanup] "${label}" failed, continuing with remaining steps:`, err);
+      }
     }
-    if (createdQuestionIds.length > 0) {
-      await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
-    }
-    // `generateVersions()` creates its own PDF/answer-key asset rows
-    // (`ExamsRepository.createAsset`), tenant-scoped but not individually
-    // tracked here — sweep by tenantId (mirrors `exams.e2e.spec.ts`).
-    await db.delete(assets).where(eq(assets.tenantId, tenantId));
-    // The draft is now created via the real `/ai/questions/jobs` flow, which
-    // persists a `generation_jobs` row FK-referencing `users` (`created_by`)
-    // — clear it before `users`, same fix as `ai-jobs.e2e.spec.ts` (Task 4).
-    await db.delete(generationJobs).where(eq(generationJobs.tenantId, tenantId));
-    await db.delete(users).where(inArray(users.id, [teacherId]));
-    await db.delete(tenants).where(inArray(tenants.id, [tenantId]));
-    await db.delete(topics).where(inArray(topics.id, [topicId]));
-    await db.delete(courses).where(inArray(courses.id, [courseId]));
-    await app.close();
     await pool.end();
   });
 

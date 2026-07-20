@@ -63,9 +63,19 @@ describe("Taxonomy endpoints (e2e)", () => {
   });
 
   afterAll(async () => {
-    await db.delete(topics).where(inArray(topics.id, [topicAId, topicBId]));
-    await db.delete(courses).where(inArray(courses.id, [courseAId, courseBId]));
-    await app.close();
+    const cleanupSteps: Array<[string, () => Promise<unknown>]> = [
+      ["delete topics", () => db.delete(topics).where(inArray(topics.id, [topicAId, topicBId]))],
+      ["delete courses", () => db.delete(courses).where(inArray(courses.id, [courseAId, courseBId]))],
+      ["close app", () => app.close()],
+    ];
+    for (const [label, step] of cleanupSteps) {
+      try {
+        await step();
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.error(`[afterAll cleanup] "${label}" failed, continuing with remaining steps:`, err);
+      }
+    }
     await pool.end();
   });
 

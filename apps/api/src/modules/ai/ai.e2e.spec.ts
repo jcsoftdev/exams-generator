@@ -152,18 +152,36 @@ describeIfTypst("AI generation workflow (e2e)", () => {
   });
 
   afterAll(async () => {
-    if (createdQuestionIds.length > 0) {
-      await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
+    const cleanupSteps: Array<[string, () => Promise<unknown>]> = [
+      [
+        "delete questions",
+        async () => {
+          if (createdQuestionIds.length > 0) {
+            await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
+          }
+        },
+      ],
+      // Every draft created via `generateOneDraft()` now goes through the real
+      // `/ai/questions/jobs` flow, which persists a `generation_jobs` row
+      // FK-referencing `users` (`created_by`) — it must be cleared before
+      // `users`, same fix as `ai-jobs.e2e.spec.ts` (Task 4).
+      [
+        "delete generation jobs",
+        () => db.delete(generationJobs).where(inArray(generationJobs.tenantId, [tenantAId, tenantBId])),
+      ],
+      ["delete users", () => db.delete(users).where(inArray(users.id, [tenantATeacherId, tenantBTeacherId]))],
+      ["delete tenants", () => db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]))],
+      ["delete topics", () => db.delete(topics).where(inArray(topics.id, [topicId]))],
+      ["delete courses", () => db.delete(courses).where(inArray(courses.id, [courseId]))],
+    ];
+    for (const [label, step] of cleanupSteps) {
+      try {
+        await step();
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.error(`[afterAll cleanup] "${label}" failed, continuing with remaining steps:`, err);
+      }
     }
-    // Every draft created via `generateOneDraft()` now goes through the real
-    // `/ai/questions/jobs` flow, which persists a `generation_jobs` row
-    // FK-referencing `users` (`created_by`) — it must be cleared before
-    // `users`, same fix as `ai-jobs.e2e.spec.ts` (Task 4).
-    await db.delete(generationJobs).where(inArray(generationJobs.tenantId, [tenantAId, tenantBId]));
-    await db.delete(users).where(inArray(users.id, [tenantATeacherId, tenantBTeacherId]));
-    await db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]));
-    await db.delete(topics).where(inArray(topics.id, [topicId]));
-    await db.delete(courses).where(inArray(courses.id, [courseId]));
     await bootstrapModule.close();
     await pool.end();
   });

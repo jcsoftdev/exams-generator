@@ -136,37 +136,73 @@ describe("Exams module (e2e)", () => {
   });
 
   afterAll(async () => {
-    if (createdExamIds.length > 0) {
-      await db.delete(examVersions).where(inArray(examVersions.examId, createdExamIds));
-      await db.delete(examQuestions).where(inArray(examQuestions.examId, createdExamIds));
-      await db.delete(examBlueprintRows).where(inArray(examBlueprintRows.examId, createdExamIds));
-      await db.delete(exams).where(inArray(exams.id, createdExamIds));
+    const cleanupSteps: Array<[string, () => Promise<unknown>]> = [
+      [
+        "delete exams",
+        async () => {
+          if (createdExamIds.length > 0) {
+            await db.delete(examVersions).where(inArray(examVersions.examId, createdExamIds));
+            await db.delete(examQuestions).where(inArray(examQuestions.examId, createdExamIds));
+            await db.delete(examBlueprintRows).where(inArray(examBlueprintRows.examId, createdExamIds));
+            await db.delete(exams).where(inArray(exams.id, createdExamIds));
+          }
+        },
+      ],
+      [
+        "delete questions",
+        async () => {
+          if (createdQuestionIds.length > 0) {
+            await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
+          }
+        },
+      ],
+      // Null out the tenant logo FK first — the real-logo setup above makes
+      // `tenants.logo_asset_id` point at an `assets` row, and the sweep below
+      // deletes that same row; without this, the delete violates the FK.
+      [
+        "null out tenant logo FK",
+        () =>
+          db.update(tenants).set({ logoAssetId: null }).where(inArray(tenants.id, [tenantAId, tenantBId])),
+      ],
+      // Also sweep by tenantId: `generateVersions()` creates its own PDF/
+      // answer-key asset rows (repository.createAsset) whose ids aren't
+      // tracked in `createdAssetIds`.
+      [
+        "delete assets",
+        () =>
+          db
+            .delete(assets)
+            .where(
+              or(
+                createdAssetIds.length > 0 ? inArray(assets.id, createdAssetIds) : undefined,
+                inArray(assets.tenantId, [tenantAId, tenantBId]),
+              ),
+            ),
+      ],
+      [
+        "delete users",
+        () => db.delete(users).where(inArray(users.id, [staffUserId, tenantATeacherId, tenantBTeacherId])),
+      ],
+      ["delete tenants", () => db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]))],
+      [
+        "delete topics",
+        async () => {
+          if (createdTopicIds.length > 0) {
+            await db.delete(topics).where(inArray(topics.id, createdTopicIds));
+          }
+        },
+      ],
+      ["delete courses", () => db.delete(courses).where(inArray(courses.id, [courseId]))],
+      ["close app", () => app.close()],
+    ];
+    for (const [label, step] of cleanupSteps) {
+      try {
+        await step();
+      } catch (err) {
+        // eslint-disable-next-line no-console
+        console.error(`[afterAll cleanup] "${label}" failed, continuing with remaining steps:`, err);
+      }
     }
-    if (createdQuestionIds.length > 0) {
-      await db.delete(questions).where(inArray(questions.id, createdQuestionIds));
-    }
-    // Null out the tenant logo FK first — the real-logo setup above makes
-    // `tenants.logo_asset_id` point at an `assets` row, and the sweep below
-    // deletes that same row; without this, the delete violates the FK.
-    await db.update(tenants).set({ logoAssetId: null }).where(inArray(tenants.id, [tenantAId, tenantBId]));
-    // Also sweep by tenantId: `generateVersions()` creates its own PDF/
-    // answer-key asset rows (repository.createAsset) whose ids aren't
-    // tracked in `createdAssetIds`.
-    await db
-      .delete(assets)
-      .where(
-        or(
-          createdAssetIds.length > 0 ? inArray(assets.id, createdAssetIds) : undefined,
-          inArray(assets.tenantId, [tenantAId, tenantBId]),
-        ),
-      );
-    await db.delete(users).where(inArray(users.id, [staffUserId, tenantATeacherId, tenantBTeacherId]));
-    await db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]));
-    if (createdTopicIds.length > 0) {
-      await db.delete(topics).where(inArray(topics.id, createdTopicIds));
-    }
-    await db.delete(courses).where(inArray(courses.id, [courseId]));
-    await app.close();
     await pool.end();
   });
 
