@@ -10,6 +10,8 @@ import {
   DraftQuestion,
   GenerateQuestionsResult,
   GenerateQuestionStreamEvent,
+  GenerationJob,
+  GenerationJobListResult,
 } from './ai.models';
 
 describe('AiService', () => {
@@ -320,6 +322,92 @@ describe('AiService', () => {
       req.flush(extracted);
 
       expect(result).toEqual(extracted);
+    });
+  });
+
+  describe('createGenerationJob', () => {
+    it('POSTs to /ai/questions/jobs and resolves with the created (pending) job', () => {
+      const job: GenerationJob = {
+        id: 'job-1',
+        tenantId: 'tenant-1',
+        courseId: 'course-1',
+        topicId: 'topic-1',
+        difficulty: Difficulty.Easy,
+        gradeLevel: 'primaria_1',
+        count: 5,
+        withFigure: false,
+        status: 'pending',
+        createdCount: 0,
+        failedCount: 0,
+        createdQuestionIds: [],
+        failedItems: [],
+        cancelRequested: false,
+        createdAt: '2026-01-01T00:00:00.000Z',
+        updatedAt: '2026-01-01T00:00:00.000Z',
+        completedAt: null,
+      };
+      let result: GenerationJob | undefined;
+
+      service
+        .createGenerationJob({
+          courseId: 'course-1',
+          topicId: 'topic-1',
+          difficulty: Difficulty.Easy,
+          gradeLevel: 'primaria_1',
+          count: 5,
+          withFigure: false,
+        })
+        .subscribe((response) => (result = response));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/jobs`);
+      expect(req.request.method).toBe('POST');
+      expect(req.request.body).toEqual({
+        courseId: 'course-1',
+        topicId: 'topic-1',
+        difficulty: 'easy',
+        gradeLevel: 'primaria_1',
+        count: 5,
+        withFigure: false,
+      });
+      req.flush(job);
+
+      expect(result).toEqual(job);
+    });
+  });
+
+  describe('listGenerationJobs', () => {
+    it('GETs /ai/questions/jobs with page/pageSize params', () => {
+      const result: GenerationJobListResult = { items: [], total: 0 };
+
+      service.listGenerationJobs(2, 10).subscribe();
+
+      const req = httpMock.expectOne(
+        (request) => request.url === `${environment.apiBaseUrl}/ai/questions/jobs`,
+      );
+      expect(req.request.method).toBe('GET');
+      expect(req.request.params.get('page')).toBe('2');
+      expect(req.request.params.get('pageSize')).toBe('10');
+      req.flush(result);
+    });
+  });
+
+  describe('getGenerationJob', () => {
+    it('GETs /ai/questions/jobs/:id', () => {
+      service.getGenerationJob('job-1').subscribe();
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/jobs/job-1`);
+      expect(req.request.method).toBe('GET');
+      req.flush({});
+    });
+  });
+
+  describe('cancelGenerationJob', () => {
+    it('POSTs to /ai/questions/jobs/:id/cancel', () => {
+      service.cancelGenerationJob('job-1').subscribe();
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/jobs/job-1/cancel`);
+      expect(req.request.method).toBe('POST');
+      req.flush({});
     });
   });
 });

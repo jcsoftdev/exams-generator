@@ -69,6 +69,7 @@ export class ShellComponent {
           icon: 'inbox',
           ...(pendingDrafts !== null ? { badge: pendingDrafts } : {}),
         },
+        { label: 'Historial IA', route: '/app/ai/jobs', icon: 'history' },
       ],
     };
     const groups: NavGroup[] = [PRINCIPAL_GROUP, inteligenciaGroup];

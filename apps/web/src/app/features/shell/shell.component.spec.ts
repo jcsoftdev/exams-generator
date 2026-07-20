@@ -32,6 +32,7 @@ import {
   FileText,
   Inbox,
   Settings,
+  History,
   Sun,
   Moon,
 } from 'lucide-angular';
@@ -81,6 +82,7 @@ function setup(role: Role | null, draftCount: number | null = 7) {
           FileText,
           Inbox,
           Settings,
+          History,
           Sun,
           Moon,
         }),

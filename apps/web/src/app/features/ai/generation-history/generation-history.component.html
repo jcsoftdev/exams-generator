@@ -1,0 +1,36 @@
+<div class="flex flex-col gap-3">
+  <h1 class="text-lg font-extrabold tracking-tight text-primary-900">Historial de generación IA</h1>
+
+  @if (errorMessage()) {
+    <div class="rounded-card border border-hard-text/20 bg-hard-bg px-4 py-3 text-sm text-hard-text">
+      {{ errorMessage() }}
+      <button type="button" class="ml-2 font-bold underline" (click)="retry()">Reintentar</button>
+    </div>
+  }
+
+  @if (!loading() && jobs().length === 0 && !errorMessage()) {
+    <div data-testid="history-empty">
+      <ui-empty-state
+        icon="sparkles"
+        message="Todavía no generaste nada — cuando inicies una generación con IA, aparecerá aquí en vivo mientras corre, y luego como historial."
+      ></ui-empty-state>
+    </div>
+  }
+
+  @for (job of jobs(); track job.id) {
+    <div
+      data-testid="job-row"
+      class="flex cursor-pointer items-center gap-3 rounded-card border border-n200 bg-white p-3 hover:border-primary-300"
+      (click)="open(job)"
+    >
+      <ui-tag [variant]="statusTag(job.status)">{{ statusLabel(job.status) }}</ui-tag>
+      <div class="flex-1 text-sm text-n800">
+        {{ job.createdCount }}/{{ job.count }} preguntas
+        @if (job.failedCount > 0) {
+          <span class="text-n500"> · {{ job.failedCount }} fallidas</span>
+        }
+      </div>
+      <span class="text-xs text-n500">{{ job.createdAt | date: 'short' }}</span>
+    </div>
+  }
+</div>

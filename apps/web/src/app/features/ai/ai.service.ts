@@ -4,11 +4,14 @@ import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import {
   AiRevisedQuestion,
+  CreateGenerationJobPayload,
   DraftQuestion,
   EditDraftPayload,
   GenerateQuestionsPayload,
   GenerateQuestionsResult,
   GenerateQuestionStreamEvent,
+  GenerationJob,
+  GenerationJobListResult,
 } from './ai.models';
 import { parseGenerateStreamFrames } from './parse-generate-stream-frames';
 
@@ -142,5 +145,23 @@ export class AiService {
       `${environment.apiBaseUrl}/ai/questions/extract`,
       formData,
     );
+  }
+
+  /** `POST /ai/questions/jobs` (design doc §4) — creates a durable batch job and returns immediately (202); the caller navigates to the job-detail screen and polls from there instead of waiting on this request. */
+  createGenerationJob(payload: CreateGenerationJobPayload): Observable<GenerationJob> {
+    return this.http.post<GenerationJob>(`${environment.apiBaseUrl}/ai/questions/jobs`, payload);
+  }
+
+  listGenerationJobs(page = 1, pageSize = 20): Observable<GenerationJobListResult> {
+    const params = new HttpParams().set('page', page).set('pageSize', pageSize);
+    return this.http.get<GenerationJobListResult>(`${environment.apiBaseUrl}/ai/questions/jobs`, { params });
+  }
+
+  getGenerationJob(id: string): Observable<GenerationJob> {
+    return this.http.get<GenerationJob>(`${environment.apiBaseUrl}/ai/questions/jobs/${id}`);
+  }
+
+  cancelGenerationJob(id: string): Observable<GenerationJob> {
+    return this.http.post<GenerationJob>(`${environment.apiBaseUrl}/ai/questions/jobs/${id}/cancel`, {});
   }
 }
