@@ -2,23 +2,23 @@
 @import "tailwindcss";
 
 @theme {
-  /* Marca "Pizarra profunda" — primary ramp */
-  --color-primary-900: #072034;
-  --color-primary-800: #1c3141;
-  --color-primary-700: #2f4657;
-  --color-primary-600: #3f596f;
-  --color-primary-500: #516f8a;
-  --color-primary-400: #7392ae;
-  --color-primary-300: #9db4cb;
-  --color-primary-200: #c3d3e2;
-  --color-primary-100: #e2ebf3;
-  --color-primary-50: #f3f6fa;
+  /* Marca — primary ramp (LIGHT mode default: new Figma indigo accent) */
+  --color-primary-900: #272f52;
+  --color-primary-800: #333d6b;
+  --color-primary-700: #3f4d85;
+  --color-primary-600: #4a5aa8;
+  --color-primary-500: #5a6acf;
+  --color-primary-400: #7c89d9;
+  --color-primary-300: #9ea8e3;
+  --color-primary-200: #c1c8ee;
+  --color-primary-100: #dfe3f6;
+  --color-primary-50: #f0f2fb;
 
-  /* Nav activo / chips */
-  --color-tint-activo: #deedfb;
-  --color-tint-texto: #3b5872;
+  /* Nav activo / chips (light) */
+  --color-tint-activo: #dfe3f6;
+  --color-tint-texto: #5a6acf;
 
-  /* Neutrales (n50..n900) */
+  /* Neutrales (n50..n900) — light mode, unchanged from the original ramp */
   --color-n50: #f7f8f9;
   --color-n100: #eceef1;
   --color-n200: #dde0e4;
@@ -30,7 +30,7 @@
   --color-n800: #363b41;
   --color-n900: #20242a;
 
-  /* Semánticos — pares bg/text (tags + estados) */
+  /* Semánticos — pares bg/text (tags + estados), light mode, unchanged */
   --color-easy-bg: #dcfce7;
   --color-easy-text: #166534;
   --color-medium-bg: #fef3c7;
@@ -42,16 +42,143 @@
   --color-warn-bg: #fff8f1;
   --color-warn-text: #9a3412;
 
-  /* "Papel" — vista previa impresa WYSIWYG (Cola de revisión, §4 pantalla 4) */
+  /* "Papel" — vista previa impresa WYSIWYG. Fixed regardless of theme
+     (design doc §3, "Unchanged in both modes") — never repeated below. */
   --color-paper-bg: #fdfdfc;
   --color-paper-border: #e8e5df;
 
-  /* Radii 8–12px (§3.3) */
+  /* Radii 8–12px (§3.3) — not color tokens, never repeated below. */
   --radius-field: 8px;
   --radius-card: 12px;
 
-  /* Tipografía */
+  /* Tipografía — not a color token, never repeated below. */
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* System-preference dark: only when the user has made no explicit choice
+   (no [data-theme] attribute on <html>). Explicit choice always wins —
+   see the :root[data-theme="..."] blocks below. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-primary-900: #072034;
+    --color-primary-800: #1c3141;
+    --color-primary-700: #2f4657;
+    --color-primary-600: #3f596f;
+    --color-primary-500: #516f8a;
+    --color-primary-400: #7392ae;
+    --color-primary-300: #9db4cb;
+    --color-primary-200: #c3d3e2;
+    --color-primary-100: #e2ebf3;
+    --color-primary-50: #f3f6fa;
+
+    --color-tint-activo: #1c3141;
+    --color-tint-texto: #9db4cb;
+
+    --color-n900: #f0f1f3;
+    --color-n800: #c9cdd2;
+    --color-n700: #aab0b7;
+    --color-n600: #8b929a;
+    --color-n500: #6b727b;
+    --color-n400: #4d545d;
+    --color-n300: #3a4048;
+    --color-n200: #2a2f37;
+    --color-n100: #1c2127;
+    --color-n50: #14181d;
+
+    --color-easy-bg: #14532d;
+    --color-easy-text: #86efac;
+    --color-medium-bg: #78350f;
+    --color-medium-text: #fde68a;
+    --color-hard-bg: #7f1d1d;
+    --color-hard-text: #fca5a5;
+    --color-ai-bg: #4c1d95;
+    --color-ai-text: #d8b4fe;
+    --color-warn-bg: #7c2d12;
+    --color-warn-text: #fed7aa;
+  }
+}
+
+/* Explicit user choice: dark. Set by ThemeService (core/theme/theme.service.ts)
+   via document.documentElement.setAttribute('data-theme', 'dark'). Wins over
+   the media query above regardless of OS preference. */
+:root[data-theme="dark"] {
+  --color-primary-900: #072034;
+  --color-primary-800: #1c3141;
+  --color-primary-700: #2f4657;
+  --color-primary-600: #3f596f;
+  --color-primary-500: #516f8a;
+  --color-primary-400: #7392ae;
+  --color-primary-300: #9db4cb;
+  --color-primary-200: #c3d3e2;
+  --color-primary-100: #e2ebf3;
+  --color-primary-50: #f3f6fa;
+
+  --color-tint-activo: #1c3141;
+  --color-tint-texto: #9db4cb;
+
+  --color-n900: #f0f1f3;
+  --color-n800: #c9cdd2;
+  --color-n700: #aab0b7;
+  --color-n600: #8b929a;
+  --color-n500: #6b727b;
+  --color-n400: #4d545d;
+  --color-n300: #3a4048;
+  --color-n200: #2a2f37;
+  --color-n100: #1c2127;
+  --color-n50: #14181d;
+
+  --color-easy-bg: #14532d;
+  --color-easy-text: #86efac;
+  --color-medium-bg: #78350f;
+  --color-medium-text: #fde68a;
+  --color-hard-bg: #7f1d1d;
+  --color-hard-text: #fca5a5;
+  --color-ai-bg: #4c1d95;
+  --color-ai-text: #d8b4fe;
+  --color-warn-bg: #7c2d12;
+  --color-warn-text: #fed7aa;
+}
+
+/* Explicit user choice: light. Restates the @theme defaults so an explicit
+   "light" choice is guaranteed to win even if the OS prefers dark — kept
+   symmetric with the dark block above rather than relying on cascade order
+   against the @theme-emitted declaration. */
+:root[data-theme="light"] {
+  --color-primary-900: #272f52;
+  --color-primary-800: #333d6b;
+  --color-primary-700: #3f4d85;
+  --color-primary-600: #4a5aa8;
+  --color-primary-500: #5a6acf;
+  --color-primary-400: #7c89d9;
+  --color-primary-300: #9ea8e3;
+  --color-primary-200: #c1c8ee;
+  --color-primary-100: #dfe3f6;
+  --color-primary-50: #f0f2fb;
+
+  --color-tint-activo: #dfe3f6;
+  --color-tint-texto: #5a6acf;
+
+  --color-n50: #f7f8f9;
+  --color-n100: #eceef1;
+  --color-n200: #dde0e4;
+  --color-n300: #c3c8ce;
+  --color-n400: #a4abb3;
+  --color-n500: #868d96;
+  --color-n600: #6a717a;
+  --color-n700: #4e545c;
+  --color-n800: #363b41;
+  --color-n900: #20242a;
+
+  --color-easy-bg: #dcfce7;
+  --color-easy-text: #166534;
+  --color-medium-bg: #fef3c7;
+  --color-medium-text: #92620a;
+  --color-hard-bg: #fee2e2;
+  --color-hard-text: #9f1239;
+  --color-ai-bg: #f3e8ff;
+  --color-ai-text: #6b21a8;
+  --color-warn-bg: #fff8f1;
+  --color-warn-text: #9a3412;
 }
 
 body {
