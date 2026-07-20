@@ -14,6 +14,7 @@ import { ExamVersionsPanelComponent } from './features/exam-versions/exam-versio
 import { ExamBuilderComponent } from './features/exams/exam-builder/exam-builder.component';
 import { ExamReviewComponent } from './features/exams/exam-review/exam-review.component';
 import { AiGenerateComponent } from './features/ai/ai-generate/ai-generate.component';
+import { GenerationJobDetailComponent } from './features/ai/generation-job-detail/generation-job-detail.component';
 import { AiReviewQueueComponent } from './features/ai/ai-review-queue/ai-review-queue.component';
 import { TenantSettingsComponent } from './features/tenant-settings/tenant-settings.component';
 
@@ -35,6 +36,7 @@ export const routes: Routes = [
       { path: 'exams/:examId', component: ExamReviewComponent },
       { path: 'exams/:examId/versions', component: ExamVersionsPanelComponent },
       { path: 'ai/generate', component: AiGenerateComponent },
+      { path: 'ai/jobs/:id', component: GenerationJobDetailComponent },
       { path: 'ai/review', component: AiReviewQueueComponent },
       {
         path: 'settings',
