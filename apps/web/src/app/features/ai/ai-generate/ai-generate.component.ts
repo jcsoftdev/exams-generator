@@ -2,24 +2,12 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Difficulty } from '@exams-generator/shared';
-import { LucideAngularModule, Sparkles, TriangleAlert, Plus, Minus, Check, ChevronDown } from 'lucide-angular';
+import { LucideAngularModule, Sparkles, Plus, Minus, Check, ChevronDown } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
-import { ProgressComponent } from '../../../ui/progress/progress.component';
 import { BannerComponent } from '../../../ui/banner/banner.component';
-import { TagComponent } from '../../../ui/tag/tag.component';
 import { AiService } from '../ai.service';
-import { DraftCountService } from '../draft-count.service';
-import {
-  DraftQuestion,
-  GenerateQuestionsCreatedItem,
-  GenerateQuestionsFailedItem,
-  GenerateQuestionsResult,
-  GenerateQuestionStreamEvent,
-  GradeLevel,
-  GRADE_LEVELS,
-  GRADE_LEVEL_LABELS,
-} from '../ai.models';
+import { GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../ai.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 
@@ -29,37 +17,23 @@ const DIFFICULTY_LABELS: Record<Difficulty, string> = {
   [Difficulty.Hard]: 'Difícil',
 };
 
-const ALTERNATIVE_LETTERS = ['a', 'b', 'c', 'd', 'e'];
-
-// Mirrors the backend cap in validate-generate-questions-input.ts (MAX_COUNT).
-// POST /ai/questions/generate rejects count > 10 with a 400.
 const MAX_STEPPER_COUNT = 10;
 
-interface GenerateSnapshot {
-  readonly courseId: string;
-  readonly topicId: string;
-  readonly difficulty: Difficulty;
-  readonly gradeLevel: string;
-  readonly withFigure: boolean;
-  readonly courseName?: string;
-  readonly topicName?: string;
-}
-
 /**
- * Taller layout (Task 9, mockup `ia-generar-v2.html` option A-taller): a
- * persistent form on the left (never resets — you tweak and re-ask without
- * re-filling) and the current batch ("tanda") on the right. The
- * `POST /ai/questions/generate` response only carries created ids (see
- * `ai.models.ts`), so the readable question cards (stem/alternatives/clave)
- * are enriched via `AiService.listDrafts()` after a successful batch.
+ * Form-only generator (design doc:
+ * docs/superpowers/specs/2026-07-19-ai-generation-history-design.md §6).
+ * `generate()` creates ONE durable job server-side and navigates to its
+ * detail screen — the client no longer orchestrates a per-item loop or
+ * tracks batch progress itself; `GenerationJobDetailComponent` does that by
+ * polling.
  */
 @Component({
   selector: 'app-ai-generate',
   standalone: true,
-  imports: [ButtonComponent, SelectComponent, ProgressComponent, BannerComponent, TagComponent, LucideAngularModule],
+  imports: [ButtonComponent, SelectComponent, BannerComponent, LucideAngularModule],
   // `ui-select` (Grado/Curso/Tema) needs Check + ChevronDown — this
   // component-level `.pick()` shadows the root `app.config.ts` registration.
-  providers: [LucideAngularModule.pick({ Sparkles, TriangleAlert, Plus, Minus, Check, ChevronDown }).providers ?? []],
+  providers: [LucideAngularModule.pick({ Sparkles, Plus, Minus, Check, ChevronDown }).providers ?? []],
   templateUrl: './ai-generate.component.html',
 })
 export class AiGenerateComponent {
@@ -67,7 +41,6 @@ export class AiGenerateComponent {
   private readonly taxonomyService = inject(TaxonomyService);
   private readonly router = inject(Router);
   private readonly route = inject(ActivatedRoute);
-  private readonly draftCountService = inject(DraftCountService);
 
   protected readonly maxStepperCount = MAX_STEPPER_COUNT;
 
@@ -89,7 +62,6 @@ export class AiGenerateComponent {
     this.topics().map((t) => ({ value: t.id, label: t.name })),
   );
 
-  // Form — persistent, never reset after a generate/retry cycle.
   protected readonly courseId = signal('');
   protected readonly topicId = signal('');
   protected readonly difficulty = signal<Difficulty | null>(null);
@@ -97,57 +69,9 @@ export class AiGenerateComponent {
   protected readonly count = signal(5);
   protected readonly withFigure = signal(false);
 
-  // Batch state.
-  protected readonly generating = signal(false);
-  protected readonly requested = signal(0);
-  /** How many of `requested` have come back so far — drives the live progress bar. */
-  protected readonly completed = signal(0);
-  /** Characters streamed in for the question CURRENTLY generating — reset on every new item and on every `restart` event. Proof-of-life for the live indicator (design: streaming progress). */
-  protected readonly liveChars = signal(0);
-  protected readonly allCreated = signal<readonly GenerateQuestionsCreatedItem[]>([]);
-  protected readonly failed = signal<readonly GenerateQuestionsFailedItem[]>([]);
-  protected readonly batchQuestions = signal<readonly DraftQuestion[]>([]);
+  protected readonly submitting = signal(false);
   protected readonly errorMessage = signal<string | null>(null);
-  // The last GenerateQuestionsResult ever received (null until the first
-  // successful response). Used as the guard for the status card so a total
-  // failure (thrown error, no response) never renders it — only a fully
-  // reset requested/errorMessage pair should, and requested() alone isn't a
-  // safe guard because it's set *before* the request fires.
-  protected readonly result = signal<GenerateQuestionsResult | null>(null);
-  // Immutable snapshot of the params used for the request that produced the
-  // current batch. Captured once in generate() and reused as-is by
-  // retryFailed() — never re-read from the live form signals — so editing
-  // the form after generating can't leak new params into a "Reintentar".
-  private readonly lastRequest = signal<GenerateSnapshot | null>(null);
 
-  protected readonly hasResult = computed(() => this.result() !== null);
-  protected readonly createdCount = computed(() => this.allCreated().length);
-  protected readonly failedCount = computed(() => this.failed().length);
-  // A response arrived (200) but every question failed validation
-  // (created=[], failed=N). Showing the "0/N preguntas generadas" status
-  // card in that case is confusing — nothing was generated — so this guards
-  // the template into showing only the warning banner + the empty state
-  // instead of the status card. Partial failures (created > 0) are
-  // unaffected and keep showing the status card + banner together.
-  protected readonly totalFailure = computed(() => this.hasResult() && this.createdCount() === 0 && this.failedCount() > 0);
-  protected readonly resultPct = computed(() => {
-    const total = this.requested();
-    return total > 0 ? (this.createdCount() / total) * 100 : 0;
-  });
-  protected readonly batchDescription = computed(() => {
-    const snapshot = this.lastRequest();
-    if (!snapshot) return '';
-    const diff = DIFFICULTY_LABELS[snapshot.difficulty];
-    const grade = GRADE_LEVEL_LABELS[snapshot.gradeLevel as GradeLevel];
-    return [snapshot.courseName, snapshot.topicName, diff, grade].filter((v): v is string => !!v).join(' · ');
-  });
-
-  /**
-   * Prefill from query params when the generator is opened from a context that
-   * already knows what to make (e.g. the exam builder's "Generar N con IA"
-   * bridge on a shortage cell): grade → course → topic → difficulty, in that
-   * order (each step's setter resets the ones below it, so order matters).
-   */
   constructor() {
     const params = this.route.snapshot.queryParamMap;
     const gradeLevel = params.get('gradeLevel');
@@ -169,12 +93,6 @@ export class AiGenerateComponent {
     }
   }
 
-  /**
-   * Courses are loaded per selected grade — the catalog is divided by
-   * educational stage, so loading it up front (no grade) would list every
-   * stage's courses at once and repeat shared names (Matemática, Comunicación…)
-   * once per stage. Picking a grade first scopes the dropdown to one stage.
-   */
   protected onGradeLevelChange(gradeLevel: string | null): void {
     this.gradeLevel.set(gradeLevel);
     this.courseId.set('');
@@ -209,129 +127,33 @@ export class AiGenerateComponent {
     this.count.update((c) => Math.min(MAX_STEPPER_COUNT, c + 1));
   }
 
-  protected letterAt(index: number): string {
-    return ALTERNATIVE_LETTERS[index] ?? String(index);
-  }
-  protected letterFor(question: DraftQuestion): string {
-    return this.letterAt(Number(question.correctAnswer));
-  }
-  protected isCorrect(question: DraftQuestion, alternativeIndex: number): boolean {
-    return Number(question.correctAnswer) === alternativeIndex;
-  }
-
   private valid(): boolean {
     return !!this.courseId() && !!this.topicId() && !!this.difficulty() && !!this.gradeLevel() && this.count() > 0;
   }
 
   protected generate(): void {
-    if (this.generating() || !this.valid()) return;
-    this.allCreated.set([]);
-    this.failed.set([]);
-    this.batchQuestions.set([]);
-    this.result.set(null);
-    this.lastRequest.set(this.captureSnapshot());
-    this.run(this.count());
-  }
-
-  protected retryFailed(): void {
-    const failedCount = this.failedCount();
-    const snapshot = this.lastRequest();
-    if (this.generating() || failedCount === 0 || !snapshot) return;
-    // Re-attempting these — clear so they re-accumulate as they come back.
-    this.failed.set([]);
-    this.run(failedCount);
-  }
-
-  private captureSnapshot(): GenerateSnapshot {
-    return {
-      courseId: this.courseId(),
-      topicId: this.topicId(),
-      difficulty: this.difficulty()!,
-      gradeLevel: this.gradeLevel()!,
-      withFigure: this.withFigure(),
-      courseName: this.courses().find((c) => c.id === this.courseId())?.name,
-      topicName: this.topics().find((t) => t.id === this.topicId())?.name,
-    };
-  }
-
-  // `count` is the only per-call value: the initial request uses the form's
-  // count, a retry uses the number of failed items. Every other param comes
-  // from the immutable `lastRequest` snapshot — never from the live form
-  // signals — so retryFailed() always resends what was actually requested.
-  // Generates ONE question per request (count=1) in sequence, so the UI shows
-  // live progress and each question appears the moment it's ready — instead of
-  // one long opaque wait for the whole batch. `total` is the requested count,
-  // or the number of failed items on a retry.
-  private run(total: number): void {
-    const snapshot = this.lastRequest();
-    if (!snapshot || total <= 0) return;
-    this.generating.set(true);
+    if (this.submitting() || !this.valid()) return;
+    this.submitting.set(true);
     this.errorMessage.set(null);
-    this.requested.set(total);
-    this.completed.set(0);
-    this.generateOne(total);
-  }
-
-  private generateOne(remaining: number): void {
-    const snapshot = this.lastRequest();
-    if (remaining <= 0 || !snapshot) {
-      this.generating.set(false);
-      return;
-    }
-    this.liveChars.set(0);
     this.aiService
-      .generateQuestionStream({
-        courseId: snapshot.courseId,
-        topicId: snapshot.topicId,
-        difficulty: snapshot.difficulty,
-        gradeLevel: snapshot.gradeLevel,
-        withFigure: snapshot.withFigure,
+      .createGenerationJob({
+        courseId: this.courseId(),
+        topicId: this.topicId(),
+        difficulty: this.difficulty()!,
+        gradeLevel: this.gradeLevel()!,
+        count: this.count(),
+        withFigure: this.withFigure(),
       })
       .subscribe({
-        next: (event: GenerateQuestionStreamEvent) => {
-          if (event.type === 'delta') {
-            this.liveChars.update((chars) => chars + event.text.length);
-            return;
-          }
-          if (event.type === 'restart') {
-            this.liveChars.set(0);
-            return;
-          }
-          const res = event.result;
-          this.result.set(res);
-          this.allCreated.update((prev) => [...prev, ...res.created]);
-          if (res.failed.length > 0) {
-            this.failed.update((prev) => [...prev, ...res.failed]);
-          }
-          if (res.created.length > 0) {
-            this.loadBatchQuestions(res.created.map((c) => c.id));
-          }
-          this.completed.update((c) => c + 1);
-          this.generateOne(remaining - 1);
-        },
+        next: (job) => this.router.navigate(['/app/ai/jobs', job.id]),
         error: (_e: HttpErrorResponse) => {
-          this.generating.set(false);
-          this.errorMessage.set('No se pudieron generar las preguntas. Inténtalo de nuevo.');
+          this.submitting.set(false);
+          this.errorMessage.set('No se pudo iniciar la generación. Inténtalo de nuevo.');
         },
       });
   }
 
-  private loadBatchQuestions(newIds: string[]): void {
-    this.aiService.listDrafts().subscribe((drafts) => {
-      // Sync the sidebar "Cola de revisión · N" badge (DraftCountService) —
-      // this response IS the full pending-drafts list, same shape the
-      // review queue uses to keep the badge in sync, so it's a free update
-      // (no extra request). Without this the badge only reflected the
-      // queue's own approve/reject actions and drifted stale right after a
-      // Taller generation added new drafts (F8 fix).
-      this.draftCountService.set(drafts.length);
-      const idSet = new Set(newIds);
-      const newlyLoaded = drafts.filter((d) => idSet.has(d.id));
-      this.batchQuestions.update((prev) => [...prev, ...newlyLoaded]);
-    });
-  }
-
-  protected goToReview(): void {
-    this.router.navigate(['/app/ai/review']);
+  protected goToHistory(): void {
+    this.router.navigate(['/app/ai/jobs']);
   }
 }
