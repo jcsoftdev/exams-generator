@@ -101,15 +101,18 @@ describe("buildOpenRouterRequestBody", () => {
     const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
 
     const promptText = promptTextOf(body);
-    expect(promptText).toContain("aplicación DIRECTA de una única fórmula");
-    expect(promptText).toContain("exige ANÁLISIS");
-    expect(promptText).toContain("análisis más profundo");
+    expect(promptText).toContain("análisis SIMPLE");
+    expect(promptText).toContain("análisis MODERADO");
+    expect(promptText).toContain("análisis PROFUNDO");
   });
 
-  it("frames medium/hard as reasoning demand, not just extra mechanical steps", () => {
+  it("frames the three difficulty levels as a progression of analysis depth, not mechanical-vs-analytical", () => {
     const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
 
     const promptText = promptTextOf(body);
+    expect(promptText).toContain("PROGRESIÓN de análisis");
+    // "easy" must still require reading/interpretation — never framed as pure memorization.
+    expect(promptText).not.toContain("sin analizar nada");
     expect(promptText).toContain("interpretar el enunciado");
     expect(promptText).toContain("evaluar varios casos o condiciones");
   });
@@ -196,7 +199,7 @@ describe("buildOpenRouterReviseRequestBody", () => {
     const body = buildOpenRouterReviseRequestBody("some/free-model:free", REVISE_INPUT);
 
     const promptText = promptTextOf(body);
-    expect(promptText).toContain("aplicación DIRECTA de una única fórmula");
+    expect(promptText).toContain("análisis SIMPLE");
   });
 
   it("pins the CeTZ package version compatible with the deployed typst binary", () => {
