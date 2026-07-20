@@ -40,7 +40,35 @@ describe("validateGeneratedQuestionShape", () => {
     ["correctAnswer outside a-e", { ...VALID, correctAnswer: "f" }],
     ["correctAnswer as a number", { ...VALID, correctAnswer: 1 }],
     ["figureCode as a number", { ...VALID, figureCode: 42 }],
+    ["LaTeX \\frac inside math mode", { ...VALID, bodyTypst: "Halla $\\frac{1}{2}$" }],
+    ["LaTeX \\circ inside math mode", { ...VALID, bodyTypst: 'Si $\\angle "BAD" = 70^{\\circ}$' }],
+    ["LaTeX \\times inside math mode", { ...VALID, bodyTypst: "Calcula $3 \\times 10^8$" }],
   ])("rejects: %s", (_label, payload) => {
     expect(() => validateGeneratedQuestionShape(payload)).toThrow(TypeError);
+  });
+
+  it("rejects with a message naming the offending LaTeX command, for the retry prompt", () => {
+    expect(() =>
+      validateGeneratedQuestionShape({ ...VALID, bodyTypst: "Si $\\circ = 1$" }),
+    ).toThrow(/\\circ/);
+  });
+
+  it("accepts a lone backslash outside math mode (Typst line-break syntax)", () => {
+    const result = validateGeneratedQuestionShape({
+      ...VALID,
+      bodyTypst: "Primera línea \\ Segunda línea, con $1+1$ en medio.",
+    });
+
+    expect(result.bodyTypst).toBe("Primera línea \\ Segunda línea, con $1+1$ en medio.");
+  });
+
+  it("accepts LaTeX wrapped in #mi(), even though it contains backslash commands", () => {
+    const result = validateGeneratedQuestionShape({
+      ...VALID,
+      bodyTypst:
+        'El área es #mi("\\frac{1}{2} \\cdot b \\cdot h") — con $b$ y $h$ en cm.',
+    });
+
+    expect(result.bodyTypst).toContain('#mi("\\frac{1}{2}');
   });
 });
