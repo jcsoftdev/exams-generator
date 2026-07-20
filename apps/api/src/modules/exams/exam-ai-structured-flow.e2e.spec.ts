@@ -14,6 +14,7 @@ import {
   examQuestions,
   exams,
   examVersions,
+  generationJobs,
   questions,
   tenants,
   topics,
@@ -151,6 +152,10 @@ describeIfTypst("AI-generated structured question -> approved -> exam version (e
       // (`ExamsRepository.createAsset`), tenant-scoped but not individually
       // tracked here — sweep by tenantId (mirrors `exams.e2e.spec.ts`).
       ["delete assets", () => db.delete(assets).where(eq(assets.tenantId, tenantId))],
+      // The draft is now created via the real `/ai/questions/jobs` flow, which
+      // persists a `generation_jobs` row FK-referencing `users` (`created_by`)
+      // — clear it before `users`, same fix as `ai-jobs.e2e.spec.ts` (Task 4).
+      ["delete generation jobs", () => db.delete(generationJobs).where(eq(generationJobs.tenantId, tenantId))],
       ["delete users", () => db.delete(users).where(inArray(users.id, [teacherId]))],
       ["delete tenants", () => db.delete(tenants).where(inArray(tenants.id, [tenantId]))],
       ["delete topics", () => db.delete(topics).where(inArray(topics.id, [topicId]))],
@@ -171,15 +176,32 @@ describeIfTypst("AI-generated structured question -> approved -> exam version (e
   it("generate (AI, structured draft) -> approve -> exam blueprint auto-selects it -> confirm -> generate versions renders it as structured, PDF compiles for real, shuffled alternatives keep the correct answer key (closes the B1xD4 gap)", async () => {
     const gradeLevel = "primaria_1";
 
-    // 1. AI generates a structured draft (never published directly, design doc §7).
-    const generateResponse = await request(app.getHttpServer())
-      .post("/ai/questions/generate")
+    // 1. AI generates a structured draft (never published directly, design doc §7)
+    // via the durable job flow — create the job, then poll it to completion.
+    const jobResponse = await request(app.getHttpServer())
+      .post("/ai/questions/jobs")
       .set("Authorization", `Bearer ${teacherToken}`)
       .send({ courseId, topicId, difficulty: Difficulty.Easy, gradeLevel, count: 1 })
-      .expect(201);
+      .expect(202);
 
-    expect(generateResponse.body.created).toHaveLength(1);
-    const questionId = generateResponse.body.created[0].id as string;
+    const deadline = Date.now() + 15000;
+    let questionId: string | undefined;
+    while (Date.now() < deadline) {
+      const res = await request(app.getHttpServer())
+        .get(`/ai/questions/jobs/${jobResponse.body.id}`)
+        .set("Authorization", `Bearer ${teacherToken}`);
+      if (res.body.status === "completed") {
+        questionId = res.body.createdQuestionIds[0];
+        break;
+      }
+      if (res.body.status === "failed") {
+        throw new Error("Generation job failed unexpectedly in test setup");
+      }
+      await new Promise((resolve) => setTimeout(resolve, 200));
+    }
+    if (!questionId) {
+      throw new Error("Generation job did not complete in time");
+    }
     createdQuestionIds.push(questionId);
 
     const draft = await request(app.getHttpServer())

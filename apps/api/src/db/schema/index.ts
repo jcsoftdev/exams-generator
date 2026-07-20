@@ -7,3 +7,4 @@ export * from "./courses.schema";
 export * from "./topics.schema";
 export * from "./questions.schema";
 export * from "./exams.schema";
+export * from "./generation-jobs.schema";

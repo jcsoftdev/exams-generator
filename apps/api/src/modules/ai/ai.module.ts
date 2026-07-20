@@ -1,40 +1,53 @@
 import { Module } from "@nestjs/common";
+import { BullModule } from "@nestjs/bullmq";
 import { BankModule } from "../bank/bank.module";
 import { LazyQuestionGeneratorAdapter } from "./adapters/lazy-question-generator.adapter";
 import { AiController } from "./ai.controller";
+import { AiJobsController } from "./ai-jobs.controller";
 import { QUESTION_GENERATOR_PORT } from "./ai.constants";
 import { resolveQuestionGeneratorAdapter } from "./ai-provider";
+import { resolveRedisConnection } from "./generation-jobs.env";
+import { GenerationJobsProcessor } from "./generation-jobs.processor";
+import { GenerationJobsRepository } from "./generation-jobs.repository";
+import { GenerationJobsService } from "./generation-jobs.service";
 import { ExtractQuestionService } from "./extract-question.service";
 import { GenerateQuestionsService } from "./generate-questions.service";
 import { ReviseQuestionService } from "./revise-question.service";
 
 /**
- * Provides `QuestionGeneratorPort` (bound to `OpenRouterAdapter`, wrapped in
- * `LazyQuestionGeneratorAdapter`) plus the `POST /ai/questions/generate`
- * draft-generation endpoint (design doc §5.2). Imports `BankModule` to
- * reuse its `BankRepository` (persistence) and `PDF_COMPILER_PORT` (Typst
- * preview compile) — the AI generation flow persists into the SAME
- * `questions` table the bank module owns, just always at `status='draft'`.
- *
- * The `QUESTION_GENERATOR_PORT` factory below constructs the lazy wrapper
- * WITHOUT calling `resolveQuestionGeneratorAdapter()` — Nest instantiates
- * every provider eagerly at bootstrap, and that resolver throws when
- * `AI_MODEL`/`OPENROUTER_API_KEY` are unset, which would otherwise crash
- * every app bootstrap (including e2e tests) the moment this module is
- * imported into `AppModule`.
+ * Provides `QuestionGeneratorPort`, the draft-generation/revise/extract
+ * endpoints, and the durable `generation` BullMQ queue (design doc:
+ * docs/superpowers/specs/2026-07-19-ai-generation-history-design.md). See
+ * `ai.module.ts`'s original docstring for why `QUESTION_GENERATOR_PORT` is
+ * built lazily.
  */
 @Module({
-  imports: [BankModule],
-  controllers: [AiController],
+  imports: [
+    BankModule,
+    BullModule.forRoot({
+      connection: resolveRedisConnection(),
+      defaultJobOptions: {
+        attempts: 3,
+        backoff: { type: "exponential", delay: 5000 },
+        removeOnComplete: { age: 60 * 60 * 24 * 7 },
+        removeOnFail: { age: 60 * 60 * 24 * 7 },
+      },
+    }),
+    BullModule.registerQueue({ name: "generation" }),
+  ],
+  controllers: [AiController, AiJobsController],
   providers: [
     GenerateQuestionsService,
     ReviseQuestionService,
     ExtractQuestionService,
+    GenerationJobsRepository,
+    GenerationJobsService,
+    GenerationJobsProcessor,
     {
       provide: QUESTION_GENERATOR_PORT,
       useFactory: () => new LazyQuestionGeneratorAdapter(resolveQuestionGeneratorAdapter),
     },
   ],
-  exports: [QUESTION_GENERATOR_PORT],
+  exports: [QUESTION_GENERATOR_PORT, GenerationJobsRepository, GenerationJobsService],
 })
 export class AiModule {}

@@ -34,6 +34,20 @@ services:
       timeout: 5s
       retries: 10
 
+  redis:
+    image: redis:7.4-bookworm
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    ports:
+      - "${REDIS_HOST_PORT:-6390}:6379"
+
   api:
     build:
       context: ..
@@ -44,12 +58,16 @@ services:
         condition: service_healthy
       minio:
         condition: service_healthy
+      redis:
+        condition: service_healthy
     environment:
       DATABASE_URL: postgres://${DB_USER:-exams}:${DB_PASSWORD:-exams}@postgres:5432/${DB_NAME:-exams_generator}
       MINIO_ENDPOINT: minio
       MINIO_PORT: 9000
       MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
       JWT_SECRET: ${JWT_SECRET:?JWT_SECRET must be set}
       AI_MODEL: ${AI_MODEL}
       PORT: 3000
@@ -82,3 +100,4 @@ services:
 volumes:
   postgres_data:
   minio_data:
+  redis_data:
