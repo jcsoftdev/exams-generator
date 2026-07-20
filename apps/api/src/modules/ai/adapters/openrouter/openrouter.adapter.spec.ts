@@ -1,12 +1,14 @@
 import { Difficulty } from "@exams-generator/shared";
 import {
+  AiGenerationError,
   AiInvalidResponseError,
   AiRateLimitError,
   ExtractQuestionInput,
+  GenerateProgressEvent,
   GenerateQuestionInput,
   ReviseQuestionInput,
 } from "../../domain/ports/question-generator.port";
-import { HttpClient, OpenRouterAdapter } from "./openrouter.adapter";
+import { HttpClient, HttpSseResponse, OpenRouterAdapter, SseHttpClient } from "./openrouter.adapter";
 
 const INPUT: GenerateQuestionInput = {
   course: "Aritmética",
@@ -44,6 +46,25 @@ function jsonResponse(status: number, body: unknown): ReturnType<HttpClient> {
 
 function chatCompletion(message: Record<string, unknown>) {
   return { choices: [{ message }] };
+}
+
+function sseChunk(content: string): string {
+  return `data: ${JSON.stringify({ choices: [{ delta: { content } }] })}\n\n`;
+}
+
+/** Builds a fake streaming response whose `body` yields the given raw SSE text in one or more pre-split pieces (simulating separate network reads). */
+function sseResponse(status: number, pieces: readonly string[]): ReturnType<SseHttpClient> {
+  const encoder = new TextEncoder();
+  return Promise.resolve({
+    status,
+    body: {
+      async *[Symbol.asyncIterator]() {
+        for (const piece of pieces) {
+          yield encoder.encode(piece);
+        }
+      },
+    },
+  } satisfies HttpSseResponse);
 }
 
 describe("OpenRouterAdapter", () => {
@@ -342,6 +363,110 @@ describe("OpenRouterAdapter", () => {
 
       await expect(adapter.extractFromImage(EXTRACT_INPUT)).rejects.toBeInstanceOf(AiRateLimitError);
       expect(httpClient).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe("streaming (onProgress provided)", () => {
+    it("sends stream: true and forwards each delta through onProgress", async () => {
+      const sseHttpClient = jest
+        .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
+        .mockReturnValueOnce(
+          sseResponse(200, [
+            sseChunk('{"bodyTypst":"¿Cuánto'),
+            sseChunk(' es $1/2 + 1/4$?","alternatives":["1/4","3/4","1/2","1","2"],"correctAnswer":"b","figureCode":null}'),
+            "data: [DONE]\n\n",
+          ]),
+        );
+      const adapter = new OpenRouterAdapter({
+        apiKey: "sk-test-key",
+        model: "deepseek/deepseek-r1:free",
+        sseHttpClient,
+      });
+      const events: GenerateProgressEvent[] = [];
+
+      const result = await adapter.generate(INPUT, (event) => events.push(event));
+
+      expect(JSON.parse(sseHttpClient.mock.calls[0][1].body).stream).toBe(true);
+      expect(events.filter((e) => e.type === "delta")).toHaveLength(2);
+      expect(result.bodyTypst).toBe(VALID_QUESTION_JSON.bodyTypst);
+      expect(result.correctAnswer).toBe("b");
+    });
+
+    it("emits a restart event before the internal retry when the first stream fails validation", async () => {
+      const sseHttpClient = jest
+        .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
+        .mockReturnValueOnce(sseResponse(200, [sseChunk(JSON.stringify({ ...VALID_QUESTION_JSON, alternatives: ["only-one"] })), "data: [DONE]\n\n"]))
+        .mockReturnValueOnce(sseResponse(200, [sseChunk(JSON.stringify(VALID_QUESTION_JSON)), "data: [DONE]\n\n"]));
+      const adapter = new OpenRouterAdapter({
+        apiKey: "sk-test-key",
+        model: "deepseek/deepseek-r1:free",
+        sseHttpClient,
+      });
+      const events: GenerateProgressEvent[] = [];
+
+      const result = await adapter.generate(INPUT, (event) => events.push(event));
+
+      expect(sseHttpClient).toHaveBeenCalledTimes(2);
+      expect(events.map((e) => e.type)).toEqual(["delta", "restart", "delta"]);
+      expect(result.bodyTypst).toBe(VALID_QUESTION_JSON.bodyTypst);
+    });
+
+    it("throws AiInvalidResponseError when both streamed attempts fail validation", async () => {
+      const sseHttpClient = jest
+        .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
+        .mockReturnValue(sseResponse(200, [sseChunk("not json at all"), "data: [DONE]\n\n"]));
+      const adapter = new OpenRouterAdapter({
+        apiKey: "sk-test-key",
+        model: "deepseek/deepseek-r1:free",
+        sseHttpClient,
+      });
+
+      await expect(adapter.generate(INPUT, () => {})).rejects.toBeInstanceOf(AiInvalidResponseError);
+    });
+
+    it("throws AiRateLimitError immediately on a 429 streaming response, without retrying", async () => {
+      const sseHttpClient = jest
+        .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
+        .mockReturnValueOnce(sseResponse(429, []));
+      const adapter = new OpenRouterAdapter({
+        apiKey: "sk-test-key",
+        model: "deepseek/deepseek-r1:free",
+        sseHttpClient,
+      });
+
+      await expect(adapter.generate(INPUT, () => {})).rejects.toBeInstanceOf(AiRateLimitError);
+      expect(sseHttpClient).toHaveBeenCalledTimes(1);
+    });
+
+    it("throws AiGenerationError immediately when the streaming response has no body, without retrying", async () => {
+      const sseHttpClient = jest
+        .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
+        .mockReturnValueOnce(Promise.resolve({ status: 200, body: null } satisfies HttpSseResponse));
+      const adapter = new OpenRouterAdapter({
+        apiKey: "sk-test-key",
+        model: "deepseek/deepseek-r1:free",
+        sseHttpClient,
+      });
+
+      await expect(adapter.generate(INPUT, () => {})).rejects.toBeInstanceOf(AiGenerationError);
+      expect(sseHttpClient).toHaveBeenCalledTimes(1);
+    });
+
+    it("does not touch the buffered httpClient at all when streaming", async () => {
+      const httpClient = jest.fn<ReturnType<HttpClient>, Parameters<HttpClient>>();
+      const sseHttpClient = jest
+        .fn<ReturnType<SseHttpClient>, Parameters<SseHttpClient>>()
+        .mockReturnValueOnce(sseResponse(200, [sseChunk(JSON.stringify(VALID_QUESTION_JSON)), "data: [DONE]\n\n"]));
+      const adapter = new OpenRouterAdapter({
+        apiKey: "sk-test-key",
+        model: "deepseek/deepseek-r1:free",
+        httpClient,
+        sseHttpClient,
+      });
+
+      await adapter.generate(INPUT, () => {});
+
+      expect(httpClient).not.toHaveBeenCalled();
     });
   });
 });

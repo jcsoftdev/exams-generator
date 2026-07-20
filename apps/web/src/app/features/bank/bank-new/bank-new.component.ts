@@ -2,7 +2,7 @@ import { Component, computed, effect, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Difficulty } from '@exams-generator/shared';
-import { LucideAngularModule, Upload, Image as ImageIcon } from 'lucide-angular';
+import { LucideAngularModule, Upload, Image as ImageIcon, Check, ChevronDown } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
@@ -39,7 +39,10 @@ function toOptions(items: readonly { id: string; name: string }[]): SelectOption
   selector: 'app-bank-new',
   standalone: true,
   imports: [ButtonComponent, InputComponent, SelectComponent, LucideAngularModule],
-  providers: [LucideAngularModule.pick({ Upload, Image: ImageIcon }).providers ?? []],
+  // `ui-select` (Grado/Curso/Tema/Nivel, both tabs) needs Check + ChevronDown —
+  // this component-level `.pick()` shadows the root `app.config.ts` registration
+  // for its own subtree, so the nested `ui-select` instances can't fall back to it.
+  providers: [LucideAngularModule.pick({ Upload, Image: ImageIcon, Check, ChevronDown }).providers ?? []],
   templateUrl: './bank-new.component.html',
 })
 export class BankNewComponent {

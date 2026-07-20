@@ -4,10 +4,10 @@ import { of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { Router } from '@angular/router';
-import { LucideAngularModule, Ellipsis, Plus } from 'lucide-angular';
+import { LucideAngularModule, Ellipsis, Plus, Check, ChevronDown } from 'lucide-angular';
 import { ExamListComponent } from './exam-list.component';
 import { ExamsService } from '../exams.service';
-import { ExamListItem, ExamListResult } from '../exams.models';
+import { ExamListItem, ExamListResult, GRADE_LEVEL_LABELS } from '../exams.models';
 
 function item(o: Partial<ExamListItem> & { id: string }): ExamListItem {
   return {
@@ -18,6 +18,19 @@ function item(o: Partial<ExamListItem> & { id: string }): ExamListItem {
 }
 const RESULT: ExamListResult = { items: [item({ id: 'e1', status: 'ready' }), item({ id: 'e2', status: 'draft', title: 'Borrador Y' })], total: 2 };
 
+function selectOption(container: HTMLElement, fixture: { detectChanges(): void }, label: string): void {
+  (container.querySelector('button[role="combobox"]') as HTMLButtonElement).click();
+  fixture.detectChanges();
+  const option = Array.from(container.querySelectorAll('[data-testid="select-option"]')).find(
+    (li) => li.textContent?.trim() === label,
+  ) as HTMLElement | undefined;
+  if (!option) {
+    throw new Error(`option "${label}" not found`);
+  }
+  option.click();
+  fixture.detectChanges();
+}
+
 function setup(over: { listImpl?: () => unknown; dupImpl?: () => unknown; delImpl?: () => unknown } = {}) {
   const listExams = vi.fn(over.listImpl ?? (() => of(RESULT)));
   const duplicateExam = vi.fn(over.dupImpl ?? (() => of({ id: 'e3', title: 'Copia de Examen X', status: 'draft' })));
@@ -26,7 +39,7 @@ function setup(over: { listImpl?: () => unknown; dupImpl?: () => unknown; delImp
   TestBed.configureTestingModule({
     imports: [ExamListComponent],
     providers: [
-      importProvidersFrom(LucideAngularModule.pick({ Ellipsis, Plus })),
+      importProvidersFrom(LucideAngularModule.pick({ Ellipsis, Plus, Check, ChevronDown })),
       { provide: ExamsService, useValue: { listExams, duplicateExam, deleteExam } },
       { provide: Router, useValue: { navigate } },
     ],
@@ -107,10 +120,8 @@ describe('ExamListComponent', () => {
   it('reloads exams with the selected estado when the filter changes', () => {
     const { compiled, fixture, listExams } = setup();
     listExams.mockClear();
-    const select = compiled.querySelector<HTMLSelectElement>('[data-testid="status-filter"] select')!;
-    select.value = 'ready';
-    select.dispatchEvent(new Event('change'));
-    fixture.detectChanges();
+    const container = compiled.querySelector('[data-testid="status-filter"]') as HTMLElement;
+    selectOption(container, fixture, 'Generado');
     expect(listExams).toHaveBeenCalledWith(
       expect.objectContaining({ status: 'ready', page: 1, pageSize: 50 }),
     );
@@ -119,10 +130,8 @@ describe('ExamListComponent', () => {
   it('reloads exams with the selected grado when the filter changes', () => {
     const { compiled, fixture, listExams } = setup();
     listExams.mockClear();
-    const select = compiled.querySelector<HTMLSelectElement>('[data-testid="gradeLevel-filter"] select')!;
-    select.value = 'secundaria_3';
-    select.dispatchEvent(new Event('change'));
-    fixture.detectChanges();
+    const container = compiled.querySelector('[data-testid="gradeLevel-filter"]') as HTMLElement;
+    selectOption(container, fixture, GRADE_LEVEL_LABELS['secundaria_3']);
     expect(listExams).toHaveBeenCalledWith(
       expect.objectContaining({ gradeLevel: 'secundaria_3', page: 1, pageSize: 50 }),
     );

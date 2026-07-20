@@ -1,5 +1,6 @@
 import {
   ExtractQuestionInput,
+  GenerateProgressEvent,
   GenerateQuestionInput,
   GeneratedAlternatives,
   GeneratedQuestion,
@@ -17,8 +18,11 @@ const PADDING_ALTERNATIVES = ["1", "2", "3", "4", "5"];
  * touching the network (mirrors `InMemoryStorageAdapter`).
  */
 export class InMemoryQuestionGeneratorAdapter implements QuestionGeneratorPort {
-  async generate(input: GenerateQuestionInput): Promise<GeneratedQuestion> {
-    return {
+  async generate(
+    input: GenerateQuestionInput,
+    onProgress?: (event: GenerateProgressEvent) => void,
+  ): Promise<GeneratedQuestion> {
+    const question: GeneratedQuestion = {
       bodyTypst: `¿Cuál es el resultado de la operación sobre ${input.topic}? $ 1/2 + 1/4 $`,
       alternatives: ["1/4", "3/4", "1/2", "1", "2"],
       correctAnswer: "b",
@@ -26,6 +30,8 @@ export class InMemoryQuestionGeneratorAdapter implements QuestionGeneratorPort {
         ? `#cetz.canvas({ import cetz.draw: *; circle((0,0), radius: 1) })`
         : undefined,
     };
+    onProgress?.({ type: "delta", text: question.bodyTypst });
+    return question;
   }
 
   async reviseQuestion(input: ReviseQuestionInput): Promise<GeneratedQuestion> {

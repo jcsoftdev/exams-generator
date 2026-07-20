@@ -2,7 +2,16 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { forkJoin, map, switchMap } from 'rxjs';
 import { Difficulty } from '@exams-generator/shared';
-import { LucideAngularModule, Sparkles, TriangleAlert, Lock, Inbox, ChevronDown, ChevronRight } from 'lucide-angular';
+import {
+  LucideAngularModule,
+  Sparkles,
+  TriangleAlert,
+  Lock,
+  Inbox,
+  ChevronDown,
+  ChevronRight,
+  Check,
+} from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { CardComponent } from '../../../ui/card/card.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
@@ -101,7 +110,10 @@ function groupRowsByCourse(rows: readonly ContentRow[]): readonly RowGroup[] {
   ],
   providers: [
     ExamBuilderStore,
-    LucideAngularModule.pick({ Sparkles, TriangleAlert, Lock, Inbox, ChevronDown, ChevronRight }).providers ?? [],
+    // `ui-select` (Grado) needs Check too — this component-level `.pick()`
+    // shadows the root `app.config.ts` registration for its own subtree.
+    LucideAngularModule.pick({ Sparkles, TriangleAlert, Lock, Inbox, ChevronDown, ChevronRight, Check })
+      .providers ?? [],
   ],
   templateUrl: './exam-builder.component.html',
 })

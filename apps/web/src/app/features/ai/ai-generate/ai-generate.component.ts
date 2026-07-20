@@ -2,7 +2,7 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Difficulty } from '@exams-generator/shared';
-import { LucideAngularModule, Sparkles, TriangleAlert, Plus, Minus } from 'lucide-angular';
+import { LucideAngularModule, Sparkles, TriangleAlert, Plus, Minus, Check, ChevronDown } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { ProgressComponent } from '../../../ui/progress/progress.component';
@@ -15,6 +15,7 @@ import {
   GenerateQuestionsCreatedItem,
   GenerateQuestionsFailedItem,
   GenerateQuestionsResult,
+  GenerateQuestionStreamEvent,
   GradeLevel,
   GRADE_LEVELS,
   GRADE_LEVEL_LABELS,
@@ -56,7 +57,9 @@ interface GenerateSnapshot {
   selector: 'app-ai-generate',
   standalone: true,
   imports: [ButtonComponent, SelectComponent, ProgressComponent, BannerComponent, TagComponent, LucideAngularModule],
-  providers: [LucideAngularModule.pick({ Sparkles, TriangleAlert, Plus, Minus }).providers ?? []],
+  // `ui-select` (Grado/Curso/Tema) needs Check + ChevronDown — this
+  // component-level `.pick()` shadows the root `app.config.ts` registration.
+  providers: [LucideAngularModule.pick({ Sparkles, TriangleAlert, Plus, Minus, Check, ChevronDown }).providers ?? []],
   templateUrl: './ai-generate.component.html',
 })
 export class AiGenerateComponent {
@@ -99,6 +102,8 @@ export class AiGenerateComponent {
   protected readonly requested = signal(0);
   /** How many of `requested` have come back so far — drives the live progress bar. */
   protected readonly completed = signal(0);
+  /** Characters streamed in for the question CURRENTLY generating — reset on every new item and on every `restart` event. Proof-of-life for the live indicator (design: streaming progress). */
+  protected readonly liveChars = signal(0);
   protected readonly allCreated = signal<readonly GenerateQuestionsCreatedItem[]>([]);
   protected readonly failed = signal<readonly GenerateQuestionsFailedItem[]>([]);
   protected readonly batchQuestions = signal<readonly DraftQuestion[]>([]);
@@ -273,17 +278,26 @@ export class AiGenerateComponent {
       this.generating.set(false);
       return;
     }
+    this.liveChars.set(0);
     this.aiService
-      .generateQuestions({
+      .generateQuestionStream({
         courseId: snapshot.courseId,
         topicId: snapshot.topicId,
         difficulty: snapshot.difficulty,
         gradeLevel: snapshot.gradeLevel,
-        count: 1,
         withFigure: snapshot.withFigure,
       })
       .subscribe({
-        next: (res: GenerateQuestionsResult) => {
+        next: (event: GenerateQuestionStreamEvent) => {
+          if (event.type === 'delta') {
+            this.liveChars.update((chars) => chars + event.text.length);
+            return;
+          }
+          if (event.type === 'restart') {
+            this.liveChars.set(0);
+            return;
+          }
+          const res = event.result;
           this.result.set(res);
           this.allCreated.update((prev) => [...prev, ...res.created]);
           if (res.failed.length > 0) {

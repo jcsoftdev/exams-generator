@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { describe, it, expect, vi } from 'vitest';
 import { Subject, of, throwError } from 'rxjs';
 import { Difficulty } from '@exams-generator/shared';
+import { GRADE_LEVEL_LABELS, GradeLevel } from '../exams.models';
 import { ExamBuilderComponent } from './exam-builder.component';
 import { ExamsService } from '../exams.service';
 import { ExamVersionsService } from '../../exam-versions/exam-versions.service';
@@ -101,13 +102,21 @@ function setup(overrides: {
   };
 }
 
-function selectGradeLevel(compiled: HTMLElement, fixture: { detectChanges: () => void }, value: string): void {
-  const select = compiled.querySelector<HTMLSelectElement>('select');
-  if (!select) {
+function selectGradeLevel(compiled: HTMLElement, fixture: { detectChanges: () => void }, value: GradeLevel): void {
+  const container = compiled.querySelector('ui-select') as HTMLElement;
+  if (!container) {
     throw new Error('grade level select not found');
   }
-  select.value = value;
-  select.dispatchEvent(new Event('change'));
+  (container.querySelector('button[role="combobox"]') as HTMLButtonElement).click();
+  fixture.detectChanges();
+  const label = GRADE_LEVEL_LABELS[value];
+  const option = Array.from(container.querySelectorAll('[data-testid="select-option"]')).find(
+    (li) => li.textContent?.trim() === label,
+  ) as HTMLElement | undefined;
+  if (!option) {
+    throw new Error(`grade level option "${label}" not found`);
+  }
+  option.click();
   fixture.detectChanges();
 }
 

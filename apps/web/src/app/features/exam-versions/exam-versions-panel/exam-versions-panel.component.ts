@@ -1,7 +1,7 @@
 import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
-import { LucideAngularModule, Folder, CopyPlus, ChevronDown, Plus } from 'lucide-angular';
+import { LucideAngularModule, Folder, CopyPlus, ChevronDown, Plus, Check } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
@@ -40,7 +40,9 @@ const DEFAULT_VERSION_COUNT = 2;
   // and inside the nested `ui-empty-state` primitive, so the module itself
   // goes in `imports` this time (not just `.pick()`'s providers).
   imports: [ButtonComponent, EmptyStateComponent, TagComponent, SelectComponent, LucideAngularModule],
-  providers: [LucideAngularModule.pick({ Folder, CopyPlus, ChevronDown, Plus }).providers ?? []],
+  // `ui-select` ("¿Cuántas formas?") needs Check too — this component-level
+  // `.pick()` shadows the root `app.config.ts` registration for its subtree.
+  providers: [LucideAngularModule.pick({ Folder, CopyPlus, ChevronDown, Plus, Check }).providers ?? []],
   templateUrl: './exam-versions-panel.component.html',
 })
 export class ExamVersionsPanelComponent {

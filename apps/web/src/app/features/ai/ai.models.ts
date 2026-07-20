@@ -79,6 +79,19 @@ export interface GenerateQuestionsResult {
 }
 
 /**
+ * Mirrors `GenerateProgressEvent`/`GenerateQuestionStreamEvent` (apps/api
+ * ai module). `restart` fires whenever the backend discards a partial
+ * generation and starts a fresh one (an internal AI-response retry, or a
+ * Typst-compile retry) — consumers MUST clear any UI state built from
+ * `delta` events when they see it, or two unrelated generations will look
+ * like one continuous stream.
+ */
+export type GenerateQuestionStreamEvent =
+  | { readonly type: 'delta'; readonly text: string }
+  | { readonly type: 'restart' }
+  | { readonly type: 'done'; readonly result: GenerateQuestionsResult };
+
+/**
  * A `status='draft'` structured question awaiting human review (design doc
  * §5.2, §7 — the AI never publishes directly to the bank). Mirrors the
  * relevant fields of `QuestionListItem` (apps/api bank module) narrowed to

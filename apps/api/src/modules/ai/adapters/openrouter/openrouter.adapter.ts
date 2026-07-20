@@ -3,6 +3,7 @@ import {
   AiInvalidResponseError,
   AiRateLimitError,
   ExtractQuestionInput,
+  GenerateProgressEvent,
   GenerateQuestionInput,
   GeneratedQuestion,
   QuestionGeneratorPort,
@@ -16,6 +17,7 @@ import {
 } from "./openrouter-request-builder";
 import { parseGeneratedQuestionContent } from "./openrouter-response-parser";
 import { validateGeneratedQuestionShape } from "./openrouter-response-validator";
+import { parseOpenRouterSseBuffer } from "./openrouter-sse-parser";
 
 const OPENROUTER_CHAT_COMPLETIONS_URL = "https://openrouter.ai/api/v1/chat/completions";
 const MAX_ATTEMPTS = 2;
@@ -40,6 +42,21 @@ export type HttpClient = (
 export const fetchHttpClient: HttpClient = (url, init) =>
   fetch(url, init) as unknown as Promise<HttpJsonResponse>;
 
+export interface HttpSseResponse {
+  readonly status: number;
+  /** `fetch`'s `Response.body` is async-iterable in Node (undici) — the DOM lib types don't declare it, hence the cast in `fetchSseHttpClient`. */
+  readonly body: AsyncIterable<Uint8Array> | null;
+}
+
+/** Same shape as `HttpClient` but for the streaming call — kept as a SEPARATE injectable so `reviseQuestion`/`extractFromImage` (never streamed) are untouched by this change. */
+export type SseHttpClient = (
+  url: string,
+  init: { method: string; headers: Record<string, string>; body: string },
+) => Promise<HttpSseResponse>;
+
+export const fetchSseHttpClient: SseHttpClient = (url, init) =>
+  fetch(url, init) as unknown as Promise<HttpSseResponse>;
+
 export interface OpenRouterAdapterConfig {
   readonly apiKey: string;
   /**
@@ -56,6 +73,7 @@ export interface OpenRouterAdapterConfig {
    */
   readonly visionModel?: string;
   readonly httpClient?: HttpClient;
+  readonly sseHttpClient?: SseHttpClient;
   readonly baseUrl?: string;
 }
 
@@ -83,19 +101,25 @@ interface AttemptOutcome {
  */
 export class OpenRouterAdapter implements QuestionGeneratorPort {
   private readonly httpClient: HttpClient;
+  private readonly sseHttpClient: SseHttpClient;
   private readonly baseUrl: string;
   /** Model used by `extractFromImage` — the vision model, or `model` when none is configured. */
   private readonly visionModel: string;
 
   constructor(private readonly config: OpenRouterAdapterConfig) {
     this.httpClient = config.httpClient ?? fetchHttpClient;
+    this.sseHttpClient = config.sseHttpClient ?? fetchSseHttpClient;
     this.baseUrl = config.baseUrl ?? OPENROUTER_CHAT_COMPLETIONS_URL;
     this.visionModel = config.visionModel ?? config.model;
   }
 
-  async generate(input: GenerateQuestionInput): Promise<GeneratedQuestion> {
-    return this.runWithRetries((previousError) =>
-      buildOpenRouterRequestBody(this.config.model, input, { previousError }),
+  async generate(
+    input: GenerateQuestionInput,
+    onProgress?: (event: GenerateProgressEvent) => void,
+  ): Promise<GeneratedQuestion> {
+    return this.runWithRetries(
+      (previousError) => buildOpenRouterRequestBody(this.config.model, input, { previousError }),
+      onProgress,
     );
   }
 
@@ -133,11 +157,17 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
    */
   private async runWithRetries(
     buildRequestBody: (previousError: string | undefined) => OpenRouterRequestBody,
+    onProgress?: (event: GenerateProgressEvent) => void,
   ): Promise<GeneratedQuestion> {
     let lastOutcome: AttemptOutcome | undefined;
 
     for (let attemptNumber = 1; attemptNumber <= MAX_ATTEMPTS; attemptNumber++) {
-      const outcome = await this.attempt(buildRequestBody(lastOutcome?.error));
+      if (attemptNumber > 1) {
+        onProgress?.({ type: "restart" });
+      }
+      const outcome = onProgress
+        ? await this.attemptStreaming(buildRequestBody(lastOutcome?.error), onProgress)
+        : await this.attempt(buildRequestBody(lastOutcome?.error));
       if (outcome.ok && outcome.question) {
         return outcome.question;
       }
@@ -172,6 +202,57 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
 
     try {
       rawContent = extractMessageContent(json);
+      const parsed = parseGeneratedQuestionContent(rawContent);
+      const question = validateGeneratedQuestionShape(parsed);
+      return { ok: true, question };
+    } catch (err) {
+      return { ok: false, error: (err as Error).message, rawContent };
+    }
+  }
+
+  private async attemptStreaming(
+    requestBody: OpenRouterRequestBody,
+    onProgress: (event: GenerateProgressEvent) => void,
+  ): Promise<AttemptOutcome> {
+    const response = await this.sseHttpClient(this.baseUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${this.config.apiKey}`,
+      },
+      body: JSON.stringify({ ...requestBody, stream: true }),
+    });
+
+    if (response.status === 429) {
+      throw new AiRateLimitError();
+    }
+    if (response.status >= 400) {
+      throw new AiGenerationError(`OpenRouter request failed with status ${response.status}`);
+    }
+    if (!response.body) {
+      throw new AiGenerationError("OpenRouter streaming response has no body");
+    }
+
+    const decoder = new TextDecoder();
+    let buffer = "";
+    let rawContent = "";
+
+    for await (const chunk of response.body) {
+      buffer += decoder.decode(chunk, { stream: true });
+      const { events, remainder } = parseOpenRouterSseBuffer(buffer);
+      buffer = remainder;
+
+      for (const event of events) {
+        if (event.type === "delta") {
+          rawContent += event.text;
+          onProgress({ type: "delta", text: event.text });
+        } else if (event.type === "error") {
+          throw new AiGenerationError(event.message);
+        }
+      }
+    }
+
+    try {
       const parsed = parseGeneratedQuestionContent(rawContent);
       const question = validateGeneratedQuestionShape(parsed);
       return { ok: true, question };
