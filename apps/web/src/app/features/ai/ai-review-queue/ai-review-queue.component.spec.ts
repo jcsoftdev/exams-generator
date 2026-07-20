@@ -307,7 +307,7 @@ describe('AiReviewQueueComponent', () => {
       correctAnswer: '0',
       bodyTypst: 'Enunciado corregido',
       alternatives: ['4', '3'],
-      figureCode: undefined,
+      figureCode: '',
     });
     expect(compiled.querySelector('[data-testid="panel-edit-form"]')).toBeFalsy();
   });
@@ -325,6 +325,29 @@ describe('AiReviewQueueComponent', () => {
       'd1',
       expect.objectContaining({ figureCode: '#circle((0,0))' }),
     );
+  });
+
+  it('sends an empty figureCode ("" = explicit clear, per the PATCH contract) when the teacher blanks a previously-set figure', () => {
+    const { compiled, fixture, updateQuestion } = setup({
+      listImpl: () => of([draft({ id: 'd1', figureCode: '#circle((0,0))' })]),
+    });
+    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    const figureCode = compiled.querySelector('[data-testid="edit-figure-code"]') as HTMLTextAreaElement;
+    expect(figureCode.value).toBe('#circle((0,0))');
+    figureCode.value = '';
+    figureCode.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+
+    (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    // "" (empty string), NOT undefined — sending undefined would tell the
+    // backend "leave the current figureCode unchanged" (see
+    // validate-update-structured-question.ts's doc comment), silently
+    // keeping the bad figure the teacher just tried to remove.
+    expect(updateQuestion).toHaveBeenCalledWith('d1', expect.objectContaining({ figureCode: '' }));
   });
 
   it('shows an error and stays in edit mode when saving fails', () => {
@@ -354,6 +377,22 @@ describe('AiReviewQueueComponent', () => {
     expect(listDrafts).toHaveBeenCalledTimes(1);
     expect(previewDraft).toHaveBeenCalledWith('d1');
     expect(previewDraft).toHaveBeenCalledTimes(1);
+  });
+
+  it('clears a stale approve/reject error banner after a successful save (reloadAfterSave bypasses select(), which used to clear it incidentally)', () => {
+    const { compiled, fixture } = setup({
+      approveImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+    });
+    (compiled.querySelector('[data-testid="approve"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    expect(compiled.textContent).toContain('No se pudo aprobar');
+
+    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(compiled.textContent).not.toContain('No se pudo aprobar');
   });
 
   it('keeps the edited draft selected after saving, even when it is not the first item in the queue', () => {

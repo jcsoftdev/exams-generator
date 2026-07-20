@@ -279,7 +279,12 @@ export class AiReviewQueueComponent {
       correctAnswer: this.editCorrectAnswer(),
       bodyTypst: this.editBody(),
       alternatives: this.editAlternativesList(),
-      figureCode: this.editFigureCode() || undefined,
+      // Always the raw string, never `|| undefined`: the backend's PATCH
+      // contract treats `undefined` as "leave unchanged" and `""` as
+      // "explicitly clear the figure" (validate-update-structured-question.ts).
+      // Coalescing an emptied textarea to `undefined` would silently keep a
+      // bad figure the teacher just tried to remove.
+      figureCode: this.editFigureCode(),
     };
 
     this.bankService.updateQuestion(draft.id, patch).subscribe({
@@ -308,6 +313,10 @@ export class AiReviewQueueComponent {
         this.draftCountService.set(drafts.length);
         const stillThere = drafts.find((d) => d.id === savedId);
         if (stillThere) {
+          // A successful save implicitly resolves any stale
+          // approve/reject error banner — `select()` used to clear this
+          // incidentally before `reloadAfterSave` bypassed it.
+          this.actionError.set(null);
           this.selected.set(stillThere);
           this.compilePreview(stillThere.id);
         } else {
