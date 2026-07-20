@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpDownloadProgressEvent, HttpEventType, HttpParams, HttpResponse } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
@@ -8,7 +8,9 @@ import {
   EditDraftPayload,
   GenerateQuestionsPayload,
   GenerateQuestionsResult,
+  GenerateQuestionStreamEvent,
 } from './ai.models';
+import { parseGenerateStreamFrames } from './parse-generate-stream-frames';
 
 /**
  * Angular client for the Fase 2 AI generation + draft review workflow
@@ -30,6 +32,55 @@ export class AiService {
       `${environment.apiBaseUrl}/ai/questions/generate`,
       payload,
     );
+  }
+
+  /**
+   * Streaming counterpart of `generateQuestions()` — `POST
+   * /ai/questions/generate/stream`, always a single question (no `count`).
+   * Uses `HttpClient` (NOT `EventSource`) specifically so the existing
+   * `authInterceptor` keeps attaching the `Authorization` header — a native
+   * `EventSource` can't send custom headers at all. `responseType: 'text'` +
+   * `reportProgress: true` on the XHR backend surfaces the response body
+   * incrementally via `HttpDownloadProgressEvent.partialText`, which is
+   * CUMULATIVE (the whole response received so far, not just the new
+   * bytes) — `processedLength` tracks how much of it has already been
+   * turned into complete frames.
+   */
+  generateQuestionStream(payload: Omit<GenerateQuestionsPayload, 'count'>): Observable<GenerateQuestionStreamEvent> {
+    return new Observable<GenerateQuestionStreamEvent>((subscriber) => {
+      let processedLength = 0;
+      let leftover = '';
+
+      const consume = (partialText: string): void => {
+        const newText = partialText.slice(processedLength);
+        processedLength = partialText.length;
+        const { events, remainder } = parseGenerateStreamFrames(leftover + newText);
+        leftover = remainder;
+        for (const event of events) {
+          subscriber.next(event);
+        }
+      };
+
+      const subscription = this.http
+        .post(`${environment.apiBaseUrl}/ai/questions/generate/stream`, payload, {
+          observe: 'events',
+          responseType: 'text',
+          reportProgress: true,
+        })
+        .subscribe({
+          next: (event) => {
+            if (event.type === HttpEventType.DownloadProgress) {
+              consume((event as HttpDownloadProgressEvent).partialText ?? '');
+            } else if (event.type === HttpEventType.Response) {
+              consume((event as HttpResponse<string>).body ?? '');
+              subscriber.complete();
+            }
+          },
+          error: (err) => subscriber.error(err),
+        });
+
+      return () => subscription.unsubscribe();
+    });
   }
 
   listDrafts(): Observable<DraftQuestion[]> {
