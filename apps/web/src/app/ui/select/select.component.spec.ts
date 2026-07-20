@@ -31,6 +31,27 @@ describe('SelectComponent', () => {
     });
   });
 
+  it('associates the label with the trigger via aria-labelledby, for screen readers', () => {
+    const { fixture, compiled } = setup();
+    fixture.componentRef.setInput('label', 'Grado');
+    fixture.detectChanges();
+
+    const button = trigger(compiled);
+    const labelledbyId = button.getAttribute('aria-labelledby');
+    expect(labelledbyId).toBeTruthy();
+
+    const label = compiled.querySelector(`#${labelledbyId}`);
+    expect(label?.tagName).toBe('LABEL');
+    expect(label?.textContent).toContain('Grado');
+  });
+
+  it('omits aria-labelledby when no label is set', () => {
+    const { fixture, compiled } = setup();
+    fixture.detectChanges();
+
+    expect(trigger(compiled).hasAttribute('aria-labelledby')).toBe(false);
+  });
+
   it('renders a trigger button showing the placeholder (dimmed) when nothing is selected', () => {
     const { fixture, compiled } = setup();
     fixture.componentRef.setInput('placeholder', 'Elige un curso');

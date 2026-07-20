@@ -38,7 +38,7 @@ interface SelectListItem<T> {
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     @if (label()) {
-      <label class="mb-1 block text-sm font-medium text-n700">{{ label() }}</label>
+      <label [id]="labelId" class="mb-1 block text-sm font-medium text-n700">{{ label() }}</label>
     }
     <div class="relative">
       <button
@@ -48,6 +48,7 @@ interface SelectListItem<T> {
         [attr.aria-expanded]="open()"
         [attr.aria-controls]="listboxId"
         [attr.aria-activedescendant]="open() ? optionId(highlightedIndex()) : null"
+        [attr.aria-labelledby]="label() ? labelId : null"
         [disabled]="disabled()"
         (click)="toggleOpen()"
         (keydown)="onTriggerKeydown($event)"
@@ -102,6 +103,7 @@ export class SelectComponent<T = string> {
 
   protected readonly instanceId = `ui-select-${SelectComponent.instanceCounter++}`;
   protected readonly listboxId = `${this.instanceId}-listbox`;
+  protected readonly labelId = `${this.instanceId}-label`;
 
   protected readonly open = signal(false);
   protected readonly highlightedIndex = signal(-1);
