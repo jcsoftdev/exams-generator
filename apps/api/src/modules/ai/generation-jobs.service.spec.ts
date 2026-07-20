@@ -45,6 +45,7 @@ function buildDeps() {
     getById: jest.fn().mockResolvedValue(JOB_RECORD),
     list: jest.fn().mockResolvedValue({ items: [JOB_RECORD], total: 1 }),
     requestCancel: jest.fn().mockResolvedValue(undefined),
+    setStatus: jest.fn().mockResolvedValue(undefined),
   } as unknown as jest.Mocked<GenerationJobsRepository>;
 
   const bankRepository = {
@@ -90,6 +91,16 @@ describe("GenerationJobsService.create", () => {
       expect.objectContaining({ tenantId: "tenant-1", createdBy: "user-1", createdByRole: Role.Teacher, count: 5 }),
     );
     expect(queue.add).toHaveBeenCalledWith("generate", { jobId: "job-1" }, { jobId: "job-1" });
+  });
+
+  it("marks the row failed and re-throws the original error when enqueueing to Redis fails", async () => {
+    const { service, repository, queue } = buildDeps();
+    const enqueueError = new Error("Redis unreachable");
+    queue.add.mockRejectedValue(enqueueError);
+
+    await expect(service.create(TEACHER, VALID_DTO)).rejects.toBe(enqueueError);
+
+    expect(repository.setStatus).toHaveBeenCalledWith("job-1", "failed");
   });
 });
 

@@ -43,6 +43,10 @@ function job(jobId: string): Job<{ jobId: string }> {
   return { data: { jobId } } as Job<{ jobId: string }>;
 }
 
+function failedJob(jobId: string, attemptsMade: number, attempts: number): Job<{ jobId: string }> {
+  return { data: { jobId }, attemptsMade, opts: { attempts } } as Job<{ jobId: string }>;
+}
+
 describe("GenerationJobsProcessor", () => {
   it("calls generateQuestions once per item (count:1) and appends each created id", async () => {
     const { processor, repository, generateQuestionsService } = buildDeps();
@@ -115,6 +119,35 @@ describe("GenerationJobsProcessor", () => {
     await processor.process(job("job-1"));
 
     expect(generateQuestionsService.generateQuestions).not.toHaveBeenCalled();
+    expect(repository.setStatus).not.toHaveBeenCalled();
+  });
+});
+
+describe("GenerationJobsProcessor - @OnWorkerEvent('failed')", () => {
+  it("marks the job failed once BullMQ has exhausted all configured attempts", async () => {
+    const { processor, repository } = buildDeps();
+    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 3, createdCount: 0, failedCount: 0, status: "running" });
+
+    await processor.onFailed(failedJob("job-1", 3, 3));
+
+    expect(repository.setStatus).toHaveBeenCalledWith("job-1", "failed");
+  });
+
+  it("does NOT mark the job failed while attempts remain (mid-retry, not exhausted yet)", async () => {
+    const { processor, repository } = buildDeps();
+    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 3, createdCount: 0, failedCount: 0, status: "running" });
+
+    await processor.onFailed(failedJob("job-1", 1, 3));
+
+    expect(repository.setStatus).not.toHaveBeenCalledWith("job-1", "failed");
+  });
+
+  it("does NOT overwrite an already-terminal job (e.g. cancelled) when the failed event fires", async () => {
+    const { processor, repository } = buildDeps();
+    repository.getByIdUnscoped.mockResolvedValue({ ...BASE_RECORD, count: 3, createdCount: 0, failedCount: 0, status: "cancelled" });
+
+    await processor.onFailed(failedJob("job-1", 3, 3));
+
     expect(repository.setStatus).not.toHaveBeenCalled();
   });
 });

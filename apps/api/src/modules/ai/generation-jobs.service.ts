@@ -59,7 +59,17 @@ export class GenerationJobsService {
       withFigure: dto.withFigure ?? false,
     });
 
-    await this.queue.add("generate", { jobId: record.id }, { jobId: record.id });
+    try {
+      await this.queue.add("generate", { jobId: record.id }, { jobId: record.id });
+    } catch (error) {
+      // The row is already persisted as "pending" — if it never reaches
+      // Redis, nothing will ever process it. Mark it "failed" so the row
+      // stays truthful (durable record of "we tried, enqueueing failed")
+      // instead of being stranded at "pending" forever, then re-throw so
+      // the caller still sees the original error.
+      await this.repository.setStatus(record.id, "failed");
+      throw error;
+    }
 
     return record;
   }

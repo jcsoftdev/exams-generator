@@ -1,4 +1,4 @@
-import { Processor, WorkerHost } from "@nestjs/bullmq";
+import { OnWorkerEvent, Processor, WorkerHost } from "@nestjs/bullmq";
 import { Role } from "@exams-generator/shared";
 import { Job } from "bullmq";
 import { AuthTokenPayload } from "../auth/token.service";
@@ -72,5 +72,32 @@ export class GenerationJobsProcessor extends WorkerHost {
     }
 
     await this.repository.setStatus(record.id, "completed");
+  }
+
+  /**
+   * BullMQ emits `failed` once per attempt, including intermediate retries.
+   * Only the FINAL exhausted failure (attemptsMade >= configured attempts)
+   * should resolve the job row to `status='failed'` — otherwise a job still
+   * mid-retry (e.g. attempt 1 of 3) would be wrongly marked terminal while
+   * BullMQ is about to try again. `job` can be `undefined` per BullMQ's own
+   * typing (stalled job removed via `removeOnFail` before this fires).
+   */
+  @OnWorkerEvent("failed")
+  async onFailed(job: Job<GenerationJobData> | undefined): Promise<void> {
+    if (!job) {
+      return;
+    }
+
+    const maxAttempts = job.opts.attempts ?? 1;
+    if (job.attemptsMade < maxAttempts) {
+      return;
+    }
+
+    const record = await this.repository.getByIdUnscoped(job.data.jobId);
+    if (!record || TERMINAL_STATUSES.includes(record.status)) {
+      return;
+    }
+
+    await this.repository.setStatus(record.id, "failed");
   }
 }
