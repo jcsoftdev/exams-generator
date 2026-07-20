@@ -786,7 +786,7 @@ Now add the tests, right after the `'filters the tema dropdown...'` test from Ta
     expect(error?.textContent).toContain('No se pudo guardar');
   });
 
-  it('reloads the queue and refreshes the preview after a successful save', () => {
+  it('reloads the queue and refreshes the preview EXACTLY ONCE after a successful save (reloadAfterSave, not load()+compilePreview double-firing)', () => {
     const { compiled, fixture, listDrafts, previewDraft } = setup();
     (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
@@ -797,7 +797,23 @@ Now add the tests, right after the `'filters the tema dropdown...'` test from Ta
     fixture.detectChanges();
 
     expect(listDrafts).toHaveBeenCalledTimes(1);
+    expect(previewDraft).toHaveBeenCalledTimes(1);
     expect(previewDraft).toHaveBeenCalledWith('d1');
+  });
+
+  it('keeps the edited draft selected after saving, even when it is not the first item in the queue', () => {
+    const { compiled, fixture } = setup();
+    const secondItem = compiled.querySelectorAll('[data-testid="review-item"]')[1] as HTMLButtonElement;
+    secondItem.click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    // d1's distinctive body text must NOT reappear — a reset-to-first-item
+    // regression would show it after the post-save reload.
+    expect(compiled.textContent).not.toContain('¿Cuál organelo sintetiza proteínas?');
   });
 ```
 
@@ -871,12 +887,42 @@ Then add after `cancelEdit()`:
       next: () => {
         this.editing.set(false);
         this.editSaving.set(false);
-        this.load();
-        this.compilePreview(draft.id);
+        this.reloadAfterSave(draft.id);
       },
       error: () => {
         this.editSaving.set(false);
         this.editError.set('No se pudo guardar la pregunta. Inténtalo de nuevo.');
+      },
+    });
+  }
+
+  /**
+   * Refreshes the drafts list after a successful save WITHOUT resetting
+   * selection to the first item — unlike `load()`, which is only correct
+   * for the initial mount (`load()`'s `select(drafts[0])` would otherwise
+   * both double-fetch the preview and silently snap the UI back to the
+   * first draft when the edited one wasn't first in the queue — caught in
+   * task review, see `.superpowers/sdd/progress.md`). Keeps the just-edited
+   * draft selected (with its fresh saved content) and recompiles its
+   * preview exactly once. Mirrors `bank-list.component.ts`'s
+   * `finishSaveEdit()`, which solves the identical problem via `search()` +
+   * a separate `getQuestion(id)` re-select.
+   */
+  private reloadAfterSave(savedId: string): void {
+    this.aiService.listDrafts().subscribe({
+      next: (drafts) => {
+        this.drafts.set([...drafts]);
+        this.draftCountService.set(drafts.length);
+        const stillThere = drafts.find((d) => d.id === savedId);
+        if (stillThere) {
+          this.selected.set(stillThere);
+          this.compilePreview(stillThere.id);
+        } else {
+          this.selected.set(null);
+        }
+      },
+      error: () => {
+        /* row list falls out of sync until the next natural reload — the save itself already succeeded, so this is non-fatal */
       },
     });
   }
