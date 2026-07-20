@@ -139,52 +139,62 @@ export class GenerateQuestionsService {
       let cancelled = false;
 
       void (async () => {
-        const validation = validateGenerateQuestionsInput({ ...dto, count: 1 });
-        if (!validation.ok) {
-          subscriber.next({
-            type: "done",
-            result: { created: [], failed: [{ index: 0, error: validation.errors.join("; ") }] },
-          });
-          subscriber.complete();
-          return;
-        }
+        try {
+          const validation = validateGenerateQuestionsInput({ ...dto, count: 1 });
+          if (!validation.ok) {
+            subscriber.next({
+              type: "done",
+              result: { created: [], failed: [{ index: 0, error: validation.errors.join("; ") }] },
+            });
+            subscriber.complete();
+            return;
+          }
 
-        const courseId = dto.courseId as string;
-        const topicId = dto.topicId as string;
-        const difficulty = dto.difficulty as Difficulty;
-        const gradeLevel = dto.gradeLevel as GradeLevel;
-        const withFigure = dto.withFigure ?? false;
+          const courseId = dto.courseId as string;
+          const topicId = dto.topicId as string;
+          const difficulty = dto.difficulty as Difficulty;
+          const gradeLevel = dto.gradeLevel as GradeLevel;
+          const withFigure = dto.withFigure ?? false;
 
-        const taxonomy = await this.bankRepository.findCourseAndTopicNames(courseId, topicId);
-        if (cancelled) return;
-        if (!taxonomy) {
-          subscriber.next({
-            type: "done",
-            result: {
-              created: [],
-              failed: [{ index: 0, error: "courseId/topicId not found, or topicId does not belong to courseId" }],
+          const taxonomy = await this.bankRepository.findCourseAndTopicNames(courseId, topicId);
+          if (cancelled) return;
+          if (!taxonomy) {
+            subscriber.next({
+              type: "done",
+              result: {
+                created: [],
+                failed: [{ index: 0, error: "courseId/topicId not found, or topicId does not belong to courseId" }],
+              },
+            });
+            subscriber.complete();
+            return;
+          }
+
+          const outcome = await this.generateOneItem(
+            user,
+            { topicId, courseName: taxonomy.courseName, topicName: taxonomy.topicName, difficulty, gradeLevel, withFigure },
+            (event) => {
+              if (!cancelled) subscriber.next(event);
             },
+          );
+          if (cancelled) return;
+
+          subscriber.next({
+            type: "done",
+            result: outcome.ok
+              ? { created: [{ id: outcome.id }], failed: [] }
+              : { created: [], failed: [{ index: 0, error: outcome.error }] },
           });
           subscriber.complete();
-          return;
+        } catch (error) {
+          if (cancelled) return;
+          const message = error instanceof Error ? error.message : String(error);
+          subscriber.next({
+            type: "done",
+            result: { created: [], failed: [{ index: 0, error: message }] },
+          });
+          subscriber.complete();
         }
-
-        const outcome = await this.generateOneItem(
-          user,
-          { topicId, courseName: taxonomy.courseName, topicName: taxonomy.topicName, difficulty, gradeLevel, withFigure },
-          (event) => {
-            if (!cancelled) subscriber.next(event);
-          },
-        );
-        if (cancelled) return;
-
-        subscriber.next({
-          type: "done",
-          result: outcome.ok
-            ? { created: [{ id: outcome.id }], failed: [] }
-            : { created: [], failed: [{ index: 0, error: outcome.error }] },
-        });
-        subscriber.complete();
       })();
 
       return () => {

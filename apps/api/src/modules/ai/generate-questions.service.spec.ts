@@ -236,4 +236,15 @@ describe("GenerateQuestionsService.generateQuestionStream", () => {
     expect(events).toHaveLength(1);
     expect((events[0] as GenerateQuestionStreamEvent & { type: "done" }).result.failed).toHaveLength(1);
   });
+
+  it("emits a terminal done/failed event (not a hang, not a thrown exception) when the taxonomy lookup rejects unexpectedly", async () => {
+    const { service, bankRepository } = buildDeps();
+    bankRepository.findCourseAndTopicNames.mockRejectedValue(new Error("db timeout"));
+
+    const events = await collect(service, STREAM_DTO);
+
+    expect(events).toEqual([
+      { type: "done", result: { created: [], failed: [{ index: 0, error: "db timeout" }] } },
+    ]);
+  });
 });
