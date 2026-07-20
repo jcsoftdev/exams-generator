@@ -1,6 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { Difficulty } from "@exams-generator/shared";
 import { BadRequestException, Inject, Injectable, NotFoundException } from "@nestjs/common";
+import { Observable } from "rxjs";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankRepository } from "../bank/bank.repository";
 import { PDF_COMPILER_PORT } from "../bank/bank.constants";
@@ -40,6 +41,11 @@ export interface GenerateQuestionsResult {
   readonly created: readonly GenerateQuestionsCreatedItem[];
   readonly failed: readonly GenerateQuestionsFailedItem[];
 }
+
+/** Every event `generateQuestionStream()` can emit — mirrors `GenerateProgressEvent` plus a terminal `done` carrying the same `GenerateQuestionsResult` shape `generateQuestions()` resolves with. */
+export type GenerateQuestionStreamEvent =
+  | GenerateProgressEvent
+  | { readonly type: "done"; readonly result: GenerateQuestionsResult };
 
 /**
  * The `POST /ai/questions/generate` use case (design doc §5.2). Per
@@ -114,6 +120,77 @@ export class GenerateQuestionsService {
     }
 
     return { created, failed };
+  }
+
+  /**
+   * Single-question streaming variant of `generateQuestions()` (design:
+   * live progress). `dto` never carries `count` — the frontend already
+   * calls the buffered endpoint with `count: 1` in a loop for exactly this
+   * reason (see `AiGenerateComponent.generateOne`); this method formalizes
+   * "one question, streamed" as its own contract instead of reusing the
+   * batch shape. Reuses `generateOneItem()` — same generate→compile-retry→
+   * persist pipeline as the batch path, byte for byte.
+   */
+  generateQuestionStream(
+    user: AuthTokenPayload,
+    dto: Omit<GenerateQuestionsDto, "count">,
+  ): Observable<GenerateQuestionStreamEvent> {
+    return new Observable<GenerateQuestionStreamEvent>((subscriber) => {
+      let cancelled = false;
+
+      void (async () => {
+        const validation = validateGenerateQuestionsInput({ ...dto, count: 1 });
+        if (!validation.ok) {
+          subscriber.next({
+            type: "done",
+            result: { created: [], failed: [{ index: 0, error: validation.errors.join("; ") }] },
+          });
+          subscriber.complete();
+          return;
+        }
+
+        const courseId = dto.courseId as string;
+        const topicId = dto.topicId as string;
+        const difficulty = dto.difficulty as Difficulty;
+        const gradeLevel = dto.gradeLevel as GradeLevel;
+        const withFigure = dto.withFigure ?? false;
+
+        const taxonomy = await this.bankRepository.findCourseAndTopicNames(courseId, topicId);
+        if (cancelled) return;
+        if (!taxonomy) {
+          subscriber.next({
+            type: "done",
+            result: {
+              created: [],
+              failed: [{ index: 0, error: "courseId/topicId not found, or topicId does not belong to courseId" }],
+            },
+          });
+          subscriber.complete();
+          return;
+        }
+
+        const outcome = await this.generateOneItem(
+          user,
+          { topicId, courseName: taxonomy.courseName, topicName: taxonomy.topicName, difficulty, gradeLevel, withFigure },
+          (event) => {
+            if (!cancelled) subscriber.next(event);
+          },
+        );
+        if (cancelled) return;
+
+        subscriber.next({
+          type: "done",
+          result: outcome.ok
+            ? { created: [{ id: outcome.id }], failed: [] }
+            : { created: [], failed: [{ index: 0, error: outcome.error }] },
+        });
+        subscriber.complete();
+      })();
+
+      return () => {
+        cancelled = true;
+      };
+    });
   }
 
   /**
