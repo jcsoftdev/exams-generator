@@ -44,7 +44,7 @@ describe("LazyQuestionGeneratorAdapter", () => {
     const result = await lazy.generate(INPUT);
 
     expect(resolver).toHaveBeenCalledTimes(1);
-    expect(fakeAdapter.generate).toHaveBeenCalledWith(INPUT);
+    expect(fakeAdapter.generate).toHaveBeenCalledWith(INPUT, undefined);
     expect(result).toEqual(RESULT);
   });
 

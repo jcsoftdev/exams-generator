@@ -1,5 +1,6 @@
 import { Difficulty } from "@exams-generator/shared";
 import {
+  GenerateProgressEvent,
   GenerateQuestionInput,
   QuestionGeneratorPort,
 } from "./question-generator.port";
@@ -69,6 +70,19 @@ export function runQuestionGeneratorPortContract(
 
       expect(typeof result.figureCode).toBe("string");
       expect((result.figureCode as string).length).toBeGreaterThan(0);
+    });
+
+    it("generate() invokes onProgress with at least one non-empty delta when provided", async () => {
+      const adapter = createAdapter();
+      const events: GenerateProgressEvent[] = [];
+
+      await adapter.generate(BASE_INPUT, (event) => events.push(event));
+
+      const deltas = events.filter(
+        (e): e is { type: "delta"; text: string } => e.type === "delta",
+      );
+      expect(deltas.length).toBeGreaterThan(0);
+      expect(deltas.every((d) => d.text.length > 0)).toBe(true);
     });
   });
 }

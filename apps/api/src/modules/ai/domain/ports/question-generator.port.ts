@@ -60,6 +60,21 @@ export interface ExtractQuestionInput {
   readonly mimeType: string;
 }
 
+/**
+ * Emitted during `QuestionGeneratorPort.generate()` when a caller passes an
+ * `onProgress` callback — proof-of-life for the AI call while it's still in
+ * flight (design doc: live streaming progress). `restart` fires whenever a
+ * PARTIAL generation is discarded and a fresh one begins — either this
+ * port's own internal retry (bad/unparseable model output) or the caller's
+ * own retry (e.g. a Typst compile failure upstream in
+ * `GenerateQuestionsService`). Callers MUST treat `restart` as "clear
+ * whatever you accumulated from `delta` events so far" — without it, text
+ * from two unrelated generations would look like one continuous stream.
+ */
+export type GenerateProgressEvent =
+  | { readonly type: "delta"; readonly text: string }
+  | { readonly type: "restart" };
+
 export interface QuestionGeneratorPort {
   /**
    * Produces one AI-generated question. Implementations MUST validate their
@@ -67,13 +82,21 @@ export interface QuestionGeneratorPort {
    * NEVER returns unvalidated content (design doc §7: "Nunca se guarda sin
    * validar contra schema").
    *
+   * `onProgress`, when provided, is invoked with `delta`/`restart` events as
+   * the underlying provider streams its response — purely a progress signal,
+   * never part of the resolved value. Implementations that can't stream MAY
+   * call it once with the full text, or not at all.
+   *
    * @throws AiRateLimitError when the provider is rate-limited (e.g. 429 on
    *   OpenRouter's free tier).
    * @throws AiInvalidResponseError when the provider's output can't be
    *   parsed/validated into a `GeneratedQuestion`, even after any internal
    *   retry the adapter performs.
    */
-  generate(input: GenerateQuestionInput): Promise<GeneratedQuestion>;
+  generate(
+    input: GenerateQuestionInput,
+    onProgress?: (event: GenerateProgressEvent) => void,
+  ): Promise<GeneratedQuestion>;
 
   /**
    * Applies a human-authored edit instruction to an existing question and
