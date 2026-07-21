@@ -3,9 +3,12 @@ import {
   Body,
   Controller,
   HttpCode,
+  HttpException,
+  HttpStatus,
   Param,
   Post,
   Res,
+  UnprocessableEntityException,
   UploadedFile,
   UseGuards,
   UseInterceptors,
@@ -17,7 +20,12 @@ import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { AuthTokenPayload } from "../auth/token.service";
 import { ExtractQuestionService } from "./extract-question.service";
 import { GenerateQuestionsService, GenerateQuestionStreamEvent } from "./generate-questions.service";
-import { GeneratedQuestion } from "./domain/ports/question-generator.port";
+import {
+  AiGenerationError,
+  AiInvalidResponseError,
+  AiRateLimitError,
+  GeneratedQuestion,
+} from "./domain/ports/question-generator.port";
 import { ReviseQuestionService } from "./revise-question.service";
 
 interface GenerateQuestionsBody {
@@ -124,6 +132,24 @@ export class AiController {
     if (!file) {
       throw new BadRequestException("file is required");
     }
-    return this.extractService.extract({ buffer: file.buffer, mimetype: file.mimetype });
+    try {
+      return await this.extractService.extract({ buffer: file.buffer, mimetype: file.mimetype });
+    } catch (error) {
+      // `AiGenerationError` and its subclasses are plain `Error`s (domain
+      // layer, not HTTP-aware) — left uncaught, Nest's default filter turns
+      // ALL of them into an identical generic 500, hiding whether the real
+      // cause was a rate-limited provider, a garbage AI response, or
+      // something else. Map each to the status the caller can act on.
+      if (error instanceof AiRateLimitError) {
+        throw new HttpException(error.message, HttpStatus.TOO_MANY_REQUESTS);
+      }
+      if (error instanceof AiInvalidResponseError) {
+        throw new UnprocessableEntityException(error.message);
+      }
+      if (error instanceof AiGenerationError) {
+        throw new HttpException(error.message, HttpStatus.BAD_GATEWAY);
+      }
+      throw error;
+    }
   }
 }
