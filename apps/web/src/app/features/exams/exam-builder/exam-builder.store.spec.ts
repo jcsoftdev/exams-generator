@@ -112,6 +112,74 @@ describe('ExamBuilderStore', () => {
     });
   });
 
+  describe('bulkLoadFromBlueprint (design doc §3.11 — template pre-fill)', () => {
+    it('reuses an existing course+topic row and sets the requested count on the matching difficulty cell', () => {
+      store.addRow({ id: 'row-1', courseId: 'c1', courseName: 'Matemática', topicId: 't1', topicName: 'Álgebra' });
+
+      store.bulkLoadFromBlueprint([
+        { courseId: 'c1', courseName: 'Matemática', topicId: 't1', topicName: 'Álgebra', count: 8, difficulty: Difficulty.Hard },
+      ]);
+
+      expect(store.rows()).toHaveLength(1); // reused, not duplicated
+      const key = buildCellKey('c1', 't1', Difficulty.Hard);
+      expect(store.requested().get(key)).toBe(8);
+    });
+
+    it('adds a new row when no matching course+topic row exists yet', () => {
+      store.bulkLoadFromBlueprint([
+        { courseId: 'c1', courseName: 'Matemática', topicId: 't1', topicName: 'Álgebra', count: 4, difficulty: Difficulty.Easy },
+      ]);
+
+      expect(store.rows()).toHaveLength(1);
+      expect(store.rows()[0]).toMatchObject({ courseId: 'c1', topicId: 't1', topicName: 'Álgebra' });
+      expect(store.requested().get(buildCellKey('c1', 't1', Difficulty.Easy))).toBe(4);
+    });
+
+    it('represents a whole-course resolved row (no topicId) with the sentinel topicId "" and topicName "Todos los temas"', () => {
+      store.bulkLoadFromBlueprint([
+        { courseId: 'c2', courseName: 'Física', count: 10, difficulty: Difficulty.Medium },
+      ]);
+
+      expect(store.rows()).toHaveLength(1);
+      expect(store.rows()[0].topicId).toBe('');
+      expect(store.rows()[0].topicName).toBe('Todos los temas');
+      const key = buildCellKey('c2', '', Difficulty.Medium);
+      expect(store.requested().get(key)).toBe(10);
+    });
+
+    it('reuses the same sentinel row across multiple difficulty rows of the same whole-course (e.g. UNCP NIVEL rows)', () => {
+      store.bulkLoadFromBlueprint([
+        { courseId: 'c2', courseName: 'Física', count: 6, difficulty: Difficulty.Easy },
+        { courseId: 'c2', courseName: 'Física', count: 3, difficulty: Difficulty.Hard },
+      ]);
+
+      expect(store.rows()).toHaveLength(1); // one sentinel row for the course, not one per NIVEL
+      expect(store.requested().get(buildCellKey('c2', '', Difficulty.Easy))).toBe(6);
+      expect(store.requested().get(buildCellKey('c2', '', Difficulty.Hard))).toBe(3);
+    });
+
+    it('defaults an undefined resolved difficulty to Medium (documented default — UNI rows have no NIVEL to translate)', () => {
+      store.bulkLoadFromBlueprint([{ courseId: 'c1', courseName: 'Matemática', topicId: 't1', topicName: 'Álgebra', count: 7 }]);
+
+      expect(store.requested().get(buildCellKey('c1', 't1', Difficulty.Medium))).toBe(7);
+    });
+  });
+
+  describe('setStockResults — whole-course sentinel round-trip (Bug 3)', () => {
+    it('maps a result with topicId: undefined (echoed back from an omitted request field, meaning "whole course") to the sentinel "" CellKey instead of discarding it', () => {
+      store.setStockResults([{ courseId: 'c1', topicId: undefined, difficulty: Difficulty.Easy, available: 30 }]);
+
+      const key = buildCellKey('c1', '', Difficulty.Easy);
+      expect(store.stock().get(key)).toBe(30);
+    });
+
+    it('still ignores a result with no difficulty (defensive — never sent by this store\'s own requests, which always specify one)', () => {
+      store.setStockResults([{ courseId: 'c1', topicId: 't1', difficulty: undefined, available: 30 }]);
+
+      expect(store.stock().size).toBe(0);
+    });
+  });
+
   describe('mergePreview (EB-R5 — critical)', () => {
     it('editing cell 2 and merging its B2 result leaves cell 1 cached questionIds byte-identical', () => {
       const cell1 = buildCellKey('c1', 't1', Difficulty.Easy);

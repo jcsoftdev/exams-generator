@@ -71,9 +71,10 @@ export function stageForGrade(grade: GradeLevel): Stage {
 export type ExamStatus = 'draft' | 'ready';
 
 /**
- * GAP (see exams.service.ts): there is no `GET /courses` or `GET /topics`
- * listing endpoint on the backend yet — `courseId`/`topicId` are free-text
- * UUID inputs here, same workaround the bank feature uses for its filters.
+ * GAP: the backend already exposes `GET /courses` and `GET /topics` via
+ * TaxonomyController (see taxonomy.service.ts, used by the bank and
+ * exam-blueprint features) — this form was just never wired to those
+ * dropdowns, so `courseId`/`topicId` remain free-text UUID inputs here.
  */
 export interface CreateExamBlueprintRow {
   readonly courseId: string;
@@ -254,4 +255,76 @@ export interface DuplicateExamResult {
   readonly id: string;
   readonly title: string;
   readonly status: 'draft';
+}
+
+/**
+ * Mirrors `UniversityListItem` from
+ * apps/api/src/modules/taxonomy/taxonomy.repository.ts — `GET /universities`
+ * (design doc §3.11/§4), global catalog, no tenant scoping.
+ */
+export interface University {
+  readonly id: string;
+  readonly code: string;
+  readonly name: string;
+}
+
+/**
+ * Mirrors `TrackListItem`. `kind` ('area' | 'cycle_track') is purely
+ * descriptive for the UI label — it never changes resolution behavior
+ * (design doc §3.1).
+ */
+export interface Track {
+  readonly id: string;
+  readonly code: string;
+  readonly name: string;
+  readonly kind: string;
+}
+
+/**
+ * Mirrors `ExamTypeListItem` — the data-driven exam type catalog (design doc
+ * §5). `courseScope`/`weekScope` decide which parts of the "Tipo de examen"
+ * section the exam-builder screen shows for a given type; `manual`
+ * (`courseScope: 'none'`) never needs a university/track/course selection.
+ */
+export interface ExamType {
+  readonly code: string;
+  readonly label: string;
+  readonly courseScope: 'none' | 'all' | 'selected';
+  readonly weekScope: 'none' | 'current_only' | 'cumulative';
+}
+
+/**
+ * Mirrors `BlueprintRow` from
+ * apps/api/src/modules/exams/domain/blueprint-selector.ts — one row of a
+ * resolved template. `topicId`/`difficulty` are exactly as optional here as
+ * they are on `CreateExamBlueprintRow`: a missing `topicId` means "whole
+ * course" (design doc §3.11), a missing `difficulty` means the source data
+ * had no NIVEL to translate (`resolveDifficultyFromSourceLevel`, UNI rows).
+ */
+export interface ResolvedBlueprintRow {
+  readonly courseId: string;
+  readonly topicId?: string;
+  readonly count: number;
+  readonly difficulty?: Difficulty;
+}
+
+/** `POST /exams/blueprint/resolve` (design doc §3.11) request — `trackId` omitted for a track-less university. */
+export interface ResolveBlueprintPayload {
+  readonly examTypeCode: string;
+  readonly universityId: string;
+  readonly trackId?: string;
+  readonly selectedCourseIds?: readonly string[];
+  readonly totalQuestionsOverride?: number;
+}
+
+/**
+ * `weekNumber`/`templateId` are exposed alongside `blueprint` so a future
+ * screen can feed them straight back into `POST /exams` as provenance
+ * without re-deriving anything client-side (design doc §4) — the
+ * exam-builder screen today only consumes `blueprint`.
+ */
+export interface ResolveBlueprintResult {
+  readonly blueprint: readonly ResolvedBlueprintRow[];
+  readonly weekNumber: number | null;
+  readonly templateId: string | null;
 }

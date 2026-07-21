@@ -1,13 +1,108 @@
 <div data-testid="exam-builder" class="flex flex-col gap-6">
   <h1 class="text-xl font-semibold text-n900">Generador de exámenes</h1>
 
-  <ui-select
-    [options]="gradeLevelOptions"
-    [value]="selectedGradeLevel()"
-    (valueChange)="onGradeLevelChange($event)"
-    label="Grado"
-    placeholder="Selecciona un grado"
-  ></ui-select>
+  <!-- "Tipo de examen" section (design doc §3.11) — defaults to "manual", which keeps the grid below completely unchanged (EB-T invariant). -->
+  <ui-card data-testid="exam-type-section">
+    <div class="flex flex-col gap-4">
+      <ui-select
+        data-testid="exam-type-select"
+        [options]="examTypeOptions()"
+        [value]="selectedExamTypeCode()"
+        (valueChange)="onExamTypeChange($event)"
+        label="Tipo de examen"
+      ></ui-select>
+
+      @if (!isManual()) {
+        <ui-select
+          data-testid="university-select"
+          [options]="universityOptions()"
+          [value]="selectedUniversityId()"
+          (valueChange)="onUniversityChange($event)"
+          label="Universidad"
+          placeholder="Selecciona una universidad"
+        ></ui-select>
+
+        @if (tracks().length > 0) {
+          <ui-select
+            data-testid="track-select"
+            [options]="trackOptions()"
+            [value]="selectedTrackId()"
+            (valueChange)="onTrackChange($event)"
+            label="Track"
+            placeholder="Selecciona un track"
+          ></ui-select>
+        }
+
+        @if (showCourseMultiSelect()) {
+          <div data-testid="course-multiselect" class="flex flex-col gap-2">
+            <span class="text-sm font-medium text-n700">Cursos</span>
+            <div class="flex flex-wrap gap-3">
+              @for (course of templateCourses(); track course.id) {
+                <label class="flex items-center gap-2 text-sm text-n800">
+                  <input
+                    type="checkbox"
+                    [attr.data-testid]="'course-checkbox-' + course.id"
+                    [checked]="isCourseSelected(course.id)"
+                    (change)="toggleCourseSelection(course.id)"
+                  />
+                  {{ course.name }}
+                </label>
+              }
+            </div>
+          </div>
+        }
+
+        <div class="flex flex-col gap-2">
+          <div class="flex flex-wrap items-end gap-3">
+            <div class="w-56">
+              <ui-input
+                type="number"
+                name="total-questions-override"
+                label="Cantidad total de preguntas"
+                placeholder="opcional"
+                [value]="templateTotalQuestions()"
+                (valueChange)="onTemplateTotalQuestionsChange($event)"
+              ></ui-input>
+            </div>
+
+            <ui-button
+              data-testid="load-template"
+              variant="ghost"
+              [disabled]="!canLoadTemplate()"
+              [loading]="loadingTemplate()"
+              (clicked)="loadTemplate()"
+            >Cargar plantilla</ui-button>
+          </div>
+
+          <p data-testid="total-questions-override-hint" class="text-xs text-n500">
+            Opcional — solo necesario si la universidad no publica la cantidad de preguntas por curso (p. ej. UNI). Si la plantilla la requiere, verás un mensaje pidiéndotela.
+          </p>
+        </div>
+
+        @if (templateError()) {
+          <div data-testid="template-error" class="rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text">
+            {{ templateError() }}
+          </div>
+        }
+      }
+    </div>
+  </ui-card>
+
+  <!-- Grado is a manual choice ONLY while "Tipo de examen" is manual — every non-manual type derives it to Pre-admisión (design doc §3.11), see ExamBuilderComponent.onExamTypeChange. -->
+  @if (isManual()) {
+    <ui-select
+      data-testid="grade-level-select"
+      [options]="gradeLevelOptions"
+      [value]="selectedGradeLevel()"
+      (valueChange)="onGradeLevelChange($event)"
+      label="Grado"
+      placeholder="Selecciona un grado"
+    ></ui-select>
+  } @else {
+    <p data-testid="grade-level-derived" class="text-sm text-n600">
+      Grado: <strong class="text-n800">{{ templateGradeLevelLabel }}</strong> — automático para este tipo de examen.
+    </p>
+  }
 
   @if (selectedGradeLevel()) {
     @if (loading()) {

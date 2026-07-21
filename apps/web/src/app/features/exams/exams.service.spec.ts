@@ -9,9 +9,13 @@ import {
   ConfirmExamResult,
   CreateExamResult,
   ExamDetail,
+  ExamType,
   PreviewExamResult,
   ReplaceQuestionResult,
+  ResolveBlueprintResult,
   StockBatchResult,
+  Track,
+  University,
 } from './exams.models';
 
 describe('ExamsService', () => {
@@ -270,6 +274,104 @@ describe('ExamsService', () => {
       const req = httpMock.expectOne('/api/exams/e1');
       expect(req.request.method).toBe('DELETE');
       req.flush(null);
+    });
+  });
+
+  describe('getUniversities', () => {
+    it('GETs /universities and resolves the catalog', () => {
+      const result: University[] = [{ id: 'u1', code: 'uni', name: 'UNI' }];
+      let response: University[] | undefined;
+
+      service.getUniversities().subscribe((r: University[]) => (response = r));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/universities`);
+      expect(req.request.method).toBe('GET');
+      req.flush(result);
+
+      expect(response).toEqual(result);
+    });
+  });
+
+  describe('getUniversityTracks', () => {
+    it('GETs /universities/:universityId/tracks', () => {
+      const result: Track[] = [{ id: 't1', code: 'I', name: 'Salud', kind: 'area' }];
+      let response: Track[] | undefined;
+
+      service.getUniversityTracks('u1').subscribe((r: Track[]) => (response = r));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/universities/u1/tracks`);
+      expect(req.request.method).toBe('GET');
+      req.flush(result);
+
+      expect(response).toEqual(result);
+    });
+
+    it('resolves an empty array for a university with no track concept, without treating it as an error', () => {
+      let response: Track[] | undefined;
+
+      service.getUniversityTracks('u2').subscribe((r: Track[]) => (response = r));
+
+      httpMock.expectOne(`${environment.apiBaseUrl}/universities/u2/tracks`).flush([]);
+
+      expect(response).toEqual([]);
+    });
+  });
+
+  describe('getExamTypes', () => {
+    it('GETs /exam-types and resolves the catalog', () => {
+      const result: ExamType[] = [
+        { code: 'manual', label: 'Manual', courseScope: 'none', weekScope: 'none' },
+        { code: 'fastest', label: 'Fastest', courseScope: 'selected', weekScope: 'current_only' },
+      ];
+      let response: ExamType[] | undefined;
+
+      service.getExamTypes().subscribe((r: ExamType[]) => (response = r));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/exam-types`);
+      expect(req.request.method).toBe('GET');
+      req.flush(result);
+
+      expect(response).toEqual(result);
+    });
+  });
+
+  describe('resolveBlueprint', () => {
+    it('POSTs {examTypeCode, universityId, trackId?, selectedCourseIds?} to /exams/blueprint/resolve', () => {
+      service
+        .resolveBlueprint({
+          examTypeCode: 'fastest',
+          universityId: 'u1',
+          trackId: 'trk1',
+          selectedCourseIds: ['c1', 'c2'],
+        })
+        .subscribe();
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/blueprint/resolve`);
+      expect(req.request.method).toBe('POST');
+      expect(req.request.body).toEqual({
+        examTypeCode: 'fastest',
+        universityId: 'u1',
+        trackId: 'trk1',
+        selectedCourseIds: ['c1', 'c2'],
+      });
+      req.flush({ blueprint: [], weekNumber: null, templateId: null });
+    });
+
+    it('resolves with the blueprint rows, weekNumber, and templateId', () => {
+      const result: ResolveBlueprintResult = {
+        blueprint: [{ courseId: 'c1', topicId: 't1', count: 5, difficulty: Difficulty.Easy }],
+        weekNumber: 3,
+        templateId: 'tpl-1',
+      };
+      let response: ResolveBlueprintResult | undefined;
+
+      service
+        .resolveBlueprint({ examTypeCode: 'eta_by_week', universityId: 'u1' })
+        .subscribe((r: ResolveBlueprintResult) => (response = r));
+
+      httpMock.expectOne(`${environment.apiBaseUrl}/exams/blueprint/resolve`).flush(result);
+
+      expect(response).toEqual(result);
     });
   });
 });

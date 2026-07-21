@@ -10,12 +10,17 @@ import {
   ExamDetail,
   ExamListFilters,
   ExamListResult,
+  ExamType,
   PreviewExamPayload,
   PreviewExamResult,
   ReplaceQuestionPayload,
   ReplaceQuestionResult,
+  ResolveBlueprintPayload,
+  ResolveBlueprintResult,
   StockBatchPayload,
   StockBatchResult,
+  Track,
+  University,
 } from './exams.models';
 
 /**
@@ -84,5 +89,35 @@ export class ExamsService {
   /** `DELETE /exams/:id` (S3). */
   deleteExam(examId: string): Observable<void> {
     return this.http.delete<void>(`${environment.apiBaseUrl}/exams/${examId}`);
+  }
+
+  /** `GET /universities` (design doc §3.11) — global admission university catalog, no tenant scoping. */
+  getUniversities(): Observable<University[]> {
+    return this.http.get<University[]>(`${environment.apiBaseUrl}/universities`);
+  }
+
+  /**
+   * `GET /universities/:universityId/tracks` — a university's tracks.
+   * An empty array is a normal, expected response for a university with no
+   * track concept (design doc §3.1) — not an error, the exam-builder screen
+   * simply skips rendering the Track select in that case.
+   */
+  getUniversityTracks(universityId: string): Observable<Track[]> {
+    return this.http.get<Track[]>(`${environment.apiBaseUrl}/universities/${universityId}/tracks`);
+  }
+
+  /** `GET /exam-types` — the data-driven exam type catalog (manual/fastest/eta/eta_by_week), ordered by sortOrder. */
+  getExamTypes(): Observable<ExamType[]> {
+    return this.http.get<ExamType[]>(`${environment.apiBaseUrl}/exam-types`);
+  }
+
+  /**
+   * `POST /exams/blueprint/resolve` (design doc §3.11) — pre-fills the
+   * manual blueprint builder for a template-backed exam type. Pure read, no
+   * persistence, same convention as `previewExam`/`stockBatch`; never
+   * creates or mutates an exam.
+   */
+  resolveBlueprint(payload: ResolveBlueprintPayload): Observable<ResolveBlueprintResult> {
+    return this.http.post<ResolveBlueprintResult>(`${environment.apiBaseUrl}/exams/blueprint/resolve`, payload);
   }
 }
