@@ -388,4 +388,46 @@ describe('BankNewComponent', () => {
       expect(instance.extracting()).toBe(false);
     });
   });
+
+  describe('extract-with-ai button (photo tab)', () => {
+    it('is disabled until photo taxonomy + image are complete, then enabled', () => {
+      const { fixture, compiled } = setup();
+      const button = compiled.querySelector('[data-testid="extract-with-ai"] button') as HTMLButtonElement;
+      expect(button.disabled).toBe(true);
+
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      expect(button.disabled).toBe(false);
+    });
+
+    it('clicking it runs extractWithAi and lands on the structured tab with the extracted question', () => {
+      const { fixture, compiled } = setup();
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (compiled.querySelector('[data-testid="extract-with-ai"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="tab-structured-panel"]')).toBeTruthy();
+      const textarea = compiled.querySelector(
+        '[data-testid="tab-structured-panel"] textarea',
+      ) as HTMLTextAreaElement;
+      expect(textarea.value).toBe('Enunciado desde imagen');
+    });
+
+    it('shows extract-error inline on failure, without leaving the photo tab', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+      });
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+
+      (compiled.querySelector('[data-testid="extract-with-ai"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="extract-error"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="tab-photo-panel"]')).toBeTruthy();
+    });
+  });
 });

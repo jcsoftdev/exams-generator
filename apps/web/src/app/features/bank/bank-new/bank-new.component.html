@@ -82,7 +82,20 @@
         </label>
       </div>
 
-      <div data-testid="photo-submit"><ui-button variant="primary" [loading]="saving()" (clicked)="submitPhoto()">Guardar pregunta</ui-button></div>
+      @if (extractError()) {
+        <p data-testid="extract-error" class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">{{ extractError() }}</p>
+      }
+      <div class="flex flex-wrap gap-2">
+        <div data-testid="photo-submit"><ui-button variant="primary" [loading]="saving()" (clicked)="submitPhoto()">Guardar pregunta</ui-button></div>
+        <div data-testid="extract-with-ai">
+          <ui-button variant="ghost" [loading]="extracting()" [disabled]="!photoTaxonomyValid() || extracting()" (clicked)="extractWithAi()">
+            <span class="flex items-center gap-1">
+              <lucide-angular name="sparkles" class="h-4 w-4"></lucide-angular>
+              Extraer con IA
+            </span>
+          </ui-button>
+        </div>
+      </div>
     </div>
   } @else {
     <div data-testid="tab-structured-panel" class="flex flex-col gap-3 rounded-card border border-n200 bg-surface p-4">
