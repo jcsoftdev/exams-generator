@@ -210,6 +210,106 @@ describe("OpenRouterAdapter", () => {
     expect(httpClient).toHaveBeenCalledTimes(1);
   });
 
+  it("retries once when the alternatives are a bare consecutive placeholder (1,2,3,4,5), and succeeds on retry", async () => {
+    const placeholderQuestion = {
+      bodyTypst: "¿Cuál es el resultado de $1 + 1$?",
+      alternatives: ["1", "2", "3", "4", "5"],
+      correctAnswer: "b",
+      figureCode: null,
+    };
+    const httpClient = jest
+      .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+      .mockReturnValueOnce(
+        jsonResponse(200, chatCompletion({ content: JSON.stringify(placeholderQuestion) })),
+      )
+      .mockReturnValueOnce(
+        jsonResponse(200, chatCompletion({ content: JSON.stringify(VALID_QUESTION_JSON) })),
+      );
+    const adapter = new OpenRouterAdapter({
+      apiKey: "sk-test-key",
+      model: "deepseek/deepseek-r1:free",
+      httpClient,
+    });
+
+    const result = await adapter.generate(INPUT);
+
+    expect(httpClient).toHaveBeenCalledTimes(2);
+    expect(result.bodyTypst).toBe(VALID_QUESTION_JSON.bodyTypst);
+    const secondCallBody = JSON.parse(httpClient.mock.calls[1][1].body);
+    const secondPrompt = secondCallBody.messages.map((m: { content: string }) => m.content).join("\n");
+    expect(secondPrompt).toContain("consecutive sequence");
+  });
+
+  it("retries once when withFigure was requested but figureCode came back empty, and succeeds on retry", async () => {
+    const noFigureQuestion = { ...VALID_QUESTION_JSON, figureCode: null };
+    const withFigureQuestion = { ...VALID_QUESTION_JSON, figureCode: "#cetz.canvas({})" };
+    const httpClient = jest
+      .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+      .mockReturnValueOnce(
+        jsonResponse(200, chatCompletion({ content: JSON.stringify(noFigureQuestion) })),
+      )
+      .mockReturnValueOnce(
+        jsonResponse(200, chatCompletion({ content: JSON.stringify(withFigureQuestion) })),
+      );
+    const adapter = new OpenRouterAdapter({
+      apiKey: "sk-test-key",
+      model: "deepseek/deepseek-r1:free",
+      httpClient,
+    });
+
+    const result = await adapter.generate({ ...INPUT, withFigure: true });
+
+    expect(httpClient).toHaveBeenCalledTimes(2);
+    expect(result.figureCode).toBe("#cetz.canvas({})");
+    const secondCallBody = JSON.parse(httpClient.mock.calls[1][1].body);
+    const secondPrompt = secondCallBody.messages.map((m: { content: string }) => m.content).join("\n");
+    expect(secondPrompt).toContain("figureCode is empty");
+  });
+
+  it("throws AiInvalidResponseError when the placeholder-alternatives check fails on both attempts", async () => {
+    const placeholderQuestion = {
+      bodyTypst: "¿Cuál es el resultado de $1 + 1$?",
+      alternatives: ["1", "2", "3", "4", "5"],
+      correctAnswer: "b",
+      figureCode: null,
+    };
+    const httpClient = jest
+      .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+      .mockReturnValue(jsonResponse(200, chatCompletion({ content: JSON.stringify(placeholderQuestion) })));
+    const adapter = new OpenRouterAdapter({
+      apiKey: "sk-test-key",
+      model: "deepseek/deepseek-r1:free",
+      httpClient,
+    });
+
+    await expect(adapter.generate(INPUT)).rejects.toBeInstanceOf(AiInvalidResponseError);
+    expect(httpClient).toHaveBeenCalledTimes(2);
+  });
+
+  it("does NOT run the content-plausibility guard for reviseQuestion/extractFromImage (no course/topic context)", async () => {
+    const placeholderQuestion = {
+      bodyTypst: "¿Cuál es el resultado de $1 + 1$?",
+      alternatives: ["1", "2", "3", "4", "5"],
+      correctAnswer: "b",
+      figureCode: null,
+    };
+    const httpClient = jest
+      .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+      .mockReturnValueOnce(
+        jsonResponse(200, chatCompletion({ content: JSON.stringify(placeholderQuestion) })),
+      );
+    const adapter = new OpenRouterAdapter({
+      apiKey: "sk-test-key",
+      model: "deepseek/deepseek-r1:free",
+      httpClient,
+    });
+
+    const result = await adapter.reviseQuestion(REVISE_INPUT);
+
+    expect(httpClient).toHaveBeenCalledTimes(1);
+    expect(result.alternatives).toEqual(["1", "2", "3", "4", "5"]);
+  });
+
   describe("reviseQuestion", () => {
     it("returns the validated question, with correctAnswer as a LETTER (never converted to an index)", async () => {
       const httpClient = jest

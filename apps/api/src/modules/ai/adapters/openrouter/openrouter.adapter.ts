@@ -15,6 +15,7 @@ import {
   buildOpenRouterReviseRequestBody,
   OpenRouterRequestBody,
 } from "./openrouter-request-builder";
+import { assessGeneratedQuestionPlausibility } from "./openrouter-content-plausibility-validator";
 import { parseGeneratedQuestionContent } from "./openrouter-response-parser";
 import { validateGeneratedQuestionShape } from "./openrouter-response-validator";
 import { parseOpenRouterSseBuffer } from "./openrouter-sse-parser";
@@ -122,6 +123,7 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
       (previousError) => buildOpenRouterRequestBody(this.config.model, input, { previousError }),
       onProgress,
       previousCompileError,
+      (question) => assessGeneratedQuestionPlausibility(question, input),
     );
   }
 
@@ -167,6 +169,7 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
     buildRequestBody: (previousError: string | undefined) => OpenRouterRequestBody,
     onProgress?: (event: GenerateProgressEvent) => void,
     seedError?: string,
+    contentGuard?: (question: GeneratedQuestion) => void,
   ): Promise<GeneratedQuestion> {
     let lastOutcome: AttemptOutcome | undefined = seedError ? { ok: false, error: seedError } : undefined;
 
@@ -175,8 +178,8 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
         onProgress?.({ type: "restart" });
       }
       const outcome = onProgress
-        ? await this.attemptStreaming(buildRequestBody(lastOutcome?.error), onProgress)
-        : await this.attempt(buildRequestBody(lastOutcome?.error));
+        ? await this.attemptStreaming(buildRequestBody(lastOutcome?.error), onProgress, contentGuard)
+        : await this.attempt(buildRequestBody(lastOutcome?.error), contentGuard);
       if (outcome.ok && outcome.question) {
         return outcome.question;
       }
@@ -189,7 +192,10 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
     );
   }
 
-  private async attempt(requestBody: OpenRouterRequestBody): Promise<AttemptOutcome> {
+  private async attempt(
+    requestBody: OpenRouterRequestBody,
+    contentGuard?: (question: GeneratedQuestion) => void,
+  ): Promise<AttemptOutcome> {
     const response = await this.httpClient(this.baseUrl, {
       method: "POST",
       headers: {
@@ -213,6 +219,7 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
       rawContent = extractMessageContent(json);
       const parsed = parseGeneratedQuestionContent(rawContent);
       const question = validateGeneratedQuestionShape(parsed);
+      contentGuard?.(question);
       return { ok: true, question };
     } catch (err) {
       return { ok: false, error: (err as Error).message, rawContent };
@@ -222,6 +229,7 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
   private async attemptStreaming(
     requestBody: OpenRouterRequestBody,
     onProgress: (event: GenerateProgressEvent) => void,
+    contentGuard?: (question: GeneratedQuestion) => void,
   ): Promise<AttemptOutcome> {
     const response = await this.sseHttpClient(this.baseUrl, {
       method: "POST",
@@ -264,6 +272,7 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
     try {
       const parsed = parseGeneratedQuestionContent(rawContent);
       const question = validateGeneratedQuestionShape(parsed);
+      contentGuard?.(question);
       return { ok: true, question };
     } catch (err) {
       return { ok: false, error: (err as Error).message, rawContent };
