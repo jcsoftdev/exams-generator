@@ -143,6 +143,14 @@ export function validateGeneratedQuestionShape(
     throw new TypeError(`Invalid AI-generated question: ${errors.join("; ")}`);
   }
 
+  // `suggestedCourse`/`suggestedTopic` are extract-only, best-effort, and
+  // never validated as errors — a `null`/absent/blank guess just means
+  // "not confident enough", not a malformed response (mirrors `figureCode`'s
+  // null-normalization above). `generate`/`reviseQuestion` payloads never
+  // carry these keys at all, so this is a no-op for those callers.
+  const rawSuggestedCourse = payload.suggestedCourse;
+  const rawSuggestedTopic = payload.suggestedTopic;
+
   return {
     question: {
       bodyTypst: payload.bodyTypst as string,
@@ -151,6 +159,14 @@ export function validateGeneratedQuestionShape(
       figureCode:
         typeof rawFigureCode === "string" && rawFigureCode.length > 0
           ? rawFigureCode
+          : undefined,
+      suggestedCourseName:
+        typeof rawSuggestedCourse === "string" && rawSuggestedCourse.trim().length > 0
+          ? rawSuggestedCourse
+          : undefined,
+      suggestedTopicName:
+        typeof rawSuggestedTopic === "string" && rawSuggestedTopic.trim().length > 0
+          ? rawSuggestedTopic
           : undefined,
     },
     selfReport: {

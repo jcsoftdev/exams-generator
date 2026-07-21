@@ -137,6 +137,13 @@ export interface AiRevisedQuestion {
   readonly alternatives: readonly string[];
   readonly correctAnswer: string;
   readonly figureCode?: string | null;
+  /**
+   * `extract` only — best-effort course/topic name guesses, present only
+   * when the model was confident enough to name them (never a made-up
+   * name). `revise`'s response never carries these.
+   */
+  readonly suggestedCourseName?: string;
+  readonly suggestedTopicName?: string;
 }
 
 export type GenerationJobStatus = 'pending' | 'running' | 'completed' | 'failed' | 'cancelled';

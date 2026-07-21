@@ -19,6 +19,56 @@ const DIFFICULTY_LABELS: Record<Difficulty, string> = {
 };
 type Tab = 'photo' | 'structured';
 
+const CORRECT_ANSWER_LETTERS = ['a', 'b', 'c', 'd', 'e'];
+
+/**
+ * `ExtractQuestionService`/`ReviseQuestionService` return `correctAnswer` as
+ * a 0-based INDEX (bank storage/PATCH convention) — but this UI's "Clave"
+ * field is letter-labeled (a/b/c/d/e) and manual entry into it is also a
+ * letter. Converting at this boundary keeps `sCorrectAnswer` ALWAYS a
+ * letter, whether it got there by typing or by AI autofill.
+ */
+function indexToCorrectAnswerLetter(index: string): string {
+  const letter = CORRECT_ANSWER_LETTERS[Number(index)];
+  return letter ?? index;
+}
+
+/** Inverse of `indexToCorrectAnswerLetter` — used right before the wire call, which still expects the 0-based index. */
+function correctAnswerLetterToIndex(letter: string): string {
+  const index = CORRECT_ANSWER_LETTERS.indexOf(letter.trim().toLowerCase());
+  return index === -1 ? letter : String(index);
+}
+
+/** Accent/case/whitespace-insensitive compare — the AI's course/topic guess won't always match the DB's exact casing. */
+function normalizeForMatch(value: string): string {
+  return value
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .toLowerCase()
+    .trim();
+}
+
+/** Course names are a small, standard catalog (Aritmética, Comunicación...) — an exact normalized match is reliable. */
+function findCourseMatch(courses: readonly Course[], guess: string | undefined): Course | undefined {
+  if (!guess) return undefined;
+  const normalizedGuess = normalizeForMatch(guess);
+  return courses.find((course) => normalizeForMatch(course.name) === normalizedGuess);
+}
+
+/** Topic names are long/compound (e.g. "sintaxis - complementos oracionales (complemento agente)") — substring containment either way is more forgiving than an exact match. */
+function findTopicMatch(topics: readonly Topic[], guess: string | undefined): Topic | undefined {
+  if (!guess) return undefined;
+  const normalizedGuess = normalizeForMatch(guess);
+  return topics.find((topic) => {
+    const normalizedName = normalizeForMatch(topic.name);
+    return (
+      normalizedName === normalizedGuess ||
+      normalizedName.includes(normalizedGuess) ||
+      normalizedGuess.includes(normalizedName)
+    );
+  });
+}
+
 function toOptions(items: readonly { id: string; name: string }[]): SelectOption<string>[] {
   return items.map((item) => ({ value: item.id, label: item.name }));
 }
@@ -196,14 +246,15 @@ export class BankNewComponent {
     );
   }
 
+  /**
+   * Gate for "Extraer con IA" — deliberately just Grado + imagen. Curso/Tema
+   * are best-effort SUGGESTED by the AI and matched client-side (see
+   * `extractWithAi`); Nivel is never touched by AI at all — same reason
+   * `openrouter-difficulty-gate.ts` never trusts the model's own
+   * self-reported difficulty on the generate path, a human always picks it.
+   */
   protected photoTaxonomyValid(): boolean {
-    return (
-      !!this.pCourseId() &&
-      !!this.pTopicId() &&
-      !!this.pDifficulty() &&
-      !!this.pGradeLevel() &&
-      !!this.pImage()
-    );
+    return !!this.pGradeLevel() && !!this.pImage();
   }
 
   protected submitPhoto(): void {
@@ -234,33 +285,79 @@ export class BankNewComponent {
   protected extractWithAi(): void {
     const image = this.pImage();
     const gradeLevel = this.pGradeLevel();
-    const courseId = this.pCourseId();
-    const topicId = this.pTopicId();
-    const difficulty = this.pDifficulty();
-    if (!image || this.extracting() || !this.photoTaxonomyValid()) return;
+    // Manual picks on the photo tab (if the human made any) always win over
+    // an AI guess — the guess only fills in what the human left blank.
+    const photoCourseId = this.pCourseId();
+    const photoTopicId = this.pTopicId();
+    if (!image || !gradeLevel || this.extracting()) return;
     this.extracting.set(true);
     this.extractError.set(null);
 
     this.aiService.extractQuestionFromImage(image).subscribe({
       next: (extracted) => {
-        this.sDifficulty.set(difficulty);
         this.sBody.set(extracted.bodyTypst);
         this.sAlternatives.set(extracted.alternatives.join('\n'));
-        this.sCorrectAnswer.set(extracted.correctAnswer);
+        this.sCorrectAnswer.set(indexToCorrectAnswerLetter(extracted.correctAnswer));
+        // sDifficulty is intentionally left untouched — Nivel is never
+        // auto-filled from AI, the human always picks it.
 
-        if (this.sGradeLevel() !== gradeLevel) {
-          this.pendingStructuredCourseId = courseId;
-          this.pendingStructuredTopicId = topicId;
-        }
-        this.sGradeLevel.set(gradeLevel);
+        this.resolveStructuredTaxonomy({
+          gradeLevel,
+          photoCourseId,
+          photoTopicId,
+          suggestedCourseName: extracted.suggestedCourseName,
+          suggestedTopicName: extracted.suggestedTopicName,
+        });
 
         this.extracting.set(false);
         this.setTab('structured');
       },
-      error: () => {
+      error: (error: HttpErrorResponse) => {
         this.extracting.set(false);
-        this.extractError.set('No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.');
+        this.extractError.set(
+          error.status === 429
+            ? 'La IA alcanzó su límite de uso gratuito. Espera unos minutos e inténtalo de nuevo.'
+            : 'No se pudo leer la pregunta desde la imagen. Inténtalo de nuevo.',
+        );
       },
+    });
+  }
+
+  /**
+   * Resolves Curso/Tema for the structured tab after extraction: a manual
+   * pick on the photo tab always wins; otherwise best-effort matches the
+   * AI's suggested names against the taxonomy already loaded for this grade
+   * (`pCourses`) and, once a course is known, that course's topics. No
+   * match at any step just means both stay blank — the human picks them,
+   * same as before this feature existed.
+   */
+  private resolveStructuredTaxonomy(params: {
+    gradeLevel: string;
+    photoCourseId: string;
+    photoTopicId: string;
+    suggestedCourseName: string | undefined;
+    suggestedTopicName: string | undefined;
+  }): void {
+    const { gradeLevel, photoCourseId, photoTopicId, suggestedCourseName, suggestedTopicName } = params;
+
+    const applyPreselect = (courseId: string, topicId: string): void => {
+      if (this.sGradeLevel() !== gradeLevel) {
+        this.pendingStructuredCourseId = courseId;
+        this.pendingStructuredTopicId = topicId;
+      }
+      this.sGradeLevel.set(gradeLevel);
+    };
+
+    const courseId = photoCourseId || findCourseMatch(this.pCourses(), suggestedCourseName)?.id || '';
+
+    if (photoTopicId || !courseId || !suggestedTopicName) {
+      applyPreselect(courseId, photoTopicId);
+      return;
+    }
+
+    this.taxonomyService.getTopics(courseId, gradeLevel).subscribe({
+      next: (topics) => applyPreselect(courseId, findTopicMatch(topics, suggestedTopicName)?.id ?? ''),
+      error: () => applyPreselect(courseId, ''),
     });
   }
 
@@ -293,7 +390,7 @@ export class BankNewComponent {
         topicId: this.sTopicId(),
         difficulty: this.sDifficulty()!,
         gradeLevel: this.sGradeLevel()!,
-        correctAnswer: this.sCorrectAnswer(),
+        correctAnswer: correctAnswerLetterToIndex(this.sCorrectAnswer()),
         bodyTypst: this.sBody(),
         alternatives: this.alternativesList(),
       })

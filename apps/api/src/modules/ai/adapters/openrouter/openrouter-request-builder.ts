@@ -336,12 +336,45 @@ export function buildOpenRouterReviseRequestBody(
 const EXTRACT_SYSTEM_PROMPT = [
   "Eres un asistente que extrae preguntas tipo examen de admisión desde fotos de material impreso o manuscrito peruano.",
   "Lee la imagen y transcribe la pregunta que contiene: enunciado, alternativas y, si es identificable, la alternativa correcta.",
+  "Además, sugiere el curso (ej. \"Aritmética\", \"Comunicación\", \"Historia del Perú\") y el tema/subtema específico que la pregunta evalúa, SOLO si puedes inferirlos con confianza del contenido de la imagen — si no estás seguro, responde null en ese campo en vez de adivinar.",
   "Responde EXCLUSIVAMENTE con el objeto JSON solicitado por el schema, sin explicaciones ni texto adicional.",
   TYPST_MATH_RULES,
   MITEX_RULES,
   CETZ_RULES,
   ALTERNATIVES_RULES,
 ].join(" ");
+
+/**
+ * Extract-only variant of `RESPONSE_JSON_SCHEMA` — adds `suggestedCourse`/
+ * `suggestedTopic` (both nullable, same "answer or null" convention as
+ * `figureCode`) so the human doesn't have to pick Curso/Tema before running
+ * extraction; the frontend fuzzy-matches these against the taxonomy it
+ * already loaded for the selected grade, blank on no match. A SEPARATE
+ * constant, not a mutation of `RESPONSE_JSON_SCHEMA` — that object is the
+ * exact same reference `buildOpenRouterRequestBody`/
+ * `buildOpenRouterReviseRequestBody` pass to OpenRouter; generate/revise
+ * have no course/topic-guessing job and must never be asked for these.
+ */
+const EXTRACT_RESPONSE_JSON_SCHEMA: OpenRouterJsonSchema = {
+  name: "extracted_question",
+  strict: true,
+  schema: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      ...RESPONSE_JSON_SCHEMA.schema.properties,
+      suggestedCourse: {
+        type: ["string", "null"],
+        description: "Nombre del curso al que pertenece la pregunta, o null si no se puede inferir con confianza.",
+      },
+      suggestedTopic: {
+        type: ["string", "null"],
+        description: "Nombre del tema/subtema específico que evalúa la pregunta, o null si no se puede inferir con confianza.",
+      },
+    },
+    required: [...RESPONSE_JSON_SCHEMA.schema.required, "suggestedCourse", "suggestedTopic"],
+  },
+};
 
 /**
  * Builds the OpenRouter chat-completions request body for one
@@ -386,7 +419,7 @@ export function buildOpenRouterExtractRequestBody(
     ],
     response_format: {
       type: "json_schema",
-      json_schema: RESPONSE_JSON_SCHEMA,
+      json_schema: EXTRACT_RESPONSE_JSON_SCHEMA,
     },
   };
 }

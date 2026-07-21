@@ -147,7 +147,8 @@ describe('BankNewComponent', () => {
       topicId: 't1',
       difficulty: 'easy',
       gradeLevel: 'pre',
-      correctAnswer: 'a',
+      // Clave field is letter-labeled ('a') — wire format is the 0-based index ('0').
+      correctAnswer: '0',
       bodyTypst: '¿Cuánto es 2+2?',
       alternatives: ['4', '3', '5', '6'],
     });
@@ -336,7 +337,7 @@ describe('BankNewComponent', () => {
       expect(extractQuestionFromImage).not.toHaveBeenCalled();
     });
 
-    it('on success: fills sBody/sAlternatives/sCorrectAnswer/sDifficulty, copies course/topic/grade from the photo tab, and switches to the structured tab', () => {
+    it('on success: fills sBody/sAlternatives/sCorrectAnswer, copies the MANUALLY picked course/topic/grade from the photo tab, leaves Nivel untouched, and switches to the structured tab', () => {
       const { fixture, compiled, getCourses, getTopics } = setup();
       fillPhotoTaxonomy(fixture);
       pickImage(fixture, compiled);
@@ -348,7 +349,7 @@ describe('BankNewComponent', () => {
         sBody: () => string;
         sAlternatives: () => string;
         sCorrectAnswer: () => string;
-        sDifficulty: () => string;
+        sDifficulty: () => string | null;
         sGradeLevel: () => string | null;
         sCourseId: () => string;
         sTopicId: () => string;
@@ -357,8 +358,10 @@ describe('BankNewComponent', () => {
       };
       expect(instance.sBody()).toBe('Enunciado desde imagen');
       expect(instance.sAlternatives()).toBe('Alt A extraída\nAlt B extraída');
-      expect(instance.sCorrectAnswer()).toBe('1');
-      expect(instance.sDifficulty()).toBe('easy');
+      // Mocked extract response returns index '1' (backend wire format) — UI shows the letter 'b'.
+      expect(instance.sCorrectAnswer()).toBe('b');
+      // Nivel is a human call, never auto-filled from AI — stays whatever it already was (null, never touched).
+      expect(instance.sDifficulty()).toBe(null);
       expect(instance.sGradeLevel()).toBe('pre');
       expect(getCourses).toHaveBeenCalledWith('pre');
       expect(instance.sCourseId()).toBe('c1');
@@ -366,6 +369,62 @@ describe('BankNewComponent', () => {
       expect(instance.sTopicId()).toBe('t1');
       expect(instance.tab()).toBe('structured');
       expect(instance.extracting()).toBe(false);
+    });
+
+    it('enables extraction with ONLY Grado + imagen (no Curso/Tema/Nivel picked), and matches the AI-suggested course/topic against the loaded taxonomy', () => {
+      const { fixture, compiled, getCourses, getTopics } = setup({
+        extractQuestionFromImageImpl: () =>
+          of({
+            bodyTypst: 'Enunciado desde imagen',
+            alternatives: ['A', 'B'],
+            correctAnswer: '0',
+            suggestedCourseName: 'comunicación', // lowercase/accented on purpose — must still match "Comunicación" (c2)
+            suggestedTopicName: 'lectora', // partial — must still match "Comprensión lectora" (t2) via substring
+          } satisfies AiRevisedQuestion),
+      });
+      set(fixture, 'pGradeLevel', 'pre');
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as {
+        sCourseId: () => string;
+        sTopicId: () => string;
+        sDifficulty: () => string | null;
+        tab: () => string;
+      };
+      expect(getCourses).toHaveBeenCalledWith('pre');
+      expect(instance.sCourseId()).toBe('c2');
+      expect(getTopics).toHaveBeenCalledWith('c2', 'pre');
+      expect(instance.sTopicId()).toBe('t2');
+      expect(instance.sDifficulty()).toBe(null);
+      expect(instance.tab()).toBe('structured');
+    });
+
+    it('leaves Curso/Tema blank when the AI suggestion matches nothing in the loaded taxonomy', () => {
+      const { fixture, compiled } = setup({
+        extractQuestionFromImageImpl: () =>
+          of({
+            bodyTypst: 'Enunciado desde imagen',
+            alternatives: ['A', 'B'],
+            correctAnswer: '0',
+            suggestedCourseName: 'Curso Inexistente',
+            suggestedTopicName: 'Tema inexistente',
+          } satisfies AiRevisedQuestion),
+      });
+      set(fixture, 'pGradeLevel', 'pre');
+      pickImage(fixture, compiled);
+
+      (fixture.componentInstance as unknown as { extractWithAi(): void }).extractWithAi();
+      fixture.detectChanges();
+
+      const instance = fixture.componentInstance as unknown as {
+        sCourseId: () => string;
+        sTopicId: () => string;
+      };
+      expect(instance.sCourseId()).toBe('');
+      expect(instance.sTopicId()).toBe('');
     });
 
     it('on error: sets extractError, stays on the photo tab, and resets extracting()', () => {

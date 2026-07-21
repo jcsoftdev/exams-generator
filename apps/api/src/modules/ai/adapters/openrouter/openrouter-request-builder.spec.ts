@@ -261,11 +261,37 @@ describe("buildOpenRouterExtractRequestBody", () => {
     expect(body.model).toBe("some/free-model:free");
   });
 
-  it("requests the SAME JSON schema buildOpenRouterRequestBody asks for", () => {
+  it("requests the SAME base question shape as buildOpenRouterRequestBody, PLUS nullable suggestedCourse/suggestedTopic", () => {
     const body = buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT);
+    const generateSchema = expectedGeneratedQuestionSchema() as unknown as {
+      properties: Record<string, unknown>;
+      required: readonly string[];
+    };
 
     expect(body.response_format.type).toBe("json_schema");
-    expect(body.response_format.json_schema.schema).toEqual(expectedGeneratedQuestionSchema());
+    const schema = body.response_format.json_schema.schema as unknown as {
+      properties: Record<string, unknown>;
+      required: readonly string[];
+    };
+    expect(schema.properties).toMatchObject(generateSchema.properties);
+    expect(schema.properties.suggestedCourse).toEqual({
+      type: ["string", "null"],
+      description: expect.any(String),
+    });
+    expect(schema.properties.suggestedTopic).toEqual({
+      type: ["string", "null"],
+      description: expect.any(String),
+    });
+    expect(schema.required).toEqual(
+      expect.arrayContaining([...generateSchema.required, "suggestedCourse", "suggestedTopic"]),
+    );
+  });
+
+  it("tells the model to guess course/topic ONLY when confident, null otherwise", () => {
+    const body = buildOpenRouterExtractRequestBody("some/free-model:free", EXTRACT_INPUT);
+
+    const promptText = promptTextOf(body);
+    expect(promptText).toContain("null");
   });
 
   it("produces a multimodal user message with an image_url data-URI part built from the base64-encoded image + mimeType", () => {

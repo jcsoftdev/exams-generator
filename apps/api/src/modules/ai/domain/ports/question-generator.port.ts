@@ -39,6 +39,16 @@ export interface GeneratedQuestion {
   readonly correctAnswer: string;
   /** CeTZ figure source, present only when `withFigure` was requested. */
   readonly figureCode?: string;
+  /**
+   * `extractFromImage` only — best-effort course/topic name guesses so the
+   * caller can pre-fill Curso/Tema without asking the human to pick them
+   * before running extraction. Absent/undefined whenever the model wasn't
+   * confident enough to guess (never a made-up name); `generate`/
+   * `reviseQuestion` never populate these (course/topic are already KNOWN
+   * inputs on those paths).
+   */
+  readonly suggestedCourseName?: string;
+  readonly suggestedTopicName?: string;
 }
 
 /** Input for `QuestionGeneratorPort.reviseQuestion()` — AI-assisted edit of an existing question. */

@@ -121,4 +121,39 @@ describe("validateGeneratedQuestionShape", () => {
     });
     expect(result.question.bodyTypst).toContain('#mi("\\frac{a}{b}")');
   });
+
+  describe("suggestedCourse/suggestedTopic (extract-only, best-effort)", () => {
+    it("carries them through as suggestedCourseName/suggestedTopicName when present", () => {
+      const result = validateGeneratedQuestionShape({
+        ...VALID,
+        suggestedCourse: "Comunicación",
+        suggestedTopic: "Sinónimos y antónimos",
+      });
+
+      expect(result.question.suggestedCourseName).toBe("Comunicación");
+      expect(result.question.suggestedTopicName).toBe("Sinónimos y antónimos");
+    });
+
+    it.each([
+      ["both null", { suggestedCourse: null, suggestedTopic: null }],
+      ["both absent", {}],
+      ["both blank strings", { suggestedCourse: "  ", suggestedTopic: "" }],
+    ])("normalizes to undefined, never throws, when %s", (_label, overrides) => {
+      const result = validateGeneratedQuestionShape({ ...VALID, ...overrides });
+
+      expect(result.question.suggestedCourseName).toBeUndefined();
+      expect(result.question.suggestedTopicName).toBeUndefined();
+    });
+
+    it("does not reject the payload when they are the wrong type — never a hard validation error", () => {
+      const result = validateGeneratedQuestionShape({
+        ...VALID,
+        suggestedCourse: 42,
+        suggestedTopic: ["not", "a", "string"],
+      });
+
+      expect(result.question.suggestedCourseName).toBeUndefined();
+      expect(result.question.suggestedTopicName).toBeUndefined();
+    });
+  });
 });
