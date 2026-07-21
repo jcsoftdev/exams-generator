@@ -178,17 +178,22 @@ const ALTERNATIVES_RULES =
  * The "Dificultad" field alone is just a label — without a rigor anchor the
  * model calibrates "easy"/"medium"/"hard" against its own generic sense of
  * difficulty, not this exam's actual standard. This gave us an "easy"
- * geometry question dressed up with harder-than-intended reasoning. Anchor
- * each label to a concrete, checkable criterion (step count + concept count),
- * with a worked reference example for "easy" — the same technique
+ * geometry question dressed up with harder-than-intended reasoning, AND the
+ * mirror-image failure: a "hard" request ("volumen de un cubo de arista 4cm")
+ * came back as a single plug-into-formula step (V = 4³), because only
+ * "easy" had a worked reference example — "medium"/"hard" had nothing but an
+ * abstract descriptor to calibrate against, and plug-and-chug is the most
+ * natural completion for a bare topic name regardless of the label. Anchor
+ * ALL THREE labels to a concrete, checkable criterion (step count + concept
+ * count) with a worked reference example each — the same technique
  * `TYPST_MATH_RULES` uses (concrete examples beat vague adjectives).
  */
 const DIFFICULTY_CALIBRATION_RULES = [
   "Calibra el NIVEL DE EXIGENCIA real de la pregunta según la dificultad pedida. Las tres etiquetas son una PROGRESIÓN de análisis, NO 'mecánico vs analítico' — hasta las preguntas \"easy\" deben exigir que el estudiante LEA e INTERPRETE el enunciado, nunca solo recuerde una fórmula de memoria sin pensar. El objetivo es que cada nivel sea una prueba real que mejore las habilidades del estudiante, no un plug-and-chug vacío:",
   '"easy": análisis SIMPLE y directo — el estudiante debe identificar e interpretar cuál única relación o propiedad aplica (puede no estar dicha palabra por palabra en el enunciado), pero la interpretación es directa, sin casos que evaluar ni datos ocultos, y los números dan un resultado limpio. Ejemplo de calibre: en un triángulo rectángulo con altura trazada a la hipotenusa, dados los segmentos 4 y 9, hallar la altura (el estudiante debe reconocer que aplica la relación altura² = producto de los segmentos → altura = 6 — eso YA es interpretar el enunciado, no pura memorización).',
-  '"medium": análisis MODERADO — el estudiante debe interpretar el enunciado para identificar qué relación o propiedad aplica cuando NO es evidente a primera vista, o combinar dos conceptos cuya conexión no está declarada, o interpretar un dato indirecto antes de poder plantear la solución.',
-  '"hard": análisis PROFUNDO — evaluar varios casos o condiciones antes de decidir cuál aplica, justificar por qué una estrategia es válida sobre otra, interpretar información no explícita en un problema contextualizado, o sintetizar 3 o más conceptos cuya conexión el estudiante debe descubrir por sí mismo.',
-  'NUNCA generes una pregunta "easy" que sea pura memorización sin ninguna interpretación, ni una que en realidad exige el análisis de "medium"/"hard" (varios casos, dato oculto, conexión no evidente entre conceptos, estrategia a decidir).',
+  '"medium": análisis MODERADO — el estudiante debe interpretar el enunciado para identificar qué relación o propiedad aplica cuando NO es evidente a primera vista, o combinar dos conceptos cuya conexión no está declarada, o interpretar un dato indirecto antes de poder plantear la solución. Ejemplo de calibre: dado un cubo inscrito en una esfera de radio 3√3, hallar el volumen del cubo (el estudiante debe conectar la diagonal del cubo con el diámetro de la esfera — d = a√3 = 2r — ANTES de poder aplicar V = a³; la fórmula del volumen sola no alcanza).',
+  '"hard": análisis PROFUNDO — evaluar varios casos o condiciones antes de decidir cuál aplica, justificar por qué una estrategia es válida sobre otra, interpretar información no explícita en un problema contextualizado, o sintetizar 3 o más conceptos cuya conexión el estudiante debe descubrir por sí mismo. Ejemplo de calibre: un tanque cúbico se llena de agua hasta la mitad de su altura; al sumergir una esfera tangente a las 4 caras laterales, el nivel sube 2 cm — hallar la arista del cubo (exige plantear el volumen desplazado, relacionar el diámetro de la esfera con la arista del cubo, y resolver la ecuación resultante — ningún paso es una fórmula aislada).',
+  'NUNCA generes una pregunta "easy" que sea pura memorización sin ninguna interpretación, ni una que en realidad exige el análisis de "medium"/"hard" (varios casos, dato oculto, conexión no evidente entre conceptos, estrategia a decidir). Y AL REVÉS: NUNCA generes una pregunta "medium" o "hard" que en el fondo sea un solo paso de sustituir datos en una fórmula directa (ese es el error opuesto — la etiqueta dice "hard" pero el ejercicio real es "easy"). Si el tema pedido tiende a una fórmula de un solo paso (ej. volumen de un sólido con datos dados directamente), para "medium"/"hard" agrega la interpretación o combinación de conceptos que falte (dato indirecto, condición oculta, combinar dos figuras) — NUNCA entregues igual el ejercicio de un solo paso con la etiqueta más alta.',
 ].join(" ");
 
 const SYSTEM_PROMPT = [
