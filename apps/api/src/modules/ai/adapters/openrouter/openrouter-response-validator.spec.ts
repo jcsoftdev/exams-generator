@@ -62,6 +62,21 @@ describe("validateGeneratedQuestionShape", () => {
     expect(result.bodyTypst).toBe("Primera línea \\ Segunda línea, con $1+1$ en medio.");
   });
 
+  it("accepts a backslash-non-letter escape used inside math mode ($...$)", () => {
+    // The test above puts its backslash OUTSIDE the only $...$ segment, so
+    // it never actually exercises the MATH_SEGMENT scanner — it only
+    // proves "backslash outside math is fine". This fixture puts a Typst
+    // line-break escape (backslash followed by a space, a non-letter)
+    // INSIDE the math segment, proving LATEX_COMMAND (/\\[a-zA-Z]+/)
+    // correctly does not false-positive on it once it's actually scanned.
+    const result = validateGeneratedQuestionShape({
+      ...VALID,
+      bodyTypst: "Resuelve: $x + 1 = 2 \\ y - 1 = 0$",
+    });
+
+    expect(result.bodyTypst).toBe("Resuelve: $x + 1 = 2 \\ y - 1 = 0$");
+  });
+
   it("accepts LaTeX wrapped in #mi(), even though it contains backslash commands", () => {
     const result = validateGeneratedQuestionShape({
       ...VALID,
@@ -70,5 +85,24 @@ describe("validateGeneratedQuestionShape", () => {
     });
 
     expect(result.bodyTypst).toContain('#mi("\\frac{1}{2}');
+  });
+
+  it("is not fooled by a literal $ inside #mi(), in either direction", () => {
+    // A $ inside #mi() must not pair with a later real $...$ segment —
+    // the genuine \frac inside $...$ must still be caught.
+    expect(() =>
+      validateGeneratedQuestionShape({
+        ...VALID,
+        bodyTypst: '#mi("a$b") texto $\\frac{1}{2}$ fin.',
+      }),
+    ).toThrow(/\\frac/);
+
+    // A $ inside #mi() must not falsely pair with an unrelated earlier $
+    // (e.g. currency) and pull the mitex content into a flagged "segment".
+    const result = validateGeneratedQuestionShape({
+      ...VALID,
+      bodyTypst: 'Precio $5. Área #mi("\\frac{a}{b}") aquí $x$ final.',
+    });
+    expect(result.bodyTypst).toContain('#mi("\\frac{a}{b}")');
   });
 });

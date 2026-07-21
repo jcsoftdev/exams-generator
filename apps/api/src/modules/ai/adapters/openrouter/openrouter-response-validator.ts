@@ -7,6 +7,8 @@ const VALID_ANSWER_LETTERS = new Set(["a", "b", "c", "d", "e"]);
 
 const MATH_SEGMENT = /\$([^$]*)\$/g;
 const LATEX_COMMAND = /\\[a-zA-Z]+/;
+const MITEX_MI_CALL = /#mi\("(?:[^"\\]|\\.)*"\)/g;
+const MITEX_BLOCK_CALL = /#mitex\(`[^`]*`\)/g;
 
 /**
  * Models default to LaTeX math commands (`\frac`, `\circ`, `\angle`...)
@@ -19,9 +21,25 @@ const LATEX_COMMAND = /\\[a-zA-Z]+/;
  * Scoped to `$...$` only — Typst's own escape syntax (`\ ` line break,
  * `\$`, `\\`) is backslash followed by a NON-letter and outside math mode,
  * so it's never flagged.
+ *
+ * `#mi("...")`/`#mitex(\`...\`)` mitex escape-hatch calls (see
+ * `MITEX_RULES` in `openrouter-request-builder.ts`) are stripped out of
+ * `bodyTypst` entirely BEFORE the `$...$` scan runs — they are not merely
+ * skipped once found. A `$` character can legitimately appear inside a
+ * mitex call's argument, and left in place it would desync the
+ * left-to-right `$`-pairing for the rest of the string: either shifting a
+ * real `$...$` segment out of detection (a genuine LaTeX command slips
+ * through unflagged) or pulling the mitex argument itself into a spuriously
+ * "detected" math segment (a legitimate backslash command gets falsely
+ * flagged). Stripping the mitex spans first guarantees a `$` inside one of
+ * them can never participate in pairing at all.
  */
 function findLatexCommandInMath(bodyTypst: string): string | undefined {
-  for (const match of bodyTypst.matchAll(MATH_SEGMENT)) {
+  const withoutMitexCalls = bodyTypst
+    .replace(MITEX_MI_CALL, "")
+    .replace(MITEX_BLOCK_CALL, "");
+
+  for (const match of withoutMitexCalls.matchAll(MATH_SEGMENT)) {
     const command = match[1].match(LATEX_COMMAND);
     if (command) {
       return command[0];

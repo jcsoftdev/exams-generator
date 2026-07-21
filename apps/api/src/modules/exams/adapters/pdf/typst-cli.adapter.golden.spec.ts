@@ -78,6 +78,11 @@ describeIfTypst("TypstCliAdapter golden compile (real typst binary)", () => {
     expect(pdf.subarray(0, 5).toString("ascii")).toBe("%PDF-");
   });
 
+  // Unlike its sibling golden tests, this one needs real network access:
+  // `typst` fetches the `@preview/mitex:0.2.7` package from the Typst
+  // registry on first compile. If this test fails in CI, check registry
+  // reachability first — it likely reads as "mitex broken" but is actually
+  // "registry unreachable".
   it("compiles a structured question using LaTeX math via mitex into a valid PDF", async () => {
     const adapter = new TypstCliAdapter();
 
