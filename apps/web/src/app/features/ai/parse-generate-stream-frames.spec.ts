@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseGenerateStreamFrames } from './parse-generate-stream-frames';
+import { parseGenerateStreamFrames, parseGenerationJobStreamFrames } from './parse-generate-stream-frames';
 
 function frame(payload: unknown): string {
   return `data: ${JSON.stringify(payload)}\n\n`;
@@ -39,5 +39,17 @@ describe('parseGenerateStreamFrames', () => {
 
   it('returns no events for an empty buffer', () => {
     expect(parseGenerateStreamFrames('')).toEqual({ events: [], remainder: '' });
+  });
+});
+
+describe('parseGenerationJobStreamFrames', () => {
+  it('parses one complete job frame, keeping an incomplete trailer in remainder', () => {
+    const complete = frame({ id: 'job-1', status: 'running', createdCount: 1 });
+    const incomplete = frame({ id: 'job-1', status: 'completed' }).slice(0, 10);
+
+    const { events, remainder } = parseGenerationJobStreamFrames(complete + incomplete);
+
+    expect(events).toEqual([{ id: 'job-1', status: 'running', createdCount: 1 }]);
+    expect(remainder).toBe(incomplete);
   });
 });

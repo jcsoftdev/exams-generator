@@ -6,7 +6,7 @@ import { AuthTokenPayload } from "../auth/token.service";
 import { BankRepository } from "../bank/bank.repository";
 import { GenerateQuestionsInput, validateGenerateQuestionsInput } from "./domain/validate-generate-questions-input";
 import { GenerationJobData } from "./generation-jobs.processor";
-import { GenerationJobRecord, GenerationJobsRepository } from "./generation-jobs.repository";
+import { GenerationJobListRecord, GenerationJobRecord, GenerationJobsRepository } from "./generation-jobs.repository";
 
 export interface CreateGenerationJobDto {
   readonly courseId?: string;
@@ -15,6 +15,8 @@ export interface CreateGenerationJobDto {
   readonly gradeLevel?: string;
   readonly count?: number;
   readonly withFigure?: boolean;
+  /** Set by `GenerationJobDetailComponent.retry()` — the job this one resubmits. */
+  readonly retriedFromJobId?: string;
 }
 
 /**
@@ -47,6 +49,18 @@ export class GenerationJobsService {
       throw new NotFoundException("courseId/topicId not found, or topicId does not belong to courseId");
     }
 
+    let retryLink: { retriedFromJobId: string; rootJobId: string } | undefined;
+    if (dto.retriedFromJobId) {
+      const parent = await this.repository.getById(dto.retriedFromJobId, tenantId);
+      if (!parent) {
+        throw new NotFoundException(`Generation job not found: ${dto.retriedFromJobId}`);
+      }
+      // `rootJobId` always points at the chain's ORIGINAL job, never at
+      // `parent` itself — a retry-of-a-retry must still land in the same
+      // chain as the very first attempt, not start a new two-link chain.
+      retryLink = { retriedFromJobId: parent.id, rootJobId: parent.rootJobId ?? parent.id };
+    }
+
     const record = await this.repository.create({
       tenantId,
       createdBy: user.sub,
@@ -57,6 +71,7 @@ export class GenerationJobsService {
       gradeLevel: dto.gradeLevel as string,
       count: dto.count as number,
       withFigure: dto.withFigure ?? false,
+      ...retryLink,
     });
 
     try {
@@ -87,9 +102,19 @@ export class GenerationJobsService {
     user: AuthTokenPayload,
     page: number,
     pageSize: number,
-  ): Promise<{ items: GenerationJobRecord[]; total: number }> {
+  ): Promise<{ items: GenerationJobListRecord[]; total: number }> {
     const tenantId = this.requireTenant(user);
     return this.repository.list(tenantId, page, pageSize);
+  }
+
+  /** Full "historial de reintentos" for `jobId` — every attempt in its chain, oldest first, whether `jobId` is the original job or a later retry. */
+  async getChain(user: AuthTokenPayload, jobId: string): Promise<GenerationJobRecord[]> {
+    const tenantId = this.requireTenant(user);
+    const record = await this.repository.getById(jobId, tenantId);
+    if (!record) {
+      throw new NotFoundException(`Generation job not found: ${jobId}`);
+    }
+    return this.repository.listChain(tenantId, record.rootJobId ?? record.id);
   }
 
   /** Idempotent: cancelling an already-terminal job succeeds without error, matching `GenerationJobsRepository.requestCancel()`'s no-op semantics. */

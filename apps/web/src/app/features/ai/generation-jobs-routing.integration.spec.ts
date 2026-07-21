@@ -63,6 +63,8 @@ const JOB: GenerationJob = {
   createdQuestionIds: [],
   failedItems: [],
   cancelRequested: false,
+  retriedFromJobId: null,
+  rootJobId: null,
   createdAt: '2026-01-01T00:00:00.000Z',
   updatedAt: '2026-01-01T00:00:00.000Z',
   completedAt: '2026-01-01T00:05:00.000Z',
@@ -89,14 +91,15 @@ const JOB: GenerationJob = {
  * `shell.component.spec.ts`) — the routing itself is 100% real.
  */
 function setup() {
-  const getGenerationJob = vi.fn(() => of(JOB));
+  const streamGenerationJob = vi.fn(() => of(JOB));
   const listDrafts = vi.fn(() => of([]));
   const listGenerationJobs = vi.fn(() => of<GenerationJobListResult>({ items: [], total: 0 }));
+  const getGenerationJobChain = vi.fn(() => of({ items: [JOB] }));
 
   TestBed.configureTestingModule({
     providers: [
       provideRouter(routes),
-      { provide: AiService, useValue: { getGenerationJob, listDrafts, listGenerationJobs } },
+      { provide: AiService, useValue: { streamGenerationJob, listDrafts, listGenerationJobs, getGenerationJobChain } },
       {
         provide: AuthService,
         useValue: { isAuthenticated: () => true, currentRole: signal(null), logout: vi.fn() },
@@ -144,19 +147,19 @@ function setup() {
     ],
   });
 
-  return { getGenerationJob, listDrafts, listGenerationJobs };
+  return { streamGenerationJob, listDrafts, listGenerationJobs };
 }
 
 describe('AI generation-jobs routing (integration — real app.routes.ts)', () => {
   it('navigating to /app/ai/jobs/:id (AiGenerateComponent\'s + row-click target) resolves through the real route table to GenerationJobDetailComponent and loads that job', async () => {
-    const { getGenerationJob } = setup();
+    const { streamGenerationJob } = setup();
 
     const harness = await RouterTestingHarness.create('/app/ai/jobs/job-1');
 
     const detail = harness.fixture.debugElement.query(By.directive(GenerationJobDetailComponent));
     expect(detail).toBeTruthy();
     expect(detail.componentInstance).toBeInstanceOf(GenerationJobDetailComponent);
-    expect(getGenerationJob).toHaveBeenCalledWith('job-1');
+    expect(streamGenerationJob).toHaveBeenCalledWith('job-1');
   });
 
   it('navigating to /app/ai/jobs (AiGenerateComponent.goToHistory\'s target) resolves through the real route table to GenerationHistoryComponent and loads the list', async () => {

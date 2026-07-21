@@ -11,6 +11,7 @@ import {
   GenerateQuestionsResult,
   GenerateQuestionStreamEvent,
   GenerationJob,
+  GenerationJobChainResult,
   GenerationJobListResult,
 } from './ai.models';
 
@@ -342,6 +343,8 @@ describe('AiService', () => {
         createdQuestionIds: [],
         failedItems: [],
         cancelRequested: false,
+        retriedFromJobId: null,
+        rootJobId: null,
         createdAt: '2026-01-01T00:00:00.000Z',
         updatedAt: '2026-01-01T00:00:00.000Z',
         completedAt: null,
@@ -408,6 +411,63 @@ describe('AiService', () => {
       const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/jobs/job-1/cancel`);
       expect(req.request.method).toBe('POST');
       req.flush({});
+    });
+  });
+
+  describe('getGenerationJobChain', () => {
+    it('GETs /ai/questions/jobs/:id/chain', () => {
+      let result: GenerationJobChainResult | undefined;
+
+      service.getGenerationJobChain('job-1').subscribe((response) => (result = response));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/jobs/job-1/chain`);
+      expect(req.request.method).toBe('GET');
+      const chain: GenerationJobChainResult = { items: [] };
+      req.flush(chain);
+
+      expect(result).toEqual(chain);
+    });
+  });
+
+  describe('streamGenerationJob', () => {
+    function downloadProgressEvent(partialText: string): HttpDownloadProgressEvent {
+      return {
+        type: HttpEventType.DownloadProgress,
+        loaded: partialText.length,
+        total: partialText.length,
+        partialText,
+      };
+    }
+
+    it('GETs /ai/questions/jobs/:id/stream and emits each pushed job frame', () => {
+      const jobs: GenerationJob[] = [];
+      service.streamGenerationJob('job-1').subscribe((job) => jobs.push(job));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/jobs/job-1/stream`);
+      expect(req.request.method).toBe('GET');
+
+      const firstFrame = 'data: {"id":"job-1","status":"running","createdCount":1}\n\n';
+      req.event(downloadProgressEvent(firstFrame));
+      expect(jobs).toEqual([{ id: 'job-1', status: 'running', createdCount: 1 }]);
+
+      const secondFrame = firstFrame + 'data: {"id":"job-1","status":"completed","createdCount":3}\n\n';
+      req.event(downloadProgressEvent(secondFrame));
+      expect(jobs).toEqual([
+        { id: 'job-1', status: 'running', createdCount: 1 },
+        { id: 'job-1', status: 'completed', createdCount: 3 },
+      ]);
+
+      req.flush(secondFrame);
+    });
+
+    it('completes the observable once the server closes the connection', () => {
+      let completed = false;
+      service.streamGenerationJob('job-1').subscribe({ complete: () => (completed = true) });
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/jobs/job-1/stream`);
+      req.flush('data: {"id":"job-1","status":"completed","createdCount":3}\n\n');
+
+      expect(completed).toBe(true);
     });
   });
 });

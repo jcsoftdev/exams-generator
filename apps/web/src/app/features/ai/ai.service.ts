@@ -11,9 +11,10 @@ import {
   GenerateQuestionsResult,
   GenerateQuestionStreamEvent,
   GenerationJob,
+  GenerationJobChainResult,
   GenerationJobListResult,
 } from './ai.models';
-import { parseGenerateStreamFrames } from './parse-generate-stream-frames';
+import { parseGenerateStreamFrames, parseGenerationJobStreamFrames } from './parse-generate-stream-frames';
 
 /**
  * Angular client for the Fase 2 AI generation + draft review workflow
@@ -161,7 +162,59 @@ export class AiService {
     return this.http.get<GenerationJob>(`${environment.apiBaseUrl}/ai/questions/jobs/${id}`);
   }
 
+  /**
+   * Server-push counterpart of `getGenerationJob()` — `GET
+   * /ai/questions/jobs/:id/stream`, same `HttpClient`-text-stream auth
+   * workaround as `generateQuestionStream()` (a native `EventSource` can't
+   * carry the `Authorization` header). Emits the job on connect and again
+   * every time the backend pushes an update (driven by
+   * `GenerationJobEventsService` on the server, not a client interval),
+   * completing once the connection closes — which the backend does itself
+   * once the job reaches a terminal status.
+   */
+  streamGenerationJob(id: string): Observable<GenerationJob> {
+    return new Observable<GenerationJob>((subscriber) => {
+      let processedLength = 0;
+      let leftover = '';
+
+      const consume = (partialText: string): void => {
+        const newText = partialText.slice(processedLength);
+        processedLength = partialText.length;
+        const { events, remainder } = parseGenerationJobStreamFrames(leftover + newText);
+        leftover = remainder;
+        for (const job of events) {
+          subscriber.next(job);
+        }
+      };
+
+      const subscription = this.http
+        .get(`${environment.apiBaseUrl}/ai/questions/jobs/${id}/stream`, {
+          observe: 'events',
+          responseType: 'text',
+          reportProgress: true,
+        })
+        .subscribe({
+          next: (event) => {
+            if (event.type === HttpEventType.DownloadProgress) {
+              consume((event as HttpDownloadProgressEvent).partialText ?? '');
+            } else if (event.type === HttpEventType.Response) {
+              consume((event as HttpResponse<string>).body ?? '');
+              subscriber.complete();
+            }
+          },
+          error: (err) => subscriber.error(err),
+        });
+
+      return () => subscription.unsubscribe();
+    });
+  }
+
   cancelGenerationJob(id: string): Observable<GenerationJob> {
     return this.http.post<GenerationJob>(`${environment.apiBaseUrl}/ai/questions/jobs/${id}/cancel`, {});
+  }
+
+  /** `GET /ai/questions/jobs/:id/chain` — every attempt in `id`'s retry chain, oldest first ("historial de reintentos"). */
+  getGenerationJobChain(id: string): Observable<GenerationJobChainResult> {
+    return this.http.get<GenerationJobChainResult>(`${environment.apiBaseUrl}/ai/questions/jobs/${id}/chain`);
   }
 }

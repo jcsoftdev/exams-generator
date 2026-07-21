@@ -31,7 +31,33 @@
           </ui-button>
         </div>
       }
+      @if (canRetry()) {
+        <div data-testid="retry-job">
+          <ui-button variant="ghost" [loading]="retrying()" [disabled]="retrying()" (clicked)="retry()">
+            Reintentar
+          </ui-button>
+        </div>
+      }
     </div>
+
+    @if (previousAttempts().length > 0) {
+      <div data-testid="retry-history" class="flex flex-col gap-1 rounded-card border border-n200 bg-white p-3">
+        <span class="text-xs font-bold text-n700">Historial de reintentos</span>
+        @for (attempt of previousAttempts(); track attempt.id; let i = $index) {
+          <button
+            type="button"
+            data-testid="retry-history-item"
+            class="flex items-center gap-2 rounded-field px-2 py-1 text-left text-xs text-n600 hover:bg-n100"
+            (click)="openAttempt(attempt.id)"
+          >
+            <span class="font-bold text-n800">Intento {{ i + 1 }}</span>
+            <ui-tag [variant]="statusTag(attempt.status)">{{ statusLabel(attempt.status) }}</ui-tag>
+            <span>{{ attempt.createdCount }}/{{ attempt.count }}</span>
+            <span class="ml-auto text-n500">{{ attempt.createdAt | date: 'short' }}</span>
+          </button>
+        }
+      </div>
+    }
 
     @for (q of batchQuestions(); track q.id; let i = $index) {
       <div data-testid="job-question" class="rounded-card border border-n200 bg-white p-3">
@@ -42,17 +68,34 @@
           <ui-tag variant="ai">Borrador IA</ui-tag>
           <span class="ml-auto text-[10px] text-n500">clave: {{ letterFor(q) }}</span>
         </div>
-        <p class="text-sm leading-snug text-n900">{{ q.bodyTypst }}</p>
-        @if (q.alternatives) {
-          <div class="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-n600">
-            @for (alt of q.alternatives; track $index; let altIndex = $index) {
-              @if (isCorrect(q, altIndex)) {
-                <span class="font-bold text-easy-text">{{ letterAt(altIndex) }}) {{ alt }} ✓</span>
-              } @else {
-                <span>{{ letterAt(altIndex) }}) {{ alt }}</span>
-              }
+
+        @if (previewUrls().has(q.id)) {
+          <div data-testid="paper-preview" class="rounded-card border border-paper-border bg-paper-bg p-2 shadow-inner">
+            <iframe
+              data-testid="preview-frame"
+              [src]="previewUrls().get(q.id)!"
+              class="h-64 w-full rounded bg-white"
+              title="Vista previa"
+            ></iframe>
+          </div>
+        } @else if (previewFailedIds().has(q.id)) {
+          <div data-testid="preview-fallback" class="rounded-card bg-n100 p-3 text-sm text-n700">
+            <p class="mb-2 text-xs text-warn-text">No se pudo generar la vista de impresión; mostramos el contenido.</p>
+            <p class="text-sm leading-snug text-n900">{{ q.bodyTypst }}</p>
+            @if (q.alternatives) {
+              <div class="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-n600">
+                @for (alt of q.alternatives; track $index; let altIndex = $index) {
+                  @if (isCorrect(q, altIndex)) {
+                    <span class="font-bold text-easy-text">{{ letterAt(altIndex) }}) {{ alt }} ✓</span>
+                  } @else {
+                    <span>{{ letterAt(altIndex) }}) {{ alt }}</span>
+                  }
+                }
+              </div>
             }
           </div>
+        } @else {
+          <div data-testid="preview-loading" class="h-64 animate-pulse rounded-card bg-n200"></div>
         }
       </div>
     }

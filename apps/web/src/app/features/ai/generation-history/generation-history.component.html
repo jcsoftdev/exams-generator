@@ -25,10 +25,16 @@
     >
       <ui-tag [variant]="statusTag(job.status)">{{ statusLabel(job.status) }}</ui-tag>
       <div class="flex-1 text-sm text-n800">
-        {{ job.createdCount }}/{{ job.count }} preguntas
-        @if (job.failedCount > 0) {
-          <span class="text-n500"> · {{ job.failedCount }} fallidas</span>
-        }
+        <div data-testid="job-title" class="font-bold">{{ job.topicName }} · {{ job.courseName }}</div>
+        <div class="text-n600">
+          {{ job.createdCount }}/{{ job.count }} preguntas
+          @if (job.failedCount > 0) {
+            <span class="text-n500"> · {{ job.failedCount }} fallidas</span>
+          }
+          @if (job.attemptCount > 1) {
+            <span data-testid="attempt-count" class="text-n500"> · {{ job.attemptCount }} intentos</span>
+          }
+        </div>
       </div>
       <span class="text-xs text-n500">{{ job.createdAt | date: 'short' }}</span>
     </div>

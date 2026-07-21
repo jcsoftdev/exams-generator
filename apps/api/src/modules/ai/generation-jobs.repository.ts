@@ -1,7 +1,7 @@
 import { Difficulty, Role } from "@exams-generator/shared";
-import { and, count, desc, eq, inArray, sql } from "drizzle-orm";
+import { and, asc, count, desc, eq, inArray, or, sql } from "drizzle-orm";
 import { db } from "../../db/client";
-import { generationJobs } from "../../db/schema";
+import { courses, generationJobs, topics } from "../../db/schema";
 import { GenerationJobStatus } from "../../db/schema/enums";
 
 export interface CreateGenerationJobRecord {
@@ -14,6 +14,10 @@ export interface CreateGenerationJobRecord {
   readonly gradeLevel: string;
   readonly count: number;
   readonly withFigure: boolean;
+  /** Immediate predecessor this job resubmits — set only when this row was created via `GenerationJobsService.create()`'s retry path. */
+  readonly retriedFromJobId?: string;
+  /** The chain's original job id (never this row's own id) — same value for every attempt in a chain, letting `list()`/`listChain()` find the whole chain in one filter. */
+  readonly rootJobId?: string;
 }
 
 export interface GenerationJobFailedItem {
@@ -38,9 +42,23 @@ export interface GenerationJobRecord {
   readonly createdQuestionIds: readonly string[];
   readonly failedItems: readonly GenerationJobFailedItem[];
   readonly cancelRequested: boolean;
+  readonly retriedFromJobId: string | null;
+  readonly rootJobId: string | null;
   readonly createdAt: string;
   readonly updatedAt: string;
   readonly completedAt: string | null;
+}
+
+/**
+ * `GenerationJobRecord` plus display fields only the history LIST needs: how
+ * many attempts exist in its retry chain, and the course/topic names so each
+ * row can show a title instead of just raw ids — `courseId`/`topicId` alone
+ * mean nothing to a human scanning the history.
+ */
+export interface GenerationJobListRecord extends GenerationJobRecord {
+  readonly attemptCount: number;
+  readonly courseName: string;
+  readonly topicName: string;
 }
 
 const TERMINAL_STATUSES: readonly GenerationJobStatus[] = ["completed", "failed", "cancelled"];
@@ -63,6 +81,8 @@ function toRecord(row: typeof generationJobs.$inferSelect): GenerationJobRecord 
     createdQuestionIds: row.createdQuestionIds as string[],
     failedItems: row.failedItems as GenerationJobFailedItem[],
     cancelRequested: row.cancelRequested,
+    retriedFromJobId: row.retriedFromJobId,
+    rootJobId: row.rootJobId,
     createdAt: row.createdAt.toISOString(),
     updatedAt: row.updatedAt.toISOString(),
     completedAt: row.completedAt ? row.completedAt.toISOString() : null,
@@ -90,17 +110,47 @@ export class GenerationJobsRepository {
     return row ? toRecord(row) : undefined;
   }
 
+  /**
+   * One row per retry CHAIN, not per job row — a job that was retried has a
+   * successor pointing `retried_from_job_id` back at it, so the `NOT EXISTS`
+   * filter keeps only each chain's latest (leaf) attempt. `attemptCount` is a
+   * correlated subquery (not a window function) specifically because it must
+   * count every attempt in the chain, including the non-leaf ones this same
+   * query just filtered out — a window function's partition would only see
+   * the already-filtered leaf rows and always report 1.
+   */
   async list(
     tenantId: string,
     page: number,
     pageSize: number,
-  ): Promise<{ items: GenerationJobRecord[]; total: number }> {
-    const where = eq(generationJobs.tenantId, tenantId);
+  ): Promise<{ items: GenerationJobListRecord[]; total: number }> {
+    const where = and(
+      eq(generationJobs.tenantId, tenantId),
+      sql`NOT EXISTS (SELECT 1 FROM generation_jobs child WHERE child.retried_from_job_id = ${generationJobs.id})`,
+    );
     const [{ value: total }] = await db.select({ value: count() }).from(generationJobs).where(where);
 
     const rows = await db
-      .select()
+      .select({
+        row: generationJobs,
+        courseName: courses.name,
+        topicName: topics.name,
+        // NOTE: the outer reference is written as literal `generation_jobs.*`
+        // text, NOT `${generationJobs.rootJobId}` — a drizzle column embed
+        // inside a SELECT-list `sql` fragment renders UNQUALIFIED (matching
+        // how the rest of the SELECT list renders), so inside this nested
+        // subquery it would resolve against `c2` (the closest FROM), not the
+        // outer row, turning the whole comparison into a `c2.x = c2.x`
+        // tautology that matches every row in the table. Spelling the outer
+        // table's real (unaliased) name out avoids that misresolution.
+        attemptCount: sql<number>`(
+          SELECT count(*)::int FROM generation_jobs c2
+          WHERE COALESCE(c2.root_job_id, c2.id) = COALESCE(generation_jobs.root_job_id, generation_jobs.id)
+        )`,
+      })
       .from(generationJobs)
+      .innerJoin(courses, eq(generationJobs.courseId, courses.id))
+      .innerJoin(topics, eq(generationJobs.topicId, topics.id))
       .where(where)
       .orderBy(
         sql`CASE WHEN ${generationJobs.status} IN ('pending','running') THEN 0 ELSE 1 END`,
@@ -109,7 +159,30 @@ export class GenerationJobsRepository {
       .limit(pageSize)
       .offset((page - 1) * pageSize);
 
-    return { items: rows.map(toRecord), total };
+    return {
+      items: rows.map((r) => ({
+        ...toRecord(r.row),
+        attemptCount: r.attemptCount,
+        courseName: r.courseName,
+        topicName: r.topicName,
+      })),
+      total,
+    };
+  }
+
+  /** Every attempt in the chain rooted at `rootId` (itself included), oldest first — the full "historial de reintentos" for one job. */
+  async listChain(tenantId: string, rootId: string): Promise<GenerationJobRecord[]> {
+    const rows = await db
+      .select()
+      .from(generationJobs)
+      .where(
+        and(
+          eq(generationJobs.tenantId, tenantId),
+          or(eq(generationJobs.id, rootId), eq(generationJobs.rootJobId, rootId)),
+        ),
+      )
+      .orderBy(asc(generationJobs.createdAt));
+    return rows.map(toRecord);
   }
 
   async setStatus(id: string, status: GenerationJobStatus): Promise<void> {

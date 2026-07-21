@@ -34,6 +34,8 @@ const JOB_RECORD = {
   createdQuestionIds: [] as string[],
   failedItems: [] as { index: number; error: string }[],
   cancelRequested: false,
+  retriedFromJobId: null as string | null,
+  rootJobId: null as string | null,
   createdAt: "2026-01-01T00:00:00.000Z",
   updatedAt: "2026-01-01T00:00:00.000Z",
   completedAt: null as string | null,
@@ -43,7 +45,10 @@ function buildDeps() {
   const repository = {
     create: jest.fn().mockResolvedValue(JOB_RECORD),
     getById: jest.fn().mockResolvedValue(JOB_RECORD),
-    list: jest.fn().mockResolvedValue({ items: [JOB_RECORD], total: 1 }),
+    list: jest
+      .fn()
+      .mockResolvedValue({ items: [{ ...JOB_RECORD, attemptCount: 1, courseName: "Matemática", topicName: "Fracciones" }], total: 1 }),
+    listChain: jest.fn().mockResolvedValue([JOB_RECORD]),
     requestCancel: jest.fn().mockResolvedValue(undefined),
     setStatus: jest.fn().mockResolvedValue(undefined),
   } as unknown as jest.Mocked<GenerationJobsRepository>;
@@ -137,5 +142,76 @@ describe("GenerationJobsService.get/list/cancel", () => {
 
     expect(repository.list).toHaveBeenCalledWith("tenant-1", 2, 10);
     expect(result.total).toBe(1);
+  });
+});
+
+describe("GenerationJobsService.create — retry linkage", () => {
+  it("rejects with NotFoundException (no enqueue) when retriedFromJobId doesn't resolve for this tenant", async () => {
+    const { service, repository, queue } = buildDeps();
+    repository.getById.mockResolvedValue(undefined);
+
+    await expect(service.create(TEACHER, { ...VALID_DTO, retriedFromJobId: "missing-job" })).rejects.toBeInstanceOf(
+      NotFoundException,
+    );
+    expect(queue.add).not.toHaveBeenCalled();
+  });
+
+  it("roots at the parent itself when the parent was never a retry", async () => {
+    const { service, repository } = buildDeps();
+    repository.getById.mockResolvedValue({ ...JOB_RECORD, id: "parent-1", rootJobId: null });
+
+    await service.create(TEACHER, { ...VALID_DTO, retriedFromJobId: "parent-1" });
+
+    expect(repository.create).toHaveBeenCalledWith(
+      expect.objectContaining({ retriedFromJobId: "parent-1", rootJobId: "parent-1" }),
+    );
+  });
+
+  it("carries the chain's original rootJobId forward when the parent was itself already a retry", async () => {
+    const { service, repository } = buildDeps();
+    repository.getById.mockResolvedValue({ ...JOB_RECORD, id: "parent-2", rootJobId: "original-job" });
+
+    await service.create(TEACHER, { ...VALID_DTO, retriedFromJobId: "parent-2" });
+
+    expect(repository.create).toHaveBeenCalledWith(
+      expect.objectContaining({ retriedFromJobId: "parent-2", rootJobId: "original-job" }),
+    );
+  });
+
+  it("leaves retriedFromJobId/rootJobId unset for a regular (non-retry) create", async () => {
+    const { service, repository } = buildDeps();
+
+    await service.create(TEACHER, VALID_DTO);
+
+    expect(repository.create).toHaveBeenCalledWith(
+      expect.not.objectContaining({ retriedFromJobId: expect.anything() }),
+    );
+  });
+});
+
+describe("GenerationJobsService.getChain", () => {
+  it("throws NotFoundException when the job doesn't exist for this tenant", async () => {
+    const { service, repository } = buildDeps();
+    repository.getById.mockResolvedValue(undefined);
+
+    await expect(service.getChain(TEACHER, "job-1")).rejects.toBeInstanceOf(NotFoundException);
+  });
+
+  it("resolves the chain at the job's own id when it has no rootJobId (it IS the root)", async () => {
+    const { service, repository } = buildDeps();
+    repository.getById.mockResolvedValue({ ...JOB_RECORD, id: "job-1", rootJobId: null });
+
+    await service.getChain(TEACHER, "job-1");
+
+    expect(repository.listChain).toHaveBeenCalledWith("tenant-1", "job-1");
+  });
+
+  it("resolves the chain at rootJobId when the job is itself a retry", async () => {
+    const { service, repository } = buildDeps();
+    repository.getById.mockResolvedValue({ ...JOB_RECORD, id: "job-3", rootJobId: "original-job" });
+
+    await service.getChain(TEACHER, "job-3");
+
+    expect(repository.listChain).toHaveBeenCalledWith("tenant-1", "original-job");
   });
 });

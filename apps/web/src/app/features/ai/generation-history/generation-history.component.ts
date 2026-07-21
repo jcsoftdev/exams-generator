@@ -6,7 +6,7 @@ import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.compone
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { AiService } from '../ai.service';
-import { GenerationJob } from '../ai.models';
+import { GenerationJob, GenerationJobListItem } from '../ai.models';
 
 const STATUS_TAG: Record<GenerationJob['status'], TagVariant> = {
   pending: 'ai',
@@ -49,7 +49,7 @@ export class GenerationHistoryComponent {
   private readonly aiService = inject(AiService);
   private readonly router = inject(Router);
 
-  protected readonly jobs = signal<readonly GenerationJob[]>([]);
+  protected readonly jobs = signal<readonly GenerationJobListItem[]>([]);
   protected readonly loading = signal(false);
   protected readonly errorMessage = signal<string | null>(null);
 

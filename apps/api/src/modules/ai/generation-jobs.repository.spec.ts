@@ -167,4 +167,72 @@ describe("GenerationJobsRepository", () => {
 
     expect(await repository.getByIdUnscoped(record.id)).toBeDefined();
   });
+
+  it("list() joins in the course/topic names so the history can show a title", async () => {
+    const record = await repository.create(baseInput());
+
+    const { items } = await repository.list(tenantId, 1, 50);
+
+    const item = items.find((i) => i.id === record.id);
+    expect(item!.courseName).toContain("GenJobs Course");
+    expect(item!.topicName).toContain("GenJobs Topic");
+  });
+
+  describe("retry chains", () => {
+    it("create() without retriedFromJobId leaves retriedFromJobId/rootJobId null", async () => {
+      const record = await repository.create(baseInput());
+
+      expect(record.retriedFromJobId).toBeNull();
+      expect(record.rootJobId).toBeNull();
+    });
+
+    it("create() with retriedFromJobId links to the parent and roots at the parent itself", async () => {
+      const original = await repository.create(baseInput());
+
+      const retry = await repository.create({
+        ...baseInput(),
+        retriedFromJobId: original.id,
+        rootJobId: original.id,
+      });
+
+      expect(retry.retriedFromJobId).toBe(original.id);
+      expect(retry.rootJobId).toBe(original.id);
+    });
+
+    it("list() collapses a multi-attempt chain to only its latest (leaf) job, with attemptCount = chain length", async () => {
+      const original = await repository.create(baseInput());
+      await repository.setStatus(original.id, "failed");
+      const retry1 = await repository.create({ ...baseInput(), retriedFromJobId: original.id, rootJobId: original.id });
+      await repository.setStatus(retry1.id, "failed");
+      const retry2 = await repository.create({ ...baseInput(), retriedFromJobId: retry1.id, rootJobId: original.id });
+
+      const { items } = await repository.list(tenantId, 1, 50);
+
+      expect(items.find((i) => i.id === original.id)).toBeUndefined();
+      expect(items.find((i) => i.id === retry1.id)).toBeUndefined();
+      const leaf = items.find((i) => i.id === retry2.id);
+      expect(leaf).toBeDefined();
+      expect(leaf!.attemptCount).toBe(3);
+    });
+
+    it("list() reports attemptCount 1 for a job that was never retried", async () => {
+      const solo = await repository.create(baseInput());
+
+      const { items } = await repository.list(tenantId, 1, 50);
+
+      expect(items.find((i) => i.id === solo.id)!.attemptCount).toBe(1);
+    });
+
+    it("listChain() returns every attempt in the chain, oldest first, given any job in the chain", async () => {
+      const original = await repository.create(baseInput());
+      await repository.setStatus(original.id, "failed");
+      const retry1 = await repository.create({ ...baseInput(), retriedFromJobId: original.id, rootJobId: original.id });
+      await repository.setStatus(retry1.id, "failed");
+      const retry2 = await repository.create({ ...baseInput(), retriedFromJobId: retry1.id, rootJobId: original.id });
+
+      const chain = await repository.listChain(tenantId, original.id);
+
+      expect(chain.map((r) => r.id)).toEqual([original.id, retry1.id, retry2.id]);
+    });
+  });
 });

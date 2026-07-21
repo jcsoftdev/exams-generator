@@ -162,6 +162,10 @@ export interface GenerationJob {
   readonly createdQuestionIds: readonly string[];
   readonly failedItems: readonly GenerationJobFailedItem[];
   readonly cancelRequested: boolean;
+  /** Immediate predecessor this job resubmits, or null if it isn't a retry. */
+  readonly retriedFromJobId: string | null;
+  /** The chain's original job id (never this job's own id), or null if this job IS the original. */
+  readonly rootJobId: string | null;
   readonly createdAt: string;
   readonly updatedAt: string;
   readonly completedAt: string | null;
@@ -175,9 +179,28 @@ export interface CreateGenerationJobPayload {
   readonly gradeLevel: string;
   readonly count: number;
   readonly withFigure: boolean;
+  /** Set when this job resubmits a failed/partial batch — see `GenerationJobDetailComponent.retry()`. */
+  readonly retriedFromJobId?: string;
+}
+
+/**
+ * `GenerationJob` plus display fields only `listGenerationJobs()`'s
+ * leaf-per-chain rows carry: how many attempts exist in its retry chain, and
+ * the course/topic names so each history row can show a title instead of
+ * raw ids.
+ */
+export interface GenerationJobListItem extends GenerationJob {
+  readonly attemptCount: number;
+  readonly courseName: string;
+  readonly topicName: string;
 }
 
 export interface GenerationJobListResult {
-  readonly items: readonly GenerationJob[];
+  readonly items: readonly GenerationJobListItem[];
   readonly total: number;
+}
+
+/** `GET /ai/questions/jobs/:id/chain` response — every attempt in a job's retry chain, oldest first. */
+export interface GenerationJobChainResult {
+  readonly items: readonly GenerationJob[];
 }

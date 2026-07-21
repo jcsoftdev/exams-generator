@@ -3,6 +3,7 @@ import { Role } from "@exams-generator/shared";
 import { Job } from "bullmq";
 import { AuthTokenPayload } from "../auth/token.service";
 import { GenerateQuestionsService } from "./generate-questions.service";
+import { GenerationJobEventsService } from "./generation-job-events.service";
 import { GenerationJobStatus } from "../../db/schema/enums";
 import { GenerationJobsRepository } from "./generation-jobs.repository";
 
@@ -26,6 +27,7 @@ export class GenerationJobsProcessor extends WorkerHost {
   constructor(
     private readonly repository: GenerationJobsRepository,
     private readonly generateQuestionsService: GenerateQuestionsService,
+    private readonly events: GenerationJobEventsService,
   ) {
     super();
   }
@@ -37,6 +39,7 @@ export class GenerationJobsProcessor extends WorkerHost {
     }
 
     await this.repository.setStatus(record.id, "running");
+    this.events.notify(record.id);
 
     const user: AuthTokenPayload = {
       sub: record.createdBy,
@@ -49,6 +52,7 @@ export class GenerationJobsProcessor extends WorkerHost {
     for (let index = startIndex; index < record.count; index += 1) {
       if (await this.repository.isCancelRequested(record.id)) {
         await this.repository.setStatus(record.id, "cancelled");
+        this.events.notify(record.id);
         return;
       }
 
@@ -69,9 +73,11 @@ export class GenerationJobsProcessor extends WorkerHost {
           error: result.failed[0]?.error ?? "Unknown generation failure",
         });
       }
+      this.events.notify(record.id);
     }
 
     await this.repository.setStatus(record.id, "completed");
+    this.events.notify(record.id);
   }
 
   /**
@@ -99,5 +105,6 @@ export class GenerationJobsProcessor extends WorkerHost {
     }
 
     await this.repository.setStatus(record.id, "failed");
+    this.events.notify(record.id);
   }
 }

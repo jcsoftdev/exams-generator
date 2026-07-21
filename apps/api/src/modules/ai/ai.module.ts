@@ -6,6 +6,7 @@ import { AiController } from "./ai.controller";
 import { AiJobsController } from "./ai-jobs.controller";
 import { QUESTION_GENERATOR_PORT } from "./ai.constants";
 import { resolveQuestionGeneratorAdapter } from "./ai-provider";
+import { GenerationJobEventsService } from "./generation-job-events.service";
 import { resolveRedisConnection } from "./generation-jobs.env";
 import { GenerationJobsProcessor } from "./generation-jobs.processor";
 import { GenerationJobsRepository } from "./generation-jobs.repository";
@@ -43,6 +44,7 @@ import { ReviseQuestionService } from "./revise-question.service";
     GenerationJobsRepository,
     GenerationJobsService,
     GenerationJobsProcessor,
+    GenerationJobEventsService,
     {
       provide: QUESTION_GENERATOR_PORT,
       useFactory: () => new LazyQuestionGeneratorAdapter(resolveQuestionGeneratorAdapter),

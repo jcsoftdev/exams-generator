@@ -4,15 +4,15 @@ import { of } from 'rxjs';
 import { Router } from '@angular/router';
 import { GenerationHistoryComponent } from './generation-history.component';
 import { AiService } from '../ai.service';
-import { GenerationJob, GenerationJobListResult } from '../ai.models';
+import { GenerationJobListItem, GenerationJobListResult } from '../ai.models';
 
-function job(overrides: Partial<GenerationJob>): GenerationJob {
+function job(overrides: Partial<GenerationJobListItem>): GenerationJobListItem {
   return {
     id: 'job-1',
     tenantId: 'tenant-1',
     courseId: 'c1',
     topicId: 't1',
-    difficulty: 'easy' as GenerationJob['difficulty'],
+    difficulty: 'easy' as GenerationJobListItem['difficulty'],
     gradeLevel: 'pre',
     count: 5,
     withFigure: false,
@@ -22,6 +22,11 @@ function job(overrides: Partial<GenerationJob>): GenerationJob {
     createdQuestionIds: [],
     failedItems: [],
     cancelRequested: false,
+    retriedFromJobId: null,
+    rootJobId: null,
+    attemptCount: 1,
+    courseName: 'Matemática',
+    topicName: 'Fracciones',
     createdAt: '2026-01-01T00:00:00.000Z',
     updatedAt: '2026-01-01T00:00:00.000Z',
     completedAt: '2026-01-01T00:05:00.000Z',
@@ -73,5 +78,27 @@ describe('GenerationHistoryComponent', () => {
     (compiled.querySelector('[data-testid="job-row"]') as HTMLElement).click();
 
     expect(navigate).toHaveBeenCalledWith(['/app/ai/jobs', 'job-1']);
+  });
+
+  it('does not show an attempt-count badge for a job that was never retried', () => {
+    const { compiled } = setup({ items: [job({ id: 'job-1', attemptCount: 1 })], total: 1 });
+
+    expect(compiled.querySelector('[data-testid="attempt-count"]')).toBeFalsy();
+  });
+
+  it('shows how many attempts a retried chain has', () => {
+    const { compiled } = setup({ items: [job({ id: 'job-1', attemptCount: 3 })], total: 1 });
+
+    expect(compiled.querySelector('[data-testid="attempt-count"]')?.textContent).toContain('3 intentos');
+  });
+
+  it('shows the topic/course as the row title, not just raw counts', () => {
+    const { compiled } = setup({
+      items: [job({ id: 'job-1', courseName: 'Matemática', topicName: 'Fracciones' })],
+      total: 1,
+    });
+
+    expect(compiled.querySelector('[data-testid="job-title"]')?.textContent).toContain('Fracciones');
+    expect(compiled.querySelector('[data-testid="job-title"]')?.textContent).toContain('Matemática');
   });
 });

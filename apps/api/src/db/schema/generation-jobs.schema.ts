@@ -1,4 +1,4 @@
-import { boolean, integer, jsonb, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
+import { AnyPgColumn, boolean, integer, jsonb, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
 import { courses } from "./courses.schema";
 import { difficultyEnum, generationJobStatusEnum, roleEnum } from "./enums";
 import { gradeLevels } from "./grade-levels.schema";
@@ -13,6 +13,13 @@ import { users } from "./users.schema";
  * alone to call `GenerateQuestionsService.generateQuestions()`.
  * `created_question_ids`/`failed_items` accumulate incrementally as the
  * worker processes each item — see `GenerationJobsRepository`.
+ *
+ * `retried_from_job_id`/`root_job_id` link a "reintentar" job to the batch
+ * it resubmits (`GenerationJobsService.create()`): the former is the
+ * immediate predecessor (one hop back), the latter always points at the
+ * chain's original job (never itself) so `GenerationJobsRepository.list()`
+ * and `.listChain()` can find every attempt in a chain with a single
+ * `rootJobId = X`/`id = X` filter instead of walking the linked list.
  */
 export const generationJobs = pgTable("generation_jobs", {
   id: uuid("id").primaryKey().defaultRandom(),
@@ -41,6 +48,8 @@ export const generationJobs = pgTable("generation_jobs", {
   createdQuestionIds: jsonb("created_question_ids").notNull().default([]),
   failedItems: jsonb("failed_items").notNull().default([]),
   cancelRequested: boolean("cancel_requested").notNull().default(false),
+  retriedFromJobId: uuid("retried_from_job_id").references((): AnyPgColumn => generationJobs.id),
+  rootJobId: uuid("root_job_id").references((): AnyPgColumn => generationJobs.id),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
   completedAt: timestamp("completed_at", { withTimezone: true }),
