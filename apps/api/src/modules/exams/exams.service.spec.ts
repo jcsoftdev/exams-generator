@@ -22,6 +22,11 @@ function buildDeps() {
     replaceQuestion: jest.fn().mockResolvedValue(undefined),
     confirmExam: jest.fn().mockResolvedValue(undefined),
     getVersions: jest.fn(),
+    findExamType: jest.fn(),
+    findCurrentTemplate: jest.fn(),
+    getTemplateRows: jest.fn(),
+    getSyllabusForTemplate: jest.fn(),
+    findActiveCycle: jest.fn(),
   } as unknown as jest.Mocked<ExamsRepository>;
 
   const service = new ExamsService(repository, () => createSeededRng(1));
@@ -584,5 +589,224 @@ describe("ExamsService.listVersions (B4)", () => {
     const result = await service.listVersions(TEACHER, "exam-1");
 
     expect(result).toEqual(versions);
+  });
+});
+
+/**
+ * The Fase 4 wiring orchestrator (design doc §7.4/§5): looks up the exam
+ * type's `course_scope`/`week_scope`, resolves the current template (and, for
+ * week-scoped types, the active cycle's `currentWeek`), then delegates to the
+ * pure `resolveBlueprint()` domain function. Every dependency is mocked —
+ * this suite never touches Postgres.
+ */
+describe("ExamsService.resolveExamBlueprint", () => {
+  it("returns an empty blueprint immediately for course_scope='none' (manual) — never touches templates/cycles", async () => {
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue({ courseScope: "none", weekScope: "none" });
+
+    const result = await service.resolveExamBlueprint({
+      examTypeCode: "manual",
+      universityId: "uni-1",
+      trackId: null,
+      tenantId: "tenant-1",
+    });
+
+    expect(result).toEqual({ blueprint: [], weekNumber: null, templateId: null });
+    expect(repository.findCurrentTemplate).not.toHaveBeenCalled();
+    expect(repository.findActiveCycle).not.toHaveBeenCalled();
+  });
+
+  it("throws NotFoundException when the exam type code doesn't exist in the catalog", async () => {
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue(null);
+
+    await expect(
+      service.resolveExamBlueprint({
+        examTypeCode: "not-a-real-type",
+        universityId: "uni-1",
+        trackId: null,
+        tenantId: "tenant-1",
+      }),
+    ).rejects.toBeInstanceOf(NotFoundException);
+  });
+
+  it("throws NotFoundException when no current template exists for the (university, track) pair — never falls back to a default", async () => {
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "none" });
+    repository.findCurrentTemplate.mockResolvedValue(null);
+
+    await expect(
+      service.resolveExamBlueprint({ examTypeCode: "eta", universityId: "uni-1", trackId: null, tenantId: "tenant-1" }),
+    ).rejects.toBeInstanceOf(NotFoundException);
+    expect(repository.getTemplateRows).not.toHaveBeenCalled();
+  });
+
+  it("resolves a week_scope='none' type (eta) without ever calling findActiveCycle, and weekNumber stays null", async () => {
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "none" });
+    repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+    repository.getTemplateRows.mockResolvedValue([{ courseId: "course-1", questionCount: 5 }]);
+    repository.getSyllabusForTemplate.mockResolvedValue([]);
+
+    const result = await service.resolveExamBlueprint({
+      examTypeCode: "eta",
+      universityId: "uni-1",
+      trackId: null,
+      tenantId: "tenant-1",
+    });
+
+    expect(repository.findActiveCycle).not.toHaveBeenCalled();
+    expect(result.weekNumber).toBeNull();
+    expect(result.templateId).toBe("template-1");
+    expect(result.blueprint).toEqual([{ courseId: "course-1", count: 5, difficulty: undefined }]);
+  });
+
+  it("throws NotFoundException when week_scope != 'none' and no active cycle is found — never silently defaults to week 0", async () => {
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "cumulative" });
+    repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+    repository.getTemplateRows.mockResolvedValue([]);
+    repository.getSyllabusForTemplate.mockResolvedValue([]);
+    repository.findActiveCycle.mockResolvedValue(null);
+
+    await expect(
+      service.resolveExamBlueprint({
+        examTypeCode: "eta_by_week",
+        universityId: "uni-1",
+        trackId: null,
+        tenantId: "tenant-1",
+      }),
+    ).rejects.toBeInstanceOf(NotFoundException);
+  });
+
+  it("computes weekNumber from the active cycle via computeCurrentWeek() and threads it into resolveBlueprint (week_scope='cumulative')", async () => {
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "cumulative" });
+    repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+    repository.getTemplateRows.mockResolvedValue([{ courseId: "course-1", questionCount: 4 }]);
+    repository.getSyllabusForTemplate.mockResolvedValue([
+      { courseId: "course-1", topicId: "topic-1", weekNumber: 0 },
+      { courseId: "course-1", topicId: "topic-2", weekNumber: 1 },
+    ]);
+    repository.findActiveCycle.mockResolvedValue({ startsOn: new Date("2026-03-05"), weekLengthDays: 7 });
+
+    jest.useFakeTimers().setSystemTime(new Date("2026-03-12")); // exactly one week after startsOn -> week 1
+    try {
+      const result = await service.resolveExamBlueprint({
+        examTypeCode: "eta_by_week",
+        universityId: "uni-1",
+        trackId: null,
+        tenantId: "tenant-1",
+      });
+
+      expect(result.weekNumber).toBe(1);
+      expect(result.templateId).toBe("template-1");
+      // week 1 is cumulative (weeks 0..1) -> both syllabus topics are in scope, sharing the row's 4 questions.
+      expect(result.blueprint.reduce((sum, row) => sum + row.count, 0)).toBe(4);
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+
+  it("threads selectedCourseIds/totalQuestionsOverride through to the resolver for course_scope='selected' (fastest)", async () => {
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue({ courseScope: "selected", weekScope: "current_only" });
+    repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+    repository.getTemplateRows.mockResolvedValue([
+      { courseId: "course-1", weightPoints: 100 },
+      { courseId: "course-2", weightPoints: 100 },
+    ]);
+    repository.getSyllabusForTemplate.mockResolvedValue([{ courseId: "course-1", topicId: "topic-1", weekNumber: 0 }]);
+    repository.findActiveCycle.mockResolvedValue({ startsOn: new Date("2026-03-05"), weekLengthDays: 7 });
+
+    jest.useFakeTimers().setSystemTime(new Date("2026-03-05")); // week 0
+    try {
+      const result = await service.resolveExamBlueprint({
+        examTypeCode: "fastest",
+        universityId: "uni-1",
+        trackId: "track-1",
+        tenantId: "tenant-1",
+        selectedCourseIds: ["course-1"],
+        totalQuestionsOverride: 10,
+      });
+
+      // course-2 was never selected, so its row must be filtered out entirely, not just zero-counted.
+      expect(result.blueprint.every((row) => row.courseId === "course-1")).toBe(true);
+      expect(result.blueprint.reduce((sum, row) => sum + row.count, 0)).toBe(10);
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+
+  it("resolves templateId/weekNumber correctly and calls findCurrentTemplate/findActiveCycle with the exact (universityId, trackId, tenantId) triple given", async () => {
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "current_only" });
+    repository.findCurrentTemplate.mockResolvedValue({ id: "template-9" });
+    repository.getTemplateRows.mockResolvedValue([]);
+    repository.getSyllabusForTemplate.mockResolvedValue([]);
+    repository.findActiveCycle.mockResolvedValue({ startsOn: new Date("2026-01-01"), weekLengthDays: 7 });
+
+    await service.resolveExamBlueprint({
+      examTypeCode: "eta",
+      universityId: "uni-42",
+      trackId: "track-7",
+      tenantId: "tenant-3",
+    });
+
+    expect(repository.findCurrentTemplate).toHaveBeenCalledWith("uni-42", "track-7", "tenant-3");
+    expect(repository.findActiveCycle).toHaveBeenCalledWith("uni-42", "track-7", "tenant-3");
+  });
+
+  it("throws BadRequestException when an in-scope row has no questionCount and no totalQuestionsOverride is given (UNI rows only carry weightPoints)", async () => {
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "none" });
+    repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+    repository.getTemplateRows.mockResolvedValue([{ courseId: "course-1", weightPoints: 100 }]);
+    repository.getSyllabusForTemplate.mockResolvedValue([]);
+
+    await expect(
+      service.resolveExamBlueprint({
+        examTypeCode: "eta",
+        universityId: "uni-1",
+        trackId: null,
+        tenantId: "tenant-1",
+      }),
+    ).rejects.toBeInstanceOf(BadRequestException);
+
+    let caught: BadRequestException | undefined;
+    try {
+      await service.resolveExamBlueprint({
+        examTypeCode: "eta",
+        universityId: "uni-1",
+        trackId: null,
+        tenantId: "tenant-1",
+      });
+    } catch (error) {
+      caught = error as BadRequestException;
+    }
+    expect(caught?.message).toBe(
+      "Esta plantilla no tiene conteo de preguntas por curso — indica un total de preguntas.",
+    );
+  });
+
+  it("does not throw when courseScope='selected' and the only row lacking questionCount is excluded by selectedCourseIds — exclusion happens before the check", async () => {
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue({ courseScope: "selected", weekScope: "none" });
+    repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+    repository.getTemplateRows.mockResolvedValue([
+      { courseId: "course-1", questionCount: 5 },
+      { courseId: "course-2", weightPoints: 100 }, // missing questionCount, but not selected below
+    ]);
+    repository.getSyllabusForTemplate.mockResolvedValue([]);
+
+    const result = await service.resolveExamBlueprint({
+      examTypeCode: "fastest",
+      universityId: "uni-1",
+      trackId: null,
+      tenantId: "tenant-1",
+      selectedCourseIds: ["course-1"],
+    });
+
+    expect(result.blueprint).toEqual([{ courseId: "course-1", count: 5, difficulty: undefined }]);
   });
 });

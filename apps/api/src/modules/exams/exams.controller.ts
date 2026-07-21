@@ -39,6 +39,7 @@ import {
   PreviewExamResult,
   ReplaceQuestionDto,
   ReplaceQuestionResult,
+  ResolveExamBlueprintResult,
   StockBatchDto,
   StockBatchResult,
 } from "./exams.service";
@@ -52,6 +53,19 @@ interface CreateExamBody {
     readonly difficulty?: string;
     readonly count?: number;
   }>;
+  readonly examType?: string;
+  readonly universityId?: string;
+  readonly trackId?: string;
+  readonly cycleId?: string;
+  readonly weekNumber?: number;
+}
+
+interface ResolveExamBlueprintBody {
+  readonly examTypeCode?: string;
+  readonly universityId?: string;
+  readonly trackId?: string;
+  readonly selectedCourseIds?: readonly string[];
+  readonly totalQuestionsOverride?: number;
 }
 
 interface ReplaceQuestionBody {
@@ -120,6 +134,35 @@ export class ExamsController {
   @HttpCode(HttpStatus.OK)
   async preview(@CurrentUser() user: AuthTokenPayload, @Body() body: CreateExamBody): Promise<PreviewExamResult> {
     return this.examsService.previewExam(user, body as PreviewExamDto);
+  }
+
+  /**
+   * `POST /exams/blueprint/resolve` (design doc §3.11) — ADDITIVE: lets the
+   * frontend pre-fill the existing manual blueprint builder for a
+   * template-backed exam type (`fastest`/`eta`/`eta_by_week`). Pure read, no
+   * persistence (200 not 201) — same convention as `preview`/`countStock`.
+   * The result feeds straight back into `POST /exams`'s body as if the user
+   * had typed it by hand; this endpoint never creates or mutates an exam,
+   * and does NOT replace or change `POST /exams`'/`POST /exams/preview`'s
+   * contract.
+   */
+  @Post("blueprint/resolve")
+  @HttpCode(HttpStatus.OK)
+  async resolveBlueprint(
+    @CurrentUser() user: AuthTokenPayload,
+    @Body() body: ResolveExamBlueprintBody,
+  ): Promise<ResolveExamBlueprintResult> {
+    if (!body.examTypeCode || !body.universityId) {
+      throw new BadRequestException("examTypeCode and universityId are required");
+    }
+    return this.examsService.resolveExamBlueprint({
+      examTypeCode: body.examTypeCode,
+      universityId: body.universityId,
+      trackId: body.trackId ?? null,
+      tenantId: user.tenantId,
+      selectedCourseIds: body.selectedCourseIds,
+      totalQuestionsOverride: body.totalQuestionsOverride,
+    });
   }
 
   /**

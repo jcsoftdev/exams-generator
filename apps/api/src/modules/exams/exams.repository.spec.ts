@@ -6,13 +6,20 @@ import { runMigrations } from "../../db/migrate";
 import {
   assets,
   courses,
+  cycles,
   examBlueprintRows,
+  examBlueprintTemplateRows,
+  examBlueprintTemplates,
   examQuestions,
   exams,
+  examTypes,
   examVersions,
   questions,
+  syllabusWeekMaps,
   tenants,
   topics,
+  tracks,
+  universities,
   users,
 } from "../../db/schema";
 import { ExamsRepository } from "./exams.repository";
@@ -907,6 +914,212 @@ describe("ExamsRepository", () => {
       expect(recent).toHaveLength(2);
       expect(recent.map((r) => r.title).sort()).toEqual(["Draft Exam", "Ready Exam"]);
       expect(typeof recent[0]!.createdAt).toBe("string");
+    });
+  });
+
+  /**
+   * `resolveExamBlueprint()` fetchers (design doc §4/§5, phase 4 wiring):
+   * `findExamType`/`findCurrentTemplate`/`getTemplateRows`/
+   * `getSyllabusForTemplate`/`findActiveCycle`. Fixtures are scoped to a
+   * fresh `university`/`track` pair (isolated by `suffix`, same convention as
+   * `createCourseAndTopic()`), reusing the file-level `courseId`/`topicId`/
+   * `otherCourseId`/`tenantAId`/`tenantBId` fixtures for the blueprint/
+   * syllabus rows themselves.
+   */
+  describe("resolveExamBlueprint() fetchers", () => {
+    let universityId: string;
+    let trackId: string;
+    let examTypeCode: string;
+    let globalTemplateId: string;
+    let tenantOverrideTemplateId: string;
+    let trackLessTemplateId: string;
+
+    const createdUniversityIds: string[] = [];
+    const createdTrackIds: string[] = [];
+    const createdExamTypeCodes: string[] = [];
+    const createdTemplateIds: string[] = [];
+    const createdCycleIds: string[] = [];
+
+    beforeAll(async () => {
+      const suffix = randomUUID();
+
+      const [university] = await db
+        .insert(universities)
+        .values({ code: `resolver-test-uni-${suffix}`, name: `Resolver Test University ${suffix}` })
+        .returning({ id: universities.id });
+      universityId = university!.id;
+      createdUniversityIds.push(universityId);
+
+      const [track] = await db
+        .insert(tracks)
+        .values({ universityId, code: `track-${suffix}`, name: `Resolver Test Track ${suffix}`, kind: "area" })
+        .returning({ id: tracks.id });
+      trackId = track!.id;
+      createdTrackIds.push(trackId);
+
+      examTypeCode = `resolver-test-type-${suffix}`;
+      await db.insert(examTypes).values({
+        code: examTypeCode,
+        label: "Resolver Test Type",
+        courseScope: "all",
+        weekScope: "cumulative",
+        // Sort order just needs to avoid the seeded catalog's 0-3 range —
+        // this table has zero other constraints tying it to real exam types.
+        sortOrder: 100_000 + Math.floor(Math.random() * 100_000),
+      });
+      createdExamTypeCodes.push(examTypeCode);
+
+      const [globalTemplate] = await db
+        .insert(examBlueprintTemplates)
+        .values({ universityId, trackId, tenantId: null, cycleLabel: "2026-II", isCurrent: true })
+        .returning({ id: examBlueprintTemplates.id });
+      globalTemplateId = globalTemplate!.id;
+      createdTemplateIds.push(globalTemplateId);
+
+      const [tenantOverrideTemplate] = await db
+        .insert(examBlueprintTemplates)
+        .values({
+          universityId,
+          trackId,
+          tenantId: tenantAId,
+          cycleLabel: "2026-II (tenant A override)",
+          isCurrent: true,
+        })
+        .returning({ id: examBlueprintTemplates.id });
+      tenantOverrideTemplateId = tenantOverrideTemplate!.id;
+      createdTemplateIds.push(tenantOverrideTemplateId);
+
+      const [trackLessTemplate] = await db
+        .insert(examBlueprintTemplates)
+        .values({ universityId, trackId: null, tenantId: null, cycleLabel: "2026-II (no track)", isCurrent: true })
+        .returning({ id: examBlueprintTemplates.id });
+      trackLessTemplateId = trackLessTemplate!.id;
+      createdTemplateIds.push(trackLessTemplateId);
+
+      await db.insert(examBlueprintTemplateRows).values([
+        { templateId: globalTemplateId, courseId, topicId, questionCount: 12, sourceLevel: "P.A." },
+        { templateId: globalTemplateId, courseId: otherCourseId, weightPoints: "600", examSection: "E2" },
+      ]);
+
+      await db.insert(syllabusWeekMaps).values([{ templateId: globalTemplateId, courseId, topicId, weekNumber: 3 }]);
+    });
+
+    afterAll(async () => {
+      await db.delete(syllabusWeekMaps).where(inArray(syllabusWeekMaps.templateId, createdTemplateIds));
+      await db
+        .delete(examBlueprintTemplateRows)
+        .where(inArray(examBlueprintTemplateRows.templateId, createdTemplateIds));
+      await db.delete(examBlueprintTemplates).where(inArray(examBlueprintTemplates.id, createdTemplateIds));
+      if (createdCycleIds.length > 0) {
+        await db.delete(cycles).where(inArray(cycles.id, createdCycleIds));
+      }
+      await db.delete(examTypes).where(inArray(examTypes.code, createdExamTypeCodes));
+      await db.delete(tracks).where(inArray(tracks.id, createdTrackIds));
+      await db.delete(universities).where(inArray(universities.id, createdUniversityIds));
+    });
+
+    describe("findExamType()", () => {
+      it("returns courseScope/weekScope for a known code", async () => {
+        const result = await repository.findExamType(examTypeCode);
+        expect(result).toEqual({ courseScope: "all", weekScope: "cumulative" });
+      });
+
+      it("returns null for an unknown code", async () => {
+        expect(await repository.findExamType(`unknown-${randomUUID()}`)).toBeNull();
+      });
+    });
+
+    describe("findCurrentTemplate()", () => {
+      it("resolves the global (tenant_id=null) template when the caller's tenant has no override", async () => {
+        const result = await repository.findCurrentTemplate(universityId, trackId, tenantBId);
+        expect(result?.id).toBe(globalTemplateId);
+      });
+
+      it("prefers the caller tenant's own override template over the global default", async () => {
+        const result = await repository.findCurrentTemplate(universityId, trackId, tenantAId);
+        expect(result?.id).toBe(tenantOverrideTemplateId);
+      });
+
+      it("matches track_id=null to track_id=null via IS NOT DISTINCT FROM, not plain '='", async () => {
+        const result = await repository.findCurrentTemplate(universityId, null, tenantBId);
+        expect(result?.id).toBe(trackLessTemplateId);
+      });
+
+      it("returns null when no current template matches the (university, track) pair", async () => {
+        const result = await repository.findCurrentTemplate(randomUUID(), null, tenantBId);
+        expect(result).toBeNull();
+      });
+    });
+
+    describe("getTemplateRows()", () => {
+      it("maps exam_blueprint_template_rows onto the domain TemplateRow shape (camelCase, weightPoints as a number)", async () => {
+        const rows = await repository.getTemplateRows(globalTemplateId);
+
+        expect(rows).toHaveLength(2);
+        expect(rows).toEqual(
+          expect.arrayContaining([
+            expect.objectContaining({ courseId, topicId, questionCount: 12, sourceLevel: "P.A." }),
+            expect.objectContaining({ courseId: otherCourseId, weightPoints: 600 }),
+          ]),
+        );
+        const weightRow = rows.find((r) => r.courseId === otherCourseId);
+        expect(typeof weightRow?.weightPoints).toBe("number");
+      });
+    });
+
+    describe("getSyllabusForTemplate()", () => {
+      it("maps syllabus_week_maps onto the domain SyllabusEntry shape", async () => {
+        const entries = await repository.getSyllabusForTemplate(globalTemplateId);
+        expect(entries).toEqual([{ courseId, topicId, weekNumber: 3 }]);
+      });
+
+      it("returns [] for a template with no syllabus data (e.g. a UNCP-style template)", async () => {
+        const entries = await repository.getSyllabusForTemplate(trackLessTemplateId);
+        expect(entries).toEqual([]);
+      });
+    });
+
+    describe("findActiveCycle()", () => {
+      it("resolves the global active cycle, then prefers a tenant override once one exists", async () => {
+        const [globalCycle] = await db
+          .insert(cycles)
+          .values({
+            universityId,
+            trackId,
+            tenantId: null,
+            label: "Global cycle",
+            startsOn: new Date("2026-03-05"),
+            weekLengthDays: 7,
+            isActive: true,
+          })
+          .returning({ id: cycles.id });
+        createdCycleIds.push(globalCycle!.id);
+
+        const resultNoOverride = await repository.findActiveCycle(universityId, trackId, tenantBId);
+        expect(resultNoOverride?.weekLengthDays).toBe(7);
+
+        const [tenantCycle] = await db
+          .insert(cycles)
+          .values({
+            universityId,
+            trackId,
+            tenantId: tenantAId,
+            label: "Tenant A cycle",
+            startsOn: new Date("2026-04-01"),
+            weekLengthDays: 14,
+            isActive: true,
+          })
+          .returning({ id: cycles.id });
+        createdCycleIds.push(tenantCycle!.id);
+
+        const resultWithOverride = await repository.findActiveCycle(universityId, trackId, tenantAId);
+        expect(resultWithOverride?.weekLengthDays).toBe(14);
+      });
+
+      it("returns null when no active cycle matches the (university, track) pair", async () => {
+        const result = await repository.findActiveCycle(randomUUID(), null, tenantBId);
+        expect(result).toBeNull();
+      });
     });
   });
 });

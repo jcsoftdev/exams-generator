@@ -13,10 +13,23 @@ export interface CreateExamBlueprintRowInput {
   readonly count: number | undefined;
 }
 
+/**
+ * `examType`/`universityId`/`trackId`/`cycleId`/`weekNumber` are OPTIONAL,
+ * additive fields (design doc §4/§3.11) — provenance of a template-backed
+ * blueprint pre-filled via `resolveExamBlueprint()`. They carry no
+ * validation rules of their own here: omitting them is the existing,
+ * fully-valid `manual` path, and `validateCreateExamInput()` below is
+ * intentionally left untouched by their presence.
+ */
 export interface CreateExamInput {
   readonly title: string | undefined;
   readonly gradeLevel: string | undefined;
   readonly blueprint: readonly CreateExamBlueprintRowInput[] | undefined;
+  readonly examType?: string;
+  readonly universityId?: string;
+  readonly trackId?: string;
+  readonly cycleId?: string;
+  readonly weekNumber?: number;
 }
 
 export type CreateExamValidation =

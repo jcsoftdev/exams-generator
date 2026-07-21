@@ -10,7 +10,9 @@ import {
 import { ExamStatus } from "../../db/schema/enums";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BlueprintRow, Candidate, select, selectPreview } from "./domain/blueprint-selector";
+import { computeCurrentWeek } from "./domain/current-week";
 import { Rng, createSeededRng, shuffleArray } from "./domain/ports/random.port";
+import { CourseScope, resolveBlueprint, WeekScope } from "./domain/resolve-blueprint";
 import { CreateExamInput, validateCreateExamInput } from "./domain/validate-create-exam-input";
 import { PreviewExamInput, validatePreviewExamInput } from "./domain/validate-preview-exam-input";
 import { StockBatchInput, validateStockBatchInput } from "./domain/validate-stock-batch-input";
@@ -32,10 +34,23 @@ export interface CreateExamBlueprintRowDto {
   readonly count?: number;
 }
 
+/**
+ * `examType`/`universityId`/`trackId`/`cycleId`/`weekNumber` are OPTIONAL,
+ * additive fields (design doc §4/§3.11): when the frontend calls
+ * `resolveExamBlueprint()` first, it feeds these back into `POST /exams`
+ * alongside the pre-filled `blueprint`, exactly as if the user had typed it
+ * by hand. Every existing caller omits them, so `createExam()` behaves
+ * exactly as before — see `ExamsRepository.createExam()`'s docstring.
+ */
 export interface CreateExamDto {
   readonly title?: string;
   readonly gradeLevel?: string;
   readonly blueprint?: readonly CreateExamBlueprintRowDto[];
+  readonly examType?: string;
+  readonly universityId?: string;
+  readonly trackId?: string;
+  readonly cycleId?: string;
+  readonly weekNumber?: number;
 }
 
 export interface CreateExamResult {
@@ -147,6 +162,28 @@ export type ExamDetailResult = ExamDetailRecord;
 /** `GET /exams/:examId/versions` response entry (B4) — same shape as the repository's `VersionSummaryRecord`. */
 export type ExamVersionSummary = VersionSummaryRecord;
 
+/** `POST /exams/blueprint/resolve` (design doc §3.11) request — `trackId: null` for a track-less university. */
+export interface ResolveExamBlueprintInput {
+  readonly examTypeCode: string;
+  readonly universityId: string;
+  readonly trackId: string | null;
+  readonly tenantId: string | null;
+  readonly selectedCourseIds?: readonly string[];
+  readonly totalQuestionsOverride?: number;
+}
+
+/**
+ * `templateId`/`weekNumber` are exposed alongside `blueprint` so the
+ * frontend can feed them straight back into `POST /exams` as
+ * `cycleId`/`weekNumber` provenance (design doc §4) without having to
+ * re-derive anything client-side.
+ */
+export interface ResolveExamBlueprintResult {
+  readonly blueprint: readonly BlueprintRow[];
+  readonly weekNumber: number | null;
+  readonly templateId: string | null;
+}
+
 function requireTenant(user: AuthTokenPayload): string {
   if (!user.tenantId) {
     throw new ForbiddenException("Only tenant users (school_admin/teacher) can manage exams");
@@ -225,6 +262,11 @@ export class ExamsService {
         difficulty: row.difficulty as Difficulty | undefined,
         count: row.count as number,
       })),
+      examType: dto.examType,
+      universityId: dto.universityId,
+      trackId: dto.trackId,
+      cycleId: dto.cycleId,
+      weekNumber: dto.weekNumber,
     });
 
     const rows = await this.repository.getBlueprintRows(examId);
@@ -507,5 +549,82 @@ export class ExamsService {
     if (!deleted) {
       throw new NotFoundException(`Exam not found: ${examId}`);
     }
+  }
+
+  /**
+   * `POST /exams/blueprint/resolve` (design doc §3.11 / §7.4) — the Fase 4
+   * wiring orchestrator: reads `course_scope`/`week_scope` off the exam type
+   * (data-driven, design doc §5), resolves the current template for
+   * (university, track?), and — only when the type is week-scoped — the
+   * active cycle's frozen `currentWeek`, then delegates the actual row
+   * construction to the pure `resolveBlueprint()` domain function. `manual`
+   * (`course_scope='none'`) short-circuits before touching any template.
+   *
+   * Every "no data" case throws loudly (`NotFoundException`) instead of
+   * defaulting — a missing template or missing cycle means the tenant's
+   * catalog is incomplete, and defaulting `weekNumber` to `0` would silently
+   * produce a nonsensical `eta_by_week` result (design doc's explicit
+   * instruction: the UI is supposed to prevent this by not offering an exam
+   * type with no template, but the backend must still fail loudly, never
+   * silently, if it happens anyway).
+   */
+  async resolveExamBlueprint(input: ResolveExamBlueprintInput): Promise<ResolveExamBlueprintResult> {
+    const examType = await this.repository.findExamType(input.examTypeCode);
+    if (!examType) {
+      throw new NotFoundException(`Exam type not found: ${input.examTypeCode}`);
+    }
+
+    if (examType.courseScope === "none") {
+      return { blueprint: [], weekNumber: null, templateId: null };
+    }
+
+    const template = await this.repository.findCurrentTemplate(input.universityId, input.trackId, input.tenantId);
+    if (!template) {
+      throw new NotFoundException(
+        `No current blueprint template found for university=${input.universityId} track=${input.trackId ?? "none"}`,
+      );
+    }
+
+    const [templateRows, syllabus] = await Promise.all([
+      this.repository.getTemplateRows(template.id),
+      this.repository.getSyllabusForTemplate(template.id),
+    ]);
+
+    const inScopeRows =
+      examType.courseScope === "selected"
+        ? templateRows.filter((row) => (input.selectedCourseIds ?? []).includes(row.courseId))
+        : templateRows;
+
+    if (
+      inScopeRows.some((row) => row.questionCount === undefined || row.questionCount === null) &&
+      input.totalQuestionsOverride === undefined
+    ) {
+      throw new BadRequestException(
+        "Esta plantilla no tiene conteo de preguntas por curso — indica un total de preguntas.",
+      );
+    }
+
+    let weekNumber: number | null = null;
+    if (examType.weekScope !== "none") {
+      const cycle = await this.repository.findActiveCycle(input.universityId, input.trackId, input.tenantId);
+      if (!cycle) {
+        throw new NotFoundException(
+          `No active cycle found for university=${input.universityId} track=${input.trackId ?? "none"} — cannot resolve the current week`,
+        );
+      }
+      weekNumber = computeCurrentWeek(cycle.startsOn, cycle.weekLengthDays, new Date());
+    }
+
+    const blueprint = resolveBlueprint({
+      courseScope: examType.courseScope as CourseScope,
+      weekScope: examType.weekScope as WeekScope,
+      templateRows,
+      syllabus,
+      currentWeek: weekNumber ?? undefined,
+      selectedCourseIds: input.selectedCourseIds,
+      totalQuestionsOverride: input.totalQuestionsOverride,
+    });
+
+    return { blueprint, weekNumber, templateId: template.id };
   }
 }

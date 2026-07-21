@@ -5,15 +5,21 @@ import { db } from "../../db/client";
 import {
   assets,
   courses,
+  cycles,
   examBlueprintRows,
+  examBlueprintTemplateRows,
+  examBlueprintTemplates,
   examQuestions,
   exams,
+  examTypes,
   examVersions,
   questions,
+  syllabusWeekMaps,
   tenants,
   topics,
 } from "../../db/schema";
 import { ExamStatus, QuestionType } from "../../db/schema/enums";
+import { SyllabusEntry, TemplateRow } from "./domain/resolve-blueprint";
 
 export interface CreateExamBlueprintRowRecord {
   readonly courseId: string;
@@ -22,12 +28,42 @@ export interface CreateExamBlueprintRowRecord {
   readonly count: number;
 }
 
+/**
+ * `examType`/`universityId`/`trackId`/`cycleId`/`weekNumber` are OPTIONAL —
+ * metadata about how the blueprint was produced (design doc §4, `resolveExamBlueprint()`
+ * wiring). When omitted (every caller before this change, every existing
+ * test), `createExam()` leaves them out of the insert entirely so the DB's
+ * own column defaults apply (`exam_type` -> `'manual'`, the rest -> `NULL`)
+ * — byte-for-byte the same INSERT as before this field existed.
+ */
 export interface CreateExamRecord {
   readonly tenantId: string;
   readonly title: string;
   readonly gradeLevel: string;
   readonly createdBy: string;
   readonly blueprint: readonly CreateExamBlueprintRowRecord[];
+  readonly examType?: string;
+  readonly universityId?: string;
+  readonly trackId?: string;
+  readonly cycleId?: string;
+  readonly weekNumber?: number;
+}
+
+/** `exam_blueprint_templates` row shape returned by `findCurrentTemplate()` — only what callers need to fetch its rows/syllabus by id. */
+export interface CurrentTemplateRecord {
+  readonly id: string;
+}
+
+/** `cycles` row shape returned by `findActiveCycle()` — only what `computeCurrentWeek()` needs. */
+export interface ActiveCycleRecord {
+  readonly startsOn: Date;
+  readonly weekLengthDays: number;
+}
+
+/** `exam_types` row shape returned by `findExamType()` — the two axes that drive `resolveBlueprint()` (design doc §5). */
+export interface ExamTypeRecord {
+  readonly courseScope: string;
+  readonly weekScope: string;
 }
 
 export interface ExamRecord {
@@ -234,6 +270,11 @@ export class ExamsRepository {
           title: record.title,
           gradeLevel: record.gradeLevel,
           createdBy: record.createdBy,
+          ...(record.examType !== undefined ? { examType: record.examType } : {}),
+          ...(record.universityId !== undefined ? { universityId: record.universityId } : {}),
+          ...(record.trackId !== undefined ? { trackId: record.trackId } : {}),
+          ...(record.cycleId !== undefined ? { cycleId: record.cycleId } : {}),
+          ...(record.weekNumber !== undefined ? { weekNumber: record.weekNumber } : {}),
         })
         .returning({ id: exams.id });
 
@@ -829,5 +870,132 @@ export class ExamsRepository {
       .orderBy(asc(examVersions.code));
 
     return rows;
+  }
+
+  /**
+   * Resolves the CURRENT (`is_current = true`) blueprint template for
+   * (university, track?), preferring the caller's tenant-specific override
+   * over the platform-wide default when both exist (design doc §3.7 —
+   * "default global editable por tenant vía fila-override"). Same
+   * nullable-tenant_id visibility pattern as `questionVisibility()`, but this
+   * query must settle on exactly ONE winner (unlike question-pool visibility,
+   * which just needs "any match"), hence the explicit `ORDER BY ... IS NULL`
+   * tiebreak — a non-null (tenant-owned) row sorts before a null (global) one.
+   *
+   * `trackId` matches with `IS NOT DISTINCT FROM` semantics (raw `sql`, not
+   * `eq`/`isNull`) because plain `=` never matches `NULL = NULL` in
+   * Postgres — a track-less university must still match a track-less
+   * template row, not silently return nothing.
+   */
+  async findCurrentTemplate(
+    universityId: string,
+    trackId: string | null,
+    tenantId: string | null,
+  ): Promise<CurrentTemplateRecord | null> {
+    const tenantCondition = tenantId
+      ? or(isNull(examBlueprintTemplates.tenantId), eq(examBlueprintTemplates.tenantId, tenantId))
+      : isNull(examBlueprintTemplates.tenantId);
+
+    const [row] = await db
+      .select({ id: examBlueprintTemplates.id })
+      .from(examBlueprintTemplates)
+      .where(
+        and(
+          eq(examBlueprintTemplates.universityId, universityId),
+          sql`${examBlueprintTemplates.trackId} IS NOT DISTINCT FROM ${trackId}`,
+          eq(examBlueprintTemplates.isCurrent, true),
+          tenantCondition,
+        ),
+      )
+      .orderBy(sql`${examBlueprintTemplates.tenantId} IS NULL`)
+      .limit(1);
+
+    return row ?? null;
+  }
+
+  /**
+   * Maps `exam_blueprint_template_rows` onto the exact `TemplateRow` shape
+   * `resolveBlueprint()` (design doc §5) expects — `weight_points` comes back
+   * from Postgres as a string (drizzle's default `numeric` mode), so it's
+   * converted to a number here; every other column already matches 1:1.
+   */
+  async getTemplateRows(templateId: string): Promise<TemplateRow[]> {
+    const rows = await db
+      .select({
+        courseId: examBlueprintTemplateRows.courseId,
+        topicId: examBlueprintTemplateRows.topicId,
+        questionCount: examBlueprintTemplateRows.questionCount,
+        weightPoints: examBlueprintTemplateRows.weightPoints,
+        sourceLevel: examBlueprintTemplateRows.sourceLevel,
+      })
+      .from(examBlueprintTemplateRows)
+      .where(eq(examBlueprintTemplateRows.templateId, templateId));
+
+    return rows.map((row) => ({
+      courseId: row.courseId,
+      topicId: row.topicId,
+      questionCount: row.questionCount,
+      weightPoints: row.weightPoints !== null ? Number(row.weightPoints) : null,
+      sourceLevel: row.sourceLevel,
+    }));
+  }
+
+  /**
+   * Maps `syllabus_week_maps` onto the domain `SyllabusEntry` shape — every
+   * column here is `NOT NULL`, so this is a pure passthrough (unlike
+   * `getTemplateRows()`, no nullability/type reconciliation needed).
+   */
+  async getSyllabusForTemplate(templateId: string): Promise<SyllabusEntry[]> {
+    return db
+      .select({
+        courseId: syllabusWeekMaps.courseId,
+        topicId: syllabusWeekMaps.topicId,
+        weekNumber: syllabusWeekMaps.weekNumber,
+      })
+      .from(syllabusWeekMaps)
+      .where(eq(syllabusWeekMaps.templateId, templateId));
+  }
+
+  /**
+   * Resolves the ACTIVE (`is_active = true`) cycle for (university, track?),
+   * same tenant-override-wins + `IS NOT DISTINCT FROM` track matching as
+   * `findCurrentTemplate()` — the two queries are deliberately independent
+   * (design doc §3.4: a cycle references university/track directly, never a
+   * `template_id`), so the pattern is duplicated rather than shared.
+   */
+  async findActiveCycle(
+    universityId: string,
+    trackId: string | null,
+    tenantId: string | null,
+  ): Promise<ActiveCycleRecord | null> {
+    const tenantCondition = tenantId
+      ? or(isNull(cycles.tenantId), eq(cycles.tenantId, tenantId))
+      : isNull(cycles.tenantId);
+
+    const [row] = await db
+      .select({ startsOn: cycles.startsOn, weekLengthDays: cycles.weekLengthDays })
+      .from(cycles)
+      .where(
+        and(
+          eq(cycles.universityId, universityId),
+          sql`${cycles.trackId} IS NOT DISTINCT FROM ${trackId}`,
+          eq(cycles.isActive, true),
+          tenantCondition,
+        ),
+      )
+      .orderBy(sql`${cycles.tenantId} IS NULL`)
+      .limit(1);
+
+    return row ?? null;
+  }
+
+  /** Trivial `exam_types` lookup — the two axes (`course_scope`/`week_scope`) that drive `resolveBlueprint()` (design doc §5). */
+  async findExamType(code: string): Promise<ExamTypeRecord | null> {
+    const [row] = await db
+      .select({ courseScope: examTypes.courseScope, weekScope: examTypes.weekScope })
+      .from(examTypes)
+      .where(eq(examTypes.code, code));
+
+    return row ?? null;
   }
 }
