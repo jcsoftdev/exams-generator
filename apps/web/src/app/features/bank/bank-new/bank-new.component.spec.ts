@@ -387,6 +387,36 @@ describe('BankNewComponent', () => {
       expect(instance.tab()).toBe('photo');
       expect(instance.extracting()).toBe(false);
     });
+
+    it('does not leak a stale pending course/topic when the structured grade already equals the photo grade (same-grade no-op)', () => {
+      const { fixture, compiled } = setup();
+      fillPhotoTaxonomy(fixture);
+      pickImage(fixture, compiled);
+      set(fixture, 'sGradeLevel', 'pre');
+
+      const instance = fixture.componentInstance as unknown as {
+        extractWithAi(): void;
+        sGradeLevel: () => string | null;
+        sCourseId: () => string;
+        sTopicId: () => string;
+      };
+      instance.extractWithAi();
+      fixture.detectChanges();
+
+      // Same-grade no-op: sGradeLevel.set() never notifies, so the
+      // grade→course effect doesn't fire and Curso/Tema are NOT preselected.
+      expect(instance.sGradeLevel()).toBe('pre');
+      expect(instance.sCourseId()).not.toBe('c1');
+      expect(instance.sTopicId()).not.toBe('t1');
+
+      // Later manual course pick on the structured tab, unrelated to the
+      // photo tab's course — without Fix 1's guard, pendingStructuredTopicId
+      // would still hold the photo tab's stale 't1' and leak into c2.
+      set(fixture, 'sCourseId', 'c2');
+      fixture.detectChanges();
+
+      expect(instance.sTopicId()).toBe('');
+    });
   });
 
   describe('extract-with-ai button (photo tab)', () => {

@@ -168,6 +168,7 @@ export class BankNewComponent {
   protected setTab(t: Tab): void {
     this.tab.set(t);
     this.saveError.set(null);
+    this.extractError.set(null);
   }
 
   protected onImageSelected(event: Event): void {
@@ -247,8 +248,10 @@ export class BankNewComponent {
         this.sAlternatives.set(extracted.alternatives.join('\n'));
         this.sCorrectAnswer.set(extracted.correctAnswer);
 
-        this.pendingStructuredCourseId = courseId;
-        this.pendingStructuredTopicId = topicId;
+        if (this.sGradeLevel() !== gradeLevel) {
+          this.pendingStructuredCourseId = courseId;
+          this.pendingStructuredTopicId = topicId;
+        }
         this.sGradeLevel.set(gradeLevel);
 
         this.extracting.set(false);
