@@ -49,6 +49,26 @@ function findLatexCommandInMath(bodyTypst: string): string | undefined {
 }
 
 /**
+ * The model's self-reported structural metadata about the question it just
+ * produced — which distinct concepts/relations the solution combines, and
+ * how many reasoning steps it takes. Required by `RESPONSE_JSON_SCHEMA`
+ * (see `openrouter-request-builder.ts`) so difficulty can be VERIFIED
+ * programmatically (`openrouter-difficulty-gate.ts`) instead of trusting
+ * the bare "easy"/"medium"/"hard" label. Deliberately NOT part of the
+ * `GeneratedQuestion` port contract: it's adapter-internal evidence used
+ * by the content guards, never persisted downstream.
+ */
+export interface QuestionSelfReport {
+  readonly conceptsUsed: readonly string[];
+  readonly solutionSteps: number;
+}
+
+export interface ValidatedGeneratedQuestion {
+  readonly question: GeneratedQuestion;
+  readonly selfReport: QuestionSelfReport;
+}
+
+/**
  * Validates an already-parsed (but untyped) JSON value against the
  * `GeneratedQuestion` shape. This is the ONLY gate content is allowed
  * through before the port resolves — per design doc §7 the AI response is
@@ -60,7 +80,7 @@ function findLatexCommandInMath(bodyTypst: string): string | undefined {
  */
 export function validateGeneratedQuestionShape(
   value: unknown,
-): GeneratedQuestion {
+): ValidatedGeneratedQuestion {
   const errors: string[] = [];
 
   if (typeof value !== "object" || value === null || Array.isArray(value)) {
@@ -105,17 +125,37 @@ export function validateGeneratedQuestionShape(
     errors.push("figureCode must be a string, null, or omitted");
   }
 
+  const conceptsUsed = payload.conceptsUsed;
+  if (
+    !Array.isArray(conceptsUsed) ||
+    conceptsUsed.length === 0 ||
+    !conceptsUsed.every((concept) => typeof concept === "string" && concept.trim().length > 0)
+  ) {
+    errors.push("conceptsUsed must be an array of at least 1 non-empty string");
+  }
+
+  const solutionSteps = payload.solutionSteps;
+  if (typeof solutionSteps !== "number" || !Number.isInteger(solutionSteps) || solutionSteps < 1) {
+    errors.push("solutionSteps must be an integer >= 1");
+  }
+
   if (errors.length > 0) {
     throw new TypeError(`Invalid AI-generated question: ${errors.join("; ")}`);
   }
 
   return {
-    bodyTypst: payload.bodyTypst as string,
-    alternatives: alternatives as unknown as GeneratedAlternatives,
-    correctAnswer: payload.correctAnswer as string,
-    figureCode:
-      typeof rawFigureCode === "string" && rawFigureCode.length > 0
-        ? rawFigureCode
-        : undefined,
+    question: {
+      bodyTypst: payload.bodyTypst as string,
+      alternatives: alternatives as unknown as GeneratedAlternatives,
+      correctAnswer: payload.correctAnswer as string,
+      figureCode:
+        typeof rawFigureCode === "string" && rawFigureCode.length > 0
+          ? rawFigureCode
+          : undefined,
+    },
+    selfReport: {
+      conceptsUsed: conceptsUsed as string[],
+      solutionSteps: solutionSteps as number,
+    },
   };
 }

@@ -38,6 +38,10 @@ const VALID_QUESTION_JSON = {
   alternatives: ["1/4", "3/4", "1/2", "1", "2"],
   correctAnswer: "b",
   figureCode: null,
+  // Self-report matching the structural bar of INPUT.difficulty (medium:
+  // 2+ concepts or 3+ steps) — the difficulty gate checks this.
+  conceptsUsed: ["suma de fracciones", "homogeneización de denominadores"],
+  solutionSteps: 2,
 };
 
 function jsonResponse(status: number, body: unknown): ReturnType<HttpClient> {
@@ -216,6 +220,8 @@ describe("OpenRouterAdapter", () => {
       alternatives: ["1", "2", "3", "4", "5"],
       correctAnswer: "b",
       figureCode: null,
+      conceptsUsed: ["suma de enteros", "conteo"],
+      solutionSteps: 1,
     };
     const httpClient = jest
       .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
@@ -272,6 +278,8 @@ describe("OpenRouterAdapter", () => {
       alternatives: ["1", "2", "3", "4", "5"],
       correctAnswer: "b",
       figureCode: null,
+      conceptsUsed: ["suma de enteros", "conteo"],
+      solutionSteps: 1,
     };
     const httpClient = jest
       .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
@@ -286,12 +294,88 @@ describe("OpenRouterAdapter", () => {
     expect(httpClient).toHaveBeenCalledTimes(2);
   });
 
+  it("retries once when the self-reported structure under-delivers the requested difficulty, and succeeds on retry", async () => {
+    // Passes shape AND plausibility (real alternatives, no figure requested)
+    // but reports 1 concept / 1 step for a MEDIUM request — the difficulty
+    // gate must reject it and feed the mismatch back into the retry prompt.
+    const underRigorousQuestion = {
+      ...VALID_QUESTION_JSON,
+      conceptsUsed: ["suma de fracciones"],
+      solutionSteps: 1,
+    };
+    const httpClient = jest
+      .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+      .mockReturnValueOnce(
+        jsonResponse(200, chatCompletion({ content: JSON.stringify(underRigorousQuestion) })),
+      )
+      .mockReturnValueOnce(
+        jsonResponse(200, chatCompletion({ content: JSON.stringify(VALID_QUESTION_JSON) })),
+      );
+    const adapter = new OpenRouterAdapter({
+      apiKey: "sk-test-key",
+      model: "deepseek/deepseek-r1:free",
+      httpClient,
+    });
+
+    const result = await adapter.generate(INPUT);
+
+    expect(httpClient).toHaveBeenCalledTimes(2);
+    expect(result.bodyTypst).toBe(VALID_QUESTION_JSON.bodyTypst);
+    const secondCallBody = JSON.parse(httpClient.mock.calls[1][1].body);
+    const secondPrompt = secondCallBody.messages.map((m: { content: string }) => m.content).join("\n");
+    // Only the difficulty gate's error message produces this text — proof
+    // the gate (not shape/plausibility) fired on attempt 1.
+    expect(secondPrompt).toContain("1 concept");
+  });
+
+  it("throws AiInvalidResponseError when the difficulty gate fails on both attempts", async () => {
+    const underRigorousQuestion = {
+      ...VALID_QUESTION_JSON,
+      conceptsUsed: ["suma de fracciones"],
+      solutionSteps: 1,
+    };
+    const httpClient = jest
+      .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+      .mockReturnValue(jsonResponse(200, chatCompletion({ content: JSON.stringify(underRigorousQuestion) })));
+    const adapter = new OpenRouterAdapter({
+      apiKey: "sk-test-key",
+      model: "deepseek/deepseek-r1:free",
+      httpClient,
+    });
+
+    await expect(adapter.generate(INPUT)).rejects.toBeInstanceOf(AiInvalidResponseError);
+    expect(httpClient).toHaveBeenCalledTimes(2);
+  });
+
+  it("does NOT run the difficulty gate for reviseQuestion (its target difficulty is only prompt guidance)", async () => {
+    // REVISE_INPUT asks for "hard" but the response self-reports 2 concepts /
+    // 2 steps — that would FAIL the hard gate. reviseQuestion must resolve
+    // anyway: the gate only protects fresh generation.
+    const httpClient = jest
+      .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
+      .mockReturnValueOnce(
+        jsonResponse(200, chatCompletion({ content: JSON.stringify(VALID_QUESTION_JSON) })),
+      );
+    const adapter = new OpenRouterAdapter({
+      apiKey: "sk-test-key",
+      model: "deepseek/deepseek-r1:free",
+      httpClient,
+    });
+
+    const result = await adapter.reviseQuestion(REVISE_INPUT);
+
+    expect(httpClient).toHaveBeenCalledTimes(1);
+    expect(result.bodyTypst).toBe(VALID_QUESTION_JSON.bodyTypst);
+  });
+
   it("does NOT run the content-plausibility guard for reviseQuestion/extractFromImage (no course/topic context)", async () => {
     const placeholderQuestion = {
       bodyTypst: "¿Cuál es el resultado de $1 + 1$?",
       alternatives: ["1", "2", "3", "4", "5"],
       correctAnswer: "b",
       figureCode: null,
+      conceptsUsed: ["suma de enteros", "conteo"],
+      solutionSteps: 1,
     };
     const httpClient = jest
       .fn<ReturnType<HttpClient>, Parameters<HttpClient>>()
@@ -493,7 +577,7 @@ describe("OpenRouterAdapter", () => {
         .mockReturnValueOnce(
           sseResponse(200, [
             sseChunk('{"bodyTypst":"¿Cuánto'),
-            sseChunk(' es $1/2 + 1/4$?","alternatives":["1/4","3/4","1/2","1","2"],"correctAnswer":"b","figureCode":null}'),
+            sseChunk(' es $1/2 + 1/4$?","alternatives":["1/4","3/4","1/2","1","2"],"correctAnswer":"b","figureCode":null,"conceptsUsed":["suma de fracciones","homogeneización de denominadores"],"solutionSteps":2}'),
             "data: [DONE]\n\n",
           ]),
         );

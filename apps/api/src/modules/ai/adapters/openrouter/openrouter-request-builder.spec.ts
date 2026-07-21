@@ -64,6 +64,30 @@ describe("buildOpenRouterRequestBody", () => {
     );
   });
 
+  it("requires the model to self-report conceptsUsed and solutionSteps in the schema", () => {
+    const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
+
+    const schema = body.response_format.json_schema.schema as unknown as {
+      properties: Record<string, unknown>;
+      required: string[];
+    };
+    expect(Object.keys(schema.properties)).toEqual(
+      expect.arrayContaining(["conceptsUsed", "solutionSteps"]),
+    );
+    expect(schema.required).toEqual(
+      expect.arrayContaining(["conceptsUsed", "solutionSteps"]),
+    );
+  });
+
+  it("warns the model that its self-reported structure is validated against the requested difficulty", () => {
+    const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
+
+    const promptText = promptTextOf(body);
+    expect(promptText).toContain("conceptsUsed");
+    expect(promptText).toContain("solutionSteps");
+    expect(promptText).toMatch(/conceptsUsed.*solutionSteps.*VALIDA|VALIDA.*conceptsUsed/s);
+  });
+
   it("includes course/topic/difficulty/gradeLevel/withFigure in the prompt content", () => {
     const body = buildOpenRouterRequestBody("some/free-model:free", INPUT);
 

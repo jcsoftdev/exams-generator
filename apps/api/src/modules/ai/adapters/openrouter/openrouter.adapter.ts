@@ -16,8 +16,12 @@ import {
   OpenRouterRequestBody,
 } from "./openrouter-request-builder";
 import { assessGeneratedQuestionPlausibility } from "./openrouter-content-plausibility-validator";
+import { assertDifficultyMatchesSelfReport } from "./openrouter-difficulty-gate";
 import { parseGeneratedQuestionContent } from "./openrouter-response-parser";
-import { validateGeneratedQuestionShape } from "./openrouter-response-validator";
+import {
+  QuestionSelfReport,
+  validateGeneratedQuestionShape,
+} from "./openrouter-response-validator";
 import { parseOpenRouterSseBuffer } from "./openrouter-sse-parser";
 
 const OPENROUTER_CHAT_COMPLETIONS_URL = "https://openrouter.ai/api/v1/chat/completions";
@@ -123,7 +127,10 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
       (previousError) => buildOpenRouterRequestBody(this.config.model, input, { previousError }),
       onProgress,
       previousCompileError,
-      (question) => assessGeneratedQuestionPlausibility(question, input),
+      (question, selfReport) => {
+        assessGeneratedQuestionPlausibility(question, input);
+        assertDifficultyMatchesSelfReport(selfReport, input.difficulty);
+      },
     );
   }
 
@@ -169,7 +176,7 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
     buildRequestBody: (previousError: string | undefined) => OpenRouterRequestBody,
     onProgress?: (event: GenerateProgressEvent) => void,
     seedError?: string,
-    contentGuard?: (question: GeneratedQuestion) => void,
+    contentGuard?: (question: GeneratedQuestion, selfReport: QuestionSelfReport) => void,
   ): Promise<GeneratedQuestion> {
     let lastOutcome: AttemptOutcome | undefined = seedError ? { ok: false, error: seedError } : undefined;
 
@@ -194,7 +201,7 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
 
   private async attempt(
     requestBody: OpenRouterRequestBody,
-    contentGuard?: (question: GeneratedQuestion) => void,
+    contentGuard?: (question: GeneratedQuestion, selfReport: QuestionSelfReport) => void,
   ): Promise<AttemptOutcome> {
     const response = await this.httpClient(this.baseUrl, {
       method: "POST",
@@ -218,8 +225,8 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
     try {
       rawContent = extractMessageContent(json);
       const parsed = parseGeneratedQuestionContent(rawContent);
-      const question = validateGeneratedQuestionShape(parsed);
-      contentGuard?.(question);
+      const { question, selfReport } = validateGeneratedQuestionShape(parsed);
+      contentGuard?.(question, selfReport);
       return { ok: true, question };
     } catch (err) {
       return { ok: false, error: (err as Error).message, rawContent };
@@ -229,7 +236,7 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
   private async attemptStreaming(
     requestBody: OpenRouterRequestBody,
     onProgress: (event: GenerateProgressEvent) => void,
-    contentGuard?: (question: GeneratedQuestion) => void,
+    contentGuard?: (question: GeneratedQuestion, selfReport: QuestionSelfReport) => void,
   ): Promise<AttemptOutcome> {
     const response = await this.sseHttpClient(this.baseUrl, {
       method: "POST",
@@ -271,8 +278,8 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
 
     try {
       const parsed = parseGeneratedQuestionContent(rawContent);
-      const question = validateGeneratedQuestionShape(parsed);
-      contentGuard?.(question);
+      const { question, selfReport } = validateGeneratedQuestionShape(parsed);
+      contentGuard?.(question, selfReport);
       return { ok: true, question };
     } catch (err) {
       return { ok: false, error: (err as Error).message, rawContent };

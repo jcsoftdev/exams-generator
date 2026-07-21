@@ -5,6 +5,8 @@ const VALID: Record<string, unknown> = {
   alternatives: ["1", "2", "3", "4", "5"],
   correctAnswer: "b",
   figureCode: null,
+  conceptsUsed: ["suma de enteros"],
+  solutionSteps: 1,
 };
 
 describe("validateGeneratedQuestionShape", () => {
@@ -12,10 +14,16 @@ describe("validateGeneratedQuestionShape", () => {
     const result = validateGeneratedQuestionShape(VALID);
 
     expect(result).toEqual({
-      bodyTypst: "¿Cuánto es $1+1$?",
-      alternatives: ["1", "2", "3", "4", "5"],
-      correctAnswer: "b",
-      figureCode: undefined,
+      question: {
+        bodyTypst: "¿Cuánto es $1+1$?",
+        alternatives: ["1", "2", "3", "4", "5"],
+        correctAnswer: "b",
+        figureCode: undefined,
+      },
+      selfReport: {
+        conceptsUsed: ["suma de enteros"],
+        solutionSteps: 1,
+      },
     });
   });
 
@@ -25,7 +33,7 @@ describe("validateGeneratedQuestionShape", () => {
       figureCode: "#circle((0,0))",
     });
 
-    expect(result.figureCode).toBe("#circle((0,0))");
+    expect(result.question.figureCode).toBe("#circle((0,0))");
   });
 
   it.each([
@@ -43,6 +51,14 @@ describe("validateGeneratedQuestionShape", () => {
     ["LaTeX \\frac inside math mode", { ...VALID, bodyTypst: "Halla $\\frac{1}{2}$" }],
     ["LaTeX \\circ inside math mode", { ...VALID, bodyTypst: 'Si $\\angle "BAD" = 70^{\\circ}$' }],
     ["LaTeX \\times inside math mode", { ...VALID, bodyTypst: "Calcula $3 \\times 10^8$" }],
+    ["missing conceptsUsed", { ...VALID, conceptsUsed: undefined }],
+    ["conceptsUsed as an empty array", { ...VALID, conceptsUsed: [] }],
+    ["conceptsUsed with a non-string entry", { ...VALID, conceptsUsed: ["suma", 3] }],
+    ["conceptsUsed with an empty entry", { ...VALID, conceptsUsed: ["suma", ""] }],
+    ["missing solutionSteps", { ...VALID, solutionSteps: undefined }],
+    ["solutionSteps as zero", { ...VALID, solutionSteps: 0 }],
+    ["solutionSteps as a non-integer", { ...VALID, solutionSteps: 1.5 }],
+    ["solutionSteps as a string", { ...VALID, solutionSteps: "2" }],
   ])("rejects: %s", (_label, payload) => {
     expect(() => validateGeneratedQuestionShape(payload)).toThrow(TypeError);
   });
@@ -59,7 +75,7 @@ describe("validateGeneratedQuestionShape", () => {
       bodyTypst: "Primera línea \\ Segunda línea, con $1+1$ en medio.",
     });
 
-    expect(result.bodyTypst).toBe("Primera línea \\ Segunda línea, con $1+1$ en medio.");
+    expect(result.question.bodyTypst).toBe("Primera línea \\ Segunda línea, con $1+1$ en medio.");
   });
 
   it("accepts a backslash-non-letter escape used inside math mode ($...$)", () => {
@@ -74,7 +90,7 @@ describe("validateGeneratedQuestionShape", () => {
       bodyTypst: "Resuelve: $x + 1 = 2 \\ y - 1 = 0$",
     });
 
-    expect(result.bodyTypst).toBe("Resuelve: $x + 1 = 2 \\ y - 1 = 0$");
+    expect(result.question.bodyTypst).toBe("Resuelve: $x + 1 = 2 \\ y - 1 = 0$");
   });
 
   it("accepts LaTeX wrapped in #mi(), even though it contains backslash commands", () => {
@@ -84,7 +100,7 @@ describe("validateGeneratedQuestionShape", () => {
         'El área es #mi("\\frac{1}{2} \\cdot b \\cdot h") — con $b$ y $h$ en cm.',
     });
 
-    expect(result.bodyTypst).toContain('#mi("\\frac{1}{2}');
+    expect(result.question.bodyTypst).toContain('#mi("\\frac{1}{2}');
   });
 
   it("is not fooled by a literal $ inside #mi(), in either direction", () => {
@@ -103,6 +119,6 @@ describe("validateGeneratedQuestionShape", () => {
       ...VALID,
       bodyTypst: 'Precio $5. Área #mi("\\frac{a}{b}") aquí $x$ final.',
     });
-    expect(result.bodyTypst).toContain('#mi("\\frac{a}{b}")');
+    expect(result.question.bodyTypst).toContain('#mi("\\frac{a}{b}")');
   });
 });

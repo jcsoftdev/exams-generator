@@ -78,8 +78,28 @@ const RESPONSE_JSON_SCHEMA: OpenRouterJsonSchema = {
         description:
           "Código CeTZ (Typst) de una figura opcional que acompaña la pregunta, o null si no aplica.",
       },
+      conceptsUsed: {
+        type: "array",
+        items: { type: "string" },
+        minItems: 1,
+        description:
+          'Lista de los conceptos, fórmulas o relaciones DISTINTOS que la solución de la pregunta combina realmente (ej. ["teorema de Pitágoras", "semejanza de triángulos"]). Debe reflejar la pregunta REAL — el sistema lo valida contra la dificultad pedida.',
+      },
+      solutionSteps: {
+        type: "integer",
+        minimum: 1,
+        description:
+          "Número entero de pasos de razonamiento necesarios para resolver la pregunta (sustituir datos en una fórmula directa = 1). Debe reflejar la pregunta REAL — el sistema lo valida contra la dificultad pedida.",
+      },
     },
-    required: ["bodyTypst", "alternatives", "correctAnswer", "figureCode"],
+    required: [
+      "bodyTypst",
+      "alternatives",
+      "correctAnswer",
+      "figureCode",
+      "conceptsUsed",
+      "solutionSteps",
+    ],
   },
 };
 
@@ -194,6 +214,7 @@ const DIFFICULTY_CALIBRATION_RULES = [
   '"medium": análisis MODERADO — el estudiante debe interpretar el enunciado para identificar qué relación o propiedad aplica cuando NO es evidente a primera vista, o combinar dos conceptos cuya conexión no está declarada, o interpretar un dato indirecto antes de poder plantear la solución. Ejemplo de calibre: dado un cubo inscrito en una esfera de radio 3√3, hallar el volumen del cubo (el estudiante debe conectar la diagonal del cubo con el diámetro de la esfera — d = a√3 = 2r — ANTES de poder aplicar V = a³; la fórmula del volumen sola no alcanza).',
   '"hard": análisis PROFUNDO — evaluar varios casos o condiciones antes de decidir cuál aplica, justificar por qué una estrategia es válida sobre otra, interpretar información no explícita en un problema contextualizado, o sintetizar 3 o más conceptos cuya conexión el estudiante debe descubrir por sí mismo. Ejemplo de calibre: un tanque cúbico se llena de agua hasta la mitad de su altura; al sumergir una esfera tangente a las 4 caras laterales, el nivel sube 2 cm — hallar la arista del cubo (exige plantear el volumen desplazado, relacionar el diámetro de la esfera con la arista del cubo, y resolver la ecuación resultante — ningún paso es una fórmula aislada).',
   'NUNCA generes una pregunta "easy" que sea pura memorización sin ninguna interpretación, ni una que en realidad exige el análisis de "medium"/"hard" (varios casos, dato oculto, conexión no evidente entre conceptos, estrategia a decidir). Y AL REVÉS: NUNCA generes una pregunta "medium" o "hard" que en el fondo sea un solo paso de sustituir datos en una fórmula directa (ese es el error opuesto — la etiqueta dice "hard" pero el ejercicio real es "easy"). Si el tema pedido tiende a una fórmula de un solo paso (ej. volumen de un sólido con datos dados directamente), para "medium"/"hard" agrega la interpretación o combinación de conceptos que falte (dato indirecto, condición oculta, combinar dos figuras) — NUNCA entregues igual el ejercicio de un solo paso con la etiqueta más alta.',
+  'Tu respuesta incluye SIEMPRE "conceptsUsed" (los conceptos/relaciones distintos que la solución combina) y "solutionSteps" (los pasos de razonamiento para resolverla). Estos campos se VALIDAN automáticamente contra la dificultad pedida: si reportan menos rigor del pedido (ej. 1 concepto y 1 paso para "hard") la pregunta se RECHAZA y tendrás que regenerarla. No basta con ESCRIBIR varios conceptos en conceptsUsed para cumplir — la pregunta misma debe exigir de verdad esos conceptos en su solución.',
 ].join(" ");
 
 const SYSTEM_PROMPT = [
