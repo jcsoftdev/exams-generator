@@ -1,14 +1,31 @@
 import { integer, jsonb, pgTable, text, timestamp, uniqueIndex, uuid } from "drizzle-orm/pg-core";
 import { assets } from "./assets.schema";
 import { courses } from "./courses.schema";
+import { cycles } from "./cycles.schema";
 import { difficultyEnum, examStatusEnum } from "./enums";
+import { examTypes } from "./exam-types.schema";
 import { gradeLevels } from "./grade-levels.schema";
 import { questions } from "./questions.schema";
 import { tenants } from "./tenants.schema";
 import { topics } from "./topics.schema";
+import { tracks } from "./tracks.schema";
+import { universities } from "./universities.schema";
 import { users } from "./users.schema";
 
-/** An exam always belongs to a specific tenant (school) — never central. */
+/**
+ * An exam always belongs to a specific tenant (school) — never central.
+ *
+ * `examType`/`universityId`/`trackId`/`cycleId`/`weekNumber` are metadata
+ * about HOW the blueprint was produced (design doc §4 "Columnas nuevas en
+ * `exams`") — the actual blueprint content keeps living in
+ * `exam_blueprint_rows`/`exam_questions`, unchanged. `examType` defaults to
+ * `'manual'` and the other four stay nullable so every existing caller (every
+ * row created before this migration, every test that doesn't pass them)
+ * behaves exactly as before. `weekNumber` is a frozen snapshot of
+ * `computeCurrentWeek()` at generation time — it is NEVER recomputed later
+ * (design doc §3.3), unlike `cycles`' own current-week, which is always
+ * derived live.
+ */
 export const exams = pgTable("exams", {
   id: uuid("id").primaryKey().defaultRandom(),
   tenantId: uuid("tenant_id")
@@ -23,6 +40,14 @@ export const exams = pgTable("exams", {
     .notNull()
     .references(() => users.id),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  examType: text("exam_type")
+    .notNull()
+    .default("manual")
+    .references(() => examTypes.code),
+  universityId: uuid("university_id").references(() => universities.id),
+  trackId: uuid("track_id").references(() => tracks.id),
+  cycleId: uuid("cycle_id").references(() => cycles.id),
+  weekNumber: integer("week_number"),
 });
 
 /**

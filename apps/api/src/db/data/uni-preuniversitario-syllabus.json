@@ -1,0 +1,447 @@
+{
+  "_source": "CEPRE-UNI Guía del Estudiante 2026-2, sección PROGRAMAS CURRICULARES (pp.21-61), cacheada en web-research slug peru-university-admissions/uni-cepre-admission-syllabus. Semana 00-20 + Recuperación (codificada aquí como semana 21). Cada entrada 'topics' lista el/los temas del catálogo de topics con los que se mapeó esa semana (existentes o nuevos); 'skipped' documenta semanas oficiales sin tema propio y el motivo.",
+  "courses": [
+    {
+      "courseName": "Aritmética",
+      "weeks": [
+        { "week": 0, "topics": ["Razones y proporciones"] },
+        { "week": 1, "topics": ["Magnitudes proporcionales"] },
+        { "week": 2, "topics": ["Regla de tres y porcentajes"] },
+        { "week": 3, "topics": ["Porcentajes: aumentos, descuentos y aplicaciones comerciales"] },
+        { "week": 4, "topics": ["Interés simple y compuesto"] },
+        { "week": 5, "topics": ["Descuento comercial y racional"] },
+        { "week": 6, "topics": ["Mezcla y aleación"] },
+        { "week": 7, "topics": ["Estadística: tablas y gráficos de frecuencia"] },
+        { "week": 8, "topics": ["Medidas de tendencia central"] },
+        { "week": 9, "topics": ["Medidas de dispersión y análisis combinatorio"] },
+        { "week": 10, "topics": ["Combinatoria y probabilidad"] },
+        { "week": 11, "topics": ["Sistemas de numeración"] },
+        { "week": 12, "topics": ["Operaciones fundamentales"] },
+        { "week": 14, "topics": ["Divisibilidad"] },
+        { "week": 15, "topics": ["Números primos, MCD y MCM"] },
+        { "week": 16, "topics": ["Teoría de números avanzada (función de Euler, Fermat, Wilson)"] },
+        { "week": 18, "topics": ["Números racionales e irracionales"] },
+        { "week": 19, "topics": ["Fracciones"] },
+        {
+          "week": 20,
+          "topics": [
+            "Potenciación y radicación (cuadrados y cubos perfectos)",
+            "Razonamiento matemático aplicado en aritmética (falsa suposición, móviles, edades, secuencias)"
+          ]
+        }
+      ],
+      "skipped": [
+        { "week": 13, "reason": "Sustracción/multiplicación — subsumido en 'Operaciones fundamentales' (semana 12)." },
+        { "week": 17, "reason": "MCD/MCM (Euclides) y fracciones continuas — núcleo ya cubierto por 'Números primos, MCD y MCM' (semana 15); fracciones continuas es sub-tema menor." },
+        { "week": 21, "reason": "Recuperación: radicación (raíz cuadrada/cúbica) — subsumido en 'Potenciación y radicación' (semana 20)." }
+      ]
+    },
+    {
+      "courseName": "Álgebra",
+      "weeks": [
+        { "week": 1, "topics": ["Lógica proposicional y teoría de conjuntos"] },
+        { "week": 2, "topics": ["Productos notables"] },
+        { "week": 4, "topics": ["Ecuaciones de primer grado", "Ecuaciones de segundo grado", "Inecuaciones y valor absoluto"] },
+        { "week": 5, "topics": ["Polinomios"] },
+        { "week": 6, "topics": ["División algebraica"] },
+        { "week": 7, "topics": ["Factorización"] },
+        { "week": 8, "topics": ["Funciones"] },
+        { "week": 10, "topics": ["Función inversa y teorema de Cardano-Viette"] },
+        { "week": 11, "topics": ["Logaritmos"] },
+        { "week": 12, "topics": ["Números complejos"] },
+        { "week": 13, "topics": ["Matrices y determinantes"] },
+        { "week": 15, "topics": ["Sistemas de ecuaciones"] },
+        { "week": 17, "topics": ["Programación lineal"] },
+        {
+          "week": 18,
+          "topics": [
+            "Progresiones",
+            "Razonamiento matemático aplicado en álgebra (juegos lógicos: ordenamientos, parentescos, certezas)"
+          ]
+        },
+        { "week": 19, "topics": ["Límites de sucesiones y series notables"] }
+      ],
+      "skipped": [
+        { "week": 3, "reason": "Conjuntos acotados/densidad, operaciones binarias — sub-tema avanzado de teoría de conjuntos, no constituye unidad evaluable propia." },
+        { "week": 9, "reason": "Operaciones con funciones, composición y graficación — subsumido en 'Funciones' (semana 8)." },
+        { "week": 14, "reason": "Determinantes (Vandermonde, Laplace), matriz inversa — subsumido en 'Matrices y determinantes' (semana 13)." },
+        { "week": 16, "reason": "Rango de matriz, Gauss, Rouché-Frobenius, sistemas no lineales — subsumido en 'Sistemas de ecuaciones' (semana 15) y 'Matrices y determinantes' (semana 13)." },
+        { "week": 20, "reason": "Convergencia de series, progresión aritmética/geométrica — subsumido en 'Progresiones' (semana 18) y 'Límites de sucesiones y series notables' (semana 19)." }
+      ]
+    },
+    {
+      "courseName": "Geometría",
+      "weeks": [
+        { "week": 0, "topics": ["Segmentos y ángulos"] },
+        { "week": 1, "topics": ["Triángulos"] },
+        { "week": 2, "topics": ["Congruencia y semejanza"] },
+        { "week": 3, "topics": ["Polígonos y cuadriláteros"] },
+        { "week": 4, "topics": ["Circunferencia"] },
+        { "week": 5, "topics": ["Proporcionalidad y relaciones métricas"] },
+        { "week": 6, "topics": ["Razonamiento matemático aplicado en geometría (perímetros de figuras)"] },
+        { "week": 9, "topics": ["Isoperimetría, número áureo y simetría"] },
+        {
+          "week": 10,
+          "topics": [
+            "Áreas de regiones planas",
+            "Razonamiento matemático aplicado en geometría (análisis y series de figuras)"
+          ]
+        },
+        { "week": 12, "topics": ["Razonamiento matemático aplicado en geometría (distribución de figuras)"] },
+        { "week": 13, "topics": ["Geometría del espacio (poliedros)"] },
+        { "week": 18, "topics": ["Cuerpos redondos"] },
+        { "week": 21, "topics": ["Razonamiento matemático aplicado en geometría (conteo de rutas y cubos)"] }
+      ],
+      "skipped": [
+        { "week": 7, "reason": "Recta/circunferencia de Euler, relaciones métricas (Pitágoras, Stewart, Herón) — subsumido en 'Proporcionalidad y relaciones métricas' (semana 5)." },
+        { "week": 8, "reason": "Relaciones métricas en la circunferencia, polígonos regulares — subsumido en semana 5 / 'Polígonos y cuadriláteros' (semana 3)." },
+        { "week": 11, "reason": "Relación de áreas triangulares y cuadrangulares — subsumido en 'Áreas de regiones planas' (semana 10)." },
+        { "week": 14, "reason": "Ángulos poliedros/triedros, Euler — subsumido en 'Geometría del espacio (poliedros)' (semana 13)." },
+        { "week": 15, "reason": "Poliedros regulares, simetría en el espacio — subsumido en semana 13." },
+        { "week": 16, "reason": "Prisma, tronco de prisma — subsumido en 'Geometría del espacio (poliedros)' (semana 13)." },
+        { "week": 17, "reason": "Pirámide, tronco de pirámide, prismoide — subsumido en semana 13." },
+        { "week": 19, "reason": "Cono, tronco de cono, superficie esférica — subsumido en 'Cuerpos redondos' (semana 18)." },
+        { "week": 20, "reason": "Esfera: volumen y secciones — subsumido en 'Cuerpos redondos' (semana 18)." }
+      ]
+    },
+    {
+      "courseName": "Trigonometría",
+      "weeks": [
+        { "week": 0, "topics": ["Ángulos y sistemas de medición angular"] },
+        { "week": 1, "topics": ["Razones trigonométricas"] },
+        { "week": 2, "topics": ["Resolución de triángulos"] },
+        { "week": 3, "topics": ["Geometría analítica: la recta"] },
+        { "week": 4, "topics": ["Razones trigonométricas de cualquier ángulo (posición normal)"] },
+        { "week": 5, "topics": ["Circunferencia trigonométrica"] },
+        { "week": 6, "topics": ["Identidades trigonométricas"] },
+        { "week": 9, "topics": ["Funciones trigonométricas"] },
+        { "week": 11, "topics": ["Funciones trigonométricas inversas y generalizadas"] },
+        { "week": 13, "topics": ["Ecuaciones trigonométricas"] },
+        { "week": 15, "topics": ["Área de regiones triangulares (fórmula de Herón)"] },
+        { "week": 17, "topics": ["Geometría analítica: circunferencia y parábola"] },
+        { "week": 18, "topics": ["Geometría analítica: elipse e hipérbola"] },
+        { "week": 20, "topics": ["Ecuación general de segundo grado y coordenadas polares"] }
+      ],
+      "skipped": [
+        { "week": 7, "reason": "Identidades de arcos compuestos, doble y mitad — subsumido en 'Identidades trigonométricas' (semana 6)." },
+        { "week": 8, "reason": "Identidades de arco triple, transformaciones — subsumido en semana 6." },
+        { "week": 10, "reason": "Funciones tangente/cotangente/secante/cosecante — subsumido en 'Funciones trigonométricas' (semana 9)." },
+        { "week": 12, "reason": "Funciones inversas (arcotangente, arcocotangente, etc.) — subsumido en semana 11." },
+        { "week": 14, "reason": "Resolución de triángulos (senos/cosenos), rosa náutica — subsumido en 'Resolución de triángulos' (semana 2)." },
+        { "week": 16, "reason": "Líneas notables del triángulo, área cuadrangular (Ptolomeo) — subsumido en semanas 15 y 2." },
+        { "week": 19, "reason": "Recta tangente a cónica, traslación/rotación de ejes — subsumido en semanas 17 y 18." }
+      ]
+    },
+    {
+      "courseName": "Física",
+      "weeks": [
+        { "week": 0, "topics": ["Análisis dimensional y vectores"] },
+        { "week": 1, "topics": ["Cinemática"] },
+        { "week": 4, "topics": ["Estática"] },
+        { "week": 5, "topics": ["Dinámica"] },
+        { "week": 6, "topics": ["Gravitación universal"] },
+        { "week": 7, "topics": ["Trabajo, energía y potencia", "Cantidad de movimiento"] },
+        { "week": 8, "topics": ["Oscilaciones: movimiento armónico simple"] },
+        { "week": 9, "topics": ["Ondas y óptica"] },
+        { "week": 10, "topics": ["Hidrostática"] },
+        { "week": 11, "topics": ["Temperatura y calorimetría"] },
+        { "week": 12, "topics": ["Termodinámica"] },
+        { "week": 13, "topics": ["Electrostática y electrodinámica"] },
+        { "week": 17, "topics": ["Magnetismo"] },
+        { "week": 19, "topics": ["Óptica geométrica: espejos y lentes"] },
+        { "week": 20, "topics": ["Física moderna: introducción"] }
+      ],
+      "skipped": [
+        { "week": 2, "reason": "MRU, MRUV, caída libre — subsumido en 'Cinemática' (semana 1)." },
+        { "week": 3, "reason": "Cinemática 2D, proyectiles, movimiento circular — subsumido en 'Cinemática' (semana 1)." },
+        { "week": 14, "reason": "Líneas de fuerza, potencial eléctrico — subsumido en 'Electrostática y electrodinámica' (semana 13)." },
+        { "week": 15, "reason": "Capacitancia, corriente eléctrica, ley de Ohm — subsumido en semana 13." },
+        { "week": 16, "reason": "Circuitos DC, Kirchhoff, efecto Joule — subsumido en semana 13." },
+        { "week": 18, "reason": "Inducción electromagnética, ondas electromagnéticas — subsumido en 'Magnetismo' (semana 17) y 'Ondas y óptica' (semana 9)." },
+        { "week": 21, "reason": "Recuperación: efecto fotoeléctrico, rayos X — subsumido en 'Física moderna: introducción' (semana 20)." }
+      ]
+    },
+    {
+      "courseName": "Química",
+      "weeks": [
+        { "week": 0, "topics": ["Materia y energía", "Estructura atómica"] },
+        { "week": 3, "topics": ["Tabla periódica"] },
+        { "week": 5, "topics": ["Enlace químico"] },
+        { "week": 7, "topics": ["Nomenclatura inorgánica"] },
+        { "week": 8, "topics": ["Estequiometría", "Reacciones químicas"] },
+        { "week": 10, "topics": ["Estados de la materia"] },
+        { "week": 13, "topics": ["Soluciones"] },
+        { "week": 14, "topics": ["Ácidos, bases y sales"] },
+        { "week": 15, "topics": ["Electroquímica: celdas galvánicas y electrolíticas"] },
+        { "week": 16, "topics": ["Química del carbono"] },
+        { "week": 18, "topics": ["Contaminación ambiental y ecología aplicada"] },
+        { "week": 20, "topics": ["Química aplicada: nanotecnología y materiales modernos"] }
+      ],
+      "skipped": [
+        { "week": 1, "reason": "Modelos atómicos (Dalton, Thomson, Rutherford, Bohr) — subsumido en 'Estructura atómica' (semana 0)." },
+        { "week": 2, "reason": "Configuración electrónica — subsumido en 'Estructura atómica' (semana 0)." },
+        { "week": 4, "reason": "Semana Santa — no hay clases." },
+        { "week": 6, "reason": "Hibridación, geometría/polaridad molecular — subsumido en 'Enlace químico' (semana 5)." },
+        { "week": 9, "reason": "Leyes ponderales, balance redox, reactivo limitante — subsumido en 'Estequiometría' (semana 8)." },
+        { "week": 11, "reason": "Ecuación de gases ideales, Avogadro — subsumido en 'Estados de la materia' (semana 10)." },
+        { "week": 12, "reason": "Estado líquido, estado sólido — subsumido en semana 10." },
+        { "week": 17, "reason": "Alquenos/alquinos, aromáticos, grupos funcionales — subsumido en 'Química del carbono' (semana 16)." },
+        { "week": 19, "reason": "Contaminación (lluvia ácida, ozono), reciclaje — subsumido en semana 18." }
+      ]
+    },
+    {
+      "courseName": "Literatura",
+      "weeks": [
+        { "week": 0, "topics": ["Figuras literarias"] },
+        { "week": 2, "topics": ["Literatura universal"] },
+        { "week": 5, "topics": ["Movimientos y vanguardias literarias"] },
+        { "week": 7, "topics": ["Literatura española"] },
+        { "week": 10, "topics": ["Literatura hispanoamericana"] },
+        { "week": 13, "topics": ["Literatura peruana"] }
+      ],
+      "skipped": [
+        { "week": 1, "reason": "Tabla fuente agrupa semanas 00-01 en una sola celda ('Teoría literaria, figuras literarias') — sin contenido distinto para la semana 1." },
+        { "week": 3, "reason": "Tragedia griega (Esquilo, Sófocles) — subsumido en 'Literatura universal' (semana 2)." },
+        { "week": 4, "reason": "Medieval (Dante), Renacimiento/Barroco (Shakespeare) — subsumido en semana 2." },
+        { "week": 6, "reason": "Kafka, Hemingway — subsumido en semanas 2 y 5." },
+        { "week": 8, "reason": "Teatro Siglo de Oro (Lope, Calderón) — subsumido en 'Literatura española' (semana 7)." },
+        { "week": 9, "reason": "Cervantes, Generación del 98/27 — subsumido en semanas 7 y 5." },
+        { "week": 11, "reason": "Boom latinoamericano — subsumido en 'Literatura hispanoamericana' (semana 10)." },
+        { "week": 12, "reason": "Neruda, Octavio Paz, Cardenal — subsumido en semana 10." },
+        { "week": 14, "reason": "Melgar, costumbrismo — subsumido en 'Literatura peruana' (semana 13)." },
+        { "week": 15, "reason": "Ricardo Palma, González Prada — subsumido en semana 13." },
+        { "week": 16, "reason": "Chocano, Eguren, Valdelomar — subsumido en semana 13." },
+        { "week": 17, "reason": "Vallejo, Mariátegui — subsumido en semana 13." },
+        { "week": 18, "reason": "Ciro Alegría, Arguedas — subsumido en semana 13." },
+        { "week": 19, "reason": "Ribeyro, Vargas Llosa, Bryce Echenique — subsumido en semana 13." },
+        { "week": 20, "reason": "Repaso general (semanas 1-19) — sin contenido nuevo." }
+      ]
+    },
+    {
+      "courseName": "Filosofía",
+      "weeks": [
+        { "week": 0, "topics": ["Origen de la filosofía"] },
+        { "week": 3, "topics": ["Ontología y metafísica"] },
+        { "week": 5, "topics": ["Gnoseología y epistemología"] },
+        { "week": 8, "topics": ["Filosofía contemporánea: positivismo y marxismo"] },
+        { "week": 11, "topics": ["Axiología"] },
+        { "week": 12, "topics": ["Ética"] },
+        { "week": 13, "topics": ["Filosofía política"] },
+        { "week": 16, "topics": ["Lógica"] }
+      ],
+      "skipped": [
+        { "week": 1, "reason": "Tabla fuente agrupa 00-01 ('Introducción a la filosofía') — sin contenido distinto." },
+        { "week": 2, "reason": "Presocráticos — subsumido en 'Origen de la filosofía' (semana 0)." },
+        { "week": 4, "reason": "Aristóteles, helenístico-romano — subsumido en 'Ontología y metafísica' (semana 3)." },
+        { "week": 6, "reason": "Ilustración — subsumido en 'Gnoseología y epistemología' (semana 5)." },
+        { "week": 7, "reason": "Kant, Hegel — subsumido en semana 5." },
+        { "week": 9, "reason": "Nietzsche, existencialismo, Heidegger — subsumido en 'Filosofía contemporánea' (semana 8)." },
+        { "week": 10, "reason": "Wittgenstein, Círculo de Viena, Popper (filosofía de la ciencia) — subsumido en 'Gnoseología y epistemología' (semana 5)." },
+        { "week": 14, "reason": "Gnoseología (repetición de encabezado) — subsumido en semana 5." },
+        { "week": 15, "reason": "Epistemología (repetición de encabezado) — subsumido en semana 5." },
+        { "week": 17, "reason": "Lógica II (tautologías) — subsumido en 'Lógica' (semana 16)." },
+        { "week": 18, "reason": "Lógica III (silogismo categórico) — subsumido en semana 16." },
+        { "week": 19, "reason": "Repaso 1 — sin contenido nuevo." },
+        { "week": 20, "reason": "Repaso 2 — sin contenido nuevo." }
+      ]
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "weeks": [
+        { "week": 0, "topics": ["Definiciones: género próximo y diferencia específica"] },
+        { "week": 2, "topics": ["Analogías verbales"] },
+        { "week": 3, "topics": ["Sinónimos y antónimos"] },
+        { "week": 5, "topics": ["Conectores lógicos"] },
+        { "week": 6, "topics": ["Eliminación de oraciones"] },
+        { "week": 7, "topics": ["Plan de redacción"] },
+        { "week": 9, "topics": ["Coherencia y cohesión textual"] },
+        { "week": 10, "topics": ["Comprensión de lectura"] },
+        { "week": 18, "topics": ["Término excluido"] }
+      ],
+      "skipped": [
+        { "week": 1, "reason": "Tabla fuente agrupa 00-01 ('Definiciones') — sin contenido distinto." },
+        { "week": 4, "reason": "Antonimia contextual — subsumido en 'Sinónimos y antónimos' (semana 3)." },
+        { "week": 8, "reason": "Inclusión de enunciado — variante menor, subsumido en 'Plan de redacción'/'Eliminación de oraciones' (semanas 6-7)." },
+        { "week": 11, "reason": "Macroestructura, idea principal — subsumido en 'Comprensión de lectura' (semana 10)." },
+        { "week": 12, "reason": "Textos continuos — subsumido en semana 10." },
+        { "week": 13, "reason": "Textos discontinuos — subsumido en semana 10." },
+        { "week": 14, "reason": "Mapas conceptuales — sub-tema menor, subsumido en semana 10." },
+        { "week": 15, "reason": "El resumen — subsumido en semana 10." },
+        { "week": 16, "reason": "Sentido contextual — subsumido en 'Sinónimos y antónimos' (semana 3)." },
+        { "week": 17, "reason": "Inferencia — subsumido en 'Comprensión de lectura' (semana 10)." },
+        { "week": 19, "reason": "Extrapolación — subsumido en semana 10." },
+        { "week": 20, "reason": "Texto filosófico/científico — variante de tipo de texto, subsumido en semana 10." }
+      ]
+    },
+    {
+      "courseName": "Lenguaje",
+      "weeks": [
+        { "week": 0, "topics": ["La comunicación"] },
+        { "week": 2, "topics": ["Uso de grafías"] },
+        { "week": 3, "topics": ["Acentuación"] },
+        { "week": 6, "topics": ["Categorías gramaticales"] },
+        { "week": 8, "topics": ["Semántica"] },
+        { "week": 10, "topics": ["Sintaxis"] },
+        { "week": 11, "topics": ["Morfología"] },
+        { "week": 16, "topics": ["Signos de puntuación"] },
+        { "week": 17, "topics": ["Normativa (dequeísmo y queísmo)"] }
+      ],
+      "skipped": [
+        { "week": 1, "reason": "Tabla fuente agrupa 00-01 ('Comunicación humana, mayúsculas I') — sin contenido distinto." },
+        { "week": 4, "reason": "Acentuación especial — subsumido en 'Acentuación' (semana 3)." },
+        { "week": 5, "reason": "Uso de grafías, prefijos — subsumido en 'Uso de grafías' (semana 2)." },
+        { "week": 7, "reason": "Determinantes — subsumido en 'Categorías gramaticales' (semana 6)." },
+        { "week": 9, "reason": "Repaso I — sin contenido nuevo." },
+        { "week": 12, "reason": "Verboides, perífrasis verbales — subsumido en 'Morfología' (semana 11)." },
+        { "week": 13, "reason": "Preposición, adverbio, conjunción — subsumido en 'Categorías gramaticales' (semana 6)." },
+        { "week": 14, "reason": "Oración simple I (sujeto/predicado) — subsumido en 'Sintaxis' (semana 10)." },
+        { "week": 15, "reason": "Oración simple II (complementos) — subsumido en semana 10." },
+        { "week": 18, "reason": "Repaso II — sin contenido nuevo." },
+        { "week": 19, "reason": "Oración compuesta II (subordinada sustantiva) — subsumido en 'Sintaxis' (semana 10)." },
+        { "week": 20, "reason": "Oración compuesta III (adjetiva/adverbial) — subsumido en semana 10." }
+      ]
+    },
+    {
+      "courseName": "Inglés",
+      "_note": "Curso nuevo (no existía en el catálogo preuniversitario) — todos los temas son nuevos, derivados directamente del sílabo oficial.",
+      "weeks": [
+        { "week": 0, "topics": ["Greetings, verb to be and wh-questions"] },
+        { "week": 2, "topics": ["Simple present tense"] },
+        { "week": 3, "topics": ["Modal verbs: can/can't"] },
+        { "week": 4, "topics": ["Present and past progressive"] },
+        { "week": 5, "topics": ["Simple past: verb to be"] },
+        { "week": 6, "topics": ["Simple past: regular verbs"] },
+        { "week": 7, "topics": ["Simple past: irregular verbs"] },
+        { "week": 8, "topics": ["Future: going to"] },
+        { "week": 9, "topics": ["Countable and uncountable nouns"] },
+        { "week": 10, "topics": ["Infinitive and gerund"] },
+        { "week": 11, "topics": ["Comparatives and superlatives"] },
+        { "week": 12, "topics": ["Present perfect tense"] },
+        { "week": 14, "topics": ["Modal verbs: must, should, have to"] },
+        { "week": 15, "topics": ["Past perfect tense"] },
+        { "week": 16, "topics": ["Zero and first conditional"] },
+        { "week": 17, "topics": ["Second and third conditional"] }
+      ],
+      "skipped": [
+        { "week": 1, "reason": "Tabla fuente agrupa 00-01 ('Greetings, verb to be, wh-questions') — sin contenido distinto." },
+        { "week": 13, "reason": "Present Perfect vs Simple Past, phrasal verbs I — subsumido en 'Present perfect tense' (semana 12)." },
+        { "week": 18, "reason": "Mixed Conditionals — subsumido en 'Second and third conditional' (semana 17)." },
+        { "week": 19, "reason": "Repaso 1 — sin contenido nuevo." },
+        { "week": 20, "reason": "Repaso 2 — sin contenido nuevo." }
+      ]
+    },
+    {
+      "courseName": "Historia",
+      "_note": "Curso nuevo. El catálogo existente tenía 'Historia del Perú' e 'Historia Universal' como cursos separados, pero tanto UNI como UNCP evalúan 'Historia' como una sola asignatura que mezcla contenido peruano y universal semana a semana (ver semanas 01-09 del sílabo fuente) — forzar el contenido a uno de los dos cursos existentes habría dejado mal mapeada la mitad de las semanas. Se crea 'Historia' como curso propio; 'Historia del Perú'/'Historia Universal' quedan sin usar en esta plantilla.",
+      "weeks": [
+        { "week": 0, "topics": ["Prehistoria y hominización"] },
+        { "week": 2, "topics": ["Poblamiento de América y el Perú"] },
+        { "week": 3, "topics": ["Edad Antigua: Mesopotamia y Egipto"] },
+        { "week": 4, "topics": ["Altas culturas andinas"] },
+        { "week": 5, "topics": ["Edad Antigua: Grecia y Roma"] },
+        { "week": 7, "topics": ["Edad Media"] },
+        { "week": 8, "topics": ["El Tahuantinsuyo y la invasión española"] },
+        { "week": 9, "topics": ["Edad Moderna"] },
+        { "week": 10, "topics": ["El Virreinato del Perú"] },
+        { "week": 11, "topics": ["Revoluciones burguesas del siglo XVIII"] },
+        { "week": 12, "topics": ["Independencia del Perú"] },
+        { "week": 13, "topics": ["Revolución Industrial y Primera Guerra Mundial"] },
+        { "week": 14, "topics": ["República del Perú: siglo XIX"] },
+        { "week": 15, "topics": ["Periodo de entreguerras y Segunda Guerra Mundial"] },
+        { "week": 16, "topics": ["Perú: el Oncenio de Leguía"] },
+        { "week": 17, "topics": ["Guerra Fría"] },
+        { "week": 18, "topics": ["República del Perú: 1930-1980"] },
+        { "week": 20, "topics": ["Perú contemporáneo: retorno a la democracia (1980-2000)"] }
+      ],
+      "skipped": [
+        { "week": 1, "reason": "Tabla fuente agrupa 00-01 ('Prehistoria, hominización') — sin contenido distinto." },
+        { "week": 6, "reason": "Altas culturas andinas II — subsumido en 'Altas culturas andinas' (semana 4)." },
+        { "week": 19, "reason": "Globalización, fin de la URSS — subsumido en 'Guerra Fría' (semana 17)." }
+      ]
+    },
+    {
+      "courseName": "Economía",
+      "weeks": [
+        { "week": 0, "topics": ["Necesidades y bienes"] },
+        { "week": 2, "topics": ["Sistemas económicos"] },
+        { "week": 5, "topics": ["Factores productivos"] },
+        { "week": 6, "topics": ["Mercado, oferta y demanda"] },
+        { "week": 10, "topics": ["Inflación", "Dinero y banca"] },
+        { "week": 12, "topics": ["El Estado y la economía"] },
+        { "week": 14, "topics": ["Agregados macroeconómicos: el PBI"] },
+        { "week": 16, "topics": ["Comercio internacional"] }
+      ],
+      "skipped": [
+        { "week": 1, "reason": "Tabla fuente agrupa 00-01 ('Conceptos básicos, costo de oportunidad') — sin contenido distinto." },
+        { "week": 3, "reason": "Doctrinas económicas 2 — subsumido en 'Sistemas económicos' (semana 2)." },
+        { "week": 4, "reason": "Necesidades, bienes y servicios — repetición de encabezado, subsumido en semana 0." },
+        { "week": 7, "reason": "Equilibrio de mercado — subsumido en 'Mercado, oferta y demanda' (semana 6)." },
+        { "week": 8, "reason": "Teoría de la empresa — sub-tema menor, subsumido en 'Factores productivos' (semana 5)." },
+        { "week": 9, "reason": "Modelos de mercado — subsumido en semana 6." },
+        { "week": 11, "reason": "Sistema financiero — subsumido en 'Dinero y banca' (semana 10)." },
+        { "week": 13, "reason": "Rol económico del Estado — subsumido en 'El Estado y la economía' (semana 12)." },
+        { "week": 15, "reason": "Crecimiento y desarrollo (IDH) — subsumido en 'Agregados macroeconómicos' (semana 14)." },
+        { "week": 17, "reason": "Sistema monetario internacional — subsumido en 'Comercio internacional' (semana 16)." },
+        { "week": 18, "reason": "Organismos financieros, globalización — subsumido en semana 16." },
+        { "week": 19, "reason": "Repaso 1 — sin contenido nuevo." },
+        { "week": 20, "reason": "Repaso 2 — sin contenido nuevo." }
+      ]
+    },
+    {
+      "courseName": "Geografía",
+      "weeks": [
+        { "week": 0, "topics": ["Coordenadas geográficas"] },
+        { "week": 2, "topics": ["Cartografía"] },
+        { "week": 3, "topics": ["Geografía física"] },
+        { "week": 5, "topics": ["Población y demografía"] },
+        { "week": 10, "topics": ["Ecorregiones del Perú"] },
+        { "week": 12, "topics": ["Geomorfología"] },
+        { "week": 13, "topics": ["Hidrografía del Perú"] },
+        { "week": 17, "topics": ["Geografía económica"] }
+      ],
+      "skipped": [
+        { "week": 1, "reason": "Tabla fuente agrupa 00-01 ('Coordenadas geográficas') — sin contenido distinto." },
+        { "week": 4, "reason": "Acuerdos de integración — geopolítica menor, subsumido en 'Geografía física' (semana 3)." },
+        { "week": 6, "reason": "Estado peruano — contenido cívico, no geográfico; sin tema propio en este curso." },
+        { "week": 7, "reason": "Poder político, democracia — contenido cívico, no geográfico." },
+        { "week": 8, "reason": "Organizaciones civiles — contenido cívico, no geográfico." },
+        { "week": 9, "reason": "Convivencia, diversidad cultural — contenido social, no geográfico." },
+        { "week": 11, "reason": "Áreas protegidas del Perú — subsumido en 'Ecorregiones del Perú' (semana 10)." },
+        { "week": 14, "reason": "Vertientes hidrográficas — subsumido en 'Hidrografía del Perú' (semana 13)." },
+        { "week": 15, "reason": "Regiones naturales — subsumido en 'Ecorregiones del Perú' (semana 10)." },
+        { "week": 16, "reason": "Ecorregiones — repetición de encabezado, subsumido en semana 10." },
+        { "week": 18, "reason": "Actividades económicas II — subsumido en 'Geografía económica' (semana 17)." },
+        { "week": 19, "reason": "Repaso 1 — sin contenido nuevo." },
+        { "week": 20, "reason": "Repaso 2 — sin contenido nuevo." }
+      ]
+    },
+    {
+      "courseName": "Psicología",
+      "weeks": [
+        { "week": 0, "topics": ["Definición y métodos de la psicología"] },
+        { "week": 2, "topics": ["Historia y escuelas de la psicología"] },
+        { "week": 4, "topics": ["Bases biológicas de la conducta"] },
+        { "week": 6, "topics": ["Estados de conciencia"] },
+        { "week": 7, "topics": ["Sensación y percepción"] },
+        { "week": 9, "topics": ["Memoria"] },
+        { "week": 10, "topics": ["Pensamiento y lenguaje"] },
+        { "week": 12, "topics": ["Motivación y emoción"] },
+        { "week": 13, "topics": ["Inteligencia"] },
+        { "week": 14, "topics": ["Aprendizaje"] },
+        { "week": 15, "topics": ["Personalidad"] },
+        { "week": 16, "topics": ["Psicología social"] }
+      ],
+      "skipped": [
+        { "week": 1, "reason": "Tabla fuente agrupa 00-01 ('Definición, métodos de la psicología') — sin contenido distinto." },
+        { "week": 3, "reason": "Psicoanálisis — una de las escuelas, subsumido en 'Historia y escuelas de la psicología' (semana 2)." },
+        { "week": 5, "reason": "Factores biológicos II (SNC periférico, endocrino) — subsumido en 'Bases biológicas de la conducta' (semana 4)." },
+        { "week": 8, "reason": "La percepción — subsumido en 'Sensación y percepción' (semana 7)." },
+        { "week": 11, "reason": "Imaginación y creatividad — subsumido en 'Pensamiento y lenguaje' (semana 10)." },
+        { "week": 17, "reason": "Sexualidad — sub-tema menor, subsumido en 'Psicología social'/'Personalidad' (semanas 15-16)." },
+        { "week": 18, "reason": "Salud psicológica — subsumido en semanas 15-16." },
+        { "week": 19, "reason": "Repaso 1 — sin contenido nuevo." },
+        { "week": 20, "reason": "Repaso 2 — sin contenido nuevo." }
+      ]
+    }
+  ]
+}
