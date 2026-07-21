@@ -33,6 +33,9 @@ apps/api/drizzle/meta/_journal.json.bak
 /tmp/typst-*
 .superpowers/
 
+# Pinned local typst binary (apps/api/scripts/install-typst-dev.sh)
+apps/api/.typst-bin/
+
 # Local tool state (machine-specific, rebuilt locally — never shared)
 .claude/
 .project-brain/
