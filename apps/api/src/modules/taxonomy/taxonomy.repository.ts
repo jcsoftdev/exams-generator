@@ -1,6 +1,6 @@
-import { and, eq } from "drizzle-orm";
+import { and, asc, eq } from "drizzle-orm";
 import { db } from "../../db/client";
-import { courses, topics } from "../../db/schema";
+import { courses, examTypes, topics, tracks, universities } from "../../db/schema";
 import type { Stage } from "../exams/domain/value-objects/grade-level";
 
 export interface CourseListItem {
@@ -12,6 +12,26 @@ export interface TopicListItem {
   readonly id: string;
   readonly name: string;
   readonly courseId: string;
+}
+
+export interface UniversityListItem {
+  readonly id: string;
+  readonly code: string;
+  readonly name: string;
+}
+
+export interface TrackListItem {
+  readonly id: string;
+  readonly code: string;
+  readonly name: string;
+  readonly kind: string;
+}
+
+export interface ExamTypeListItem {
+  readonly code: string;
+  readonly label: string;
+  readonly courseScope: string;
+  readonly weekScope: string;
 }
 
 /**
@@ -53,5 +73,40 @@ export class TaxonomyRepository {
     }
 
     return query;
+  }
+
+  /** Every university in the global catalog, ordered by name. */
+  async findAllUniversities(): Promise<UniversityListItem[]> {
+    return db
+      .select({ id: universities.id, code: universities.code, name: universities.name })
+      .from(universities)
+      .orderBy(asc(universities.name));
+  }
+
+  /**
+   * A single university's tracks, ordered by code. A university with no
+   * tracks returns `[]` — that's the normal case, not an error (design doc:
+   * tracks generalize "area by career"/"prep-cycle track", and not every
+   * university needs the concept).
+   */
+  async findTracksByUniversity(universityId: string): Promise<TrackListItem[]> {
+    return db
+      .select({ id: tracks.id, code: tracks.code, name: tracks.name, kind: tracks.kind })
+      .from(tracks)
+      .where(eq(tracks.universityId, universityId))
+      .orderBy(asc(tracks.code));
+  }
+
+  /** Every exam type in the global catalog, ordered by its curated `sortOrder`. */
+  async findAllExamTypes(): Promise<ExamTypeListItem[]> {
+    return db
+      .select({
+        code: examTypes.code,
+        label: examTypes.label,
+        courseScope: examTypes.courseScope,
+        weekScope: examTypes.weekScope,
+      })
+      .from(examTypes)
+      .orderBy(asc(examTypes.sortOrder));
   }
 }

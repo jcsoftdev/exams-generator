@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import { inArray } from "drizzle-orm";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
-import { courses, topics } from "../../db/schema";
+import { courses, examTypes, topics, tracks, universities } from "../../db/schema";
 import { TaxonomyRepository } from "./taxonomy.repository";
 
 /**
@@ -97,6 +97,167 @@ describe("TaxonomyRepository", () => {
 
       const byPre = await repository.findTopics(courseAId, "pre");
       expect(byPre).toHaveLength(0);
+    });
+  });
+
+  describe("findAllUniversities", () => {
+    let universityAId: string;
+    let universityBId: string;
+
+    beforeAll(async () => {
+      const [universityA] = await db
+        .insert(universities)
+        .values({ code: `aaa-uni-${suffix}`, name: `AAA University ${suffix}` })
+        .returning({ id: universities.id });
+      universityAId = universityA!.id;
+
+      const [universityB] = await db
+        .insert(universities)
+        .values({ code: `zzz-uni-${suffix}`, name: `ZZZ University ${suffix}` })
+        .returning({ id: universities.id });
+      universityBId = universityB!.id;
+    });
+
+    afterAll(async () => {
+      await db.delete(universities).where(inArray(universities.id, [universityAId, universityBId]));
+    });
+
+    it("returns every university ordered by name", async () => {
+      const result = await repository.findAllUniversities();
+      const ids = result.map((u) => u.id);
+
+      expect(ids).toContain(universityAId);
+      expect(ids).toContain(universityBId);
+      expect(ids.indexOf(universityAId)).toBeLessThan(ids.indexOf(universityBId));
+
+      const found = result.find((u) => u.id === universityAId);
+      expect(found).toEqual({
+        id: universityAId,
+        code: `aaa-uni-${suffix}`,
+        name: `AAA University ${suffix}`,
+      });
+    });
+  });
+
+  describe("findTracksByUniversity", () => {
+    let universityWithTracksId: string;
+    let universityWithoutTracksId: string;
+    let trackAId: string;
+    let trackBId: string;
+
+    beforeAll(async () => {
+      const [universityWithTracks] = await db
+        .insert(universities)
+        .values({ code: `tracked-uni-${suffix}`, name: `Tracked University ${suffix}` })
+        .returning({ id: universities.id });
+      universityWithTracksId = universityWithTracks!.id;
+
+      const [universityWithoutTracks] = await db
+        .insert(universities)
+        .values({ code: `trackless-uni-${suffix}`, name: `Trackless University ${suffix}` })
+        .returning({ id: universities.id });
+      universityWithoutTracksId = universityWithoutTracks!.id;
+
+      const [trackB] = await db
+        .insert(tracks)
+        .values({
+          universityId: universityWithTracksId,
+          code: `b-track-${suffix}`,
+          name: `B Track ${suffix}`,
+          kind: "cycle_track",
+        })
+        .returning({ id: tracks.id });
+      trackBId = trackB!.id;
+
+      const [trackA] = await db
+        .insert(tracks)
+        .values({
+          universityId: universityWithTracksId,
+          code: `a-track-${suffix}`,
+          name: `A Track ${suffix}`,
+          kind: "cycle_track",
+        })
+        .returning({ id: tracks.id });
+      trackAId = trackA!.id;
+    });
+
+    afterAll(async () => {
+      await db.delete(tracks).where(inArray(tracks.id, [trackAId, trackBId]));
+      await db
+        .delete(universities)
+        .where(inArray(universities.id, [universityWithTracksId, universityWithoutTracksId]));
+    });
+
+    it("returns the university's tracks ordered by code", async () => {
+      const result = await repository.findTracksByUniversity(universityWithTracksId);
+
+      expect(result).toEqual([
+        {
+          id: trackAId,
+          code: `a-track-${suffix}`,
+          name: `A Track ${suffix}`,
+          kind: "cycle_track",
+        },
+        {
+          id: trackBId,
+          code: `b-track-${suffix}`,
+          name: `B Track ${suffix}`,
+          kind: "cycle_track",
+        },
+      ]);
+    });
+
+    it("returns an empty array for a university with zero tracks", async () => {
+      const result = await repository.findTracksByUniversity(universityWithoutTracksId);
+      expect(result).toEqual([]);
+    });
+  });
+
+  describe("findAllExamTypes", () => {
+    // Base offset kept well within Postgres `integer` range (max ~2.1e9) and
+    // far above the real seed data's 0-3 sortOrder values.
+    const sortBase = 1_000_000 + Math.floor(Math.random() * 1_000_000);
+    const codeA = `exam-type-a-${suffix}`;
+    const codeB = `exam-type-b-${suffix}`;
+
+    beforeAll(async () => {
+      // Inserted in reverse sort order to prove the query orders by
+      // `sort_order`, not by insertion/primary-key order.
+      await db.insert(examTypes).values({
+        code: codeB,
+        label: `Exam Type B ${suffix}`,
+        courseScope: "all",
+        weekScope: "none",
+        sortOrder: sortBase + 1,
+      });
+      await db.insert(examTypes).values({
+        code: codeA,
+        label: `Exam Type A ${suffix}`,
+        courseScope: "none",
+        weekScope: "none",
+        sortOrder: sortBase,
+      });
+    });
+
+    afterAll(async () => {
+      await db.delete(examTypes).where(inArray(examTypes.code, [codeA, codeB]));
+    });
+
+    it("returns every exam type ordered by sortOrder", async () => {
+      const result = await repository.findAllExamTypes();
+      const codes = result.map((e) => e.code);
+
+      expect(codes).toContain(codeA);
+      expect(codes).toContain(codeB);
+      expect(codes.indexOf(codeA)).toBeLessThan(codes.indexOf(codeB));
+
+      const found = result.find((e) => e.code === codeA);
+      expect(found).toEqual({
+        code: codeA,
+        label: `Exam Type A ${suffix}`,
+        courseScope: "none",
+        weekScope: "none",
+      });
     });
   });
 });

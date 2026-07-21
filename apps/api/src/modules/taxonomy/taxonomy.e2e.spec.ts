@@ -7,7 +7,7 @@ import request from "supertest";
 import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
-import { courses, topics } from "../../db/schema";
+import { courses, examTypes, topics, tracks, universities } from "../../db/schema";
 import { TokenService } from "../auth/token.service";
 
 /**
@@ -122,6 +122,170 @@ describe("Taxonomy endpoints (e2e)", () => {
 
       expect(res.status).toBe(200);
       expect(res.body).toEqual([{ id: topicAId, name: `E2E Topic A ${suffix}`, courseId: courseAId }]);
+    });
+  });
+
+  describe("GET /universities", () => {
+    let universityAId: string;
+    let universityBId: string;
+
+    beforeAll(async () => {
+      const [universityA] = await db
+        .insert(universities)
+        .values({ code: `e2e-aaa-uni-${suffix}`, name: `E2E AAA University ${suffix}` })
+        .returning({ id: universities.id });
+      universityAId = universityA!.id;
+
+      const [universityB] = await db
+        .insert(universities)
+        .values({ code: `e2e-zzz-uni-${suffix}`, name: `E2E ZZZ University ${suffix}` })
+        .returning({ id: universities.id });
+      universityBId = universityB!.id;
+    });
+
+    afterAll(async () => {
+      await db.delete(universities).where(inArray(universities.id, [universityAId, universityBId]));
+    });
+
+    it("rejects requests without a Bearer token", async () => {
+      const res = await request(app.getHttpServer()).get("/universities");
+      expect(res.status).toBe(401);
+    });
+
+    it("returns every university ordered by name", async () => {
+      const res = await request(app.getHttpServer())
+        .get("/universities")
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      const ids = (res.body as Array<{ id: string }>).map((u) => u.id);
+      expect(ids).toContain(universityAId);
+      expect(ids).toContain(universityBId);
+      expect(ids.indexOf(universityAId)).toBeLessThan(ids.indexOf(universityBId));
+    });
+  });
+
+  describe("GET /universities/:universityId/tracks", () => {
+    let universityWithTracksId: string;
+    let universityWithoutTracksId: string;
+    let trackAId: string;
+    let trackBId: string;
+
+    beforeAll(async () => {
+      const [universityWithTracks] = await db
+        .insert(universities)
+        .values({ code: `e2e-tracked-uni-${suffix}`, name: `E2E Tracked University ${suffix}` })
+        .returning({ id: universities.id });
+      universityWithTracksId = universityWithTracks!.id;
+
+      const [universityWithoutTracks] = await db
+        .insert(universities)
+        .values({ code: `e2e-trackless-uni-${suffix}`, name: `E2E Trackless University ${suffix}` })
+        .returning({ id: universities.id });
+      universityWithoutTracksId = universityWithoutTracks!.id;
+
+      const [trackA] = await db
+        .insert(tracks)
+        .values({
+          universityId: universityWithTracksId,
+          code: `e2e-a-track-${suffix}`,
+          name: `E2E A Track ${suffix}`,
+          kind: "cycle_track",
+        })
+        .returning({ id: tracks.id });
+      trackAId = trackA!.id;
+
+      const [trackB] = await db
+        .insert(tracks)
+        .values({
+          universityId: universityWithTracksId,
+          code: `e2e-b-track-${suffix}`,
+          name: `E2E B Track ${suffix}`,
+          kind: "cycle_track",
+        })
+        .returning({ id: tracks.id });
+      trackBId = trackB!.id;
+    });
+
+    afterAll(async () => {
+      await db.delete(tracks).where(inArray(tracks.id, [trackAId, trackBId]));
+      await db
+        .delete(universities)
+        .where(inArray(universities.id, [universityWithTracksId, universityWithoutTracksId]));
+    });
+
+    it("rejects requests without a Bearer token", async () => {
+      const res = await request(app.getHttpServer()).get(
+        `/universities/${universityWithTracksId}/tracks`,
+      );
+      expect(res.status).toBe(401);
+    });
+
+    it("returns the university's tracks ordered by code", async () => {
+      const res = await request(app.getHttpServer())
+        .get(`/universities/${universityWithTracksId}/tracks`)
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      expect(res.body).toEqual([
+        { id: trackAId, code: `e2e-a-track-${suffix}`, name: `E2E A Track ${suffix}`, kind: "cycle_track" },
+        { id: trackBId, code: `e2e-b-track-${suffix}`, name: `E2E B Track ${suffix}`, kind: "cycle_track" },
+      ]);
+    });
+
+    it("returns an empty array for a university with zero tracks", async () => {
+      const res = await request(app.getHttpServer())
+        .get(`/universities/${universityWithoutTracksId}/tracks`)
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      expect(res.body).toEqual([]);
+    });
+  });
+
+  describe("GET /exam-types", () => {
+    // Base offset kept well within Postgres `integer` range (max ~2.1e9) and
+    // far above the real seed data's 0-3 sortOrder values.
+    const sortBase = 1_000_000 + Math.floor(Math.random() * 1_000_000);
+    const codeA = `e2e-exam-type-a-${suffix}`;
+    const codeB = `e2e-exam-type-b-${suffix}`;
+
+    beforeAll(async () => {
+      await db.insert(examTypes).values({
+        code: codeB,
+        label: `E2E Exam Type B ${suffix}`,
+        courseScope: "all",
+        weekScope: "none",
+        sortOrder: sortBase + 1,
+      });
+      await db.insert(examTypes).values({
+        code: codeA,
+        label: `E2E Exam Type A ${suffix}`,
+        courseScope: "none",
+        weekScope: "none",
+        sortOrder: sortBase,
+      });
+    });
+
+    afterAll(async () => {
+      await db.delete(examTypes).where(inArray(examTypes.code, [codeA, codeB]));
+    });
+
+    it("rejects requests without a Bearer token", async () => {
+      const res = await request(app.getHttpServer()).get("/exam-types");
+      expect(res.status).toBe(401);
+    });
+
+    it("returns every exam type ordered by sortOrder", async () => {
+      const res = await request(app.getHttpServer())
+        .get("/exam-types")
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      const codes = (res.body as Array<{ code: string }>).map((e) => e.code);
+      expect(codes).toContain(codeA);
+      expect(codes).toContain(codeB);
+      expect(codes.indexOf(codeA)).toBeLessThan(codes.indexOf(codeB));
     });
   });
 });
