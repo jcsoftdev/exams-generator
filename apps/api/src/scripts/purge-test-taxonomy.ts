@@ -1,6 +1,15 @@
 import { inArray, sql } from "drizzle-orm";
 import { db, pool } from "../db/client";
-import { courses, examBlueprintRows, questions, topics } from "../db/schema";
+import {
+  courses,
+  examBlueprintRows,
+  examBlueprintTemplateRows,
+  examQuestions,
+  generationJobs,
+  questions,
+  syllabusWeekMaps,
+  topics,
+} from "../db/schema";
 
 /**
  * One-off (but idempotent + re-runnable) cleanup of taxonomy pollution.
@@ -11,15 +20,21 @@ import { courses, examBlueprintRows, questions, topics } from "../db/schema";
  *
  *  1. E2E / repo-spec artifacts — courses named `... <uuid>` created by test
  *     factories (`StockBatch Course <uuid>`, `E2E Exams Course <uuid>`, …).
+ *     `afterAll` hooks in each spec are supposed to delete these, but any
+ *     interrupted run (Ctrl+C, timeout, crashed `beforeAll`) skips cleanup
+ *     and leaves orphans — including their generated `questions` and
+ *     `generation_jobs` rows. Those are themselves test artifacts, not real
+ *     data, so they don't protect the course from deletion.
  *  2. Legacy demo courses superseded by the standard CNEB syllabus seed
  *     (`Álgebra`, `Razonamiento Matemático`, `Razonamiento Verbal`) — kept only
  *     while they carry no real data.
  *
- * SAFETY: nothing with dependent `questions` or `exam_blueprint_rows` is ever
- * deleted. A course whose topics carry questions (e.g. the bank sample
- * `Comunicación` / `Biología`, or `Aritmética` with its demo questions) is left
- * untouched and reported, never dropped. Deletes run inside a single
- * transaction so a guard trip rolls back the whole run.
+ * SAFETY: a course is only skipped if one of its questions was actually used
+ * in a real exam (`exam_questions`), it has an `exam_blueprint_rows` or
+ * `exam_blueprint_template_rows` entry, or it's mapped into an actual
+ * syllabus (`syllabus_week_maps`) — those are signals of real usage, not
+ * just test-factory noise. Deletes run inside a single transaction so a
+ * guard trip rolls back the whole run.
  */
 
 /** Postgres regex that matches a UUID fragment — the signature of a test-factory course name. */
@@ -33,33 +48,59 @@ interface CourseRef {
   readonly name: string;
 }
 
-/** Course ids that still have at least one dependent question (via their topics) or blueprint row — must NOT be deleted. */
-async function courseIdsWithDependents(candidateIds: readonly string[]): Promise<Set<string>> {
+/** Course ids whose questions were pulled into a real exam, or that carry a blueprint row — must NOT be deleted. */
+async function courseIdsWithRealUsage(
+  tx: Parameters<Parameters<typeof db.transaction>[0]>[0],
+  candidateIds: readonly string[],
+): Promise<Set<string>> {
   if (candidateIds.length === 0) {
     return new Set();
   }
 
-  const withQuestions = await db
+  const withExamUsage = await tx
     .selectDistinct({ id: topics.courseId })
     .from(topics)
     .innerJoin(questions, sql`${questions.topicId} = ${topics.id}`)
+    .innerJoin(examQuestions, sql`${examQuestions.questionId} = ${questions.id}`)
     .where(inArray(topics.courseId, [...candidateIds]));
 
-  const withBlueprint = await db
+  const withBlueprint = await tx
     .selectDistinct({ id: examBlueprintRows.courseId })
     .from(examBlueprintRows)
     .where(inArray(examBlueprintRows.courseId, [...candidateIds]));
 
-  return new Set([...withQuestions, ...withBlueprint].map((row) => row.id));
+  const withSyllabusMap = await tx
+    .selectDistinct({ id: syllabusWeekMaps.courseId })
+    .from(syllabusWeekMaps)
+    .where(inArray(syllabusWeekMaps.courseId, [...candidateIds]));
+
+  const withTemplateRow = await tx
+    .selectDistinct({ id: examBlueprintTemplateRows.courseId })
+    .from(examBlueprintTemplateRows)
+    .where(inArray(examBlueprintTemplateRows.courseId, [...candidateIds]));
+
+  return new Set(
+    [...withExamUsage, ...withBlueprint, ...withSyllabusMap, ...withTemplateRow].map((row) => row.id),
+  );
 }
 
-async function deleteCourses(refs: readonly CourseRef[]): Promise<void> {
+async function deleteCourses(
+  tx: Parameters<Parameters<typeof db.transaction>[0]>[0],
+  refs: readonly CourseRef[],
+): Promise<void> {
   if (refs.length === 0) {
     return;
   }
   const ids = refs.map((ref) => ref.id);
-  await db.delete(topics).where(inArray(topics.courseId, ids));
-  await db.delete(courses).where(inArray(courses.id, ids));
+  await tx.delete(generationJobs).where(inArray(generationJobs.courseId, ids));
+  await tx.delete(questions).where(
+    inArray(
+      questions.topicId,
+      tx.select({ id: topics.id }).from(topics).where(inArray(topics.courseId, ids)),
+    ),
+  );
+  await tx.delete(topics).where(inArray(topics.courseId, ids));
+  await tx.delete(courses).where(inArray(courses.id, ids));
   for (const ref of refs) {
     console.log(`  removed course "${ref.name}"`);
   }
@@ -67,32 +108,33 @@ async function deleteCourses(refs: readonly CourseRef[]): Promise<void> {
 
 export async function purgeTestTaxonomy(): Promise<void> {
   await db.transaction(async (tx) => {
-    void tx; // guard evaluation + deletes below share the module `db`; the tx wrapper keeps them atomic
-
     // 1. UUID-named test-factory courses.
-    const junk = await db
+    const junk = await tx
       .select({ id: courses.id, name: courses.name })
       .from(courses)
       .where(sql`${courses.name} ~ ${UUID_FRAGMENT}`);
 
     // 2. Legacy empty demo courses superseded by the standard syllabus.
-    const legacy = await db
+    const legacy = await tx
       .select({ id: courses.id, name: courses.name })
       .from(courses)
       .where(inArray(courses.name, [...LEGACY_EMPTY_COURSES]));
 
     const candidates = [...junk, ...legacy];
-    const blocked = await courseIdsWithDependents(candidates.map((c) => c.id));
+    const blocked = await courseIdsWithRealUsage(
+      tx,
+      candidates.map((c) => c.id),
+    );
 
     const deletable = candidates.filter((c) => !blocked.has(c.id));
     const skipped = candidates.filter((c) => blocked.has(c.id));
 
-    console.log(`Purging ${deletable.length} course(s); skipping ${skipped.length} with dependent data.`);
+    console.log(`Purging ${deletable.length} course(s); skipping ${skipped.length} with real usage.`);
     for (const ref of skipped) {
-      console.log(`  kept "${ref.name}" (has dependent questions/blueprint rows)`);
+      console.log(`  kept "${ref.name}" (used in a real exam, blueprint row, or syllabus map)`);
     }
 
-    await deleteCourses(deletable);
+    await deleteCourses(tx, deletable);
   });
 }
 
