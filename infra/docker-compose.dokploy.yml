@@ -45,6 +45,12 @@ services:
     build:
       context: ..
       dockerfile: infra/Dockerfile.api
+    # Apply pending Drizzle migrations and (idempotently) seed the taxonomy
+    # before starting the server, so a deploy always brings the DB in sync —
+    # prod has no other migrate/seed step. Both are idempotent (drizzle's
+    # journal + the seed's onConflictDoUpdate), and DATABASE_URL + the
+    # drizzle/ folder are present in the built image.
+    command: ["sh", "-c", "node dist/db/migrate.js && node dist/db/seed.js && node dist/main.js"]
     restart: unless-stopped
     depends_on:
       postgres:
