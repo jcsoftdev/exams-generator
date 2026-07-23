@@ -699,7 +699,7 @@ describe("Bank module (e2e)", () => {
         .set("Authorization", `Bearer ${tenantAToken}`)
         .expect(200);
 
-      const examsRepository = new ExamsRepository();
+      const examsRepository = new ExamsRepository(db);
       const pool = await examsRepository.getQuestionPool({
         tenantId: tenantAId,
         gradeLevel: "primaria_1",

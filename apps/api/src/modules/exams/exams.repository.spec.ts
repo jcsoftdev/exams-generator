@@ -31,7 +31,7 @@ import { ExamsRepository } from "./exams.repository";
  * tenant_id = :current) AND status = 'approved' AND grade_level = :level`.
  */
 describe("ExamsRepository", () => {
-  const repository = new ExamsRepository();
+  const repository = new ExamsRepository(db);
 
   let courseId: string;
   let topicId: string;

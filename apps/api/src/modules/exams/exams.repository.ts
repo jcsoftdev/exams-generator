@@ -1,7 +1,7 @@
-import { Difficulty } from "@exams-generator/shared";
+import { Inject, Injectable } from "@nestjs/common";
 import { and, asc, count, desc, eq, ilike, inArray, isNull, or, sql, SQL } from "drizzle-orm";
 import { alias } from "drizzle-orm/pg-core";
-import { db } from "../../db/client";
+import { Database, DRIZZLE_DB } from "../../db/client";
 import {
   assets,
   courses,
@@ -18,224 +18,61 @@ import {
   tenants,
   topics,
 } from "../../db/schema";
-import { ExamStatus, QuestionType } from "../../db/schema/enums";
 import { SyllabusEntry, TemplateRow } from "./domain/resolve-blueprint";
+import {
+  ActiveCycleRecord,
+  BlueprintRowRecord,
+  CreateExamRecord,
+  CurrentTemplateRecord,
+  ExamDetailRecord,
+  ExamForGenerationRecord,
+  ExamListFilters,
+  ExamListItem,
+  ExamQuestionRecord,
+  ExamRecord,
+  ExamsRepositoryPort,
+  ExamStatusCount,
+  ExamTypeRecord,
+  QuestionPoolCandidateRecord,
+  QuestionPoolFilter,
+  RecentExamRecord,
+  SaveSelectionEntry,
+  SaveVersionRecord,
+  StockCellFilter,
+  VersionAssetRecord,
+  VersionSummaryRecord,
+} from "./domain/ports/exams-repository.port";
 
-export interface CreateExamBlueprintRowRecord {
-  readonly courseId: string;
-  readonly topicId?: string;
-  readonly difficulty?: Difficulty;
-  readonly count: number;
-}
-
-/**
- * `examType`/`universityId`/`trackId`/`cycleId`/`weekNumber` are OPTIONAL —
- * metadata about how the blueprint was produced (design doc §4, `resolveExamBlueprint()`
- * wiring). When omitted (every caller before this change, every existing
- * test), `createExam()` leaves them out of the insert entirely so the DB's
- * own column defaults apply (`exam_type` -> `'manual'`, the rest -> `NULL`)
- * — byte-for-byte the same INSERT as before this field existed.
- */
-export interface CreateExamRecord {
-  readonly tenantId: string;
-  readonly title: string;
-  readonly gradeLevel: string;
-  readonly createdBy: string;
-  readonly blueprint: readonly CreateExamBlueprintRowRecord[];
-  readonly examType?: string;
-  readonly universityId?: string;
-  readonly trackId?: string;
-  readonly cycleId?: string;
-  readonly weekNumber?: number;
-}
-
-/** `exam_blueprint_templates` row shape returned by `findCurrentTemplate()` — only what callers need to fetch its rows/syllabus by id. */
-export interface CurrentTemplateRecord {
-  readonly id: string;
-}
-
-/** `cycles` row shape returned by `findActiveCycle()` — only what `computeCurrentWeek()` needs. */
-export interface ActiveCycleRecord {
-  readonly startsOn: Date;
-  readonly weekLengthDays: number;
-}
-
-/** `exam_types` row shape returned by `findExamType()` — the two axes that drive `resolveBlueprint()` (design doc §5). */
-export interface ExamTypeRecord {
-  readonly courseScope: string;
-  readonly weekScope: string;
-}
-
-export interface ExamRecord {
-  readonly id: string;
-  readonly tenantId: string;
-  readonly title: string;
-  readonly gradeLevel: string;
-  readonly status: ExamStatus;
-  readonly createdBy: string;
-}
-
-/** `GET /exams` (S1) list filters — `page`/`pageSize` are always resolved (defaulted/clamped) by the controller before reaching the repository. */
-export interface ExamListFilters {
-  readonly status?: "draft" | "ready";
-  readonly gradeLevel?: string;
-  readonly search?: string;
-  readonly page: number;
-  readonly pageSize: number;
-}
-
-/** `GET /exams` (S1) list row — `questionCount`/`versionCount` are correlated subquery counts, not joins (avoids row fan-out). */
-export interface ExamListItem {
-  readonly id: string;
-  readonly title: string;
-  readonly gradeLevel: string;
-  readonly status: string;
-  readonly questionCount: number;
-  readonly versionCount: number;
-  readonly createdAt: string;
-}
-
-export interface BlueprintRowRecord {
-  readonly id: string;
-  readonly courseId: string;
-  readonly courseName: string;
-  readonly topicId?: string;
-  readonly topicName?: string;
-  readonly difficulty?: Difficulty;
-  readonly count: number;
-}
-
-/** One `{status}` bucket from `countByStatus` — feeds the dashboard's exams card. */
-export interface ExamStatusCount {
-  readonly status: ExamStatus;
-  readonly total: number;
-}
-
-/** One row from `listRecent` — feeds the dashboard's "recent exams" list. */
-export interface RecentExamRecord {
-  readonly id: string;
-  readonly title: string;
-  readonly status: ExamStatus;
-  readonly createdAt: string;
-}
-
-/**
- * One candidate in the pool handed to `BlueprintSelector.select()`. This is
- * the exact shape the domain function needs — nothing more.
- */
-export interface QuestionPoolCandidateRecord {
-  readonly id: string;
-  readonly courseId: string;
-  readonly topicId: string;
-  readonly difficulty: Difficulty;
-}
-
-export interface QuestionPoolFilter {
-  /** The requesting tenant. Exams always belong to a tenant (never central). */
-  readonly tenantId: string;
-  readonly gradeLevel: string;
-}
-
-export interface SaveSelectionEntry {
-  readonly blueprintRowId: string;
-  readonly questionId: string;
-}
-
-export interface ExamQuestionRecord {
-  readonly blueprintRowId: string | null;
-  readonly position: number;
-}
-
-/**
- * `type='image'` questions carry `imageStorageKey`/`imageMime`
- * (`bodyTypst`/`alternatives`/`figureCode` are `null`); `type='structured'`
- * questions (design doc §5.4) carry `bodyTypst`/`alternatives`/`figureCode`
- * instead (`imageStorageKey`/`imageMime` are `null`). Both variants always
- * carry `correctAnswer`, but its MEANING differs by type — see
- * `SelectedQuestion` in `domain/version-shuffler.ts` for the exact contract
- * (answer letter for image, 0-based index into `alternatives` for
- * structured).
- */
-export interface SelectedQuestionForGeneration {
-  readonly questionId: string;
-  readonly position: number;
-  readonly type: QuestionType;
-  readonly correctAnswer: string;
-  readonly imageStorageKey: string | null;
-  readonly imageMime: string | null;
-  readonly bodyTypst: string | null;
-  readonly alternatives: readonly string[] | null;
-  readonly figureCode: string | null;
-}
-
-export interface ExamForGenerationRecord {
-  readonly id: string;
-  readonly tenantId: string;
-  readonly title: string;
-  readonly status: ExamStatus;
-  readonly logoStorageKey: string | null;
-  readonly selectedQuestions: readonly SelectedQuestionForGeneration[];
-}
-
-/**
- * One selected question in `GET /exams/:examId` detail output (design doc
- * §5.3/§5.4 review screen). Same `type='image'` vs `type='structured'`
- * duality as `SelectedQuestionForGeneration` above, but exposes
- * `imageAssetId` (not `imageStorageKey`) — the review screen only needs an
- * asset reference, never the raw storage key.
- */
-export interface ExamDetailQuestionRecord {
-  readonly id: string;
-  readonly position: number;
-  readonly type: QuestionType;
-  readonly courseId: string;
-  readonly topicId: string;
-  readonly difficulty: Difficulty;
-  readonly correctAnswer: string;
-  readonly imageAssetId: string | null;
-  readonly bodyTypst: string | null;
-  readonly alternatives: readonly string[] | null;
-  readonly figureCode: string | null;
-}
-
-export interface ExamDetailRecord {
-  readonly id: string;
-  readonly title: string;
-  readonly gradeLevel: string;
-  readonly status: ExamStatus;
-  readonly questions: readonly ExamDetailQuestionRecord[];
-}
-
-/** One cell in a `countStock()` batch — same criteria shape as `Candidate`/`BlueprintRow`, minus `count` (B1). */
-export interface StockCellFilter {
-  readonly courseId: string;
-  readonly topicId?: string;
-  readonly difficulty?: Difficulty;
-}
-
-export interface SaveVersionRecord {
-  readonly code: string;
-  readonly questionOrder: readonly string[];
-  readonly answerKey: Readonly<Record<number, string>>;
-  readonly pdfAssetId: string;
-  readonly answerSheetAssetId: string;
-}
-
-/** `GET /exams/:examId/versions` (B4) row shape — see `getVersions()`. */
-export interface VersionSummaryRecord {
-  readonly code: string;
-  readonly pdfUrl: string;
-  readonly answerSheetUrl: string;
-}
-
-/** `GET /exams/:examId/versions/zip` (N1) row shape — see `getVersionAssetRecords()`. Carries the raw storage coordinates the ZIP builder needs to pull bytes. */
-export interface VersionAssetRecord {
-  readonly code: string;
-  readonly pdfStorageKey: string;
-  readonly pdfMime: string;
-  readonly answerSheetStorageKey: string;
-  readonly answerSheetMime: string;
-}
+// Data-contract types (Records/Filters/Items) moved to
+// `domain/ports/exams-repository.port.ts` (owned by the domain, not the
+// adapter). Re-exported here so existing `import { XRecord } from
+// "./exams.repository"` sites keep resolving unchanged.
+export type {
+  ActiveCycleRecord,
+  BlueprintRowRecord,
+  CreateExamBlueprintRowRecord,
+  CreateExamRecord,
+  CurrentTemplateRecord,
+  ExamDetailQuestionRecord,
+  ExamDetailRecord,
+  ExamForGenerationRecord,
+  ExamListFilters,
+  ExamListItem,
+  ExamQuestionRecord,
+  ExamRecord,
+  ExamsRepositoryPort,
+  ExamStatusCount,
+  ExamTypeRecord,
+  QuestionPoolCandidateRecord,
+  QuestionPoolFilter,
+  RecentExamRecord,
+  SaveSelectionEntry,
+  SaveVersionRecord,
+  SelectedQuestionForGeneration,
+  StockCellFilter,
+  VersionAssetRecord,
+  VersionSummaryRecord,
+} from "./domain/ports/exams-repository.port";
 
 const logoAssets = alias(assets, "logo_assets");
 
@@ -250,11 +87,16 @@ function questionVisibility(tenantId: string): SQL {
 }
 
 /**
- * Drizzle-backed persistence for the exams module. Mirrors the bank
- * module's structural convention (thin class, no repository port/interface
- * — nothing in this PR's scope needs a swappable implementation).
+ * Drizzle-backed persistence for the exams module — implements
+ * `ExamsRepositoryPort`. The data-contract types live in `domain/ports/`
+ * (re-exported below for backward compatibility), and the Drizzle `db` is
+ * injected via the constructor (`DRIZZLE_DB`) instead of importing the
+ * singleton, so a test can bind a fake database.
  */
-export class ExamsRepository {
+@Injectable()
+export class ExamsRepository implements ExamsRepositoryPort {
+  constructor(@Inject(DRIZZLE_DB) private readonly db: Database) {}
+
   /**
    * Inserts the exam row and every blueprint row in one transaction. Rows
    * are NOT deduplicated by criteria — two rows can share the same
@@ -262,7 +104,7 @@ export class ExamsRepository {
    * `examBlueprintRows` schema docstring).
    */
   async createExam(record: CreateExamRecord): Promise<{ id: string }> {
-    return db.transaction(async (tx) => {
+    return this.db.transaction(async (tx) => {
       const [exam] = await tx
         .insert(exams)
         .values({
@@ -311,7 +153,7 @@ export class ExamsRepository {
     tenantId: string,
     createdBy: string,
   ): Promise<{ id: string; title: string } | undefined> {
-    return db.transaction(async (tx) => {
+    return this.db.transaction(async (tx) => {
       const [original] = await tx
         .select()
         .from(exams)
@@ -362,7 +204,7 @@ export class ExamsRepository {
 
   /** Tenant-scoped lookup — an exam is only ever visible to its own tenant. */
   async getExamById(examId: string, tenantId: string): Promise<ExamRecord | undefined> {
-    const [row] = await db
+    const [row] = await this.db
       .select()
       .from(exams)
       .where(and(eq(exams.id, examId), eq(exams.tenantId, tenantId)));
@@ -394,9 +236,9 @@ export class ExamsRepository {
     if (f.search) conditions.push(ilike(exams.title, `%${f.search}%`));
     const where = and(...conditions);
 
-    const [{ value: total }] = await db.select({ value: count() }).from(exams).where(where);
+    const [{ value: total }] = await this.db.select({ value: count() }).from(exams).where(where);
 
-    const rows = await db
+    const rows = await this.db
       .select({
         id: exams.id,
         title: exams.title,
@@ -420,7 +262,7 @@ export class ExamsRepository {
 
   /** Dashboard aggregate (design doc §2): grouped exam count by status for a tenant. */
   async countByStatus(tenantId: string): Promise<ExamStatusCount[]> {
-    const rows = await db
+    const rows = await this.db
       .select({ status: exams.status, total: count() })
       .from(exams)
       .where(eq(exams.tenantId, tenantId))
@@ -431,7 +273,7 @@ export class ExamsRepository {
 
   /** Dashboard aggregate (design doc §2): the tenant's `limit` most recent exams, newest first. */
   async listRecent(tenantId: string, limit: number): Promise<RecentExamRecord[]> {
-    const rows = await db
+    const rows = await this.db
       .select({ id: exams.id, title: exams.title, status: exams.status, createdAt: exams.createdAt })
       .from(exams)
       .where(eq(exams.tenantId, tenantId))
@@ -443,7 +285,7 @@ export class ExamsRepository {
 
   /** Blueprint rows for an exam, with course/topic names resolved for human-readable shortage messages. */
   async getBlueprintRows(examId: string): Promise<BlueprintRowRecord[]> {
-    const rows = await db
+    const rows = await this.db
       .select({
         id: examBlueprintRows.id,
         courseId: examBlueprintRows.courseId,
@@ -479,7 +321,7 @@ export class ExamsRepository {
   async getQuestionPool(filter: QuestionPoolFilter): Promise<QuestionPoolCandidateRecord[]> {
     const visibility = questionVisibility(filter.tenantId);
 
-    return db
+    return this.db
       .select({
         id: questions.id,
         courseId: topics.courseId,
@@ -509,7 +351,7 @@ export class ExamsRepository {
   async countStock(filter: QuestionPoolFilter, cells: readonly StockCellFilter[]): Promise<number[]> {
     const visibility = questionVisibility(filter.tenantId);
 
-    const groups = await db
+    const groups = await this.db
       .select({
         courseId: topics.courseId,
         topicId: questions.topicId,
@@ -539,7 +381,7 @@ export class ExamsRepository {
    * leaves stale rows. Position is assigned by array order.
    */
   async saveSelection(examId: string, selections: readonly SaveSelectionEntry[]): Promise<void> {
-    await db.transaction(async (tx) => {
+    await this.db.transaction(async (tx) => {
       await tx.delete(examQuestions).where(eq(examQuestions.examId, examId));
 
       if (selections.length === 0) {
@@ -558,7 +400,7 @@ export class ExamsRepository {
   }
 
   async getSelectedQuestionIds(examId: string): Promise<string[]> {
-    const rows = await db
+    const rows = await this.db
       .select({ questionId: examQuestions.questionId })
       .from(examQuestions)
       .where(eq(examQuestions.examId, examId))
@@ -569,7 +411,7 @@ export class ExamsRepository {
 
   /** Finds which blueprint row (and position) a currently-selected question fulfills. */
   async findExamQuestion(examId: string, questionId: string): Promise<ExamQuestionRecord | undefined> {
-    const [row] = await db
+    const [row] = await this.db
       .select({ blueprintRowId: examQuestions.blueprintRowId, position: examQuestions.position })
       .from(examQuestions)
       .where(and(eq(examQuestions.examId, examId), eq(examQuestions.questionId, questionId)));
@@ -579,7 +421,7 @@ export class ExamsRepository {
 
   /** Swaps the questionId at a fixed position/blueprintRowId — used by the replace-question flow. */
   async replaceQuestion(examId: string, oldQuestionId: string, newQuestionId: string): Promise<void> {
-    await db
+    await this.db
       .update(examQuestions)
       .set({ questionId: newQuestionId })
       .where(and(eq(examQuestions.examId, examId), eq(examQuestions.questionId, oldQuestionId)));
@@ -587,7 +429,7 @@ export class ExamsRepository {
 
   /** Moves an exam from `draft` to `ready` — no-op (0 rows) if it isn't currently `draft`. */
   async confirmExam(examId: string): Promise<void> {
-    await db
+    await this.db
       .update(exams)
       .set({ status: "ready" })
       .where(and(eq(exams.id, examId), eq(exams.status, "draft")));
@@ -603,7 +445,7 @@ export class ExamsRepository {
     examId: string,
     tenantId: string,
   ): Promise<ExamForGenerationRecord | undefined> {
-    const [examRow] = await db
+    const [examRow] = await this.db
       .select({
         id: exams.id,
         tenantId: exams.tenantId,
@@ -620,7 +462,7 @@ export class ExamsRepository {
       return undefined;
     }
 
-    const selectedRows = await db
+    const selectedRows = await this.db
       .select({
         questionId: examQuestions.questionId,
         position: examQuestions.position,
@@ -671,7 +513,7 @@ export class ExamsRepository {
       return undefined;
     }
 
-    const rows = await db
+    const rows = await this.db
       .select({
         id: examQuestions.questionId,
         position: examQuestions.position,
@@ -714,7 +556,7 @@ export class ExamsRepository {
 
   /** Inserts an asset row (e.g. a compiled PDF) — mirrors the bank module's asset insert. */
   async createAsset(tenantId: string, storageKey: string, mime: string): Promise<{ id: string }> {
-    const [asset] = await db
+    const [asset] = await this.db
       .insert(assets)
       .values({ tenantId, storageKey, mime })
       .returning({ id: assets.id });
@@ -727,7 +569,7 @@ export class ExamsRepository {
   }
 
   async saveVersion(examId: string, version: SaveVersionRecord): Promise<void> {
-    await db.insert(examVersions).values({
+    await this.db.insert(examVersions).values({
       examId,
       code: version.code,
       questionOrder: version.questionOrder,
@@ -748,7 +590,7 @@ export class ExamsRepository {
    * (B4-R7).
    */
   async clearVersions(examId: string): Promise<string[]> {
-    return db.transaction(async (tx) => {
+    return this.db.transaction(async (tx) => {
       const existing = await tx
         .select({ pdfAssetId: examVersions.pdfAssetId, answerSheetAssetId: examVersions.answerSheetAssetId })
         .from(examVersions)
@@ -788,7 +630,7 @@ export class ExamsRepository {
    * destructive action before calling this endpoint.
    */
   async deleteExam(examId: string, tenantId: string): Promise<boolean> {
-    return db.transaction(async (tx) => {
+    return this.db.transaction(async (tx) => {
       const [existing] = await tx
         .select({ id: exams.id })
         .from(exams)
@@ -817,7 +659,7 @@ export class ExamsRepository {
       return undefined;
     }
 
-    const rows = await db
+    const rows = await this.db
       .select({
         code: examVersions.code,
         pdfAssetId: examVersions.pdfAssetId,
@@ -855,7 +697,7 @@ export class ExamsRepository {
     const pdfAssets = alias(assets, "pdf_assets");
     const answerSheetAssets = alias(assets, "answer_sheet_assets");
 
-    const rows = await db
+    const rows = await this.db
       .select({
         code: examVersions.code,
         pdfStorageKey: pdfAssets.storageKey,
@@ -896,7 +738,7 @@ export class ExamsRepository {
       ? or(isNull(examBlueprintTemplates.tenantId), eq(examBlueprintTemplates.tenantId, tenantId))
       : isNull(examBlueprintTemplates.tenantId);
 
-    const [row] = await db
+    const [row] = await this.db
       .select({ id: examBlueprintTemplates.id })
       .from(examBlueprintTemplates)
       .where(
@@ -920,7 +762,7 @@ export class ExamsRepository {
    * converted to a number here; every other column already matches 1:1.
    */
   async getTemplateRows(templateId: string): Promise<TemplateRow[]> {
-    const rows = await db
+    const rows = await this.db
       .select({
         courseId: examBlueprintTemplateRows.courseId,
         topicId: examBlueprintTemplateRows.topicId,
@@ -946,7 +788,7 @@ export class ExamsRepository {
    * `getTemplateRows()`, no nullability/type reconciliation needed).
    */
   async getSyllabusForTemplate(templateId: string): Promise<SyllabusEntry[]> {
-    return db
+    return this.db
       .select({
         courseId: syllabusWeekMaps.courseId,
         topicId: syllabusWeekMaps.topicId,
@@ -972,7 +814,7 @@ export class ExamsRepository {
       ? or(isNull(cycles.tenantId), eq(cycles.tenantId, tenantId))
       : isNull(cycles.tenantId);
 
-    const [row] = await db
+    const [row] = await this.db
       .select({ startsOn: cycles.startsOn, weekLengthDays: cycles.weekLengthDays })
       .from(cycles)
       .where(
@@ -991,7 +833,7 @@ export class ExamsRepository {
 
   /** Trivial `exam_types` lookup — the two axes (`course_scope`/`week_scope`) that drive `resolveBlueprint()` (design doc §5). */
   async findExamType(code: string): Promise<ExamTypeRecord | null> {
-    const [row] = await db
+    const [row] = await this.db
       .select({ courseScope: examTypes.courseScope, weekScope: examTypes.weekScope })
       .from(examTypes)
       .where(eq(examTypes.code, code));

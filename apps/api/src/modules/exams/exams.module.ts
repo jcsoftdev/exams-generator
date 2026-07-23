@@ -1,4 +1,5 @@
 import { Module } from "@nestjs/common";
+import { db, DRIZZLE_DB } from "../../db/client";
 import { PDF_COMPILER_PORT, STORAGE_PORT } from "../bank/bank.constants";
 import { resolvePdfCompilerAdapter } from "../bank/pdf-compiler-provider";
 import { resolveStorageAdapter } from "../bank/storage-provider";
@@ -10,6 +11,7 @@ import { ExamsService } from "./exams.service";
 @Module({
   controllers: [ExamsController],
   providers: [
+    { provide: DRIZZLE_DB, useValue: db },
     ExamsRepository,
     ExamsService,
     ExamVersionGenerationService,

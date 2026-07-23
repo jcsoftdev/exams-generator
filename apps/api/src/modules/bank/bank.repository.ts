@@ -1,98 +1,45 @@
+import { Inject, Injectable } from "@nestjs/common";
 import { Difficulty } from "@exams-generator/shared";
 import { and, count, eq, isNull, or, SQL } from "drizzle-orm";
-import { db } from "../../db/client";
+import { Database, DRIZZLE_DB } from "../../db/client";
 import { assets, courses, questions, topics } from "../../db/schema";
-import { QuestionStatus, QuestionType } from "../../db/schema/enums";
+import { QuestionStatus } from "../../db/schema/enums";
+import {
+  BankRepositoryPort,
+  BankStatusDifficultyCount,
+  CreateImageQuestionRecord,
+  CreateStructuredQuestionRecord,
+  QuestionListFilter,
+  QuestionListItem,
+  QuestionListPagination,
+  UpdateStructuredQuestionRecord,
+} from "./domain/ports/bank-repository.port";
 
-export interface CreateImageQuestionRecord {
-  readonly tenantId: string | null;
-  readonly topicId: string;
-  readonly difficulty: Difficulty;
-  readonly gradeLevel: string;
-  readonly correctAnswer: string;
-  readonly createdBy: string;
-  readonly image: {
-    readonly storageKey: string;
-    readonly mime: string;
-    readonly width?: number;
-    readonly height?: number;
-  };
-}
-
-export interface CreateStructuredQuestionRecord {
-  readonly tenantId: string | null;
-  readonly topicId: string;
-  readonly difficulty: Difficulty;
-  readonly gradeLevel: string;
-  readonly bodyTypst: string;
-  readonly alternatives: readonly string[];
-  readonly correctAnswer: string;
-  readonly figureCode: string | undefined;
-  readonly createdBy: string;
-  /**
-   * Defaults to `'approved'` (manual creation is curated by definition).
-   * The AI generation flow (Lane D3) passes `'draft'` explicitly — the AI
-   * NEVER publishes directly to the bank.
-   */
-  readonly status?: QuestionStatus;
-  /** Defaults to `false`. `true` only for AI-generated drafts (Lane D3). */
-  readonly aiGenerated?: boolean;
-}
-
-export interface UpdateStructuredQuestionRecord {
-  readonly bodyTypst: string;
-  readonly alternatives: readonly string[];
-  readonly correctAnswer: string;
-  readonly figureCode: string | undefined;
-}
-
-export interface QuestionListItem {
-  readonly id: string;
-  readonly tenantId: string | null;
-  readonly courseId: string;
-  readonly topicId: string;
-  readonly difficulty: Difficulty;
-  readonly gradeLevel: string;
-  readonly correctAnswer: string;
-  readonly type: QuestionType;
-  readonly status: QuestionStatus;
-  readonly aiGenerated: boolean;
-  readonly imageAssetId: string | null;
-  readonly bodyTypst: string | null;
-  readonly alternatives: unknown;
-  readonly figureCode: string | null;
-}
-
-export interface QuestionListFilter {
-  /** The requesting user's own tenant (null = platform staff). */
-  readonly currentTenantId: string | null;
-  readonly courseId?: string;
-  readonly topicId?: string;
-  readonly difficulty?: Difficulty;
-  readonly gradeLevel?: string;
-  readonly status?: QuestionStatus;
-}
-
-/** S6: opt-in pagination for `listQuestions` — 1-indexed page, clamped by the caller (controller). */
-export interface QuestionListPagination {
-  readonly page: number;
-  readonly pageSize: number;
-}
-
-/** One `{difficulty, status}` bucket from `countByDifficultyAndStatus` — feeds the dashboard's bank card. */
-export interface BankStatusDifficultyCount {
-  readonly difficulty: Difficulty;
-  readonly status: QuestionStatus;
-  readonly total: number;
-}
+// Data-contract types moved to `domain/ports/bank-repository.port.ts` (owned
+// by the domain, not the adapter). Re-exported here so existing
+// `import { XRecord } from "./bank.repository"` sites keep resolving.
+export type {
+  BankRepositoryPort,
+  BankStatusDifficultyCount,
+  CreateImageQuestionRecord,
+  CreateStructuredQuestionRecord,
+  QuestionListFilter,
+  QuestionListItem,
+  QuestionListPagination,
+  UpdateStructuredQuestionRecord,
+} from "./domain/ports/bank-repository.port";
 
 /**
- * Drizzle-backed persistence for the bank module. Kept as a thin class
- * (no repository port/interface) — unlike `StoragePort`, nothing in this
- * PR's scope needs a swappable implementation, so the extra abstraction
- * would be speculative.
+ * Drizzle-backed persistence for the bank module — implements
+ * `BankRepositoryPort` (data contracts live in `domain/ports/`, re-exported
+ * above for backward compatibility). The Drizzle `db` is injected via the
+ * constructor (`DRIZZLE_DB`) instead of importing the singleton, so a test
+ * can bind a fake database.
  */
-export class BankRepository {
+@Injectable()
+export class BankRepository implements BankRepositoryPort {
+  constructor(@Inject(DRIZZLE_DB) private readonly db: Database) {}
+
   /**
    * Manual image-question upload (design doc 5.1): always inserts the
    * backing asset row plus the question row, wired together via
@@ -100,7 +47,7 @@ export class BankRepository {
    * curated by definition, there is no draft state to pass through here.
    */
   async createImageQuestion(record: CreateImageQuestionRecord): Promise<{ id: string }> {
-    return db.transaction(async (tx) => {
+    return this.db.transaction(async (tx) => {
       const [asset] = await tx
         .insert(assets)
         .values({
@@ -150,7 +97,7 @@ export class BankRepository {
   async createStructuredQuestion(
     record: CreateStructuredQuestionRecord,
   ): Promise<{ id: string }> {
-    const [question] = await db
+    const [question] = await this.db
       .insert(questions)
       .values({
         tenantId: record.tenantId,
@@ -238,16 +185,16 @@ export class BankRepository {
     };
 
     if (!pagination) {
-      return db.select(selection).from(questions).innerJoin(topics, eq(questions.topicId, topics.id)).where(where);
+      return this.db.select(selection).from(questions).innerJoin(topics, eq(questions.topicId, topics.id)).where(where);
     }
 
-    const [{ value: total }] = await db
+    const [{ value: total }] = await this.db
       .select({ value: count() })
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
       .where(where);
 
-    const items = await db
+    const items = await this.db
       .select(selection)
       .from(questions)
       .innerJoin(topics, eq(questions.topicId, topics.id))
@@ -273,7 +220,7 @@ export class BankRepository {
       ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
       : (isNull(questions.tenantId) as SQL);
 
-    const [row] = await db
+    const [row] = await this.db
       .select({
         id: questions.id,
         tenantId: questions.tenantId,
@@ -308,7 +255,7 @@ export class BankRepository {
     courseId: string,
     topicId: string,
   ): Promise<{ courseName: string; topicName: string } | undefined> {
-    const [row] = await db
+    const [row] = await this.db
       .select({ courseName: courses.name, topicName: topics.name })
       .from(topics)
       .innerJoin(courses, eq(topics.courseId, courses.id))
@@ -335,7 +282,7 @@ export class BankRepository {
       ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
       : (isNull(questions.tenantId) as SQL);
 
-    const [row] = await db
+    const [row] = await this.db
       .update(questions)
       .set({ status: "approved" })
       .where(and(eq(questions.id, id), eq(questions.status, "draft"), visibility))
@@ -355,7 +302,7 @@ export class BankRepository {
       ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
       : (isNull(questions.tenantId) as SQL);
 
-    const deleted = await db
+    const deleted = await this.db
       .delete(questions)
       .where(and(eq(questions.id, id), eq(questions.status, "draft"), visibility))
       .returning({ id: questions.id });
@@ -381,7 +328,7 @@ export class BankRepository {
       ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
       : (isNull(questions.tenantId) as SQL);
 
-    const [row] = await db
+    const [row] = await this.db
       .update(questions)
       .set({
         bodyTypst: patch.bodyTypst,
@@ -410,7 +357,7 @@ export class BankRepository {
       return undefined;
     }
 
-    const [topicRow] = await db
+    const [topicRow] = await this.db
       .select({ courseId: topics.courseId })
       .from(topics)
       .where(eq(topics.id, row.topicId));
@@ -427,7 +374,7 @@ export class BankRepository {
    * partial update behind.
    */
   async topicExists(topicId: string): Promise<boolean> {
-    const [row] = await db.select({ id: topics.id }).from(topics).where(eq(topics.id, topicId)).limit(1);
+    const [row] = await this.db.select({ id: topics.id }).from(topics).where(eq(topics.id, topicId)).limit(1);
     return row !== undefined;
   }
 
@@ -453,7 +400,7 @@ export class BankRepository {
     contentPatch: UpdateStructuredQuestionRecord,
     taxonomyPatch: { topicId?: string; difficulty?: string; gradeLevel?: string },
   ): Promise<QuestionListItem | undefined> {
-    return db.transaction(async (tx) => {
+    return this.db.transaction(async (tx) => {
       const visibility: SQL = currentTenantId
         ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
         : (isNull(questions.tenantId) as SQL);
@@ -561,12 +508,12 @@ export class BankRepository {
     // gets a truthful 404 vs a silent success) by reading it back.
     const [row] =
       Object.keys(set).length > 0
-        ? await db
+        ? await this.db
             .update(questions)
             .set(set)
             .where(and(eq(questions.id, id), visibility))
             .returning(returning)
-        : await db
+        : await this.db
             .select(returning)
             .from(questions)
             .where(and(eq(questions.id, id), visibility));
@@ -575,7 +522,7 @@ export class BankRepository {
       return undefined;
     }
 
-    const [topicRow] = await db
+    const [topicRow] = await this.db
       .select({ courseId: topics.courseId })
       .from(topics)
       .where(eq(topics.id, row.topicId));
@@ -600,7 +547,7 @@ export class BankRepository {
     currentTenantId: string | null,
     image: { readonly storageKey: string; readonly mime: string },
   ): Promise<string | undefined> {
-    return db.transaction(async (tx) => {
+    return this.db.transaction(async (tx) => {
       const [asset] = await tx
         .insert(assets)
         .values({
@@ -634,7 +581,7 @@ export class BankRepository {
    * via `findQuestionById`, so this is a plain unconditional status flip.
    */
   async updateStatus(id: string, status: QuestionStatus): Promise<void> {
-    await db.update(questions).set({ status }).where(eq(questions.id, id));
+    await this.db.update(questions).set({ status }).where(eq(questions.id, id));
   }
 
   /**
@@ -643,7 +590,7 @@ export class BankRepository {
    * `requireVisibleDraft`.
    */
   async deleteQuestion(id: string): Promise<void> {
-    await db.delete(questions).where(eq(questions.id, id));
+    await this.db.delete(questions).where(eq(questions.id, id));
   }
 
   /**
@@ -658,7 +605,7 @@ export class BankRepository {
       ? (or(isNull(questions.tenantId), eq(questions.tenantId, tenantId)) as SQL)
       : (isNull(questions.tenantId) as SQL);
 
-    const rows = await db
+    const rows = await this.db
       .select({ difficulty: questions.difficulty, status: questions.status, total: count() })
       .from(questions)
       .where(visibility)

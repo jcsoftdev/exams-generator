@@ -14,7 +14,7 @@ import { BankRepository } from "./bank.repository";
  * created so the shared dev DB doesn't grow unbounded.
  */
 describe("BankRepository", () => {
-  const repository = new BankRepository();
+  const repository = new BankRepository(db);
 
   let courseId: string;
   let topicId: string;

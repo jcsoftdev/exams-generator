@@ -38,11 +38,12 @@ describe("GET /dashboard/stats (e2e)", () => {
     tokenService = moduleRef.get(TokenService);
     // Direct instantiation (not `moduleRef.get(...)`) for the two repositories
     // — mirrors `bank.repository.spec.ts`/`exams.repository.spec.ts`'s own
-    // convention (`new BankRepository()`/`new ExamsRepository()`), since
-    // both classes have no constructor dependencies (they use the module-
-    // level `db` singleton directly) — no DI container needed to build them.
-    bankRepository = new BankRepository();
-    examsRepository = new ExamsRepository();
+    // convention (`new BankRepository(db)`/`new ExamsRepository(db)`) — the
+    // repos take the Drizzle `db` as their only constructor dependency
+    // (injected via `DRIZZLE_DB` in the modules), so the spec passes the
+    // module-level `db` singleton directly — no DI container needed.
+    bankRepository = new BankRepository(db);
+    examsRepository = new ExamsRepository(db);
 
     const suffix = randomUUID();
 
