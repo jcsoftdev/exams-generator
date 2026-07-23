@@ -8,7 +8,6 @@ import {
   DraftQuestion,
   EditDraftPayload,
   GenerateQuestionsPayload,
-  GenerateQuestionsResult,
   GenerateQuestionStreamEvent,
   GenerationJob,
   GenerationJobChainResult,
@@ -18,29 +17,28 @@ import { parseGenerateStreamFrames, parseGenerationJobStreamFrames } from './par
 
 /**
  * Angular client for the Fase 2 AI generation + draft review workflow
- * (design doc §5.2, §7): `POST /ai/questions/generate` (batch, partial
- * failure per item — see `GenerateQuestionsResult`) and the draft-review
- * side of the bank API: `GET /bank/questions?status=draft`,
- * `POST :id/approve`, `POST :id/reject`, `PATCH :id` (server-side Typst
- * preview validation — a broken edit responds 400 and is never
- * persisted, see `extract-error-message.ts`). Bearer JWT is attached
- * automatically by `authInterceptor` (see app.config.ts), same as
- * BankService — this service never touches auth headers itself.
+ * (design doc §5.2, §7): single-question streaming (`POST
+ * /ai/questions/generate/stream`), durable batch jobs (`POST
+ * /ai/questions/jobs` + polling/streaming), and the draft-review side of
+ * the bank API: `GET /bank/questions?status=draft`, `POST :id/approve`,
+ * `POST :id/reject`, `PATCH :id` (server-side Typst preview validation — a
+ * broken edit responds 400 and is never persisted, see
+ * `extract-error-message.ts`). Bearer JWT is attached automatically by
+ * `authInterceptor` (see app.config.ts), same as BankService — this service
+ * never touches auth headers itself.
+ *
+ * NOTE: there is intentionally NO buffered `POST /ai/questions/generate`
+ * call here — that endpoint does not exist on the backend; batch
+ * generation goes through durable jobs and single generation through the
+ * stream endpoint.
  */
 @Injectable({ providedIn: 'root' })
 export class AiService {
   private readonly http = inject(HttpClient);
 
-  generateQuestions(payload: GenerateQuestionsPayload): Observable<GenerateQuestionsResult> {
-    return this.http.post<GenerateQuestionsResult>(
-      `${environment.apiBaseUrl}/ai/questions/generate`,
-      payload,
-    );
-  }
-
   /**
-   * Streaming counterpart of `generateQuestions()` — `POST
-   * /ai/questions/generate/stream`, always a single question (no `count`).
+   * Single-question generation, streamed live — `POST
+   * /ai/questions/generate/stream` (no `count`, always one question).
    * Uses `HttpClient` (NOT `EventSource`) specifically so the existing
    * `authInterceptor` keeps attaching the `Authorization` header — a native
    * `EventSource` can't send custom headers at all. `responseType: 'text'` +

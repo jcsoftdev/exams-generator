@@ -70,6 +70,8 @@ services:
       REDIS_PORT: 6379
       JWT_SECRET: ${JWT_SECRET:?JWT_SECRET must be set}
       AI_MODEL: ${AI_MODEL}
+      AI_VISION_MODEL: ${AI_VISION_MODEL}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
       PORT: 3000
     ports:
       - "${API_PORT:-3012}:3000"

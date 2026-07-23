@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import { Difficulty, Role } from "@exams-generator/shared";
 import { INestApplication } from "@nestjs/common";
 import { Test } from "@nestjs/testing";
-import { inArray } from "drizzle-orm";
+import { inArray, eq } from "drizzle-orm";
 import request from "supertest";
 import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
@@ -227,23 +227,37 @@ describe("POST /exams/preview (e2e)", () => {
     const gradeLevel = "secundaria_1";
     await createApprovedQuestion({ tenantId: tenantAId, createdBy: tenantATeacherId, topicId, gradeLevel });
 
-    const [examCountBefore] = await db.select().from(exams);
-    void examCountBefore;
-    const beforeExamRows = await db.select({ id: exams.id }).from(exams);
-    const beforeBlueprintRows = await db.select({ id: examBlueprintRows.id }).from(examBlueprintRows);
-    const beforeQuestionRows = await db.select({ id: examQuestions.id }).from(examQuestions);
+    // Counts are scoped to THIS SUITE'S tenant: other e2e suites run in
+    // parallel jest workers against the same dev Postgres and insert their
+    // own exams rows constantly — a global before/after count races with
+    // them. Any row the preview endpoint wrongly inserted would belong to
+    // the requesting tenant, so the tenant scope loses no signal.
+    const countSuiteRows = async () => {
+      const examRows = await db.select({ id: exams.id }).from(exams).where(eq(exams.tenantId, tenantAId));
+      const blueprintRows = await db
+        .select({ id: examBlueprintRows.id })
+        .from(examBlueprintRows)
+        .innerJoin(exams, eq(examBlueprintRows.examId, exams.id))
+        .where(eq(exams.tenantId, tenantAId));
+      const questionRows = await db
+        .select({ id: examQuestions.id })
+        .from(examQuestions)
+        .innerJoin(exams, eq(examQuestions.examId, exams.id))
+        .where(eq(exams.tenantId, tenantAId));
+      return { examRows, blueprintRows, questionRows };
+    };
+
+    const before = await countSuiteRows();
 
     await previewRequest(tenantAToken)
       .send({ gradeLevel, blueprint: [{ courseId, topicId, difficulty: Difficulty.Easy, count: 1 }] })
       .expect(200);
 
-    const afterExamRows = await db.select({ id: exams.id }).from(exams);
-    const afterBlueprintRows = await db.select({ id: examBlueprintRows.id }).from(examBlueprintRows);
-    const afterQuestionRows = await db.select({ id: examQuestions.id }).from(examQuestions);
+    const after = await countSuiteRows();
 
-    expect(afterExamRows).toHaveLength(beforeExamRows.length);
-    expect(afterBlueprintRows).toHaveLength(beforeBlueprintRows.length);
-    expect(afterQuestionRows).toHaveLength(beforeQuestionRows.length);
+    expect(after.examRows).toHaveLength(before.examRows.length);
+    expect(after.blueprintRows).toHaveLength(before.blueprintRows.length);
+    expect(after.questionRows).toHaveLength(before.questionRows.length);
   });
 
   it("scenario 5: invalid gradeLevel -> 400 before any DB read", async () => {

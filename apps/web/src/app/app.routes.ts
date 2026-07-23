@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Role } from '@exams-generator/shared';
 import { authGuard } from './core/auth/auth.guard';
 import { roleGuard } from './core/auth/role.guard';
+import { EXAMS_ROLES } from './features/exams/exams.roles';
 import { LoginComponent } from './features/login/login.component';
 import { ShellComponent } from './features/shell/shell.component';
 import { ForbiddenComponent } from './features/forbidden/forbidden.component';
@@ -32,10 +33,29 @@ export const routes: Routes = [
       { path: 'bank', component: BankListComponent },
       { path: 'bank/upload', component: BankUploadComponent },
       { path: 'bank/new', component: BankNewComponent },
-      { path: 'exams', component: ExamListComponent },
-      { path: 'exams/new', component: ExamBuilderComponent },
-      { path: 'exams/:examId', component: ExamReviewComponent },
-      { path: 'exams/:examId/versions', component: ExamVersionsPanelComponent },
+      // The backend exams controller is @Roles(Teacher, SchoolAdmin) — any
+      // other role would only hit 403s, so the routes themselves refuse
+      // navigation (to /forbidden) and the shell hides the nav item.
+      {
+        path: 'exams',
+        component: ExamListComponent,
+        canActivate: [roleGuard(...EXAMS_ROLES)],
+      },
+      {
+        path: 'exams/new',
+        component: ExamBuilderComponent,
+        canActivate: [roleGuard(...EXAMS_ROLES)],
+      },
+      {
+        path: 'exams/:examId',
+        component: ExamReviewComponent,
+        canActivate: [roleGuard(...EXAMS_ROLES)],
+      },
+      {
+        path: 'exams/:examId/versions',
+        component: ExamVersionsPanelComponent,
+        canActivate: [roleGuard(...EXAMS_ROLES)],
+      },
       { path: 'ai/generate', component: AiGenerateComponent },
       { path: 'ai/jobs', component: GenerationHistoryComponent },
       { path: 'ai/jobs/:id', component: GenerationJobDetailComponent },

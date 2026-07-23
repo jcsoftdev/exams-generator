@@ -679,6 +679,26 @@ describe("ExamsService.resolveExamBlueprint", () => {
     ).rejects.toBeInstanceOf(NotFoundException);
   });
 
+  it("throws BadRequestException when the active cycle has an invalid weekLengthDays (<= 0) — loud, never a silent empty blueprint", async () => {
+    const { service, repository } = buildDeps();
+    repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "cumulative" });
+    repository.findCurrentTemplate.mockResolvedValue({ id: "template-1" });
+    repository.getTemplateRows.mockResolvedValue([{ courseId: "course-1", questionCount: 4 }]);
+    repository.getSyllabusForTemplate.mockResolvedValue([]);
+    // Bad server-side data: computeCurrentWeek would divide by zero and
+    // return Infinity, which resolveBlueprint then turns into "no topics".
+    repository.findActiveCycle.mockResolvedValue({ startsOn: new Date("2026-03-05"), weekLengthDays: 0 });
+
+    await expect(
+      service.resolveExamBlueprint({
+        examTypeCode: "eta_by_week",
+        universityId: "uni-1",
+        trackId: null,
+        tenantId: "tenant-1",
+      }),
+    ).rejects.toBeInstanceOf(BadRequestException);
+  });
+
   it("computes weekNumber from the active cycle via computeCurrentWeek() and threads it into resolveBlueprint (week_scope='cumulative')", async () => {
     const { service, repository } = buildDeps();
     repository.findExamType.mockResolvedValue({ courseScope: "all", weekScope: "cumulative" });

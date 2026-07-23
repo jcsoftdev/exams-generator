@@ -10,6 +10,15 @@ const MS_PER_DAY = 86_400_000;
  * hasn't begun yet is week 0, never negative.
  */
 export function computeCurrentWeek(startsOn: Date, weekLengthDays: number, today: Date): number {
+  // Guard FIRST: `dayDiff / 0` is Infinity and a negative length flips the
+  // sign (clamped to 0 below) — both previously flowed silently into the
+  // blueprint resolver as a "no topics in scope" result instead of failing
+  // loud on the bad cycle data. Callers (resolveExamBlueprint) translate
+  // this into an actionable 400.
+  if (!Number.isFinite(weekLengthDays) || weekLengthDays <= 0) {
+    throw new RangeError(`weekLengthDays must be a positive finite number, got: ${weekLengthDays}`);
+  }
+
   const startUtc = Date.UTC(startsOn.getUTCFullYear(), startsOn.getUTCMonth(), startsOn.getUTCDate());
   const todayUtc = Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate());
   const dayDiff = Math.floor((todayUtc - startUtc) / MS_PER_DAY);

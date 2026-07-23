@@ -155,6 +155,18 @@ describe('ShellComponent', () => {
     expect(compiled.textContent).toContain('Mis exámenes');
   });
 
+  it('hides "Mis exámenes" for platform_admin — the backend exams controller 403s the role, so the nav must not lead to a dead 403 screen', () => {
+    const { compiled } = setup(Role.PlatformAdmin);
+
+    expect(compiled.textContent).not.toContain('Mis exámenes');
+  });
+
+  it('hides "Mis exámenes" for content_editor (same backend 403)', () => {
+    const { compiled } = setup(Role.ContentEditor);
+
+    expect(compiled.textContent).not.toContain('Mis exámenes');
+  });
+
   it('keeps the desktop sidebar structurally collapsed at mobile widths (hidden md:block)', () => {
     const { compiled } = setup(Role.Teacher);
 

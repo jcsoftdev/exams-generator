@@ -75,13 +75,16 @@ function setup(
     getTopicsImpl?: (courseId: string) => unknown;
     reviseQuestionImpl?: (id: string, instruction: string) => unknown;
     extractQuestionFromImageImpl?: (image: File) => unknown;
+    updateQuestionImpl?: (id: string, patch: unknown) => unknown;
   } = {},
 ) {
   const listQuestions = vi.fn(over.listImpl ?? (() => of(QUESTIONS)));
   const getQuestion = vi.fn(over.getQuestionImpl ?? ((id: string) => of(makeQuestion({ id }))));
   const archiveQuestion = vi.fn(over.archiveImpl ?? ((id: string) => of({ id, status: 'archived' })));
   const deleteQuestion = vi.fn(over.deleteImpl ?? (() => of(void 0)));
-  const updateQuestion = vi.fn((id: string, _patch: unknown) => of(makeQuestion({ id })));
+  const updateQuestion = vi.fn(
+    over.updateQuestionImpl ?? ((id: string, _patch: unknown) => of(makeQuestion({ id }))),
+  );
   const replaceQuestionImage = vi.fn((id: string, _file: File) => of({ id }));
   const buildImageAssetUrl = vi.fn((id: string) => `http://api.test/assets/${id}`);
   const fetchQuestionImage = vi.fn((id: string) => of(new Blob([`b-${id}`], { type: 'image/png' })));
@@ -533,6 +536,35 @@ describe('BankListComponent', () => {
       fixture.detectChanges();
 
       expect(updateQuestion).toHaveBeenCalledWith('q1', expect.objectContaining({ correctAnswer: '0' }));
+    });
+
+    it('surfaces the server-side Typst compile error instead of a generic message — the teacher needs to know WHAT failed in their markup', () => {
+      const { compiled, fixture } = setup({
+        updateQuestionImpl: () =>
+          throwError(
+            () =>
+              new HttpErrorResponse({
+                status: 400,
+                error: {
+                  statusCode: 400,
+                  message: 'Typst compile failed: unexpected token',
+                  error: 'Bad Request',
+                },
+              }),
+          ),
+      });
+      expandCourse(compiled, fixture, 'c1');
+      expandTopic(compiled, fixture, 't1');
+      (compiled.querySelector('[data-testid="bank-question"]') as HTMLElement).click();
+      fixture.detectChanges();
+
+      (compiled.querySelector('[data-testid="panel-edit"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      const error = compiled.querySelector('[data-testid="panel-edit-form"] [role="alert"]');
+      expect(error?.textContent).toContain('Typst compile failed: unexpected token');
     });
 
     it('shows a used-in-exams warning in edit mode for an approved question already used in exams', () => {

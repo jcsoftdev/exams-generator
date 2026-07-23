@@ -12,6 +12,7 @@ import { ModalComponent } from '../../../ui/modal/modal.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { InputComponent } from '../../../ui/input/input.component';
 import { AiService } from '../ai.service';
+import { extractErrorMessage } from '../extract-error-message';
 import { DraftQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from '../ai.models';
 import { DraftCountService } from '../draft-count.service';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
@@ -293,9 +294,11 @@ export class AiReviewQueueComponent {
         this.editSaving.set(false);
         this.reloadAfterSave(draft.id);
       },
-      error: () => {
+      error: (e: HttpErrorResponse) => {
         this.editSaving.set(false);
-        this.editError.set('No se pudo guardar la pregunta. Inténtalo de nuevo.');
+        // Surface the server's real reason (validation list / Typst compile
+        // stderr) — the teacher can't fix what they can't see.
+        this.editError.set(extractErrorMessage(e));
       },
     });
   }

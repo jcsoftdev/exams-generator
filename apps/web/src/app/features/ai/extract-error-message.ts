@@ -7,7 +7,10 @@ import { HttpErrorResponse } from '@angular/common/http';
  *   - `BadRequestException("Typst compile failed: ...")` → body is
  *     `{ statusCode, message, error }` (Nest's default wrapping for a
  *     string response)
- * into a single human-readable string for the review-queue edit form.
+ * into a single human-readable string for the edit forms (AI review queue
+ * and bank list) — so a server-side Typst compile failure reaches the
+ * teacher verbatim instead of being swallowed by a generic "could not
+ * save" banner.
  */
 export function extractErrorMessage(error: HttpErrorResponse): string {
   const body = error.error as unknown;
@@ -21,5 +24,5 @@ export function extractErrorMessage(error: HttpErrorResponse): string {
     return Array.isArray(message) ? message.join(', ') : String(message);
   }
 
-  return 'Could not save changes. Please review the Typst markup.';
+  return 'No se pudo guardar la pregunta. Inténtalo de nuevo.';
 }

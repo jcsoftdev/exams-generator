@@ -9,6 +9,7 @@ import { AuthService } from '../../core/auth/auth.service';
 import { TenantSettingsService } from '../tenant-settings/tenant-settings.service';
 import { DraftCountService } from '../ai/draft-count.service';
 import { ThemeService } from '../../core/theme/theme.service';
+import { EXAMS_ROLES } from '../exams/exams.roles';
 
 const PRINCIPAL_GROUP: NavGroup = {
   title: 'Principal',
@@ -58,7 +59,14 @@ export class ShellComponent {
   protected readonly themeMode = computed(() => this.themeService.mode());
 
   protected readonly navGroups = computed<NavGroup[]>(() => {
+    const role = this.authService.currentRole();
     const pendingDrafts = this.draftCount.count();
+    const principalGroup: NavGroup = {
+      ...PRINCIPAL_GROUP,
+      items: PRINCIPAL_GROUP.items.filter(
+        (item) => item.route !== '/app/exams' || (role !== null && EXAMS_ROLES.includes(role)),
+      ),
+    };
     const inteligenciaGroup: NavGroup = {
       title: 'Inteligencia',
       items: [
@@ -72,8 +80,8 @@ export class ShellComponent {
         { label: 'Historial IA', route: '/app/ai/jobs', icon: 'history' },
       ],
     };
-    const groups: NavGroup[] = [PRINCIPAL_GROUP, inteligenciaGroup];
-    if (this.authService.currentRole() === Role.SchoolAdmin) {
+    const groups: NavGroup[] = [principalGroup, inteligenciaGroup];
+    if (role === Role.SchoolAdmin) {
       groups.push(COLEGIO_GROUP);
     }
     return groups;

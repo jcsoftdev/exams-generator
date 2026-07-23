@@ -32,7 +32,12 @@ export class UsersService {
     }
     const tenantId = requireTenant(user);
     if (await this.repository.findByEmail(email)) {
-      throw new ConflictException(`Email already in use: ${email}`);
+      // Accounts are PLATFORM-WIDE by design: `users.email` has a global
+      // unique constraint and login is email+password with no tenant
+      // context. A 409 here therefore means "this person already has an
+      // account somewhere on the platform" — the message must say so, or the
+      // admin reads it as "email taken inside my school" and gets stuck.
+      throw new ConflictException(`An account with this email already exists on the platform: ${email}`);
     }
     const temporaryPassword = generateTemporaryPassword();
     const { id } = await this.repository.create(tenantId, email, name.trim(), role, await hashPassword(temporaryPassword));
@@ -46,7 +51,7 @@ export class UsersService {
     }
     const target = await this.repository.findByIdInTenant(targetId, tenantId);
     if (!target) throw new NotFoundException(`User not found: ${targetId}`);
-    await this.repository.setActive(targetId, active);
+    await this.repository.setActive(targetId, tenantId, active);
     return { id: targetId, active };
   }
 
@@ -55,7 +60,7 @@ export class UsersService {
     const target = await this.repository.findByIdInTenant(targetId, tenantId);
     if (!target) throw new NotFoundException(`User not found: ${targetId}`);
     const temporaryPassword = generateTemporaryPassword();
-    await this.repository.setPasswordHash(targetId, await hashPassword(temporaryPassword));
+    await this.repository.setPasswordHash(targetId, tenantId, await hashPassword(temporaryPassword));
     return { id: targetId, temporaryPassword };
   }
 }

@@ -35,4 +35,17 @@ describe("computeCurrentWeek", () => {
     const today = new Date("2026-03-12T21:45:00Z");
     expect(computeCurrentWeek(startsOn, 7, today)).toBe(1);
   });
+
+  it("throws a RangeError for weekLengthDays <= 0 instead of silently returning Infinity/0", () => {
+    // dayDiff / 0 = Infinity and dayDiff / negative flips the sign (clamped
+    // to 0) — both poisoned the blueprint into a silent "no topics" result.
+    expect(() => computeCurrentWeek(new Date("2026-03-05"), 0, new Date("2026-03-12"))).toThrow(RangeError);
+    expect(() => computeCurrentWeek(new Date("2026-03-05"), -7, new Date("2026-03-12"))).toThrow(RangeError);
+  });
+
+  it("throws a RangeError for a non-finite weekLengthDays (NaN)", () => {
+    expect(() => computeCurrentWeek(new Date("2026-03-05"), Number.NaN, new Date("2026-03-12"))).toThrow(
+      RangeError,
+    );
+  });
 });

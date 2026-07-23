@@ -21,7 +21,7 @@ import {
 } from "./domain/ports/pdf-compiler.port";
 import { StorageObjectNotFoundError, StoragePort } from "./domain/ports/storage.port";
 import { STORAGE_PORT } from "../bank/bank.constants";
-import { PDF_COMPILER_PORT } from "./exams.constants";
+import { PDF_COMPILER_PORT } from "../bank/bank.constants";
 import { ExamForGenerationRecord, ExamsRepository, SelectedQuestionForGeneration } from "./exams.repository";
 import type { Archiver, ArchiverOptions } from "archiver";
 

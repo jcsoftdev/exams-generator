@@ -1,4 +1,5 @@
 import { Component, DestroyRef, computed, effect, inject, signal } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Observable, forkJoin, map, of, switchMap } from 'rxjs';
 import {
@@ -30,6 +31,7 @@ import { BankQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, UpdateQuestionPayload }
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
+import { extractErrorMessage } from '../../ai/extract-error-message';
 import { buildQuestionTree, filterQuestionTree, QuestionTreeCourseNode, QuestionTreeTopicNode } from './bank-question-tree';
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
@@ -717,9 +719,11 @@ export class BankListComponent {
           },
         });
       },
-      error: () => {
+      error: (e: HttpErrorResponse) => {
         this.editSaving.set(false);
-        this.editError.set('No se pudo guardar la pregunta. Inténtalo de nuevo.');
+        // Surface the server's real reason (validation list / Typst compile
+        // stderr) — the teacher can't fix what they can't see.
+        this.editError.set(extractErrorMessage(e));
       },
     });
   }

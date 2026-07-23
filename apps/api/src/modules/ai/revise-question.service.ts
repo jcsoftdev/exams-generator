@@ -8,6 +8,7 @@ import {
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankRepository } from "../bank/bank.repository";
 import { PDF_COMPILER_PORT } from "../bank/bank.constants";
+import { assertStructuredQuestion } from "../bank/domain/assert-structured-question";
 import { compilePreviewFromContent } from "../bank/domain/compile-preview-from-content";
 import { validateStructuredContent } from "../bank/domain/validate-structured-content";
 import { PdfCompilerPort, TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
@@ -61,9 +62,18 @@ export class ReviseQuestionService {
       throw new NotFoundException(`Question not found: ${id}`);
     }
 
+    // IMAGE questions store their clave as a LETTER and carry no
+    // bodyTypst/alternatives — there is no structured content for the AI to
+    // revise (and `correctAnswerIndexToLetter` would NaN-throw on the letter
+    // anyway). Reject up front via the same shared gate `previewQuestion`
+    // uses, so this invariant lives in one place, not two.
+    assertStructuredQuestion(question, "Question revision");
+
     const revised = await this.generator.reviseQuestion({
       current: {
-        bodyTypst: question.bodyTypst ?? "",
+        // `assertStructuredQuestion` above already narrows this to a
+        // non-empty string — no `?? ""` fallback needed.
+        bodyTypst: question.bodyTypst,
         alternatives: (question.alternatives as string[]) ?? [],
         // Bank storage holds a 0-based INDEX, but the port contract expects
         // a LETTER (matches `GeneratedQuestion.correctAnswer`).

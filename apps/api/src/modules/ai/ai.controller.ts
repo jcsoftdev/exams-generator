@@ -41,6 +41,27 @@ interface ReviseQuestionBody {
   readonly instruction?: string;
 }
 
+/**
+ * Maps the domain-layer AI provider errors (plain `Error`s, not HTTP-aware)
+ * to the HTTP status the caller can act on. Left uncaught, Nest's default
+ * filter turns ALL of them into an identical generic 500, hiding whether the
+ * real cause was a rate-limited provider, a garbage AI response, or
+ * something else. Anything that is NOT an AI provider error (including the
+ * services' own `HttpException`s — 400/404/422) is rethrown unchanged.
+ */
+function mapAiProviderError(error: unknown): never {
+  if (error instanceof AiRateLimitError) {
+    throw new HttpException(error.message, HttpStatus.TOO_MANY_REQUESTS);
+  }
+  if (error instanceof AiInvalidResponseError) {
+    throw new UnprocessableEntityException(error.message);
+  }
+  if (error instanceof AiGenerationError) {
+    throw new HttpException(error.message, HttpStatus.BAD_GATEWAY);
+  }
+  throw error;
+}
+
 @Controller("ai/questions")
 @UseGuards(JwtAuthGuard)
 export class AiController {
@@ -51,9 +72,11 @@ export class AiController {
   ) {}
 
   /**
-   * `POST /ai/questions/generate/stream` — same single-question generation
-   * as `generate()` with `count: 1`, but streamed live as it happens (design:
-   * live streaming progress). Hand-rolled SSE via `@Res()` rather than
+   * `POST /ai/questions/generate/stream` — single-question generation
+   * streamed live as it happens (design: live streaming progress; batch
+   * generation goes through the durable `POST /ai/questions/jobs` flow
+   * instead — there is no buffered generate endpoint on this controller).
+   * Hand-rolled SSE via `@Res()` rather than
    * Nest's `@Sse()` decorator: `@Sse()` is GET-oriented, and a native
    * browser `EventSource` can't send the `Authorization` header this
    * endpoint's `JwtAuthGuard` requires — the Angular client instead
@@ -61,7 +84,7 @@ export class AiController {
    * already attaches the header to), reading the SSE-shaped body as plain
    * text. Never throws past this point: every failure (validation,
    * not-found taxonomy, AI/compile error) is carried inside a `done` event's
-   * `result.failed`, exactly like the buffered endpoint above.
+   * `result.failed` instead of an HTTP error status.
    */
   @Post("generate/stream")
   @HttpCode(200)
@@ -115,7 +138,11 @@ export class AiController {
     @Param("id") id: string,
     @Body() body: ReviseQuestionBody,
   ): Promise<GeneratedQuestion> {
-    return this.reviseService.revise(user, id, body.instruction ?? "");
+    try {
+      return await this.reviseService.revise(user, id, body.instruction ?? "");
+    } catch (error) {
+      mapAiProviderError(error);
+    }
   }
 
   /**
@@ -135,21 +162,7 @@ export class AiController {
     try {
       return await this.extractService.extract({ buffer: file.buffer, mimetype: file.mimetype });
     } catch (error) {
-      // `AiGenerationError` and its subclasses are plain `Error`s (domain
-      // layer, not HTTP-aware) — left uncaught, Nest's default filter turns
-      // ALL of them into an identical generic 500, hiding whether the real
-      // cause was a rate-limited provider, a garbage AI response, or
-      // something else. Map each to the status the caller can act on.
-      if (error instanceof AiRateLimitError) {
-        throw new HttpException(error.message, HttpStatus.TOO_MANY_REQUESTS);
-      }
-      if (error instanceof AiInvalidResponseError) {
-        throw new UnprocessableEntityException(error.message);
-      }
-      if (error instanceof AiGenerationError) {
-        throw new HttpException(error.message, HttpStatus.BAD_GATEWAY);
-      }
-      throw error;
+      mapAiProviderError(error);
     }
   }
 }

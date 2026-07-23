@@ -612,7 +612,19 @@ export class ExamsService {
           `No active cycle found for university=${input.universityId} track=${input.trackId ?? "none"} — cannot resolve the current week`,
         );
       }
-      weekNumber = computeCurrentWeek(cycle.startsOn, cycle.weekLengthDays, new Date());
+      try {
+        weekNumber = computeCurrentWeek(cycle.startsOn, cycle.weekLengthDays, new Date());
+      } catch (error) {
+        // Bad server-side cycle data (week_length_days <= 0 / NaN) — say so
+        // explicitly instead of letting a poisoned weekNumber silently
+        // resolve to an empty blueprint.
+        if (error instanceof RangeError) {
+          throw new BadRequestException(
+            `El ciclo activo tiene un week_length_days inválido (${cycle.weekLengthDays}) — corrige el ciclo antes de resolver la plantilla.`,
+          );
+        }
+        throw error;
+      }
     }
 
     const blueprint = resolveBlueprint({

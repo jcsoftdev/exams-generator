@@ -364,6 +364,30 @@ describe('AiReviewQueueComponent', () => {
     expect(error?.textContent).toContain('No se pudo guardar');
   });
 
+  it('surfaces the server-side Typst compile error instead of a generic message — the teacher needs to know WHAT failed in their markup', () => {
+    const { compiled, fixture } = setup({
+      updateQuestionImpl: () =>
+        throwError(
+          () =>
+            new HttpErrorResponse({
+              status: 400,
+              error: {
+                statusCode: 400,
+                message: 'Typst compile failed: unexpected token',
+                error: 'Bad Request',
+              },
+            }),
+        ),
+    });
+    (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    (compiled.querySelector('[data-testid="edit-save"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    const error = compiled.querySelector('[data-testid="panel-edit-form"] [role="alert"]');
+    expect(error?.textContent).toContain('Typst compile failed: unexpected token');
+  });
+
   it('reloads the queue and refreshes the preview after a successful save', () => {
     const { compiled, fixture, listDrafts, previewDraft } = setup();
     (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();

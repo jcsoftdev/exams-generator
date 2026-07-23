@@ -21,19 +21,22 @@ the repository root and point "Dockerfile path" at `infra/Dockerfile.api` or
 
 ### Compose-based deploy
 
-`infra/docker-compose.yml` is the source of truth for how the two apps relate
-to `postgres` and `minio`. If deploying via Dokploy's Compose provider instead
-of two separate Application resources, point it at this file directly — it
-already declares `api` and `web` as build-from-Dockerfile services with
-`depends_on` health/order constraints. No changes are needed to the compose
-file itself for Dokploy; only the env vars below must be supplied per
-environment (Dokploy injects them, `env.example` is the local-dev template
-only and is never read at deploy time).
+`infra/docker-compose.dokploy.yml` is the Dokploy-targeted compose file
+(single-domain variant of the dev compose). It declares `api` and `web` as
+build-from-Dockerfile services plus the `postgres`, `minio`, and `redis`
+dependencies, with `depends_on` health/order constraints and no host port
+mappings (Dokploy routes by domain). Point Dokploy's Compose provider at this
+file and supply the env vars below per environment (Dokploy injects them,
+`env.example` is the local-dev template only and is never read at deploy
+time).
 
-If deploying as two separate Dokploy Applications (not Compose), `postgres`
-and `minio` still need to run somewhere reachable by `api` — either as
-Dokploy-managed database/service resources or as the same `docker-compose.yml`
-stack with only `api`/`web` swapped for Dokploy-managed application resources.
+`infra/docker-compose.yml` remains the local-dev compose — same services, but
+with host port mappings for running everything outside Dokploy.
+
+If deploying as two separate Dokploy Applications (not Compose), `postgres`,
+`minio`, and `redis` still need to run somewhere reachable by `api` — either
+as Dokploy-managed database/service resources or as the compose stack with
+only `api`/`web` swapped for Dokploy-managed application resources.
 
 ## Dependencies
 
@@ -44,6 +47,11 @@ stack with only `api`/`web` swapped for Dokploy-managed application resources.
   generated-PDF storage (per design). `api` needs `MINIO_ENDPOINT` +
   `MINIO_ROOT_USER` / `MINIO_ROOT_PASSWORD` (or an equivalent managed S3
   bucket's credentials, if MinIO is swapped for a hosted object store later).
+- **redis** (`redis:7.4-bookworm`): required by `api` — the AI question
+  generation queue (BullMQ `generation` queue) connects at boot and the app
+  will not process generation jobs without it. The compose stack provides it;
+  if swapped for a managed Redis, set `REDIS_HOST` / `REDIS_PORT` on `api`
+  accordingly (container-internal default is `redis:6379`).
 
 ## Required environment variables (per environment — set in Dokploy, not committed)
 
@@ -52,8 +60,11 @@ stack with only `api`/`web` swapped for Dokploy-managed application resources.
 | `DATABASE_URL` | api | Full postgres connection string. Must point at the environment's own postgres instance, not the local dev one in `env.example`. |
 | `MINIO_ENDPOINT` | api | Hostname of the MinIO/S3 endpoint for this environment. |
 | `MINIO_ROOT_USER` / `MINIO_ROOT_PASSWORD` | api, minio | Credentials pair; must match what the MinIO instance was provisioned with. |
-| `JWT_SECRET` | api | Required, no default — `docker-compose.yml` fails fast (`${JWT_SECRET:?...}`) if unset. Generate a unique per-environment secret, never reuse the local dev value. |
-| `AI_MODEL` | api | Reserved, currently unused (Phase 2 wires `QuestionGeneratorPort`/OpenRouterAdapter). Safe to leave empty for this MVP deploy. |
+| `JWT_SECRET` | api | Required, no default — `docker-compose.dokploy.yml` fails fast (`${JWT_SECRET:?...}`) if unset. Generate a unique per-environment secret, never reuse the local dev value. |
+| `REDIS_HOST` / `REDIS_PORT` | api | Redis connection for the BullMQ `generation` queue. Set to `redis` / `6379` by the compose stack; only override when pointing at an external/managed Redis. |
+| `AI_MODEL` | api | OpenRouter model id for text AI ops (generate, revise). Required for AI endpoints — resolved lazily, so the app boots without it but the first generate/revise call fails with a clear error if unset. |
+| `AI_VISION_MODEL` | api | OpenRouter model id for image extraction (`POST /ai/questions/extract`). Optional — falls back to `AI_MODEL` when unset (only works if that model is vision-capable). |
+| `OPENROUTER_API_KEY` | api | OpenRouter API key. Required for all AI endpoints (lazy, same as `AI_MODEL`). Compose passes it through only if set — supply it per environment. |
 | `PORT` | api | Container-internal port, defaults to `3000`. Only change if the base image/CMD changes too. |
 | `API_PORT` | host mapping | Host-side port mapped to the api container's `3000`, default `3012` (compose only — not meaningful for Dokploy Application resources, which manage their own routing/domains). |
 | `WEB_PORT` | host mapping | Host-side port mapped to the web container's `80`, default `8080` (compose only, same caveat as `API_PORT`). |
@@ -63,12 +74,17 @@ stack with only `api`/`web` swapped for Dokploy-managed application resources.
 in `docker-compose.yml` itself — irrelevant if those are swapped for
 Dokploy-managed resources instead of the compose services.
 
-## Port mappings (compose-based deploy)
+## Port mappings (local dev compose only)
+
+These host port mappings exist only in `infra/docker-compose.yml` (local
+dev). `infra/docker-compose.dokploy.yml` declares NO host port mappings —
+Dokploy routes by domain to the container-internal ports.
 
 | Service | Container port | Host port (default) | Notes |
 | ------- | -------------- | -------------------- | ----- |
 | postgres | 5432 | `${DB_PORT:-5439}` | |
 | minio | 9000 (API), 9001 (console) | `${MINIO_API_PORT:-9030}`, `${MINIO_CONSOLE_PORT:-9003}` | |
+| redis | 6379 | `${REDIS_HOST_PORT:-6390}` | |
 | api | 3000 | `${API_PORT:-3012}` | healthcheck: `GET /health` |
 | web | 80 | `${WEB_PORT:-8080}` | nginx serving the Angular static bundle, SPA fallback to `index.html` |
 

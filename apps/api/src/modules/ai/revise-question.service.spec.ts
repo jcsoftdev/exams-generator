@@ -111,6 +111,26 @@ describe("ReviseQuestionService.revise", () => {
     );
   });
 
+  it("throws BadRequestException for IMAGE questions instead of crashing on their LETTER correctAnswer — there is no structured content to revise", async () => {
+    const { service, bankRepository, generator } = buildDeps();
+    bankRepository.findQuestionById.mockResolvedValue({
+      ...EXISTING_QUESTION,
+      type: "image",
+      // Image rows store the clave as a LETTER ("a".."d") and carry no
+      // bodyTypst/alternatives — feeding them to the generator would be
+      // meaningless even if correctAnswerIndexToLetter didn't throw first.
+      correctAnswer: "a",
+      bodyTypst: null,
+      alternatives: null,
+      imageAssetId: "asset-1",
+    });
+
+    await expect(service.revise(TEACHER_USER, "q1", "más difícil")).rejects.toBeInstanceOf(
+      BadRequestException,
+    );
+    expect(generator.reviseQuestion).not.toHaveBeenCalled();
+  });
+
   it("throws UnprocessableEntityException when the AI output fails validateStructuredContent", async () => {
     const { service, generator } = buildDeps();
     generator.reviseQuestion.mockResolvedValue({

@@ -100,6 +100,11 @@ describe("GET /exams/:examId/versions (e2e, B4)", () => {
 
   afterAll(async () => {
     const cleanupSteps: Array<[string, () => Promise<unknown>]> = [
+      // Close the app FIRST so any in-flight request is finished/aborted
+      // before the DB rows it might still be touching are deleted (and before
+      // pool.end() runs) — otherwise a timed-out request keeps querying a
+      // draining pool and fails with "Cannot use a pool after calling end".
+      ["close app", () => app.close()],
       [
         "delete exams",
         async () => {
@@ -131,7 +136,6 @@ describe("GET /exams/:examId/versions (e2e, B4)", () => {
         },
       ],
       ["delete courses", () => db.delete(courses).where(inArray(courses.id, [courseId]))],
-      ["close app", () => app.close()],
     ];
     for (const [label, step] of cleanupSteps) {
       try {

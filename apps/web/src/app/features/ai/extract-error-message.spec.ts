@@ -44,8 +44,6 @@ describe('extractErrorMessage', () => {
   it('falls back to a generic message when the body has no recognizable shape', () => {
     const error = new HttpErrorResponse({ status: 500, error: null });
 
-    expect(extractErrorMessage(error)).toBe(
-      'Could not save changes. Please review the Typst markup.',
-    );
+    expect(extractErrorMessage(error)).toBe('No se pudo guardar la pregunta. Inténtalo de nuevo.');
   });
 });

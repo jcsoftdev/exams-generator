@@ -192,6 +192,25 @@ describe("Users module (e2e)", () => {
       .expect(409);
   });
 
+  it("409 on duplicate email ACROSS tenants — accounts are platform-wide by design (email has a GLOBAL unique constraint and login is email+password without tenant context)", async () => {
+    const email = `dup-cross-${suffix}@e2e.test`;
+    await request(app.getHttpServer())
+      .post("/users")
+      .set("Authorization", `Bearer ${schoolAdminAToken}`)
+      .send({ email, name: "Tenant A user", role: "teacher" })
+      .expect(201);
+
+    const res = await request(app.getHttpServer())
+      .post("/users")
+      .set("Authorization", `Bearer ${schoolAdminBToken}`)
+      .send({ email, name: "Tenant B user", role: "teacher" })
+      .expect(409);
+
+    // The message must explain WHY the admin can't create the account — the
+    // email belongs to a platform-wide account, not to "some other school".
+    expect(res.body.message).toContain("platform");
+  });
+
   it("deactivated user cannot login; reactivation restores access", async () => {
     await request(app.getHttpServer())
       .patch(`/users/${createdTeacherId}`)

@@ -4,6 +4,7 @@ import { inArray } from "drizzle-orm";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
 import { assets, courses, questions, tenants, topics, users } from "../../db/schema";
+import { QuestionStatus } from "../../db/schema/enums";
 import { BankRepository } from "./bank.repository";
 
 /**
@@ -23,6 +24,10 @@ describe("BankRepository", () => {
   let tenantAUserId: string;
   let tenantBId: string;
   let tenantBUserId: string;
+  // Control tenant this file NEVER writes to — its aggregate delta cancels
+  // concurrent central-question noise from other spec files (see the
+  // countByDifficultyAndStatus describe below).
+  let tenantCId: string;
 
   const createdQuestionIds: string[] = [];
   const createdAssetIds: string[] = [];
@@ -94,6 +99,12 @@ describe("BankRepository", () => {
       })
       .returning({ id: users.id });
     tenantBUserId = tenantBUser!.id;
+
+    const [tenantC] = await db
+      .insert(tenants)
+      .values({ name: `Tenant C (control) ${suffix}`, slug: `tenant-c-${suffix}` })
+      .returning({ id: tenants.id });
+    tenantCId = tenantC!.id;
   });
 
   afterAll(async () => {
@@ -104,7 +115,7 @@ describe("BankRepository", () => {
       await db.delete(assets).where(inArray(assets.id, createdAssetIds));
     }
     await db.delete(users).where(inArray(users.id, [centralUserId, tenantAUserId, tenantBUserId]));
-    await db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId]));
+    await db.delete(tenants).where(inArray(tenants.id, [tenantAId, tenantBId, tenantCId]));
     await db.delete(topics).where(inArray(topics.id, [topicId, otherTopicId]));
     await db.delete(courses).where(inArray(courses.id, [courseId]));
     await pool.end();
@@ -517,57 +528,101 @@ describe("BankRepository", () => {
   });
 
   describe("countByDifficultyAndStatus() — dashboard aggregate", () => {
-    // Every assertion below is DELTA-based (before/after the same query),
-    // never a raw total — this file runs against a SHARED dev Postgres, so
-    // other spec files' central (tenantId=null) rows are always present and
-    // would make an absolute-count assertion flaky.
+    // Every assertion below is DIFFERENTIAL: the delta of the tenant under
+    // test is compared against the delta of a CONTROL tenant this file never
+    // writes to (tenantC). Both aggregates count the same central
+    // (tenantId=null) rows, so subtracting the control's delta cancels any
+    // central questions inserted CONCURRENTLY by other spec files running in
+    // parallel jest workers against this shared dev Postgres — a plain
+    // before/after `+1` assertion flakes whenever another suite lands a
+    // central row in the same difficulty/status bucket mid-test.
+    //
+    // Known residual window (accepted): the before-reads (and after-reads)
+    // are fired concurrently via Promise.all but are not ONE atomic query,
+    // and a concurrent central-row DELETE (another suite's afterAll cleanup)
+    // landing mid-test can still offset a delta by ±1. The window is a few
+    // ms of network jitter — orders of magnitude smaller than the
+    // HTTP-round-trip window the old assertions had.
+    async function totalFor(
+      tenantId: string | null,
+      difficulty: Difficulty,
+      status: QuestionStatus,
+    ): Promise<number> {
+      const rows = await repository.countByDifficultyAndStatus(tenantId);
+      return rows.find((g) => g.difficulty === difficulty && g.status === status)?.total ?? 0;
+    }
 
     it("includes a newly created own-tenant question in the caller's aggregate", async () => {
-      const before = await repository.countByDifficultyAndStatus(tenantAId);
-      const beforeTotal =
-        before.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
+      const [beforeA, beforeC] = await Promise.all([
+        totalFor(tenantAId, Difficulty.Hard, "approved"),
+        totalFor(tenantCId, Difficulty.Hard, "approved"),
+      ]);
 
       await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, difficulty: Difficulty.Hard });
 
-      const after = await repository.countByDifficultyAndStatus(tenantAId);
-      const afterTotal =
-        after.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
-
-      expect(afterTotal).toBe(beforeTotal + 1);
+      const [afterA, afterC] = await Promise.all([
+        totalFor(tenantAId, Difficulty.Hard, "approved"),
+        totalFor(tenantCId, Difficulty.Hard, "approved"),
+      ]);
+      expect(afterA - beforeA - (afterC - beforeC)).toBe(1);
     });
 
     it("includes a newly created central question in every tenant's aggregate", async () => {
-      const before = await repository.countByDifficultyAndStatus(tenantAId);
-      const beforeTotal =
-        before.find((g) => g.difficulty === Difficulty.Easy && g.status === "approved")?.total ?? 0;
+      const [beforeA, beforeC] = await Promise.all([
+        totalFor(tenantAId, Difficulty.Easy, "approved"),
+        totalFor(tenantCId, Difficulty.Easy, "approved"),
+      ]);
 
       await createQuestion({ tenantId: null, createdBy: centralUserId, difficulty: Difficulty.Easy });
 
-      const after = await repository.countByDifficultyAndStatus(tenantAId);
-      const afterTotal =
-        after.find((g) => g.difficulty === Difficulty.Easy && g.status === "approved")?.total ?? 0;
-
-      expect(afterTotal).toBe(beforeTotal + 1);
+      const [deltaA, deltaC] = await Promise.all([
+        totalFor(tenantAId, Difficulty.Easy, "approved"),
+        totalFor(tenantCId, Difficulty.Easy, "approved"),
+      ]).then(([afterA, afterC]) => [afterA - beforeA, afterC - beforeC]);
+      // Both aggregates include central rows, so both must move — and by the
+      // SAME amount, since any concurrent central noise from other suites
+      // lands in both deltas identically.
+      expect(deltaA).toBe(deltaC);
+      expect(deltaA).toBeGreaterThanOrEqual(1);
     });
 
     it("excludes another tenant's private question from the caller's aggregate", async () => {
-      const before = await repository.countByDifficultyAndStatus(tenantAId);
-      const beforeTotal =
-        before.find((g) => g.difficulty === Difficulty.Medium && g.status === "approved")?.total ?? 0;
+      const [beforeA, beforeB, beforeC] = await Promise.all([
+        totalFor(tenantAId, Difficulty.Medium, "approved"),
+        totalFor(tenantBId, Difficulty.Medium, "approved"),
+        totalFor(tenantCId, Difficulty.Medium, "approved"),
+      ]);
 
       await createQuestion({ tenantId: tenantBId, createdBy: tenantBUserId, difficulty: Difficulty.Medium });
 
-      const after = await repository.countByDifficultyAndStatus(tenantAId);
-      const afterTotal =
-        after.find((g) => g.difficulty === Difficulty.Medium && g.status === "approved")?.total ?? 0;
+      const [afterA, afterB, afterC] = await Promise.all([
+        totalFor(tenantAId, Difficulty.Medium, "approved"),
+        totalFor(tenantBId, Difficulty.Medium, "approved"),
+        totalFor(tenantCId, Difficulty.Medium, "approved"),
+      ]);
+      const deltaA = afterA - beforeA;
+      const deltaB = afterB - beforeB;
+      const deltaC = afterC - beforeC;
 
-      expect(afterTotal).toBe(beforeTotal);
+      // Two assertions, each catching a different failure mode:
+      //  - deltaA === deltaC: tenant B's row is invisible to tenant A (the
+      //    control cancels concurrent central noise — and any regression that
+      //    leaks B's row into A's aggregate but not C's shows up here).
+      //  - deltaB - deltaC === 1: the row genuinely landed (and counts for
+      //    its owner) — under a global "aggregate counts ALL tenants"
+      //    regression BOTH deltas absorb B's row, so this difference
+      //    collapses to 0 and the test goes red. Without this second
+      //    assertion the test is vacuous against exactly the regression it
+      //    is named for.
+      expect(deltaA).toBe(deltaC);
+      expect(deltaB - deltaC).toBe(1);
     });
 
     it("groups by status independently of difficulty (a draft never counts as approved)", async () => {
-      const before = await repository.countByDifficultyAndStatus(tenantAId);
-      const beforeDraft =
-        before.find((g) => g.difficulty === Difficulty.Medium && g.status === "draft")?.total ?? 0;
+      const [beforeA, beforeC] = await Promise.all([
+        totalFor(tenantAId, Difficulty.Medium, "draft"),
+        totalFor(tenantCId, Difficulty.Medium, "draft"),
+      ]);
 
       const draft = await repository.createStructuredQuestion({
         tenantId: tenantAId,
@@ -583,25 +638,30 @@ describe("BankRepository", () => {
       });
       createdQuestionIds.push(draft.id);
 
-      const after = await repository.countByDifficultyAndStatus(tenantAId);
-      const afterDraft =
-        after.find((g) => g.difficulty === Difficulty.Medium && g.status === "draft")?.total ?? 0;
-
-      expect(afterDraft).toBe(beforeDraft + 1);
+      const [afterA, afterC] = await Promise.all([
+        totalFor(tenantAId, Difficulty.Medium, "draft"),
+        totalFor(tenantCId, Difficulty.Medium, "draft"),
+      ]);
+      expect(afterA - beforeA - (afterC - beforeC)).toBe(1);
     });
 
     it("scopes to central-only (tenant_id IS NULL) when tenantId is null (platform staff) — a tenant-private question never leaks in", async () => {
-      const before = await repository.countByDifficultyAndStatus(null);
-      const beforeTotal =
-        before.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
+      const [beforeNull, beforeC] = await Promise.all([
+        totalFor(null, Difficulty.Hard, "approved"),
+        totalFor(tenantCId, Difficulty.Hard, "approved"),
+      ]);
 
       await createQuestion({ tenantId: tenantAId, createdBy: tenantAUserId, difficulty: Difficulty.Hard });
 
-      const after = await repository.countByDifficultyAndStatus(null);
-      const afterTotal =
-        after.find((g) => g.difficulty === Difficulty.Hard && g.status === "approved")?.total ?? 0;
-
-      expect(afterTotal).toBe(beforeTotal);
+      const [afterNull, afterC] = await Promise.all([
+        totalFor(null, Difficulty.Hard, "approved"),
+        totalFor(tenantCId, Difficulty.Hard, "approved"),
+      ]);
+      // A tenant-private row is invisible to BOTH the null (central-only)
+      // aggregate and the control tenant's aggregate — deltas stay equal.
+      // Under a null-scope regression (null aggregate starts counting tenant
+      // rows), deltaNull absorbs tenant A's insert but deltaC does not.
+      expect(afterNull - beforeNull).toBe(afterC - beforeC);
     });
   });
 });

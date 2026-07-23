@@ -7,7 +7,7 @@ import { AiJobsController } from "./ai-jobs.controller";
 import { QUESTION_GENERATOR_PORT } from "./ai.constants";
 import { resolveQuestionGeneratorAdapter } from "./ai-provider";
 import { GenerationJobEventsService } from "./generation-job-events.service";
-import { resolveRedisConnection } from "./generation-jobs.env";
+import { resolveBullmqPrefix, resolveRedisConnection } from "./generation-jobs.env";
 import { GenerationJobsProcessor } from "./generation-jobs.processor";
 import { GenerationJobsRepository } from "./generation-jobs.repository";
 import { GenerationJobsService } from "./generation-jobs.service";
@@ -27,6 +27,9 @@ import { ReviseQuestionService } from "./revise-question.service";
     BankModule,
     BullModule.forRoot({
       connection: resolveRedisConnection(),
+      // Per-worker key prefix in e2e (see resolveBullmqPrefix) — undefined
+      // outside tests, so dev/prod keep BullMQ's default "bull" namespace.
+      prefix: resolveBullmqPrefix(),
       defaultJobOptions: {
         attempts: 3,
         backoff: { type: "exponential", delay: 5000 },

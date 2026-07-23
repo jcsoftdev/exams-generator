@@ -17,3 +17,18 @@ export function resolveRedisConnection(): RedisConnectionConfig {
     port: Number(process.env.REDIS_PORT ?? 6390),
   };
 }
+
+/**
+ * BullMQ key prefix for the whole queue namespace (queues, workers, events —
+ * `BullModule.forRoot` shared option). `undefined` in dev/prod (BullMQ's
+ * default "bull"). E2E jest specs set `BULLMQ_PREFIX` to a per-test-file value
+ * (see `src/test-support/jest-setup.ts`) so parallel suites sharing the local
+ * Redis NEVER steal each other's `generation` jobs — a job created by suite A
+ * must always be processed by suite A's own worker (with suite A's mocked
+ * `QuestionGeneratorPort`), and a force-exited suite can no longer poison the
+ * next suite with a stalled job that burns the 3-attempt exponential-backoff
+ * retry budget before the real job is even touched.
+ */
+export function resolveBullmqPrefix(): string | undefined {
+  return process.env.BULLMQ_PREFIX || undefined;
+}

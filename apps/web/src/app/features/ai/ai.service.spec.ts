@@ -8,7 +8,6 @@ import { environment } from '../../../environments/environment';
 import {
   AiRevisedQuestion,
   DraftQuestion,
-  GenerateQuestionsResult,
   GenerateQuestionStreamEvent,
   GenerationJob,
   GenerationJobChainResult,
@@ -29,57 +28,6 @@ describe('AiService', () => {
 
   afterEach(() => {
     httpMock.verify();
-  });
-
-  describe('generateQuestions', () => {
-    it('POSTs the generation payload to /ai/questions/generate', () => {
-      service
-        .generateQuestions({
-          courseId: 'course-1',
-          topicId: 'topic-1',
-          difficulty: Difficulty.Hard,
-          gradeLevel: 'secundaria_3',
-          count: 5,
-          withFigure: true,
-        })
-        .subscribe();
-
-      const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/generate`);
-      expect(req.request.method).toBe('POST');
-      expect(req.request.body).toEqual({
-        courseId: 'course-1',
-        topicId: 'topic-1',
-        difficulty: 'hard',
-        gradeLevel: 'secundaria_3',
-        count: 5,
-        withFigure: true,
-      });
-      req.flush({ created: [], failed: [] });
-    });
-
-    it('resolves with the partial created/failed result returned by the API', () => {
-      const apiResponse: GenerateQuestionsResult = {
-        created: [{ id: 'q1' }, { id: 'q2' }],
-        failed: [{ index: 2, error: 'invalid Typst markup' }],
-      };
-      let result: GenerateQuestionsResult | undefined;
-
-      service
-        .generateQuestions({
-          courseId: 'course-1',
-          topicId: 'topic-1',
-          difficulty: Difficulty.Easy,
-          gradeLevel: 'primaria_1',
-          count: 3,
-          withFigure: false,
-        })
-        .subscribe((response) => (result = response));
-
-      const req = httpMock.expectOne(`${environment.apiBaseUrl}/ai/questions/generate`);
-      req.flush(apiResponse);
-
-      expect(result).toEqual(apiResponse);
-    });
   });
 
   describe('generateQuestionStream', () => {

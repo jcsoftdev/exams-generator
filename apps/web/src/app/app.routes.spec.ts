@@ -80,6 +80,15 @@ describe('app routes', () => {
     expect(examsNewRoute).toBeTruthy();
   });
 
+  it('guards every /app/exams* route with a role guard — the backend exams controller rejects anything but Teacher/SchoolAdmin, so other roles must hit /forbidden instead of a dead 403 screen', () => {
+    const appRoute = routes.find((route) => route.path === 'app');
+    for (const path of ['exams', 'exams/new', 'exams/:examId', 'exams/:examId/versions']) {
+      const examsRoute = appRoute?.children?.find((route) => route.path === path);
+      expect(examsRoute).toBeTruthy();
+      expect(examsRoute?.canActivate?.length).toBeGreaterThan(0);
+    }
+  });
+
   it('redirects the empty path to /app', () => {
     const emptyRoute = routes.find((route) => route.path === '' && route.redirectTo);
     expect(emptyRoute?.redirectTo).toBe('app');

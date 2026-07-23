@@ -14,6 +14,7 @@ import { StoragePort } from "../exams/domain/ports/storage.port";
 import { QuestionStatus } from "../../db/schema/enums";
 import { PDF_COMPILER_PORT, STORAGE_PORT } from "./bank.constants";
 import { BankRepository, QuestionListItem, QuestionListPagination } from "./bank.repository";
+import { assertStructuredQuestion } from "./domain/assert-structured-question";
 import { canManageQuestionTenant } from "./domain/can-manage-question-tenant";
 import { compilePreviewFromContent } from "./domain/compile-preview-from-content";
 import { validateCreateImageQuestionInput } from "./domain/validate-create-image-question";
@@ -327,9 +328,7 @@ export class BankService {
     if (!question) {
       throw new NotFoundException(`Question not found: ${id}`);
     }
-    if (question.type !== "structured" || !question.bodyTypst) {
-      throw new BadRequestException("Preview is only available for structured questions");
-    }
+    assertStructuredQuestion(question, "Preview");
 
     const cached = this.previewCache.get(id);
     if (cached) {
