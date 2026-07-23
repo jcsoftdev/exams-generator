@@ -1,4 +1,4 @@
-import { AnyPgColumn, boolean, integer, jsonb, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
+import { AnyPgColumn, boolean, index, integer, jsonb, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
 import { courses } from "./courses.schema";
 import { difficultyEnum, generationJobStatusEnum, roleEnum } from "./enums";
 import { gradeLevels } from "./grade-levels.schema";
@@ -53,4 +53,8 @@ export const generationJobs = pgTable("generation_jobs", {
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
   completedAt: timestamp("completed_at", { withTimezone: true }),
-});
+}, (table) => ({
+  statusIdx: index("generation_jobs_status_idx").on(table.status),
+  tenantCreatedIdx: index("generation_jobs_tenant_created_idx").on(table.tenantId, table.createdAt),
+  rootJobIdIdx: index("generation_jobs_root_job_id_idx").on(table.rootJobId),
+}));

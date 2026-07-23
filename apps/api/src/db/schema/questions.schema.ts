@@ -51,6 +51,7 @@ export const questions = pgTable(
       .notNull()
       .references(() => users.id),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (table) => ({
     tenantIdIdx: index("questions_tenant_id_idx").on(table.tenantId),
@@ -58,5 +59,6 @@ export const questions = pgTable(
     gradeLevelIdx: index("questions_grade_level_idx").on(table.gradeLevel),
     difficultyIdx: index("questions_difficulty_idx").on(table.difficulty),
     statusIdx: index("questions_status_idx").on(table.status),
+    poolIdx: index("questions_pool_idx").on(table.gradeLevel, table.status),
   }),
 );

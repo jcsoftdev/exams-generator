@@ -1,4 +1,4 @@
-import { integer, jsonb, pgTable, text, timestamp, uniqueIndex, uuid } from "drizzle-orm/pg-core";
+import { index, integer, jsonb, pgTable, text, timestamp, uniqueIndex, uuid } from "drizzle-orm/pg-core";
 import { assets } from "./assets.schema";
 import { courses } from "./courses.schema";
 import { cycles } from "./cycles.schema";
@@ -48,7 +48,11 @@ export const exams = pgTable("exams", {
   trackId: uuid("track_id").references(() => tracks.id),
   cycleId: uuid("cycle_id").references(() => cycles.id),
   weekNumber: integer("week_number"),
-});
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+}, (table) => ({
+  tenantCreatedIdx: index("exams_tenant_created_idx").on(table.tenantId, table.createdAt),
+  tenantStatusIdx: index("exams_tenant_status_idx").on(table.tenantId, table.status),
+}));
 
 /**
  * One blueprint row: "N questions of {course, topic?, difficulty?}".
@@ -70,7 +74,9 @@ export const examBlueprintRows = pgTable("exam_blueprint_rows", {
   topicId: uuid("topic_id").references(() => topics.id),
   difficulty: difficultyEnum("difficulty"),
   count: integer("count").notNull(),
-});
+}, (table) => ({
+  examIdIdx: index("exam_blueprint_rows_exam_id_idx").on(table.examId),
+}));
 
 /**
  * Final ordered question selection for an exam (shared across versions).
@@ -107,6 +113,7 @@ export const examQuestions = pgTable(
       table.examId,
       table.position,
     ),
+    questionIdIdx: index("exam_questions_question_id_idx").on(table.questionId),
   }),
 );
 
@@ -133,5 +140,9 @@ export const examVersions = pgTable(
   },
   (table) => ({
     examIdCodeIdx: uniqueIndex("exam_versions_exam_id_code_idx").on(table.examId, table.code),
+    pdfAssetIdIdx: index("exam_versions_pdf_asset_id_idx").on(table.pdfAssetId),
+    answerSheetAssetIdIdx: index("exam_versions_answer_sheet_asset_id_idx").on(
+      table.answerSheetAssetId,
+    ),
   }),
 );

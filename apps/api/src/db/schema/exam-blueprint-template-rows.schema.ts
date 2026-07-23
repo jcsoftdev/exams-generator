@@ -1,4 +1,4 @@
-import { check, integer, numeric, pgTable, text, uuid } from "drizzle-orm/pg-core";
+import { check, index, integer, numeric, pgTable, text, uuid } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
 import { courses } from "./courses.schema";
 import { examBlueprintTemplates } from "./exam-blueprint-templates.schema";
@@ -47,5 +47,6 @@ export const examBlueprintTemplateRows = pgTable(
       "exam_blueprint_template_rows_question_count_or_weight_points_check",
       sql`${table.questionCount} is not null or ${table.weightPoints} is not null`,
     ),
+    templateIdIdx: index("exam_blueprint_template_rows_template_id_idx").on(table.templateId),
   }),
 );

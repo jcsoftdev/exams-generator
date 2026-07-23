@@ -78,6 +78,20 @@
       "when": 1784647464277,
       "tag": "0010_warm_kree",
       "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1784840715642,
+      "tag": "0011_common_miracleman",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1784840757328,
+      "tag": "0012_updated_at_triggers_and_trgm",
+      "breakpoints": true
     }
   ]
 }
