@@ -1450,9 +1450,31 @@ async function reconcileLegacyTopics(index: CanonicalIndex): Promise<void> {
         if (LEGACY_TOPICS_TO_DROP.has(`${legacy.courseName} / ${legacy.name}`)) {
           continue;
         }
-        throw new Error(
-          `Seed invariant violated: legacy topic '${legacy.name}' (${legacy.courseName}) has no canonical mapping`,
-        );
+        // An unmapped legacy topic that still has REAL questions is a genuine
+        // mapping gap — never orphan question content; fail loudly so the
+        // canonical taxonomy gets fixed (the conservation spec catches this
+        // for the static seed arrays; this guards data that predates them).
+        const [referenced] = await tx
+          .select({ id: questions.id })
+          .from(questions)
+          .where(eq(questions.topicId, legacy.id))
+          .limit(1);
+        if (referenced) {
+          throw new Error(
+            `Seed invariant violated: legacy topic '${legacy.name}' (${legacy.courseName}) has questions but no canonical mapping`,
+          );
+        }
+        // No questions → stale cruft, e.g. a long-lived DB (a persistent prod
+        // volume) seeded by an OLDER `PREUNI_SYLLABUS` whose topic names have
+        // since been renamed/split ("Ecuaciones" → "Ecuaciones de primer/
+        // segundo grado"). Drop its downstream rows so the final bulk delete
+        // can remove it, instead of throwing and wedging every deploy. Safe:
+        // it carries no question content.
+        await tx.delete(syllabusWeekMaps).where(eq(syllabusWeekMaps.topicId, legacy.id));
+        await tx.delete(examBlueprintRows).where(eq(examBlueprintRows.topicId, legacy.id));
+        await tx.delete(examBlueprintTemplateRows).where(eq(examBlueprintTemplateRows.topicId, legacy.id));
+        await tx.delete(generationJobs).where(eq(generationJobs.topicId, legacy.id));
+        continue;
       }
 
       // `LEGACY_COURSE_ALIASES` courses (Historia del Perú/Universal) map
