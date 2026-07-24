@@ -27,6 +27,7 @@
     "bullmq": "^5.80.9",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.33.0",
+    "express": "^4.22.1",
     "ioredis": "^5.11.1",
     "jsonwebtoken": "^9.0.2",
     "minio": "^8.0.7",
