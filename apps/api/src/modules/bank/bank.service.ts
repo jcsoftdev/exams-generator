@@ -42,6 +42,8 @@ function assertCanManageTenant(role: AuthTokenPayload["role"], targetTenantId: s
 export interface CreateImageQuestionDto {
   readonly courseId: string | undefined;
   readonly topicId: string | undefined;
+  /** Optional fine-grained classification under `topicId` (canonical topic taxonomy). */
+  readonly subtopicId?: string;
   readonly difficulty: string | undefined;
   readonly gradeLevel: string | undefined;
   readonly correctAnswer: string | undefined;
@@ -139,6 +141,18 @@ export class BankService {
       throw new BadRequestException(validation.errors);
     }
 
+    if (dto.subtopicId !== undefined) {
+      const subtopicTopicId = await this.repository.getSubtopicTopicId(dto.subtopicId);
+      if (subtopicTopicId === undefined) {
+        throw new BadRequestException(`subtopicId does not exist: ${dto.subtopicId}`);
+      }
+      if (subtopicTopicId !== dto.topicId) {
+        throw new BadRequestException(
+          `subtopicId ${dto.subtopicId} does not belong to topicId ${dto.topicId}`,
+        );
+      }
+    }
+
     const file = dto.file as Express.Multer.File;
     const storageKey = `bank/questions/${randomUUID()}`;
     await this.storage.put(storageKey, file.buffer, file.mimetype);
@@ -146,6 +160,7 @@ export class BankService {
     return this.repository.createImageQuestion({
       tenantId: user.tenantId,
       topicId: dto.topicId as string,
+      subtopicId: dto.subtopicId,
       difficulty: dto.difficulty as Difficulty,
       gradeLevel: dto.gradeLevel as string,
       correctAnswer: dto.correctAnswer as string,

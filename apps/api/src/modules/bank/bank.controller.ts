@@ -28,6 +28,8 @@ import { clampPagination } from "../../common/pagination.util";
 interface CreateImageQuestionBody {
   readonly courseId?: string;
   readonly topicId?: string;
+  /** Optional fine-grained classification under `topicId` (canonical topic taxonomy). */
+  readonly subtopicId?: string;
   readonly difficulty?: string;
   readonly gradeLevel?: string;
   readonly correctAnswer?: string;
@@ -100,6 +102,7 @@ export class BankController {
     return this.service.createImageQuestion(user, {
       courseId: body.courseId,
       topicId: body.topicId,
+      subtopicId: body.subtopicId,
       difficulty: body.difficulty,
       gradeLevel: body.gradeLevel,
       correctAnswer: body.correctAnswer,

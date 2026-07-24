@@ -1,0 +1,3458 @@
+{
+  "_note": "Canonical two-level topic/subtopic taxonomy (Fase 1 approved). Coarse topics -> syllabus_week_maps; fine subtopics -> questions.subtopic_id. mapsFrom = existing DB topic labels to merge into this canonical entry.",
+  "courses": [
+    {
+      "course": "Aritmética",
+      "topics": [
+        {
+          "slug": "teoria-de-conjuntos",
+          "name": "Teoría de Conjuntos",
+          "mapsFrom": [
+            "Teoría de conjuntos",
+            "Teoría de Conjuntos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "sistemas-de-numeracion",
+          "name": "Sistemas de Numeración",
+          "mapsFrom": [
+            "Numeración",
+            "Sistemas de numeración"
+          ],
+          "subtopics": [
+            {
+              "slug": "conteo-de-numeros",
+              "name": "Conteo de Números",
+              "mapsFrom": [
+                "Conteo de Números"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "operaciones-fundamentales",
+          "name": "Operaciones Fundamentales",
+          "mapsFrom": [
+            "Cuatro Operaciones",
+            "Operaciones fundamentales"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "divisibilidad",
+          "name": "Divisibilidad",
+          "mapsFrom": [
+            "Divisibilidad"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "numeros-primos-mcd-mcm",
+          "name": "Números Primos, MCD y MCM",
+          "mapsFrom": [
+            "Números Primos",
+            "MCD-MCM",
+            "Números primos, MCD y MCM"
+          ],
+          "subtopics": [
+            {
+              "slug": "teoria-de-numeros-avanzada",
+              "name": "Teoría de Números Avanzada",
+              "mapsFrom": [
+                "Teoría de números avanzada (función de Euler, Fermat, Wilson)"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "potenciacion-y-radicacion",
+          "name": "Potenciación y Radicación",
+          "mapsFrom": [
+            "Potenciación y Radicación",
+            "Potenciación y radicación (cuadrados y cubos perfectos)"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "numeros-racionales",
+          "name": "Números Racionales",
+          "mapsFrom": [
+            "Números Racionales",
+            "Números racionales e irracionales"
+          ],
+          "subtopics": [
+            {
+              "slug": "fracciones",
+              "name": "Fracciones",
+              "mapsFrom": [
+                "Fracciones"
+              ],
+              "nQuestions": 3
+            }
+          ]
+        },
+        {
+          "slug": "razones-y-proporciones",
+          "name": "Razones y Proporciones",
+          "mapsFrom": [
+            "Razones y proporciones",
+            "Razones y Proporciones"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "magnitudes-proporcionales",
+          "name": "Magnitudes Proporcionales",
+          "mapsFrom": [
+            "Magnitudes proporcionales",
+            "Proporcionalidad"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "regla-de-tres-y-porcentajes",
+          "name": "Regla de Tres y Porcentajes",
+          "mapsFrom": [
+            "Regla de tres y porcentajes",
+            "Porcentajes",
+            "Porcentajes: aumentos, descuentos y aplicaciones comerciales"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "interes-y-descuento",
+          "name": "Interés y Descuento",
+          "mapsFrom": [
+            "Interés simple y compuesto",
+            "Descuento comercial y racional",
+            "Regla de Interés"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "promedios-y-mezclas",
+          "name": "Promedios y Mezclas",
+          "mapsFrom": [
+            "Promedios",
+            "Mezcla y aleación",
+            "Promedios y Mezclas"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "estadistica-descriptiva",
+          "name": "Estadística Descriptiva",
+          "mapsFrom": [
+            "Estadística: tablas y gráficos de frecuencia",
+            "Medidas de tendencia central"
+          ],
+          "subtopics": [
+            {
+              "slug": "medidas-de-dispersion-combinatoria",
+              "name": "Medidas de Dispersión (y Análisis Combinatorio)",
+              "mapsFrom": [
+                "Medidas de dispersión y análisis combinatorio"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "combinatoria-y-probabilidad",
+          "name": "Combinatoria y Probabilidad",
+          "mapsFrom": [
+            "Combinatoria y probabilidad"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "razonamiento-matematico-aplicado",
+          "name": "Razonamiento Matemático Aplicado (Aritmética)",
+          "mapsFrom": [
+            "Razonamiento matemático aplicado en aritmética (falsa suposición, móviles, edades, secuencias)"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": [
+        {
+          "label": "Medidas de dispersión y análisis combinatorio",
+          "note": "Raw label bundles two distinct concepts (dispersion statistics + combinatorics). Mapped as a subtopic under Estadística Descriptiva for now, but a human should decide whether to split it into two subtopics (one under Estadística Descriptiva, one under Combinatoria y Probabilidad)."
+        },
+        {
+          "label": "Números Primos / MCD-MCM / Números primos, MCD y MCM",
+          "note": "Decided to merge into one canonical topic 'Números Primos, MCD y MCM' since UNI and UNCP both teach these as a single week-block. Flagging because a stricter taxonomy could split MCD-MCM as its own topic if the question bank later needs finer granularity."
+        }
+      ]
+    },
+    {
+      "course": "Álgebra",
+      "topics": [
+        {
+          "slug": "logica-y-conjuntos",
+          "name": "Lógica Proposicional y Teoría de Conjuntos",
+          "mapsFrom": [
+            "Lógica proposicional y teoría de conjuntos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "teoria-de-exponentes-y-logaritmos",
+          "name": "Teoría de Exponentes y Logaritmos",
+          "mapsFrom": [
+            "Teoría de Exponentes y Logaritmos en ℝ"
+          ],
+          "subtopics": [
+            {
+              "slug": "teoria-de-exponentes",
+              "name": "Teoría de Exponentes",
+              "mapsFrom": [
+                "Teoría de exponentes"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "logaritmos",
+              "name": "Logaritmos",
+              "mapsFrom": [
+                "Logaritmos"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "polinomios",
+          "name": "Polinomios",
+          "mapsFrom": [
+            "Polinomios",
+            "Expresiones Algebraicas-Polinomios"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "productos-notables",
+          "name": "Productos Notables",
+          "mapsFrom": [
+            "Productos notables",
+            "Productos Notables-Binomio de Newton"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "division-algebraica",
+          "name": "División Algebraica",
+          "mapsFrom": [
+            "División algebraica",
+            "División de Polinomios-Cocientes Notables"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "factorizacion",
+          "name": "Factorización",
+          "mapsFrom": [
+            "Factorización",
+            "Factorización-MCD y MCM de Polinomios"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "fracciones-y-radicacion-algebraica",
+          "name": "Fracciones y Radicación Algebraica",
+          "mapsFrom": [
+            "Fracciones y Radicación Algebraica"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "teoria-de-ecuaciones",
+          "name": "Teoría de Ecuaciones",
+          "mapsFrom": [
+            "Teoría de Ecuaciones"
+          ],
+          "subtopics": [
+            {
+              "slug": "ecuaciones-de-primer-grado",
+              "name": "Ecuaciones de Primer Grado",
+              "mapsFrom": [
+                "Ecuaciones de primer grado"
+              ],
+              "nQuestions": 0
+            },
+            {
+              "slug": "ecuaciones-de-segundo-grado",
+              "name": "Ecuaciones de Segundo Grado",
+              "mapsFrom": [
+                "Ecuaciones de segundo grado"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "inecuaciones-y-valor-absoluto",
+          "name": "Inecuaciones y Valor Absoluto",
+          "mapsFrom": [
+            "Inecuaciones y valor absoluto",
+            "Desigualdades e Inecuaciones Lineales y Cuadráticas",
+            "Inecuaciones de Grado Superior/Fraccionarias/Irracionales/Valor Absoluto"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "matrices-y-determinantes",
+          "name": "Matrices y Determinantes",
+          "mapsFrom": [
+            "Matrices y determinantes",
+            "Matrices y Determinantes"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "sistemas-de-ecuaciones",
+          "name": "Sistemas de Ecuaciones",
+          "mapsFrom": [
+            "Sistemas de ecuaciones",
+            "Sistema de Ecuaciones e Inecuaciones"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "numeros-complejos",
+          "name": "Números Complejos",
+          "mapsFrom": [
+            "Números complejos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "funciones",
+          "name": "Funciones",
+          "mapsFrom": [
+            "Funciones",
+            "Funciones I",
+            "Funciones II",
+            "Función inversa y teorema de Cardano-Viette"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "progresiones-y-limites",
+          "name": "Progresiones y Límites de Sucesiones",
+          "mapsFrom": [
+            "Progresiones",
+            "Límites de sucesiones y series notables"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "programacion-lineal",
+          "name": "Programación Lineal",
+          "mapsFrom": [
+            "Programación lineal"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "razonamiento-matematico-aplicado-algebra",
+          "name": "Razonamiento Matemático Aplicado (Álgebra)",
+          "mapsFrom": [
+            "Razonamiento matemático aplicado en álgebra (juegos lógicos: ordenamientos, parentescos, certezas)"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": [
+        {
+          "label": "Función inversa y teorema de Cardano-Viette",
+          "note": "Mapped under 'Funciones' because it's listed alongside functions in the UNI syllabus, but Cardano-Viette (root/coefficient relations of polynomial equations) arguably belongs under 'Teoría de Ecuaciones'. Human call needed on which parent fits better for exam-generation purposes."
+        },
+        {
+          "label": "16 topics total for Álgebra",
+          "note": "At the upper bound of the 10-16 rubric target; if trimming is desired, 'Teoría de Exponentes y Logaritmos' could be split into two separate coarse topics instead of topic+subtopics."
+        }
+      ]
+    },
+    {
+      "course": "Geometría",
+      "topics": [
+        {
+          "slug": "segmentos-y-angulos",
+          "name": "Segmentos y Ángulos",
+          "mapsFrom": [
+            "Segmentos y ángulos",
+            "Segmentos y Ángulos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "triangulos",
+          "name": "Triángulos",
+          "mapsFrom": [
+            "Triángulos",
+            "Triángulos I"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "congruencia-y-semejanza",
+          "name": "Congruencia y Semejanza",
+          "mapsFrom": [
+            "Congruencia y semejanza",
+            "Triángulos II-Congruencia"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "proporcionalidad-y-relaciones-metricas",
+          "name": "Proporcionalidad y Relaciones Métricas",
+          "mapsFrom": [
+            "Proporcionalidad y relaciones métricas",
+            "Proporcionalidad de Segmentos y Semejanza",
+            "Relaciones Métricas en Circunferencia y Triángulo Rectángulo"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "poligonos-y-cuadrilateros",
+          "name": "Polígonos y Cuadriláteros",
+          "mapsFrom": [
+            "Polígonos y cuadriláteros",
+            "Polígonos y Cuadriláteros"
+          ],
+          "subtopics": [
+            {
+              "slug": "relaciones-metricas-en-cuadrilateros",
+              "name": "Relaciones Métricas en Oblicuángulos y Cuadriláteros",
+              "mapsFrom": [
+                "Relaciones Métricas en Oblicuángulos y Cuadriláteros"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "circunferencia",
+          "name": "Circunferencia",
+          "mapsFrom": [
+            "Circunferencia",
+            "Circunferencias"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "areas-de-regiones-planas",
+          "name": "Áreas de Regiones Planas",
+          "mapsFrom": [
+            "Áreas de regiones planas",
+            "Áreas de Regiones Triangulares",
+            "Áreas de Regiones Cuadrangulares y Circulares"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "isoperimetria-numero-aureo-simetria",
+          "name": "Isoperimetría, Número Áureo y Simetría",
+          "mapsFrom": [
+            "Isoperimetría, número áureo y simetría"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "geometria-del-espacio",
+          "name": "Geometría del Espacio (Poliedros)",
+          "mapsFrom": [
+            "Geometría del espacio (poliedros)",
+            "Poliedros/Prismas/Pirámides"
+          ],
+          "subtopics": [
+            {
+              "slug": "piramides-y-conos",
+              "name": "Pirámides y Conos",
+              "mapsFrom": [
+                "Pirámides y Conos"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "cuerpos-redondos",
+          "name": "Cuerpos Redondos",
+          "mapsFrom": [
+            "Cuerpos redondos",
+            "Cilindros-Esferas-Pappus-Guldin"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "razonamiento-matematico-aplicado-geometria",
+          "name": "Razonamiento Matemático Aplicado (Geometría)",
+          "mapsFrom": [],
+          "subtopics": [
+            {
+              "slug": "perimetros-de-figuras",
+              "name": "Perímetros de Figuras",
+              "mapsFrom": [
+                "Razonamiento matemático aplicado en geometría (perímetros de figuras)"
+              ],
+              "nQuestions": 0
+            },
+            {
+              "slug": "analisis-y-series-de-figuras",
+              "name": "Análisis y Series de Figuras",
+              "mapsFrom": [
+                "Razonamiento matemático aplicado en geometría (análisis y series de figuras)"
+              ],
+              "nQuestions": 0
+            },
+            {
+              "slug": "distribucion-de-figuras",
+              "name": "Distribución de Figuras",
+              "mapsFrom": [
+                "Razonamiento matemático aplicado en geometría (distribución de figuras)"
+              ],
+              "nQuestions": 0
+            },
+            {
+              "slug": "conteo-de-rutas-y-cubos",
+              "name": "Conteo de Rutas y Cubos",
+              "mapsFrom": [
+                "Razonamiento matemático aplicado en geometría (conteo de rutas y cubos)"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        }
+      ],
+      "ambiguous": [
+        {
+          "label": "Geometría analítica",
+          "note": "Raw label (0 questions) exists under the Geometría course, but analytic geometry (la recta, cónicas) is consistently taught under Trigonometría in both the UNI and UNCP syllabi. This looks like a stray/misclassified topic. Human should decide: drop it, or repoint it to the Trigonometría course's 'geometria-analitica-la-recta' / 'geometria-analitica-conicas' topics (would require a cross-course topic move, not a same-course remap)."
+        }
+      ]
+    },
+    {
+      "course": "Trigonometría",
+      "topics": [
+        {
+          "slug": "angulos-y-sistemas-de-medicion-angular",
+          "name": "Ángulos y Sistemas de Medición Angular",
+          "mapsFrom": [
+            "Ángulos y sistemas de medición angular",
+            "Ángulo Trigonométrico"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "razones-trigonometricas",
+          "name": "Razones Trigonométricas",
+          "mapsFrom": [
+            "Razones trigonométricas",
+            "Razones Trigonométricas de Ángulos Agudos — Resolución de Triángulos Rectángulos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "resolucion-de-triangulos",
+          "name": "Resolución de Triángulos",
+          "mapsFrom": [
+            "Resolución de triángulos",
+            "Triángulos Oblicuángulos — Resolución",
+            "Área de regiones triangulares (fórmula de Herón)"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "razones-trigonometricas-de-cualquier-angulo",
+          "name": "Razones Trigonométricas de Cualquier Ángulo",
+          "mapsFrom": [
+            "Razones trigonométricas de cualquier ángulo (posición normal)",
+            "Razones Trigonométricas de Ángulos de Cualquier Magnitud — Reducción al Primer Cuadrante"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "circunferencia-trigonometrica",
+          "name": "Circunferencia Trigonométrica",
+          "mapsFrom": [
+            "Circunferencia trigonométrica",
+            "Circunferencia Trigonométrica — Líneas Trigonométricas"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "identidades-trigonometricas",
+          "name": "Identidades Trigonométricas",
+          "mapsFrom": [
+            "Identidades trigonométricas",
+            "Identidades Trigonométricas de Arco Simple",
+            "Identidades Trigonométricas de Arcos Compuestos",
+            "Transformación de Sumas a Productos — Transformación de Productos a Sumas"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "ecuaciones-e-inecuaciones-trigonometricas",
+          "name": "Ecuaciones e Inecuaciones Trigonométricas",
+          "mapsFrom": [
+            "Ecuaciones trigonométricas",
+            "Ecuaciones Trigonométricas",
+            "Inecuaciones Trigonométricas"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "funciones-trigonometricas",
+          "name": "Funciones Trigonométricas",
+          "mapsFrom": [
+            "Funciones trigonométricas",
+            "Funciones Trigonométricas — Dominio y Rango",
+            "Funciones Trigonométricas — Gráficas y Transformaciones"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "funciones-trigonometricas-inversas",
+          "name": "Funciones Trigonométricas Inversas",
+          "mapsFrom": [
+            "Funciones trigonométricas inversas y generalizadas"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "geometria-analitica-la-recta",
+          "name": "Geometría Analítica: La Recta",
+          "mapsFrom": [
+            "Geometría analítica: la recta",
+            "Introducción a la Geometría Analítica"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "geometria-analitica-conicas",
+          "name": "Geometría Analítica: Cónicas",
+          "mapsFrom": [],
+          "subtopics": [
+            {
+              "slug": "circunferencia-y-parabola",
+              "name": "Circunferencia y Parábola",
+              "mapsFrom": [
+                "Geometría analítica: circunferencia y parábola"
+              ],
+              "nQuestions": 0
+            },
+            {
+              "slug": "elipse-e-hiperbola",
+              "name": "Elipse e Hipérbola",
+              "mapsFrom": [
+                "Geometría analítica: elipse e hipérbola"
+              ],
+              "nQuestions": 0
+            },
+            {
+              "slug": "ecuacion-general-y-coordenadas-polares",
+              "name": "Ecuación General de Segundo Grado y Coordenadas Polares",
+              "mapsFrom": [
+                "Ecuación general de segundo grado y coordenadas polares"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        }
+      ],
+      "ambiguous": [
+        {
+          "label": "Área de regiones triangulares (fórmula de Herón)",
+          "note": "Mapped under 'Resolución de Triángulos' since Herón's formula is used there, but it could also be seen as a standalone applied-areas topic. Low-impact (0 questions)."
+        }
+      ]
+    },
+    {
+      "course": "Estadística y Probabilidades",
+      "topics": [
+        {
+          "slug": "analisis-combinatorio",
+          "name": "Análisis Combinatorio",
+          "mapsFrom": [
+            "Introducción al Análisis Combinatorio"
+          ],
+          "subtopics": [
+            {
+              "slug": "permutaciones",
+              "name": "Permutación Lineal, Circular y con Elementos Repetidos",
+              "mapsFrom": [
+                "Permutación Lineal, Circular y con Elementos Repetidos"
+              ],
+              "nQuestions": 0
+            },
+            {
+              "slug": "variaciones-y-combinaciones",
+              "name": "Variación y Combinación",
+              "mapsFrom": [
+                "Variación y Combinación"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "probabilidades",
+          "name": "Probabilidades",
+          "mapsFrom": [
+            "Introducción a las Probabilidades"
+          ],
+          "subtopics": [
+            {
+              "slug": "eventos-excluyentes-independientes-compuestos",
+              "name": "Eventos Mutuamente Excluyentes, Independientes y Compuestos",
+              "mapsFrom": [
+                "Eventos Mutuamente Excluyentes, Independientes y Compuestos"
+              ],
+              "nQuestions": 0
+            },
+            {
+              "slug": "eventos-contrarios-y-esperanza-matematica",
+              "name": "Eventos Contrarios y Esperanza Matemática",
+              "mapsFrom": [
+                "Eventos Contrario — Esperanza Matemática"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "estadistica-descriptiva-distribucion-de-frecuencias",
+          "name": "Estadística Descriptiva: Distribución de Frecuencias",
+          "mapsFrom": [
+            "Introducción a la Estadística — Distribución de Frecuencias"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "graficos-estadisticos",
+          "name": "Gráficos Estadísticos",
+          "mapsFrom": [
+            "Gráficos Estadísticos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "medidas-de-tendencia-central",
+          "name": "Medidas de Tendencia Central",
+          "mapsFrom": [
+            "Medidas de Tendencia Central I — Media, Mediana, Moda"
+          ],
+          "subtopics": [
+            {
+              "slug": "cuantiles",
+              "name": "Cuantiles",
+              "mapsFrom": [
+                "Medidas de Tendencia Central II — Cuantiles"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "medidas-de-dispersion",
+          "name": "Medidas de Dispersión",
+          "mapsFrom": [
+            "Medidas de Dispersión"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "medidas-de-posicion",
+          "name": "Medidas de Posición",
+          "mapsFrom": [
+            "Medidas de Posición"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": [
+        {
+          "label": "Course only has 7 canonical topics (below the 10-16 target)",
+          "note": "Only UNCP provides a standalone 'Estadística y Probabilidades' course/syllabus with 12 weeks; UNI folds statistics/probability content into Aritmética instead (see 'combinatoria-y-probabilidad' and 'estadistica-descriptiva' under Aritmética). If the two universities' course catalogs are meant to converge, a human should decide whether to also pull UNI's Aritmética-embedded stats/combinatorics topics into this course's taxonomy, which would raise the topic count toward the target range."
+        }
+      ]
+    },
+    {
+      "course": "Razonamiento Matemático",
+      "topics": [
+        {
+          "slug": "razonamiento-logico",
+          "name": "Razonamiento Lógico",
+          "mapsFrom": [
+            "Razonamiento lógico",
+            "Razonamiento Lógico Recreativo"
+          ],
+          "subtopics": [
+            {
+              "slug": "logica-proposicional-y-de-clases",
+              "name": "Lógica Proposicional y de Clases",
+              "mapsFrom": [
+                "Lógica Proposicional y de Clases"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "razonamiento-logico-formal",
+          "name": "Razonamiento Lógico Formal",
+          "mapsFrom": [
+            "Razonamiento Lógico Formal"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "razonamiento-analitico",
+          "name": "Razonamiento Analítico",
+          "mapsFrom": [
+            "Razonamiento Analítico",
+            "Certezas y probabilidades"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "razonamiento-inductivo-deductivo",
+          "name": "Razonamiento Inductivo-Deductivo",
+          "mapsFrom": [
+            "Razonamiento Inductivo-Deductivo"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "operaciones-y-operadores-matematicos",
+          "name": "Operaciones y Operadores Matemáticos",
+          "mapsFrom": [
+            "Operaciones Matemáticas",
+            "Operadores matemáticos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "planteo-de-ecuaciones",
+          "name": "Planteo de Ecuaciones",
+          "mapsFrom": [
+            "Planteo de ecuaciones",
+            "Planteo de Ecuaciones — Problemas de Edades"
+          ],
+          "subtopics": [
+            {
+              "slug": "edades",
+              "name": "Edades",
+              "mapsFrom": [
+                "Edades"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "problemas-con-fracciones-y-porcentajes",
+          "name": "Problemas con Fracciones y Porcentajes",
+          "mapsFrom": [
+            "Problemas con Fracciones",
+            "Problemas con Porcentajes"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "cronometria-y-moviles",
+          "name": "Cronometría y Móviles",
+          "mapsFrom": [
+            "Cronometría y Calendarios",
+            "Móviles y cronometría"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "sucesiones-series-y-analogias-numericas",
+          "name": "Sucesiones, Series y Analogías Numéricas",
+          "mapsFrom": [
+            "Sucesiones y series",
+            "Sucesiones, Series y Sumatorias",
+            "Analogías y distribuciones numéricas"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "conteo-de-figuras",
+          "name": "Conteo de Figuras",
+          "mapsFrom": [
+            "Conteo de figuras",
+            "Conteo de Figuras — Recorridos Eulerianos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "psicotecnico",
+          "name": "Psicotécnico",
+          "mapsFrom": [
+            "Psicotécnico"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": [
+        {
+          "label": "Certezas y probabilidades",
+          "note": "Merged into 'Razonamiento Analítico' (deduction/certainty puzzles), but conceptually overlaps with the Estadística y Probabilidades course's 'probabilidades' topic. Since topics are course-scoped, kept in Razonamiento Matemático; human should confirm this is the intended home rather than a duplicate concept."
+        },
+        {
+          "label": "Cronometría y Calendarios vs Móviles y cronometría",
+          "note": "Merged into one 'Cronometría y Móviles' topic; these are two distinct problem types (calendar/clock arithmetic vs. relative-motion word problems) that historically shared the 'cronometría' framing. A human could choose to split them into two topics instead."
+        }
+      ]
+    },
+    {
+      "course": "Comunicación",
+      "topics": [
+        {
+          "slug": "la-comunicacion",
+          "name": "La comunicación",
+          "mapsFrom": [
+            "La Comunicación",
+            "Comunicación y sus elementos",
+            "Funciones del lenguaje"
+          ],
+          "subtopics": [
+            {
+              "slug": "concepto-y-elementos",
+              "name": "Concepto y elementos",
+              "mapsFrom": [
+                "teoría de la comunicación - concepto y elementos"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "elementos-receptor",
+              "name": "Elementos de la comunicación (receptor)",
+              "mapsFrom": [
+                "teoría de la comunicación - elementos de la comunicación (receptor)"
+              ],
+              "nQuestions": 2
+            },
+            {
+              "slug": "etimologia",
+              "name": "Etimología del término comunicación",
+              "mapsFrom": [
+                "teoría de la comunicación - etimología del término comunicación"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "funciones-del-lenguaje",
+              "name": "Funciones del lenguaje",
+              "mapsFrom": [
+                "teoría de la comunicación - funciones del lenguaje"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "lengua-lenguaje-habla",
+              "name": "Lengua, lenguaje y habla",
+              "mapsFrom": [
+                "teoría de la comunicación - lengua, lenguaje y habla"
+              ],
+              "nQuestions": 1
+            }
+          ]
+        },
+        {
+          "slug": "linguistica",
+          "name": "Lingüística",
+          "mapsFrom": [
+            "Lingüística"
+          ],
+          "subtopics": [
+            {
+              "slug": "ramas-de-la-linguistica",
+              "name": "Ramas de la lingüística",
+              "mapsFrom": [
+                "lingüística - ramas de la lingüística"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "el-fonema",
+              "name": "El fonema (unidades mínimas del lenguaje)",
+              "mapsFrom": [
+                "lingüística - el fonema (unidades mínimas del lenguaje)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "caracteristicas-de-la-lengua",
+              "name": "Características de la lengua",
+              "mapsFrom": [
+                "lingüística - características de la lengua"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "articulacion-del-lenguaje",
+              "name": "Articulación del lenguaje (doble articulación)",
+              "mapsFrom": [
+                "lingüística - articulación del lenguaje (doble articulación)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "niveles-de-la-lengua",
+              "name": "Niveles de la lengua (fonética, morfología, sintaxis, semántica)",
+              "mapsFrom": [
+                "gramática - niveles de la lengua (fonética, morfología, sintaxis, semántica)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "diptongo-triptongo-hiato",
+              "name": "Diptongo, triptongo e hiato",
+              "mapsFrom": [
+                "fonética - diptongo, triptongo e hiato"
+              ],
+              "nQuestions": 1
+            }
+          ]
+        },
+        {
+          "slug": "ortografia",
+          "name": "Ortografía",
+          "mapsFrom": [
+            "Ortografía I",
+            "Ortografía II",
+            "Uso de grafías (ortografía literal)",
+            "Signos de puntuación"
+          ],
+          "subtopics": [
+            {
+              "slug": "uso-de-mayusculas",
+              "name": "Uso de mayúsculas",
+              "mapsFrom": [
+                "ortografía - uso de mayúsculas"
+              ],
+              "nQuestions": 3
+            },
+            {
+              "slug": "uso-de-dos-puntos",
+              "name": "Uso de los dos puntos",
+              "mapsFrom": [
+                "ortografía - uso de los dos puntos"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "uso-de-grafias",
+              "name": "Uso de grafías (ortografía literal)",
+              "mapsFrom": [
+                "ortografía - uso de grafías (ortografía literal)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "signos-de-puntuacion-y-entonacion",
+              "name": "Signos de puntuación y entonación",
+              "mapsFrom": [
+                "ortografía - signos de puntuación y entonación"
+              ],
+              "nQuestions": 2
+            },
+            {
+              "slug": "uso-del-punto-y-coma",
+              "name": "Uso del punto y coma",
+              "mapsFrom": [
+                "ortografía - signos de puntuación (uso del punto y coma)"
+              ],
+              "nQuestions": 1
+            }
+          ]
+        },
+        {
+          "slug": "acentuacion",
+          "name": "Acentuación",
+          "mapsFrom": [
+            "Acentuación y tildación"
+          ],
+          "subtopics": [
+            {
+              "slug": "hiato",
+              "name": "Hiato",
+              "mapsFrom": [
+                "acentuación - hiato"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "conceptos-generales",
+              "name": "Conceptos generales (acento, tilde, sílaba tónica y átona)",
+              "mapsFrom": [
+                "acentuación - conceptos generales (acento, tilde, sílaba tónica y átona)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "clasificacion-tildacion",
+              "name": "Clasificación de palabras según su acento (tildación)",
+              "mapsFrom": [
+                "acentuación - clasificación de palabras según su acento (tildación)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "clasificacion-agudas-graves-esdrujulas",
+              "name": "Clasificación de palabras según su acento (agudas, graves, esdrújulas, sobresdrújulas)",
+              "mapsFrom": [
+                "acentuación - clasificación de palabras según su acento (agudas, graves, esdrújulas, sobresdrújulas)"
+              ],
+              "nQuestions": 3
+            }
+          ]
+        },
+        {
+          "slug": "morfologia",
+          "name": "Morfología",
+          "mapsFrom": [
+            "Morfología I",
+            "Morfología II",
+            "Morfología III",
+            "Categorías gramaticales"
+          ],
+          "subtopics": [
+            {
+              "slug": "accidentes-del-verbo",
+              "name": "Morfología verbal (accidentes del verbo)",
+              "mapsFrom": [
+                "morfología verbal (accidentes del verbo)"
+              ],
+              "nQuestions": 2
+            },
+            {
+              "slug": "formacion-prefijos-sufijos",
+              "name": "Formación de palabras (prefijos y sufijos)",
+              "mapsFrom": [
+                "morfología - formación de palabras (prefijos y sufijos)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "formacion-composicion-derivacion",
+              "name": "Formación de palabras (composición y derivación)",
+              "mapsFrom": [
+                "morfología - formación de palabras (composición y derivación)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "clasificacion-sustantivo-individual-colectivo",
+              "name": "Clasificación del sustantivo (individual y colectivo)",
+              "mapsFrom": [
+                "morfología - clasificación del sustantivo (individual y colectivo)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "clases-de-verbo",
+              "name": "Clases de verbo (transitivo/intransitivo)",
+              "mapsFrom": [
+                "morfología - clases de verbo (transitivo/intransitivo)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "clases-de-palabras-sustantivo",
+              "name": "Clases de palabras: sustantivo",
+              "mapsFrom": [
+                "morfología - clases de palabras (sustantivo)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "clases-de-palabras-pronombre",
+              "name": "Clases de palabras: pronombre",
+              "mapsFrom": [
+                "morfología - clases de palabras (pronombre)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "clases-de-palabras-adverbio",
+              "name": "Clases de palabras: adverbio",
+              "mapsFrom": [
+                "morfología - clases de palabras (adverbio)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "clases-de-palabras-adjetivo",
+              "name": "Clases de palabras: adjetivo",
+              "mapsFrom": [
+                "morfología - clases de palabras (adjetivo)"
+              ],
+              "nQuestions": 1
+            }
+          ]
+        },
+        {
+          "slug": "sintaxis",
+          "name": "Sintaxis",
+          "mapsFrom": [
+            "Sintaxis I",
+            "Sintaxis II",
+            "Sujeto y predicado",
+            "Clases de oraciones"
+          ],
+          "subtopics": [
+            {
+              "slug": "la-oracion-concepto-y-estructura",
+              "name": "La oración (concepto y estructura)",
+              "mapsFrom": [
+                "sintaxis - la oración (concepto y estructura)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "funciones-del-sustantivo",
+              "name": "Funciones del sustantivo en la oración",
+              "mapsFrom": [
+                "sintaxis - funciones del sustantivo en la oración"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "estructura-del-sujeto",
+              "name": "Estructura del sujeto (núcleo y modificadores)",
+              "mapsFrom": [
+                "sintaxis - estructura del sujeto (núcleo y modificadores)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "sujeto-tacito",
+              "name": "El sujeto tácito",
+              "mapsFrom": [
+                "sintaxis - el sujeto tácito"
+              ],
+              "nQuestions": 2
+            },
+            {
+              "slug": "sujeto-de-la-oracion",
+              "name": "El sujeto de la oración",
+              "mapsFrom": [
+                "sintaxis - el sujeto de la oración"
+              ],
+              "nQuestions": 2
+            },
+            {
+              "slug": "sintagma-verbal-predicado",
+              "name": "El sintagma verbal / predicado",
+              "mapsFrom": [
+                "sintaxis - el sintagma verbal / predicado"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "predicado-nucleo",
+              "name": "El predicado (núcleo)",
+              "mapsFrom": [
+                "sintaxis - el predicado (núcleo)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "complemento-agente",
+              "name": "Complementos oracionales (complemento agente)",
+              "mapsFrom": [
+                "sintaxis - complementos oracionales (complemento agente)"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "clases-de-sujeto",
+              "name": "Clases de sujeto",
+              "mapsFrom": [
+                "sintaxis - clases de sujeto"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "clases-de-oraciones-actitud-del-hablante",
+              "name": "Clases de oraciones según la actitud del hablante",
+              "mapsFrom": [
+                "clases de oraciones según la actitud del hablante"
+              ],
+              "nQuestions": 2
+            }
+          ]
+        },
+        {
+          "slug": "semantica",
+          "name": "Semántica",
+          "mapsFrom": [],
+          "subtopics": [
+            {
+              "slug": "concepto-y-niveles-de-la-lengua",
+              "name": "Concepto y niveles de la lengua",
+              "mapsFrom": [
+                "semántica - concepto y niveles de la lengua"
+              ],
+              "nQuestions": 1
+            }
+          ]
+        },
+        {
+          "slug": "literatura",
+          "name": "Literatura",
+          "mapsFrom": [
+            "Preceptiva Literaria",
+            "Literatura Universal y Española I",
+            "Literatura Universal y Española II",
+            "Literatura universal",
+            "Literatura peruana",
+            "Literatura Hispanoamericana y Peruana",
+            "Géneros literarios",
+            "Figuras literarias"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "comprension-y-produccion-textual",
+          "name": "Comprensión y producción textual",
+          "mapsFrom": [
+            "Tipos de texto (narrativo, expositivo, argumentativo)",
+            "Producción de textos",
+            "Comprensión de textos",
+            "Plan de redacción",
+            "Conectores lógicos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "vocabulario-y-relaciones-verbales",
+          "name": "Vocabulario y relaciones verbales",
+          "mapsFrom": [
+            "Sinónimos y antónimos",
+            "Series verbales",
+            "Analogías verbales"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": [
+        {
+          "label": "semántica - concepto y niveles de la lengua",
+          "note": "No coarse 'Semántica' week-topic exists for the Comunicación course (unlike the Lenguaje course, which has one). Synthesized a 'semantica' topic solely to host this question-bearing subtopic instead of dropping it or bolting it onto an unrelated topic."
+        },
+        {
+          "label": "Sinónimos y antónimos / Series verbales / Analogías verbales",
+          "note": "These read as Razonamiento Verbal-style labels that leaked into the Comunicación catalog (0 questions each). Kept as their own topic rather than silently merging into Razonamiento Verbal (different course_id) or into vocabulario/lingüística topics — flag for a follow-up decision on whether they should be migrated to the RV course entirely."
+        },
+        {
+          "label": "gramática - niveles de la lengua (fonética, morfología, sintaxis, semántica)",
+          "note": "Placed under 'linguistica' as a framework-level subtopic since it spans all the other topics (morfología, sintaxis, semántica) rather than fitting one exclusively."
+        }
+      ]
+    },
+    {
+      "course": "Lenguaje",
+      "topics": [
+        {
+          "slug": "la-comunicacion",
+          "name": "La comunicación",
+          "mapsFrom": [
+            "La comunicación"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "uso-de-grafias",
+          "name": "Uso de grafías",
+          "mapsFrom": [
+            "Uso de grafías"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "acentuacion",
+          "name": "Acentuación",
+          "mapsFrom": [
+            "Acentuación"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "categorias-gramaticales",
+          "name": "Categorías gramaticales",
+          "mapsFrom": [
+            "Categorías gramaticales"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "morfologia",
+          "name": "Morfología",
+          "mapsFrom": [
+            "Morfología"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "fonetica-y-fonologia",
+          "name": "Fonética y fonología",
+          "mapsFrom": [
+            "Fonética y fonología"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "semantica",
+          "name": "Semántica",
+          "mapsFrom": [
+            "Semántica"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "sintaxis",
+          "name": "Sintaxis",
+          "mapsFrom": [
+            "Sintaxis"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "signos-de-puntuacion",
+          "name": "Signos de puntuación",
+          "mapsFrom": [
+            "Signos de puntuación"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "normativa",
+          "name": "Normativa (dequeísmo y queísmo)",
+          "mapsFrom": [
+            "Normativa (dequeísmo y queísmo)"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "course": "Literatura",
+      "topics": [
+        {
+          "slug": "movimientos-y-vanguardias-literarias",
+          "name": "Movimientos y vanguardias literarias",
+          "mapsFrom": [
+            "Movimientos y vanguardias literarias"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "literatura-universal",
+          "name": "Literatura universal",
+          "mapsFrom": [
+            "Literatura universal"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "literatura-peruana",
+          "name": "Literatura peruana",
+          "mapsFrom": [
+            "Literatura peruana"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "literatura-hispanoamericana",
+          "name": "Literatura hispanoamericana",
+          "mapsFrom": [
+            "Literatura hispanoamericana"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "literatura-espanola",
+          "name": "Literatura española",
+          "mapsFrom": [
+            "Literatura española"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "generos-y-especies-literarias",
+          "name": "Géneros y especies literarias",
+          "mapsFrom": [
+            "Géneros y especies literarias"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "figuras-literarias",
+          "name": "Figuras literarias",
+          "mapsFrom": [
+            "Figuras literarias"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "course": "Razonamiento Verbal",
+      "topics": [
+        {
+          "slug": "definiciones",
+          "name": "Definiciones: género próximo y diferencia específica",
+          "mapsFrom": [
+            "Definiciones: género próximo y diferencia específica"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "analogias-verbales",
+          "name": "Analogías verbales",
+          "mapsFrom": [
+            "Analogías verbales"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "sinonimos-y-antonimos",
+          "name": "Sinónimos y antónimos",
+          "mapsFrom": [
+            "Sinónimos y antónimos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "series-verbales",
+          "name": "Series verbales",
+          "mapsFrom": [
+            "Series verbales"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "relaciones-lexico-semanticas",
+          "name": "Relaciones léxico-semánticas",
+          "mapsFrom": [
+            "Relaciones Léxico Semánticas"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "conectores-logicos",
+          "name": "Conectores lógicos",
+          "mapsFrom": [
+            "Conectores lógicos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "marcadores-textuales",
+          "name": "Marcadores textuales",
+          "mapsFrom": [
+            "Marcadores Textuales"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "eliminacion-de-oraciones",
+          "name": "Eliminación de oraciones",
+          "mapsFrom": [
+            "Eliminación de oraciones"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "termino-excluido",
+          "name": "Término excluido",
+          "mapsFrom": [
+            "Término excluido",
+            "Oraciones Eliminadas - Término Excluido"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "plan-de-redaccion",
+          "name": "Plan de redacción",
+          "mapsFrom": [
+            "Plan de redacción"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "oraciones-incompletas",
+          "name": "Oraciones incompletas",
+          "mapsFrom": [
+            "Oraciones Incompletas",
+            "Oraciones incompletas"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "referencias-textuales",
+          "name": "Referencias textuales",
+          "mapsFrom": [
+            "Referencias Textuales"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "coherencia-y-cohesion-textual",
+          "name": "Coherencia y cohesión textual",
+          "mapsFrom": [
+            "Coherencia y cohesión textual"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "comprension-de-lectura",
+          "name": "Comprensión de lectura",
+          "mapsFrom": [
+            "Comprensión de lectura"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "estrategias-de-lectura",
+          "name": "Estrategias de lectura",
+          "mapsFrom": [
+            "Estrategias de Lectura I",
+            "Estrategias Después de la Lectura"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "macroestructura-textual",
+          "name": "Macroestructura textual",
+          "mapsFrom": [
+            "Macroestructura Textual",
+            "Análisis de Imágenes - Macroestructura"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "aptitud-comunicativa",
+          "name": "Aptitud comunicativa",
+          "mapsFrom": [
+            "Aptitud Comunicativa"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "textos-periodisticos",
+          "name": "Textos periodísticos",
+          "mapsFrom": [
+            "Textos Periodísticos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "textos-argumentativos",
+          "name": "Textos argumentativos",
+          "mapsFrom": [
+            "Textos Argumentativos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "textos-narrativos-descriptivos-expresion-escrita",
+          "name": "Textos narrativos y descriptivos / expresión escrita",
+          "mapsFrom": [
+            "Textos Narrativos y Descriptivos / Expresión Escrita I y II"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": [
+        {
+          "label": "Oraciones Incompletas / Oraciones incompletas",
+          "note": "Case-only duplicate rows in the DB (both 0 questions) — merged into a single canonical topic; a cleanup pass should collapse the duplicate DB rows."
+        },
+        {
+          "label": "Oraciones Eliminadas - Término Excluido",
+          "note": "UNCP bundles 'eliminación de oraciones' (removing an intruding sentence) and 'término excluido' (odd-one-out word) into one week; UNI's syllabus treats them as separate skills across different weeks. Mapped this bundled label to 'termino-excluido' rather than splitting it, since it cannot be assigned to two topics at once."
+        },
+        {
+          "label": "Marcadores Textuales vs Conectores lógicos",
+          "note": "Conceptually overlapping (connectors/textual markers) but sourced from different syllabi as distinct weeks — kept separate pending a decision on whether to merge."
+        },
+        {
+          "label": "Relaciones Léxico Semánticas vs Sinónimos y antónimos / Analogías verbales / Series verbales",
+          "note": "UNCP treats 'Relaciones Léxico Semánticas' as one umbrella week covering synonyms/antonyms/analogies, while UNI splits them into separate weekly topics. Kept all as separate topics (no data at stake, all 0 questions) rather than guessing a merge."
+        }
+      ]
+    },
+    {
+      "course": "Inglés",
+      "topics": [
+        {
+          "slug": "aptitud-comunicativa-ingles",
+          "name": "Aptitud comunicativa (inglés)",
+          "mapsFrom": [
+            "Aptitud Comunicativa Inglés"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "verb-to-be-present",
+          "name": "Verb to be (present) / greetings & wh-questions",
+          "mapsFrom": [
+            "The Verb To Be (Present)",
+            "Greetings, verb to be and wh-questions"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "singular-plural-nouns",
+          "name": "Singular and plural nouns",
+          "mapsFrom": [
+            "Singular and Plural Nouns"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "countable-uncountable-nouns",
+          "name": "Countable and uncountable nouns",
+          "mapsFrom": [
+            "Count and Non Count Nouns",
+            "Countable and uncountable nouns"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "present-simple",
+          "name": "Simple present tense",
+          "mapsFrom": [
+            "Simple present tense",
+            "Simple Present"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "present-continuous",
+          "name": "Present continuous",
+          "mapsFrom": [
+            "Present Continuous"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "present-and-past-progressive",
+          "name": "Present and past progressive",
+          "mapsFrom": [
+            "Present and past progressive"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "past-continuous",
+          "name": "Past continuous",
+          "mapsFrom": [
+            "Past Continuous"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "past-simple",
+          "name": "Simple past tense",
+          "mapsFrom": [
+            "Simple past: verb to be",
+            "Simple Past Tense",
+            "Simple past: regular verbs",
+            "Simple past: irregular verbs"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "present-perfect",
+          "name": "Present perfect tense",
+          "mapsFrom": [
+            "Present perfect tense",
+            "Present Perfect"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "past-perfect",
+          "name": "Past perfect tense",
+          "mapsFrom": [
+            "Past perfect tense",
+            "Past Perfect / Conditionals"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "future",
+          "name": "Future: will / going to",
+          "mapsFrom": [
+            "Future: going to",
+            "Future Time 'Will' and 'Be Going To'"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "modal-verbs",
+          "name": "Modal verbs",
+          "mapsFrom": [
+            "Modal verbs: can/can't",
+            "Modal verbs: must, should, have to",
+            "Modal Verbs"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "infinitive-and-gerund",
+          "name": "Infinitive and gerund",
+          "mapsFrom": [
+            "Infinitive and gerund"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "comparatives-and-superlatives",
+          "name": "Comparatives and superlatives",
+          "mapsFrom": [
+            "Comparatives and superlatives",
+            "Comparative and Superlative"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "conditionals",
+          "name": "Conditionals (zero, first, second, third)",
+          "mapsFrom": [
+            "Zero and first conditional",
+            "Second and third conditional"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": [
+        {
+          "label": "Past Perfect / Conditionals",
+          "note": "UNCP bundles past perfect together with conditionals in one week; mapped to 'past-perfect' since 'conditionals' is already populated by UNI's dedicated zero/first/second/third-conditional weeks — flag in case this bundling should instead split across both topics."
+        },
+        {
+          "label": "Greetings, verb to be and wh-questions",
+          "note": "Merged into 'verb-to-be-present' alongside UNCP's 'The Verb To Be (Present)'; the wh-questions component has no dedicated topic elsewhere, so it's absorbed here rather than dropped."
+        }
+      ]
+    },
+    {
+      "course": "Física",
+      "topics": [
+        {
+          "slug": "analisis-dimensional-y-vectorial",
+          "name": "Análisis dimensional y vectorial",
+          "mapsFrom": [
+            "Análisis dimensional y vectores",
+            "Análisis Vectorial"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "cinematica",
+          "name": "Cinemática",
+          "mapsFrom": [
+            "Cinemática",
+            "Cinemática I",
+            "Cinemática II"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "estatica",
+          "name": "Estática",
+          "mapsFrom": [
+            "Estática",
+            "Estática-Centro de Gravedad"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "dinamica",
+          "name": "Dinámica",
+          "mapsFrom": [
+            "Dinámica"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "gravitacion-universal",
+          "name": "Gravitación universal",
+          "mapsFrom": [
+            "Gravitación universal"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "trabajo-energia-y-potencia",
+          "name": "Trabajo, energía y potencia",
+          "mapsFrom": [
+            "Trabajo, energía y potencia",
+            "Trabajo/Potencia/Energía"
+          ],
+          "subtopics": [
+            {
+              "slug": "cantidad-de-movimiento",
+              "name": "Cantidad de movimiento",
+              "mapsFrom": [
+                "Cantidad de movimiento"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "oscilaciones-y-ondas-mecanicas",
+          "name": "Oscilaciones y ondas mecánicas",
+          "mapsFrom": [
+            "Oscilaciones: movimiento armónico simple",
+            "M.A.S. y Ondas Mecánicas",
+            "Ondas y óptica"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "hidrostatica",
+          "name": "Hidrostática",
+          "mapsFrom": [
+            "Hidrostática"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "termometria-y-calorimetria",
+          "name": "Temperatura, calorimetría y fenómenos térmicos",
+          "mapsFrom": [
+            "Temperatura y calorimetría",
+            "Fenómenos Térmicos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "termodinamica",
+          "name": "Termodinámica",
+          "mapsFrom": [
+            "Termodinámica"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "electrostatica",
+          "name": "Electrostática",
+          "mapsFrom": [
+            "Electrostática"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "electrodinamica",
+          "name": "Electrodinámica",
+          "mapsFrom": [
+            "Electrodinámica",
+            "Electrostática y electrodinámica"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "magnetismo-y-electromagnetismo",
+          "name": "Magnetismo y electromagnetismo",
+          "mapsFrom": [
+            "Magnetismo",
+            "Electromagnetismo"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "optica-geometrica",
+          "name": "Óptica geométrica",
+          "mapsFrom": [
+            "Óptica geométrica: espejos y lentes"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "fisica-moderna",
+          "name": "Física moderna",
+          "mapsFrom": [
+            "Física moderna: introducción",
+            "Óptica y Física Moderna"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": [
+        {
+          "label": "Ondas y óptica",
+          "note": "UNI week-9 label literally conflates mechanical waves with optics, but geometric optics already has its own later week/topic; mapped here to the waves/oscillations bucket, treating the 'óptica' half as a naming artifact."
+        },
+        {
+          "label": "Electrostática y electrodinámica",
+          "note": "UNI treats this as one combined week; UNCP splits into two weeks. Mapped fully to Electrodinámica (the second, more advanced half) since Electrostática already exists as its own canonical topic from UNCP."
+        },
+        {
+          "label": "Óptica y Física Moderna",
+          "note": "UNCP's final week merges geometric optics with modern physics; mapped to Física moderna since geometric optics already has its own canonical topic from UNI."
+        }
+      ]
+    },
+    {
+      "course": "Química",
+      "topics": [
+        {
+          "slug": "materia-y-energia",
+          "name": "Materia y energía",
+          "mapsFrom": [
+            "Materia y energía",
+            "Materia y Energía"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "estructura-atomica",
+          "name": "Estructura atómica",
+          "mapsFrom": [
+            "Estructura atómica",
+            "Teorías y Modelos Atómicos"
+          ],
+          "subtopics": [
+            {
+              "slug": "quimica-nuclear",
+              "name": "Química nuclear",
+              "mapsFrom": [
+                "Química Nuclear"
+              ],
+              "nQuestions": 0
+            },
+            {
+              "slug": "zona-extranuclear",
+              "name": "Zona extranuclear",
+              "mapsFrom": [
+                "Zona Extranuclear"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "tabla-periodica",
+          "name": "Tabla periódica",
+          "mapsFrom": [
+            "Tabla periódica",
+            "Tabla Periódica"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "enlace-quimico",
+          "name": "Enlace químico",
+          "mapsFrom": [
+            "Enlace químico",
+            "Enlace Químico"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "nomenclatura-inorganica",
+          "name": "Nomenclatura inorgánica",
+          "mapsFrom": [
+            "Nomenclatura inorgánica",
+            "Nomenclatura Inorgánica"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "unidades-quimicas-de-masa",
+          "name": "Unidades químicas de masa",
+          "mapsFrom": [
+            "Unidades Químicas de Masa"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "estequiometria-y-reacciones-quimicas",
+          "name": "Estequiometría y reacciones químicas",
+          "mapsFrom": [
+            "Estequiometría",
+            "Reacciones químicas",
+            "Reacciones Químicas"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "estados-de-la-materia",
+          "name": "Estados de la materia",
+          "mapsFrom": [
+            "Estados de la materia"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "soluciones",
+          "name": "Soluciones",
+          "mapsFrom": [
+            "Soluciones"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "acidos-bases-y-sales",
+          "name": "Ácidos, bases y sales",
+          "mapsFrom": [
+            "Ácidos, bases y sales"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "electroquimica",
+          "name": "Electroquímica",
+          "mapsFrom": [
+            "Electroquímica: celdas galvánicas y electrolíticas"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "quimica-del-carbono",
+          "name": "Química del carbono",
+          "mapsFrom": [
+            "Química del carbono",
+            "Química Orgánica-Hidrocarburos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "funciones-organicas-oxigenadas-y-nitrogenadas",
+          "name": "Funciones orgánicas oxigenadas y nitrogenadas",
+          "mapsFrom": [
+            "Funciones Orgánicas Oxigenadas y Nitrogenadas"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "contaminacion-ambiental-y-ecologia-aplicada",
+          "name": "Contaminación ambiental y ecología aplicada",
+          "mapsFrom": [
+            "Contaminación ambiental y ecología aplicada"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "quimica-aplicada-nanotecnologia-y-materiales",
+          "name": "Química aplicada: nanotecnología y materiales modernos",
+          "mapsFrom": [
+            "Química aplicada: nanotecnología y materiales modernos"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "course": "Biología",
+      "topics": [
+        {
+          "slug": "composicion-quimica-de-los-seres-vivos",
+          "name": "Composición química de los seres vivos",
+          "mapsFrom": [
+            "Composición Química de los Seres Vivos"
+          ],
+          "subtopics": [
+            {
+              "slug": "bioquimica",
+              "name": "Bioquímica",
+              "mapsFrom": [
+                "bioquímica"
+              ],
+              "nQuestions": 4
+            }
+          ]
+        },
+        {
+          "slug": "proteinas-y-acidos-nucleicos",
+          "name": "Proteínas y ácidos nucleicos",
+          "mapsFrom": [
+            "Proteínas y Ácidos Nucleicos"
+          ],
+          "subtopics": [
+            {
+              "slug": "biologia-molecular",
+              "name": "Biología molecular",
+              "mapsFrom": [
+                "biología molecular"
+              ],
+              "nQuestions": 3
+            }
+          ]
+        },
+        {
+          "slug": "citologia",
+          "name": "Citología",
+          "mapsFrom": [
+            "Citología",
+            "citología"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "fisiologia-celular",
+          "name": "Fisiología celular",
+          "mapsFrom": [
+            "Fisiología Celular"
+          ],
+          "subtopics": [
+            {
+              "slug": "bioenergetica",
+              "name": "Bioenergética",
+              "mapsFrom": [
+                "bioenergética"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "fotosintesis",
+              "name": "Fotosíntesis",
+              "mapsFrom": [
+                "fotosíntesis"
+              ],
+              "nQuestions": 1
+            }
+          ]
+        },
+        {
+          "slug": "histologia-animal-i",
+          "name": "Histología animal I",
+          "mapsFrom": [
+            "Histología Animal I"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "histologia-animal-ii-y-vegetal",
+          "name": "Histología animal II y vegetal",
+          "mapsFrom": [
+            "Histología Animal II y Vegetal"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "funcion-de-nutricion",
+          "name": "Función de nutrición",
+          "mapsFrom": [
+            "Función de Nutrición"
+          ],
+          "subtopics": [
+            {
+              "slug": "fisiologia-humana",
+              "name": "Fisiología humana",
+              "mapsFrom": [
+                "fisiología humana"
+              ],
+              "nQuestions": 1
+            }
+          ]
+        },
+        {
+          "slug": "funcion-de-circulacion",
+          "name": "Función de circulación",
+          "mapsFrom": [
+            "Función de Circulación"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "funcion-de-respiracion-y-excrecion",
+          "name": "Función de respiración y excreción",
+          "mapsFrom": [
+            "Función de Respiración y Excreción"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "coordinacion-quimica",
+          "name": "Coordinación química",
+          "mapsFrom": [
+            "Coordinación Química"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "coordinacion-nerviosa",
+          "name": "Coordinación nerviosa",
+          "mapsFrom": [
+            "Coordinación Nerviosa"
+          ],
+          "subtopics": [
+            {
+              "slug": "sistema-nervioso",
+              "name": "Sistema nervioso",
+              "mapsFrom": [
+                "sistema nervioso"
+              ],
+              "nQuestions": 2
+            }
+          ]
+        },
+        {
+          "slug": "funcion-de-reproduccion-salud-enfermedad",
+          "name": "Función de reproducción, salud y enfermedad",
+          "mapsFrom": [
+            "Función de Reproducción/Salud/Enfermedad"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "genetica-evolucion-y-biotecnologia",
+          "name": "Genética, evolución y biotecnología",
+          "mapsFrom": [
+            "Genética/Evolución/Biotecnología"
+          ],
+          "subtopics": [
+            {
+              "slug": "evolucion",
+              "name": "Evolución",
+              "mapsFrom": [
+                "evolución"
+              ],
+              "nQuestions": 1
+            },
+            {
+              "slug": "biotecnologia",
+              "name": "Biotecnología",
+              "mapsFrom": [
+                "biotecnología"
+              ],
+              "nQuestions": 1
+            }
+          ]
+        },
+        {
+          "slug": "fundamentos-de-la-biologia",
+          "name": "Fundamentos de la biología",
+          "mapsFrom": [],
+          "subtopics": [
+            {
+              "slug": "biologia-general",
+              "name": "Biología general",
+              "mapsFrom": [
+                "biología general"
+              ],
+              "nQuestions": 2
+            },
+            {
+              "slug": "metodo-cientifico",
+              "name": "Método científico",
+              "mapsFrom": [
+                "método científico"
+              ],
+              "nQuestions": 2
+            }
+          ]
+        },
+        {
+          "slug": "microbiologia",
+          "name": "Microbiología",
+          "mapsFrom": [
+            "microbiología"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": [
+        {
+          "label": "fisiología humana",
+          "note": "Broad legacy label predating the split into Función de Nutrición/Circulación/Respiración-Excreción/Coordinación; mapped as a subtopic of Función de Nutrición as the closest general-physiology bucket, though it could arguably span all four función topics."
+        },
+        {
+          "label": "biología general",
+          "note": "No matching syllabus week in either source; grouped with 'método científico' under a new intro topic 'Fundamentos de la biología' since both are foundational/overview concepts."
+        },
+        {
+          "label": "microbiología",
+          "note": "No dedicated week in UNCP's Biología syllabus (Reino Monera/Protista/Fungi lives under Ecología instead); created as its own canonical topic since it has real question-bank volume."
+        }
+      ]
+    },
+    {
+      "course": "Ecología",
+      "topics": [
+        {
+          "slug": "ecologia-universo-sistema-solar-y-tierra",
+          "name": "Ecología, universo, sistema solar y Tierra",
+          "mapsFrom": [
+            "Ecología, Universo, Sistema Solar y Tierra"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "luz-y-calor",
+          "name": "Luz y calor",
+          "mapsFrom": [
+            "Luz y Calor"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "agua-y-aire",
+          "name": "Agua y aire",
+          "mapsFrom": [
+            "Agua y Aire"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "rocas-y-suelo",
+          "name": "Rocas y suelo",
+          "mapsFrom": [
+            "Rocas y Suelo"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "clima-y-desastres-naturales",
+          "name": "Clima y desastres naturales",
+          "mapsFrom": [
+            "Clima y Desastres Naturales"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "reino-monera-protista-y-fungi",
+          "name": "Reino Monera, Protista y Fungi",
+          "mapsFrom": [
+            "Reino Monera, Protista y Fungi"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "reino-vegetal",
+          "name": "Reino Vegetal",
+          "mapsFrom": [
+            "Reino Vegetal"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "reino-animal",
+          "name": "Reino Animal",
+          "mapsFrom": [
+            "Reino Animal"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "relaciones-en-el-ecosistema-sucesiones-ecologicas",
+          "name": "Relaciones en el ecosistema y sucesiones ecológicas",
+          "mapsFrom": [
+            "Relaciones en el Ecosistema - Sucesiones Ecológicas"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "flujo-de-materia-y-energia-recursos-naturales",
+          "name": "Flujo de materia y energía / recursos naturales",
+          "mapsFrom": [
+            "Flujo de Materia y Energía - Recursos Naturales"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "ecorregiones-del-peru-biomas-y-anp",
+          "name": "Ecorregiones del Perú, biomas y áreas naturales protegidas",
+          "mapsFrom": [
+            "Ecorregiones del Perú, Biomas y Áreas Naturales Protegidas"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "contaminacion-ambiental",
+          "name": "Contaminación ambiental",
+          "mapsFrom": [
+            "Contaminación Ambiental"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "saneamiento-ambiental",
+          "name": "Saneamiento ambiental",
+          "mapsFrom": [
+            "Saneamiento Ambiental"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "course": "Historia",
+      "topics": [
+        {
+          "slug": "prehistoria-y-comunidad-primitiva",
+          "name": "Prehistoria y comunidad primitiva",
+          "mapsFrom": [
+            "Prehistoria y hominización",
+            "La Historia y la Comunidad Primitiva",
+            "Prehistoria"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "poblamiento-americano-y-culturas-preincaicas",
+          "name": "Poblamiento americano y culturas preincaicas",
+          "mapsFrom": [
+            "Poblamiento de América y el Perú",
+            "El Poblamiento Americano y el Área Andina",
+            "Culturas preincas"
+          ],
+          "subtopics": [
+            {
+              "slug": "altas-culturas-andinas",
+              "name": "Altas culturas andinas",
+              "mapsFrom": [
+                "Altas culturas andinas"
+              ],
+              "nQuestions": 0
+            },
+            {
+              "slug": "sociedades-clasistas-del-peru-pre-inca-i",
+              "name": "Sociedades clasistas del Perú Pre Inca I",
+              "mapsFrom": [
+                "Sociedades Clasistas del Perú Pre Inca I"
+              ],
+              "nQuestions": 0
+            },
+            {
+              "slug": "sociedades-clasistas-del-peru-preinca-ii",
+              "name": "Sociedades clasistas del Perú Preinca II",
+              "mapsFrom": [
+                "Sociedades Clasistas del Perú Preinca II"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "civilizaciones-antiguas-de-oriente",
+          "name": "Civilizaciones antiguas de Oriente",
+          "mapsFrom": [
+            "Edad Antigua: Mesopotamia y Egipto",
+            "El Esclavismo en Oriente"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "grecia-y-roma-culturas-clasicas-de-occidente",
+          "name": "Grecia y Roma: culturas clásicas de Occidente",
+          "mapsFrom": [
+            "Edad Antigua: Grecia y Roma",
+            "Culturas Clásicas de Occidente",
+            "Culturas de la Antigüedad"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "el-tahuantinsuyo",
+          "name": "El Tahuantinsuyo",
+          "mapsFrom": [
+            "El Tahuantinsuyo",
+            "El Tahuantinsuyo y la invasión española",
+            "Imperio incaico"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "edad-media-y-feudalismo-europeo",
+          "name": "Edad Media y el feudalismo europeo",
+          "mapsFrom": [
+            "Edad Media",
+            "El Feudalismo y Capitalismo en Europa (Edad Media y Moderna)"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "conquista-y-virreinato-del-peru",
+          "name": "Conquista y Virreinato del Perú",
+          "mapsFrom": [
+            "El Virreinato del Perú",
+            "Virreinato del Perú",
+            "Descubrimiento y conquista",
+            "Dependencia Hispánica"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "edad-moderna",
+          "name": "Edad Moderna",
+          "mapsFrom": [
+            "Edad Moderna"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "revoluciones-burguesas-y-revolucion-francesa",
+          "name": "Revoluciones burguesas y Revolución Francesa",
+          "mapsFrom": [
+            "Revoluciones burguesas del siglo XVIII",
+            "Revolución Francesa"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "independencia-del-peru-y-emancipacion-americana",
+          "name": "Independencia del Perú y emancipación americana",
+          "mapsFrom": [
+            "Independencia del Perú",
+            "Emancipación e independencia",
+            "Capitalismo Industrial Siglos XVIII y XIX - Independencia Política del Perú"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "revolucion-industrial-y-capitalismo",
+          "name": "Revolución industrial y desarrollo del capitalismo",
+          "mapsFrom": [
+            "Revolución Industrial y Primera Guerra Mundial",
+            "Desarrollo del Capitalismo Industrial y Financiero",
+            "Revolución Industrial"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "republica-del-peru-siglo-xix-y-dependencia-inglesa",
+          "name": "República del Perú (siglo XIX) y dependencia inglesa",
+          "mapsFrom": [
+            "República del Perú: siglo XIX",
+            "República: siglo XIX",
+            "Dependencia Inglesa",
+            "Guerra con Chile"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "periodo-de-entreguerras-y-guerras-mundiales",
+          "name": "Periodo de entreguerras y guerras mundiales",
+          "mapsFrom": [
+            "Periodo de entreguerras y Segunda Guerra Mundial",
+            "Guerras Mundiales"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "peru-el-oncenio-de-leguia",
+          "name": "Perú: el Oncenio de Leguía",
+          "mapsFrom": [
+            "Perú: el Oncenio de Leguía"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "guerra-fria",
+          "name": "Guerra Fría",
+          "mapsFrom": [
+            "Guerra Fría"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "republica-del-peru-1930-1980",
+          "name": "República del Perú: 1930-1980",
+          "mapsFrom": [
+            "República del Perú: 1930-1980",
+            "Dependencia Norteamericana, Reformismo Populismo y Neoliberalismo"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "peru-contemporaneo-retorno-a-la-democracia",
+          "name": "Perú contemporáneo: retorno a la democracia (1980-2000)",
+          "mapsFrom": [
+            "Perú contemporáneo: retorno a la democracia (1980-2000)",
+            "República contemporánea"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": [
+        {
+          "label": "Historia del Perú / Historia Universal (courses)",
+          "note": "Both legacy courses are fully folded into Historia; every one of their 16 raw topic labels was merged into a matching chronological Historia topic above (0 questions each, so nothing at risk of being dropped)."
+        },
+        {
+          "label": "Topic count (17)",
+          "note": "Above the ~10-16 aim because Historia now unifies 3 previously separate courses spanning prehistory through 2000s Perú+world; splitting further would fragment the bank again."
+        },
+        {
+          "label": "Revolución Industrial y Primera Guerra Mundial",
+          "note": "Raw label bundles an economic-social process (industrial revolution) with a political-military event (WWI); kept together to match the existing UNI week, WWI is the minor half here."
+        }
+      ]
+    },
+    {
+      "course": "Geografía",
+      "topics": [
+        {
+          "slug": "geografia-fundamentos-y-objeto-de-estudio",
+          "name": "Geografía: fundamentos y objeto de estudio",
+          "mapsFrom": [
+            "Geografía una Ciencia Útil"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "geografia-astronomica-y-coordenadas",
+          "name": "Geografía astronómica y coordenadas geográficas",
+          "mapsFrom": [
+            "Geografía Astronómica",
+            "Coordenadas geográficas"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "orientacion-y-localizacion-geodesia-y-husos-horarios",
+          "name": "Orientación y localización absoluta (geodesia y husos horarios)",
+          "mapsFrom": [
+            "Orientación y Localización Absoluta (Geodesia y Husos Horarios)"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "cartografia",
+          "name": "Cartografía",
+          "mapsFrom": [
+            "Cartografía"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "geografia-fisica-y-relieve-peruano",
+          "name": "Geografía física y relieve peruano",
+          "mapsFrom": [
+            "Geografía física",
+            "Relieve Peruano y Características Físicas del Relieve Peruano"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "geomorfologia",
+          "name": "Geomorfología",
+          "mapsFrom": [
+            "Geomorfología"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "ecosistemas-del-peru",
+          "name": "Ecosistemas y ecorregiones del Perú",
+          "mapsFrom": [
+            "Ecosistemas del Perú",
+            "Ecorregiones del Perú"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "climas-y-biomas-del-mundo",
+          "name": "Climas y biomas del mundo",
+          "mapsFrom": [
+            "Climas y Biomas del Mundo",
+            "Climatología"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "areas-naturales-protegidas-del-peru",
+          "name": "Áreas naturales protegidas del Perú",
+          "mapsFrom": [
+            "Áreas Naturales Protegidas del Perú"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "hidrografia-del-peru",
+          "name": "Hidrografía del Perú",
+          "mapsFrom": [
+            "Hidrografía del Perú"
+          ],
+          "subtopics": [
+            {
+              "slug": "regiones-hidrograficas-gestion-de-riesgo-de-desastres",
+              "name": "Regiones hidrográficas y gestión de riesgo de desastres",
+              "mapsFrom": [
+                "Regiones Hidrográficas - Gestión de Riesgo de Desastres"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "geografia-economica",
+          "name": "Geografía económica",
+          "mapsFrom": [
+            "Geografía económica",
+            "Geografía Económica"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "poblacion-del-peru",
+          "name": "Población del Perú",
+          "mapsFrom": [
+            "Población del Perú",
+            "Población y demografía"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "geografia-politica-y-demarcacion-territorial",
+          "name": "Geografía política y demarcación territorial",
+          "mapsFrom": [
+            "Geografía Política y Demarcación Territorial"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "geopolitica-y-geografia-mundial",
+          "name": "Geopolítica y geografía mundial",
+          "mapsFrom": [
+            "Geopolítica y Geografía Mundial"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "course": "Economía",
+      "topics": [
+        {
+          "slug": "doctrinas-y-sistemas-economicos",
+          "name": "Doctrinas y sistemas económicos",
+          "mapsFrom": [
+            "Doctrinas Económicas",
+            "Sistemas económicos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "nociones-generales-de-economia",
+          "name": "Nociones generales de economía",
+          "mapsFrom": [
+            "Nociones Generales de Economía"
+          ],
+          "subtopics": [
+            {
+              "slug": "necesidades-y-bienes",
+              "name": "Necesidades y bienes",
+              "mapsFrom": [
+                "Necesidades y bienes"
+              ],
+              "nQuestions": 0
+            },
+            {
+              "slug": "el-estado-y-la-economia",
+              "name": "El Estado y la economía",
+              "mapsFrom": [
+                "El Estado y la economía"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "proceso-economico",
+          "name": "Proceso económico",
+          "mapsFrom": [
+            "Proceso Económico"
+          ],
+          "subtopics": [
+            {
+              "slug": "factores-productivos",
+              "name": "Factores productivos",
+              "mapsFrom": [
+                "Factores productivos"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "produccion-i",
+          "name": "Producción I",
+          "mapsFrom": [
+            "Producción I"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "produccion-ii",
+          "name": "Producción II",
+          "mapsFrom": [
+            "Producción II"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "circulacion-y-mercado",
+          "name": "Circulación y mercado",
+          "mapsFrom": [
+            "Circulación y Mercado"
+          ],
+          "subtopics": [
+            {
+              "slug": "mercado-oferta-y-demanda",
+              "name": "Mercado, oferta y demanda",
+              "mapsFrom": [
+                "Mercado, oferta y demanda"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "precio",
+          "name": "Precio",
+          "mapsFrom": [
+            "Precio"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "sistema-financiero-i",
+          "name": "Sistema financiero I",
+          "mapsFrom": [
+            "Sistema Financiero I"
+          ],
+          "subtopics": [
+            {
+              "slug": "dinero-y-banca",
+              "name": "Dinero y banca",
+              "mapsFrom": [
+                "Dinero y banca"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "sistema-financiero-ii",
+          "name": "Sistema financiero II",
+          "mapsFrom": [
+            "Sistema Financiero II"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "actividades-macroeconomicas",
+          "name": "Actividades macroeconómicas",
+          "mapsFrom": [
+            "Actividades Macroeconómicas"
+          ],
+          "subtopics": [
+            {
+              "slug": "agregados-macroeconomicos-el-pbi",
+              "name": "Agregados macroeconómicos: el PBI",
+              "mapsFrom": [
+                "Agregados macroeconómicos: el PBI"
+              ],
+              "nQuestions": 0
+            },
+            {
+              "slug": "inflacion",
+              "name": "Inflación",
+              "mapsFrom": [
+                "Inflación"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "distribucion-consumo-y-pobreza",
+          "name": "Distribución, consumo y pobreza",
+          "mapsFrom": [
+            "Distribución, Consumo y Pobreza"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "sector-externo",
+          "name": "Sector externo",
+          "mapsFrom": [
+            "Sector Externo"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "integracion-economica",
+          "name": "Integración económica",
+          "mapsFrom": [
+            "Integración Económica"
+          ],
+          "subtopics": [
+            {
+              "slug": "comercio-internacional",
+              "name": "Comercio internacional",
+              "mapsFrom": [
+                "Comercio internacional"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "course": "Filosofía",
+      "topics": [
+        {
+          "slug": "origen-y-desarrollo-del-pensamiento-filosofico",
+          "name": "Origen y desarrollo del pensamiento filosófico",
+          "mapsFrom": [
+            "Origen de la filosofía",
+            "Desarrollo del Pensamiento y el Origen de la Filosofía"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "historia-de-la-filosofia-antigua-y-medieval",
+          "name": "Historia de la filosofía: Antigua y Medieval",
+          "mapsFrom": [
+            "Historia de la Filosofía de la Edad Antigua y Medieval"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "historia-de-la-filosofia-moderna-y-contemporanea",
+          "name": "Historia de la filosofía: Moderna y Contemporánea",
+          "mapsFrom": [
+            "Historia de la Filosofía de la Edad Moderna y Contemporánea"
+          ],
+          "subtopics": [
+            {
+              "slug": "filosofia-contemporanea-positivismo-y-marxismo",
+              "name": "Filosofía contemporánea: positivismo y marxismo",
+              "mapsFrom": [
+                "Filosofía contemporánea: positivismo y marxismo"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "ontologia-y-metafisica",
+          "name": "Ontología y metafísica",
+          "mapsFrom": [
+            "Ontología y metafísica"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "gnoseologia-y-epistemologia",
+          "name": "Gnoseología y epistemología",
+          "mapsFrom": [
+            "Gnoseología y epistemología"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "antropologia-filosofica",
+          "name": "Antropología filosófica: el ser humano y el sentido de la vida",
+          "mapsFrom": [
+            "Antropología filosófica",
+            "El Ser Humano y el Sentido de la Vida"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "axiologia",
+          "name": "Axiología: los valores y la experiencia valorativa",
+          "mapsFrom": [
+            "Axiología",
+            "Los Valores y la Experiencia Valorativa"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "etica",
+          "name": "Ética",
+          "mapsFrom": [
+            "Ética",
+            "El Sentido de la Ética"
+          ],
+          "subtopics": [
+            {
+              "slug": "etica-en-sociedad",
+              "name": "Ética en sociedad",
+              "mapsFrom": [
+                "Ética en Sociedad"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "filosofia-del-derecho",
+          "name": "Filosofía del Derecho",
+          "mapsFrom": [
+            "Filosofía del Derecho"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "filosofia-politica",
+          "name": "Filosofía política",
+          "mapsFrom": [
+            "Filosofía política",
+            "Filosofía Política"
+          ],
+          "subtopics": [
+            {
+              "slug": "gobiernos-democraticos-y-dictatoriales",
+              "name": "Gobiernos democráticos y dictatoriales",
+              "mapsFrom": [
+                "Gobiernos Democráticos y Dictatoriales"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "logica",
+          "name": "Lógica",
+          "mapsFrom": [
+            "Lógica"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "etica-social-y-problemas-contemporaneos",
+          "name": "Ética social y problemas contemporáneos",
+          "mapsFrom": [
+            "Discriminación, Exclusión e Injusticia",
+            "La Migración Internacional como Problema Ético",
+            "Los Conflictos Sociales"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": []
+    },
+    {
+      "course": "Educación Cívica",
+      "topics": [
+        {
+          "slug": "la-convivencia-social-y-la-formacion-intercultural",
+          "name": "La convivencia social y la formación intercultural",
+          "mapsFrom": [
+            "La Convivencia Social y la Formación Intercultural"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "identidad-y-patrimonio-nacional",
+          "name": "Identidad y patrimonio nacional",
+          "mapsFrom": [
+            "Identidad y Patrimonio Nacional"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "participacion-ciudadana-y-democracia",
+          "name": "Participación ciudadana en el sistema democrático",
+          "mapsFrom": [
+            "La Participación Ciudadana en el Sistema Democrático"
+          ],
+          "subtopics": [
+            {
+              "slug": "democracia-y-ciudadania",
+              "name": "Democracia y ciudadanía",
+              "mapsFrom": [
+                "Democracia y ciudadanía"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "el-estado-de-derecho-y-la-carta-magna",
+          "name": "El Estado de Derecho y la Carta Magna",
+          "mapsFrom": [
+            "El Estado de Derecho y la Carta Magna"
+          ],
+          "subtopics": [
+            {
+              "slug": "constitucion-politica-del-peru",
+              "name": "Constitución Política del Perú",
+              "mapsFrom": [
+                "Constitución Política del Perú"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "ordenamiento-juridico",
+          "name": "Reconociendo el ordenamiento jurídico",
+          "mapsFrom": [
+            "Reconociendo el Ordenamiento Jurídico"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "derechos-humanos",
+          "name": "Los derechos humanos",
+          "mapsFrom": [
+            "Los Derechos Humanos",
+            "Derechos humanos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "el-estado-peruano-i",
+          "name": "El Estado peruano I",
+          "mapsFrom": [
+            "El Estado Peruano I"
+          ],
+          "subtopics": [
+            {
+              "slug": "estado-y-nacion",
+              "name": "Estado y nación",
+              "mapsFrom": [
+                "Estado y nación"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "el-estado-peruano-ii",
+          "name": "El Estado peruano II",
+          "mapsFrom": [
+            "El Estado Peruano II"
+          ],
+          "subtopics": [
+            {
+              "slug": "poderes-del-estado",
+              "name": "Poderes del Estado",
+              "mapsFrom": [
+                "Poderes del Estado"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "organismos-constitucionales-autonomos-i",
+          "name": "Organismos constitucionales autónomos I",
+          "mapsFrom": [
+            "Organismos Constitucionales Autónomos I",
+            "Organismos constitucionales autónomos"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "organismos-constitucionales-autonomos-ii",
+          "name": "Organismos constitucionales autónomos II",
+          "mapsFrom": [
+            "Organismos Constitucionales Autónomos II"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "conflicto-y-violencia",
+          "name": "Conflicto y violencia",
+          "mapsFrom": [
+            "Conflicto y Violencia"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "seguridad-y-bienestar-nacional",
+          "name": "Seguridad y bienestar nacional",
+          "mapsFrom": [
+            "Seguridad y Bienestar Nacional"
+          ],
+          "subtopics": [
+            {
+              "slug": "defensa-nacional",
+              "name": "Defensa nacional",
+              "mapsFrom": [
+                "Defensa nacional"
+              ],
+              "nQuestions": 0
+            },
+            {
+              "slug": "seguridad-ciudadana",
+              "name": "Seguridad ciudadana",
+              "mapsFrom": [
+                "Seguridad ciudadana"
+              ],
+              "nQuestions": 0
+            }
+          ]
+        },
+        {
+          "slug": "el-peru-en-el-mundo-globalizado",
+          "name": "El Perú en el mundo globalizado",
+          "mapsFrom": [
+            "El Perú en el Mundo Globalizado"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": [
+        {
+          "label": "Organismos constitucionales autónomos",
+          "note": "Generic/legacy label without a I/II suffix; no way to tell which half of the UNCP two-week split it belongs to. Mapped to part I as the more likely default (introductory), but could belong to II."
+        }
+      ]
+    },
+    {
+      "course": "Psicología",
+      "topics": [
+        {
+          "slug": "definicion-metodos-e-historia-de-la-psicologia",
+          "name": "Definición, métodos e historia de la psicología",
+          "mapsFrom": [
+            "Definición y métodos de la psicología",
+            "Historia y escuelas de la psicología",
+            "Panorama General de la Psicología"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "desarrollo-humano-y-adolescencia",
+          "name": "El desarrollo humano y la adolescencia",
+          "mapsFrom": [
+            "El Desarrollo Humano",
+            "La Adolescencia y la Identidad Personal"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "bases-biologicas-de-la-conducta",
+          "name": "Bases biológicas de la conducta",
+          "mapsFrom": [
+            "Bases biológicas de la conducta"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "estados-de-conciencia",
+          "name": "Estados de conciencia",
+          "mapsFrom": [
+            "Estados de conciencia"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "sensacion-y-percepcion",
+          "name": "Sensación y percepción",
+          "mapsFrom": [
+            "Sensación y percepción"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "memoria",
+          "name": "Memoria",
+          "mapsFrom": [
+            "Memoria"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "pensamiento-y-lenguaje",
+          "name": "Pensamiento, lenguaje y creencias",
+          "mapsFrom": [
+            "Pensamiento y lenguaje",
+            "Pensamiento y Creencias"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "motivacion-y-emocion",
+          "name": "Motivación y emoción",
+          "mapsFrom": [
+            "Motivación y emoción"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "inteligencia",
+          "name": "Inteligencia",
+          "mapsFrom": [
+            "Inteligencia"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "aprendizaje",
+          "name": "Aprendizaje",
+          "mapsFrom": [
+            "Aprendizaje"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "personalidad",
+          "name": "Personalidad",
+          "mapsFrom": [
+            "Personalidad",
+            "El Sistema de la Personalidad"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "psicologia-social",
+          "name": "Psicología social",
+          "mapsFrom": [
+            "Psicología social",
+            "Las Bases Sociales del Comportamiento"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "sexualidad-y-salud-sexual",
+          "name": "Sexualidad y salud sexual",
+          "mapsFrom": [
+            "Sexualidad",
+            "Salud Sexual"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "vinculo-familiar",
+          "name": "Vínculo familiar",
+          "mapsFrom": [
+            "Vínculo Familiar"
+          ],
+          "subtopics": []
+        },
+        {
+          "slug": "cultura-de-prevencion-y-vida-saludable",
+          "name": "Cultura de prevención y vida saludable",
+          "mapsFrom": [
+            "Cultura de Prevención",
+            "Vida Saludable"
+          ],
+          "subtopics": []
+        }
+      ],
+      "ambiguous": []
+    }
+  ]
+}

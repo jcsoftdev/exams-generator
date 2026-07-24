@@ -46,6 +46,7 @@ function buildDeps() {
     approveQuestion: jest.fn().mockResolvedValue(undefined as { id: string; status: string } | undefined),
     rejectQuestion: jest.fn().mockResolvedValue(false),
     topicExists: jest.fn().mockResolvedValue(true),
+    getSubtopicTopicId: jest.fn().mockResolvedValue(undefined as string | undefined),
     updateStructuredQuestionAndTaxonomy: jest.fn().mockResolvedValue(undefined as QuestionListItem | undefined),
   } as unknown as jest.Mocked<BankRepository>;
 
@@ -160,6 +161,68 @@ describe("BankService.createImageQuestion", () => {
 
     expect(storage.put).not.toHaveBeenCalled();
     expect(repository.createImageQuestion).not.toHaveBeenCalled();
+  });
+
+  it("throws BadRequestException when subtopicId doesn't exist", async () => {
+    const { service, repository, storage } = buildDeps();
+    repository.getSubtopicTopicId.mockResolvedValue(undefined);
+
+    await expect(
+      service.createImageQuestion(TEACHER_USER, {
+        courseId: "course-1",
+        topicId: "topic-1",
+        subtopicId: "nonexistent-subtopic",
+        difficulty: Difficulty.Medium,
+        gradeLevel: "primaria_2",
+        correctAnswer: "c",
+        file: VALID_FILE,
+      }),
+    ).rejects.toBeInstanceOf(BadRequestException);
+
+    expect(repository.getSubtopicTopicId).toHaveBeenCalledWith("nonexistent-subtopic");
+    expect(storage.put).not.toHaveBeenCalled();
+    expect(repository.createImageQuestion).not.toHaveBeenCalled();
+  });
+
+  it("throws BadRequestException when subtopicId belongs to a different topic than topicId", async () => {
+    const { service, repository, storage } = buildDeps();
+    repository.getSubtopicTopicId.mockResolvedValue("topic-999");
+
+    await expect(
+      service.createImageQuestion(TEACHER_USER, {
+        courseId: "course-1",
+        topicId: "topic-1",
+        subtopicId: "subtopic-1",
+        difficulty: Difficulty.Medium,
+        gradeLevel: "primaria_2",
+        correctAnswer: "c",
+        file: VALID_FILE,
+      }),
+    ).rejects.toBeInstanceOf(BadRequestException);
+
+    expect(storage.put).not.toHaveBeenCalled();
+    expect(repository.createImageQuestion).not.toHaveBeenCalled();
+  });
+
+  it("persists the question when subtopicId belongs to the given topicId", async () => {
+    const { service, repository } = buildDeps();
+    repository.getSubtopicTopicId.mockResolvedValue("topic-1");
+
+    const result = await service.createImageQuestion(TEACHER_USER, {
+      courseId: "course-1",
+      topicId: "topic-1",
+      subtopicId: "subtopic-1",
+      difficulty: Difficulty.Medium,
+      gradeLevel: "primaria_2",
+      correctAnswer: "c",
+      file: VALID_FILE,
+    });
+
+    expect(repository.getSubtopicTopicId).toHaveBeenCalledWith("subtopic-1");
+    expect(repository.createImageQuestion).toHaveBeenCalledWith(
+      expect.objectContaining({ topicId: "topic-1", subtopicId: "subtopic-1" }),
+    );
+    expect(result).toEqual({ id: "question-1" });
   });
 });
 

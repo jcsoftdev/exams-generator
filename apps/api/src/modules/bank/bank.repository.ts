@@ -2,7 +2,7 @@ import { Inject, Injectable } from "@nestjs/common";
 import { Difficulty } from "@exams-generator/shared";
 import { and, count, eq, isNull, or, SQL } from "drizzle-orm";
 import { Database, DRIZZLE_DB } from "../../db/client";
-import { assets, courses, questions, topics } from "../../db/schema";
+import { assets, courses, questions, subtopics, topics } from "../../db/schema";
 import { QuestionStatus } from "../../db/schema/enums";
 import {
   BankRepositoryPort,
@@ -69,6 +69,7 @@ export class BankRepository implements BankRepositoryPort {
           tenantId: record.tenantId,
           type: "image",
           topicId: record.topicId,
+          subtopicId: record.subtopicId,
           difficulty: record.difficulty,
           gradeLevel: record.gradeLevel,
           status: "approved",
@@ -376,6 +377,21 @@ export class BankRepository implements BankRepositoryPort {
   async topicExists(topicId: string): Promise<boolean> {
     const [row] = await this.db.select({ id: topics.id }).from(topics).where(eq(topics.id, topicId)).limit(1);
     return row !== undefined;
+  }
+
+  /**
+   * FK existence + ownership check for `subtopicId` (design doc: bank
+   * create validation, review fix) — used by the service to reject a
+   * `subtopicId` that doesn't exist, or whose own `topic_id` doesn't match
+   * the request's `topicId`, before any write.
+   */
+  async getSubtopicTopicId(subtopicId: string): Promise<string | undefined> {
+    const [row] = await this.db
+      .select({ topicId: subtopics.topicId })
+      .from(subtopics)
+      .where(eq(subtopics.id, subtopicId))
+      .limit(1);
+    return row?.topicId;
   }
 
   /**

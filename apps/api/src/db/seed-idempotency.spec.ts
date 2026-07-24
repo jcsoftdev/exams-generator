@@ -34,33 +34,44 @@ describe("seed idempotency", () => {
     await pool.end();
   });
 
-  it("running the seed twice does not create duplicates or throw", async () => {
-    await seed();
-    await expect(seed()).resolves.toBeUndefined();
+  it(
+    "running the seed twice does not create duplicates or throw",
+    async () => {
+      await seed();
+      await expect(seed()).resolves.toBeUndefined();
 
-    const gradeLevelRows = await db.select().from(gradeLevels);
-    expect(gradeLevelRows).toHaveLength(GRADE_LEVELS.length);
-    expect(new Set(gradeLevelRows.map((row) => row.code)).size).toBe(GRADE_LEVELS.length);
+      const gradeLevelRows = await db.select().from(gradeLevels);
+      expect(gradeLevelRows).toHaveLength(GRADE_LEVELS.length);
+      expect(new Set(gradeLevelRows.map((row) => row.code)).size).toBe(GRADE_LEVELS.length);
 
-    const tenantRows = await db.select().from(tenants).where(eq(tenants.slug, DEMO_TENANT_SLUG));
-    expect(tenantRows).toHaveLength(1);
+      const tenantRows = await db.select().from(tenants).where(eq(tenants.slug, DEMO_TENANT_SLUG));
+      expect(tenantRows).toHaveLength(1);
 
-    const adminRows = await db.select().from(users).where(eq(users.email, DEMO_ADMIN_EMAIL));
-    expect(adminRows).toHaveLength(1);
-    expect(adminRows[0]?.tenantId).toBe(tenantRows[0]?.id);
+      const adminRows = await db.select().from(users).where(eq(users.email, DEMO_ADMIN_EMAIL));
+      expect(adminRows).toHaveLength(1);
+      expect(adminRows[0]?.tenantId).toBe(tenantRows[0]?.id);
 
-    for (const { stage, name } of SYLLABUS_COURSES) {
-      const courseRows = await db
-        .select()
-        .from(courses)
-        .where(and(eq(courses.stage, stage), eq(courses.name, name)));
-      expect(courseRows).toHaveLength(1);
+      for (const { stage, name } of SYLLABUS_COURSES) {
+        const courseRows = await db
+          .select()
+          .from(courses)
+          .where(and(eq(courses.stage, stage), eq(courses.name, name)));
+        expect(courseRows).toHaveLength(1);
 
-      const topicRows = await db.select().from(topics).where(eq(topics.courseId, courseRows[0]!.id));
-      // Idempotency: topics exist and no (name, grade) pair is duplicated on the second seed run.
-      expect(topicRows.length).toBeGreaterThan(0);
-      const keys = topicRows.map((row) => `${row.name}:${row.gradeLevel}`);
-      expect(new Set(keys).size).toBe(topicRows.length);
-    }
-  });
+        const topicRows = await db.select().from(topics).where(eq(topics.courseId, courseRows[0]!.id));
+        // Idempotency: topics exist and no (name, grade) pair is duplicated on the second seed run.
+        expect(topicRows.length).toBeGreaterThan(0);
+        const keys = topicRows.map((row) => `${row.name}:${row.gradeLevel}`);
+        expect(new Set(keys).size).toBe(topicRows.length);
+      }
+    },
+    // `seed()` now also seeds the UNCP approximated weekly syllabus (19
+    // courses x 5 área templates, batched per course — see
+    // `seedSyllabusWeekMaps` in `./seed.ts`) on top of UNI's, and this test
+    // calls it twice. That's real extra DB work, not a hang: it stayed under
+    // 2.5s in isolation, but non-e2e's default 5s budget (jest.config.js) is
+    // tight once other spec files hit the same Postgres concurrently. Scoped
+    // to this one test so a genuinely hung test elsewhere still fails fast.
+    20_000,
+  );
 });

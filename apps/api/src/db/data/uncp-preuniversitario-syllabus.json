@@ -1,0 +1,346 @@
+{
+  "_source": "APPROXIMATION — not an official CEPRE UNCP cronograma. Derived from the CEPRE UNCP compendio chapter order (~1 tema/semana), gathered via web-research slugs uncp-compendio-order-{math,verbal,humanities} + the 6 core courses from uncp-cepre-weekly-syllabus. Cadence/cycle length corroborated by preacademias-weekly-structure-convention + uncp-cepre-cycle-structure. Week numbers = compendio chapter order, not an official schedule.",
+  "courses": [
+    {
+      "courseName": "Aritmética",
+      "weeks": [
+        { "week": 1, "topics": ["Teoría de Conjuntos"] },
+        { "week": 2, "topics": ["Numeración"] },
+        { "week": 3, "topics": ["Conteo de Números"] },
+        { "week": 4, "topics": ["Cuatro Operaciones"] },
+        { "week": 5, "topics": ["Divisibilidad"] },
+        { "week": 6, "topics": ["Números Primos"] },
+        { "week": 7, "topics": ["MCD-MCM"] },
+        { "week": 8, "topics": ["Potenciación y Radicación"] },
+        { "week": 9, "topics": ["Números Racionales"] },
+        { "week": 10, "topics": ["Razones y Proporciones"] },
+        { "week": 11, "topics": ["Promedios y Mezclas"] },
+        { "week": 12, "topics": ["Proporcionalidad"] },
+        { "week": 13, "topics": ["Regla de Interés"] }
+      ]
+    },
+    {
+      "courseName": "Álgebra",
+      "weeks": [
+        { "week": 1, "topics": ["Teoría de Exponentes y Logaritmos en ℝ"] },
+        { "week": 2, "topics": ["Expresiones Algebraicas-Polinomios"] },
+        { "week": 3, "topics": ["Productos Notables-Binomio de Newton"] },
+        { "week": 4, "topics": ["División de Polinomios-Cocientes Notables"] },
+        { "week": 5, "topics": ["Factorización-MCD y MCM de Polinomios"] },
+        { "week": 6, "topics": ["Fracciones y Radicación Algebraica"] },
+        { "week": 7, "topics": ["Teoría de Ecuaciones"] },
+        { "week": 8, "topics": ["Matrices y Determinantes"] },
+        { "week": 9, "topics": ["Desigualdades e Inecuaciones Lineales y Cuadráticas"] },
+        { "week": 10, "topics": ["Inecuaciones de Grado Superior/Fraccionarias/Irracionales/Valor Absoluto"] },
+        { "week": 11, "topics": ["Funciones I"] },
+        { "week": 12, "topics": ["Funciones II"] },
+        { "week": 13, "topics": ["Sistema de Ecuaciones e Inecuaciones"] }
+      ]
+    },
+    {
+      "courseName": "Geometría",
+      "weeks": [
+        { "week": 1, "topics": ["Segmentos y Ángulos"] },
+        { "week": 2, "topics": ["Triángulos I"] },
+        { "week": 3, "topics": ["Triángulos II-Congruencia"] },
+        { "week": 4, "topics": ["Polígonos y Cuadriláteros"] },
+        { "week": 5, "topics": ["Circunferencias"] },
+        { "week": 6, "topics": ["Proporcionalidad de Segmentos y Semejanza"] },
+        { "week": 7, "topics": ["Relaciones Métricas en Circunferencia y Triángulo Rectángulo"] },
+        { "week": 8, "topics": ["Relaciones Métricas en Oblicuángulos y Cuadriláteros"] },
+        { "week": 9, "topics": ["Áreas de Regiones Triangulares"] },
+        { "week": 10, "topics": ["Áreas de Regiones Cuadrangulares y Circulares"] },
+        { "week": 11, "topics": ["Poliedros/Prismas/Pirámides"] },
+        { "week": 12, "topics": ["Pirámides y Conos"] },
+        { "week": 13, "topics": ["Cilindros-Esferas-Pappus-Guldin"] }
+      ]
+    },
+    {
+      "courseName": "Trigonometría",
+      "weeks": [
+        { "week": 1, "topics": ["Ángulo Trigonométrico"] },
+        { "week": 2, "topics": ["Razones Trigonométricas de Ángulos Agudos — Resolución de Triángulos Rectángulos"] },
+        { "week": 3, "topics": ["Introducción a la Geometría Analítica"] },
+        { "week": 4, "topics": ["Razones Trigonométricas de Ángulos de Cualquier Magnitud — Reducción al Primer Cuadrante"] },
+        { "week": 5, "topics": ["Circunferencia Trigonométrica — Líneas Trigonométricas"] },
+        { "week": 6, "topics": ["Identidades Trigonométricas de Arco Simple"] },
+        { "week": 7, "topics": ["Identidades Trigonométricas de Arcos Compuestos"] },
+        { "week": 8, "topics": ["Ecuaciones Trigonométricas"] },
+        { "week": 9, "topics": ["Funciones Trigonométricas — Dominio y Rango"] },
+        { "week": 10, "topics": ["Funciones Trigonométricas — Gráficas y Transformaciones"] },
+        { "week": 11, "topics": ["Inecuaciones Trigonométricas"] },
+        { "week": 12, "topics": ["Transformación de Sumas a Productos — Transformación de Productos a Sumas"] },
+        { "week": 13, "topics": ["Triángulos Oblicuángulos — Resolución"] }
+      ]
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "weeks": [
+        { "week": 1, "topics": ["Razonamiento Lógico Recreativo"] },
+        { "week": 2, "topics": ["Razonamiento Lógico Formal"] },
+        { "week": 3, "topics": ["Razonamiento Analítico"] },
+        { "week": 4, "topics": ["Razonamiento Inductivo-Deductivo"] },
+        { "week": 5, "topics": ["Operaciones Matemáticas"] },
+        { "week": 6, "topics": ["Lógica Proposicional y de Clases"] },
+        { "week": 7, "topics": ["Planteo de Ecuaciones — Problemas de Edades"] },
+        { "week": 8, "topics": ["Cronometría y Calendarios"] },
+        { "week": 9, "topics": ["Problemas con Fracciones"] },
+        { "week": 10, "topics": ["Problemas con Porcentajes"] },
+        { "week": 11, "topics": ["Sucesiones, Series y Sumatorias"] },
+        { "week": 12, "topics": ["Conteo de Figuras — Recorridos Eulerianos"] },
+        { "week": 13, "topics": ["Psicotécnico"] }
+      ]
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "weeks": [
+        { "week": 1, "topics": ["Introducción al Análisis Combinatorio"] },
+        { "week": 2, "topics": ["Permutación Lineal, Circular y con Elementos Repetidos"] },
+        { "week": 3, "topics": ["Variación y Combinación"] },
+        { "week": 4, "topics": ["Introducción a las Probabilidades"] },
+        { "week": 5, "topics": ["Eventos Mutuamente Excluyentes, Independientes y Compuestos"] },
+        { "week": 6, "topics": ["Eventos Contrario — Esperanza Matemática"] },
+        { "week": 7, "topics": ["Introducción a la Estadística — Distribución de Frecuencias"] },
+        { "week": 8, "topics": ["Gráficos Estadísticos"] },
+        { "week": 9, "topics": ["Medidas de Tendencia Central I — Media, Mediana, Moda"] },
+        { "week": 10, "topics": ["Medidas de Tendencia Central II — Cuantiles"] },
+        { "week": 11, "topics": ["Medidas de Dispersión"] },
+        { "week": 12, "topics": ["Medidas de Posición"] }
+      ]
+    },
+    {
+      "courseName": "Física",
+      "weeks": [
+        { "week": 1, "topics": ["Análisis Vectorial"] },
+        { "week": 2, "topics": ["Cinemática I"] },
+        { "week": 3, "topics": ["Cinemática II"] },
+        { "week": 4, "topics": ["Estática-Centro de Gravedad"] },
+        { "week": 5, "topics": ["Dinámica"] },
+        { "week": 6, "topics": ["Trabajo/Potencia/Energía"] },
+        { "week": 7, "topics": ["M.A.S. y Ondas Mecánicas"] },
+        { "week": 8, "topics": ["Fenómenos Térmicos"] },
+        { "week": 9, "topics": ["Termodinámica"] },
+        { "week": 10, "topics": ["Electrostática"] },
+        { "week": 11, "topics": ["Electrodinámica"] },
+        { "week": 12, "topics": ["Electromagnetismo"] },
+        { "week": 13, "topics": ["Óptica y Física Moderna"] }
+      ]
+    },
+    {
+      "courseName": "Química",
+      "weeks": [
+        { "week": 1, "topics": ["Materia y Energía"] },
+        { "week": 2, "topics": ["Teorías y Modelos Atómicos"] },
+        { "week": 3, "topics": ["Química Nuclear"] },
+        { "week": 4, "topics": ["Zona Extranuclear"] },
+        { "week": 5, "topics": ["Tabla Periódica"] },
+        { "week": 6, "topics": ["Enlace Químico"] },
+        { "week": 7, "topics": ["Nomenclatura Inorgánica"] },
+        { "week": 8, "topics": ["Unidades Químicas de Masa"] },
+        { "week": 9, "topics": ["Reacciones Químicas"] },
+        { "week": 10, "topics": ["Estequiometría"] },
+        { "week": 11, "topics": ["Soluciones"] },
+        { "week": 12, "topics": ["Química Orgánica-Hidrocarburos"] },
+        { "week": 13, "topics": ["Funciones Orgánicas Oxigenadas y Nitrogenadas"] }
+      ]
+    },
+    {
+      "courseName": "Biología",
+      "weeks": [
+        { "week": 1, "topics": ["Composición Química de los Seres Vivos"] },
+        { "week": 2, "topics": ["Proteínas y Ácidos Nucleicos"] },
+        { "week": 3, "topics": ["Citología"] },
+        { "week": 4, "topics": ["Fisiología Celular"] },
+        { "week": 5, "topics": ["Histología Animal I"] },
+        { "week": 6, "topics": ["Histología Animal II y Vegetal"] },
+        { "week": 7, "topics": ["Función de Nutrición"] },
+        { "week": 8, "topics": ["Función de Circulación"] },
+        { "week": 9, "topics": ["Función de Respiración y Excreción"] },
+        { "week": 10, "topics": ["Coordinación Química"] },
+        { "week": 11, "topics": ["Coordinación Nerviosa"] },
+        { "week": 12, "topics": ["Función de Reproducción/Salud/Enfermedad"] },
+        { "week": 13, "topics": ["Genética/Evolución/Biotecnología"] }
+      ]
+    },
+    {
+      "courseName": "Comunicación",
+      "weeks": [
+        { "week": 1, "topics": ["La Comunicación"] },
+        { "week": 2, "topics": ["Ortografía I"] },
+        { "week": 3, "topics": ["Lingüística"] },
+        { "week": 4, "topics": ["Ortografía II"] },
+        { "week": 5, "topics": ["Morfología I"] },
+        { "week": 6, "topics": ["Preceptiva Literaria"] },
+        { "week": 7, "topics": ["Morfología II"] },
+        { "week": 8, "topics": ["Morfología III"] },
+        { "week": 9, "topics": ["Literatura Universal y Española I"] },
+        { "week": 10, "topics": ["Sintaxis I"] },
+        { "week": 11, "topics": ["Literatura Universal y Española II"] },
+        { "week": 12, "topics": ["Sintaxis II"] },
+        { "week": 13, "topics": ["Literatura Hispanoamericana y Peruana"] }
+      ]
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "weeks": [
+        { "week": 1, "topics": ["Aptitud Comunicativa"] },
+        { "week": 2, "topics": ["Relaciones Léxico Semánticas"] },
+        { "week": 3, "topics": ["Referencias Textuales"] },
+        { "week": 4, "topics": ["Marcadores Textuales"] },
+        { "week": 5, "topics": ["Oraciones Eliminadas - Término Excluido"] },
+        { "week": 6, "topics": ["Estrategias de Lectura I"] },
+        { "week": 7, "topics": ["Estrategias Después de la Lectura"] },
+        { "week": 8, "topics": ["Análisis de Imágenes - Macroestructura"] },
+        { "week": 9, "topics": ["Macroestructura Textual"] },
+        { "week": 10, "topics": ["Textos Periodísticos"] },
+        { "week": 11, "topics": ["Textos Argumentativos"] },
+        { "week": 12, "topics": ["Oraciones Incompletas"] },
+        { "week": 13, "topics": ["Textos Narrativos y Descriptivos / Expresión Escrita I y II"] }
+      ]
+    },
+    {
+      "courseName": "Inglés",
+      "weeks": [
+        { "week": 1, "topics": ["Aptitud Comunicativa Inglés"] },
+        { "week": 2, "topics": ["The Verb To Be (Present)"] },
+        { "week": 3, "topics": ["Singular and Plural Nouns"] },
+        { "week": 4, "topics": ["Count and Non Count Nouns"] },
+        { "week": 5, "topics": ["Simple Present"] },
+        { "week": 6, "topics": ["Present Continuous"] },
+        { "week": 7, "topics": ["Simple Past Tense"] },
+        { "week": 8, "topics": ["Past Continuous"] },
+        { "week": 9, "topics": ["Comparative and Superlative"] },
+        { "week": 10, "topics": ["Future Time 'Will' and 'Be Going To'"] },
+        { "week": 11, "topics": ["Modal Verbs"] },
+        { "week": 12, "topics": ["Present Perfect"] },
+        { "week": 13, "topics": ["Past Perfect / Conditionals"] }
+      ]
+    },
+    {
+      "courseName": "Ecología",
+      "weeks": [
+        { "week": 1, "topics": ["Ecología, Universo, Sistema Solar y Tierra"] },
+        { "week": 2, "topics": ["Luz y Calor"] },
+        { "week": 3, "topics": ["Agua y Aire"] },
+        { "week": 4, "topics": ["Rocas y Suelo"] },
+        { "week": 5, "topics": ["Clima y Desastres Naturales"] },
+        { "week": 6, "topics": ["Reino Monera, Protista y Fungi"] },
+        { "week": 7, "topics": ["Reino Vegetal"] },
+        { "week": 8, "topics": ["Reino Animal"] },
+        { "week": 9, "topics": ["Relaciones en el Ecosistema - Sucesiones Ecológicas"] },
+        { "week": 10, "topics": ["Flujo de Materia y Energía - Recursos Naturales"] },
+        { "week": 11, "topics": ["Ecorregiones del Perú, Biomas y Áreas Naturales Protegidas"] },
+        { "week": 12, "topics": ["Contaminación Ambiental"] },
+        { "week": 13, "topics": ["Saneamiento Ambiental"] }
+      ]
+    },
+    {
+      "courseName": "Historia",
+      "weeks": [
+        { "week": 1, "topics": ["La Historia y la Comunidad Primitiva"] },
+        { "week": 2, "topics": ["El Poblamiento Americano y el Área Andina"] },
+        { "week": 3, "topics": ["El Esclavismo en Oriente"] },
+        { "week": 4, "topics": ["Culturas Clásicas de Occidente"] },
+        { "week": 5, "topics": ["Sociedades Clasistas del Perú Pre Inca I"] },
+        { "week": 6, "topics": ["Sociedades Clasistas del Perú Preinca II"] },
+        { "week": 7, "topics": ["El Tahuantinsuyo"] },
+        { "week": 8, "topics": ["El Feudalismo y Capitalismo en Europa (Edad Media y Moderna)"] },
+        { "week": 9, "topics": ["Dependencia Hispánica"] },
+        { "week": 10, "topics": ["Capitalismo Industrial Siglos XVIII y XIX - Independencia Política del Perú"] },
+        { "week": 11, "topics": ["Dependencia Inglesa"] },
+        { "week": 12, "topics": ["Desarrollo del Capitalismo Industrial y Financiero"] },
+        { "week": 13, "topics": ["Dependencia Norteamericana, Reformismo Populismo y Neoliberalismo"] }
+      ]
+    },
+    {
+      "courseName": "Geografía",
+      "weeks": [
+        { "week": 1, "topics": ["Geografía una Ciencia Útil"] },
+        { "week": 2, "topics": ["Geografía Astronómica"] },
+        { "week": 3, "topics": ["Orientación y Localización Absoluta (Geodesia y Husos Horarios)"] },
+        { "week": 4, "topics": ["Cartografía"] },
+        { "week": 5, "topics": ["Relieve Peruano y Características Físicas del Relieve Peruano"] },
+        { "week": 6, "topics": ["Ecosistemas del Perú"] },
+        { "week": 7, "topics": ["Climas y Biomas del Mundo"] },
+        { "week": 8, "topics": ["Áreas Naturales Protegidas del Perú"] },
+        { "week": 9, "topics": ["Regiones Hidrográficas - Gestión de Riesgo de Desastres"] },
+        { "week": 10, "topics": ["Geografía Económica"] },
+        { "week": 11, "topics": ["Población del Perú"] },
+        { "week": 12, "topics": ["Geografía Política y Demarcación Territorial"] },
+        { "week": 13, "topics": ["Geopolítica y Geografía Mundial"] }
+      ]
+    },
+    {
+      "courseName": "Economía",
+      "weeks": [
+        { "week": 1, "topics": ["Doctrinas Económicas"] },
+        { "week": 2, "topics": ["Nociones Generales de Economía"] },
+        { "week": 3, "topics": ["Proceso Económico"] },
+        { "week": 4, "topics": ["Producción I"] },
+        { "week": 5, "topics": ["Producción II"] },
+        { "week": 6, "topics": ["Circulación y Mercado"] },
+        { "week": 7, "topics": ["Precio"] },
+        { "week": 8, "topics": ["Sistema Financiero I"] },
+        { "week": 9, "topics": ["Sistema Financiero II"] },
+        { "week": 10, "topics": ["Actividades Macroeconómicas"] },
+        { "week": 11, "topics": ["Distribución, Consumo y Pobreza"] },
+        { "week": 12, "topics": ["Sector Externo"] },
+        { "week": 13, "topics": ["Integración Económica"] }
+      ]
+    },
+    {
+      "courseName": "Psicología",
+      "weeks": [
+        { "week": 1, "topics": ["Panorama General de la Psicología"] },
+        { "week": 2, "topics": ["El Desarrollo Humano"] },
+        { "week": 3, "topics": ["La Adolescencia y la Identidad Personal"] },
+        { "week": 4, "topics": ["El Sistema de la Personalidad"] },
+        { "week": 5, "topics": ["Las Bases Sociales del Comportamiento"] },
+        { "week": 6, "topics": ["Pensamiento y Creencias"] },
+        { "week": 7, "topics": ["Sexualidad"] },
+        { "week": 8, "topics": ["Salud Sexual"] },
+        { "week": 9, "topics": ["Vínculo Familiar"] },
+        { "week": 10, "topics": ["Aprendizaje"] },
+        { "week": 11, "topics": ["Inteligencia"] },
+        { "week": 12, "topics": ["Cultura de Prevención"] },
+        { "week": 13, "topics": ["Vida Saludable"] }
+      ]
+    },
+    {
+      "courseName": "Filosofía",
+      "weeks": [
+        { "week": 1, "topics": ["Desarrollo del Pensamiento y el Origen de la Filosofía"] },
+        { "week": 2, "topics": ["Historia de la Filosofía de la Edad Antigua y Medieval"] },
+        { "week": 3, "topics": ["Historia de la Filosofía de la Edad Moderna y Contemporánea"] },
+        { "week": 4, "topics": ["El Ser Humano y el Sentido de la Vida"] },
+        { "week": 5, "topics": ["Filosofía del Derecho"] },
+        { "week": 6, "topics": ["Los Valores y la Experiencia Valorativa"] },
+        { "week": 7, "topics": ["El Sentido de la Ética"] },
+        { "week": 8, "topics": ["Ética en Sociedad"] },
+        { "week": 9, "topics": ["Discriminación, Exclusión e Injusticia"] },
+        { "week": 10, "topics": ["Filosofía Política"] },
+        { "week": 11, "topics": ["Gobiernos Democráticos y Dictatoriales"] },
+        { "week": 12, "topics": ["La Migración Internacional como Problema Ético"] },
+        { "week": 13, "topics": ["Los Conflictos Sociales"] }
+      ]
+    },
+    {
+      "courseName": "Educación Cívica",
+      "weeks": [
+        { "week": 1, "topics": ["La Convivencia Social y la Formación Intercultural"] },
+        { "week": 2, "topics": ["Identidad y Patrimonio Nacional"] },
+        { "week": 3, "topics": ["La Participación Ciudadana en el Sistema Democrático"] },
+        { "week": 4, "topics": ["El Estado de Derecho y la Carta Magna"] },
+        { "week": 5, "topics": ["Reconociendo el Ordenamiento Jurídico"] },
+        { "week": 6, "topics": ["Los Derechos Humanos"] },
+        { "week": 7, "topics": ["El Estado Peruano I"] },
+        { "week": 8, "topics": ["El Estado Peruano II"] },
+        { "week": 9, "topics": ["Organismos Constitucionales Autónomos I"] },
+        { "week": 10, "topics": ["Organismos Constitucionales Autónomos II"] },
+        { "week": 11, "topics": ["Conflicto y Violencia"] },
+        { "week": 12, "topics": ["Seguridad y Bienestar Nacional"] },
+        { "week": 13, "topics": ["El Perú en el Mundo Globalizado"] }
+      ]
+    }
+  ]
+}

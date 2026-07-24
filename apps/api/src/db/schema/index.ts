@@ -5,6 +5,7 @@ export * from "./tenants.schema";
 export * from "./users.schema";
 export * from "./courses.schema";
 export * from "./topics.schema";
+export * from "./subtopics.schema";
 export * from "./questions.schema";
 export * from "./exams.schema";
 export * from "./generation-jobs.schema";

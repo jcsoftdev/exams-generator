@@ -12,6 +12,8 @@ import { QuestionStatus, QuestionType } from "../../../../db/schema/enums";
 export interface CreateImageQuestionRecord {
   readonly tenantId: string | null;
   readonly topicId: string;
+  /** Optional fine-grained classification under `topicId` (canonical topic taxonomy). */
+  readonly subtopicId?: string;
   readonly difficulty: Difficulty;
   readonly gradeLevel: string;
   readonly correctAnswer: string;
@@ -116,6 +118,14 @@ export interface BankRepositoryPort {
     patch: UpdateStructuredQuestionRecord,
   ): Promise<QuestionListItem | undefined>;
   topicExists(topicId: string): Promise<boolean>;
+  /**
+   * The subtopic's own `topic_id`, or `undefined` if `subtopicId` doesn't
+   * exist. Lets callers validate a `subtopicId` belongs to the request's
+   * `topicId` before persisting (design doc: bank create validation, review
+   * fix) — a mismatched pair would otherwise write an inconsistent
+   * `question.topic_id`/`subtopic.topic_id` row.
+   */
+  getSubtopicTopicId(subtopicId: string): Promise<string | undefined>;
   updateStructuredQuestionAndTaxonomy(
     id: string,
     currentTenantId: string | null,

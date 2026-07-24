@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { Role } from "@exams-generator/shared";
-import { and, eq, isNull } from "drizzle-orm";
+import { and, eq, inArray, isNull, sql } from "drizzle-orm";
 import { GRADE_LEVELS } from "../modules/exams/domain/value-objects/grade-level";
 import type { GradeLevel, Stage } from "../modules/exams/domain/value-objects/grade-level";
 import { hashPassword } from "../modules/auth/password.util";
@@ -9,10 +9,14 @@ import { db, pool } from "./client";
 import {
   courses,
   cycles,
+  examBlueprintRows,
   examBlueprintTemplateRows,
   examBlueprintTemplates,
   examTypes,
+  generationJobs,
   gradeLevels,
+  questions,
+  subtopics,
   syllabusWeekMaps,
   tenants,
   topics,
@@ -355,7 +359,7 @@ const COLEGIO_SYLLABUS: readonly SyllabusCourse[] = [
  * temas exactos de las 71 preguntas reales); al compartir `(stage, name)` los
  * temas se fusionan en el mismo curso.
  */
-const PREUNI_SYLLABUS: readonly SyllabusCourse[] = [
+export const PREUNI_SYLLABUS: readonly SyllabusCourse[] = [
   {
     name: "Aritmética",
     topics: [
@@ -605,12 +609,14 @@ const PREUNI_SYLLABUS: readonly SyllabusCourse[] = [
    *   this catalog at all. Forcing "Historia" content into the existing
    *   split "Historia del Perú"/"Historia Universal" courses would have
    *   badly mismatched roughly half of UNI's weekly syllabus (see
-   *   `data/uni-preuniversitario-syllabus.json`). `seedUniSyllabusWeekMaps`
+   *   `data/uni-preuniversitario-syllabus.json`). `seedSyllabusWeekMaps`
    *   creates their real topics on demand, one per mapped syllabus week.
    * - "Estadística y Probabilidades" and "Ecología": genuinely new UNCP
    *   Anexo 7 courses with no existing match; UNCP's Anexo 7 is course-level
-   *   only (`topic_id NULL`), and UNI doesn't test either subject, so no
-   *   topic data exists to seed for them yet.
+   *   only (`topic_id NULL`). Both now also get real weekly topics from
+   *   `data/uncp-preuniversitario-syllabus.json` (an approximation — see
+   *   `seedUncpCycles` / `UNCP_SYLLABUS_PATH`), created on demand the same
+   *   way as UNI's "Historia"/"Inglés" above.
    */
   { name: "Historia", topics: [] },
   { name: "Inglés", topics: [] },
@@ -626,7 +632,7 @@ const PREUNI_SYLLABUS: readonly SyllabusCourse[] = [
  * (grade "pre"); they merge into the `PREUNI_SYLLABUS` `Biología` /
  * `Comunicación` course rows.
  */
-const BANK_SAMPLE_COURSES: readonly SyllabusCourse[] = [
+export const BANK_SAMPLE_COURSES: readonly SyllabusCourse[] = [
   {
     name: "Biología",
     topics: [
@@ -1146,17 +1152,83 @@ const UNI_SECTION_TOTALS = { E1: 745, E2: 600, E3: 500 } as const;
 /** Path to the UNI week-by-week syllabus data (design doc §4 `syllabus_week_maps`). */
 const UNI_SYLLABUS_PATH = resolve(__dirname, "data/uni-preuniversitario-syllabus.json");
 
-interface UniSyllabusWeekEntry {
+/**
+ * Path to the UNCP week-by-week syllabus data — an explicitly APPROXIMATED
+ * cronograma (design doc §8), since no official CEPRE UNCP weekly calendar
+ * is published. Derived from the CEPRE UNCP compendio chapter order
+ * (~1 tema/semana), see the JSON file's `_source` field for full provenance.
+ */
+const UNCP_SYLLABUS_PATH = resolve(__dirname, "data/uncp-preuniversitario-syllabus.json");
+
+interface SyllabusWeekEntry {
   readonly week: number;
   readonly topics: readonly string[];
 }
-interface UniSyllabusCourseEntry {
+interface SyllabusCourseEntry {
   readonly courseName: string;
-  readonly weeks: readonly UniSyllabusWeekEntry[];
+  readonly weeks: readonly SyllabusWeekEntry[];
 }
-interface UniSyllabusFile {
-  readonly courses: readonly UniSyllabusCourseEntry[];
+interface SyllabusFile {
+  readonly courses: readonly SyllabusCourseEntry[];
 }
+
+/**
+ * Canonical two-level (topic + subtopic) taxonomy — source of truth for the
+ * shared question bank (design doc: canonical topic taxonomy). Coarse
+ * `topics` stay week-level and shared per course; fine `subtopics` classify
+ * `questions`. `mapsFrom` lists every existing (legacy/variant) `topics.name`
+ * label that collapses into this canonical entry — topic-level `mapsFrom`
+ * has no subtopic (coarse only), subtopic-level `mapsFrom` resolves to that
+ * subtopic with its parent topic.
+ */
+const CANONICAL_TAXONOMY_PATH = resolve(__dirname, "data/canonical-taxonomy.json");
+
+interface CanonicalSubtopic {
+  readonly slug: string;
+  readonly name: string;
+  readonly mapsFrom: readonly string[];
+}
+interface CanonicalTopic {
+  readonly slug: string;
+  readonly name: string;
+  readonly mapsFrom: readonly string[];
+  readonly subtopics: readonly CanonicalSubtopic[];
+}
+interface CanonicalCourse {
+  readonly course: string;
+  readonly topics: readonly CanonicalTopic[];
+}
+interface CanonicalTaxonomyFile {
+  readonly courses: readonly CanonicalCourse[];
+}
+
+function loadCanonicalTaxonomy(): CanonicalTaxonomyFile {
+  return JSON.parse(readFileSync(CANONICAL_TAXONOMY_PATH, "utf8")) as CanonicalTaxonomyFile;
+}
+
+/** One canonical target a legacy label resolves to. */
+interface CanonicalTarget {
+  readonly courseId: string;
+  readonly topicId: string;
+  readonly subtopicId?: string;
+}
+
+/** `${canonical course name} ${legacy/variant label}` -> canonical target. */
+type CanonicalIndex = Map<string, CanonicalTarget>;
+
+/**
+ * Legacy preuniversitario courses fully folded into a canonical course by
+ * Fase 1's taxonomy design — see canonical-taxonomy.json's `Historia`
+ * `ambiguous` note: both courses' topics (0 questions each) were merged
+ * entirely into `Historia`'s chronological topics. `reconcileLegacyTopics`
+ * needs this because its lookup key is `${legacy topic's own course name}
+ * ${legacy topic name}`, and these two course names never appear as a
+ * canonical course of their own — only as an alias into "Historia".
+ */
+export const LEGACY_COURSE_ALIASES: Readonly<Record<string, string>> = {
+  "Historia del Perú": "Historia",
+  "Historia Universal": "Historia",
+};
 
 const DEMO_TENANT = {
   name: "Colegio Demo",
@@ -1200,8 +1272,251 @@ export async function seed(): Promise<void> {
   await seedStage("colegio", COLEGIO_SYLLABUS);
   await seedStage("preuniversitario", PREUNI_SYLLABUS);
   await seedStage("preuniversitario", BANK_SAMPLE_COURSES);
-  await seedExamBlueprintData();
+  const canonicalIndex = await seedCanonicalTaxonomy();
+  await seedExamBlueprintData(canonicalIndex);
+  await reconcileLegacyTopics(canonicalIndex);
   await seedCycle();
+}
+
+/**
+ * Upserts the canonical topic + subtopic catalog (`data/canonical-taxonomy.json`)
+ * for every preuniversitario course it lists, and returns an in-memory index
+ * from every legacy/variant label (`mapsFrom`) to its canonical target.
+ *
+ * Topics are resolved manually (slug match, then name match, then insert)
+ * rather than a single batched `onConflictDoUpdate` on `(courseId, slug,
+ * gradeLevel)`: a canonical topic's `name` sometimes exactly matches an
+ * already-seeded LEGACY row's name for the same `(courseId, gradeLevel)`
+ * (e.g. `seedStage`'s raw "Divisibilidad" and the canonical topic of the
+ * same name) — inserting a fresh row would then violate the OTHER unique
+ * index (`topics_course_id_name_grade_idx`), which `ON CONFLICT (slug, ...)`
+ * cannot catch. Adopting that legacy row in place (setting its `slug`)
+ * instead of inserting a duplicate avoids the collision and doubles as
+ * reconciliation for that one row.
+ */
+async function seedCanonicalTaxonomy(): Promise<CanonicalIndex> {
+  const file = loadCanonicalTaxonomy();
+  const index: CanonicalIndex = new Map();
+
+  for (const courseEntry of file.courses) {
+    const courseId = await getCourseId(courseEntry.course);
+
+    const existingRows = await db
+      .select({ id: topics.id, name: topics.name, slug: topics.slug })
+      .from(topics)
+      .where(and(eq(topics.courseId, courseId), eq(topics.gradeLevel, "pre")));
+
+    const existingBySlug = new Map(
+      existingRows.filter((row): row is { id: string; name: string; slug: string } => row.slug !== null).map((row) => [row.slug, row]),
+    );
+    const existingByName = new Map(existingRows.map((row) => [row.name, row]));
+
+    const topicIdBySlug = new Map<string, string>();
+
+    for (const topic of courseEntry.topics) {
+      const bySlug = existingBySlug.get(topic.slug);
+      if (bySlug) {
+        if (bySlug.name !== topic.name) {
+          await db.update(topics).set({ name: topic.name }).where(eq(topics.id, bySlug.id));
+        }
+        topicIdBySlug.set(topic.slug, bySlug.id);
+        continue;
+      }
+
+      const byName = existingByName.get(topic.name);
+      if (byName) {
+        await db.update(topics).set({ slug: topic.slug }).where(eq(topics.id, byName.id));
+        topicIdBySlug.set(topic.slug, byName.id);
+        continue;
+      }
+
+      const [inserted] = await db
+        .insert(topics)
+        .values({ courseId, name: topic.name, slug: topic.slug, gradeLevel: "pre" as GradeLevel })
+        .returning({ id: topics.id });
+      if (!inserted) {
+        throw new Error(
+          `Seed invariant violated: insert into topics returned no row for '${topic.slug}' (${courseEntry.course})`,
+        );
+      }
+      topicIdBySlug.set(topic.slug, inserted.id);
+    }
+
+    const subtopicSeeds = courseEntry.topics.flatMap((topic) => {
+      const topicId = topicIdBySlug.get(topic.slug);
+      if (!topicId) {
+        throw new Error(
+          `Seed invariant violated: canonical topic '${topic.slug}' (${courseEntry.course}) missing after upsert`,
+        );
+      }
+      return topic.subtopics.map((subtopic) => ({ topicId, slug: subtopic.slug, name: subtopic.name }));
+    });
+
+    let subtopicRows: Array<{ id: string; topicId: string; slug: string }> = [];
+    if (subtopicSeeds.length > 0) {
+      subtopicRows = await db
+        .insert(subtopics)
+        .values(subtopicSeeds)
+        .onConflictDoUpdate({
+          target: [subtopics.topicId, subtopics.slug],
+          set: { name: sql`excluded.name` },
+        })
+        .returning({ id: subtopics.id, topicId: subtopics.topicId, slug: subtopics.slug });
+    }
+
+    const subtopicIdByKey = new Map(subtopicRows.map((row) => [`${row.topicId}:${row.slug}`, row.id]));
+
+    for (const topic of courseEntry.topics) {
+      const topicId = topicIdBySlug.get(topic.slug);
+      if (!topicId) {
+        throw new Error(
+          `Seed invariant violated: canonical topic '${topic.slug}' (${courseEntry.course}) missing after upsert`,
+        );
+      }
+
+      for (const legacyLabel of topic.mapsFrom) {
+        index.set(`${courseEntry.course} ${legacyLabel}`, { courseId, topicId });
+      }
+
+      for (const subtopic of topic.subtopics) {
+        const subtopicId = subtopicIdByKey.get(`${topicId}:${subtopic.slug}`);
+        if (!subtopicId) {
+          throw new Error(
+            `Seed invariant violated: canonical subtopic '${subtopic.slug}' (${courseEntry.course}/${topic.slug}) missing after upsert`,
+          );
+        }
+        for (const legacyLabel of subtopic.mapsFrom) {
+          index.set(`${courseEntry.course} ${legacyLabel}`, { courseId, topicId, subtopicId });
+        }
+      }
+    }
+  }
+
+  return index;
+}
+
+/**
+ * Legacy preuniversitario topics with NO canonical mapping, explicitly
+ * authorized for deletion by Fase 1's own taxonomy design — see
+ * canonical-taxonomy.json's `Geometría` course `ambiguous` note: "Geometría
+ * analítica" (0 questions) is a stray/misclassified raw label the note
+ * itself offers "drop it" as one of two valid resolutions for. This is NOT
+ * a general escape hatch — every other legacy label with no mapping still
+ * throws (`reconcileLegacyTopics` below); only the row(s) explicitly listed
+ * here (keyed `${courseName} / ${topicName}`) are dropped, and only after
+ * confirming (by the FK delete simply failing loudly otherwise) nothing
+ * real still references them.
+ */
+export const LEGACY_TOPICS_TO_DROP: ReadonlySet<string> = new Set(["Geometría / Geometría analítica"]);
+
+/**
+ * FK-safe dev cleanup (design doc: canonical topic taxonomy): repoints every
+ * `questions`/`generation_jobs`/`exam_blueprint_rows`/`exam_blueprint_template_rows`/
+ * `syllabus_week_maps` row off a legacy (`slug IS NULL`) preuniversitario
+ * topic onto its canonical replacement, then deletes the legacy row.
+ * Idempotent: converges to zero legacy preuniversitario topics regardless of
+ * how many times `seed()` runs. Scoped to the preuniversitario stage only —
+ * the canonical taxonomy doesn't cover escuela/colegio, so their topics are
+ * intentionally left untouched (`slug` stays NULL there, by design, not by
+ * omission).
+ *
+ * Wrapped in a single `db.transaction`: every repoint + the final bulk
+ * delete either all lands or all rolls back. Without this, a throw partway
+ * through (e.g. an unmapped legacy topic on iteration N) would leave earlier
+ * iterations' FK repoints committed but their legacy topic rows still
+ * present — a wedged half-migrated state that the next `seed()` run can't
+ * cleanly retry.
+ */
+async function reconcileLegacyTopics(index: CanonicalIndex): Promise<void> {
+  const legacyTopics = await db
+    .select({ id: topics.id, name: topics.name, courseName: courses.name, courseId: topics.courseId })
+    .from(topics)
+    .innerJoin(courses, eq(topics.courseId, courses.id))
+    .where(and(isNull(topics.slug), eq(courses.stage, "preuniversitario")));
+
+  if (legacyTopics.length === 0) {
+    return;
+  }
+
+  const legacyIds = legacyTopics.map((legacy) => legacy.id);
+
+  await db.transaction(async (tx) => {
+    for (const legacy of legacyTopics) {
+      const aliasCourseName = LEGACY_COURSE_ALIASES[legacy.courseName] ?? legacy.courseName;
+      const canonical =
+        index.get(`${legacy.courseName} ${legacy.name}`) ?? index.get(`${aliasCourseName} ${legacy.name}`);
+
+      if (!canonical) {
+        if (LEGACY_TOPICS_TO_DROP.has(`${legacy.courseName} / ${legacy.name}`)) {
+          continue;
+        }
+        throw new Error(
+          `Seed invariant violated: legacy topic '${legacy.name}' (${legacy.courseName}) has no canonical mapping`,
+        );
+      }
+
+      // `LEGACY_COURSE_ALIASES` courses (Historia del Perú/Universal) map
+      // onto a canonical topic that lives under a DIFFERENT course
+      // (`Historia`) than the legacy row's own course — repointing only
+      // `topic_id` would leave `course_id` on the repointed rows pointing at
+      // the old course. Repoint `course_id` too whenever it differs.
+      const courseIdChanged = canonical.courseId !== legacy.courseId;
+
+      // (c) repoint questions/generation_jobs/exam_blueprint_rows/exam_blueprint_template_rows
+      // off the legacy topic. `questions` has no `course_id` column (course
+      // is derived via `topics.course_id`), so it's excluded from the
+      // course_id repoint.
+      await tx
+        .update(questions)
+        .set({ topicId: canonical.topicId, subtopicId: canonical.subtopicId ?? null })
+        .where(eq(questions.topicId, legacy.id));
+      await tx.update(generationJobs).set({ topicId: canonical.topicId }).where(eq(generationJobs.topicId, legacy.id));
+      await tx
+        .update(examBlueprintRows)
+        .set({ topicId: canonical.topicId, ...(courseIdChanged ? { courseId: canonical.courseId } : {}) })
+        .where(eq(examBlueprintRows.topicId, legacy.id));
+      // `exam_blueprint_template_rows.topic_id` is ALSO an FK to `topics.id`
+      // (unlike `syllabus_week_maps`, there is no unique index on
+      // `(template_id, topic_id)` here — confirmed in
+      // `exam-blueprint-template-rows.schema.ts` — so a plain update can
+      // never collide), and the final `db.delete(topics)` below would throw
+      // on any legacy topic still referenced by a template row if this were
+      // skipped.
+      await tx
+        .update(examBlueprintTemplateRows)
+        .set({ topicId: canonical.topicId, ...(courseIdChanged ? { courseId: canonical.courseId } : {}) })
+        .where(eq(examBlueprintTemplateRows.topicId, legacy.id));
+
+      // (d) repoint syllabus_week_maps, respecting the (template_id, topic_id)
+      // unique index: if the canonical topic is already mapped for that
+      // template, the legacy week-map row is redundant — delete it instead.
+      const legacyWeekMaps = await tx
+        .select({ id: syllabusWeekMaps.id, templateId: syllabusWeekMaps.templateId })
+        .from(syllabusWeekMaps)
+        .where(eq(syllabusWeekMaps.topicId, legacy.id));
+
+      for (const weekMap of legacyWeekMaps) {
+        const [existingCanonical] = await tx
+          .select({ id: syllabusWeekMaps.id })
+          .from(syllabusWeekMaps)
+          .where(
+            and(eq(syllabusWeekMaps.templateId, weekMap.templateId), eq(syllabusWeekMaps.topicId, canonical.topicId)),
+          );
+
+        if (existingCanonical) {
+          await tx.delete(syllabusWeekMaps).where(eq(syllabusWeekMaps.id, weekMap.id));
+        } else {
+          await tx
+            .update(syllabusWeekMaps)
+            .set({ topicId: canonical.topicId, ...(courseIdChanged ? { courseId: canonical.courseId } : {}) })
+            .where(eq(syllabusWeekMaps.id, weekMap.id));
+        }
+      }
+    }
+
+    // (e) delete the legacy rows now that nothing references them.
+    await tx.delete(topics).where(inArray(topics.id, legacyIds));
+  });
 }
 
 async function seedGradeLevels(): Promise<void> {
@@ -1310,29 +1625,6 @@ async function getCourseId(name: string): Promise<string> {
     .where(and(eq(courses.stage, "preuniversitario"), eq(courses.name, name)));
   if (!row) {
     throw new Error(`Seed invariant violated: preuniversitario course '${name}' missing — run seedStage first`);
-  }
-  return row.id;
-}
-
-/**
- * Upserts one topic under `courseId` and returns its id — same
- * insert-then-select shape as `seedStage`'s inner loop, factored out because
- * `seedUniSyllabusWeekMaps` needs it for topics that aren't in any static
- * `SyllabusCourse` list (they're read from `data/uni-preuniversitario-syllabus.json`).
- */
-async function ensureTopic(courseId: string, name: string, gradeLevel: GradeLevel): Promise<string> {
-  await db
-    .insert(topics)
-    .values({ courseId, name, gradeLevel })
-    .onConflictDoNothing({ target: [topics.courseId, topics.name, topics.gradeLevel] });
-
-  const [row] = await db
-    .select({ id: topics.id })
-    .from(topics)
-    .where(and(eq(topics.courseId, courseId), eq(topics.name, name), eq(topics.gradeLevel, gradeLevel)));
-
-  if (!row) {
-    throw new Error(`Seed invariant violated: topic '${name}' missing after insert`);
   }
   return row.id;
 }
@@ -1493,29 +1785,47 @@ async function seedUncpBlueprintRows(templateId: string, rows: readonly UncpAnex
 }
 
 /**
- * Seeds `syllabus_week_maps` for the UNI preuniversitario template from
- * `data/uni-preuniversitario-syllabus.json` (design doc §4). Each JSON
- * course entry lists only the weeks that got a real topic mapping; skipped
- * weeks (práctica calificada, repaso, content already covered by another
- * week's topic, etc.) live in that same file's `skipped` array per course,
- * for audit — they are intentionally not inserted anywhere.
+ * Seeds `syllabus_week_maps` for `templateId` from a `SyllabusFile` at
+ * `syllabusPath` (design doc §4) — shared by both UNI's official cronograma
+ * (`UNI_SYLLABUS_PATH`) and UNCP's approximated one (`UNCP_SYLLABUS_PATH`).
+ * Each JSON course entry lists only the weeks that got a real topic mapping;
+ * skipped weeks (práctica calificada, repaso, content already covered by
+ * another week's topic, etc.) live in that same file's `skipped` array per
+ * course, for audit — they are intentionally not inserted anywhere.
+ *
+ * Topics are NEVER created here anymore (canonical topic taxonomy design):
+ * every raw week-topic label must already resolve against `index`
+ * (`seedCanonicalTaxonomy`'s output). A label with no canonical mapping is a
+ * seed invariant violation, not something to silently create a topic for —
+ * see `canonical-taxonomy-conservation.spec.ts` for the pure guard that
+ * proves this can't happen for the two syllabus files this project ships.
  */
-async function seedUniSyllabusWeekMaps(templateId: string): Promise<number> {
-  const file = JSON.parse(readFileSync(UNI_SYLLABUS_PATH, "utf8")) as UniSyllabusFile;
+async function seedSyllabusWeekMaps(templateId: string, syllabusPath: string, index: CanonicalIndex): Promise<number> {
+  const file = JSON.parse(readFileSync(syllabusPath, "utf8")) as SyllabusFile;
   let count = 0;
 
   for (const course of file.courses) {
-    const courseId = await getCourseId(course.courseName);
-    for (const weekEntry of course.weeks) {
-      for (const topicName of weekEntry.topics) {
-        const topicId = await ensureTopic(courseId, topicName, "pre");
-        await db
-          .insert(syllabusWeekMaps)
-          .values({ templateId, courseId, topicId, weekNumber: weekEntry.week })
-          .onConflictDoNothing({ target: [syllabusWeekMaps.templateId, syllabusWeekMaps.topicId] });
-        count += 1;
-      }
+    const weekMapValues = course.weeks.flatMap((weekEntry) =>
+      weekEntry.topics.map((topicLabel) => {
+        const canonical = index.get(`${course.courseName} ${topicLabel}`);
+        if (!canonical) {
+          throw new Error(
+            `Seed invariant violated: syllabus label '${topicLabel}' (${course.courseName}) has no canonical topic`,
+          );
+        }
+        return { templateId, courseId: canonical.courseId, topicId: canonical.topicId, weekNumber: weekEntry.week };
+      }),
+    );
+
+    if (weekMapValues.length === 0) {
+      continue;
     }
+
+    await db
+      .insert(syllabusWeekMaps)
+      .values(weekMapValues)
+      .onConflictDoNothing({ target: [syllabusWeekMaps.templateId, syllabusWeekMaps.topicId] });
+    count += weekMapValues.length;
   }
 
   return count;
@@ -1524,18 +1834,23 @@ async function seedUniSyllabusWeekMaps(templateId: string): Promise<number> {
 /**
  * Orchestrates phase-2 seeding (design doc §4): 1 UNI template (Ciclo
  * Preuniversitario, the only UNI track with full syllabus data — see task
- * notes) + 5 UNCP templates (áreas I-V), their blueprint rows, and UNI's
- * week-by-week syllabus maps. UNCP gets no `syllabus_week_maps` — confirmed
- * no public cronograma exists (design doc §2, §8).
+ * notes) + 5 UNCP templates (áreas I-V), their blueprint rows, and each
+ * university's week-by-week syllabus maps. UNI's syllabus is its official
+ * CEPRE-UNI cronograma; UNCP's is an explicitly APPROXIMATED one (design doc
+ * §8 — no public cronograma exists) seeded from `UNCP_SYLLABUS_PATH`. The
+ * weekly syllabus is course-level / área-independent, so the same maps are
+ * seeded per área template — mirrors how UNI's syllabus is seeded per
+ * template.
  */
-async function seedExamBlueprintData(): Promise<void> {
+async function seedExamBlueprintData(index: CanonicalIndex): Promise<void> {
   const uniTemplateId = await seedExamBlueprintTemplate("uni", "preuniversitario", "2026-2");
   await seedUniBlueprintRows(uniTemplateId);
-  await seedUniSyllabusWeekMaps(uniTemplateId);
+  await seedSyllabusWeekMaps(uniTemplateId, UNI_SYLLABUS_PATH, index);
 
   for (const [trackCode, rows] of Object.entries(UNCP_ANEXO7)) {
     const templateId = await seedExamBlueprintTemplate("uncp", trackCode, "2026-II");
     await seedUncpBlueprintRows(templateId, rows);
+    await seedSyllabusWeekMaps(templateId, UNCP_SYLLABUS_PATH, index);
   }
 }
 
@@ -1546,13 +1861,9 @@ async function seedExamBlueprintData(): Promise<void> {
  * (design doc §8). Global default (`tenant_id = NULL`), so every tenant
  * sees it unless they insert their own override row.
  *
- * No UNCP cycle is seeded here on purpose. CEPRUNC has zero
- * `syllabus_week_maps` rows (confirmed absent after two research passes —
- * design doc §2, §8), so "current week" has no functional consumer for any
- * UNCP track yet. Inventing a `starts_on` for UNCP would be exactly the
- * fabricated precision the design doc warns against (§3.6's spirit: don't
- * persist a number you don't actually have) — better to leave it unseeded
- * until a real cronograma shows up or someone configures it manually.
+ * Also seeds 5 UNCP cycles (one per área track, I-V) — see
+ * `seedUncpCycles` below for why their `starts_on` is an
+ * EXAM-DATE-ANCHORED APPROXIMATION rather than an official date.
  */
 async function seedCycle(): Promise<void> {
   const [university] = await db
@@ -1582,19 +1893,75 @@ async function seedCycle(): Promise<void> {
         eq(cycles.isActive, true),
       ),
     );
-  if (existing) {
-    return;
+  if (!existing) {
+    await db.insert(cycles).values({
+      tenantId: null,
+      universityId: university.id,
+      trackId: track.id,
+      label: "Ciclo Preuniversitario 2026-2",
+      startsOn: new Date("2026-03-05"),
+      weekLengthDays: 7,
+      isActive: true,
+    });
   }
 
-  await db.insert(cycles).values({
-    tenantId: null,
-    universityId: university.id,
-    trackId: track.id,
-    label: "Ciclo Preuniversitario 2026-2",
-    startsOn: new Date("2026-03-05"),
-    weekLengthDays: 7,
-    isActive: true,
-  });
+  await seedUncpCycles();
+}
+
+/**
+ * Seeds one active global cycle per UNCP área track (I-V). Unlike UNI's
+ * cycle, CEPRUNC never published an official week-by-week cronograma
+ * (confirmed after two research passes — design doc §2, §8), so there is no
+ * real "INICIO DE CLASES" date to quote. `startsOn` here is instead an
+ * EXAM-DATE-ANCHORED APPROXIMATION: the 2026-08-08 Examen Ordinario date
+ * minus the syllabus's 13 weeks, i.e. 2026-05-09 — consistent with (not
+ * derived from) `data/uncp-preuniversitario-syllabus.json`'s own
+ * approximation. This is exactly the kind of manual/approximated setup the
+ * design doc §8 permits, clearly distinguished from UNI's verified date.
+ */
+async function seedUncpCycles(): Promise<void> {
+  const [university] = await db
+    .select({ id: universities.id })
+    .from(universities)
+    .where(eq(universities.code, "uncp"));
+  if (!university) {
+    throw new Error(`Seed invariant violated: university 'uncp' missing`);
+  }
+
+  for (const trackSeed of UNCP_TRACKS) {
+    const [track] = await db
+      .select({ id: tracks.id })
+      .from(tracks)
+      .where(and(eq(tracks.universityId, university.id), eq(tracks.code, trackSeed.code)));
+    if (!track) {
+      throw new Error(`Seed invariant violated: track '${trackSeed.code}' missing for university 'uncp'`);
+    }
+
+    const [existing] = await db
+      .select({ id: cycles.id })
+      .from(cycles)
+      .where(
+        and(
+          isNull(cycles.tenantId),
+          eq(cycles.universityId, university.id),
+          eq(cycles.trackId, track.id),
+          eq(cycles.isActive, true),
+        ),
+      );
+    if (existing) {
+      continue;
+    }
+
+    await db.insert(cycles).values({
+      tenantId: null,
+      universityId: university.id,
+      trackId: track.id,
+      label: "Ciclo CEPRE UNCP 2026-II (aprox.)",
+      startsOn: new Date("2026-05-09"),
+      weekLengthDays: 7,
+      isActive: true,
+    });
+  }
 }
 
 /* istanbul ignore next -- CLI entrypoint, exercised manually / in deploys, not under unit test */

@@ -2,6 +2,7 @@ import { boolean, index, jsonb, pgTable, text, timestamp, uuid } from "drizzle-o
 import { assets } from "./assets.schema";
 import { difficultyEnum, questionStatusEnum, questionTypeEnum } from "./enums";
 import { gradeLevels } from "./grade-levels.schema";
+import { subtopics } from "./subtopics.schema";
 import { tenants } from "./tenants.schema";
 import { topics } from "./topics.schema";
 import { users } from "./users.schema";
@@ -36,6 +37,12 @@ export const questions = pgTable(
     topicId: uuid("topic_id")
       .notNull()
       .references(() => topics.id),
+    /**
+     * Fine-grained classification (nullable — not every question is
+     * subtopic-tagged yet). `topicId` above stays the denormalized coarse
+     * parent so existing topic-scoped queries keep working unchanged.
+     */
+    subtopicId: uuid("subtopic_id").references(() => subtopics.id),
     difficulty: difficultyEnum("difficulty").notNull(),
     gradeLevel: text("grade_level")
       .notNull()
@@ -56,6 +63,7 @@ export const questions = pgTable(
   (table) => ({
     tenantIdIdx: index("questions_tenant_id_idx").on(table.tenantId),
     topicIdIdx: index("questions_topic_id_idx").on(table.topicId),
+    subtopicIdIdx: index("questions_subtopic_id_idx").on(table.subtopicId),
     gradeLevelIdx: index("questions_grade_level_idx").on(table.gradeLevel),
     difficultyIdx: index("questions_difficulty_idx").on(table.difficulty),
     statusIdx: index("questions_status_idx").on(table.status),

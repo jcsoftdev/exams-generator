@@ -17,6 +17,15 @@ export const topics = pgTable(
       .notNull()
       .references(() => courses.id),
     name: text("name").notNull(),
+    /**
+     * Canonical slug (design doc: two-level topic taxonomy). NULL on legacy/
+     * variant rows created on demand from raw syllabus labels before the
+     * reconciliation pass (`reconcileLegacyTopics` in `db/seed.ts`) folds
+     * them into their canonical counterpart and deletes them. A fully
+     * reconciled catalog has no `slug IS NULL` row left for the stages the
+     * canonical taxonomy covers (currently preuniversitario only).
+     */
+    slug: text("slug"),
     gradeLevel: text("grade_level").references(() => gradeLevels.code),
   },
   (table) => ({
@@ -24,6 +33,13 @@ export const topics = pgTable(
     courseIdNameGradeIdx: uniqueIndex("topics_course_id_name_grade_idx").on(
       table.courseId,
       table.name,
+      table.gradeLevel,
+    ),
+    // Postgres treats every NULL as distinct, so legacy rows (slug NULL)
+    // never collide here — only canonical rows (slug set) are deduped.
+    courseIdSlugGradeIdx: uniqueIndex("topics_course_id_slug_grade_idx").on(
+      table.courseId,
+      table.slug,
       table.gradeLevel,
     ),
   }),

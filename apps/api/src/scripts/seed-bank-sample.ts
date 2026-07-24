@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 import { Role } from "@exams-generator/shared";
 import { and, eq } from "drizzle-orm";
 import { db, pool } from "../db/client";
-import { courses, topics, users } from "../db/schema";
+import { courses, subtopics, topics, users } from "../db/schema";
 import { TokenService } from "../modules/auth/token.service";
 
 /** Must match `BANK_SAMPLE_ADMIN.email` in `db/seed.ts`. */
@@ -52,6 +52,50 @@ const BANK_QUESTIONS_DIR = resolve(__dirname, "../../../../bank-questions");
 const CLASSIFICATION_PATH = resolve(BANK_QUESTIONS_DIR, "classification.json");
 const API_BASE_URL = process.env.API_BASE_URL ?? "http://localhost:3012";
 
+/**
+ * `classification.json`'s `topic` labels are the FINE subtopic names (they
+ * appear as `subtopics[].mapsFrom` in the canonical taxonomy) — resolving a
+ * question's classification now means finding its canonical subtopic (and
+ * that subtopic's parent topic) instead of a topic by exact name match,
+ * since coarse topics are shared/canonical and no longer created per label.
+ */
+const CANONICAL_TAXONOMY_PATH = resolve(__dirname, "../db/data/canonical-taxonomy.json");
+
+interface CanonicalSubtopicEntry {
+  readonly slug: string;
+  readonly mapsFrom: readonly string[];
+}
+interface CanonicalTopicEntry {
+  readonly slug: string;
+  readonly subtopics: readonly CanonicalSubtopicEntry[];
+}
+interface CanonicalCourseEntry {
+  readonly course: string;
+  readonly topics: readonly CanonicalTopicEntry[];
+}
+interface CanonicalTaxonomyFile {
+  readonly courses: readonly CanonicalCourseEntry[];
+}
+
+/** classification label -> canonical (topic slug, subtopic slug) for one course. */
+function buildLabelToCanonicalSlugs(courseName: string): Map<string, { topicSlug: string; subtopicSlug: string }> {
+  const file = JSON.parse(readFileSync(CANONICAL_TAXONOMY_PATH, "utf8")) as CanonicalTaxonomyFile;
+  const courseEntry = file.courses.find((entry) => entry.course === courseName);
+  if (!courseEntry) {
+    throw new Error(`Canonical taxonomy has no course '${courseName}'`);
+  }
+
+  const map = new Map<string, { topicSlug: string; subtopicSlug: string }>();
+  for (const topic of courseEntry.topics) {
+    for (const subtopic of topic.subtopics) {
+      for (const label of subtopic.mapsFrom) {
+        map.set(label, { topicSlug: topic.slug, subtopicSlug: subtopic.slug });
+      }
+    }
+  }
+  return map;
+}
+
 const SECTIONS: readonly SectionConfig[] = [
   { key: "biologia", courseName: "Biología", folder: "biologia" },
   { key: "comunicacion", courseName: "Comunicación", folder: "COMUNICACION" },
@@ -98,16 +142,38 @@ async function main(): Promise<void> {
       throw new Error(`Course '${section.courseName}' not found — run 'pnpm --filter api db:seed' first.`);
     }
 
+    const labelToCanonicalSlugs = buildLabelToCanonicalSlugs(section.courseName);
+
     for (const entry of classification[section.key]) {
       const label = `${section.folder}/${entry.file}`;
       try {
+        const canonicalSlugs = labelToCanonicalSlugs.get(entry.topic);
+        if (!canonicalSlugs) {
+          throw new Error(
+            `Classification label '${entry.topic}' (${section.courseName}) has no canonical subtopic mapping`,
+          );
+        }
+
         const [topicRow] = await db
           .select({ id: topics.id })
           .from(topics)
-          .where(and(eq(topics.courseId, courseRow.id), eq(topics.name, entry.topic)));
+          .where(and(eq(topics.courseId, courseRow.id), eq(topics.slug, canonicalSlugs.topicSlug)));
 
         if (!topicRow) {
-          throw new Error(`Topic '${entry.topic}' not found for course '${section.courseName}'`);
+          throw new Error(
+            `Canonical topic '${canonicalSlugs.topicSlug}' not found for course '${section.courseName}' — run 'pnpm --filter api db:seed' first.`,
+          );
+        }
+
+        const [subtopicRow] = await db
+          .select({ id: subtopics.id })
+          .from(subtopics)
+          .where(and(eq(subtopics.topicId, topicRow.id), eq(subtopics.slug, canonicalSlugs.subtopicSlug)));
+
+        if (!subtopicRow) {
+          throw new Error(
+            `Canonical subtopic '${canonicalSlugs.subtopicSlug}' not found under topic '${canonicalSlugs.topicSlug}' — run 'pnpm --filter api db:seed' first.`,
+          );
         }
 
         const imagePath = resolve(BANK_QUESTIONS_DIR, section.folder, entry.file);
@@ -116,6 +182,7 @@ async function main(): Promise<void> {
         const form = new FormData();
         form.set("courseId", courseRow.id);
         form.set("topicId", topicRow.id);
+        form.set("subtopicId", subtopicRow.id);
         form.set("difficulty", entry.difficulty);
         form.set("gradeLevel", classification.grade_level);
         form.set("correctAnswer", entry.correct_answer);
