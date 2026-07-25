@@ -13,6 +13,7 @@
     "db:setup": "pnpm --filter @exams-generator/api db:migrate && pnpm --filter @exams-generator/api db:seed",
     "build": "turbo run build",
     "test": "turbo run test",
+    "smoke:domains": "node infra/smoke-test-domains.mjs",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,html,scss,json,md}\""
   },

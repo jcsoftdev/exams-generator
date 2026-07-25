@@ -14,14 +14,16 @@ async function bootstrap() {
   // before this line until it's set, so nothing before this point is lost.
   app.useLogger(app.get(Logger));
   app.use(helmet());
-  // No `app.enableCors()` call — DELIBERATE, not an oversight (audit P2).
-  // Nest ships CORS disabled by default, so with no explicit config the API
-  // already rejects cross-origin browser reads. Prod is same-origin by
-  // design: nginx proxies `/api/*` to this service under the SAME origin as
-  // the Angular app (`infra/nginx/web.conf`), and dev mirrors that via the
-  // Angular CLI proxy. Enabling CORS here would only be needed for a future
-  // consumer on a different origin (e.g. a separate marketing site calling
-  // the API directly) — none exists today.
+  // The web app now lives on a tenant subdomain (`{slug}.creaexamen.com`)
+  // while the API is centralized on `api.creaexamen.com` — no longer
+  // same-origin, so cross-origin browser reads need explicit CORS. Auth is
+  // Bearer-token-in-header (see apps/web auth.interceptor), never cookies,
+  // so `credentials` stays false — no `Access-Control-Allow-Credentials`
+  // needed and no CSRF exposure from enabling this.
+  app.enableCors({
+    origin: [/^https:\/\/([a-z0-9-]+\.)?creaexamen\.com$/],
+    credentials: false,
+  });
   // Safety net for any FUTURE class-based DTO (class-validator decorators).
   // Every DTO today (`LoginRequestDto` etc., see @exams-generator/shared) is
   // a plain TS interface — deliberately framework-agnostic so it can be

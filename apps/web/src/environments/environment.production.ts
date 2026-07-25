@@ -7,5 +7,8 @@
 // of truth for the `AppEnvironment` type used by dev code and tests.
 export const environment: { production: boolean; apiBaseUrl: string } = {
   production: true,
-  apiBaseUrl: '/api',
+  // Cross-origin now: web is on a tenant subdomain (`{slug}.creaexamen.com`),
+  // api is centralized on its own (`api.creaexamen.com`). See main.ts's
+  // app.enableCors() on the API side.
+  apiBaseUrl: 'https://api.creaexamen.com',
 };

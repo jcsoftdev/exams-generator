@@ -94,6 +94,12 @@ services:
       api:
         condition: service_healthy
 
+  landing:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.landing
+    restart: unless-stopped
+
 volumes:
   postgres_data:
   minio_data:
