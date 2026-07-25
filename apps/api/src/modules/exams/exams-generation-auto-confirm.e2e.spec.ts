@@ -7,11 +7,13 @@ import request from "supertest";
 import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
+import { generateVersionsAndWait } from "../../test-support/generate-versions";
 import {
   assets,
   courses,
   examBlueprintRows,
   examQuestions,
+  examVersionJobs,
   exams,
   examVersions,
   questions,
@@ -98,6 +100,7 @@ describe("POST /exams/:examId/versions — auto-confirm on generate (e2e, B3)", 
         "delete exams",
         async () => {
           if (createdExamIds.length > 0) {
+            await db.delete(examVersionJobs).where(inArray(examVersionJobs.examId, createdExamIds));
             await db.delete(examVersions).where(inArray(examVersions.examId, createdExamIds));
             await db.delete(examQuestions).where(inArray(examQuestions.examId, createdExamIds));
             await db.delete(examBlueprintRows).where(inArray(examBlueprintRows.examId, createdExamIds));
@@ -215,8 +218,13 @@ describe("POST /exams/:examId/versions — auto-confirm on generate (e2e, B3)", 
     const beforeGenerate = await getExamRequest(examId).expect(200);
     expect(beforeGenerate.body.status).toBe("draft");
 
-    const generateResponse = await versionsRequest(examId).send({ versionCount: 2 }).expect(201);
-    expect(generateResponse.body).toHaveLength(2);
+    await generateVersionsAndWait(app, tenantAToken, examId, 2);
+
+    const versions = await request(app.getHttpServer())
+      .get(`/exams/${examId}/versions`)
+      .set("Authorization", `Bearer ${tenantAToken}`)
+      .expect(200);
+    expect(versions.body).toHaveLength(2);
 
     const afterGenerate = await getExamRequest(examId).expect(200);
     expect(afterGenerate.body.status).toBe("ready");
@@ -251,12 +259,12 @@ describe("POST /exams/:examId/versions — auto-confirm on generate (e2e, B3)", 
     await createApprovedQuestion(topicId, gradeLevel);
     const examId = await createDraftExam(topicId, gradeLevel, 1);
 
-    await versionsRequest(examId).send({ versionCount: 1 }).expect(201);
+    await generateVersionsAndWait(app, tenantAToken, examId, 1);
     const afterFirst = await getExamRequest(examId).expect(200);
     expect(afterFirst.body.status).toBe("ready");
 
     // Second call on the already-ready exam succeeds without error.
-    await versionsRequest(examId).send({ versionCount: 1 }).expect(201);
+    await generateVersionsAndWait(app, tenantAToken, examId, 1);
     const afterSecond = await getExamRequest(examId).expect(200);
     expect(afterSecond.body.status).toBe("ready");
   });
@@ -269,7 +277,7 @@ describe("POST /exams/:examId/versions — auto-confirm on generate (e2e, B3)", 
     await createApprovedQuestion(topicId, gradeLevel);
     const examId = await createDraftExam(topicId, gradeLevel, 1);
 
-    await versionsRequest(examId).send({ versionCount: 1 }).expect(201);
+    await generateVersionsAndWait(app, tenantAToken, examId, 1);
 
     const detail = await getExamRequest(examId).expect(200);
     const selectedQuestionId = detail.body.questions[0].id;

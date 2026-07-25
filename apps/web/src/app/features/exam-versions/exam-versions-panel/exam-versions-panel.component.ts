@@ -1,6 +1,7 @@
 import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
+import { Subscription } from 'rxjs';
 import { LucideAngularModule, Folder, CopyPlus, ChevronDown, Plus, Check } from 'lucide-angular';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
@@ -9,7 +10,7 @@ import { TagVariant } from '../../../ui/ui.types';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { ModalComponent } from '../../../ui/modal/modal.component';
 import { ExamVersionsService } from '../exam-versions.service';
-import { ExamVersion } from '../exam-versions.models';
+import { ExamVersion, ExamVersionJob } from '../exam-versions.models';
 import { ExamsService } from '../../exams/exams.service';
 import { ExamDetail, ExamDetailQuestion, GRADE_LEVEL_LABELS, GradeLevel } from '../../exams/exams.models';
 
@@ -86,16 +87,47 @@ export class ExamVersionsPanelComponent {
   protected readonly pendingGenerate = signal(false);
   protected readonly skeletonRows = [0, 1, 2];
 
+  /**
+   * The job currently being followed. Generation runs in a backend worker
+   * now, so this — not a bare boolean — is what the screen renders progress
+   * from: `completedCount`/`versionCount` while running, and on a partial
+   * failure the count of forms that DID survive plus why it stopped.
+   */
+  protected readonly versionJob = signal<ExamVersionJob | null>(null);
+  private jobSubscription: Subscription | null = null;
+
   // "Descargar todo (ZIP)" (design doc §5.2, N1).
   protected readonly downloadingZip = signal(false);
 
   constructor() {
     this.load();
     this.loadExamDetail();
+    this.reattachToRunningJob();
     this.destroyRef.onDestroy(() => {
+      this.jobSubscription?.unsubscribe();
       for (const url of this.objectUrls) {
         URL.revokeObjectURL(url);
       }
+    });
+  }
+
+  /**
+   * A generation started elsewhere (the exam-builder's "Generar examen", or
+   * this same screen before a reload) keeps running in the worker with
+   * nothing on screen to prove it. Ask the backend for the exam's latest job
+   * on load and follow it if it is still in flight — otherwise the user sees
+   * an empty versions list and assumes it failed.
+   */
+  private reattachToRunningJob(): void {
+    this.examVersionsService.latestVersionJob(this.examId()).subscribe({
+      next: (job) => {
+        if (job && (job.status === 'pending' || job.status === 'running')) {
+          this.followJob(job);
+        } else if (job && job.status === 'failed') {
+          this.versionJob.set(job);
+        }
+      },
+      error: () => undefined,
     });
   }
 
@@ -200,25 +232,79 @@ export class ExamVersionsPanelComponent {
 
   /**
    * Calls the SAME idempotent endpoint the exam-builder screen uses
-   * (`ExamVersionsService.generateVersions`, B3). On success, reload
-   * `listVersions` (B4, the single source of truth for download links) so
-   * the list reflects the freshly-generated formas.
+   * (`ExamVersionsService.generateVersions`, B3), which now ENQUEUES the
+   * work and returns 202 — so the request resolving means "accepted", not
+   * "done". The forms appear as the worker reports them; `load()` runs once
+   * the job is terminal, since `listVersions` (B4) stays the single source
+   * of truth for download links.
+   *
+   * A rejection here is still synchronous and still meaningful (400/404/409
+   * from the same preconditions as before) — only compile failures moved
+   * into the job.
    */
   protected confirmGenerate(): void {
     this.pendingGenerate.set(false);
     this.generateError.set(null);
     this.generating.set(true);
+    this.versionJob.set(null);
     this.examVersionsService.generateVersions(this.examId(), this.versionCount()).subscribe({
-      next: () => {
-        this.generating.set(false);
+      next: (job) => {
         this.showGenerateForm.set(false);
-        this.load();
+        this.followJob(job);
       },
       error: () => {
         this.generating.set(false);
         this.generateError.set('No se pudieron generar las formas. Inténtalo de nuevo.');
       },
     });
+  }
+
+  /**
+   * Follows one job to its terminal state over SSE, refreshing the versions
+   * list at the end. A `failed` job is NOT reported as a blanket error when
+   * `completedCount > 0`: those forms exist, so the list is reloaded either
+   * way and the template explains what is missing (audit P1 — the screen
+   * used to say "falló" while downloadable PDFs sat in storage).
+   */
+  private followJob(job: ExamVersionJob): void {
+    this.generating.set(true);
+    this.versionJob.set(job);
+    this.jobSubscription?.unsubscribe();
+    this.jobSubscription = this.examVersionsService.streamVersionJob(this.examId(), job.id).subscribe({
+      next: (update) => {
+        this.versionJob.set(update);
+        if (update.status !== 'pending' && update.status !== 'running') {
+          this.generating.set(false);
+          this.load();
+        }
+      },
+      // The job itself may well be fine — only the progress channel died —
+      // so reload rather than declaring the generation failed.
+      error: () => {
+        this.generating.set(false);
+        this.load();
+      },
+    });
+  }
+
+  /** Human-readable progress for the template: "2 de 5 formas". */
+  protected jobProgressLabel(): string {
+    const job = this.versionJob();
+    if (!job) {
+      return '';
+    }
+    return `${job.completedCount} de ${job.versionCount} formas`;
+  }
+
+  /** Only a failure that produced nothing is a total failure; anything else is a partial result the list already shows. */
+  protected jobFailedWithNothing(): boolean {
+    const job = this.versionJob();
+    return job?.status === 'failed' && job.completedCount === 0;
+  }
+
+  protected jobFailedPartially(): boolean {
+    const job = this.versionJob();
+    return job?.status === 'failed' && job.completedCount > 0;
   }
 
   /**

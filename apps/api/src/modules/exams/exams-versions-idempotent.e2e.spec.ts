@@ -7,11 +7,13 @@ import request from "supertest";
 import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
+import { generateVersionsAndWait } from "../../test-support/generate-versions";
 import {
   assets,
   courses,
   examBlueprintRows,
   examQuestions,
+  examVersionJobs,
   exams,
   examVersions,
   questions,
@@ -83,6 +85,7 @@ describe("POST /exams/:examId/versions — idempotent regeneration (e2e, B4)", (
         "delete exams",
         async () => {
           if (createdExamIds.length > 0) {
+            await db.delete(examVersionJobs).where(inArray(examVersionJobs.examId, createdExamIds));
             await db.delete(examVersions).where(inArray(examVersions.examId, createdExamIds));
             await db.delete(examQuestions).where(inArray(examQuestions.examId, createdExamIds));
             await db.delete(examBlueprintRows).where(inArray(examBlueprintRows.examId, createdExamIds));
@@ -150,12 +153,6 @@ describe("POST /exams/:examId/versions — idempotent regeneration (e2e, B4)", (
     return question!.id;
   }
 
-  function versionsRequest(examId: string) {
-    return request(app.getHttpServer())
-      .post(`/exams/${examId}/versions`)
-      .set("Authorization", `Bearer ${tenantAToken}`);
-  }
-
   function getVersionsRequest(examId: string) {
     return request(app.getHttpServer())
       .get(`/exams/${examId}/versions`)
@@ -181,15 +178,17 @@ describe("POST /exams/:examId/versions — idempotent regeneration (e2e, B4)", (
     const examId = createResponse.body.id;
     createdExamIds.push(examId);
 
-    // First generation: versionCount 2 -> A, B.
-    const firstGenerate = await versionsRequest(examId).send({ versionCount: 2 }).expect(201);
-    expect(firstGenerate.body.map((v: { code: string }) => v.code).sort()).toEqual(["A", "B"]);
+    // First generation: versionCount 2 -> A, B. Generation is queued now
+    // (202 + worker), so the forms are read back from GET /versions rather
+    // than from the POST response.
+    await generateVersionsAndWait(app, tenantAToken, examId, 2);
+    const firstVersions = await getVersionsRequest(examId).expect(200);
+    expect(firstVersions.body.map((v: { code: string }) => v.code).sort()).toEqual(["A", "B"]);
 
-    const firstAssetIds = firstGenerate.body.flatMap((v: { pdfUrl: string; answerSheetUrl: string }) => [v.pdfUrl, v.answerSheetUrl]);
+    const firstAssetIds = firstVersions.body.flatMap((v: { pdfUrl: string; answerSheetUrl: string }) => [v.pdfUrl, v.answerSheetUrl]);
 
     // Regenerate with a DIFFERENT versionCount (3) -> must succeed, not collide on (examId, code).
-    const secondGenerate = await versionsRequest(examId).send({ versionCount: 3 }).expect(201);
-    expect(secondGenerate.body.map((v: { code: string }) => v.code).sort()).toEqual(["A", "B", "C"]);
+    await generateVersionsAndWait(app, tenantAToken, examId, 3);
 
     // GET /versions returns exactly the second call's 3 entries — none of the first call's rows remain.
     const versionsAfter = await getVersionsRequest(examId).expect(200);

@@ -1,5 +1,5 @@
 import Redis from "ioredis";
-import { resolveRedisConnection } from "../modules/ai/generation-jobs.env";
+import { resolveRedisConnection } from "../common/queue.env";
 import { selectStaleBullTestKeys } from "./stale-bull-test-keys";
 
 /**

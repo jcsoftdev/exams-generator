@@ -6,7 +6,7 @@ import { Subject, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ExamVersionsPanelComponent } from './exam-versions-panel.component';
 import { ExamVersionsService } from '../exam-versions.service';
-import { ExamVersion } from '../exam-versions.models';
+import { ExamVersion, ExamVersionJob } from '../exam-versions.models';
 import { ExamsService } from '../../exams/exams.service';
 import { ExamDetail } from '../../exams/exams.models';
 
@@ -51,11 +51,26 @@ const EXAM_DETAIL: ExamDetail = {
   ],
 };
 
+function job(overrides: Partial<ExamVersionJob> = {}): ExamVersionJob {
+  return {
+    id: 'job-1',
+    examId: 'exam-1',
+    versionCount: 2,
+    status: 'pending',
+    completedCount: 0,
+    failedReason: null,
+    failedQuestionId: null,
+    ...overrides,
+  };
+}
+
 function setup(overrides: {
   listVersionsImpl?: (...args: unknown[]) => unknown;
   downloadAssetImpl?: (assetUrl: string) => unknown;
   downloadVersionsZipImpl?: (...args: unknown[]) => unknown;
   generateVersionsImpl?: (...args: unknown[]) => unknown;
+  latestVersionJobImpl?: (...args: unknown[]) => unknown;
+  streamVersionJobImpl?: (...args: unknown[]) => unknown;
   getExamImpl?: (...args: unknown[]) => unknown;
   duplicateExamImpl?: (...args: unknown[]) => unknown;
 }) {
@@ -67,9 +82,11 @@ function setup(overrides: {
   const downloadVersionsZip = vi.fn(
     overrides.downloadVersionsZipImpl ?? (() => of(new Blob(['fake-zip-bytes'], { type: 'application/zip' }))),
   );
-  const generateVersions = vi.fn(
-    overrides.generateVersionsImpl ??
-      (() => of([{ code: 'A', pdfUrl: '/assets/pdf-a', answerSheetUrl: '/assets/answer-a' }])),
+  const generateVersions = vi.fn(overrides.generateVersionsImpl ?? (() => of(job())));
+  // Default: nothing in flight when the screen loads.
+  const latestVersionJob = vi.fn(overrides.latestVersionJobImpl ?? (() => of(null)));
+  const streamVersionJob = vi.fn(
+    overrides.streamVersionJobImpl ?? (() => of(job({ status: 'completed', completedCount: 2 }))),
   );
   const getExam = vi.fn(overrides.getExamImpl ?? (() => of(EXAM_DETAIL)));
   const duplicateExam = vi.fn(
@@ -86,7 +103,14 @@ function setup(overrides: {
     providers: [
       {
         provide: ExamVersionsService,
-        useValue: { listVersions, downloadAsset, downloadVersionsZip, generateVersions },
+        useValue: {
+          listVersions,
+          downloadAsset,
+          downloadVersionsZip,
+          generateVersions,
+          latestVersionJob,
+          streamVersionJob,
+        },
       },
       { provide: ExamsService, useValue: { getExam, duplicateExam } },
       { provide: Router, useValue: { navigate } },
@@ -108,6 +132,8 @@ function setup(overrides: {
     downloadAsset,
     downloadVersionsZip,
     generateVersions,
+    latestVersionJob,
+    streamVersionJob,
     getExam,
     duplicateExam,
     navigate,
@@ -313,9 +339,12 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
       expect(generateVersions).toHaveBeenCalledWith('exam-1', 4);
     });
 
-    it('shows a loading confirm button and a skeleton list while generating, then reloads listVersions and closes the panel on success', () => {
-      const subject = new Subject<unknown>();
-      const { compiled, fixture, listVersions } = setup({ generateVersionsImpl: () => subject.asObservable() });
+    it('streams live progress while the worker runs, then reloads listVersions and closes the panel when the job completes', () => {
+      const stream = new Subject<ExamVersionJob>();
+      const { compiled, fixture, listVersions } = setup({
+        generateVersionsImpl: () => of(job({ versionCount: 3 })),
+        streamVersionJobImpl: () => stream.asObservable(),
+      });
 
       openGeneratePanel(compiled, fixture);
       (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
@@ -323,15 +352,21 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
       (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
 
+      // The POST resolving means "queued", not "done" — the list must NOT be
+      // reloaded yet, and the screen stays in its generating state.
       expect(listVersions).toHaveBeenCalledTimes(1);
-      expect(
-        (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).disabled,
-      ).toBe(true);
       expect(compiled.querySelector('[data-testid="versions-skeleton"]')).toBeTruthy();
       expect(compiled.querySelector('[data-testid="version-row"]')).toBeFalsy();
 
-      subject.next([{ code: 'A', pdfUrl: '/assets/pdf-a', answerSheetUrl: '/assets/answer-a' }]);
-      subject.complete();
+      stream.next(job({ versionCount: 3, status: 'running', completedCount: 1 }));
+      fixture.detectChanges();
+      expect(compiled.querySelector('[data-testid="generate-progress"]')?.textContent).toContain(
+        '1 de 3 formas',
+      );
+      expect(listVersions).toHaveBeenCalledTimes(1);
+
+      stream.next(job({ versionCount: 3, status: 'completed', completedCount: 3 }));
+      stream.complete();
       fixture.detectChanges();
 
       expect(listVersions).toHaveBeenCalledTimes(2);
@@ -339,7 +374,62 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
       expect(compiled.querySelector('[data-testid="versions-skeleton"]')).toBeFalsy();
     });
 
-    it('shows an error banner with a retry action on failure, keeping the existing versions visible', () => {
+    it('reports a PARTIAL failure honestly — the forms that generated stay listed, not hidden behind a blanket error', () => {
+      const { compiled, fixture, listVersions } = setup({
+        generateVersionsImpl: () => of(job({ versionCount: 3 })),
+        streamVersionJobImpl: () =>
+          of(job({ versionCount: 3, status: 'failed', completedCount: 2, failedReason: 'figura inválida' })),
+      });
+
+      openGeneratePanel(compiled, fixture);
+      (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      const banner = compiled.querySelector('[data-testid="generate-partial-failure"]');
+      expect(banner?.textContent).toContain('2 de 3 formas');
+      expect(compiled.querySelector('[data-testid="generate-failure-reason"]')?.textContent).toContain(
+        'figura inválida',
+      );
+      expect(compiled.querySelector('[data-testid="generate-total-failure"]')).toBeFalsy();
+      // The list was still refreshed — those PDFs are downloadable.
+      expect(listVersions).toHaveBeenCalledTimes(2);
+    });
+
+    it('reports a job that produced nothing as a total failure, with a retry', () => {
+      const { compiled, fixture, generateVersions } = setup({
+        generateVersionsImpl: () => of(job()),
+        streamVersionJobImpl: () =>
+          of(job({ status: 'failed', completedCount: 0, failedReason: 'Typst no compiló' })),
+      });
+
+      openGeneratePanel(compiled, fixture);
+      (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(compiled.querySelector('[data-testid="generate-total-failure"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="generate-partial-failure"]')).toBeFalsy();
+
+      (compiled.querySelector('[data-testid="retry-generate-job"]') as HTMLButtonElement).click();
+      expect(generateVersions).toHaveBeenCalledTimes(2);
+    });
+
+    it('re-attaches to a generation still running when the screen loads (e.g. started from the exam builder)', () => {
+      const { compiled, streamVersionJob } = setup({
+        latestVersionJobImpl: () => of(job({ status: 'running', completedCount: 1, versionCount: 2 })),
+        streamVersionJobImpl: () => new Subject<ExamVersionJob>().asObservable(),
+      });
+
+      expect(streamVersionJob).toHaveBeenCalledWith('exam-1', 'job-1');
+      expect(compiled.querySelector('[data-testid="generate-progress"]')?.textContent).toContain(
+        '1 de 2 formas',
+      );
+    });
+
+    it('shows an error banner with a retry action when the enqueue itself is rejected, keeping the existing versions visible', () => {
       const { compiled, fixture, generateVersions, listVersions } = setup({
         generateVersionsImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
       });

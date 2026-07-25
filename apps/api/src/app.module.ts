@@ -11,6 +11,7 @@ import { BankModule } from "./modules/bank/bank.module";
 import { DashboardModule } from "./modules/dashboard/dashboard.module";
 import { ExamsModule } from "./modules/exams/exams.module";
 import { HealthModule } from "./modules/health/health.module";
+import { QueueModule } from "./common/queue.module";
 import { TaxonomyModule } from "./modules/taxonomy/taxonomy.module";
 import { TenantsModule } from "./modules/tenants/tenants.module";
 import { UsersModule } from "./modules/users/users.module";
@@ -54,6 +55,8 @@ import { UsersModule } from "./modules/users/users.module";
     // request after that runs on an empty/undefined token, failing with
     // unrelated-looking 401s instead of the real rate-limit error.
     ThrottlerModule.forRoot([{ ttl: 60_000, limit: 100, skipIf: () => process.env.NODE_ENV === "test" }]),
+    // Shared BullMQ connection for every queue (`generation`, `exam-versions`).
+    QueueModule,
     HealthModule,
     AuthModule,
     BankModule,

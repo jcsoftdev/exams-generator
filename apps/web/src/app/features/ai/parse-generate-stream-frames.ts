@@ -1,3 +1,4 @@
+import { ExamVersionJob } from '../exam-versions/exam-versions.models';
 import { GenerateQuestionStreamEvent, GenerationJob } from './ai.models';
 
 export interface ParsedStreamFrames<T> {
@@ -40,4 +41,9 @@ export function parseGenerateStreamFrames(buffer: string): ParsedStreamFrames<Ge
 
 export function parseGenerationJobStreamFrames(buffer: string): ParsedStreamFrames<GenerationJob> {
   return parseSseFrames<GenerationJob>(buffer);
+}
+
+/** `ExamsController`'s version-job progress stream writes the same frame shape (`ExamVersionsService.streamVersionJob`). */
+export function parseExamVersionJobStreamFrames(buffer: string): ParsedStreamFrames<ExamVersionJob> {
+  return parseSseFrames<ExamVersionJob>(buffer);
 }

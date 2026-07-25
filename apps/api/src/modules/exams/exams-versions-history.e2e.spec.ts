@@ -7,11 +7,13 @@ import request from "supertest";
 import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
+import { generateVersionsAndWait } from "../../test-support/generate-versions";
 import {
   assets,
   courses,
   examBlueprintRows,
   examQuestions,
+  examVersionJobs,
   exams,
   examVersions,
   questions,
@@ -109,6 +111,7 @@ describe("GET /exams/:examId/versions (e2e, B4)", () => {
         "delete exams",
         async () => {
           if (createdExamIds.length > 0) {
+            await db.delete(examVersionJobs).where(inArray(examVersionJobs.examId, createdExamIds));
             await db.delete(examVersions).where(inArray(examVersions.examId, createdExamIds));
             await db.delete(examQuestions).where(inArray(examQuestions.examId, createdExamIds));
             await db.delete(examBlueprintRows).where(inArray(examBlueprintRows.examId, createdExamIds));
@@ -198,11 +201,7 @@ describe("GET /exams/:examId/versions (e2e, B4)", () => {
     const examId = createResponse.body.id;
     createdExamIds.push(examId);
 
-    await request(app.getHttpServer())
-      .post(`/exams/${examId}/versions`)
-      .set("Authorization", `Bearer ${tenantAToken}`)
-      .send({ versionCount: 3 })
-      .expect(201);
+    await generateVersionsAndWait(app, tenantAToken, examId, 3);
 
     const response = await getVersionsRequest(tenantAToken, examId).expect(200);
 
@@ -283,11 +282,7 @@ describe("GET /exams/:examId/versions (e2e, B4)", () => {
       createdExamIds.push(examId);
 
       if (versionCount > 0) {
-        await request(app.getHttpServer())
-          .post(`/exams/${examId}/versions`)
-          .set("Authorization", `Bearer ${tenantAToken}`)
-          .send({ versionCount })
-          .expect(201);
+        await generateVersionsAndWait(app, tenantAToken, examId, versionCount);
       }
       return examId;
     }

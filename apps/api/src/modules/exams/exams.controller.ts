@@ -15,17 +15,18 @@ import {
   UseGuards,
 } from "@nestjs/common";
 import { Response } from "express";
+import { filter } from "rxjs";
 import { clampPagination } from "../../common/pagination.util";
+import { GenerationJobStatus } from "../../db/schema/enums";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { Roles } from "../auth/roles.decorator";
 import { RolesGuard } from "../auth/roles.guard";
 import { AuthTokenPayload } from "../auth/token.service";
-import {
-  ExamPdfGenerationError,
-  ExamVersionGenerationService,
-  GeneratedVersionResult,
-} from "./exam-generation.service";
+import { ExamVersionGenerationService } from "./exam-generation.service";
+import { ExamVersionJobEventsService } from "./exam-version-job-events.service";
+import { ExamVersionJobRecord } from "./exam-version-jobs.repository";
+import { ExamVersionJobsService } from "./exam-version-jobs.service";
 import {
   ConfirmExamResult,
   CreateExamDto,
@@ -86,6 +87,8 @@ interface StockBatchBody {
   }>;
 }
 
+const TERMINAL_JOB_STATUSES: readonly GenerationJobStatus[] = ["completed", "failed", "cancelled"];
+
 /**
  * `/exams` — the exams module's HTTP surface (design doc §5.3, §5.4).
  * `TenantGuard` is intentionally NOT applied here: unlike `/tenants/:id`,
@@ -101,6 +104,8 @@ export class ExamsController {
   constructor(
     private readonly examsService: ExamsService,
     private readonly generationService: ExamVersionGenerationService,
+    private readonly versionJobsService: ExamVersionJobsService,
+    private readonly versionJobEvents: ExamVersionJobEventsService,
   ) {}
 
   @Post()
@@ -260,23 +265,92 @@ export class ExamsController {
     return this.examsService.listVersions(user, examId);
   }
 
+  /**
+   * `POST /exams/:examId/versions` — ENQUEUES generation and responds 202
+   * (Accepted) with the job row; it no longer compiles PDFs inline (audit
+   * P0). Every precondition is still checked synchronously before enqueuing,
+   * so bad input keeps returning the same 400/404/409 it always did — only
+   * the success path changed shape, from `GeneratedVersionResult[]` to a job
+   * the caller follows via `jobs/:jobId/stream`.
+   */
   @Post(":examId/versions")
+  @HttpCode(HttpStatus.ACCEPTED)
   async generateVersions(
     @CurrentUser() user: AuthTokenPayload,
     @Param("examId") examId: string,
     @Body() body: GenerateVersionsBody,
-  ): Promise<GeneratedVersionResult[]> {
-    try {
-      return await this.generationService.generateVersions(user, examId, body.versionCount ?? 1);
-    } catch (error) {
-      if (error instanceof ExamPdfGenerationError) {
-        throw new UnprocessableEntityException({
-          message: error.message,
-          examId: error.examId,
-          questionId: error.questionId,
-        });
-      }
-      throw error;
+  ): Promise<ExamVersionJobRecord> {
+    return this.versionJobsService.create(user, examId, body.versionCount ?? 1);
+  }
+
+  /**
+   * `GET /exams/:examId/versions/jobs/latest` — the exam's most recent job,
+   * or `null` if it has never been generated. Declared BEFORE `:jobId` so
+   * Nest matches this literal segment first. Lets a reloaded versions screen
+   * re-attach to a generation that is still running (the job id from the
+   * original `POST` response is long gone by then).
+   */
+  @Get(":examId/versions/jobs/latest")
+  async latestVersionJob(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("examId") examId: string,
+  ): Promise<ExamVersionJobRecord | null> {
+    return this.versionJobsService.getLatestForExam(user, examId);
+  }
+
+  @Get(":examId/versions/jobs/:jobId")
+  async getVersionJob(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("jobId") jobId: string,
+  ): Promise<ExamVersionJobRecord> {
+    return this.versionJobsService.get(user, jobId);
+  }
+
+  /**
+   * `GET /exams/:examId/versions/jobs/:jobId/stream` — push counterpart of
+   * the endpoint above, byte-identical wire format to
+   * `AiJobsController.stream()` (hand-rolled `data: {...}\n\n` frames rather
+   * than a native `EventSource`, which cannot carry the `Authorization`
+   * header `JwtAuthGuard` requires). Writes the current job immediately,
+   * then again on every `ExamVersionJobEventsService` notification for this
+   * id — i.e. once per generated form — until the job is terminal, at which
+   * point the connection closes.
+   */
+  @Get(":examId/versions/jobs/:jobId/stream")
+  async streamVersionJob(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("jobId") jobId: string,
+    @Res() res: Response,
+  ): Promise<void> {
+    res.setHeader("Content-Type", "text/event-stream");
+    res.setHeader("Cache-Control", "no-cache");
+    res.setHeader("Connection", "keep-alive");
+    res.flushHeaders();
+
+    const writeJob = (job: ExamVersionJobRecord): void => {
+      res.write(`data: ${JSON.stringify(job)}\n\n`);
+    };
+
+    const current = await this.versionJobsService.get(user, jobId);
+    writeJob(current);
+    if (TERMINAL_JOB_STATUSES.includes(current.status)) {
+      res.end();
+      return;
     }
+
+    // The handler is deliberately a void-returning wrapper around the async
+    // work: `subscribe` expects `void`, and returning the promise would make
+    // rejections unobservable.
+    const subscription = this.versionJobEvents.updates$.pipe(filter((id) => id === jobId)).subscribe(() => {
+      void (async () => {
+        const job = await this.versionJobsService.get(user, jobId);
+        writeJob(job);
+        if (TERMINAL_JOB_STATUSES.includes(job.status)) {
+          res.end();
+        }
+      })();
+    });
+
+    res.on("close", () => subscription.unsubscribe());
   }
 }

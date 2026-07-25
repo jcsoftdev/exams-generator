@@ -7,11 +7,13 @@ import request from "supertest";
 import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
+import { generateVersionsAndWait } from "../../test-support/generate-versions";
 import {
   assets,
   courses,
   examBlueprintRows,
   examQuestions,
+  examVersionJobs,
   exams,
   examVersions,
   generationJobs,
@@ -133,6 +135,7 @@ describeIfTypst("AI-generated structured question -> approved -> exam version (e
         "delete exams",
         async () => {
           if (createdExamIds.length > 0) {
+            await db.delete(examVersionJobs).where(inArray(examVersionJobs.examId, createdExamIds));
             await db.delete(examVersions).where(inArray(examVersions.examId, createdExamIds));
             await db.delete(examQuestions).where(inArray(examQuestions.examId, createdExamIds));
             await db.delete(examBlueprintRows).where(inArray(examBlueprintRows.examId, createdExamIds));
@@ -250,13 +253,9 @@ describeIfTypst("AI-generated structured question -> approved -> exam version (e
     // 5. Generate K=3 versions — before the fix this either 500'd
     // (TypstCompilationError from an undefined imageAbsolutePath) or
     // silently rendered the structured question as a broken image block.
-    const versionsResponse = await request(app.getHttpServer())
-      .post(`/exams/${examId}/versions`)
-      .set("Authorization", `Bearer ${teacherToken}`)
-      .send({ versionCount: 3 })
-      .expect(201);
+    const versionJob = await generateVersionsAndWait(app, teacherToken, examId, 3);
 
-    expect(versionsResponse.body).toHaveLength(3);
+    expect(versionJob.completedCount).toBe(3);
 
     // 6. Prove the PDFs are real, and that every version's persisted answer
     // key still points at the ORIGINALLY correct alternative ("7"), by
@@ -287,9 +286,9 @@ describeIfTypst("AI-generated structured question -> approved -> exam version (e
 
     // The PDF bytes for every version are real, freshly-compiled PDFs in
     // MinIO — not a placeholder, not a 500 swallowed into a stub.
-    for (const version of versionsResponse.body as { code: string }[]) {
-      const pdfBytes = await storage.get(`exams/${examId}/versions/${version.code}/exam.pdf`);
-      const answerKeyBytes = await storage.get(`exams/${examId}/versions/${version.code}/answer-key.pdf`);
+    for (const versionRow of versionRows) {
+      const pdfBytes = await storage.get(`exams/${examId}/versions/${versionRow.code}/exam.pdf`);
+      const answerKeyBytes = await storage.get(`exams/${examId}/versions/${versionRow.code}/answer-key.pdf`);
       expect(pdfBytes.subarray(0, 4).toString("latin1")).toBe("%PDF");
       expect(answerKeyBytes.subarray(0, 4).toString("latin1")).toBe("%PDF");
     }

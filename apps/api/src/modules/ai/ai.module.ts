@@ -7,7 +7,6 @@ import { AiJobsController } from "./ai-jobs.controller";
 import { QUESTION_GENERATOR_PORT } from "./ai.constants";
 import { resolveQuestionGeneratorAdapter } from "./ai-provider";
 import { GenerationJobEventsService } from "./generation-job-events.service";
-import { resolveBullmqPrefix, resolveRedisConnection } from "./generation-jobs.env";
 import { GenerationJobsProcessor } from "./generation-jobs.processor";
 import { GenerationJobsRepository } from "./generation-jobs.repository";
 import { GenerationJobsService } from "./generation-jobs.service";
@@ -21,24 +20,14 @@ import { ReviseQuestionService } from "./revise-question.service";
  * docs/superpowers/specs/2026-07-19-ai-generation-history-design.md). See
  * `ai.module.ts`'s original docstring for why `QUESTION_GENERATOR_PORT` is
  * built lazily.
+ *
+ * The shared BullMQ connection/defaults used to be declared here via
+ * `BullModule.forRoot`; they now live in `QueueModule` (`common/queue.module.ts`)
+ * so `ExamsModule`'s `exam-versions` queue doesn't implicitly depend on this
+ * module being imported.
  */
 @Module({
-  imports: [
-    BankModule,
-    BullModule.forRoot({
-      connection: resolveRedisConnection(),
-      // Per-worker key prefix in e2e (see resolveBullmqPrefix) — undefined
-      // outside tests, so dev/prod keep BullMQ's default "bull" namespace.
-      prefix: resolveBullmqPrefix(),
-      defaultJobOptions: {
-        attempts: 3,
-        backoff: { type: "exponential", delay: 5000 },
-        removeOnComplete: { age: 60 * 60 * 24 * 7 },
-        removeOnFail: { age: 60 * 60 * 24 * 7 },
-      },
-    }),
-    BullModule.registerQueue({ name: "generation" }),
-  ],
+  imports: [BankModule, BullModule.registerQueue({ name: "generation" })],
   controllers: [AiController, AiJobsController],
   providers: [
     GenerateQuestionsService,

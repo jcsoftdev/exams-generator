@@ -20,7 +20,7 @@ import {
   Track,
   ResolveBlueprintResult,
 } from '../exams.models';
-import { GeneratedVersionResult } from '../../exam-versions/exam-versions.models';
+import { ExamVersionJob } from '../../exam-versions/exam-versions.models';
 
 const COURSES: Course[] = [{ id: 'c1', name: 'Matemática' }];
 const TOPICS: Topic[] = [{ id: 't1', name: 'Álgebra', courseId: 'c1' }];
@@ -95,7 +95,17 @@ function setup(overrides: {
       (() => of<CreateExamResult>({ id: 'exam-1', status: 'draft', selectedQuestionIds: [] })),
   );
   const generateVersions = vi.fn(
-    overrides.generateVersions ?? (() => of<GeneratedVersionResult[]>([])),
+    overrides.generateVersions ??
+      (() =>
+        of<ExamVersionJob>({
+          id: 'version-job-1',
+          examId: 'exam-1',
+          versionCount: 2,
+          status: 'pending',
+          completedCount: 0,
+          failedReason: null,
+          failedQuestionId: null,
+        })),
   );
   const getExamTypes = vi.fn(overrides.getExamTypes ?? (() => of(EXAM_TYPES)));
   const getUniversities = vi.fn(overrides.getUniversities ?? (() => of(UNIVERSITIES)));

@@ -1,10 +1,20 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
-import { provideHttpClient } from '@angular/common/http';
+import { HttpDownloadProgressEvent, HttpEventType, provideHttpClient } from '@angular/common/http';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { ExamVersionsService } from './exam-versions.service';
 import { environment } from '../../../environments/environment';
-import { ExamVersion, GeneratedVersionResult } from './exam-versions.models';
+import { ExamVersion, ExamVersionJob } from './exam-versions.models';
+
+const PENDING_JOB: ExamVersionJob = {
+  id: 'job-1',
+  examId: 'exam-1',
+  versionCount: 3,
+  status: 'pending',
+  completedCount: 0,
+  failedReason: null,
+  failedQuestionId: null,
+};
 
 describe('ExamVersionsService', () => {
   let service: ExamVersionsService;
@@ -29,25 +39,21 @@ describe('ExamVersionsService', () => {
       const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1/versions`);
       expect(req.request.method).toBe('POST');
       expect(req.request.body).toEqual({ versionCount: 3 });
-      req.flush([]);
+      req.flush(PENDING_JOB);
     });
 
-    it('resolves with the generated version results returned by the API', () => {
-      const versions: GeneratedVersionResult[] = [
-        { code: 'A', pdfUrl: 'http://minio.test/a.pdf', answerSheetUrl: 'http://minio.test/a-key.pdf' },
-        { code: 'B', pdfUrl: 'http://minio.test/b.pdf', answerSheetUrl: 'http://minio.test/b-key.pdf' },
-      ];
-      let result: GeneratedVersionResult[] | undefined;
+    it('resolves with the queued job (202), not with the generated forms', () => {
+      let result: ExamVersionJob | undefined;
 
-      service.generateVersions('exam-1', 2).subscribe((response) => (result = response));
+      service.generateVersions('exam-1', 3).subscribe((response) => (result = response));
 
       const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1/versions`);
-      req.flush(versions);
+      req.flush(PENDING_JOB);
 
-      expect(result).toEqual(versions);
+      expect(result).toEqual(PENDING_JOB);
     });
 
-    it('propagates the 422 error payload (message, examId, questionId) on failure', () => {
+    it('propagates a synchronous rejection (409 — exam not confirmed) — validation still happens before enqueue', () => {
       let capturedError: unknown;
 
       service.generateVersions('exam-1', 1).subscribe({
@@ -55,18 +61,70 @@ describe('ExamVersionsService', () => {
       });
 
       const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1/versions`);
-      req.flush(
-        { message: 'Insufficient questions', examId: 'exam-1', questionId: 'question-9' },
-        { status: 422, statusText: 'Unprocessable Entity' },
-      );
+      req.flush({ message: 'Exam has no selected questions' }, { status: 409, statusText: 'Conflict' });
 
-      expect(capturedError).toBeTruthy();
-      expect((capturedError as { error: { message: string } }).error.message).toBe(
-        'Insufficient questions',
+      expect((capturedError as { status: number }).status).toBe(409);
+    });
+  });
+
+  describe('latestVersionJob', () => {
+    it('GETs .../versions/jobs/latest so a reloaded page can re-attach to a running generation', () => {
+      let result: ExamVersionJob | null | undefined;
+
+      service.latestVersionJob('exam-1').subscribe((response) => (result = response));
+
+      const req = httpMock.expectOne(`${environment.apiBaseUrl}/exams/exam-1/versions/jobs/latest`);
+      expect(req.request.method).toBe('GET');
+      req.flush(PENDING_JOB);
+
+      expect(result).toEqual(PENDING_JOB);
+    });
+  });
+
+  describe('streamVersionJob', () => {
+    it('emits one job per SSE frame as the response text grows, and completes when the stream closes', () => {
+      const emitted: ExamVersionJob[] = [];
+      let completed = false;
+
+      service
+        .streamVersionJob('exam-1', 'job-1')
+        .subscribe({ next: (job) => emitted.push(job), complete: () => (completed = true) });
+
+      const req = httpMock.expectOne(
+        `${environment.apiBaseUrl}/exams/exam-1/versions/jobs/job-1/stream`,
       );
-      expect((capturedError as { error: { questionId: string } }).error.questionId).toBe(
-        'question-9',
+      expect(req.request.method).toBe('GET');
+      expect(req.request.responseType).toBe('text');
+
+      const running = { ...PENDING_JOB, status: 'running' as const, completedCount: 1 };
+      const done = { ...PENDING_JOB, status: 'completed' as const, completedCount: 3 };
+      req.event({
+        type: HttpEventType.DownloadProgress,
+        loaded: 1,
+        partialText: `data: ${JSON.stringify(running)}\n\n`,
+      } as HttpDownloadProgressEvent);
+      req.flush(`data: ${JSON.stringify(running)}\n\ndata: ${JSON.stringify(done)}\n\n`);
+
+      expect(emitted).toEqual([running, done]);
+      expect(completed).toBe(true);
+    });
+
+    it('ignores a half-received frame until its terminating blank line arrives', () => {
+      const emitted: ExamVersionJob[] = [];
+
+      service.streamVersionJob('exam-1', 'job-1').subscribe((job) => emitted.push(job));
+
+      const req = httpMock.expectOne(
+        `${environment.apiBaseUrl}/exams/exam-1/versions/jobs/job-1/stream`,
       );
+      req.event({
+        type: HttpEventType.DownloadProgress,
+        loaded: 1,
+        partialText: `data: {"id":"job-1","comple`,
+      } as HttpDownloadProgressEvent);
+
+      expect(emitted).toEqual([]);
+      req.flush('');
     });
   });
 

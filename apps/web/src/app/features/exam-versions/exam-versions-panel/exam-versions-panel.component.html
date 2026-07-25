@@ -75,7 +75,33 @@
     }
   </div>
 
+  @if (jobFailedPartially()) {
+    <div
+      class="mb-4 rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text"
+      data-testid="generate-partial-failure"
+    >
+      Se generaron {{ jobProgressLabel() }} y luego la generación falló. Las formas de abajo sí están
+      disponibles.
+      @if (versionJob()?.failedReason; as reason) {
+        <span class="block text-xs opacity-80" data-testid="generate-failure-reason">{{ reason }}</span>
+      }
+    </div>
+  } @else if (jobFailedWithNothing()) {
+    <div class="mb-4 rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text" data-testid="generate-total-failure">
+      No se pudo generar ninguna forma.
+      @if (versionJob()?.failedReason; as reason) {
+        <span class="block text-xs opacity-80" data-testid="generate-failure-reason">{{ reason }}</span>
+      }
+      <button type="button" class="ml-2 underline" data-testid="retry-generate-job" (click)="confirmGenerate()">
+        Reintentar
+      </button>
+    </div>
+  }
+
   @if (generating()) {
+    <p class="mb-2 text-sm text-n600" data-testid="generate-progress">
+      Generando… {{ jobProgressLabel() }}
+    </p>
     <ul class="flex flex-col gap-3" data-testid="versions-skeleton">
       @for (row of skeletonRows; track row) {
         <li class="h-14 animate-pulse rounded-card border border-n200 bg-n100"></li>

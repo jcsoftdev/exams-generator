@@ -88,11 +88,21 @@ export class ExamVersionGenerationService {
     this.rngFactory = rngFactory ?? (() => createSeededRng(Date.now() ^ (Math.random() * 2 ** 31)));
   }
 
-  async generateVersions(
+  /**
+   * Every precondition that must be answered SYNCHRONOUSLY, before the
+   * caller commits to generating anything: `versionCount` range, tenant
+   * scope, exam existence, and the B3 auto-confirm/status rules. Split out
+   * of `generateVersions()` so `ExamVersionJobsService.create()` can run it
+   * on the HTTP request path — bad input still gets an immediate 400/404/409
+   * and nothing is ever enqueued, exactly like `GenerationJobsService.create()`.
+   *
+   * Returns the loaded exam so the caller doesn't have to re-query it.
+   */
+  async prepareGeneration(
     user: AuthTokenPayload,
     examId: string,
     versionCount: number,
-  ): Promise<GeneratedVersionResult[]> {
+  ): Promise<ExamForGenerationRecord> {
     if (!Number.isInteger(versionCount) || versionCount < 1 || versionCount > MAX_VERSION_COUNT) {
       throw new BadRequestException(`versionCount must be an integer between 1 and ${MAX_VERSION_COUNT}`);
     }
@@ -123,6 +133,34 @@ export class ExamVersionGenerationService {
     } else if (exam.selectedQuestions.length === 0) {
       throw new ConflictException("Exam has no selected questions");
     }
+
+    return exam;
+  }
+
+  /**
+   * The expensive half: shuffle -> compile -> upload -> persist, one form at
+   * a time. Runs inside `ExamVersionJobsProcessor` (BullMQ), never on the
+   * request path — compiling N PDFs synchronously is exactly what the audit
+   * flagged (P0).
+   *
+   * `onVersionCompleted` fires after each form is fully persisted (DB row +
+   * both storage objects), which is what drives the job row's
+   * `completed_count` and therefore the live progress the UI shows. It is
+   * deliberately called AFTER the write, so a partial failure leaves a count
+   * that matches what actually exists.
+   *
+   * Re-runs `prepareGeneration()` rather than trusting the enqueue-time
+   * check: the worker may pick the job up much later, and re-validating is
+   * cheap and idempotent (the exam is already `ready` by then, so the
+   * auto-confirm branch is a no-op).
+   */
+  async generateVersions(
+    user: AuthTokenPayload,
+    examId: string,
+    versionCount: number,
+    onVersionCompleted?: (result: GeneratedVersionResult) => Promise<void>,
+  ): Promise<GeneratedVersionResult[]> {
+    const exam = await this.prepareGeneration(user, examId, versionCount);
 
     // B4-B idempotent regeneration: wipe any prior versions (DB rows first,
     // then best-effort delete their storage objects) BEFORE building new
@@ -170,9 +208,15 @@ export class ExamVersionGenerationService {
 
       const results: GeneratedVersionResult[] = [];
       for (const version of versions) {
-        results.push(
-          await this.generateOneVersion(exam, version, questionById, imagePathByQuestionId, logoPath),
+        const result = await this.generateOneVersion(
+          exam,
+          version,
+          questionById,
+          imagePathByQuestionId,
+          logoPath,
         );
+        results.push(result);
+        await onVersionCompleted?.(result);
       }
       return results;
     } finally {

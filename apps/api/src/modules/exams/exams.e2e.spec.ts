@@ -7,11 +7,13 @@ import request from "supertest";
 import { AppModule } from "../../app.module";
 import { db, pool } from "../../db/client";
 import { runMigrations } from "../../db/migrate";
+import { generateVersionsAndWait } from "../../test-support/generate-versions";
 import {
   assets,
   courses,
   examBlueprintRows,
   examQuestions,
+  examVersionJobs,
   exams,
   examVersions,
   questions,
@@ -141,6 +143,7 @@ describe("Exams module (e2e)", () => {
         "delete exams",
         async () => {
           if (createdExamIds.length > 0) {
+            await db.delete(examVersionJobs).where(inArray(examVersionJobs.examId, createdExamIds));
             await db.delete(examVersions).where(inArray(examVersions.examId, createdExamIds));
             await db.delete(examQuestions).where(inArray(examQuestions.examId, createdExamIds));
             await db.delete(examBlueprintRows).where(inArray(examBlueprintRows.examId, createdExamIds));
@@ -470,8 +473,14 @@ describe("Exams module (e2e)", () => {
       await versionsRequest(tenantAToken, examBId).send({ versionCount: 1 }).expect(404);
     });
 
-    it("POST .../versions — positive control: owner tenant B can fully generate K>=2 versions, real PDFs land in MinIO (with tenant B's logo embedded), presigned URLs returned (smoke capstone)", async () => {
-      const response = await versionsRequest(tenantBToken, examBId).send({ versionCount: 2 }).expect(201);
+    it("POST .../versions — positive control: owner tenant B can fully generate K>=2 versions through the queue, real PDFs land in MinIO (with tenant B's logo embedded) (smoke capstone)", async () => {
+      const job = await generateVersionsAndWait(app, tenantBToken, examBId, 2);
+      expect(job.completedCount).toBe(2);
+
+      const response = await request(app.getHttpServer())
+        .get(`/exams/${examBId}/versions`)
+        .set("Authorization", `Bearer ${tenantBToken}`)
+        .expect(200);
 
       expect(response.body).toHaveLength(2);
       expect(response.body.map((v: { code: string }) => v.code).sort()).toEqual(["A", "B"]);

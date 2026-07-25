@@ -699,6 +699,12 @@ export class ExamBuilderComponent implements OnInit {
 
     const title = `Examen ${GRADE_LEVEL_LABELS[gradeLevel]} — ${new Date().toLocaleDateString('es-PE')}`;
 
+    // `generateVersions` ENQUEUES generation and resolves on the 202 — the
+    // PDFs are compiled by a backend worker (audit P0). So this navigates as
+    // soon as the job is accepted instead of blocking the builder for the
+    // whole compile; the versions screen picks the job up and renders its
+    // live progress. An error here is still a real synchronous rejection
+    // (the exam was created but the request was refused before enqueue).
     this.examsService
       .createExam({ title, gradeLevel, blueprint })
       .pipe(
