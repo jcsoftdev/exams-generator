@@ -306,6 +306,28 @@ const jsonLd = {
 			<span class="chalk-stick r"></span>
 			<span class="eraser"></span>
 		</div>
+
+		<!--
+			Persistent navigation, deliberately OUTSIDE `.board-frame`: `.board`
+			sets `overflow: hidden` (its grain/smudge layers depend on it), so a
+			sticky topbar inside it would be clipped instead of following the
+			scroll. Fixed-position here, revealed only once the hero has scrolled
+			away — before that the hero's own CTAs are on screen and a floating
+			bar would just cover them.
+		-->
+		<nav class="floating-nav" id="floatingNav" aria-label="Navegación de secciones">
+			<a href="#confianza">Confianza</a>
+			<a href="#como-funciona">Cómo funciona</a>
+			<a
+				class="wa"
+				href="https://wa.me/51900209147"
+				target="_blank"
+				rel="noopener">WhatsApp</a
+			>
+			<button class="to-top" id="toTopBtn" type="button" aria-label="Volver arriba">
+				↑
+			</button>
+		</nav>
 	</div>
 
 	<script>
@@ -336,6 +358,40 @@ const jsonLd = {
 			root.setAttribute("data-theme", next);
 			localStorage.setItem("examgen-theme", next);
 			syncButton(next);
+		});
+
+		// Reveal the floating nav only once the hero is out of view. Driven by
+		// IntersectionObserver rather than a scroll listener so it costs
+		// nothing per frame. `inert` (not just opacity) while hidden keeps the
+		// links out of the tab order — a fade-out alone would leave four
+		// invisible focus stops in front of the page content.
+		const floatingNav = document.getElementById("floatingNav");
+		const hero = document.querySelector(".hero");
+
+		function setNavVisible(visible: boolean): void {
+			if (!floatingNav) return;
+			floatingNav.classList.toggle("is-visible", visible);
+			floatingNav.toggleAttribute("inert", !visible);
+		}
+
+		setNavVisible(false);
+
+		if (hero && "IntersectionObserver" in window) {
+			new IntersectionObserver(
+				([entry]) => setNavVisible(!entry!.isIntersecting),
+				{ rootMargin: "-80px 0px 0px 0px" },
+			).observe(hero);
+		} else {
+			// No observer support: show it always rather than never — a nav that
+			// is merely early beats a nav that never appears.
+			setNavVisible(true);
+		}
+
+		document.getElementById("toTopBtn")?.addEventListener("click", () => {
+			const reduced = window.matchMedia?.(
+				"(prefers-reduced-motion: reduce)",
+			).matches;
+			window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
 		});
 	</script>
 </Layout>
@@ -583,6 +639,101 @@ const jsonLd = {
 	.toggle:focus-visible {
 		outline: 2px solid var(--blue);
 		outline-offset: 2px;
+	}
+
+	/*
+	 * Floating section nav + "volver arriba". Lives in `.stage`, not in the
+	 * board (see the markup comment). Chalk-on-frame rather than chalk-on-board
+	 * — it sits over the wooden frame/background, so it borrows the frame
+	 * palette instead of the board's.
+	 */
+	.floating-nav {
+		position: fixed;
+		right: clamp(10px, 2.5vw, 28px);
+		bottom: clamp(10px, 2.5vw, 28px);
+		z-index: 20;
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		padding: 6px 8px;
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: 15px;
+		background: color-mix(in srgb, var(--board) 94%, transparent);
+		border: 2px dashed color-mix(in srgb, var(--write) 35%, transparent);
+		border-radius: 22px 24px 22px 26px;
+		box-shadow: 0 12px 28px -14px var(--shadow);
+		/* Hidden state: the reveal is driven by `.is-visible` from the hero
+		   IntersectionObserver, and `inert` (set in the same place) is what
+		   actually removes it from the tab order. */
+		opacity: 0;
+		transform: translateY(8px);
+		pointer-events: none;
+		transition:
+			opacity 0.25s ease,
+			transform 0.25s ease;
+	}
+	.floating-nav.is-visible {
+		opacity: 1;
+		transform: none;
+		pointer-events: auto;
+	}
+
+	.floating-nav a,
+	.floating-nav .to-top {
+		font: inherit;
+		color: var(--write);
+		text-decoration: none;
+		background: transparent;
+		border: 0;
+		border-radius: 16px;
+		padding: 4px 10px;
+		cursor: pointer;
+		white-space: nowrap;
+	}
+	.floating-nav a:hover,
+	.floating-nav .to-top:hover {
+		background: color-mix(in srgb, var(--write) 10%, transparent);
+	}
+	.floating-nav a:focus-visible,
+	.floating-nav .to-top:focus-visible {
+		outline: 2px solid var(--blue);
+		outline-offset: 2px;
+	}
+	.floating-nav .wa {
+		color: var(--blue);
+	}
+	.floating-nav .to-top {
+		margin-left: 2px;
+		padding: 4px 9px;
+		border-left: 2px dashed color-mix(in srgb, var(--write) 25%, transparent);
+		border-radius: 0 16px 16px 0;
+	}
+
+	/*
+	 * Under ~560px the four labels would wrap into a block covering a third of
+	 * the screen. The section links are a convenience there (the page is one
+	 * short scroll on mobile); "volver arriba" is the part that actually earns
+	 * its space, so it is the only one kept.
+	 */
+	@media (max-width: 560px) {
+		.floating-nav a {
+			display: none;
+		}
+		/* Padded up to a ~44px thumb target — the desktop size clears WCAG's
+		   24px floor but is small for a one-handed tap. */
+		.floating-nav .to-top {
+			margin-left: 0;
+			border-left: 0;
+			border-radius: 16px;
+			padding: 10px 15px;
+		}
+	}
+
+	/* Anchor targets clear the top edge instead of butting against it. */
+	#confianza,
+	#como-funciona {
+		scroll-margin-top: clamp(16px, 4vw, 48px);
 	}
 
 	.hero {
@@ -1059,8 +1210,13 @@ const jsonLd = {
 			display: none;
 		}
 		.btn,
-		.toggle {
+		.toggle,
+		.floating-nav {
 			transition: none;
+		}
+		/* Reveal without the slide — the nav still appears, it just does not travel. */
+		.floating-nav {
+			transform: none;
 		}
 	}
 </style>
