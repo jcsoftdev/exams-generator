@@ -101,7 +101,7 @@ describe('ExamReviewComponent', () => {
       }),
     );
 
-    compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"]')!.click();
+    compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.click();
     fixture.detectChanges();
 
     expect(replaceQuestion).toHaveBeenCalledWith('exam-1', 'q1', { mode: 'reroll' });
@@ -119,7 +119,7 @@ describe('ExamReviewComponent', () => {
     manualInput.value = 'q9';
     manualInput.dispatchEvent(new Event('input'));
     fixture.detectChanges();
-    compiled.querySelector<HTMLButtonElement>('[data-testid="manual-replace-button"]')!.click();
+    compiled.querySelector<HTMLButtonElement>('[data-testid="manual-replace-button"] button')!.click();
     fixture.detectChanges();
 
     expect(replaceQuestion).toHaveBeenCalledWith('exam-1', 'q1', { mode: 'manual', replacementQuestionId: 'q9' });
@@ -130,7 +130,7 @@ describe('ExamReviewComponent', () => {
       replaceQuestion: () => throwError(() => new HttpErrorResponse({ status: 409, error: {} })),
     });
 
-    compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"]')!.click();
+    compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.click();
     fixture.detectChanges();
 
     expect(compiled.textContent).toMatch(/no se pudo reemplazar/i);
@@ -139,12 +139,12 @@ describe('ExamReviewComponent', () => {
   it('confirms the exam and disables further replacement', () => {
     const { compiled, fixture, confirmExam } = setup({});
 
-    compiled.querySelector<HTMLButtonElement>('[data-testid="confirm-button"]')!.click();
+    compiled.querySelector<HTMLButtonElement>('[data-testid="confirm-button"] button')!.click();
     fixture.detectChanges();
 
     expect(confirmExam).toHaveBeenCalledWith('exam-1');
     expect(compiled.textContent).toMatch(/listo/i);
-    expect(compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"]')!.disabled).toBe(true);
+    expect(compiled.querySelector<HTMLButtonElement>('[data-testid="reroll-button"] button')!.disabled).toBe(true);
   });
 
   it('shows an error message when confirm fails', () => {
@@ -152,7 +152,7 @@ describe('ExamReviewComponent', () => {
       confirmExam: () => throwError(() => new HttpErrorResponse({ status: 409, error: {} })),
     });
 
-    compiled.querySelector<HTMLButtonElement>('[data-testid="confirm-button"]')!.click();
+    compiled.querySelector<HTMLButtonElement>('[data-testid="confirm-button"] button')!.click();
     fixture.detectChanges();
 
     expect(compiled.textContent).toMatch(/no se pudo confirmar/i);

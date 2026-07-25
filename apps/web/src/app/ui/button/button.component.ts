@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
-import { ButtonVariant } from '../ui.types';
+import { ButtonSize, ButtonVariant } from '../ui.types';
 
 /**
  * Design-system button primitive (DECISION FE-4). Presentational only —
@@ -25,6 +25,7 @@ import { ButtonVariant } from '../ui.types';
 })
 export class ButtonComponent {
   readonly variant = input<ButtonVariant>('primary');
+  readonly size = input<ButtonSize>('md');
   readonly htmlType = input<'button' | 'submit'>('button');
   readonly disabled = input(false);
   readonly loading = input(false);
@@ -32,7 +33,15 @@ export class ButtonComponent {
   readonly clicked = output<void>();
 
   private static readonly BASE =
-    'inline-flex items-center justify-center gap-2 rounded-field px-4 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-60';
+    'inline-flex items-center justify-center gap-2 rounded-field text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-60';
+  private static readonly SIZE_CLASSES: Record<ButtonSize, string> = {
+    md: 'px-4 py-2',
+    // Matches the padding the exam-review row buttons already used before
+    // they were migrated onto this primitive — shrinking the box only, never
+    // the type size (a smaller label would fail the same contrast/legibility
+    // bar the rest of the app holds).
+    sm: 'px-3 py-1.5',
+  };
   private static readonly VARIANT_CLASSES: Record<ButtonVariant, string> = {
     primary: 'bg-primary-500 hover:bg-primary-600 text-white',
     ghost: 'bg-transparent text-primary-500 border border-primary-500 hover:bg-primary-50',
@@ -43,7 +52,9 @@ export class ButtonComponent {
   };
 
   protected classes(): string {
-    return `${ButtonComponent.BASE} ${ButtonComponent.VARIANT_CLASSES[this.variant()]}`;
+    return `${ButtonComponent.BASE} ${ButtonComponent.SIZE_CLASSES[this.size()]} ${
+      ButtonComponent.VARIANT_CLASSES[this.variant()]
+    }`;
   }
 
   protected onClick(): void {

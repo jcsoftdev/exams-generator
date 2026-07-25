@@ -1,7 +1,7 @@
 <div class="flex flex-col gap-3">
-  <button type="button" class="w-fit text-xs font-bold text-n600 hover:text-primary-600" (click)="goToHistory()">
-    ← Historial
-  </button>
+  <span class="w-fit" data-testid="back-to-history">
+    <ui-button variant="ghost" size="sm" (clicked)="goToHistory()">← Historial</ui-button>
+  </span>
 
   @if (loadError()) {
     <div class="flex flex-col gap-2">
@@ -55,6 +55,13 @@
     @if (previousAttempts().length > 0) {
       <div data-testid="retry-history" class="flex flex-col gap-1 rounded-card border border-n200 bg-surface p-3">
         <span class="text-xs font-bold text-n700">Historial de reintentos</span>
+        <!--
+          Deliberately a raw <button>, not `ui-button`: these are clickable
+          LIST ROWS (full-width, with a tag and right-aligned timestamp laid
+          out inside), not design-system buttons. Forcing them through the
+          button primitive would fight its inline-flex/padding contract for
+          no consistency gain.
+        -->
         @for (attempt of previousAttempts(); track attempt.id; let i = $index) {
           <button
             type="button"
@@ -114,13 +121,7 @@
 
     @if (isTerminal() && j.createdCount > 0) {
       <div data-testid="go-review" class="flex justify-end">
-        <button
-          type="button"
-          class="rounded-field bg-primary-900 px-4 py-2 text-xs font-bold text-white hover:bg-primary-800"
-          (click)="goToReview()"
-        >
-          Revisar los {{ j.createdCount }} en la cola →
-        </button>
+        <ui-button (clicked)="goToReview()">Revisar los {{ j.createdCount }} en la cola →</ui-button>
       </div>
     }
   }

@@ -62,16 +62,12 @@
             </p>
           </div>
 
-          <button
-            type="button"
-            data-testid="reroll-button"
-            class="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-field border border-primary-500 px-3 py-1.5 text-sm font-medium text-primary-500 transition-colors hover:bg-primary-50 disabled:cursor-not-allowed disabled:opacity-60"
-            [disabled]="isReady()"
-            (click)="reroll(question.id)"
-          >
-            <lucide-icon name="shuffle" class="h-4 w-4"></lucide-icon>
-            Cambiar
-          </button>
+          <span class="shrink-0" data-testid="reroll-button">
+            <ui-button variant="ghost" size="sm" [disabled]="isReady()" (clicked)="reroll(question.id)">
+              <lucide-icon name="shuffle" class="h-4 w-4"></lucide-icon>
+              Cambiar
+            </ui-button>
+          </span>
         </div>
 
         @if (!isReady()) {
@@ -86,15 +82,11 @@
                 (input)="onManualReplacementInput(question.id, $any($event.target).value)"
               />
             </label>
-            <button
-              type="button"
-              data-testid="manual-replace-button"
-              class="inline-flex items-center justify-center rounded-field border border-n200 px-3 py-2 text-sm font-medium text-n700 transition-colors hover:bg-n50 disabled:cursor-not-allowed disabled:opacity-60"
-              [disabled]="isReady()"
-              (click)="manualReplace(question.id)"
-            >
-              Reemplazar
-            </button>
+            <span data-testid="manual-replace-button">
+              <ui-button variant="ghost" [disabled]="isReady()" (clicked)="manualReplace(question.id)">
+                Reemplazar
+              </ui-button>
+            </span>
           </div>
         }
       </li>
@@ -106,20 +98,16 @@
     class="sticky bottom-0 mt-6 flex items-center justify-between gap-3 rounded-card border border-n200 bg-surface px-4 py-3"
   >
     <span class="text-sm text-n600">{{ questions().length }} preguntas</span>
-    <button
-      type="button"
-      data-testid="confirm-button"
-      class="inline-flex items-center justify-center gap-2 rounded-field bg-primary-500 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-600 disabled:cursor-not-allowed disabled:opacity-60"
-      [disabled]="isReady()"
-      (click)="confirm()"
-    >
-      @if (isReady()) {
-        <lucide-icon name="lock" class="h-4 w-4"></lucide-icon>
-        Confirmado
-      } @else {
-        <lucide-icon name="check" class="h-4 w-4"></lucide-icon>
-        Confirmar examen
-      }
-    </button>
+    <span data-testid="confirm-button">
+      <ui-button [disabled]="isReady()" (clicked)="confirm()">
+        @if (isReady()) {
+          <lucide-icon name="lock" class="h-4 w-4"></lucide-icon>
+          Confirmado
+        } @else {
+          <lucide-icon name="check" class="h-4 w-4"></lucide-icon>
+          Confirmar examen
+        }
+      </ui-button>
+    </span>
   </footer>
 </section>

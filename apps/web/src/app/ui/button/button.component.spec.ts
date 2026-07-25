@@ -83,6 +83,24 @@ describe('ButtonComponent', () => {
     expect(button.textContent?.trim()).toBe('');
   });
 
+  it('defaults to the md size padding', () => {
+    const { fixture, compiled } = setup();
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('button')!.className).toContain('px-4 py-2');
+  });
+
+  it('renders sm with tighter padding but the SAME type size — only the box shrinks', () => {
+    const { fixture, compiled } = setup();
+    fixture.componentRef.setInput('size', 'sm');
+    fixture.detectChanges();
+
+    const button = compiled.querySelector('button')!;
+    expect(button.className).toContain('px-3 py-1.5');
+    expect(button.className).not.toContain('px-4 py-2');
+    expect(button.className).toContain('text-sm');
+  });
+
   it('sets the native button type from htmlType', () => {
     const { fixture, compiled } = setup();
     fixture.componentRef.setInput('htmlType', 'submit');

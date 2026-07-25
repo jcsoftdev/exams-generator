@@ -6,6 +6,14 @@
 
 export type ButtonVariant = 'primary' | 'ghost' | 'danger';
 
+/**
+ * `md` is the default page/dialog action size. `sm` exists for buttons that
+ * sit INSIDE a dense row (a question row's "Cambiar", a job row's action):
+ * at `md` they dominate the row they belong to. Size is deliberately not a
+ * free-form class — it is the only axis feature code may shrink a button on.
+ */
+export type ButtonSize = 'md' | 'sm';
+
 export type TagVariant = 'easy' | 'medium' | 'hard' | 'ai' | 'warning-stock';
 
 export type BannerVariant = 'info' | 'success' | 'warning' | 'error';
