@@ -1,0 +1,1066 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// TODO: swap in the real razón social/RUC once registered (same placeholder
+// bucket as astro.config.mjs's `site` and the /privacidad, /terminos pages).
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "Organization",
+			name: "GeneraExamen",
+			url: "https://generaexamen.pe",
+			logo: "https://generaexamen.pe/icon-512.png",
+		},
+		{
+			"@type": "SoftwareApplication",
+			name: "GeneraExamen",
+			applicationCategory: "EducationalApplication",
+			operatingSystem: "Web",
+			description:
+				"Banco central de preguntas + banco privado de tu colegio + generación con IA revisada por ti. Formas A/B/C barajadas, listas en PDF.",
+			offers: {
+				"@type": "Offer",
+				availability: "https://schema.org/InStock",
+			},
+		},
+	],
+};
+---
+
+<Layout
+	title="GeneraExamen — Arma el examen de admisión en una tarde"
+	description="Banco central de preguntas + banco privado de tu colegio + generación con IA revisada por ti. Formas A/B/C barajadas, listas en PDF."
+>
+	<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+	<div class="stage">
+		<div class="board-frame">
+			<div class="board">
+				<div class="dust" aria-hidden="true">
+					<span class="mote"></span><span class="mote"></span><span class="mote"
+					></span>
+					<span class="mote"></span><span class="mote"></span>
+				</div>
+
+				<header class="topbar">
+					<div>
+						<div class="brand">Genera<b>Examen</b></div>
+						<div class="nav-note">
+							para coordinadores académicos · colegios y academias del Perú
+						</div>
+					</div>
+					<button
+						class="toggle"
+						id="themeBtn"
+						type="button"
+						aria-pressed="false"
+						aria-label="Cambiar a tema oscuro"
+					>
+						◐ cambiar pizarra
+					</button>
+				</header>
+
+				<main>
+				<section class="hero">
+					<div>
+						<span class="forma-tag">Forma A · B · C · D · E</span>
+						<h1 class="headline">
+							Arma el examen de admisión de tu colegio en
+							<span class="underline-wrap">
+								<span class="hl">una tarde</span>
+								<svg
+									class="chalk-underline"
+									viewBox="0 0 320 24"
+									preserveAspectRatio="none"
+									aria-hidden="true"
+								>
+									<path
+										d="M4 15 C 60 6, 120 22, 180 12 S 300 8, 316 16"
+									></path>
+								</svg>
+							</span>,
+							no en una semana.
+						</h1>
+						<p class="sub">
+							Banco central de preguntas + el banco privado de tu colegio +
+							generación con IA que tú apruebas antes de usar. Sale en PDF:
+							hasta 5 formas barajadas, cada una con su hoja de claves, lista
+							para la fotocopiadora.
+						</p>
+						<div class="cta-row">
+							<a
+								class="btn btn-primary"
+								href="https://wa.me/51900209147"
+								target="_blank"
+								rel="noopener">Escribir por WhatsApp</a
+							>
+							<a class="btn btn-ghost" href="#como-funciona"
+								>Ver cómo funciona</a
+							>
+						</div>
+					</div>
+
+					<figure class="shot" aria-label="Banco de preguntas real de GeneraExamen">
+						<div class="shot-window">
+							<img
+								src="/screens/bank.png"
+								alt="Banco de preguntas de GeneraExamen, organizado por curso: Álgebra, Aritmética, Biología, Comunicación, Física, Geometría, Matemática, Trigonometría"
+								width="1200"
+								height="708"
+								loading="eager"
+							/>
+						</div>
+						<figcaption class="shot-cap"
+							>↑ el banco de preguntas real, tal cual lo ve tu colegio</figcaption
+						>
+					</figure>
+				</section>
+
+				<section class="scribbles">
+					<div class="block problem">
+						<div class="kicker">El problema de siempre</div>
+						<h2>Cada bimestre reescribes lo mismo.</h2>
+						<p>
+							Copias, pegas, renumeras las preguntas a mano y cambias el orden
+							para que no se pasen las respuestas. Igual, dos salones terminan
+							con <em>el mismo examen</em> — y armar la hoja de claves de cada
+							forma se te va media tarde. Las preguntas buenas de tu colegio,
+							mientras tanto, viven regadas en fotos de WhatsApp y en un Word
+							que nadie encuentra.
+						</p>
+					</div>
+
+					<div class="block solution">
+						<div class="kicker">Lo que hace GeneraExamen</div>
+						<h2>Tú eliges el temario. Él arma todo.</h2>
+						<ul class="chalk-list">
+							<li>Banco central por curso, tema y nivel de dificultad</li>
+							<li>Tus preguntas privadas, solo de tu colegio</li>
+							<li>Sube una foto y la IA transcribe la pregunta por ti</li>
+							<li>Pide preguntas por lotes a la IA y sigue el avance en vivo</li>
+							<li>Nada entra a un examen sin tu aprobación</li>
+							<li>Verifica el stock del temario antes de generar</li>
+							<li>Formas A a E barajadas, con hoja de claves en PDF</li>
+						</ul>
+					</div>
+
+					<div class="block features">
+						<div class="kicker">Todo lo que hace</div>
+						<h2>Más que un generador de exámenes.</h2>
+						<div class="trust-row">
+							<div class="trust-item">
+								<span class="forma-tag">De foto a pregunta</span>
+								<p>
+									¿La pregunta está en una foto? Súbela: la IA extrae el
+									enunciado y las alternativas, tú corriges lo que haga falta.
+								</p>
+							</div>
+							<div class="trust-item">
+								<span class="forma-tag">IA por lotes</span>
+								<p>
+									Pide "20 de trigonometría, nivel 3" y sigue el avance en
+									vivo. Reintentos automáticos si algo falla.
+								</p>
+							</div>
+							<div class="trust-item">
+								<span class="forma-tag">Cambia una sola pregunta</span>
+								<p>
+									¿Una no te convence? Rerólala o reemplázala a mano, sin
+									rehacer el resto del examen.
+								</p>
+							</div>
+							<div class="trust-item">
+								<span class="forma-tag">Fórmulas y figuras nítidas</span>
+								<p>
+									Motor de composición profesional: fórmulas matemáticas y
+									figuras salen limpias en el PDF, no como imagen pegada.
+								</p>
+							</div>
+							<div class="trust-item">
+								<span class="forma-tag">Control de stock</span>
+								<p>
+									Antes de generar, te decimos si tu banco alcanza para el
+									temario que armaste — sin sorpresas a mitad de camino.
+								</p>
+							</div>
+							<div class="trust-item">
+								<span class="forma-tag">Tu colegio, tu equipo</span>
+								<p>
+									Cada profesor con su cuenta y su rol. Panel con el estado de
+									tu banco y tus últimos exámenes.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="block trust" id="confianza">
+						<div class="kicker">Antes de que preguntes</div>
+						<h2>Tu banco, tus reglas.</h2>
+						<div class="trust-row">
+							<div class="trust-item">
+								<span class="forma-tag">Propiedad clara</span>
+								<p>
+									El banco central es compartido entre colegios; lo que
+									agrega tu colegio es privado y solo tú lo ves.
+								</p>
+							</div>
+							<div class="trust-item">
+								<span class="forma-tag">Nada se filtra</span>
+								<p>
+									Cada salón recibe una forma distinta, barajada al momento
+									de generar — no hay "el examen que ya circuló".
+								</p>
+							</div>
+							<div class="trust-item">
+								<span class="forma-tag">IA con revisión, no a ciegas</span>
+								<p>
+									Toda pregunta generada pasa por aprobación antes de entrar
+									a un examen real. La decisión final es tuya.
+								</p>
+								<figure class="shot shot-small">
+									<div class="shot-window shot-window-small">
+										<img
+											src="/screens/ai-review.png"
+											alt="Cola de revisión de preguntas generadas por IA, pendientes de aprobación"
+											width="350"
+											height="760"
+											loading="lazy"
+										/>
+									</div>
+									<figcaption class="shot-cap"
+										>↑ cola de revisión, antes de entrar al examen</figcaption
+									>
+								</figure>
+							</div>
+						</div>
+					</div>
+
+					<div class="block steps" id="como-funciona">
+						<div class="kicker">Cómo funciona</div>
+						<h2>Cuatro pasos, tiza en mano.</h2>
+						<div class="steps-row">
+							<div class="step">
+								<span class="num">1</span>
+								<h3>Alimenta tu banco</h3>
+								<p>Sube fotos, tipea a mano o genera preguntas con IA.</p>
+							</div>
+							<div class="step">
+								<span class="num">2</span>
+								<h3>Elige el temario</h3>
+								<p>
+									Marca cursos, temas y cuántas preguntas de cada uno. Te
+									avisamos si falta stock.
+								</p>
+							</div>
+							<div class="step">
+								<span class="num">3</span>
+								<h3>Genera las formas</h3>
+								<p>
+									GeneraExamen baraja preguntas y alternativas y crea hasta 5
+									formas sin repetir el orden.
+								</p>
+							</div>
+							<div class="step">
+								<span class="num">4</span>
+								<h3>Imprime y aplica</h3>
+								<p>
+									Descarga el PDF de cada forma con su hoja de claves. Listo
+									para la fotocopiadora.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="closer">
+					<h2>¿Lo probamos con el examen de tu próximo bimestre?</h2>
+					<p>
+						Armamos una demo con las preguntas de tu propio curso y tu
+						temario real. Tú decides si sigue.
+					</p>
+					<div class="cta-row" style="justify-content:center">
+						<a
+							class="btn btn-primary"
+							href="https://wa.me/51900209147"
+							target="_blank"
+							rel="noopener">Escribir por WhatsApp</a
+						>
+						<a class="btn btn-ghost" href="mailto:ajcarlos032@gmail.com"
+							>o escríbenos un correo</a
+						>
+					</div>
+				</section>
+				</main>
+
+				<footer class="legal-footer">
+					<a href="/privacidad">Privacidad</a>
+					<span aria-hidden="true">·</span>
+					<a href="/terminos">Términos</a>
+				</footer>
+			</div>
+		</div>
+
+		<div class="tray" aria-hidden="true">
+			<span class="chalk-stick w"></span>
+			<span class="chalk-stick b"></span>
+			<span class="chalk-stick r"></span>
+			<span class="eraser"></span>
+		</div>
+	</div>
+
+	<script>
+		const root = document.documentElement;
+		const btn = document.getElementById("themeBtn");
+
+		function currentTheme(): "dark" | "light" {
+			const attr = root.getAttribute("data-theme");
+			if (attr === "dark" || attr === "light") {
+				return attr;
+			}
+			return window.matchMedia?.("(prefers-color-scheme: dark)").matches
+				? "dark"
+				: "light";
+		}
+
+		function syncButton(theme: "dark" | "light"): void {
+			btn?.setAttribute("aria-pressed", String(theme === "dark"));
+			btn?.setAttribute(
+				"aria-label",
+				theme === "dark" ? "Cambiar a tema claro" : "Cambiar a tema oscuro",
+			);
+		}
+
+		syncButton(currentTheme());
+		btn?.addEventListener("click", () => {
+			const next = currentTheme() === "dark" ? "light" : "dark";
+			root.setAttribute("data-theme", next);
+			localStorage.setItem("examgen-theme", next);
+			syncButton(next);
+		});
+	</script>
+</Layout>
+
+<style>
+	:root {
+		--board: #ecefe9;
+		--board-2: #e2e6df;
+		--write: #2a2e33;
+		--write-soft: #575c62;
+		--blue: #1f5fae;
+		--red: #bf3a2b;
+		--yellow: #8a6100;
+		--frame: #d3d6d8;
+		--frame-2: #a8acaf;
+		--tray: #c3c7ca;
+		--dust: rgba(60, 66, 72, 0.3);
+		--smudge: rgba(40, 44, 50, 0.05);
+		--paper: #fbfaf5;
+		--paper-line: #d8d3c4;
+		--tape: rgba(210, 190, 120, 0.55);
+		--shadow: rgba(30, 35, 40, 0.18);
+		--grain-op: 0.05;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--board: #21362c;
+			--board-2: #1a2b22;
+			--write: #f2efe3;
+			--write-soft: #c6cdbf;
+			--blue: #8ec8e9;
+			--red: #f2a3b1;
+			--yellow: #f0d271;
+			--frame: #6c4a2b;
+			--frame-2: #472f18;
+			--tray: #3d2914;
+			--dust: rgba(242, 239, 227, 0.55);
+			--smudge: rgba(242, 239, 227, 0.055);
+			--paper: #f3efe2;
+			--paper-line: #c9c2ab;
+			--tape: rgba(240, 220, 150, 0.3);
+			--shadow: rgba(0, 0, 0, 0.42);
+			--grain-op: 0.09;
+		}
+	}
+
+	:global(:root[data-theme="light"]) {
+		--board: #ecefe9;
+		--board-2: #e2e6df;
+		--write: #2a2e33;
+		--write-soft: #575c62;
+		--blue: #1f5fae;
+		--red: #bf3a2b;
+		--yellow: #8a6100;
+		--frame: #d3d6d8;
+		--frame-2: #a8acaf;
+		--tray: #c3c7ca;
+		--dust: rgba(60, 66, 72, 0.3);
+		--smudge: rgba(40, 44, 50, 0.05);
+		--paper: #fbfaf5;
+		--paper-line: #d8d3c4;
+		--tape: rgba(210, 190, 120, 0.55);
+		--shadow: rgba(30, 35, 40, 0.18);
+		--grain-op: 0.05;
+	}
+	:global(:root[data-theme="dark"]) {
+		--board: #21362c;
+		--board-2: #1a2b22;
+		--write: #f2efe3;
+		--write-soft: #c6cdbf;
+		--blue: #8ec8e9;
+		--red: #f2a3b1;
+		--yellow: #f0d271;
+		--frame: #6c4a2b;
+		--frame-2: #472f18;
+		--tray: #3d2914;
+		--dust: rgba(242, 239, 227, 0.55);
+		--smudge: rgba(242, 239, 227, 0.055);
+		--paper: #f3efe2;
+		--paper-line: #c9c2ab;
+		--tape: rgba(240, 220, 150, 0.3);
+		--shadow: rgba(0, 0, 0, 0.42);
+		--grain-op: 0.09;
+	}
+
+	:root {
+		--font-hand: "Chalkboard SE", "Segoe Print", "Bradley Hand", "Caveat",
+			ui-rounded, "Comic Sans MS", cursive;
+		--font-body: ui-rounded, "Trebuchet MS", "Segoe UI", "Nunito", system-ui,
+			sans-serif;
+	}
+
+	.stage {
+		font-family: var(--font-body);
+		color: var(--write);
+		background:
+			radial-gradient(
+				120% 80% at 15% 0%,
+				color-mix(in srgb, var(--frame) 22%, transparent),
+				transparent 60%
+			),
+			var(--frame-2);
+		min-height: 100vh;
+		padding: clamp(14px, 3vw, 40px);
+		line-height: 1.5;
+		-webkit-font-smoothing: antialiased;
+		overflow-x: hidden;
+	}
+
+	.board-frame {
+		max-width: 1140px;
+		margin: 0 auto;
+		background: linear-gradient(155deg, var(--frame), var(--frame-2));
+		padding: clamp(12px, 1.6vw, 22px);
+		border-radius: 10px;
+		box-shadow:
+			0 2px 0 color-mix(in srgb, var(--write) 8%, transparent) inset,
+			0 26px 60px -22px var(--shadow),
+			0 4px 0 color-mix(in srgb, #000 22%, transparent);
+		position: relative;
+	}
+
+	.board {
+		position: relative;
+		border-radius: 4px;
+		background:
+			radial-gradient(90% 60% at 78% 8%, var(--smudge), transparent 55%),
+			radial-gradient(70% 50% at 12% 82%, var(--smudge), transparent 55%),
+			radial-gradient(50% 40% at 60% 55%, var(--smudge), transparent 60%),
+			linear-gradient(160deg, var(--board), var(--board-2));
+		box-shadow:
+			0 0 0 2px color-mix(in srgb, #000 20%, transparent) inset,
+			0 10px 30px -14px var(--shadow) inset;
+		padding: clamp(22px, 4.5vw, 64px);
+		overflow: hidden;
+	}
+	.board::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+		opacity: var(--grain-op);
+		mix-blend-mode: overlay;
+		pointer-events: none;
+	}
+
+	.tray {
+		max-width: 1140px;
+		margin: -2px auto 0;
+		height: 26px;
+		background: linear-gradient(180deg, var(--tray), var(--frame-2));
+		border-radius: 0 0 12px 12px;
+		box-shadow:
+			0 14px 26px -16px var(--shadow),
+			0 2px 0 color-mix(in srgb, #000 25%, transparent);
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		padding: 0 34px;
+	}
+	.chalk-stick {
+		height: 7px;
+		border-radius: 4px;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	}
+	.chalk-stick.w {
+		width: 54px;
+		background: linear-gradient(90deg, #f4f1e6, #d9d4c4);
+	}
+	.chalk-stick.b {
+		width: 40px;
+		background: linear-gradient(
+			90deg,
+			var(--blue),
+			color-mix(in srgb, var(--blue) 55%, #fff)
+		);
+	}
+	.chalk-stick.r {
+		width: 34px;
+		background: linear-gradient(
+			90deg,
+			var(--red),
+			color-mix(in srgb, var(--red) 55%, #fff)
+		);
+	}
+	.eraser {
+		margin-left: auto;
+		width: 66px;
+		height: 15px;
+		border-radius: 3px;
+		background: linear-gradient(180deg, #3a4a55, #26323a);
+		box-shadow:
+			0 2px 3px rgba(0, 0, 0, 0.35),
+			0 -6px 0 -2px color-mix(in srgb, var(--write) 40%, transparent);
+		position: relative;
+	}
+
+	.topbar {
+		position: relative;
+		z-index: 3;
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 16px;
+		flex-wrap: wrap;
+		margin-bottom: clamp(28px, 5vw, 56px);
+	}
+	.brand {
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: clamp(22px, 2.6vw, 30px);
+		letter-spacing: 0.5px;
+		color: var(--write);
+		transform: rotate(-1.4deg);
+	}
+	.brand b {
+		color: var(--yellow);
+	}
+	.nav-note {
+		font-size: 13px;
+		color: var(--write-soft);
+		transform: rotate(-0.6deg);
+	}
+
+	.toggle {
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: 15px;
+		color: var(--write);
+		background: transparent;
+		border: 2px dashed color-mix(in srgb, var(--write) 45%, transparent);
+		border-radius: 20px 22px 20px 24px;
+		padding: 6px 14px;
+		cursor: pointer;
+		transition:
+			transform 0.15s ease,
+			background 0.2s ease;
+	}
+	.toggle:hover {
+		transform: rotate(1.5deg);
+		background: color-mix(in srgb, var(--write) 8%, transparent);
+	}
+	.toggle:focus-visible {
+		outline: 2px solid var(--blue);
+		outline-offset: 2px;
+	}
+
+	.hero {
+		position: relative;
+		z-index: 2;
+		display: grid;
+		grid-template-columns: 1.15fr 0.85fr;
+		gap: clamp(24px, 4vw, 52px);
+		align-items: start;
+	}
+	@media (max-width: 820px) {
+		.hero {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.forma-tag {
+		display: inline-block;
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: 15px;
+		color: var(--red);
+		border: 2px solid var(--red);
+		border-radius: 30px 26px 30px 24px;
+		padding: 3px 14px;
+		transform: rotate(-3deg);
+		margin-bottom: 18px;
+	}
+
+	h1.headline {
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: clamp(30px, 5.4vw, 58px);
+		line-height: 1.06;
+		margin: 0 0 10px;
+		letter-spacing: 0.3px;
+		text-shadow: 0 1px 0 color-mix(in srgb, var(--write) 14%, transparent);
+		text-wrap: balance;
+	}
+	h1 .hl {
+		color: var(--yellow);
+		position: relative;
+		white-space: nowrap;
+	}
+	/* Below this the chalk-underline SVG stops having room and "una tarde"
+	   would clip instead — the underline is only a cosmetic flourish, so
+	   losing it here beats clipped text (audit P2). */
+	@media (max-width: 340px) {
+		h1 .hl {
+			white-space: normal;
+		}
+	}
+
+	.underline-wrap {
+		display: inline-block;
+		position: relative;
+	}
+	.chalk-underline {
+		position: absolute;
+		left: -2%;
+		bottom: -0.28em;
+		width: 104%;
+		height: 0.5em;
+		overflow: visible;
+		pointer-events: none;
+	}
+	.chalk-underline path {
+		fill: none;
+		stroke: var(--blue);
+		stroke-width: 5;
+		stroke-linecap: round;
+		stroke-dasharray: 320;
+		stroke-dashoffset: 320;
+		filter: drop-shadow(
+			0 0 0.5px color-mix(in srgb, var(--blue) 60%, transparent)
+		);
+		animation: draw 1.5s ease 0.35s forwards;
+	}
+	@keyframes draw {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sub {
+		font-size: clamp(15px, 1.9vw, 19px);
+		color: var(--write-soft);
+		max-width: 40ch;
+		margin: 22px 0 30px;
+		transform: rotate(-0.4deg);
+	}
+
+	.cta-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+		align-items: center;
+	}
+	.btn {
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: 18px;
+		cursor: pointer;
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		gap: 9px;
+		padding: 12px 22px;
+		transition:
+			transform 0.16s ease,
+			box-shadow 0.16s ease;
+	}
+	.btn-primary {
+		color: var(--board);
+		background: var(--yellow);
+		border: none;
+		border-radius: 26px 30px 24px 30px;
+		box-shadow:
+			0 6px 0 -1px color-mix(in srgb, var(--yellow) 55%, #000),
+			0 10px 20px -10px var(--shadow);
+		transform: rotate(-1.2deg);
+	}
+	.btn-primary:hover {
+		transform: rotate(-1.2deg) translateY(-2px);
+	}
+	.btn-primary:active {
+		transform: rotate(-1.2deg) translateY(2px);
+		box-shadow: 0 2px 0 -1px color-mix(in srgb, var(--yellow) 55%, #000);
+	}
+	.btn-ghost {
+		color: var(--write);
+		border: 2.5px solid color-mix(in srgb, var(--write) 55%, transparent);
+		background: transparent;
+		border-radius: 24px 28px 22px 30px;
+		transform: rotate(0.8deg);
+	}
+	.btn-ghost:hover {
+		transform: rotate(0.8deg) translateY(-2px);
+		background: color-mix(in srgb, var(--write) 7%, transparent);
+	}
+	.btn:focus-visible {
+		outline: 3px solid var(--blue);
+		outline-offset: 3px;
+	}
+
+	.shot {
+		position: relative;
+		background: var(--paper);
+		border-radius: 3px;
+		padding: 12px 12px 16px;
+		box-shadow:
+			0 18px 34px -18px var(--shadow),
+			0 2px 0 color-mix(in srgb, #000 12%, transparent);
+		transform: rotate(2deg);
+		margin-top: 8px;
+	}
+	.shot::before,
+	.shot::after {
+		content: "";
+		position: absolute;
+		width: 92px;
+		height: 26px;
+		background: var(--tape);
+		top: -12px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+	}
+	.shot::before {
+		left: 16px;
+		transform: rotate(-6deg);
+	}
+	.shot::after {
+		right: 16px;
+		transform: rotate(5deg);
+	}
+	.shot-window {
+		border: 1px solid var(--paper-line);
+		border-radius: 2px;
+		overflow: hidden;
+		line-height: 0;
+	}
+	.shot-window img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	.shot-cap {
+		text-align: center;
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: 14px;
+		color: #5a544a;
+		margin-top: 10px;
+	}
+	.shot-small {
+		transform: rotate(-1.5deg);
+		margin-top: 16px;
+		max-width: 260px;
+	}
+	.shot-small .shot-cap {
+		font-size: 12.5px;
+	}
+
+	.scribbles {
+		position: relative;
+		z-index: 2;
+		margin-top: clamp(48px, 8vw, 96px);
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: clamp(20px, 3vw, 40px);
+	}
+	.block {
+		grid-column: span 12;
+	}
+	@media (min-width: 760px) {
+		.block.problem {
+			grid-column: 1 / span 7;
+			transform: rotate(-0.7deg);
+		}
+		.block.solution {
+			grid-column: 8 / span 5;
+			transform: rotate(0.6deg);
+		}
+		.block.steps {
+			grid-column: 1 / span 12;
+		}
+	}
+	.kicker {
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: 15px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: var(--red);
+	}
+	.block h2 {
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: clamp(22px, 3.2vw, 32px);
+		margin: 6px 0 12px;
+		color: var(--write);
+		text-wrap: balance;
+	}
+	.block p {
+		color: var(--write-soft);
+		font-size: 16px;
+		max-width: 46ch;
+	}
+	.block p em {
+		color: var(--yellow);
+		font-style: normal;
+	}
+
+	.chalk-list {
+		list-style: none;
+		padding: 0;
+		margin: 8px 0 0;
+	}
+	.chalk-list li {
+		position: relative;
+		padding: 7px 0 7px 34px;
+		color: var(--write);
+		font-size: 16px;
+		border-bottom: 1.5px dashed
+			color-mix(in srgb, var(--write) 20%, transparent);
+	}
+	.chalk-list li::before {
+		content: "✓";
+		position: absolute;
+		left: 4px;
+		top: 6px;
+		font-family: var(--font-hand);
+		font-weight: 700;
+		color: var(--blue);
+		font-size: 19px;
+		transform: rotate(-8deg);
+	}
+
+	.block.trust {
+		grid-column: 1 / span 12;
+		margin-top: -6px;
+	}
+	.trust-row {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: clamp(16px, 2.4vw, 28px);
+		margin-top: 14px;
+	}
+	@media (max-width: 760px) {
+		.trust-row {
+			grid-template-columns: 1fr;
+		}
+	}
+	.trust-item {
+		border-left: 3px dashed color-mix(in srgb, var(--write) 30%, transparent);
+		padding-left: 16px;
+	}
+	.trust-item .forma-tag {
+		color: var(--blue);
+		border-color: var(--blue);
+		margin-bottom: 8px;
+	}
+	.trust-item p {
+		color: var(--write-soft);
+		font-size: 14.5px;
+		margin: 0;
+		max-width: 32ch;
+	}
+
+	.steps-row {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: clamp(18px, 3vw, 40px);
+		margin-top: 10px;
+	}
+	@media (max-width: 900px) {
+		.steps-row {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (max-width: 480px) {
+		.steps-row {
+			grid-template-columns: 1fr;
+		}
+	}
+	.step {
+		position: relative;
+		padding-top: 14px;
+	}
+	.step .num {
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: clamp(40px, 6vw, 62px);
+		color: var(--yellow);
+		line-height: 1;
+		display: block;
+		transform: rotate(-4deg);
+		text-shadow: 0 0 1px color-mix(in srgb, var(--yellow) 40%, transparent);
+	}
+	.step h3 {
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: 21px;
+		margin: 4px 0 6px;
+	}
+	.step p {
+		font-size: 15px;
+	}
+	.step::after {
+		content: "";
+		position: absolute;
+		right: -18px;
+		top: 40px;
+		width: 24px;
+		height: 2px;
+		background: repeating-linear-gradient(
+			90deg,
+			var(--write-soft) 0 6px,
+			transparent 6px 11px
+		);
+	}
+	.step:last-child::after {
+		display: none;
+	}
+	@media (max-width: 900px) {
+		.step::after {
+			display: none;
+		}
+	}
+
+	.closer {
+		position: relative;
+		z-index: 2;
+		margin-top: clamp(48px, 8vw, 92px);
+		text-align: center;
+		padding: clamp(26px, 5vw, 46px);
+		border: 3px dashed color-mix(in srgb, var(--write) 32%, transparent);
+		border-radius: 40px 46px 38px 50px;
+		transform: rotate(-0.5deg);
+	}
+	.closer h2 {
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: clamp(24px, 4vw, 40px);
+		margin: 0 0 6px;
+		text-wrap: balance;
+	}
+	.closer p {
+		color: var(--write-soft);
+		margin: 0 0 22px;
+	}
+
+	.legal-footer {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		gap: 8px;
+		margin-top: 18px;
+		font-size: 13px;
+		color: var(--write-soft);
+	}
+	.legal-footer a {
+		color: inherit;
+		text-decoration: underline;
+	}
+
+	.dust {
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		z-index: 1;
+		overflow: hidden;
+	}
+	.mote {
+		position: absolute;
+		bottom: 30%;
+		width: 3px;
+		height: 3px;
+		border-radius: 50%;
+		background: var(--dust);
+		opacity: 0;
+		animation: fall linear infinite;
+	}
+	.mote:nth-child(1) {
+		left: 12%;
+		animation-duration: 7s;
+		animation-delay: 0s;
+	}
+	.mote:nth-child(2) {
+		left: 34%;
+		animation-duration: 9s;
+		animation-delay: 2.5s;
+		width: 2px;
+		height: 2px;
+	}
+	.mote:nth-child(3) {
+		left: 58%;
+		animation-duration: 8s;
+		animation-delay: 1.2s;
+	}
+	.mote:nth-child(4) {
+		left: 76%;
+		animation-duration: 11s;
+		animation-delay: 3.4s;
+		width: 4px;
+		height: 4px;
+	}
+	.mote:nth-child(5) {
+		left: 89%;
+		animation-duration: 8.5s;
+		animation-delay: 0.6s;
+	}
+	@keyframes fall {
+		0% {
+			transform: translateY(0) translateX(0);
+			opacity: 0;
+		}
+		12% {
+			opacity: 0.8;
+		}
+		100% {
+			transform: translateY(220px) translateX(14px);
+			opacity: 0;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.chalk-underline path {
+			animation: none;
+			stroke-dashoffset: 0;
+		}
+		.mote {
+			animation: none;
+			display: none;
+		}
+		.btn,
+		.toggle {
+			transition: none;
+		}
+	}
+</style>

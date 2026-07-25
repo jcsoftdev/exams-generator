@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Página no encontrada — GeneraExamen" description="La página que buscas no existe o cambió de dirección.">
+	<main class="not-found">
+		<p class="code">404</p>
+		<h1>Página no encontrada</h1>
+		<p>La página que buscas no existe o cambió de dirección.</p>
+		<a class="btn btn-primary" href="/">Volver al inicio</a>
+	</main>
+</Layout>
+
+<style>
+	.not-found {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+		text-align: center;
+		padding: 24px;
+		font-family: ui-rounded, "Trebuchet MS", "Segoe UI", "Nunito", system-ui, sans-serif;
+	}
+	.code {
+		font-size: 64px;
+		font-weight: 700;
+		margin: 0;
+		opacity: 0.4;
+	}
+	h1 {
+		margin: 0;
+		font-size: 24px;
+	}
+	.btn-primary {
+		margin-top: 12px;
+		display: inline-block;
+		padding: 10px 20px;
+		border-radius: 999px;
+		background: #5a6acf;
+		color: #fff;
+		text-decoration: none;
+		font-weight: 600;
+	}
+</style>

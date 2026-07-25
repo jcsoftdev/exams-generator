@@ -1,0 +1,76 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Términos — GeneraExamen" description="Términos de servicio de GeneraExamen.">
+	<main class="legal">
+		<a class="back" href="/">← Volver al inicio</a>
+		<h1>Términos de servicio</h1>
+		<p class="todo">
+			TODO antes de publicar: completar con la razón social, RUC y datos de contacto legales
+			reales del titular del servicio.
+		</p>
+
+		<h2>El servicio</h2>
+		<p>
+			GeneraExamen es una herramienta para que colegios y academias armen exámenes a partir
+			de un banco de preguntas propio y central, con apoyo de generación por IA revisada por
+			el propio colegio.
+		</p>
+
+		<h2>Cuentas</h2>
+		<p>
+			Cada colegio administra sus propias cuentas de profesores. El colegio es responsable de
+			la veracidad de la información que sube y de las preguntas que genera o aprueba.
+		</p>
+
+		<h2>Uso aceptable</h2>
+		<p>
+			El banco central de preguntas es compartido entre colegios — no está permitido subir
+			contenido con derechos de terceros sin autorización, ni usar el servicio para fines
+			distintos a la generación de exámenes educativos.
+		</p>
+
+		<h2>Cambios</h2>
+		<p>
+			Podemos actualizar estos términos; los cambios importantes se comunicarán a los colegios
+			con cuenta activa.
+		</p>
+
+		<h2>Contacto</h2>
+		<p>
+			Para consultas, escribe a <a href="mailto:ajcarlos032@gmail.com">ajcarlos032@gmail.com</a>.
+		</p>
+	</main>
+</Layout>
+
+<style>
+	.legal {
+		max-width: 680px;
+		margin: 0 auto;
+		padding: 48px 24px 80px;
+		font-family: ui-rounded, "Trebuchet MS", "Segoe UI", "Nunito", system-ui, sans-serif;
+		line-height: 1.6;
+	}
+	.back {
+		display: inline-block;
+		margin-bottom: 24px;
+		color: inherit;
+		text-decoration: none;
+		opacity: 0.7;
+	}
+	h1 {
+		margin: 0 0 8px;
+	}
+	h2 {
+		margin: 28px 0 8px;
+		font-size: 18px;
+	}
+	.todo {
+		background: #fff3cd;
+		border: 1px solid #f0d271;
+		border-radius: 8px;
+		padding: 10px 14px;
+		font-size: 14px;
+	}
+</style>
