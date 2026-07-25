@@ -6,9 +6,9 @@ import { LucideAngularModule } from 'lucide-angular';
  * shell's mobile drawer; `[actions]` is a projection slot for screen-level
  * buttons (e.g. "Nueva pregunta"). Icons are lucide-angular only (no emojis
  * in UI — see docs/superpowers/specs/2026-07-18-ui-redesign-screens-design.md).
- * The search field (design doc §3, dashboard-layout-migration) is
- * deliberately NOT wired to any `input()`/`output()` yet — it's a visual
- * match for the Figma reference only; no search behavior is in scope here.
+ * No search field here: there is no unified search endpoint to back it, and
+ * a text box that swallows input silently is worse than no box at all
+ * (audit P0 — "chrome decorativo que parece funcional").
  */
 @Component({
   selector: 'ui-topbar',
@@ -31,22 +31,7 @@ import { LucideAngularModule } from 'lucide-angular';
           <h1 class="text-base font-semibold text-n900">{{ title() }}</h1>
         }
       </div>
-      <div class="hidden min-w-0 flex-1 px-6 md:flex">
-        <div class="relative w-full max-w-xl">
-          <lucide-angular
-            name="search"
-            class="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-n400"
-          ></lucide-angular>
-          <input
-            data-testid="topbar-search"
-            type="search"
-            placeholder="Buscar..."
-            aria-label="Buscar"
-            class="h-8 w-full rounded-field border-none bg-n50 pl-9 pr-3 text-sm text-n900 placeholder:text-n400 focus:outline-none focus:ring-2 focus:ring-primary-300"
-          />
-        </div>
-      </div>
-      <div class="flex items-center gap-2">
+      <div class="flex flex-1 items-center gap-2 justify-end">
         <ng-content select="[actions]"></ng-content>
       </div>
     </header>

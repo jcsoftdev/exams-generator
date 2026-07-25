@@ -101,7 +101,7 @@
                 data-testid="course-header"
                 [attr.data-course-id]="course.courseId"
                 [attr.aria-expanded]="isCourseExpanded(course.courseId)"
-                class="sticky top-0 z-10 flex w-full items-center gap-3 rounded-t-card border-b border-n200 bg-n100 px-4 py-3 text-left transition-colors hover:bg-n200/60 focus:bg-n200/60 focus:outline-none"
+                class="sticky top-0 z-10 flex w-full items-center gap-3 rounded-t-card border-b border-n200 bg-n100 px-4 py-3 text-left transition-colors hover:bg-n200/60 focus:outline-none focus:ring-2 focus:ring-primary-300"
                 [class.rounded-b-card]="!isCourseExpanded(course.courseId)"
                 [class.border-b-0]="!isCourseExpanded(course.courseId)"
                 (click)="toggleCourse(course.courseId)"
@@ -121,7 +121,7 @@
                         data-testid="topic-header"
                         [attr.data-topic-id]="topic.topicId"
                         [attr.aria-expanded]="isTopicExpanded(topic.topicId)"
-                        class="flex w-full items-center gap-2 py-2 pl-8 pr-3 text-left transition-colors hover:bg-n50 focus:bg-n50 focus:outline-none"
+                        class="flex w-full items-center gap-2 py-2 pl-8 pr-3 text-left transition-colors hover:bg-n50 focus:outline-none focus:ring-2 focus:ring-primary-300"
                         (click)="toggleTopic(topic.topicId)"
                       >
                         <lucide-angular [name]="chevronFor(isTopicExpanded(topic.topicId))" class="h-3.5 w-3.5 shrink-0 text-n400"></lucide-angular>
@@ -198,86 +198,39 @@
                   />
                 </div>
 
-                <ui-select
-                  label="Curso"
-                  placeholder="Elige un curso"
-                  [options]="courseOptions()"
-                  [value]="editCourseId()"
-                  (valueChange)="onEditCourseChange($event)"
-                ></ui-select>
-                <ui-select
-                  label="Tema"
-                  placeholder="Elige un tema"
-                  [options]="editTopicOptions()"
-                  [value]="editTopicId()"
-                  (valueChange)="editTopicId.set($event ?? '')"
-                ></ui-select>
-                <ui-select
-                  label="Nivel"
-                  [options]="difficultyOptions"
-                  [value]="editDifficulty()"
-                  (valueChange)="editDifficulty.set($event)"
-                ></ui-select>
-                <ui-select
-                  label="Grado"
-                  [options]="gradeLevelOptions"
-                  [value]="editGradeLevel()"
-                  (valueChange)="editGradeLevel.set($event)"
-                ></ui-select>
+                <app-question-taxonomy-fields
+                  [courseId]="editCourseId()"
+                  [topicId]="editTopicId()"
+                  [difficulty]="editDifficulty()"
+                  [gradeLevel]="editGradeLevel()"
+                  [courseOptions]="courseOptions()"
+                  [topicOptions]="editTopicOptions()"
+                  [difficultyOptions]="difficultyOptions"
+                  [gradeLevelOptions]="gradeLevelOptions"
+                  (courseIdChange)="onEditCourseChange($event)"
+                  (topicIdChange)="editTopicId.set($event)"
+                  (difficultyChange)="editDifficulty.set($event)"
+                  (gradeLevelChange)="editGradeLevel.set($event)"
+                ></app-question-taxonomy-fields>
                 @if (q.type === 'structured') {
-                  <label class="text-sm text-n700">Enunciado
-                    <textarea
-                      data-testid="edit-enunciado"
-                      class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm"
-                      rows="3"
-                      [value]="editBody()"
-                      (input)="editBody.set($any($event.target).value)"
-                    ></textarea>
-                  </label>
-                  <label class="text-sm text-n700">Alternativas (una por línea)
-                    <textarea
-                      data-testid="edit-alternatives"
-                      class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm"
-                      rows="4"
-                      [value]="editAlternatives()"
-                      (input)="editAlternatives.set($any($event.target).value)"
-                    ></textarea>
-                  </label>
-                  <div data-testid="edit-correct-answer">
-                    <ui-select
-                      label="Clave (respuesta correcta)"
-                      placeholder="Elige la alternativa correcta"
-                      [options]="editCorrectAnswerOptions()"
-                      [value]="editCorrectAnswer()"
-                      (valueChange)="editCorrectAnswer.set($event ?? '')"
-                    ></ui-select>
-                  </div>
+                  <app-question-content-fields
+                    [body]="editBody()"
+                    [alternatives]="editAlternatives()"
+                    [correctAnswer]="editCorrectAnswer()"
+                    [correctAnswerOptions]="editCorrectAnswerOptions()"
+                    (bodyChange)="editBody.set($event)"
+                    (alternativesChange)="editAlternatives.set($event)"
+                    (correctAnswerChange)="editCorrectAnswer.set($event)"
+                  ></app-question-content-fields>
 
                   <!-- Task 9: AI instruction box — never auto-saves, only fills the form above for review. -->
-                  <div class="flex flex-col gap-2 rounded-field border border-dashed border-primary-300 bg-primary-50/40 p-3">
-                    <span class="flex items-center gap-1 text-xs font-medium text-primary-700">
-                      <lucide-angular name="sparkles" class="h-3.5 w-3.5"></lucide-angular>
-                      Editar con IA
-                    </span>
-                    <div data-testid="ai-instruction">
-                      <ui-input
-                        placeholder="hazla más difícil, corrige el error…"
-                        [value]="aiInstruction()"
-                        (valueChange)="aiInstruction.set($event)"
-                      ></ui-input>
-                    </div>
-                    <div data-testid="ai-revise" class="self-start">
-                      <ui-button variant="ghost" [loading]="revising()" [disabled]="revising()" (clicked)="reviseWithAi()">
-                        <span class="flex items-center gap-1">
-                          <lucide-angular name="sparkles" class="h-4 w-4"></lucide-angular>
-                          Revisar con IA
-                        </span>
-                      </ui-button>
-                    </div>
-                    @if (aiError()) {
-                      <p data-testid="ai-error" class="text-sm text-hard-text" role="alert">{{ aiError() }}</p>
-                    }
-                  </div>
+                  <app-ai-revise-box
+                    [instruction]="aiInstruction()"
+                    [loading]="revising()"
+                    [error]="aiError()"
+                    (instructionChange)="aiInstruction.set($event)"
+                    (revise)="reviseWithAi()"
+                  ></app-ai-revise-box>
 
                   <!-- Task 10: OCR extraction — reads a photographed question and fills the form above for review, same as "Editar con IA". -->
                   <div class="flex flex-col gap-2 rounded-field border border-dashed border-primary-300 bg-primary-50/40 p-3">
@@ -378,7 +331,7 @@
                 } @else if (q.origin === 'ai') {
                   <ui-tag variant="ai">IA</ui-tag>
                 } @else {
-                  <span class="rounded-full bg-tint-activo px-2 py-0.5 text-xs text-tint-texto">Colegio</span>
+                  <span class="rounded-full bg-tint-active px-2 py-0.5 text-xs text-tint-text">Colegio</span>
                 }
               </div>
               <dl class="mb-4 space-y-1 text-sm text-n700">
@@ -405,7 +358,7 @@
                   </div>
                   @if (canArchive(q)) {
                     <div data-testid="panel-archive">
-                      <ui-button variant="ghost" (clicked)="archive(q)">
+                      <ui-button variant="ghost" (clicked)="requestArchive(q)">
                         <span class="flex items-center gap-1">
                           <lucide-angular name="archive" class="h-4 w-4"></lucide-angular>
                           Archivar
@@ -415,7 +368,7 @@
                   }
                   @if (canDelete(q)) {
                     <div data-testid="panel-delete">
-                      <ui-button variant="ghost" (clicked)="remove(q)">
+                      <ui-button variant="ghost" (clicked)="requestDelete(q)">
                         <span class="flex items-center gap-1 text-hard-text">
                           <lucide-angular name="trash-2" class="h-4 w-4"></lucide-angular>
                           Borrar
@@ -435,4 +388,24 @@
       </div>
     </div>
   }
+
+  <ui-modal [open]="pendingDelete() !== null" title="Borrar pregunta" (openChange)="cancelDelete()">
+    <p data-testid="delete-confirm" class="text-sm text-n700">
+      ¿Seguro que quieres borrar esta pregunta? Esta acción no se puede deshacer.
+    </p>
+    <div actions class="flex justify-end gap-2">
+      <ui-button variant="ghost" (clicked)="cancelDelete()">Cancelar</ui-button>
+      <div data-testid="delete-confirm-yes"><ui-button variant="danger" (clicked)="confirmDelete()">Borrar</ui-button></div>
+    </div>
+  </ui-modal>
+
+  <ui-modal [open]="pendingArchive() !== null" title="Archivar pregunta" (openChange)="cancelArchive()">
+    <p data-testid="archive-confirm" class="text-sm text-n700">
+      ¿Seguro que quieres archivar esta pregunta? Deja de estar disponible para nuevos exámenes.
+    </p>
+    <div actions class="flex justify-end gap-2">
+      <ui-button variant="ghost" (clicked)="cancelArchive()">Cancelar</ui-button>
+      <div data-testid="archive-confirm-yes"><ui-button variant="danger" (clicked)="confirmArchive()">Archivar</ui-button></div>
+    </div>
+  </ui-modal>
 </div>

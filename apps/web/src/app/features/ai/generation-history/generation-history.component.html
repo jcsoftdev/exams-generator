@@ -8,6 +8,14 @@
     </div>
   }
 
+  @if (loading()) {
+    <div data-testid="loading-indicator" class="flex flex-col gap-3">
+      @for (i of [1, 2, 3, 4, 5]; track i) {
+        <div class="h-16 animate-pulse rounded-card bg-n100"></div>
+      }
+    </div>
+  }
+
   @if (!loading() && jobs().length === 0 && !errorMessage()) {
     <div data-testid="history-empty">
       <ui-empty-state
@@ -20,7 +28,7 @@
   @for (job of jobs(); track job.id) {
     <div
       data-testid="job-row"
-      class="flex cursor-pointer items-center gap-3 rounded-card border border-n200 bg-white p-3 hover:border-primary-300"
+      class="flex cursor-pointer items-center gap-3 rounded-card border border-n200 bg-surface p-3 hover:border-primary-300"
       (click)="open(job)"
     >
       <ui-tag [variant]="statusTag(job.status)">{{ statusLabel(job.status) }}</ui-tag>
@@ -39,4 +47,6 @@
       <span class="text-xs text-n500">{{ job.createdAt | date: 'short' }}</span>
     </div>
   }
+
+  <ui-pagination [page]="page()" [pageSize]="PAGE_SIZE" [total]="total()" (pageChange)="onPageChange($event)"></ui-pagination>
 </div>

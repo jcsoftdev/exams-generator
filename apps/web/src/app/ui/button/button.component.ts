@@ -36,6 +36,10 @@ export class ButtonComponent {
   private static readonly VARIANT_CLASSES: Record<ButtonVariant, string> = {
     primary: 'bg-primary-500 hover:bg-primary-600 text-white',
     ghost: 'bg-transparent text-primary-500 border border-primary-500 hover:bg-primary-50',
+    // Reuses the existing hard-text token (already the app's red accent —
+    // see ui-tag's "hard" difficulty and the forbidden page's icon) rather
+    // than introducing a parallel red ramp.
+    danger: 'bg-hard-text hover:opacity-90 text-white',
   };
 
   protected classes(): string {

@@ -1,17 +1,32 @@
 import { TestBed } from '@angular/core/testing';
-import { describe, it, expect } from 'vitest';
+import { Router } from '@angular/router';
+import { describe, it, expect, vi } from 'vitest';
 import { ForbiddenComponent } from './forbidden.component';
 
 describe('ForbiddenComponent', () => {
-  it('shows a 403 forbidden message', async () => {
-    await TestBed.configureTestingModule({
+  function setup() {
+    const navigateByUrl = vi.fn();
+    TestBed.configureTestingModule({
       imports: [ForbiddenComponent],
-    }).compileComponents();
-
+      providers: [{ provide: Router, useValue: { navigateByUrl } }],
+    });
     const fixture = TestBed.createComponent(ForbiddenComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
+    return { fixture, compiled: fixture.nativeElement as HTMLElement, navigateByUrl };
+  }
 
-    expect(compiled.textContent).toContain('403');
+  it('shows a Spanish no-access message, not the raw HTTP status page', () => {
+    const { compiled } = setup();
+
+    expect(compiled.textContent).toContain('No tienes acceso a esta página');
+    expect(compiled.textContent).not.toContain('Forbidden');
+  });
+
+  it('navigates back to the dashboard when the CTA is clicked', () => {
+    const { compiled, navigateByUrl } = setup();
+
+    compiled.querySelector('button')!.click();
+
+    expect(navigateByUrl).toHaveBeenCalledWith('/app/dashboard');
   });
 });

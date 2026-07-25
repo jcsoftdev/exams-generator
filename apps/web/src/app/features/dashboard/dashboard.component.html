@@ -1,7 +1,12 @@
 @if (loading()) {
   <p data-testid="dashboard-loading" class="text-sm text-n600">Cargando estadísticas…</p>
 } @else if (errorMessage()) {
-  <p data-testid="dashboard-error" class="text-sm text-hard-text">{{ errorMessage() }}</p>
+  <div data-testid="dashboard-error" class="rounded-card border border-n200 bg-surface p-8 text-center">
+    <p class="text-sm text-hard-text">{{ errorMessage() }}</p>
+    <div data-testid="retry-button" class="mt-3 inline-block">
+      <ui-button variant="primary" (clicked)="retry()">Reintentar</ui-button>
+    </div>
+  </div>
 } @else if (stats(); as s) {
   <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
     <ui-card data-testid="dashboard-card-bank">
@@ -23,12 +28,15 @@
             </span>
             <span
               class="rounded-full px-2 py-0.5 text-xs font-medium"
-              [class]="exam.status === 'draft' ? 'bg-tint-activo text-tint-texto' : 'bg-n100 text-n700'"
+              [class]="exam.status === 'draft' ? 'bg-tint-active text-tint-text' : 'bg-n100 text-n700'"
               >{{ examStatusLabel(exam.status) }}</span
             >
           </li>
         }
       </ul>
+      <a routerLink="/app/exams" data-testid="dashboard-exams-link" class="mt-3 inline-block text-sm text-primary-600 hover:underline"
+        >Ver todos</a
+      >
     </ui-card>
 
     <ui-card data-testid="dashboard-card-ai">

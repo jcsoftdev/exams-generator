@@ -33,7 +33,7 @@ import { NavGroup } from '../ui.types';
                 <a
                   data-testid="nav-item"
                   [routerLink]="item.route"
-                  routerLinkActive="bg-tint-activo text-tint-texto"
+                  routerLinkActive="bg-tint-active text-tint-text"
                   [routerLinkActiveOptions]="{ exact: false }"
                   (click)="navigate.emit(item.route)"
                   class="flex h-[42px] items-center gap-2 rounded-field px-3 text-sm text-n700 hover:bg-n200"

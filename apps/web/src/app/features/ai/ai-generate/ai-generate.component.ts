@@ -127,7 +127,7 @@ export class AiGenerateComponent {
     this.count.update((c) => Math.min(MAX_STEPPER_COUNT, c + 1));
   }
 
-  private valid(): boolean {
+  protected valid(): boolean {
     return !!this.courseId() && !!this.topicId() && !!this.difficulty() && !!this.gradeLevel() && this.count() > 0;
   }
 

@@ -10,23 +10,28 @@ import { ChangeDetectionStrategy, Component, input, model } from '@angular/core'
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     @if (label()) {
-      <label class="mb-1 block text-sm font-medium text-n700">{{ label() }}</label>
+      <label [for]="inputId" class="mb-1 block text-sm font-medium text-n700">{{ label() }}</label>
     }
     <input
+      [id]="inputId"
       [attr.name]="name() || null"
       [attr.type]="type()"
       [attr.placeholder]="placeholder() || null"
+      [attr.aria-describedby]="error() ? errorId : null"
+      [attr.aria-invalid]="error() ? 'true' : null"
       [disabled]="disabled()"
       [value]="value()"
       (input)="onInput($event)"
       class="w-full rounded-field border border-n300 bg-surface px-3 py-2 text-sm text-n900 disabled:cursor-not-allowed disabled:bg-n100"
     />
     @if (error()) {
-      <p data-testid="input-error" class="mt-1 text-sm text-hard-text">{{ error() }}</p>
+      <p [id]="errorId" data-testid="input-error" class="mt-1 text-sm text-hard-text">{{ error() }}</p>
     }
   `,
 })
 export class InputComponent {
+  private static instanceCounter = 0;
+
   readonly value = model<string>('');
   readonly label = input<string>();
   readonly placeholder = input<string>();
@@ -34,6 +39,9 @@ export class InputComponent {
   readonly error = input<string>();
   readonly disabled = input(false);
   readonly name = input<string>();
+
+  protected readonly inputId = `ui-input-${InputComponent.instanceCounter++}`;
+  protected readonly errorId = `${this.inputId}-error`;
 
   protected onInput(event: Event): void {
     this.value.set((event.target as HTMLInputElement).value);

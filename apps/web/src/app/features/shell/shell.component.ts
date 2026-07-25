@@ -25,6 +25,11 @@ const COLEGIO_GROUP: NavGroup = {
   items: [{ label: 'Configuración', route: '/app/settings', icon: 'settings' }],
 };
 
+const ADMIN_GROUP: NavGroup = {
+  title: 'Administración',
+  items: [{ label: 'Colegios', route: '/app/admin/tenants', icon: 'school' }],
+};
+
 /**
  * App frame (design doc §4): dark sidebar + topbar + `<router-outlet>`.
  * Nav groups (Principal/Inteligencia/Colegio) are built here from
@@ -84,14 +89,26 @@ export class ShellComponent {
     if (role === Role.SchoolAdmin) {
       groups.push(COLEGIO_GROUP);
     }
+    if (role === Role.PlatformAdmin) {
+      groups.push(ADMIN_GROUP);
+    }
     return groups;
   });
 
   constructor() {
-    this.tenantSettings.getSettings().subscribe({
-      next: (s) => this.schoolName.set(s.name),
-      error: () => {},
-    });
+    // `TenantSettingsService.getSettings()` requires a tenantId and THROWS
+    // synchronously otherwise (`requireTenantId()`) — platform staff
+    // (`platform_admin`/`content_editor`) have `tenantId: null` on their
+    // token, so calling it unconditionally crashed the shell for them
+    // before it ever rendered (audit P1 — "platform_admin sin UI").
+    if (this.authService.currentTenantId()) {
+      this.tenantSettings.getSettings().subscribe({
+        next: (s) => this.schoolName.set(s.name),
+        error: () => {},
+      });
+    } else {
+      this.schoolName.set('GeneraExamen');
+    }
   }
 
   protected toggleMobileMenu(): void {

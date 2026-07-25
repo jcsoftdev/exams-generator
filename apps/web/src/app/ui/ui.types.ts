@@ -4,7 +4,7 @@
  * by feature containers that compose them.
  */
 
-export type ButtonVariant = 'primary' | 'ghost';
+export type ButtonVariant = 'primary' | 'ghost' | 'danger';
 
 export type TagVariant = 'easy' | 'medium' | 'hard' | 'ai' | 'warning-stock';
 

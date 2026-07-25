@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { describe, it, expect, vi } from 'vitest';
-import { Subject, of, throwError } from 'rxjs';
+import { Observable, Subject, map, of, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { LucideAngularModule, Ellipsis, Plus, School, Check, ChevronDown } from 'lucide-angular';
@@ -35,7 +35,15 @@ function setup(overrides: {
   const getSettings = vi.fn(overrides.getSettingsImpl ?? (() => of(SETTINGS)));
   const updateSettings = vi.fn(overrides.updateSettingsImpl ?? ((payload: TenantSettings) => of(payload)));
   const fetchLogo = vi.fn(overrides.fetchLogoImpl ?? (() => of(new Blob(['fake'], { type: 'image/png' }))));
-  const list = vi.fn(overrides.usersImpl ?? (() => of([user({ id: 'u1' }), user({ id: 'u2', active: false })])));
+  // `usersImpl` overrides return the bare `TenantUser[]` observable (as before the API
+  // paginated `GET /users`) — wrapped here into the `{ items, total }` envelope the
+  // component now expects, so every existing override keeps working unchanged.
+  const list = vi.fn(() =>
+    (
+      (overrides.usersImpl ??
+        (() => of([user({ id: 'u1' }), user({ id: 'u2', active: false })]))) as () => Observable<TenantUser[]>
+    )().pipe(map((items) => ({ items, total: items.length }))),
+  );
   const create = vi.fn(
     overrides.createImpl ??
       (() =>
@@ -202,7 +210,7 @@ describe('TenantSettingsComponent — tabs', () => {
     expect(name.textContent).toContain('mrojas@sanmartin.edu.pe');
   });
 
-  it('renders the role chip with the primary-100/tint-texto token pair (not the ai/easy tag variants)', () => {
+  it('renders the role chip with the primary-100/tint-text token pair (not the ai/easy tag variants)', () => {
     const { compiled, fixture } = setup({
       usersImpl: () => of([user({ id: 'u1', role: 'school_admin' })]),
     });
@@ -210,8 +218,8 @@ describe('TenantSettingsComponent — tabs', () => {
     fixture.detectChanges();
     const chip = compiled.querySelector('[data-testid="teacher-role-chip"]')!;
     expect(chip.className).toContain('bg-primary-100');
-    expect(chip.className).toContain('text-tint-texto');
-    expect(chip.textContent).toContain('Administra');
+    expect(chip.className).toContain('text-tint-text');
+    expect(chip.textContent).toContain('Administrador');
   });
 
   it('pluralizes the active-count label: singular for 1, plural otherwise', () => {
@@ -284,7 +292,7 @@ describe('TenantSettingsComponent — tabs', () => {
     expect(create).not.toHaveBeenCalled();
   });
 
-  it('deactivates a teacher from the row menu', () => {
+  it('deactivates a teacher from the row menu after confirming', () => {
     const { compiled, fixture, setActive } = setup();
     (compiled.querySelector('[data-testid="tab-teachers"]') as HTMLButtonElement).click();
     fixture.detectChanges();
@@ -292,16 +300,22 @@ describe('TenantSettingsComponent — tabs', () => {
     fixture.detectChanges();
     (compiled.querySelector('[data-testid="teacher-toggle-active"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
+    expect(setActive).not.toHaveBeenCalled();
+    (compiled.querySelector('[data-testid="deactivate-confirm-yes"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
     expect(setActive).toHaveBeenCalledWith('u1', false);
   });
 
-  it('resets a teacher password and shows it once', () => {
+  it('resets a teacher password after confirming, and shows it once', () => {
     const { compiled, fixture, resetPassword } = setup();
     (compiled.querySelector('[data-testid="tab-teachers"]') as HTMLButtonElement).click();
     fixture.detectChanges();
     (compiled.querySelectorAll('[data-testid="teacher-menu"]')[0] as HTMLButtonElement).click();
     fixture.detectChanges();
     (compiled.querySelector('[data-testid="teacher-reset"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    expect(resetPassword).not.toHaveBeenCalled();
+    (compiled.querySelector('[data-testid="reset-confirm-yes"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(resetPassword).toHaveBeenCalledWith('u1');
     expect(compiled.querySelector('[data-testid="temp-password"]')?.textContent).toContain('reset1234567');

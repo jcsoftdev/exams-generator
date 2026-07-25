@@ -6,6 +6,8 @@ import { InputComponent } from '../../ui/input/input.component';
 import { SelectComponent } from '../../ui/select/select.component';
 import { TagComponent } from '../../ui/tag/tag.component';
 import { ModalComponent } from '../../ui/modal/modal.component';
+import { PaginationComponent } from '../../ui/pagination/pagination.component';
+import { TabsComponent, TabItem } from '../../ui/tabs/tabs.component';
 import { TenantSettingsService } from './tenant-settings.service';
 import { TenantSettings } from './tenant-settings.models';
 import { UsersService } from '../users/users.service';
@@ -27,7 +29,16 @@ type Tab = 'data' | 'teachers';
 @Component({
   selector: 'app-tenant-settings',
   standalone: true,
-  imports: [ButtonComponent, InputComponent, SelectComponent, TagComponent, ModalComponent, LucideAngularModule],
+  imports: [
+    ButtonComponent,
+    InputComponent,
+    SelectComponent,
+    TagComponent,
+    ModalComponent,
+    PaginationComponent,
+    TabsComponent,
+    LucideAngularModule,
+  ],
   templateUrl: './tenant-settings.component.html',
 })
 export class TenantSettingsComponent {
@@ -36,6 +47,10 @@ export class TenantSettingsComponent {
   private readonly destroyRef = inject(DestroyRef);
 
   protected readonly tab = signal<Tab>('data');
+  protected readonly tabItems: readonly TabItem<Tab>[] = [
+    { value: 'data', label: 'Datos y logo', testId: 'tab-data' },
+    { value: 'teachers', label: 'Profesores', testId: 'tab-teachers' },
+  ];
 
   // ---- Datos y logo (form existente) ----
   protected readonly loading = signal(false);
@@ -51,7 +66,10 @@ export class TenantSettingsComponent {
   private readonly objectUrls: string[] = [];
 
   // ---- Profesores ----
+  protected readonly TEACHERS_PAGE_SIZE = 20;
   protected readonly teachers = signal<TenantUser[]>([]);
+  protected readonly teachersTotal = signal(0);
+  protected readonly teachersPage = signal(1);
   protected readonly teachersLoading = signal(false);
   protected readonly teachersError = signal<string | null>(null);
   protected readonly teachersLoaded = signal(false);
@@ -62,6 +80,8 @@ export class TenantSettingsComponent {
   protected readonly newRole = signal<UserRole>('teacher');
   protected readonly tempPassword = signal<string | null>(null);
   protected readonly usersActionError = signal<string | null>(null);
+  protected readonly pendingReset = signal<TenantUser | null>(null);
+  protected readonly pendingDeactivate = signal<TenantUser | null>(null);
 
   protected readonly roleOptions = [
     { value: 'teacher' as UserRole, label: 'Profesor' },
@@ -155,17 +175,23 @@ export class TenantSettingsComponent {
   private loadTeachers(): void {
     this.teachersLoading.set(true);
     this.teachersError.set(null);
-    this.usersService.list().subscribe({
-      next: (users) => {
+    this.usersService.list(this.teachersPage(), this.TEACHERS_PAGE_SIZE).subscribe({
+      next: (res) => {
         this.teachersLoading.set(false);
         this.teachersLoaded.set(true);
-        this.teachers.set([...users]);
+        this.teachers.set([...res.items]);
+        this.teachersTotal.set(res.total);
       },
       error: () => {
         this.teachersLoading.set(false);
         this.teachersError.set('No se pudieron cargar los profesores. Inténtalo de nuevo.');
       },
     });
+  }
+
+  protected onTeachersPageChange(page: number): void {
+    this.teachersPage.set(page);
+    this.loadTeachers();
   }
 
   /** Two-letter avatar initials from the teacher's name (falls back to the email if a legacy row has no name). */
@@ -180,7 +206,7 @@ export class TenantSettingsComponent {
   }
 
   protected roleLabel(role: string): string {
-    return role === 'school_admin' ? 'Administra' : 'Profesor';
+    return role === 'school_admin' ? 'Administrador' : 'Profesor';
   }
 
   protected toggleMenu(id: string): void {
@@ -206,8 +232,12 @@ export class TenantSettingsComponent {
     }
   }
 
+  protected addValid(): boolean {
+    return this.newName().trim().length > 0 && /\S+@\S+\.\S+/.test(this.newEmail());
+  }
+
   protected submitAdd(): void {
-    if (this.newName().trim().length === 0 || !/\S+@\S+\.\S+/.test(this.newEmail())) {
+    if (!this.addValid()) {
       return;
     }
     this.usersActionError.set(null);
@@ -220,17 +250,49 @@ export class TenantSettingsComponent {
     });
   }
 
+  /** Reactivating isn't destructive — only deactivating goes through the confirm modal. */
   protected toggleActive(u: TenantUser): void {
     this.openMenuId.set(null);
+    if (u.active) {
+      this.pendingDeactivate.set(u);
+      return;
+    }
+    this.setActive(u, true);
+  }
+
+  protected cancelDeactivate(): void {
+    this.pendingDeactivate.set(null);
+  }
+
+  protected confirmDeactivate(): void {
+    const u = this.pendingDeactivate();
+    this.pendingDeactivate.set(null);
+    if (u) {
+      this.setActive(u, false);
+    }
+  }
+
+  private setActive(u: TenantUser, active: boolean): void {
     this.usersActionError.set(null);
-    this.usersService.setActive(u.id, !u.active).subscribe({
+    this.usersService.setActive(u.id, active).subscribe({
       next: () => this.loadTeachers(),
       error: () => this.usersActionError.set('No se pudo actualizar el estado. Inténtalo de nuevo.'),
     });
   }
 
-  protected reset(u: TenantUser): void {
+  protected requestReset(u: TenantUser): void {
     this.openMenuId.set(null);
+    this.pendingReset.set(u);
+  }
+
+  protected cancelReset(): void {
+    this.pendingReset.set(null);
+  }
+
+  protected confirmReset(): void {
+    const u = this.pendingReset();
+    this.pendingReset.set(null);
+    if (!u) return;
     this.usersActionError.set(null);
     this.usersService.resetPassword(u.id).subscribe({
       next: (res) => this.tempPassword.set(res.temporaryPassword),

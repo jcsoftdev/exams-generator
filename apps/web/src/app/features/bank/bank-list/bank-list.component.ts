@@ -22,6 +22,7 @@ import {
 import { Difficulty } from '@exams-generator/shared';
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
+import { ModalComponent } from '../../../ui/modal/modal.component';
 import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
@@ -33,6 +34,10 @@ import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { AiService } from '../../ai/ai.service';
 import { extractErrorMessage } from '../../ai/extract-error-message';
 import { buildQuestionTree, filterQuestionTree, QuestionTreeCourseNode, QuestionTreeTopicNode } from './bank-question-tree';
+import { QuestionTaxonomyFieldsComponent } from '../question-edit/question-taxonomy-fields.component';
+import { QuestionContentFieldsComponent } from '../question-edit/question-content-fields.component';
+import { AiReviseBoxComponent } from '../question-edit/ai-revise-box.component';
+import { parseAlternativesList } from '../question-edit/parse-alternatives.util';
 
 const DIFFICULTY_LABELS: Record<Difficulty, string> = {
   [Difficulty.Easy]: 'Fácil',
@@ -134,7 +139,18 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
 @Component({
   selector: 'app-bank-list',
   standalone: true,
-  imports: [ButtonComponent, EmptyStateComponent, InputComponent, SelectComponent, TagComponent, LucideAngularModule],
+  imports: [
+    ButtonComponent,
+    EmptyStateComponent,
+    ModalComponent,
+    InputComponent,
+    SelectComponent,
+    TagComponent,
+    QuestionTaxonomyFieldsComponent,
+    QuestionContentFieldsComponent,
+    AiReviseBoxComponent,
+    LucideAngularModule,
+  ],
   // Local (component-scoped) icon pick — Angular's Lucide icon token is NOT a multi-provider, so a
   // local `pick()` SHADOWS (does not merge with) the app-level one in app.config.ts. This must list
   // every icon the template uses, including ones the global config also registers (search,
@@ -196,6 +212,8 @@ export class BankListComponent {
 
   protected readonly selected = signal<BankQuestion | null>(null);
   protected readonly actionError = signal<string | null>(null);
+  protected readonly pendingDelete = signal<BankQuestion | null>(null);
+  protected readonly pendingArchive = signal<BankQuestion | null>(null);
 
   // --- Task 8: inline edit mode -------------------------------------------------
   protected readonly editing = signal(false);
@@ -501,7 +519,18 @@ export class BankListComponent {
     return !this.isCentral(question) && question.status === 'draft';
   }
 
-  protected archive(question: BankQuestion): void {
+  protected requestArchive(question: BankQuestion): void {
+    this.pendingArchive.set(question);
+  }
+
+  protected cancelArchive(): void {
+    this.pendingArchive.set(null);
+  }
+
+  protected confirmArchive(): void {
+    const question = this.pendingArchive();
+    if (!question) return;
+    this.pendingArchive.set(null);
     this.actionError.set(null);
     this.bankService.archiveQuestion(question.id).subscribe({
       next: () => {
@@ -512,7 +541,18 @@ export class BankListComponent {
     });
   }
 
-  protected remove(question: BankQuestion): void {
+  protected requestDelete(question: BankQuestion): void {
+    this.pendingDelete.set(question);
+  }
+
+  protected cancelDelete(): void {
+    this.pendingDelete.set(null);
+  }
+
+  protected confirmDelete(): void {
+    const question = this.pendingDelete();
+    if (!question) return;
+    this.pendingDelete.set(null);
     this.actionError.set(null);
     this.bankService.deleteQuestion(question.id).subscribe({
       next: () => {
@@ -588,10 +628,7 @@ export class BankListComponent {
   }
 
   private editAlternativesList(): string[] {
-    return this.editAlternatives()
-      .split('\n')
-      .map((line) => line.trim())
-      .filter((line) => line.length > 0);
+    return parseAlternativesList(this.editAlternatives());
   }
 
   /**

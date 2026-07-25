@@ -1,13 +1,13 @@
 import { Injectable, inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import {
   CreateUserPayload,
   CreateUserResult,
+  PagedTenantUsers,
   ResetPasswordResult,
   SetActiveResult,
-  TenantUser,
 } from './users.models';
 
 /**
@@ -20,8 +20,9 @@ import {
 export class UsersService {
   private readonly http = inject(HttpClient);
 
-  list(): Observable<TenantUser[]> {
-    return this.http.get<TenantUser[]>(`${environment.apiBaseUrl}/users`);
+  list(page = 1, pageSize = 20): Observable<PagedTenantUsers> {
+    const params = new HttpParams().set('page', page).set('pageSize', pageSize);
+    return this.http.get<PagedTenantUsers>(`${environment.apiBaseUrl}/users`, { params });
   }
 
   create(payload: CreateUserPayload): Observable<CreateUserResult> {

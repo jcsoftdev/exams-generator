@@ -865,7 +865,7 @@ describe('BankListComponent', () => {
       expect(updateQuestion).not.toHaveBeenCalled();
     });
 
-    it('archives the selected approved question and reloads the tree', () => {
+    it('archives the selected approved question and reloads the tree, after confirming', () => {
       const { compiled, fixture, archiveQuestion, listQuestions } = setup();
       expandCourse(compiled, fixture, 'c1');
       expandTopic(compiled, fixture, 't1');
@@ -873,6 +873,9 @@ describe('BankListComponent', () => {
       fixture.detectChanges();
       listQuestions.mockClear();
       (compiled.querySelector('[data-testid="panel-archive"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      expect(archiveQuestion).not.toHaveBeenCalled();
+      (compiled.querySelector('[data-testid="archive-confirm-yes"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
       expect(archiveQuestion).toHaveBeenCalledWith('q1');
       expect(listQuestions).toHaveBeenCalledTimes(1);

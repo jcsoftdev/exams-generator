@@ -15,8 +15,8 @@
   --color-primary-50: #f0f2fb;
 
   /* Nav activo / chips (light) */
-  --color-tint-activo: #dfe3f6;
-  --color-tint-texto: #5a6acf;
+  --color-tint-active: #dfe3f6;
+  --color-tint-text: #5a6acf;
 
   /* Neutrales (n50..n900) — light mode, unchanged from the original ramp */
   --color-n50: #f7f8f9;
@@ -24,7 +24,7 @@
   --color-n200: #dde0e4;
   --color-n300: #c3c8ce;
   --color-n400: #a4abb3;
-  --color-n500: #868d96;
+  --color-n500: #666d76;
   --color-n600: #6a717a;
   --color-n700: #4e545c;
   --color-n800: #363b41;
@@ -75,14 +75,14 @@
     --color-primary-100: #e2ebf3;
     --color-primary-50: #f3f6fa;
 
-    --color-tint-activo: #1c3141;
-    --color-tint-texto: #9db4cb;
+    --color-tint-active: #1c3141;
+    --color-tint-text: #9db4cb;
 
     --color-n900: #f0f1f3;
     --color-n800: #c9cdd2;
     --color-n700: #aab0b7;
     --color-n600: #8b929a;
-    --color-n500: #6b727b;
+    --color-n500: #888f98;
     --color-n400: #4d545d;
     --color-n300: #3a4048;
     --color-n200: #2a2f37;
@@ -119,14 +119,14 @@
   --color-primary-100: #e2ebf3;
   --color-primary-50: #f3f6fa;
 
-  --color-tint-activo: #1c3141;
-  --color-tint-texto: #9db4cb;
+  --color-tint-active: #1c3141;
+  --color-tint-text: #9db4cb;
 
   --color-n900: #f0f1f3;
   --color-n800: #c9cdd2;
   --color-n700: #aab0b7;
   --color-n600: #8b929a;
-  --color-n500: #6b727b;
+  --color-n500: #888f98;
   --color-n400: #4d545d;
   --color-n300: #3a4048;
   --color-n200: #2a2f37;
@@ -163,15 +163,15 @@
   --color-primary-100: #dfe3f6;
   --color-primary-50: #f0f2fb;
 
-  --color-tint-activo: #dfe3f6;
-  --color-tint-texto: #5a6acf;
+  --color-tint-active: #dfe3f6;
+  --color-tint-text: #5a6acf;
 
   --color-n50: #f7f8f9;
   --color-n100: #eceef1;
   --color-n200: #dde0e4;
   --color-n300: #c3c8ce;
   --color-n400: #a4abb3;
-  --color-n500: #868d96;
+  --color-n500: #666d76;
   --color-n600: #6a717a;
   --color-n700: #4e545c;
   --color-n800: #363b41;

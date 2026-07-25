@@ -38,7 +38,7 @@ export class BannerComponent {
 
   private static readonly BASE = 'flex items-center rounded-field px-4 py-3';
   private static readonly VARIANT_CLASSES: Record<BannerVariant, string> = {
-    info: 'bg-tint-activo text-tint-texto',
+    info: 'bg-tint-active text-tint-text',
     success: 'bg-easy-bg text-easy-text',
     warning: 'bg-medium-bg text-medium-text',
     error: 'bg-hard-bg text-hard-text',

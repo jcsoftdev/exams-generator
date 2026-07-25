@@ -7,6 +7,9 @@ import { environment } from '../../../environments/environment';
 
 const TOKEN_STORAGE_KEY = 'exams-generator.accessToken';
 
+const FUTURE_EXP = Math.floor(Date.now() / 1000) + 3600;
+const PAST_EXP = Math.floor(Date.now() / 1000) - 3600;
+
 function buildFakeJwt(payload: unknown): string {
   const base64UrlEncode = (json: string) =>
     btoa(json).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
@@ -44,11 +47,11 @@ describe('AuthService', () => {
     const req = httpMock.expectOne(`${environment.apiBaseUrl}/auth/login`);
     expect(req.request.method).toBe('POST');
     expect(req.request.body).toEqual({ email: 'teacher@school.dev', password: 'secret' });
-    req.flush({ accessToken: buildFakeJwt({ sub: 'u1', role: 'teacher', tenantId: 't1' }) });
+    req.flush({ accessToken: buildFakeJwt({ sub: 'u1', role: 'teacher', tenantId: 't1', exp: FUTURE_EXP }) });
   });
 
   it('stores the accessToken in localStorage and exposes role/isAuthenticated on success', () => {
-    const token = buildFakeJwt({ sub: 'u1', role: 'teacher', tenantId: 't1' });
+    const token = buildFakeJwt({ sub: 'u1', role: 'teacher', tenantId: 't1', exp: FUTURE_EXP });
 
     service.login({ email: 'teacher@school.dev', password: 'secret' }).subscribe();
     const req = httpMock.expectOne(`${environment.apiBaseUrl}/auth/login`);
@@ -80,7 +83,7 @@ describe('AuthService', () => {
   });
 
   it('logout() clears the stored token', () => {
-    const token = buildFakeJwt({ sub: 'u1', role: 'teacher', tenantId: 't1' });
+    const token = buildFakeJwt({ sub: 'u1', role: 'teacher', tenantId: 't1', exp: FUTURE_EXP });
     service.login({ email: 'teacher@school.dev', password: 'secret' }).subscribe();
     httpMock.expectOne(`${environment.apiBaseUrl}/auth/login`).flush({ accessToken: token });
 
@@ -92,7 +95,7 @@ describe('AuthService', () => {
   });
 
   it('rehydrates isAuthenticated/currentRole from a previously stored token', () => {
-    const token = buildFakeJwt({ sub: 'u1', role: 'school_admin', tenantId: 't2' });
+    const token = buildFakeJwt({ sub: 'u1', role: 'school_admin', tenantId: 't2', exp: FUTURE_EXP });
     localStorage.setItem(TOKEN_STORAGE_KEY, token);
 
     // Fresh injector so the service constructor re-reads localStorage.
@@ -104,5 +107,18 @@ describe('AuthService', () => {
 
     expect(rehydrated.isAuthenticated()).toBe(true);
     expect(rehydrated.currentRole()).toBe('school_admin');
+  });
+
+  it('treats an expired token as unauthenticated instead of trusting mere presence', () => {
+    const expired = buildFakeJwt({ sub: 'u1', role: 'teacher', tenantId: 't1', exp: PAST_EXP });
+    localStorage.setItem(TOKEN_STORAGE_KEY, expired);
+
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      providers: [provideHttpClient(), provideHttpClientTesting()],
+    });
+    const rehydrated = TestBed.inject(AuthService);
+
+    expect(rehydrated.isAuthenticated()).toBe(false);
   });
 });

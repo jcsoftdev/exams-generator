@@ -299,12 +299,16 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
       expect(compiled.querySelector('[data-testid="generate-count-panel"]')).toBeFalsy();
     });
 
-    it('confirming calls generateVersions(examId, n) with the selected count', () => {
+    it('confirming asks for confirmation before replacing existing formas, then calls generateVersions(examId, n)', () => {
       const { compiled, fixture, generateVersions } = setup({});
 
       openGeneratePanel(compiled, fixture);
       selectVersionCount(compiled, fixture, '4');
       (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+
+      expect(generateVersions).not.toHaveBeenCalled();
+      (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
 
       expect(generateVersions).toHaveBeenCalledWith('exam-1', 4);
     });
@@ -315,6 +319,8 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
 
       openGeneratePanel(compiled, fixture);
       (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
 
       expect(listVersions).toHaveBeenCalledTimes(1);
@@ -340,6 +346,8 @@ describe('generar más formas — regeneración inline (F8 fix)', () => {
 
       openGeneratePanel(compiled, fixture);
       (compiled.querySelector('[data-testid="confirm-generate-versions"] button') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      (compiled.querySelector('[data-testid="generate-confirm-yes"] button') as HTMLButtonElement).click();
       fixture.detectChanges();
 
       expect(compiled.querySelector('[data-testid="generate-error"]')).toBeTruthy();

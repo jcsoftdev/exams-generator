@@ -55,11 +55,4 @@ describe('TopbarComponent', () => {
     expect(button.querySelector('lucide-angular,i-lucide')).toBeTruthy();
     expect(button.textContent).not.toContain('☰');
   });
-
-  it('renders a decorative search field matching the Figma reference (no wired output)', () => {
-    const { compiled } = setup();
-    const search = compiled.querySelector<HTMLInputElement>('[data-testid="topbar-search"]');
-    expect(search).toBeTruthy();
-    expect(search?.className).toContain('bg-n50');
-  });
 });

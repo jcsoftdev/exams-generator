@@ -5,6 +5,7 @@ import { Difficulty } from '@exams-generator/shared';
 import { CardComponent } from '../../ui/card/card.component';
 import { BarChartComponent, ChartDatum } from '../../ui/bar-chart/bar-chart.component';
 import { DonutChartComponent } from '../../ui/donut-chart/donut-chart.component';
+import { ButtonComponent } from '../../ui/button/button.component';
 import { DashboardService } from './dashboard.service';
 import { DashboardStats } from './dashboard.models';
 
@@ -25,7 +26,7 @@ const ERROR_MESSAGE = 'No se pudieron cargar las estadísticas. Inténtalo de nu
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CardComponent, BarChartComponent, DonutChartComponent, RouterLink, DatePipe],
+  imports: [CardComponent, BarChartComponent, DonutChartComponent, RouterLink, DatePipe, ButtonComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './dashboard.component.html',
 })
@@ -55,6 +56,16 @@ export class DashboardComponent {
   });
 
   constructor() {
+    this.load();
+  }
+
+  protected retry(): void {
+    this.loading.set(true);
+    this.errorMessage.set(null);
+    this.load();
+  }
+
+  private load(): void {
     this.dashboardService.getStats().subscribe({
       next: (stats) => {
         this.stats.set(stats);

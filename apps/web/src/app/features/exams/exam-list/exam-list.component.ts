@@ -8,6 +8,7 @@ import { TagComponent } from '../../../ui/tag/tag.component';
 import { ModalComponent } from '../../../ui/modal/modal.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { InputComponent } from '../../../ui/input/input.component';
+import { PaginationComponent } from '../../../ui/pagination/pagination.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { ExamsService } from '../exams.service';
 import { ExamListItem, ExamStatus, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from '../exams.models';
@@ -39,6 +40,7 @@ const STATUS_OPTIONS: readonly SelectOption<ExamStatus>[] = [
     ModalComponent,
     SelectComponent,
     InputComponent,
+    PaginationComponent,
     LucideAngularModule,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -49,7 +51,10 @@ export class ExamListComponent {
   private readonly router = inject(Router);
   private readonly destroyRef = inject(DestroyRef);
 
+  protected readonly PAGE_SIZE = 50;
   protected readonly exams = signal<ExamListItem[]>([]);
+  protected readonly total = signal(0);
+  protected readonly page = signal(1);
   protected readonly loading = signal(false);
   protected readonly errorMessage = signal<string | null>(null);
   protected readonly openMenuId = signal<string | null>(null);
@@ -86,13 +91,14 @@ export class ExamListComponent {
         status: this.status() ?? undefined,
         gradeLevel: this.gradeLevel() ?? undefined,
         search: this.search() || undefined,
-        page: 1,
-        pageSize: 50,
+        page: this.page(),
+        pageSize: this.PAGE_SIZE,
       })
       .subscribe({
         next: (res) => {
           this.loading.set(false);
           this.exams.set([...res.items]);
+          this.total.set(res.total);
         },
         error: (_e: HttpErrorResponse) => {
           this.loading.set(false);
@@ -104,19 +110,27 @@ export class ExamListComponent {
     this.load();
   }
 
+  protected onPageChange(page: number): void {
+    this.page.set(page);
+    this.load();
+  }
+
   protected onStatusChange(value: ExamStatus | null): void {
     this.status.set(value || null);
+    this.page.set(1);
     this.load();
   }
 
   protected onGradeLevelChange(value: string | null): void {
     this.gradeLevel.set(value || null);
+    this.page.set(1);
     this.load();
   }
 
   /** Debounces the título search box (spec §2.1) so it doesn't re-fetch on every keystroke. */
   protected onSearchChange(value: string): void {
     this.search.set(value);
+    this.page.set(1);
     if (this.searchDebounceHandle !== null) {
       clearTimeout(this.searchDebounceHandle);
     }

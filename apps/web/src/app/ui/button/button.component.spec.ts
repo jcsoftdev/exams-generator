@@ -64,6 +64,16 @@ describe('ButtonComponent', () => {
     expect(button.className).not.toContain('bg-primary-500');
   });
 
+  it('renders the danger variant with a solid red fill, distinct from primary', () => {
+    const { fixture, compiled } = setup();
+    fixture.componentRef.setInput('variant', 'danger');
+    fixture.detectChanges();
+
+    const button = compiled.querySelector('button')!;
+    expect(button.className).toContain('bg-hard-text');
+    expect(button.className).not.toContain('bg-primary-500');
+  });
+
   it('renders rounded-field and never a hardcoded English default label', () => {
     const { fixture, compiled } = setup();
     fixture.detectChanges();

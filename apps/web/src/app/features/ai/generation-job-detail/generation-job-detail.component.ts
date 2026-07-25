@@ -75,6 +75,8 @@ export class GenerationJobDetailComponent {
 
   protected readonly job = signal<GenerationJob | null>(null);
   protected readonly loadError = signal<string | null>(null);
+  /** Bumped by `reload()` to re-trigger the load effect below without a route change — the effect reads this alongside `jobId` so it's a tracked dependency. */
+  private readonly reloadNonce = signal(0);
   protected readonly cancelling = signal(false);
   protected readonly retrying = signal(false);
   protected readonly batchQuestions = signal<readonly DraftQuestion[]>([]);
@@ -107,6 +109,7 @@ export class GenerationJobDetailComponent {
   constructor() {
     effect((onCleanup) => {
       const id = this.jobId();
+      this.reloadNonce();
       // Everything below reads AND writes signals (batchQuestions,
       // previewUrls, job...) as part of loading a job — if any of those
       // reads happened while tracked, Angular would register the signal as
@@ -133,6 +136,10 @@ export class GenerationJobDetailComponent {
       });
     });
     this.destroyRef.onDestroy(() => this.revokeObjectUrls());
+  }
+
+  protected reload(): void {
+    this.reloadNonce.update((n) => n + 1);
   }
 
   private resetForNewJob(): void {

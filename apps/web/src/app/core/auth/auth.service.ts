@@ -18,7 +18,14 @@ export class AuthService {
     return token ? decodeJwtPayload<DecodedAccessToken>(token) : null;
   });
 
-  readonly isAuthenticated = computed(() => this.tokenSignal() !== null);
+  // `token !== null` alone isn't enough — an expired token still decodes
+  // fine (decoding never checks `exp`) and would sail past the guard,
+  // leaving stale UI up until the first request 401s (audit P1). `exp` is
+  // seconds-since-epoch; `Date.now()` is milliseconds.
+  readonly isAuthenticated = computed(() => {
+    const decoded = this.decodedTokenSignal();
+    return decoded !== null && decoded.exp * 1000 > Date.now();
+  });
   readonly currentRole = computed<Role | null>(() => this.decodedTokenSignal()?.role ?? null);
   readonly currentTenantId = computed<string | null>(
     () => this.decodedTokenSignal()?.tenantId ?? null,

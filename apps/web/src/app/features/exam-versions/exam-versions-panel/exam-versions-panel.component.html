@@ -46,9 +46,11 @@
 
     @if (showGenerateForm()) {
       <div class="rounded-card border border-n200 bg-surface px-4 py-3" data-testid="generate-count-panel">
-        <p class="mb-2 text-sm text-hard-text" data-testid="generate-warning">
-          Se reemplazarán las formas actuales.
-        </p>
+        @if (versions().length > 0) {
+          <p class="mb-2 text-sm text-hard-text" data-testid="generate-warning">
+            Se reemplazarán las formas actuales.
+          </p>
+        }
         <div class="flex items-end gap-3">
           <div data-testid="version-count-select">
             <ui-select
@@ -57,7 +59,7 @@
               label="¿Cuántas formas?"
             ></ui-select>
           </div>
-          <ui-button data-testid="confirm-generate-versions" (clicked)="confirmGenerate()" [loading]="generating()">
+          <ui-button data-testid="confirm-generate-versions" (clicked)="requestGenerate()" [loading]="generating()">
             Generar
           </ui-button>
         </div>
@@ -151,4 +153,17 @@
       }
     </div>
   }
+
+  <ui-modal [open]="pendingGenerate()" title="Generar más formas" (openChange)="cancelGenerate()">
+    <p data-testid="generate-confirm" class="text-sm text-n700">
+      Esto reemplazará las {{ versions().length }} forma(s) actuales — los PDFs ya generados dejan de estar
+      disponibles. ¿Seguro que quieres continuar?
+    </p>
+    <div actions class="flex justify-end gap-2">
+      <ui-button variant="ghost" (clicked)="cancelGenerate()">Cancelar</ui-button>
+      <div data-testid="generate-confirm-yes">
+        <ui-button variant="danger" (clicked)="confirmGenerate()">Generar</ui-button>
+      </div>
+    </div>
+  </ui-modal>
 </section>

@@ -110,6 +110,9 @@
     } @else if (errorMessage()) {
       <div data-testid="error-state" class="rounded-field bg-hard-bg px-4 py-3 text-sm text-hard-text">
         {{ errorMessage() }}
+        <div data-testid="retry-button" class="mt-2">
+          <ui-button variant="primary" (clicked)="retry()">Reintentar</ui-button>
+        </div>
       </div>
     } @else if (emptyBank()) {
       <ui-empty-state message="No hay preguntas aprobadas para este grado todavía." icon="inbox">
@@ -165,37 +168,20 @@
                         [attr.data-cell-key]="cellKey(row, difficulty)"
                         [class]="cellClasses(row, difficulty)"
                       >
-                        <ui-input
-                          type="number"
-                          [name]="'requested-' + cellKey(row, difficulty)"
-                          [value]="requestedStrFor(row, difficulty)"
-                          (valueChange)="onRequestedChange(row, difficulty, $event)"
-                        ></ui-input>
-
-                        @if (statusFor(row, difficulty) === 'ok') {
-                          <span data-testid="stock-ok" [class]="stockOkClasses(row, difficulty)">de {{ stockFor(row, difficulty) }}</span>
-                        } @else {
-                          <ui-tag data-testid="stock-warning" variant="warning-stock"
-                            >solo {{ stockFor(row, difficulty) }}
-                            <lucide-icon name="triangle-alert" data-testid="stock-warning-icon" [size]="14"></lucide-icon
-                          ></ui-tag>
-                          <div data-testid="bridge-to-ai" class="mt-2 flex flex-col gap-1">
-                            <ui-button
-                              data-testid="bridge-generate-ai"
-                              variant="ghost"
-                              (clicked)="goToAiGenerate(row, difficulty)"
-                            >
-                              <lucide-icon name="sparkles" [size]="16"></lucide-icon>
-                              Generar {{ requestedFor(row, difficulty) - stockFor(row, difficulty) }} con IA
-                            </ui-button>
-                            <ui-button data-testid="bridge-choose-bank" variant="ghost" (clicked)="goToBank()">Elegir del banco</ui-button>
-                            <ui-button data-testid="bridge-lower-count" variant="ghost" (clicked)="lowerToStock(row, difficulty)">Bajar la cantidad</ui-button>
-                          </div>
-                        }
-
-                        <div data-testid="preview-ids" [attr.data-cell-key]="cellKey(row, difficulty)" class="mt-1 text-xs text-n500">
-                          {{ previewFor(row, difficulty).join(',') }}
-                        </div>
+                        <app-grid-cell-content
+                          [inputName]="'requested-' + cellKey(row, difficulty)"
+                          [cellKey]="cellKey(row, difficulty)"
+                          [requestedStr]="requestedStrFor(row, difficulty)"
+                          [requested]="requestedFor(row, difficulty)"
+                          [stock]="stockFor(row, difficulty)"
+                          [status]="statusFor(row, difficulty)"
+                          [stockOkClasses]="stockOkClasses(row, difficulty)"
+                          [previewIds]="previewFor(row, difficulty)"
+                          (requestedChange)="onRequestedChange(row, difficulty, $event)"
+                          (generateAi)="goToAiGenerate(row, difficulty)"
+                          (chooseBank)="goToBank()"
+                          (lowerCount)="lowerToStock(row, difficulty)"
+                        ></app-grid-cell-content>
                       </td>
                     }
                   </tr>
@@ -245,37 +231,20 @@
                   [class]="cellClasses(row, difficulty) + ' mt-2 border-t border-n100 pt-2'"
                 >
                   <p class="text-sm font-medium text-n700">{{ difficultyLabels[difficulty] }}</p>
-                  <ui-input
-                    type="number"
-                    [name]="'requested-' + cellKey(row, difficulty)"
-                    [value]="requestedStrFor(row, difficulty)"
-                    (valueChange)="onRequestedChange(row, difficulty, $event)"
-                  ></ui-input>
-
-                  @if (statusFor(row, difficulty) === 'ok') {
-                    <span data-testid="stock-ok" [class]="stockOkClasses(row, difficulty)">de {{ stockFor(row, difficulty) }}</span>
-                  } @else {
-                    <ui-tag data-testid="stock-warning" variant="warning-stock"
-                      >solo {{ stockFor(row, difficulty) }}
-                      <lucide-icon name="triangle-alert" data-testid="stock-warning-icon" [size]="14"></lucide-icon
-                    ></ui-tag>
-                    <div data-testid="bridge-to-ai" class="mt-2 flex flex-col gap-1">
-                      <ui-button
-                        data-testid="bridge-generate-ai"
-                        variant="ghost"
-                        (clicked)="goToAiGenerate(row, difficulty)"
-                      >
-                        <lucide-icon name="sparkles" [size]="16"></lucide-icon>
-                        Generar {{ requestedFor(row, difficulty) - stockFor(row, difficulty) }} con IA
-                      </ui-button>
-                      <ui-button data-testid="bridge-choose-bank" variant="ghost" (clicked)="goToBank()">Elegir del banco</ui-button>
-                      <ui-button data-testid="bridge-lower-count" variant="ghost" (clicked)="lowerToStock(row, difficulty)">Bajar la cantidad</ui-button>
-                    </div>
-                  }
-
-                  <div data-testid="preview-ids" [attr.data-cell-key]="cellKey(row, difficulty)" class="mt-1 text-xs text-n500">
-                    {{ previewFor(row, difficulty).join(',') }}
-                  </div>
+                  <app-grid-cell-content
+                    [inputName]="'requested-' + cellKey(row, difficulty)"
+                    [cellKey]="cellKey(row, difficulty)"
+                    [requestedStr]="requestedStrFor(row, difficulty)"
+                    [requested]="requestedFor(row, difficulty)"
+                    [stock]="stockFor(row, difficulty)"
+                    [status]="statusFor(row, difficulty)"
+                    [stockOkClasses]="stockOkClasses(row, difficulty)"
+                    [previewIds]="previewFor(row, difficulty)"
+                    (requestedChange)="onRequestedChange(row, difficulty, $event)"
+                    (generateAi)="goToAiGenerate(row, difficulty)"
+                    (chooseBank)="goToBank()"
+                    (lowerCount)="lowerToStock(row, difficulty)"
+                  ></app-grid-cell-content>
                 </div>
               }
             </ui-card>

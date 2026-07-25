@@ -79,11 +79,11 @@ describe('SidebarComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
 
     const links = Array.from(compiled.querySelectorAll('a[data-testid="nav-item"]'));
-    const active = links.filter((link) => link.className.includes('bg-tint-activo'));
+    const active = links.filter((link) => link.className.includes('bg-tint-active'));
 
     expect(active.length).toBe(1);
     expect(active[0].textContent).toContain('Exámenes');
-    expect(active[0].className).toContain('text-tint-texto');
+    expect(active[0].className).toContain('text-tint-text');
   });
 
   it('renders a badge pill next to the label when the item has a badge', async () => {

@@ -9,8 +9,7 @@ import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.compone
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { ModalComponent } from '../../../ui/modal/modal.component';
-import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
-import { InputComponent } from '../../../ui/input/input.component';
+import { SelectOption } from '../../../ui/select/select.component';
 import { AiService } from '../ai.service';
 import { extractErrorMessage } from '../extract-error-message';
 import { DraftQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, GradeLevel } from '../ai.models';
@@ -19,6 +18,10 @@ import { TaxonomyService } from '../../taxonomy/taxonomy.service';
 import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { BankService } from '../../bank/bank.service';
 import { UpdateQuestionPayload } from '../../bank/bank.models';
+import { QuestionTaxonomyFieldsComponent } from '../../bank/question-edit/question-taxonomy-fields.component';
+import { QuestionContentFieldsComponent } from '../../bank/question-edit/question-content-fields.component';
+import { AiReviseBoxComponent } from '../../bank/question-edit/ai-revise-box.component';
+import { parseAlternativesList } from '../../bank/question-edit/parse-alternatives.util';
 
 /** Chrome-less PDF viewer fragment (S7 preview) — hides the native toolbar/thumbnails/scrollbar so it reads as a printed "paper", not a browser PDF viewer. */
 const PREVIEW_FRAGMENT = '#toolbar=0&navpanes=0&scrollbar=0';
@@ -66,8 +69,9 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
     EmptyStateComponent,
     TagComponent,
     ModalComponent,
-    SelectComponent,
-    InputComponent,
+    QuestionTaxonomyFieldsComponent,
+    QuestionContentFieldsComponent,
+    AiReviseBoxComponent,
     LucideAngularModule,
   ],
   templateUrl: './ai-review-queue.component.html',
@@ -179,6 +183,10 @@ export class AiReviewQueueComponent {
           /* rows fall back to raw ids — see courseTopicLabel() */
         },
       });
+  }
+
+  protected retry(): void {
+    this.load();
   }
 
   private load(): void {
@@ -371,10 +379,7 @@ export class AiReviewQueueComponent {
 
   /** Parses the newline-separated `editAlternatives` string into an array of trimmed strings. */
   private editAlternativesList(): string[] {
-    return this.editAlternatives()
-      .split('\n')
-      .map((line) => line.trim())
-      .filter((line) => line.length > 0);
+    return parseAlternativesList(this.editAlternatives());
   }
 
   protected select(draft: DraftQuestion): void {

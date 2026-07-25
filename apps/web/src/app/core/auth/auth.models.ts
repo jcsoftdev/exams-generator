@@ -22,4 +22,6 @@ export interface DecodedAccessToken {
   sub: string;
   role: Role;
   tenantId: string | null;
+  /** Seconds since epoch (standard JWT claim) — `isAuthenticated` treats a token past this as expired. */
+  exp: number;
 }

@@ -24,10 +24,10 @@ describe('app routes', () => {
     expect(bankRoute).toBeTruthy();
   });
 
-  it('registers a bank upload route under the protected /app shell', () => {
+  it('does not register the removed legacy /app/bank/upload route (audit P1 — /app/bank/new is the only intake now)', () => {
     const appRoute = routes.find((route) => route.path === 'app');
     const bankUploadRoute = appRoute?.children?.find((route) => route.path === 'bank/upload');
-    expect(bankUploadRoute).toBeTruthy();
+    expect(bankUploadRoute).toBeUndefined();
   });
 
   it('exposes /app/bank/new', () => {
@@ -68,6 +68,13 @@ describe('app routes', () => {
     expect(settingsRoute?.canActivate?.length).toBeGreaterThan(0);
   });
 
+  it('exposes /app/admin/tenants guarded by a role guard (platform_admin)', () => {
+    const appRoute = routes.find((route) => route.path === 'app');
+    const adminRoute = appRoute?.children?.find((route) => route.path === 'admin/tenants');
+    expect(adminRoute).toBeTruthy();
+    expect(adminRoute?.canActivate?.length).toBeGreaterThan(0);
+  });
+
   it('exposes /app/exams as the exam list index', () => {
     const appRoute = routes.find((route) => route.path === 'app');
     const examsRoute = appRoute?.children?.find((route) => route.path === 'exams');
@@ -94,9 +101,10 @@ describe('app routes', () => {
     expect(emptyRoute?.redirectTo).toBe('app');
   });
 
-  it('redirects unknown paths to /login', () => {
+  it('shows a real 404 page for unknown paths instead of redirecting to /login', () => {
     const wildcardRoute = routes.find((route) => route.path === '**');
-    expect(wildcardRoute?.redirectTo).toBe('login');
+    expect(wildcardRoute?.redirectTo).toBeUndefined();
+    expect(wildcardRoute?.component).toBeTruthy();
   });
 
   it('exposes /app/dashboard under the protected /app shell', () => {

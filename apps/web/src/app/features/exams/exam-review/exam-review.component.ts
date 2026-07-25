@@ -5,6 +5,7 @@ import { Difficulty } from '@exams-generator/shared';
 import { LucideAngularModule, Shuffle, Check, Lock } from 'lucide-angular';
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { BannerComponent } from '../../../ui/banner/banner.component';
+import { ButtonComponent } from '../../../ui/button/button.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { ExamsService } from '../exams.service';
 import { ExamDetailQuestion, ExamStatus } from '../exams.models';
@@ -31,7 +32,7 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
  */
 @Component({
   selector: 'app-exam-review',
-  imports: [LucideAngularModule, TagComponent, BannerComponent],
+  imports: [LucideAngularModule, TagComponent, BannerComponent, ButtonComponent],
   providers: [LucideAngularModule.pick({ Shuffle, Check, Lock }).providers ?? []],
   templateUrl: './exam-review.component.html',
 })
@@ -48,6 +49,10 @@ export class ExamReviewComponent implements OnInit {
   protected readonly manualReplacementIds = signal<Record<string, string>>({});
 
   ngOnInit(): void {
+    this.loadExam();
+  }
+
+  protected retry(): void {
     this.loadExam();
   }
 

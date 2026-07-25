@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { LucideAngularModule, Sparkles } from 'lucide-angular';
 import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
+import { PaginationComponent } from '../../../ui/pagination/pagination.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { AiService } from '../ai.service';
 import { GenerationJob, GenerationJobListItem } from '../ai.models';
@@ -33,7 +34,7 @@ const STATUS_LABEL: Record<GenerationJob['status'], string> = {
 @Component({
   selector: 'app-generation-history',
   standalone: true,
-  imports: [EmptyStateComponent, TagComponent, DatePipe],
+  imports: [EmptyStateComponent, TagComponent, PaginationComponent, DatePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   // `ui-empty-state`'s `icon="sparkles"` renders a `<lucide-icon>` INSIDE
   // EmptyStateComponent's own template — that component only declares the
@@ -49,7 +50,10 @@ export class GenerationHistoryComponent {
   private readonly aiService = inject(AiService);
   private readonly router = inject(Router);
 
+  protected readonly PAGE_SIZE = 20;
   protected readonly jobs = signal<readonly GenerationJobListItem[]>([]);
+  protected readonly total = signal(0);
+  protected readonly page = signal(1);
   protected readonly loading = signal(false);
   protected readonly errorMessage = signal<string | null>(null);
 
@@ -60,10 +64,11 @@ export class GenerationHistoryComponent {
   private load(): void {
     this.loading.set(true);
     this.errorMessage.set(null);
-    this.aiService.listGenerationJobs().subscribe({
+    this.aiService.listGenerationJobs(this.page(), this.PAGE_SIZE).subscribe({
       next: (res) => {
         this.loading.set(false);
         this.jobs.set(res.items);
+        this.total.set(res.total);
       },
       error: () => {
         this.loading.set(false);
@@ -73,6 +78,11 @@ export class GenerationHistoryComponent {
   }
 
   protected retry(): void {
+    this.load();
+  }
+
+  protected onPageChange(page: number): void {
+    this.page.set(page);
     this.load();
   }
 

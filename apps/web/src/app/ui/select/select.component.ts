@@ -70,8 +70,8 @@ interface SelectListItem<T> {
               role="option"
               data-testid="select-option"
               [attr.aria-selected]="isSelected(item)"
-              [class.bg-tint-activo]="i === highlightedIndex()"
-              class="flex cursor-pointer items-center justify-between gap-2 px-3 py-2 text-sm text-n900 hover:bg-tint-activo"
+              [class.bg-tint-active]="i === highlightedIndex()"
+              class="flex cursor-pointer items-center justify-between gap-2 px-3 py-2 text-sm text-n900 hover:bg-tint-active"
               (click)="selectItem(i)"
               (mouseenter)="highlightIndex(i)"
             >

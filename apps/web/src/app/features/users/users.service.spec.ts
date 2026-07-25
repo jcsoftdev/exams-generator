@@ -14,11 +14,13 @@ describe('UsersService', () => {
     httpMock = TestBed.inject(HttpTestingController);
   });
 
-  it('list GETs /users', () => {
-    service.list().subscribe();
-    const req = httpMock.expectOne('/api/users');
+  it('list GETs /users with page/pageSize', () => {
+    service.list(2, 20).subscribe();
+    const req = httpMock.expectOne((r) => r.url === '/api/users');
     expect(req.request.method).toBe('GET');
-    req.flush([]);
+    expect(req.request.params.get('page')).toBe('2');
+    expect(req.request.params.get('pageSize')).toBe('20');
+    req.flush({ items: [], total: 0 });
   });
 
   it('create POSTs /users with email, name and role', () => {

@@ -43,7 +43,7 @@ import { TenantSettingsService } from '../../features/tenant-settings/tenant-set
 import { DraftCountService } from '../ai/draft-count.service';
 import { ThemeService } from '../../core/theme/theme.service';
 
-function setup(role: Role | null, draftCount: number | null = 7) {
+function setup(role: Role | null, draftCount: number | null = 7, tenantId: string | null = 't1') {
   const logout = vi.fn();
   const navigateByUrl = vi.fn();
   const toggleTheme = vi.fn();
@@ -87,7 +87,7 @@ function setup(role: Role | null, draftCount: number | null = 7) {
           Moon,
         }),
       ),
-      { provide: AuthService, useValue: { currentRole: signal(role), logout } },
+      { provide: AuthService, useValue: { currentRole: signal(role), currentTenantId: signal(tenantId), logout } },
       {
         provide: TenantSettingsService,
         useValue: {
@@ -125,14 +125,6 @@ describe('ShellComponent', () => {
     expect(compiled.querySelector('router-outlet')).toBeTruthy();
   });
 
-  it('renders a decorative notifications button matching the Figma reference (no wired output)', () => {
-    const { compiled } = setup(Role.Teacher);
-
-    const button = compiled.querySelector<HTMLButtonElement>('[data-testid="notifications-button"]');
-    expect(button).toBeTruthy();
-    expect(button?.getAttribute('aria-label')).toBe('Notificaciones');
-  });
-
   it('renders the three nav groups: Principal, Inteligencia and Colegio (for school_admin)', () => {
     const { compiled } = setup(Role.SchoolAdmin);
 
@@ -165,6 +157,28 @@ describe('ShellComponent', () => {
     const { compiled } = setup(Role.ContentEditor);
 
     expect(compiled.textContent).not.toContain('Mis exámenes');
+  });
+
+  it('shows "Colegios" (admin tenants screen) only for platform_admin', () => {
+    const { compiled } = setup(Role.PlatformAdmin);
+
+    expect(compiled.textContent).toContain('Colegios');
+  });
+
+  it('hides "Colegios" for content_editor', () => {
+    expect(setup(Role.ContentEditor).compiled.textContent).not.toContain('Colegios');
+  });
+
+  it('hides "Colegios" for school_admin', () => {
+    expect(setup(Role.SchoolAdmin).compiled.textContent).not.toContain('Colegios');
+  });
+
+  it('does not crash and skips TenantSettingsService for platform staff with no tenantId', () => {
+    let compiled!: HTMLElement;
+    expect(() => {
+      compiled = setup(Role.PlatformAdmin, 7, null).compiled;
+    }).not.toThrow();
+    expect(compiled.textContent).toContain('GeneraExamen');
   });
 
   it('keeps the desktop sidebar structurally collapsed at mobile widths (hidden md:block)', () => {

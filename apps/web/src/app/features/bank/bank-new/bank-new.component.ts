@@ -6,6 +6,7 @@ import { LucideAngularModule, Upload, Image as ImageIcon, Check, ChevronDown, Sp
 import { ButtonComponent } from '../../../ui/button/button.component';
 import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
+import { TabsComponent, TabItem } from '../../../ui/tabs/tabs.component';
 import { BankService } from '../bank.service';
 import { GRADE_LEVELS, GRADE_LEVEL_LABELS } from '../bank.models';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
@@ -89,7 +90,7 @@ function toOptions(items: readonly { id: string; name: string }[]): SelectOption
 @Component({
   selector: 'app-bank-new',
   standalone: true,
-  imports: [ButtonComponent, InputComponent, SelectComponent, LucideAngularModule],
+  imports: [ButtonComponent, InputComponent, SelectComponent, TabsComponent, LucideAngularModule],
   // `ui-select` (Grado/Curso/Tema/Nivel, both tabs) needs Check + ChevronDown —
   // this component-level `.pick()` shadows the root `app.config.ts` registration
   // for its own subtree, so the nested `ui-select` instances can't fall back to it.
@@ -112,6 +113,10 @@ export class BankNewComponent {
   }));
 
   protected readonly tab = signal<Tab>('photo');
+  protected readonly tabItems: readonly TabItem<Tab>[] = [
+    { value: 'photo', label: 'Foto de la pregunta', testId: 'tab-photo' },
+    { value: 'structured', label: 'Escribir pregunta', testId: 'tab-structured' },
+  ];
   protected readonly saving = signal(false);
   protected readonly saveError = signal<string | null>(null);
   protected readonly extracting = signal(false);
@@ -235,7 +240,7 @@ export class BankNewComponent {
     this.pImagePreviewUrl.set(file ? URL.createObjectURL(file) : null);
   }
 
-  private photoValid(): boolean {
+  protected photoValid(): boolean {
     return (
       !!this.pCourseId() &&
       !!this.pTopicId() &&
@@ -361,7 +366,7 @@ export class BankNewComponent {
     });
   }
 
-  private structuredValid(): boolean {
+  protected structuredValid(): boolean {
     return (
       !!this.sCourseId() &&
       !!this.sTopicId() &&

@@ -102,7 +102,12 @@ function setup() {
       { provide: AiService, useValue: { streamGenerationJob, listDrafts, listGenerationJobs, getGenerationJobChain } },
       {
         provide: AuthService,
-        useValue: { isAuthenticated: () => true, currentRole: signal(null), logout: vi.fn() },
+        useValue: {
+          isAuthenticated: () => true,
+          currentRole: signal(null),
+          currentTenantId: signal('t1'),
+          logout: vi.fn(),
+        },
       },
       {
         provide: TenantSettingsService,

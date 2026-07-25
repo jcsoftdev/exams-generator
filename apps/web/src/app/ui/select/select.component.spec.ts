@@ -179,20 +179,20 @@ describe('SelectComponent', () => {
 
     btn.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowDown', bubbles: true }));
     fixture.detectChanges();
-    expect(options(compiled)[1].className).toContain('bg-tint-activo');
+    expect(options(compiled)[1].className).toContain('bg-tint-active');
 
     btn.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowDown', bubbles: true }));
     fixture.detectChanges();
-    expect(options(compiled)[2].className).toContain('bg-tint-activo');
+    expect(options(compiled)[2].className).toContain('bg-tint-active');
 
     // Clamped — does not wrap past the last option.
     btn.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowDown', bubbles: true }));
     fixture.detectChanges();
-    expect(options(compiled)[2].className).toContain('bg-tint-activo');
+    expect(options(compiled)[2].className).toContain('bg-tint-active');
 
     btn.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowUp', bubbles: true }));
     fixture.detectChanges();
-    expect(options(compiled)[1].className).toContain('bg-tint-activo');
+    expect(options(compiled)[1].className).toContain('bg-tint-active');
   });
 
   it('Enter selects the highlighted option and closes the panel', () => {

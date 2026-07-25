@@ -80,6 +80,9 @@
         </div>
       }
     </div>
+    <div class="mt-4">
+      <ui-pagination [page]="page()" [pageSize]="PAGE_SIZE" [total]="total()" (pageChange)="onPageChange($event)"></ui-pagination>
+    </div>
   }
 
   <ui-modal [open]="pendingDelete() !== null" title="Eliminar examen" (openChange)="cancelDelete()">
@@ -88,7 +91,7 @@
     </p>
     <div actions class="flex justify-end gap-2">
       <ui-button variant="ghost" (clicked)="cancelDelete()">Cancelar</ui-button>
-      <div data-testid="delete-confirm-yes"><ui-button variant="primary" (clicked)="confirmDelete()">Eliminar</ui-button></div>
+      <div data-testid="delete-confirm-yes"><ui-button variant="danger" (clicked)="confirmDelete()">Eliminar</ui-button></div>
     </div>
   </ui-modal>
 </div>

@@ -15,6 +15,12 @@ export interface TenantUser {
   readonly createdAt: string;
 }
 
+/** `GET /users` (S8) response — paginated (audit P1). */
+export interface PagedTenantUsers {
+  readonly items: readonly TenantUser[];
+  readonly total: number;
+}
+
 export interface CreateUserPayload {
   readonly email: string;
   readonly name: string;

@@ -7,6 +7,7 @@ import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.compone
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
+import { ModalComponent } from '../../../ui/modal/modal.component';
 import { ExamVersionsService } from '../exam-versions.service';
 import { ExamVersion } from '../exam-versions.models';
 import { ExamsService } from '../../exams/exams.service';
@@ -39,7 +40,7 @@ const DEFAULT_VERSION_COUNT = 2;
   // `<lucide-icon>` is used both here (plantilla/generar/colapsable icons)
   // and inside the nested `ui-empty-state` primitive, so the module itself
   // goes in `imports` this time (not just `.pick()`'s providers).
-  imports: [ButtonComponent, EmptyStateComponent, TagComponent, SelectComponent, LucideAngularModule],
+  imports: [ButtonComponent, EmptyStateComponent, TagComponent, SelectComponent, ModalComponent, LucideAngularModule],
   // `ui-select` ("¿Cuántas formas?") needs Check too — this component-level
   // `.pick()` shadows the root `app.config.ts` registration for its subtree.
   providers: [LucideAngularModule.pick({ Folder, CopyPlus, ChevronDown, Plus, Check }).providers ?? []],
@@ -82,6 +83,7 @@ export class ExamVersionsPanelComponent {
   protected readonly versionCount = signal(DEFAULT_VERSION_COUNT);
   protected readonly generating = signal(false);
   protected readonly generateError = signal<string | null>(null);
+  protected readonly pendingGenerate = signal(false);
   protected readonly skeletonRows = [0, 1, 2];
 
   // "Descargar todo (ZIP)" (design doc §5.2, N1).
@@ -179,14 +181,31 @@ export class ExamVersionsPanelComponent {
   }
 
   /**
-   * Confirms the inline regeneration — calls the SAME idempotent endpoint
-   * the exam-builder screen uses (`ExamVersionsService.generateVersions`,
-   * B3). The backend REPLACES the exam's existing formas, so the panel
-   * warns about that before this fires (see template). On success, reload
+   * "Generar" inside the count-picker panel — the backend REPLACES the
+   * exam's existing formas, so an existing non-empty list goes through the
+   * same `ui-modal` confirm pattern as every other destructive action
+   * (audit P1). First-time generation (nothing to replace) skips the modal.
+   */
+  protected requestGenerate(): void {
+    if (this.versions().length > 0) {
+      this.pendingGenerate.set(true);
+      return;
+    }
+    this.confirmGenerate();
+  }
+
+  protected cancelGenerate(): void {
+    this.pendingGenerate.set(false);
+  }
+
+  /**
+   * Calls the SAME idempotent endpoint the exam-builder screen uses
+   * (`ExamVersionsService.generateVersions`, B3). On success, reload
    * `listVersions` (B4, the single source of truth for download links) so
    * the list reflects the freshly-generated formas.
    */
   protected confirmGenerate(): void {
+    this.pendingGenerate.set(false);
     this.generateError.set(null);
     this.generating.set(true);
     this.examVersionsService.generateVersions(this.examId(), this.versionCount()).subscribe({

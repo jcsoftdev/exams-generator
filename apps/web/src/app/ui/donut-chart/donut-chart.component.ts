@@ -11,7 +11,7 @@ function themeColor(cssVar: string, fallbackHex: string): string {
   return value || fallbackHex;
 }
 
-const PALETTE = [themeColor('--color-tint-activo', '#deedfb'), themeColor('--color-n300', '#c3c8ce')];
+const PALETTE = [themeColor('--color-tint-active', '#deedfb'), themeColor('--color-n300', '#c3c8ce')];
 
 /**
  * Thin `ng2-charts` wrapper (design doc §5), doughnut variant — same shape

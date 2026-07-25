@@ -12,8 +12,11 @@
   </p>
 
   @if (errorMessage()) {
-    <div class="mb-4">
+    <div class="mb-4 flex flex-col gap-2">
       <ui-banner variant="error" [message]="errorMessage()!"></ui-banner>
+      <div data-testid="retry-button" class="self-start">
+        <ui-button variant="primary" (clicked)="retry()">Reintentar</ui-button>
+      </div>
     </div>
   }
 
@@ -26,6 +29,13 @@
     </div>
   }
 
+  @if (loading()) {
+    <div data-testid="loading-indicator" class="flex flex-col gap-3">
+      @for (i of [1, 2, 3, 4, 5]; track i) {
+        <div class="h-20 animate-pulse rounded-card bg-n100"></div>
+      }
+    </div>
+  } @else {
   <ul class="flex flex-col gap-3">
     @for (question of questions(); track question.id; let i = $index) {
       <li
@@ -90,6 +100,7 @@
       </li>
     }
   </ul>
+  }
 
   <footer
     class="sticky bottom-0 mt-6 flex items-center justify-between gap-3 rounded-card border border-n200 bg-surface px-4 py-3"

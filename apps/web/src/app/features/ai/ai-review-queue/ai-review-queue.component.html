@@ -3,6 +3,13 @@
   <div class="flex flex-col gap-2">
     @if (loading()) {
       <div data-testid="loading-indicator" class="h-12 animate-pulse rounded-field bg-n100"></div>
+    } @else if (errorMessage()) {
+      <div data-testid="error-state" class="rounded-card border border-n200 bg-surface p-4 text-center">
+        <p class="text-sm text-n700">{{ errorMessage() }}</p>
+        <div data-testid="retry-button" class="mt-3 inline-block">
+          <ui-button variant="primary" (clicked)="retry()">Reintentar</ui-button>
+        </div>
+      </div>
     } @else if (drafts().length === 0) {
       <div data-testid="empty-queue">
         <ui-empty-state message="No hay borradores por revisar."></ui-empty-state>
@@ -43,60 +50,30 @@
 
         @if (editing()) {
           <div data-testid="panel-edit-form" class="flex flex-col gap-3">
-            <ui-select
-              label="Curso"
-              placeholder="Elige un curso"
-              [options]="courseOptions()"
-              [value]="editCourseId()"
-              (valueChange)="onEditCourseChange($event)"
-            ></ui-select>
-            <ui-select
-              label="Tema"
-              placeholder="Elige un tema"
-              [options]="editTopicOptions()"
-              [value]="editTopicId()"
-              (valueChange)="editTopicId.set($event ?? '')"
-            ></ui-select>
-            <ui-select
-              label="Nivel"
-              [options]="difficultyOptions"
-              [value]="editDifficulty()"
-              (valueChange)="editDifficulty.set($event)"
-            ></ui-select>
-            <ui-select
-              label="Grado"
-              [options]="gradeLevelOptions"
-              [value]="editGradeLevel()"
-              (valueChange)="editGradeLevel.set($event)"
-            ></ui-select>
+            <app-question-taxonomy-fields
+              [courseId]="editCourseId()"
+              [topicId]="editTopicId()"
+              [difficulty]="editDifficulty()"
+              [gradeLevel]="editGradeLevel()"
+              [courseOptions]="courseOptions()"
+              [topicOptions]="editTopicOptions()"
+              [difficultyOptions]="difficultyOptions"
+              [gradeLevelOptions]="gradeLevelOptions"
+              (courseIdChange)="onEditCourseChange($event)"
+              (topicIdChange)="editTopicId.set($event)"
+              (difficultyChange)="editDifficulty.set($event)"
+              (gradeLevelChange)="editGradeLevel.set($event)"
+            ></app-question-taxonomy-fields>
 
-            <label class="text-sm text-n700">Enunciado
-              <textarea
-                data-testid="edit-enunciado"
-                class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm"
-                rows="3"
-                [value]="editBody()"
-                (input)="editBody.set($any($event.target).value)"
-              ></textarea>
-            </label>
-            <label class="text-sm text-n700">Alternativas (una por línea)
-              <textarea
-                data-testid="edit-alternatives"
-                class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm"
-                rows="4"
-                [value]="editAlternatives()"
-                (input)="editAlternatives.set($any($event.target).value)"
-              ></textarea>
-            </label>
-            <div data-testid="edit-correct-answer">
-              <ui-select
-                label="Clave (respuesta correcta)"
-                placeholder="Elige la alternativa correcta"
-                [options]="editCorrectAnswerOptions()"
-                [value]="editCorrectAnswer()"
-                (valueChange)="editCorrectAnswer.set($event ?? '')"
-              ></ui-select>
-            </div>
+            <app-question-content-fields
+              [body]="editBody()"
+              [alternatives]="editAlternatives()"
+              [correctAnswer]="editCorrectAnswer()"
+              [correctAnswerOptions]="editCorrectAnswerOptions()"
+              (bodyChange)="editBody.set($event)"
+              (alternativesChange)="editAlternatives.set($event)"
+              (correctAnswerChange)="editCorrectAnswer.set($event)"
+            ></app-question-content-fields>
             <label class="text-sm text-n700">Figura (CeTZ) — opcional
               <textarea
                 data-testid="edit-figure-code"
@@ -107,30 +84,14 @@
               ></textarea>
             </label>
 
-            <div class="flex flex-col gap-2 rounded-field border border-dashed border-primary-300 bg-primary-50/40 p-3">
-              <span class="flex items-center gap-1 text-xs font-medium text-primary-700">
-                <lucide-angular name="sparkles" class="h-3.5 w-3.5"></lucide-angular>
-                Editar con IA
-              </span>
-              <div data-testid="ai-instruction">
-                <ui-input
-                  placeholder="hazla más difícil, corrige la figura…"
-                  [value]="aiInstruction()"
-                  (valueChange)="aiInstruction.set($event)"
-                ></ui-input>
-              </div>
-              <div data-testid="ai-revise" class="self-start">
-                <ui-button variant="ghost" [loading]="revising()" [disabled]="revising()" (clicked)="reviseWithAi()">
-                  <span class="flex items-center gap-1">
-                    <lucide-angular name="sparkles" class="h-4 w-4"></lucide-angular>
-                    Revisar con IA
-                  </span>
-                </ui-button>
-              </div>
-              @if (aiError()) {
-                <p data-testid="ai-error" class="text-sm text-hard-text" role="alert">{{ aiError() }}</p>
-              }
-            </div>
+            <app-ai-revise-box
+              placeholder="hazla más difícil, corrige la figura…"
+              [instruction]="aiInstruction()"
+              [loading]="revising()"
+              [error]="aiError()"
+              (instructionChange)="aiInstruction.set($event)"
+              (revise)="reviseWithAi()"
+            ></app-ai-revise-box>
 
             @if (editError()) {
               <p class="rounded-field bg-hard-bg px-3 py-2 text-sm text-hard-text" role="alert">{{ editError() }}</p>
@@ -189,7 +150,7 @@
     <p class="text-sm text-n700">¿Seguro que quieres rechazar este borrador? No entrará al banco.</p>
     <div actions class="flex justify-end gap-2">
       <ui-button variant="ghost" (clicked)="cancelReject()">Cancelar</ui-button>
-      <div data-testid="reject-confirm-yes"><ui-button variant="primary" (clicked)="confirmReject()">Rechazar</ui-button></div>
+      <div data-testid="reject-confirm-yes"><ui-button variant="danger" (clicked)="confirmReject()">Rechazar</ui-button></div>
     </div>
   </ui-modal>
 </div>
