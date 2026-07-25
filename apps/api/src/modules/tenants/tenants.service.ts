@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { Inject, Injectable, NotFoundException } from "@nestjs/common";
-import { eq } from "drizzle-orm";
+import { count, eq } from "drizzle-orm";
 import { db } from "../../db/client";
 import { assets, tenants } from "../../db/schema";
 import { STORAGE_PORT } from "../bank/bank.constants";
@@ -30,8 +30,14 @@ export class TenantsService {
     return tenant;
   }
 
-  async findAll() {
-    return db.select().from(tenants);
+  async findAll(page: number, pageSize: number): Promise<{ items: (typeof tenants.$inferSelect)[]; total: number }> {
+    const [{ value: total }] = await db.select({ value: count() }).from(tenants);
+    const items = await db
+      .select()
+      .from(tenants)
+      .limit(pageSize)
+      .offset((page - 1) * pageSize);
+    return { items, total };
   }
 
   async findById(id: string) {

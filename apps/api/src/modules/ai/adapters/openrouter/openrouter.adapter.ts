@@ -26,6 +26,13 @@ import { parseOpenRouterSseBuffer } from "./openrouter-sse-parser";
 
 const OPENROUTER_CHAT_COMPLETIONS_URL = "https://openrouter.ai/api/v1/chat/completions";
 const MAX_ATTEMPTS = 2;
+// Non-streaming calls (reviseQuestion/extractFromImage) should come back
+// fast; streaming (generate) can legitimately take longer to finish a full
+// completion, hence the higher ceiling. Both throw AiGenerationError on
+// abort, same as any other OpenRouter failure — the BullMQ job retries it
+// rather than a worker hanging on a stalled connection forever.
+const REQUEST_TIMEOUT_MS = 30_000;
+const SSE_TIMEOUT_MS = 120_000;
 
 export interface HttpJsonResponse {
   readonly status: number;
@@ -44,8 +51,20 @@ export type HttpClient = (
   init: { method: string; headers: Record<string, string>; body: string },
 ) => Promise<HttpJsonResponse>;
 
-export const fetchHttpClient: HttpClient = (url, init) =>
-  fetch(url, init) as unknown as Promise<HttpJsonResponse>;
+export const fetchHttpClient: HttpClient = async (url, init) => {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  try {
+    return (await fetch(url, { ...init, signal: controller.signal })) as unknown as HttpJsonResponse;
+  } catch (err) {
+    if ((err as Error).name === "AbortError") {
+      throw new AiGenerationError(`OpenRouter request timed out after ${REQUEST_TIMEOUT_MS}ms`);
+    }
+    throw err;
+  } finally {
+    clearTimeout(timeout);
+  }
+};
 
 export interface HttpSseResponse {
   readonly status: number;
@@ -59,8 +78,53 @@ export type SseHttpClient = (
   init: { method: string; headers: Record<string, string>; body: string },
 ) => Promise<HttpSseResponse>;
 
-export const fetchSseHttpClient: SseHttpClient = (url, init) =>
-  fetch(url, init) as unknown as Promise<HttpSseResponse>;
+export const fetchSseHttpClient: SseHttpClient = async (url, init) => {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  try {
+    return (await fetch(url, { ...init, signal: controller.signal })) as unknown as HttpSseResponse;
+  } catch (err) {
+    if ((err as Error).name === "AbortError") {
+      throw new AiGenerationError(`OpenRouter request timed out after ${REQUEST_TIMEOUT_MS}ms`);
+    }
+    throw err;
+  } finally {
+    clearTimeout(timeout);
+  }
+};
+
+/**
+ * Wraps an SSE body iterable with a per-chunk idle timeout: if no chunk
+ * arrives within `SSE_TIMEOUT_MS` of the previous one, the iteration throws
+ * instead of hanging — this is what actually protects the 2 BullMQ workers
+ * from a stalled OpenRouter stream (the initial `fetchSseHttpClient` timeout
+ * above only covers connection setup, not a stream that goes silent mid-way).
+ */
+async function* withIdleTimeout(
+  body: AsyncIterable<Uint8Array>,
+): AsyncIterable<Uint8Array> {
+  const iterator = body[Symbol.asyncIterator]();
+  try {
+    while (true) {
+      let timer: ReturnType<typeof setTimeout>;
+      const timeoutPromise = new Promise<never>((_, reject) => {
+        timer = setTimeout(
+          () => reject(new AiGenerationError(`OpenRouter stream stalled for ${SSE_TIMEOUT_MS}ms`)),
+          SSE_TIMEOUT_MS,
+        );
+      });
+      try {
+        const { value, done } = await Promise.race([iterator.next(), timeoutPromise]);
+        if (done) return;
+        yield value;
+      } finally {
+        clearTimeout(timer!);
+      }
+    }
+  } finally {
+    await iterator.return?.();
+  }
+}
 
 export interface OpenRouterAdapterConfig {
   readonly apiKey: string;
@@ -261,7 +325,7 @@ export class OpenRouterAdapter implements QuestionGeneratorPort {
     let buffer = "";
     let rawContent = "";
 
-    for await (const chunk of response.body) {
+    for await (const chunk of withIdleTimeout(response.body)) {
       buffer += decoder.decode(chunk, { stream: true });
       const { events, remainder } = parseOpenRouterSseBuffer(buffer);
       buffer = remainder;

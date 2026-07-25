@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, Param, Patch, Post, UseGuards } from "@nestjs/common";
+import { Body, Controller, Get, HttpCode, Param, Patch, Post, Query, UseGuards } from "@nestjs/common";
 import { Role } from "@exams-generator/shared";
 import { CurrentUser } from "../auth/current-user.decorator";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
@@ -6,6 +6,7 @@ import { Roles } from "../auth/roles.decorator";
 import { RolesGuard } from "../auth/roles.guard";
 import { AuthTokenPayload } from "../auth/token.service";
 import { UsersService } from "./users.service";
+import { clampPagination } from "../../common/pagination.util";
 
 @Controller("users")
 @UseGuards(JwtAuthGuard, RolesGuard)
@@ -14,8 +15,9 @@ export class UsersController {
   constructor(private readonly service: UsersService) {}
 
   @Get()
-  list(@CurrentUser() user: AuthTokenPayload) {
-    return this.service.list(user);
+  list(@CurrentUser() user: AuthTokenPayload, @Query("page") page?: string, @Query("pageSize") pageSize?: string) {
+    const clamped = clampPagination(page, pageSize);
+    return this.service.list(user, clamped.page, clamped.pageSize);
   }
 
   @Post()

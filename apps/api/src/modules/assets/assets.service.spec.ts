@@ -23,6 +23,7 @@ function buildDeps() {
     put: jest.fn(),
     get: jest.fn(),
     delete: jest.fn(),
+    ping: jest.fn(),
   };
 
   const service = new AssetsService(repository, storage);

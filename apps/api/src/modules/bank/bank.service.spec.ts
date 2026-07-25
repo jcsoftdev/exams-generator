@@ -54,6 +54,7 @@ function buildDeps() {
     put: jest.fn().mockResolvedValue("https://minio.local/bucket/key"),
     get: jest.fn(),
     delete: jest.fn(),
+    ping: jest.fn().mockResolvedValue(undefined),
   };
 
   const pdfCompiler = {

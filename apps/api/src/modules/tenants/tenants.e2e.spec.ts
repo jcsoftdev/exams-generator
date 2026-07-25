@@ -88,16 +88,23 @@ describe("Tenants (e2e)", () => {
   });
 
   describe("GET /tenants (list, N3)", () => {
-    it("allows platform_admin to list all tenants", async () => {
+    it("allows platform_admin to list all tenants (paginated)", async () => {
       const token = await loginAs(platformAdmin);
       const res = await request(app.getHttpServer())
         .get("/tenants")
         .set("Authorization", `Bearer ${token}`);
 
       expect(res.status).toBe(200);
-      expect(Array.isArray(res.body)).toBe(true);
-      const ids = res.body.map((t: { id: string }) => t.id);
-      expect(ids).toEqual(expect.arrayContaining([tenantA.id, tenantB.id]));
+      expect(Array.isArray(res.body.items)).toBe(true);
+      // Deliberately NOT asserting tenantA/tenantB are present: `tenants`
+      // has no createdAt column, so `findAll` has no ORDER BY, and this
+      // shared local Postgres accumulates tenants across unrelated e2e runs
+      // over time — a specific row landing on the default-sized first page
+      // isn't guaranteed. Presence is already covered by the `GET
+      // /tenants/:id` tests below (fetched by id directly, not via list).
+      // This test only asserts the paginated envelope itself is correct.
+      expect(res.body.items.length).toBeLessThanOrEqual(20);
+      expect(res.body.total).toBeGreaterThanOrEqual(2);
     });
 
     it("forbids school_admin from listing all tenants", async () => {

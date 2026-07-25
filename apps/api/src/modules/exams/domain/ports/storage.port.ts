@@ -17,6 +17,11 @@ export interface StoragePort {
   /** Removes the object at `key`. Safe to call on a key that doesn't
    * exist. */
   delete(key: string): Promise<void>;
+
+  /** Resolves if the backing store is reachable, rejects otherwise. Used by
+   * `HealthController` — does NOT require any specific object/bucket to
+   * exist, only connectivity + valid credentials. */
+  ping(): Promise<void>;
 }
 
 export class StorageObjectNotFoundError extends Error {

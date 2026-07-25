@@ -1,5 +1,6 @@
 import { Difficulty, Role } from "@exams-generator/shared";
 import { Job } from "bullmq";
+import { Logger } from "nestjs-pino";
 import { GenerateQuestionsService } from "./generate-questions.service";
 import { GenerationJobEventsService } from "./generation-job-events.service";
 import { GenerationJobsProcessor } from "./generation-jobs.processor";
@@ -39,9 +40,10 @@ function buildDeps() {
   } as unknown as jest.Mocked<GenerateQuestionsService>;
 
   const events = { notify: jest.fn() } as unknown as jest.Mocked<GenerationJobEventsService>;
+  const logger = { error: jest.fn(), warn: jest.fn(), log: jest.fn() } as unknown as Logger;
 
-  const processor = new GenerationJobsProcessor(repository, generateQuestionsService, events);
-  return { processor, repository, generateQuestionsService, events };
+  const processor = new GenerationJobsProcessor(repository, generateQuestionsService, events, logger);
+  return { processor, repository, generateQuestionsService, events, logger };
 }
 
 function job(jobId: string): Job<{ jobId: string }> {

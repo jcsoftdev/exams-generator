@@ -1,4 +1,4 @@
-import { and, eq } from "drizzle-orm";
+import { and, count, eq } from "drizzle-orm";
 import { db } from "../../db/client";
 import { users } from "../../db/schema";
 
@@ -11,17 +11,31 @@ export interface TenantUser {
   readonly createdAt: string;
 }
 
+export interface PagedTenantUsers {
+  readonly items: readonly TenantUser[];
+  readonly total: number;
+}
+
 export class UsersRepository {
-  async listByTenant(tenantId: string): Promise<TenantUser[]> {
-    const rows = await db.select().from(users).where(eq(users.tenantId, tenantId));
-    return rows.map((r) => ({
-      id: r.id,
-      email: r.email,
-      name: r.name,
-      role: r.role,
-      active: r.active,
-      createdAt: r.createdAt.toISOString(),
-    }));
+  async listByTenant(tenantId: string, page: number, pageSize: number): Promise<PagedTenantUsers> {
+    const [{ value: total }] = await db.select({ value: count() }).from(users).where(eq(users.tenantId, tenantId));
+    const rows = await db
+      .select()
+      .from(users)
+      .where(eq(users.tenantId, tenantId))
+      .limit(pageSize)
+      .offset((page - 1) * pageSize);
+    return {
+      items: rows.map((r) => ({
+        id: r.id,
+        email: r.email,
+        name: r.name,
+        role: r.role,
+        active: r.active,
+        createdAt: r.createdAt.toISOString(),
+      })),
+      total,
+    };
   }
 
   async findByIdInTenant(id: string, tenantId: string) {

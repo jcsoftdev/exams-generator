@@ -25,6 +25,11 @@ import { BankService } from "./bank.service";
 import { QuestionListItem } from "./bank.repository";
 import { clampPagination } from "../../common/pagination.util";
 
+// Question images only, never bulk data — 5MB is generous headroom for a
+// scanned/photographed exam question while keeping the in-memory multer
+// storage (`FileInterceptor` default) from being a memory-exhaustion vector.
+const MAX_IMAGE_UPLOAD_BYTES = 5 * 1024 * 1024;
+
 interface CreateImageQuestionBody {
   readonly courseId?: string;
   readonly topicId?: string;
@@ -93,7 +98,7 @@ export class BankController {
   constructor(private readonly service: BankService) {}
 
   @Post("image")
-  @UseInterceptors(FileInterceptor("image"))
+  @UseInterceptors(FileInterceptor("image", { limits: { fileSize: MAX_IMAGE_UPLOAD_BYTES } }))
   async createImageQuestion(
     @CurrentUser() user: AuthTokenPayload,
     @Body() body: CreateImageQuestionBody,
@@ -237,7 +242,7 @@ export class BankController {
    */
   @Post(":id/image")
   @HttpCode(HttpStatus.CREATED)
-  @UseInterceptors(FileInterceptor("file"))
+  @UseInterceptors(FileInterceptor("file", { limits: { fileSize: MAX_IMAGE_UPLOAD_BYTES } }))
   async replaceImage(
     @CurrentUser() user: AuthTokenPayload,
     @Param("id") id: string,

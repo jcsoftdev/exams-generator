@@ -1,6 +1,7 @@
 import { OnWorkerEvent, Processor, WorkerHost } from "@nestjs/bullmq";
 import { Role } from "@exams-generator/shared";
 import { Job } from "bullmq";
+import { Logger } from "nestjs-pino";
 import { AuthTokenPayload } from "../auth/token.service";
 import { GenerateQuestionsService } from "./generate-questions.service";
 import { GenerationJobEventsService } from "./generation-job-events.service";
@@ -28,6 +29,7 @@ export class GenerationJobsProcessor extends WorkerHost {
     private readonly repository: GenerationJobsRepository,
     private readonly generateQuestionsService: GenerateQuestionsService,
     private readonly events: GenerationJobEventsService,
+    private readonly logger: Logger,
   ) {
     super();
   }
@@ -98,6 +100,11 @@ export class GenerationJobsProcessor extends WorkerHost {
     if (job.attemptsMade < maxAttempts) {
       return;
     }
+
+    this.logger.error(
+      { jobId: job.data.jobId, bullJobId: job.id, attemptsMade: job.attemptsMade, err: job.failedReason },
+      "Generation job exhausted retries",
+    );
 
     const record = await this.repository.getByIdUnscoped(job.data.jobId);
     if (!record || TERMINAL_STATUSES.includes(record.status)) {

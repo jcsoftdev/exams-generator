@@ -1,4 +1,5 @@
 import {
+  BadRequestException,
   Body,
   Controller,
   Delete,
@@ -7,6 +8,7 @@ import {
   Param,
   Patch,
   Post,
+  Query,
   UploadedFile,
   UseGuards,
   UseInterceptors,
@@ -20,6 +22,7 @@ import { TenantGuard } from "../auth/tenant.guard";
 import { CreateTenantDto } from "./dto/create-tenant.dto";
 import { UpdateTenantDto } from "./dto/update-tenant.dto";
 import { TenantsService } from "./tenants.service";
+import { clampPagination } from "../../common/pagination.util";
 
 /**
  * `TenantGuard` defaults to reading the `:id` route param as the target
@@ -28,6 +31,10 @@ import { TenantsService } from "./tenants.service";
  * tenant-scoping branch: `TenantGuard` bypasses global roles before
  * looking at the param.
  */
+// Same reasoning as bank.controller.ts's MAX_IMAGE_UPLOAD_BYTES — a tenant
+// logo, never bulk data.
+const MAX_IMAGE_UPLOAD_BYTES = 5 * 1024 * 1024;
+
 @Controller("tenants")
 @UseGuards(JwtAuthGuard, RolesGuard, TenantGuard)
 export class TenantsController {
@@ -48,8 +55,9 @@ export class TenantsController {
    */
   @Get()
   @Roles(Role.PlatformAdmin)
-  findAll() {
-    return this.tenantsService.findAll();
+  findAll(@Query("page") page?: string, @Query("pageSize") pageSize?: string) {
+    const clamped = clampPagination(page, pageSize);
+    return this.tenantsService.findAll(clamped.page, clamped.pageSize);
   }
 
   @Get(":id")
@@ -73,9 +81,12 @@ export class TenantsController {
 
   @Post(":id/logo")
   @Roles(Role.PlatformAdmin, Role.SchoolAdmin)
-  @UseInterceptors(FileInterceptor("file"))
+  @UseInterceptors(FileInterceptor("file", { limits: { fileSize: MAX_IMAGE_UPLOAD_BYTES } }))
   @HttpCode(201)
-  uploadLogo(@Param("id") id: string, @UploadedFile() file: Express.Multer.File) {
+  uploadLogo(@Param("id") id: string, @UploadedFile() file: Express.Multer.File | undefined) {
+    if (!file) {
+      throw new BadRequestException("file is required");
+    }
     return this.tenantsService.uploadLogo(id, {
       buffer: file.buffer,
       mimetype: file.mimetype,

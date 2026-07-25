@@ -57,6 +57,10 @@ const MIME_EXTENSIONS: Readonly<Record<string, string>> = {
   "image/webp": "webp",
 };
 const DEFAULT_EXTENSION = "png";
+// Matches the frontend's own cap (exam-versions-panel) — server-side floor
+// against a request that would otherwise synchronously compile N PDFs in
+// the request/response cycle with no queue behind it (audit P0).
+const MAX_VERSION_COUNT = 5;
 
 function extensionForMime(mime: string | null): string {
   return (mime && MIME_EXTENSIONS[mime]) || DEFAULT_EXTENSION;
@@ -89,8 +93,8 @@ export class ExamVersionGenerationService {
     examId: string,
     versionCount: number,
   ): Promise<GeneratedVersionResult[]> {
-    if (!Number.isInteger(versionCount) || versionCount < 1) {
-      throw new BadRequestException("versionCount must be a positive integer");
+    if (!Number.isInteger(versionCount) || versionCount < 1 || versionCount > MAX_VERSION_COUNT) {
+      throw new BadRequestException(`versionCount must be an integer between 1 and ${MAX_VERSION_COUNT}`);
     }
 
     const tenantId = user.tenantId;
@@ -278,11 +282,18 @@ export class ExamVersionGenerationService {
     const pdfKey = `exams/${exam.id}/versions/${version.code}/exam.pdf`;
     const answerKeyKey = `exams/${exam.id}/versions/${version.code}/answer-key.pdf`;
 
-    const pdfUrl = await this.storage.put(pdfKey, examPdf, "application/pdf");
-    const answerSheetUrl = await this.storage.put(answerKeyKey, answerKeyPdf, "application/pdf");
+    await this.storage.put(pdfKey, examPdf, "application/pdf");
+    await this.storage.put(answerKeyKey, answerKeyPdf, "application/pdf");
 
     const pdfAsset = await this.repository.createAsset(exam.tenantId, pdfKey, "application/pdf");
     const answerKeyAsset = await this.repository.createAsset(exam.tenantId, answerKeyKey, "application/pdf");
+
+    // `/assets/:id` (tenant/JWT-protected), NOT storage.put()'s raw presigned
+    // MinIO url — that url is valid for 7 days with no auth check at all,
+    // bypassing the tenant boundary every other version-asset link already
+    // respects (`getVersionAssetRecords` below builds the same shape).
+    const pdfUrl = `/assets/${pdfAsset.id}`;
+    const answerSheetUrl = `/assets/${answerKeyAsset.id}`;
 
     await this.repository.saveVersion(exam.id, {
       code: version.code,

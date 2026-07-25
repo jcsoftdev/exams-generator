@@ -27,14 +27,23 @@ export type CompileRunner = (
   args: readonly string[],
 ) => Promise<CompileRunResult>;
 
+const TYPST_TIMEOUT_MS = 30_000;
+
 export const spawnTypstRunner: CompileRunner = (args) =>
   new Promise((resolve, reject) => {
+    const controller = new AbortController();
+    const timeout = setTimeout(
+      () => controller.abort(),
+      TYPST_TIMEOUT_MS,
+    );
+
     // Pin SOURCE_DATE_EPOCH so typst stamps a fixed creation date into the
     // PDF metadata. Without it the byte output varies with wall-clock time,
     // which makes the deterministic-output release gate flake under parallel
     // test load (two compiles straddling a one-second boundary).
     const child = spawn("typst", args, {
       env: { ...process.env, SOURCE_DATE_EPOCH: "1700000000" },
+      signal: controller.signal,
     });
     let stdout = "";
     let stderr = "";
@@ -45,8 +54,16 @@ export const spawnTypstRunner: CompileRunner = (args) =>
     child.stderr.on("data", (chunk) => {
       stderr += chunk;
     });
-    child.on("error", reject);
+    child.on("error", (err) => {
+      clearTimeout(timeout);
+      if (err.name === "AbortError") {
+        reject(new Error(`typst compile timed out after ${TYPST_TIMEOUT_MS}ms`));
+        return;
+      }
+      reject(err);
+    });
     child.on("close", (code) => {
+      clearTimeout(timeout);
       resolve({ stdout, stderr, exitCode: code ?? 1 });
     });
   });

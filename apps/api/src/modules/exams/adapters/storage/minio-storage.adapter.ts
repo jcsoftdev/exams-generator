@@ -66,6 +66,13 @@ export class MinioStorageAdapter implements StoragePort {
     await this.client.removeObject(this.bucket, key);
   }
 
+  /** Deliberately `listBuckets()`, not `bucketExists(this.bucket)` — this
+   * bucket may not have been created yet (lazy, via `ensureBucket()`) on a
+   * fresh deploy; `ping()` should only assert reachability/credentials. */
+  async ping(): Promise<void> {
+    await this.client.listBuckets();
+  }
+
   private async ensureBucket(): Promise<void> {
     if (this.bucketEnsured) {
       return;

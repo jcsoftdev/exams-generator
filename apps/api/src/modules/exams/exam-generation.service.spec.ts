@@ -183,8 +183,8 @@ describe("ExamVersionGenerationService.generateVersions", () => {
     expect(repository.createAsset).toHaveBeenCalledTimes(4); // 2 versions * (exam pdf + answer key)
     expect(repository.saveVersion).toHaveBeenCalledTimes(2);
     for (const result of results) {
-      expect(result.pdfUrl).toMatch(/^memory:\/\//);
-      expect(result.answerSheetUrl).toMatch(/^memory:\/\//);
+      expect(result.pdfUrl).toMatch(/^\/assets\//);
+      expect(result.answerSheetUrl).toMatch(/^\/assets\//);
     }
   });
 

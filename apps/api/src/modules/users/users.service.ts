@@ -3,7 +3,7 @@ import { randomBytes } from "node:crypto";
 import { Role } from "@exams-generator/shared";
 import { hashPassword } from "../auth/password.util";
 import { AuthTokenPayload } from "../auth/token.service";
-import { TenantUser, UsersRepository } from "./users.repository";
+import { PagedTenantUsers, UsersRepository } from "./users.repository";
 
 function requireTenant(user: AuthTokenPayload): string {
   if (!user.tenantId) throw new ForbiddenException("Only tenant admins can manage users");
@@ -19,8 +19,8 @@ function generateTemporaryPassword(): string {
 export class UsersService {
   constructor(private readonly repository: UsersRepository) {}
 
-  async list(user: AuthTokenPayload): Promise<TenantUser[]> {
-    return this.repository.listByTenant(requireTenant(user));
+  async list(user: AuthTokenPayload, page: number, pageSize: number): Promise<PagedTenantUsers> {
+    return this.repository.listByTenant(requireTenant(user), page, pageSize);
   }
 
   async create(user: AuthTokenPayload, email: string, name: string, role: "teacher" | "school_admin") {

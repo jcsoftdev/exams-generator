@@ -62,6 +62,10 @@ function mapAiProviderError(error: unknown): never {
   throw error;
 }
 
+// Same reasoning as bank.controller.ts's MAX_IMAGE_UPLOAD_BYTES — this
+// endpoint extracts a question from a photo, never bulk data.
+const MAX_IMAGE_UPLOAD_BYTES = 5 * 1024 * 1024;
+
 @Controller("ai/questions")
 @UseGuards(JwtAuthGuard)
 export class AiController {
@@ -154,7 +158,7 @@ export class AiController {
    */
   @Post("extract")
   @HttpCode(200)
-  @UseInterceptors(FileInterceptor("file"))
+  @UseInterceptors(FileInterceptor("file", { limits: { fileSize: MAX_IMAGE_UPLOAD_BYTES } }))
   async extract(@UploadedFile() file: Express.Multer.File): Promise<GeneratedQuestion> {
     if (!file) {
       throw new BadRequestException("file is required");

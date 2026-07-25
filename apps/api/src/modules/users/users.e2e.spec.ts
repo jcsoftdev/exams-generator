@@ -114,7 +114,8 @@ describe("Users module (e2e)", () => {
       .get("/users")
       .set("Authorization", `Bearer ${schoolAdminAToken}`)
       .expect(200);
-    expect(res.body.every((u: { id: string }) => tenantAUserIds.includes(u.id))).toBe(true);
+    expect(res.body.items.every((u: { id: string }) => tenantAUserIds.includes(u.id))).toBe(true);
+    expect(typeof res.body.total).toBe("number");
   });
 
   it("GET /users returns the name field for a created teacher", async () => {
@@ -129,7 +130,7 @@ describe("Users module (e2e)", () => {
       .get("/users")
       .set("Authorization", `Bearer ${schoolAdminAToken}`)
       .expect(200);
-    const listed = res.body.find((u: { id: string }) => u.id === created.body.id);
+    const listed = res.body.items.find((u: { id: string }) => u.id === created.body.id);
     expect(listed.name).toBe("Lucía Campos");
   });
 
