@@ -1,6 +1,7 @@
 import { Module } from "@nestjs/common";
 import { STORAGE_PORT } from "../bank/bank.constants";
 import { resolveStorageAdapter } from "../bank/storage-provider";
+import { TenantLookupController } from "./tenant-lookup.controller";
 import { TenantsController } from "./tenants.controller";
 import { TenantsService } from "./tenants.service";
 
@@ -11,7 +12,7 @@ import { TenantsService } from "./tenants.service";
  * same MinIO-backed adapter.
  */
 @Module({
-  controllers: [TenantsController],
+  controllers: [TenantsController, TenantLookupController],
   providers: [TenantsService, { provide: STORAGE_PORT, useFactory: resolveStorageAdapter }],
 })
 export class TenantsModule {}

@@ -48,6 +48,11 @@ export class TenantsService {
     return tenant;
   }
 
+  async existsBySlug(slug: string): Promise<boolean> {
+    const [tenant] = await db.select().from(tenants).where(eq(tenants.slug, slug));
+    return !!tenant;
+  }
+
   async update(id: string, dto: UpdateTenantDto) {
     await this.findById(id);
     const [tenant] = await db.update(tenants).set(dto).where(eq(tenants.id, id)).returning();
