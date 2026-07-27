@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { Course, Topic } from './taxonomy.models';
 
@@ -33,6 +33,28 @@ export class TaxonomyService {
   /** `gradeLevel` returns only the topics assessed at that grade; omitted → every topic of the course. */
   getTopics(courseId: string, gradeLevel?: string): Observable<Topic[]> {
     let params = new HttpParams().set('courseId', courseId);
+    if (gradeLevel) {
+      params = params.set('gradeLevel', gradeLevel);
+    }
+    return this.http.get<Topic[]>(`${environment.apiBaseUrl}/topics`, { params });
+  }
+
+  /**
+   * Batched sibling of `getTopics` — fetches topics for MULTIPLE courses in
+   * one request (backend's comma-separated `courseId` form) instead of one
+   * `getTopics(courseId)` call per course. Fixes the N+1 fan-out that used
+   * to trip the global `ThrottlerGuard` when callers fetched topics for
+   * every course in parallel via `forkJoin`. Blank/whitespace-only ids are
+   * dropped before the empty check, so `['']` resolves with `[]` the same
+   * way `[]` does instead of silently falling back to "no filter" (which
+   * would return the entire catalog).
+   */
+  getTopicsForCourses(courseIds: string[], gradeLevel?: string): Observable<Topic[]> {
+    const ids = courseIds.map((id) => id.trim()).filter((id) => id.length > 0);
+    if (ids.length === 0) {
+      return of([]);
+    }
+    let params = new HttpParams().set('courseId', ids.join(','));
     if (gradeLevel) {
       params = params.set('gradeLevel', gradeLevel);
     }

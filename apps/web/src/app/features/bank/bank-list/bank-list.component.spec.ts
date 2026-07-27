@@ -72,7 +72,7 @@ function setup(
     archiveImpl?: (id: string) => unknown;
     deleteImpl?: (id: string) => unknown;
     getCoursesImpl?: () => unknown;
-    getTopicsImpl?: (courseId: string) => unknown;
+    getTopicsForCoursesImpl?: (courseIds: string[]) => unknown;
     reviseQuestionImpl?: (id: string, instruction: string) => unknown;
     extractQuestionFromImageImpl?: (image: File) => unknown;
     updateQuestionImpl?: (id: string, patch: unknown) => unknown;
@@ -89,8 +89,9 @@ function setup(
   const buildImageAssetUrl = vi.fn((id: string) => `http://api.test/assets/${id}`);
   const fetchQuestionImage = vi.fn((id: string) => of(new Blob([`b-${id}`], { type: 'image/png' })));
   const getCourses = vi.fn(over.getCoursesImpl ?? (() => of(COURSES)));
-  const getTopics = vi.fn(
-    over.getTopicsImpl ?? ((courseId: string) => of(courseId === 'c1' ? TOPICS_C1 : TOPICS_C2)),
+  const getTopicsForCourses = vi.fn(
+    over.getTopicsForCoursesImpl ??
+      ((courseIds: string[]) => of([...TOPICS_C1, ...TOPICS_C2].filter((t) => courseIds.includes(t.courseId)))),
   );
   const reviseQuestion = vi.fn(
     over.reviseQuestionImpl ??
@@ -148,7 +149,7 @@ function setup(
           fetchQuestionImage,
         },
       },
-      { provide: TaxonomyService, useValue: { getCourses, getTopics } },
+      { provide: TaxonomyService, useValue: { getCourses, getTopicsForCourses } },
       { provide: AiService, useValue: { reviseQuestion, extractQuestionFromImage } },
       { provide: Router, useValue: { navigate } },
     ],
@@ -166,7 +167,7 @@ function setup(
     replaceQuestionImage,
     fetchQuestionImage,
     getCourses,
-    getTopics,
+    getTopicsForCourses,
     reviseQuestion,
     extractQuestionFromImage,
     navigate,
@@ -193,6 +194,12 @@ function expandTopic(compiled: HTMLElement, fixture: { detectChanges(): void }, 
 
 describe('BankListComponent', () => {
   describe('tree structure', () => {
+    it('fetches every course\'s topics via a single batched getTopicsForCourses call, not one per course', () => {
+      const { getTopicsForCourses } = setup();
+      expect(getTopicsForCourses).toHaveBeenCalledTimes(1);
+      expect(getTopicsForCourses).toHaveBeenCalledWith(['c1', 'c2']);
+    });
+
     it('groups questions by course -> topic with resolved names and counts, never raw UUIDs', () => {
       const { compiled } = setup();
       const headers = compiled.querySelectorAll('[data-testid="course-header"]');

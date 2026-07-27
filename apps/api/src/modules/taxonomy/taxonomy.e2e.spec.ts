@@ -123,6 +123,18 @@ describe("Taxonomy endpoints (e2e)", () => {
       expect(res.status).toBe(200);
       expect(res.body).toEqual([{ id: topicAId, name: `E2E Topic A ${suffix}`, courseId: courseAId }]);
     });
+
+    it("batch-fetches topics for a comma-separated courseId list", async () => {
+      const res = await request(app.getHttpServer())
+        .get("/topics")
+        .query({ courseId: `${courseAId},${courseBId}` })
+        .set("Authorization", `Bearer ${token}`);
+
+      expect(res.status).toBe(200);
+      const ids = (res.body as Array<{ id: string }>).map((t) => t.id);
+      expect(ids).toContain(topicAId);
+      expect(ids).toContain(topicBId);
+    });
   });
 
   describe("GET /universities", () => {

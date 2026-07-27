@@ -100,6 +100,29 @@ describe("TaxonomyRepository", () => {
     });
   });
 
+  describe("findTopicsByCourseIds", () => {
+    it("returns topics for every course id in the batch", async () => {
+      const result = await repository.findTopicsByCourseIds([courseAId, courseBId]);
+      const ids = result.map((t) => t.id);
+
+      expect(ids).toContain(topicAId);
+      expect(ids).toContain(topicBId);
+    });
+
+    it("combines the batch with a gradeLevel filter", async () => {
+      const bySecundaria = await repository.findTopicsByCourseIds([courseAId, courseBId], "secundaria_1");
+      expect(bySecundaria.map((t) => t.id)).toEqual([topicAId]);
+
+      const byPre = await repository.findTopicsByCourseIds([courseAId, courseBId], "pre");
+      expect(byPre.map((t) => t.id)).toEqual([topicBId]);
+    });
+
+    it("returns an empty array without querying the DB when courseIds is empty", async () => {
+      const result = await repository.findTopicsByCourseIds([]);
+      expect(result).toEqual([]);
+    });
+  });
+
   describe("findAllUniversities", () => {
     let universityAId: string;
     let universityBId: string;

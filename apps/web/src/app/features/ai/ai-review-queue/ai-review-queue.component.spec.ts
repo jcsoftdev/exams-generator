@@ -50,7 +50,7 @@ function setup(
     previewImpl?: (id: string) => unknown;
     approveImpl?: () => unknown;
     getCoursesImpl?: () => unknown;
-    getTopicsImpl?: (courseId: string) => unknown;
+    getTopicsForCoursesImpl?: (courseIds: string[]) => unknown;
     updateQuestionImpl?: (id: string, patch: unknown) => unknown;
     reviseQuestionImpl?: (id: string, instruction: string) => unknown;
   } = {},
@@ -67,7 +67,7 @@ function setup(
         of({ bodyTypst: 'revisado', alternatives: ['1', '2'], correctAnswer: '0', figureCode: null })),
   );
   const getCourses = vi.fn(over.getCoursesImpl ?? (() => of(COURSES)));
-  const getTopics = vi.fn(over.getTopicsImpl ?? (() => of(TOPICS_C1)));
+  const getTopicsForCourses = vi.fn(over.getTopicsForCoursesImpl ?? (() => of(TOPICS_C1)));
   const updateQuestion = vi.fn(
     over.updateQuestionImpl ?? ((id: string) => of({ id } as unknown)),
   );
@@ -84,7 +84,7 @@ function setup(
         useValue: { listDrafts, previewDraft, approveQuestion, rejectQuestion, reviseQuestion },
       },
       { provide: BankService, useValue: { updateQuestion } },
-      { provide: TaxonomyService, useValue: { getCourses, getTopics } },
+      { provide: TaxonomyService, useValue: { getCourses, getTopicsForCourses } },
       { provide: DraftCountService, useValue: { set: draftCountSet } },
     ],
   });
@@ -99,7 +99,7 @@ function setup(
     rejectQuestion,
     reviseQuestion,
     getCourses,
-    getTopics,
+    getTopicsForCourses,
     updateQuestion,
     draftCountSet,
   };
@@ -157,9 +157,10 @@ describe('AiReviewQueueComponent', () => {
   });
 
   it('resolves course/topic names via TaxonomyService instead of showing raw UUIDs', () => {
-    const { compiled, getCourses, getTopics } = setup();
+    const { compiled, getCourses, getTopicsForCourses } = setup();
     expect(getCourses).toHaveBeenCalledTimes(1);
-    expect(getTopics).toHaveBeenCalledWith('c1');
+    expect(getTopicsForCourses).toHaveBeenCalledTimes(1);
+    expect(getTopicsForCourses).toHaveBeenCalledWith(['c1']);
 
     const items = compiled.querySelectorAll('[data-testid="review-item"]');
     expect(items[0].textContent).toContain('Biología');
@@ -275,8 +276,8 @@ describe('AiReviewQueueComponent', () => {
   });
 
   it('filters the tema dropdown to the edit form\'s selected curso, with no extra HTTP call', () => {
-    const { compiled, fixture, getTopics } = setup();
-    getTopics.mockClear();
+    const { compiled, fixture, getTopicsForCourses } = setup();
+    getTopicsForCourses.mockClear();
     (compiled.querySelector('[data-testid="edit"] button') as HTMLButtonElement).click();
     fixture.detectChanges();
 
@@ -284,7 +285,7 @@ describe('AiReviewQueueComponent', () => {
       editTopicOptions: () => { value: string; label: string }[];
     };
     expect(component.editTopicOptions()).toEqual([{ value: 't1', label: 'Célula' }]);
-    expect(getTopics).not.toHaveBeenCalled();
+    expect(getTopicsForCourses).not.toHaveBeenCalled();
   });
 
   it('saves the edited draft via BankService.updateQuestion with the full payload including figureCode, then exits edit mode', () => {

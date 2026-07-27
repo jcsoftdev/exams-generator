@@ -27,6 +27,11 @@ export class TaxonomyService {
     return this.repository.findTopics(courseId, gradeLevel);
   }
 
+  /** Batched sibling of `listTopics` — thin pass-through to `TaxonomyRepository.findTopicsByCourseIds`. */
+  async listTopicsByCourseIds(courseIds: string[], gradeLevel?: string): Promise<TopicListItem[]> {
+    return this.repository.findTopicsByCourseIds(courseIds, gradeLevel);
+  }
+
   async listUniversities(): Promise<UniversityListItem[]> {
     return this.repository.findAllUniversities();
   }

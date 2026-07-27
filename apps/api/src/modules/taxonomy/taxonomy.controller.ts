@@ -36,14 +36,39 @@ export class TaxonomyController {
     return this.service.listCourses(stage);
   }
 
-  /** `?gradeLevel=` returns only the topics assessed at that grade; omitted → every topic of the course. */
+  /**
+   * `?gradeLevel=` returns only the topics assessed at that grade; omitted →
+   * every topic of the course. `courseId` also accepts a comma-separated
+   * list of ids (e.g. `courseId=a,b`) to batch-fetch topics for multiple
+   * courses in a single request — fixes the N+1 fan-out where callers used
+   * to issue one request per course in parallel and trip the global
+   * `ThrottlerGuard`. Always normalized to an id array before querying (even
+   * for a single id) so trimming/blank-id handling can't drift between a
+   * single-id and a batch request — repeated `?courseId=` query params
+   * (Express parses those as an array) are joined in before splitting.
+   */
   @Get("topics")
   async listTopics(
-    @Query("courseId") courseId?: string,
+    @Query("courseId") courseId?: string | string[],
     @Query("gradeLevel") gradeLevel?: string,
   ): Promise<TopicListItem[]> {
     const grade = gradeLevel && isGradeLevel(gradeLevel) ? gradeLevel : undefined;
-    return this.service.listTopics(courseId, grade);
+
+    if (courseId === undefined) {
+      return this.service.listTopics(undefined, grade);
+    }
+
+    const raw = Array.isArray(courseId) ? courseId.join(",") : courseId;
+    const courseIds = raw
+      .split(",")
+      .map((id) => id.trim())
+      .filter((id) => id.length > 0);
+
+    if (courseIds.length === 1) {
+      return this.service.listTopics(courseIds[0], grade);
+    }
+
+    return this.service.listTopicsByCourseIds(courseIds, grade);
   }
 
   /** Every university in the global catalog, ordered by name. */

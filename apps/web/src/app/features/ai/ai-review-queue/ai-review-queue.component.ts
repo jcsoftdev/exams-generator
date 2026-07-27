@@ -1,7 +1,7 @@
 import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { forkJoin, map, of, switchMap } from 'rxjs';
+import { map, switchMap } from 'rxjs';
 import { LucideAngularModule } from 'lucide-angular';
 import { Difficulty } from '@exams-generator/shared';
 import { ButtonComponent } from '../../../ui/button/button.component';
@@ -54,8 +54,8 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
  * confirmation via `ui-modal`.
  *
  * Course/topic names are resolved once via `TaxonomyService` (`getCourses`
- * + one `getTopics(courseId)` per course, same `forkJoin` fan-out pattern
- * as `BankListComponent`) so rows/header never show raw UUIDs.
+ * + one batched `getTopicsForCourses()` call, same pattern as
+ * `BankListComponent`) so rows/header never show raw UUIDs.
  *
  * The pending-drafts count is pushed to `DraftCountService.set()` whenever
  * the queue loads or a draft is approved/rejected, keeping the shell
@@ -158,19 +158,16 @@ export class AiReviewQueueComponent {
     this.taxonomyService
       .getCourses()
       .pipe(
-        switchMap((courses) => {
-          const topics$ = courses.length
-            ? forkJoin(courses.map((course) => this.taxonomyService.getTopics(course.id)))
-            : of([]);
-          return topics$.pipe(
-            map((topicsByCourse) => ({
+        switchMap((courses) =>
+          this.taxonomyService.getTopicsForCourses(courses.map((course) => course.id)).pipe(
+            map((topics) => ({
               courses,
-              topics: topicsByCourse.flat(),
+              topics,
               courseNames: new Map(courses.map((course) => [course.id, course.name])),
-              topicNames: new Map(topicsByCourse.flat().map((topic) => [topic.id, topic.name])),
+              topicNames: new Map(topics.map((topic) => [topic.id, topic.name])),
             })),
-          );
-        }),
+          ),
+        ),
       )
       .subscribe({
         next: ({ courses, topics, courseNames, topicNames }) => {

@@ -1,7 +1,7 @@
 import { Component, OnInit, computed, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { forkJoin, map, switchMap } from 'rxjs';
+import { map, switchMap } from 'rxjs';
 import { Difficulty } from '@exams-generator/shared';
 import {
   LucideAngularModule,
@@ -21,7 +21,7 @@ import { ProgressComponent } from '../../../ui/progress/progress.component';
 import { SelectComponent } from '../../../ui/select/select.component';
 import { TableComponent } from '../../../ui/table/table.component';
 import { TaxonomyService } from '../../taxonomy/taxonomy.service';
-import { Course } from '../../taxonomy/taxonomy.models';
+import { Course, Topic } from '../../taxonomy/taxonomy.models';
 import { ExamVersionsService } from '../../exam-versions/exam-versions.service';
 import { ExamsService } from '../exams.service';
 import {
@@ -502,29 +502,43 @@ export class ExamBuilderComponent implements OnInit {
     });
   }
 
+  /**
+   * Batched sibling of the per-course `forkJoin` fan-out this used to do —
+   * fetches every course's topics in ONE `getTopicsForCourses()` request
+   * (fixes the N+1 that used to trip the global ThrottlerGuard), then groups
+   * the flat response back by `courseId` (preserving `courses`' original
+   * order) so each row still gets added in the same course-then-topic order
+   * as before.
+   */
   private loadTopicsAndStock(gradeLevel: GradeLevel, courses: readonly Course[]): void {
-    forkJoin(
-      courses.map((course) =>
-        this.taxonomyService
-          .getTopics(course.id, gradeLevel)
-          .pipe(map((topics) => topics.map((topic) => ({ course, topic })))),
-      ),
-    ).subscribe({
-      next: (grouped) => {
-        const pairs = grouped.flat();
-        if (pairs.length === 0) {
+    this.taxonomyService.getTopicsForCourses(courses.map((course) => course.id), gradeLevel).subscribe({
+      next: (topics) => {
+        if (topics.length === 0) {
           this.loading.set(false);
           this.emptyBank.set(true);
           return;
         }
-        for (const { course, topic } of pairs) {
-          this.store.addRow({
-            id: `${course.id}:${topic.id}`,
-            courseId: course.id,
-            courseName: course.name,
-            topicId: topic.id,
-            topicName: topic.name,
-          });
+
+        const topicsByCourseId = new Map<string, Topic[]>();
+        for (const topic of topics) {
+          const bucket = topicsByCourseId.get(topic.courseId);
+          if (bucket) {
+            bucket.push(topic);
+          } else {
+            topicsByCourseId.set(topic.courseId, [topic]);
+          }
+        }
+
+        for (const course of courses) {
+          for (const topic of topicsByCourseId.get(course.id) ?? []) {
+            this.store.addRow({
+              id: `${course.id}:${topic.id}`,
+              courseId: course.id,
+              courseName: course.name,
+              topicId: topic.id,
+              topicName: topic.name,
+            });
+          }
         }
         this.loadStock(gradeLevel);
       },

@@ -61,7 +61,7 @@ const TRACKS: Track[] = [{ id: 'trk1', code: 'preuniversitario', name: 'Preunive
 
 function setup(overrides: {
   getCourses?(): unknown;
-  getTopics?(courseId: string): unknown;
+  getTopicsForCourses?(courseIds: string[], gradeLevel?: string): unknown;
   stockBatch?(payload: unknown): unknown;
   previewExam?(payload: unknown): unknown;
   createExam?(payload: unknown): unknown;
@@ -72,7 +72,7 @@ function setup(overrides: {
   resolveBlueprint?(payload: unknown): unknown;
 } = {}) {
   const getCourses = vi.fn(overrides.getCourses ?? (() => of(COURSES)));
-  const getTopics = vi.fn(overrides.getTopics ?? (() => of(TOPICS)));
+  const getTopicsForCourses = vi.fn(overrides.getTopicsForCourses ?? (() => of(TOPICS)));
   const stockBatch = vi.fn(overrides.stockBatch ?? (() => of(FULL_STOCK)));
   const previewExam = vi.fn(
     overrides.previewExam ??
@@ -119,7 +119,7 @@ function setup(overrides: {
   TestBed.configureTestingModule({
     imports: [ExamBuilderComponent],
     providers: [
-      { provide: TaxonomyService, useValue: { getCourses, getTopics } },
+      { provide: TaxonomyService, useValue: { getCourses, getTopicsForCourses } },
       {
         provide: ExamsService,
         useValue: { stockBatch, previewExam, createExam, getExamTypes, getUniversities, getUniversityTracks, resolveBlueprint },
@@ -137,7 +137,7 @@ function setup(overrides: {
     fixture,
     compiled,
     getCourses,
-    getTopics,
+    getTopicsForCourses,
     stockBatch,
     previewExam,
     createExam,
@@ -515,6 +515,26 @@ describe('ExamBuilderComponent', () => {
   });
 
   describe('course grouping', () => {
+    it('fetches topics for every course via a single batched getTopicsForCourses call, not one per course', () => {
+      const courses: Course[] = [
+        { id: 'c1', name: 'Matemática' },
+        { id: 'c2', name: 'Comunicación' },
+      ];
+      const topicsByCourse: Record<string, Topic[]> = {
+        c1: [{ id: 't1', name: 'Álgebra', courseId: 'c1' }],
+        c2: [{ id: 't2', name: 'Lectura', courseId: 'c2' }],
+      };
+      const { compiled, fixture, getTopicsForCourses } = setup({
+        getCourses: () => of(courses),
+        getTopicsForCourses: (courseIds: string[]) => of(courseIds.flatMap((id) => topicsByCourse[id] ?? [])),
+      });
+
+      selectGradeLevel(compiled, fixture, 'secundaria_1');
+
+      expect(getTopicsForCourses).toHaveBeenCalledTimes(1);
+      expect(getTopicsForCourses).toHaveBeenCalledWith(['c1', 'c2'], 'secundaria_1');
+    });
+
     it('renders a course subheading row before each course\'s topics when the grid spans multiple courses', () => {
       const courses: Course[] = [
         { id: 'c1', name: 'Matemática' },
@@ -536,7 +556,7 @@ describe('ExamBuilderComponent', () => {
       };
       const { compiled, fixture } = setup({
         getCourses: () => of(courses),
-        getTopics: (courseId: string) => of(topicsByCourse[courseId]),
+        getTopicsForCourses: (courseIds: string[]) => of(courseIds.flatMap((id) => topicsByCourse[id] ?? [])),
         stockBatch: () => of(stock),
       });
 
@@ -570,7 +590,7 @@ describe('ExamBuilderComponent', () => {
       };
       const { compiled, fixture } = setup({
         getCourses: () => of(courses),
-        getTopics: (courseId: string) => of(topicsByCourse[courseId]),
+        getTopicsForCourses: (courseIds: string[]) => of(courseIds.flatMap((id) => topicsByCourse[id] ?? [])),
         stockBatch: () => of(stock),
       });
 
@@ -642,7 +662,7 @@ describe('ExamBuilderComponent', () => {
       );
       const { compiled, fixture } = setup({
         getCourses: () => of(courses),
-        getTopics: (courseId: string) => of(topicsByCourse[courseId]),
+        getTopicsForCourses: (courseIds: string[]) => of(courseIds.flatMap((id) => topicsByCourse[id] ?? [])),
         stockBatch: () => of(stock),
         resolveBlueprint,
         getUniversityTracks: () => of([]),

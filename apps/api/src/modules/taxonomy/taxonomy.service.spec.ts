@@ -12,6 +12,7 @@ function buildDeps() {
   const repository = {
     findAllCourses: jest.fn().mockResolvedValue([] as CourseListItem[]),
     findTopics: jest.fn().mockResolvedValue([] as TopicListItem[]),
+    findTopicsByCourseIds: jest.fn().mockResolvedValue([] as TopicListItem[]),
     findAllUniversities: jest.fn().mockResolvedValue([] as UniversityListItem[]),
     findTracksByUniversity: jest.fn().mockResolvedValue([] as TrackListItem[]),
     findAllExamTypes: jest.fn().mockResolvedValue([] as ExamTypeListItem[]),
@@ -61,6 +62,27 @@ describe("TaxonomyService", () => {
       await service.listTopics("course-1", "secundaria_2");
 
       expect(repository.findTopics).toHaveBeenCalledWith("course-1", "secundaria_2");
+    });
+  });
+
+  describe("listTopicsByCourseIds", () => {
+    it("delegates to TaxonomyRepository.findTopicsByCourseIds with no gradeLevel when omitted", async () => {
+      const { service, repository } = buildDeps();
+      const topics: TopicListItem[] = [{ id: "topic-1", name: "Fracciones", courseId: "course-1" }];
+      repository.findTopicsByCourseIds.mockResolvedValue(topics);
+
+      const result = await service.listTopicsByCourseIds(["course-1", "course-2"]);
+
+      expect(repository.findTopicsByCourseIds).toHaveBeenCalledWith(["course-1", "course-2"], undefined);
+      expect(result).toEqual(topics);
+    });
+
+    it("forwards gradeLevel to TaxonomyRepository.findTopicsByCourseIds when provided", async () => {
+      const { service, repository } = buildDeps();
+
+      await service.listTopicsByCourseIds(["course-1", "course-2"], "secundaria_2");
+
+      expect(repository.findTopicsByCourseIds).toHaveBeenCalledWith(["course-1", "course-2"], "secundaria_2");
     });
   });
 

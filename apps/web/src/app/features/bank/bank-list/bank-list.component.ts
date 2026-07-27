@@ -1,7 +1,7 @@
 import { Component, DestroyRef, computed, effect, inject, signal } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { Observable, forkJoin, map, of, switchMap } from 'rxjs';
+import { Observable, forkJoin, map, switchMap } from 'rxjs';
 import {
   LucideAngularModule,
   Search,
@@ -65,8 +65,10 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
  * pagination needed, ~71 rows) plus id->name maps resolved once from
  * `TaxonomyService.getCourses()` + one `getTopics(courseId)` call per course
  * (the Angular `TaxonomyService` wrapper requires a `courseId`, so this
- * fetches all courses' topics via `forkJoin` instead of a single unscoped
- * call — see apply-progress deviations).
+ * fetches all courses' topics in a single batched
+ * `TaxonomyService.getTopicsForCourses()` call instead of one `getTopics`
+ * request per course (fixes the N+1 fan-out that used to trip the global
+ * ThrottlerGuard).
  *
  * Courses AND topics default COLLAPSED on every fetch (progressive
  * disclosure — avoids dumping every topic of every course on load, which
@@ -391,11 +393,10 @@ export class BankListComponent {
   }
 
   /**
-   * Resolves id->name maps for every course/topic. The Angular
-   * `TaxonomyService.getTopics()` wrapper requires a `courseId` (unlike the
-   * raw `GET /topics` endpoint, which also accepts no filter), so this
-   * fans out one `getTopics(courseId)` call per course via `forkJoin`
-   * instead of a single unscoped request — see class doc + apply-progress.
+   * Resolves id->name maps for every course/topic via a single batched
+   * `getTopicsForCourses()` call (fixes the N+1 fan-out where this used to
+   * issue one `getTopics(courseId)` request per course via `forkJoin` — see
+   * class doc).
    */
   private fetchTaxonomy(): Observable<{
     courseNames: ReadonlyMap<string, string>;
@@ -404,22 +405,16 @@ export class BankListComponent {
     topics: readonly Topic[];
   }> {
     return this.taxonomyService.getCourses().pipe(
-      switchMap((courses) => {
-        const topics$ = courses.length
-          ? forkJoin(courses.map((course) => this.taxonomyService.getTopics(course.id)))
-          : of([]);
-        return topics$.pipe(
-          map((topicsByCourse) => {
-            const topics = topicsByCourse.flat();
-            return {
-              courseNames: new Map(courses.map((course) => [course.id, course.name])),
-              topicNames: new Map(topics.map((topic) => [topic.id, topic.name])),
-              courses,
-              topics,
-            };
-          }),
-        );
-      }),
+      switchMap((courses) =>
+        this.taxonomyService.getTopicsForCourses(courses.map((course) => course.id)).pipe(
+          map((topics) => ({
+            courseNames: new Map(courses.map((course) => [course.id, course.name])),
+            topicNames: new Map(topics.map((topic) => [topic.id, topic.name])),
+            courses,
+            topics,
+          })),
+        ),
+      ),
     );
   }
 
