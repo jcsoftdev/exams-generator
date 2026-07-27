@@ -39,6 +39,7 @@ apps/api/.typst-bin/
 # Local tool state (machine-specific, rebuilt locally — never shared)
 .claude/
 .project-brain/
+.atl/
 
 # Local object storage data (native MinIO run outside docker)
 minio-data/
