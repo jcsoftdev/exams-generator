@@ -49,15 +49,18 @@ const jsonLd = {
 							para coordinadores académicos · colegios y academias del Perú
 						</div>
 					</div>
-					<button
-						class="toggle"
-						id="themeBtn"
-						type="button"
-						aria-pressed="false"
-						aria-label="Cambiar a tema oscuro"
-					>
-						◐ cambiar pizarra
-					</button>
+					<div class="topbar-actions">
+						<a class="login-link" href="/login">Ingresar</a>
+						<button
+							class="toggle"
+							id="themeBtn"
+							type="button"
+							aria-pressed="false"
+							aria-label="Cambiar a tema oscuro"
+						>
+							◐ cambiar pizarra
+						</button>
+					</div>
 				</header>
 
 				<main>
@@ -616,6 +619,29 @@ const jsonLd = {
 		font-size: 13px;
 		color: var(--write-soft);
 		transform: rotate(-0.6deg);
+	}
+
+	.topbar-actions {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	.login-link {
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: 15px;
+		color: var(--write);
+		text-decoration: none;
+		border-bottom: 2px solid color-mix(in srgb, var(--write) 45%, transparent);
+		transition: opacity 0.15s ease;
+	}
+	.login-link:hover {
+		opacity: 0.7;
+	}
+	.login-link:focus-visible {
+		outline: 2px solid var(--blue);
+		outline-offset: 2px;
 	}
 
 	.toggle {

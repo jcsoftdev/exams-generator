@@ -66,6 +66,15 @@ describe("Auth (e2e)", () => {
       expect((res.body.accessToken as string).length).toBeGreaterThan(0);
     });
 
+    it("returns the user's tenant slug for a tenant-scoped user", async () => {
+      const res = await request(app.getHttpServer())
+        .post("/auth/login")
+        .send({ email: schoolAdminTenantA.email, password: schoolAdminTenantA.plainPassword });
+
+      expect(res.status).toBe(200);
+      expect(res.body.tenantSlug).toBe(tenantA.slug);
+    });
+
     it("returns 401 for a wrong password", async () => {
       const res = await request(app.getHttpServer())
         .post("/auth/login")
@@ -118,6 +127,56 @@ describe("Auth (e2e)", () => {
 
       expect(res.status).toBe(200);
       expect(res.body).toEqual({ ok: true, tenantId: tenantA.id });
+    });
+  });
+
+  describe("cross-origin login handoff (POST /auth/exchange-code + POST /auth/exchange)", () => {
+    it("exchanges a login accessToken for a code, then the code back for the same accessToken", async () => {
+      const accessToken = await loginAs(schoolAdminTenantA);
+
+      const codeRes = await request(app.getHttpServer())
+        .post("/auth/exchange-code")
+        .send({ accessToken });
+      expect(codeRes.status).toBe(200);
+      expect(typeof codeRes.body.code).toBe("string");
+      expect((codeRes.body.code as string).length).toBeGreaterThan(0);
+
+      const exchangeRes = await request(app.getHttpServer())
+        .post("/auth/exchange")
+        .send({ code: codeRes.body.code });
+      expect(exchangeRes.status).toBe(200);
+      expect(exchangeRes.body.accessToken).toBe(accessToken);
+    });
+
+    it("POST /auth/exchange-code returns 401 for a garbage token", async () => {
+      const res = await request(app.getHttpServer())
+        .post("/auth/exchange-code")
+        .send({ accessToken: "not-a-real-jwt" });
+
+      expect(res.status).toBe(401);
+    });
+
+    it("POST /auth/exchange returns 401 for a code that was never issued", async () => {
+      const res = await request(app.getHttpServer()).post("/auth/exchange").send({ code: "never-issued" });
+
+      expect(res.status).toBe(401);
+    });
+
+    it("a code can only be redeemed once", async () => {
+      const accessToken = await loginAs(schoolAdminTenantA);
+      const codeRes = await request(app.getHttpServer())
+        .post("/auth/exchange-code")
+        .send({ accessToken });
+
+      const first = await request(app.getHttpServer())
+        .post("/auth/exchange")
+        .send({ code: codeRes.body.code });
+      expect(first.status).toBe(200);
+
+      const second = await request(app.getHttpServer())
+        .post("/auth/exchange")
+        .send({ code: codeRes.body.code });
+      expect(second.status).toBe(401);
     });
   });
 });

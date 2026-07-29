@@ -47,7 +47,10 @@ describe('AuthService', () => {
     const req = httpMock.expectOne(`${environment.apiBaseUrl}/auth/login`);
     expect(req.request.method).toBe('POST');
     expect(req.request.body).toEqual({ email: 'teacher@school.dev', password: 'secret' });
-    req.flush({ accessToken: buildFakeJwt({ sub: 'u1', role: 'teacher', tenantId: 't1', exp: FUTURE_EXP }) });
+    req.flush({
+      accessToken: buildFakeJwt({ sub: 'u1', role: 'teacher', tenantId: 't1', exp: FUTURE_EXP }),
+      tenantSlug: 'colegio-demo',
+    });
   });
 
   it('stores the accessToken in localStorage and exposes role/isAuthenticated on success', () => {
@@ -55,7 +58,7 @@ describe('AuthService', () => {
 
     service.login({ email: 'teacher@school.dev', password: 'secret' }).subscribe();
     const req = httpMock.expectOne(`${environment.apiBaseUrl}/auth/login`);
-    req.flush({ accessToken: token });
+    req.flush({ accessToken: token, tenantSlug: 'colegio-demo' });
 
     expect(localStorage.getItem(TOKEN_STORAGE_KEY)).toBe(token);
     expect(service.isAuthenticated()).toBe(true);
@@ -85,13 +88,46 @@ describe('AuthService', () => {
   it('logout() clears the stored token', () => {
     const token = buildFakeJwt({ sub: 'u1', role: 'teacher', tenantId: 't1', exp: FUTURE_EXP });
     service.login({ email: 'teacher@school.dev', password: 'secret' }).subscribe();
-    httpMock.expectOne(`${environment.apiBaseUrl}/auth/login`).flush({ accessToken: token });
+    httpMock
+      .expectOne(`${environment.apiBaseUrl}/auth/login`)
+      .flush({ accessToken: token, tenantSlug: 'colegio-demo' });
 
     service.logout();
 
     expect(localStorage.getItem(TOKEN_STORAGE_KEY)).toBeNull();
     expect(service.isAuthenticated()).toBe(false);
     expect(service.currentRole()).toBeNull();
+  });
+
+  it('requestExchangeCode() posts the accessToken to /auth/exchange-code without storing anything', () => {
+    service.requestExchangeCode('some-jwt').subscribe();
+
+    const req = httpMock.expectOne(`${environment.apiBaseUrl}/auth/exchange-code`);
+    expect(req.request.method).toBe('POST');
+    expect(req.request.body).toEqual({ accessToken: 'some-jwt' });
+    req.flush({ code: 'one-time-code' });
+
+    expect(localStorage.getItem(TOKEN_STORAGE_KEY)).toBeNull();
+  });
+
+  it('exchangeCode() posts the code to /auth/exchange without storing anything', () => {
+    service.exchangeCode('one-time-code').subscribe();
+
+    const req = httpMock.expectOne(`${environment.apiBaseUrl}/auth/exchange`);
+    expect(req.request.method).toBe('POST');
+    expect(req.request.body).toEqual({ code: 'one-time-code' });
+    req.flush({ accessToken: 'some-jwt' });
+
+    expect(localStorage.getItem(TOKEN_STORAGE_KEY)).toBeNull();
+  });
+
+  it('applyToken() stores the token the same way login() does', () => {
+    const token = buildFakeJwt({ sub: 'u1', role: 'teacher', tenantId: 't1', exp: FUTURE_EXP });
+
+    service.applyToken(token);
+
+    expect(localStorage.getItem(TOKEN_STORAGE_KEY)).toBe(token);
+    expect(service.isAuthenticated()).toBe(true);
   });
 
   it('rehydrates isAuthenticated/currentRole from a previously stored token', () => {

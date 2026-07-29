@@ -3,10 +3,10 @@ import { inject } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { environment } from '../../../environments/environment';
 
-const TENANT_ROOT_DOMAIN = '.creaexamen.com';
+export const TENANT_ROOT_DOMAIN = '.creaexamen.com';
 
 /** `foo.creaexamen.com` -> `'foo'`. `creaexamen.com` / `localhost` / the sslip.io fallback -> `null`. */
-function extractTenantSlug(hostname: string): string | null {
+export function extractTenantSlug(hostname: string): string | null {
   if (!hostname.endsWith(TENANT_ROOT_DOMAIN)) {
     return null;
   }

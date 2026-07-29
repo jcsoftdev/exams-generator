@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ButtonComponent } from '../../ui/button/button.component';
 import { InputComponent } from '../../ui/input/input.component';
 import { AuthService } from '../../core/auth/auth.service';
+import { extractTenantSlug, TENANT_ROOT_DOMAIN } from '../../core/tenant/tenant-lookup.service';
 
 /**
  * Login screen (design doc §4, spec LG-R1/R2). Panel dividido: marca oscura
@@ -56,7 +57,16 @@ export class LoginComponent {
     this.submitting.set(true);
 
     this.authService.login({ email: this.email(), password: this.password() }).subscribe({
-      next: () => {
+      next: (response) => {
+        const currentSlug = extractTenantSlug(window.location.hostname);
+        if (response.tenantSlug && response.tenantSlug !== currentSlug) {
+          // Wrong subdomain for this account (e.g. an old bookmark, or the
+          // tenant was renamed) — localStorage doesn't cross origins, so
+          // hand the session off via a one-time code instead of just
+          // navigating to /app on a subdomain the token isn't valid for.
+          this.redirectToTenant(response.tenantSlug, response.accessToken);
+          return;
+        }
         this.submitting.set(false);
         this.router.navigateByUrl('/app');
       },
@@ -67,6 +77,18 @@ export class LoginComponent {
             ? 'Correo o contraseña incorrectos.'
             : 'Ocurrió un error. Inténtalo de nuevo.',
         );
+      },
+    });
+  }
+
+  private redirectToTenant(slug: string, accessToken: string): void {
+    this.authService.requestExchangeCode(accessToken).subscribe({
+      next: ({ code }) => {
+        window.location.href = `https://${slug}${TENANT_ROOT_DOMAIN}/auth/callback#code=${code}`;
+      },
+      error: () => {
+        this.submitting.set(false);
+        this.errorMessage.set('Ocurrió un error. Inténtalo de nuevo.');
       },
     });
   }

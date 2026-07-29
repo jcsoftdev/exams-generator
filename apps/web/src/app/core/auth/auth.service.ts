@@ -4,7 +4,12 @@ import { Observable, tap } from 'rxjs';
 import { Role } from '@exams-generator/shared';
 import { environment } from '../../../environments/environment';
 import { decodeJwtPayload } from './jwt.util';
-import { DecodedAccessToken, LoginCredentials, LoginResponse } from './auth.models';
+import {
+  DecodedAccessToken,
+  ExchangeTokenResponse,
+  LoginCredentials,
+  LoginResponse,
+} from './auth.models';
 
 export const ACCESS_TOKEN_STORAGE_KEY = 'exams-generator.accessToken';
 
@@ -43,6 +48,29 @@ export class AuthService {
 
   getToken(): string | null {
     return this.tokenSignal();
+  }
+
+  /**
+   * Cross-origin login handoff, step 1: mint a short-lived one-time code for
+   * `accessToken` so a redirect to the target tenant's subdomain can carry
+   * the code instead of the real 24h JWT (see `packages/shared`'s
+   * `login-exchange.dto.ts`). Deliberately does NOT call `setToken` — this
+   * origin isn't the token's home if a redirect is about to happen.
+   */
+  requestExchangeCode(accessToken: string): Observable<{ code: string }> {
+    return this.http.post<{ code: string }>(`${environment.apiBaseUrl}/auth/exchange-code`, {
+      accessToken,
+    });
+  }
+
+  /** Cross-origin login handoff, step 2: redeem a one-time code for the real accessToken. Called from `/auth/callback` on the target tenant's subdomain. */
+  exchangeCode(code: string): Observable<ExchangeTokenResponse> {
+    return this.http.post<ExchangeTokenResponse>(`${environment.apiBaseUrl}/auth/exchange`, { code });
+  }
+
+  /** Public entry point for `/auth/callback` to store a token obtained via `exchangeCode()` — same storage path `login()` uses internally via `setToken`. */
+  applyToken(token: string): void {
+    this.setToken(token);
   }
 
   private setToken(token: string | null): void {

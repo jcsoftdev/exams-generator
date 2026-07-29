@@ -4,6 +4,7 @@ import { authGuard } from './core/auth/auth.guard';
 import { roleGuard } from './core/auth/role.guard';
 import { EXAMS_ROLES } from './features/exams/exams.roles';
 import { LoginComponent } from './features/login/login.component';
+import { AuthCallbackComponent } from './features/auth-callback/auth-callback.component';
 import { ShellComponent } from './features/shell/shell.component';
 import { ForbiddenComponent } from './features/forbidden/forbidden.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
@@ -25,6 +26,7 @@ const TITLE_SUFFIX = ' · GeneraExamen';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent, title: `Iniciar sesión${TITLE_SUFFIX}` },
+  { path: 'auth/callback', component: AuthCallbackComponent, title: `Iniciando sesión${TITLE_SUFFIX}` },
   { path: 'forbidden', component: ForbiddenComponent, title: `Sin acceso${TITLE_SUFFIX}` },
   {
     path: 'app',

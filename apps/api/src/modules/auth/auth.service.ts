@@ -2,7 +2,7 @@ import { Injectable, UnauthorizedException } from "@nestjs/common";
 import { eq } from "drizzle-orm";
 import { JwtPayload, LoginResponseDto } from "@exams-generator/shared";
 import { db } from "../../db/client";
-import { users } from "../../db/schema";
+import { tenants, users } from "../../db/schema";
 import { comparePassword } from "./password.util";
 import { TokenService } from "./token.service";
 
@@ -44,6 +44,19 @@ export class AuthService {
     };
 
     const accessToken = this.tokenService.sign(payload);
-    return { accessToken };
+    const tenantSlug = await this.resolveTenantSlug(user.tenantId);
+    return { accessToken, tenantSlug };
+  }
+
+  // `null` for platform staff (`platform_admin`/`content_editor` — global
+  // scope, no single tenant). Callers (the web login flow) use this to
+  // detect a cross-origin login and redirect to the right
+  // `{slug}.creaexamen.com` subdomain instead of assuming same-origin.
+  private async resolveTenantSlug(tenantId: string | null): Promise<string | null> {
+    if (!tenantId) {
+      return null;
+    }
+    const [tenant] = await db.select({ slug: tenants.slug }).from(tenants).where(eq(tenants.id, tenantId));
+    return tenant?.slug ?? null;
   }
 }

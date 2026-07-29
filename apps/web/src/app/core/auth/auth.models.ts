@@ -16,6 +16,11 @@ export interface LoginCredentials {
 
 export interface LoginResponse {
   accessToken: string;
+  tenantSlug: string | null;
+}
+
+export interface ExchangeTokenResponse {
+  accessToken: string;
 }
 
 export interface DecodedAccessToken {

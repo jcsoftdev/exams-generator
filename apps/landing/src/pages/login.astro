@@ -1,0 +1,166 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// Central login: landing (creaexamen.com) has no tenant of its own, so the
+// form posts to the API directly (CORS already allows the root domain, see
+// apps/api/src/main.ts), then redirects to the account's own tenant
+// subdomain instead of ever pretending to BE that tenant. Same-origin
+// alternative (a fake "app.creaexamen.com" neutral subdomain) was rejected:
+// it would collide with the tenant-not-found redirect the web SPA already
+// runs on boot (apps/web/core/tenant/tenant-lookup.service.ts) for any
+// subdomain that isn't a real tenant.
+const API_BASE_URL = "https://api.creaexamen.com";
+---
+
+<Layout title="Ingresar — GeneraExamen" description="Inicia sesión con la cuenta que te dio tu colegio.">
+	<main class="login">
+		<a class="back" href="/">← Volver al inicio</a>
+		<h1>Inicia sesión</h1>
+		<p class="sub">Con la cuenta que te dio tu colegio.</p>
+
+		<form id="loginForm" novalidate>
+			<label>
+				Correo
+				<input type="email" name="email" autocomplete="email" required />
+			</label>
+			<label>
+				Contraseña
+				<input type="password" name="password" autocomplete="current-password" required />
+			</label>
+
+			<p id="loginError" class="error" role="alert" hidden></p>
+
+			<button type="submit" id="loginSubmit">Entrar</button>
+		</form>
+	</main>
+</Layout>
+
+<script define:vars={{ API_BASE_URL }}>
+	const form = document.getElementById("loginForm");
+	const errorEl = document.getElementById("loginError");
+	const submitBtn = document.getElementById("loginSubmit");
+
+	function showError(message) {
+		errorEl.textContent = message;
+		errorEl.hidden = false;
+	}
+
+	form.addEventListener("submit", async (event) => {
+		event.preventDefault();
+		errorEl.hidden = true;
+		submitBtn.disabled = true;
+		submitBtn.textContent = "Entrando…";
+
+		const email = form.email.value;
+		const password = form.password.value;
+
+		try {
+			const loginRes = await fetch(`${API_BASE_URL}/auth/login`, {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ email, password }),
+			});
+
+			if (!loginRes.ok) {
+				showError(
+					loginRes.status === 401
+						? "Correo o contraseña incorrectos."
+						: "Ocurrió un error. Inténtalo de nuevo.",
+				);
+				return;
+			}
+
+			const { accessToken, tenantSlug } = await loginRes.json();
+
+			if (!tenantSlug) {
+				// Platform staff (no single tenant) — this central login isn't
+				// their path in today's setup; nothing sane to redirect to.
+				showError("Esta cuenta no pertenece a un colegio. Contacta al administrador.");
+				return;
+			}
+
+			const exchangeRes = await fetch(`${API_BASE_URL}/auth/exchange-code`, {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ accessToken }),
+			});
+
+			if (!exchangeRes.ok) {
+				showError("Ocurrió un error. Inténtalo de nuevo.");
+				return;
+			}
+
+			const { code } = await exchangeRes.json();
+			window.location.href = `https://${tenantSlug}.creaexamen.com/auth/callback#code=${code}`;
+		} catch {
+			showError("No se pudo conectar. Revisa tu internet e inténtalo de nuevo.");
+		} finally {
+			submitBtn.disabled = false;
+			submitBtn.textContent = "Entrar";
+		}
+	});
+</script>
+
+<style>
+	.login {
+		max-width: 380px;
+		margin: 0 auto;
+		padding: 48px 24px 80px;
+		font-family: ui-rounded, "Trebuchet MS", "Segoe UI", "Nunito", system-ui, sans-serif;
+	}
+	.back {
+		display: inline-block;
+		margin-bottom: 24px;
+		color: inherit;
+		text-decoration: none;
+		opacity: 0.7;
+	}
+	h1 {
+		margin: 0 0 4px;
+	}
+	.sub {
+		margin: 0 0 24px;
+		opacity: 0.75;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+	label {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		font-size: 14px;
+		font-weight: 600;
+	}
+	input {
+		font: inherit;
+		padding: 10px 12px;
+		border-radius: 8px;
+		border: 1px solid #c9c2ab;
+		background: #fff;
+	}
+	button {
+		font: inherit;
+		font-weight: 700;
+		cursor: pointer;
+		padding: 12px 20px;
+		border: none;
+		border-radius: 10px;
+		background: #8a6100;
+		color: #fff;
+	}
+	button:disabled {
+		opacity: 0.6;
+		cursor: default;
+	}
+	.error {
+		margin: 0;
+		padding: 10px 12px;
+		border-radius: 8px;
+		background: #fde2e2;
+		color: #8a1f1f;
+		font-size: 14px;
+	}
+</style>
