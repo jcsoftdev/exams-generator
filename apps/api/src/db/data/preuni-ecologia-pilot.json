@@ -1,0 +1,102 @@
+{
+  "courseName": "Ecología",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Ecología, universo, sistema solar y Tierra",
+      "questions": [
+        {"bodyTypst": "Indique el planeta del sistema solar más cercano al Sol.", "alternatives": ["Venus", "Mercurio", "Tierra", "Marte", "Júpiter"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — sistema solar"},
+        {"bodyTypst": "La teoría más aceptada actualmente sobre el origen del universo, que postula una expansión a partir de un estado de densidad y temperatura extremas, se denomina:", "alternatives": ["Teoría de la generación espontánea", "Teoría del estado estacionario", "Teoría del Big Bang", "Teoría geocéntrica", "Teoría de la panspermia"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — origen del universo"},
+        {"bodyTypst": "La capa de la Tierra donde se desarrolla la vida, resultado de la interacción entre atmósfera, hidrósfera y litósfera, se denomina:", "alternatives": ["Estratósfera", "Biósfera", "Mesósfera", "Ionósfera", "Astenósfera"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Ecología — biósfera"}
+      ]
+    },
+    {
+      "name": "Luz y calor",
+      "questions": [
+        {"bodyTypst": "El proceso mediante el cual las plantas transforman la energía luminosa en energía química almacenada en compuestos orgánicos se denomina:", "alternatives": ["Respiración celular", "Fotosíntesis", "Quimiosíntesis", "Fermentación", "Transpiración"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — fotosíntesis"},
+        {"bodyTypst": "El efecto invernadero es un fenómeno natural en el cual determinados gases atmosféricos retienen parte de la radiación infrarroja terrestre. Indique el gas de efecto invernadero más abundante de origen antropogénico.", "alternatives": ["Ozono", "Vapor de agua", "Dióxido de carbono", "Nitrógeno", "Oxígeno"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Ecología — efecto invernadero"}
+      ]
+    },
+    {
+      "name": "Agua y aire",
+      "questions": [
+        {"bodyTypst": "El proceso del ciclo del agua mediante el cual el vapor de agua se transforma en agua líquida al enfriarse en la atmósfera se denomina:", "alternatives": ["Evaporación", "Condensación", "Precipitación", "Infiltración", "Sublimación"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — ciclo del agua"},
+        {"bodyTypst": "Indique el gas más abundante en la composición de la atmósfera terrestre.", "alternatives": ["Oxígeno", "Dióxido de carbono", "Nitrógeno", "Argón", "Hidrógeno"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — composición atmosférica"},
+        {"bodyTypst": "La capa atmosférica donde ocurren los fenómenos meteorológicos (lluvia, viento, nubes) y en la que vivimos se denomina:", "alternatives": ["Estratósfera", "Tropósfera", "Mesósfera", "Termósfera", "Exósfera"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Ecología — capas atmosféricas"}
+      ]
+    },
+    {
+      "name": "Rocas y suelo",
+      "questions": [
+        {"bodyTypst": "Las rocas formadas por el enfriamiento y solidificación del magma o la lava se denominan:", "alternatives": ["Rocas sedimentarias", "Rocas metamórficas", "Rocas ígneas", "Rocas calizas", "Rocas evaporíticas"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — tipos de rocas"},
+        {"bodyTypst": "El horizonte del suelo más rico en materia orgánica descompuesta (humus), donde se concentra la mayor actividad biológica, se denomina:", "alternatives": ["Horizonte A", "Horizonte B", "Horizonte C", "Roca madre", "Horizonte O exclusivamente mineral"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Ecología — horizontes del suelo"}
+      ]
+    },
+    {
+      "name": "Clima y desastres naturales",
+      "questions": [
+        {"bodyTypst": "El fenómeno océano-atmosférico caracterizado por el calentamiento anómalo de las aguas superficiales del Pacífico ecuatorial, que afecta el clima del Perú, se denomina:", "alternatives": ["La Niña", "El Niño", "Corriente de Humboldt", "Anticiclón del Pacífico Sur", "Zona de Convergencia Intertropical"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — Fenómeno El Niño"},
+        {"bodyTypst": "Indique el instrumento utilizado para medir la magnitud de un sismo.", "alternatives": ["Barómetro", "Sismógrafo", "Anemómetro", "Pluviómetro", "Higrómetro"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — sismología"}
+      ]
+    },
+    {
+      "name": "Reino Monera, Protista y Fungi",
+      "questions": [
+        {"bodyTypst": "Indique el reino que agrupa a los organismos procariotas, como las bacterias y cianobacterias.", "alternatives": ["Reino Protista", "Reino Fungi", "Reino Monera", "Reino Plantae", "Reino Animalia"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — clasificación de los seres vivos"},
+        {"bodyTypst": "Los hongos, a diferencia de las plantas, se caracterizan por ser organismos heterótrofos que se nutren por:", "alternatives": ["Fotosíntesis", "Absorción de nutrientes del sustrato", "Ingestión mediante boca", "Quimiosíntesis", "Fijación de nitrógeno atmosférico"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Ecología — Reino Fungi"},
+        {"bodyTypst": "Las algas y protozoarios se agrupan taxonómicamente dentro del reino:", "alternatives": ["Monera", "Protista", "Fungi", "Plantae", "Animalia"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — Reino Protista"}
+      ]
+    },
+    {
+      "name": "Reino Vegetal",
+      "questions": [
+        {"bodyTypst": "Indique el grupo de plantas que se caracteriza por producir semillas desnudas, no encerradas en un fruto (ej. pinos).", "alternatives": ["Angiospermas", "Gimnospermas", "Briofitas", "Pteridofitas", "Talofitas"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — clasificación vegetal"},
+        {"bodyTypst": "Las plantas con flor que producen semillas encerradas dentro de un fruto se denominan:", "alternatives": ["Gimnospermas", "Angiospermas", "Musgos", "Helechos", "Algas"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Ecología — angiospermas"}
+      ]
+    },
+    {
+      "name": "Reino Animal",
+      "questions": [
+        {"bodyTypst": "Indique el grupo de vertebrados caracterizado por presentar respiración branquial y piel cubierta de escamas óseas, que vive exclusivamente en ambiente acuático.", "alternatives": ["Anfibios", "Reptiles", "Peces", "Aves", "Mamíferos"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — vertebrados"},
+        {"bodyTypst": "Los anfibios se caracterizan por presentar un ciclo de vida con metamorfosis, con una fase larvaria acuática de respiración branquial y una fase adulta de respiración:", "alternatives": ["Branquial", "Cutánea y pulmonar", "Traqueal", "Exclusivamente cutánea", "Branquial y traqueal"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Ecología — anfibios"},
+        {"bodyTypst": "Indique el phylum de invertebrados que se caracteriza por presentar un cuerpo segmentado, exoesqueleto de quitina y patas articuladas (ej. insectos, arácnidos, crustáceos).", "alternatives": ["Mollusca", "Annelida", "Arthropoda", "Cnidaria", "Echinodermata"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — invertebrados"}
+      ]
+    },
+    {
+      "name": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "questions": [
+        {"bodyTypst": "La relación interespecífica en la que ambas especies se benefician mutuamente y no pueden vivir la una sin la otra se denomina:", "alternatives": ["Comensalismo", "Parasitismo", "Mutualismo obligado", "Depredación", "Competencia"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — relaciones interespecíficas"},
+        {"bodyTypst": "El proceso de cambio gradual y ordenado en la composición de especies de una comunidad a través del tiempo, hasta alcanzar una comunidad clímax estable, se denomina:", "alternatives": ["Deriva génica", "Sucesión ecológica", "Selección natural", "Especiación", "Extinción masiva"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Ecología — sucesión ecológica"}
+      ]
+    },
+    {
+      "name": "Flujo de materia y energía / recursos naturales",
+      "questions": [
+        {"bodyTypst": "En una cadena trófica, los organismos que producen su propio alimento a partir de energía solar (ej. plantas) se denominan:", "alternatives": ["Consumidores primarios", "Consumidores secundarios", "Productores", "Descomponedores", "Depredadores tope"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — cadenas tróficas"},
+        {"bodyTypst": "Según la ley del 10%, si un ecosistema de productores almacena 10 000 kcal, ¿cuánta energía aproximadamente estará disponible para los consumidores secundarios (segundo nivel trófico consumidor)?", "alternatives": ["1000 kcal", "100 kcal", "10 kcal", "5000 kcal", "10 000 kcal"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Ecología — flujo de energía"},
+        {"bodyTypst": "Los recursos naturales que se regeneran a un ritmo mayor o igual al de su consumo, como la energía solar o eólica, se clasifican como:", "alternatives": ["No renovables", "Renovables", "Agotables", "Inagotables solo en teoría", "Recursos fósiles"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — recursos naturales"}
+      ]
+    },
+    {
+      "name": "Ecorregiones del Perú, biomas y áreas naturales protegidas",
+      "questions": [
+        {"bodyTypst": "Indique la ecorregión peruana propuesta por Antonio Brack Egg que corresponde al desierto costero árido con escasa vegetación, ubicado en la costa peruana.", "alternatives": ["Selva alta", "Puna", "Desierto costero", "Bosque tropical del Pacífico", "Sabana de palmeras"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — ecorregiones del Perú (Brack Egg)"},
+        {"bodyTypst": "Indique el área natural protegida peruana reconocida por albergar la mayor diversidad biológica del país, ubicada en la selva de Madre de Dios.", "alternatives": ["Parque Nacional Huascarán", "Reserva Nacional de Paracas", "Parque Nacional del Manu", "Santuario Histórico de Machu Picchu", "Reserva Nacional de Junín"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Ecología — áreas naturales protegidas del Perú"}
+      ]
+    },
+    {
+      "name": "Contaminación ambiental",
+      "questions": [
+        {"bodyTypst": "El fenómeno de acumulación progresiva de sustancias tóxicas persistentes en los tejidos de los organismos, incrementándose su concentración en cada nivel trófico superior, se denomina:", "alternatives": ["Eutrofización", "Bioacumulación y biomagnificación", "Efecto invernadero", "Lluvia ácida", "Inversión térmica"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — bioacumulación"},
+        {"bodyTypst": "El exceso de nutrientes (nitratos y fosfatos) en un cuerpo de agua, que provoca proliferación excesiva de algas y disminución del oxígeno disuelto, se denomina:", "alternatives": ["Bioacumulación", "Eutrofización", "Desertificación", "Lluvia ácida", "Efecto invernadero"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Ecología — eutrofización"}
+      ]
+    },
+    {
+      "name": "Saneamiento ambiental",
+      "questions": [
+        {"bodyTypst": "El conjunto de procesos (físicos, químicos y biológicos) aplicados a las aguas residuales para reducir su carga contaminante antes de ser vertidas a un cuerpo receptor se denomina:", "alternatives": ["Potabilización", "Tratamiento de aguas residuales", "Desalinización", "Cloración exclusivamente", "Fertirrigación"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Ecología — tratamiento de aguas residuales"},
+        {"bodyTypst": "Indique la jerarquía correcta (de mayor a menor prioridad) en el manejo integral de residuos sólidos según el principio de las 3R.", "alternatives": ["Reciclar, reducir, reutilizar", "Reducir, reutilizar, reciclar", "Reutilizar, reciclar, reducir", "Reciclar, reutilizar, reducir", "Disponer, reducir, reciclar"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Ecología — manejo de residuos sólidos"}
+      ]
+    }
+  ]
+}

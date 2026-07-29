@@ -1,0 +1,63 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "bodyTypst": "En el circuito mostrado en la figura se ha instalado un voltímetro ideal entre los puntos $a$ y $b$. ¿Cuál es su lectura?",
+      "alternatives": ["30 V", "50 V", "15 V", "45 V", "60 V"],
+      "correctAnswer": "0",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/fisica-circuito-voltimetro-ab.png",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/circuitos-electricos-formulas-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com (Rubiños) — Circuitos eléctricos, ejercicios resueltos de Electrodinámica, Pregunta 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "bodyTypst": "En el circuito mostrado en la figura, si el amperímetro ideal registra 0,2 A, determine el voltaje de la fuente ideal $epsilon$.",
+      "alternatives": ["4,5 V", "2,0 V", "2,4 V", "3,8 V", "3,2 V"],
+      "correctAnswer": "4",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/fisica-circuito-amperimetro-fuente.png",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/circuitos-electricos-formulas-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com (Rubiños) — Circuitos eléctricos, ejercicios resueltos de Electrodinámica, Pregunta 2"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de circulación",
+      "gradeLevel": "pre",
+      "bodyTypst": "Al comparar los sistemas circulatorios de los animales vertebrados, podemos comprender los procesos de irrigación sanguínea de los tejidos y el mantenimiento de la presión sanguínea. Observe la siguiente figura y determine a qué clase de vertebrado pertenece y cómo se denomina este tipo de circulación.",
+      "alternatives": [
+        "Anfibios - Circulación doble y completa",
+        "Reptiles - Circulación simple e incompleta",
+        "Peces - Circulación simple y completa",
+        "Mamíferos - Circulación doble y completa"
+      ],
+      "correctAnswer": "2",
+      "difficulty": "easy",
+      "imagePath": "science-image-questions/biologia-sistema-circulatorio-simple-peces.png",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-circulatorio-en-animales-y-plantas-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com (Rubiños) — Sistema circulatorio en animales y plantas, Pregunta 48"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Ecorregiones del Perú, biomas y áreas naturales protegidas",
+      "gradeLevel": "pre",
+      "bodyTypst": "Las ecorregiones o biorregiones son unidades geográficas con flora, fauna y ecosistemas característicos, y son una división de las grandes ecozonas o regiones biogeográficas. En el gráfico adjunto se muestra el perfil altitudinal del territorio peruano desde el océano Pacífico. Identifique la ecorregión del Perú que se encuentra en $A$ y $B$ respectivamente, según la clasificación de Pulgar Vidal.",
+      "alternatives": [
+        "Desierto del Pacífico - Páramo",
+        "Páramo - Desierto del Pacífico",
+        "Selva alta - Selva baja",
+        "Puna y Altos andes - Bosque tropical del Pacífico",
+        "Puna y Altos andes - Selva baja"
+      ],
+      "correctAnswer": "4",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/ecologia-ecorregiones-peru-perfil-ab.png",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com (Rubiños) — Ecología, examen resuelto de admisión a universidad, Pregunta 7"
+    }
+  ]
+}

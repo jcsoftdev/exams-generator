@@ -1,0 +1,88 @@
+{
+  "entries": [
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "bodyTypst": "Para demostrar la existencia de cambios evolutivos en las especies, se emplea la comparación entre la anatomía y la función que cumplen los órganos. El esquema representa a órganos:",
+      "alternatives": ["rudimentarios", "análogos", "homólogos", "convergentes", "modificados"],
+      "correctAnswer": "2",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/biologia-sweep-organos-homologos-delfin-topo.png",
+      "sourceUrl": "https://editoradelta.blogspot.com/p/preguntas-san-marcos.html",
+      "sourceName": "Editora Delta — Examen de Admisión UNMSM San Marcos 2008-I (23 de setiembre de 2007), Biología, pregunta 6"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Citología",
+      "gradeLevel": "pre",
+      "bodyTypst": "Identifica a qué forma celular corresponde la siguiente figura.",
+      "alternatives": ["flagelada", "prismática", "estrellada", "cilíndrica", "esférica"],
+      "correctAnswer": "0",
+      "difficulty": "easy",
+      "imagePath": "science-image-questions/biologia-sweep-citologia-forma-celular-espermatozoide.png",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/citologia-ejercicios-resueltos-de-biologia-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com (Rubiños) — Citología, ejercicios resueltos, Pregunta 16"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Citología",
+      "gradeLevel": "pre",
+      "bodyTypst": "¿A qué organelo celular representa la figura y cuál es la función que cumple?",
+      "alternatives": ["Cloroplasto, fotosíntesis", "Mitocondria, respiración celular", "Golgisoma, síntesis de hormonas", "Vacuola, digestión celular", "Plastidio, almacén de almidón"],
+      "correctAnswer": "1",
+      "difficulty": "easy",
+      "imagePath": "science-image-questions/biologia-sweep-citologia-organelo-mitocondria.png",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/citologia-ejercicios-resueltos-de-biologia-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com (Rubiños) — Citología, ejercicios resueltos, Pregunta 19"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de reproducción, salud y enfermedad",
+      "gradeLevel": "pre",
+      "bodyTypst": "En la figura del espermatozoide, cuál es el elemento que contiene el material genético.",
+      "alternatives": ["Acrosoma", "Centríolo", "Mitocondria", "Núcleo", "Cuello"],
+      "correctAnswer": "3",
+      "difficulty": "easy",
+      "imagePath": "science-image-questions/biologia-sweep-reproduccion-espermatozoide-nucleo.png",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-reproductor-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com (Rubiños) — Aparato reproductor humano, ejercicios resueltos, Pregunta 3"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Fisiología celular",
+      "gradeLevel": "pre",
+      "bodyTypst": "En el siguiente esquema, analiza las fases del metabolismo que representa la letra A y B.",
+      "alternatives": ["A: Transporte activo, B: Transporte pasivo", "A: Reacción de reducción, B: Reacción de oxidación", "A: Anabolismo, B: Catabolismo", "A: Catabolismo, B: Anabolismo", "A: Reproducción, B: Respiración"],
+      "correctAnswer": "3",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/biologia-sweep-metabolismo-catabolismo-anabolismo.png",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/biologia-preguntas-resueltas-de-secundaria-y-preuniversitaria-solucionario-prueba-ingreso-universidad-claves-respuestas-desarrollo-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com (Rubiños) — Biología, preguntas resueltas de secundaria y preuniversitaria, Pregunta 2"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Función de reproducción, salud y enfermedad",
+      "gradeLevel": "pre",
+      "bodyTypst": "En la figura, determina las fases de la ovogénesis que representa los números 1, 2 y 3 respectivamente.",
+      "alternatives": ["Crecimiento - Multiplicación - Maduración", "Maduración - Crecimiento - Multiplicación", "Multiplicación - Traducción - Maduración", "División - Maduración - Crecimiento", "Multiplicación - Crecimiento - Maduración"],
+      "correctAnswer": "4",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/biologia-sweep-ovogenesis-fases.png",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/08/biologia-preguntas-resueltas-de-secundaria-y-preuniversitaria-solucionario-prueba-ingreso-universidad-claves-respuestas-desarrollo-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com (Rubiños) — Biología, preguntas resueltas de secundaria y preuniversitaria, Pregunta 8"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Composición química de los seres vivos",
+      "gradeLevel": "pre",
+      "bodyTypst": "En el siguiente cuadro, determina las letras U, N y C que representan al producto de los disacáridos.",
+      "alternatives": ["U: Lactosa, N: Maltosa, C: Sacarosa", "U: Maltosa, N: Sacarosa, C: Lactosa", "U: Sacarosa, N: Lactosa, C: Maltosa", "U: Lactosa, N: Sacarosa, C: Maltosa", "U: Maltosa, N: Lactosa, C: Sacarosa"],
+      "correctAnswer": "1",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/biologia-sweep-disacaridos-formacion.png",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/biomoleculas-organicas-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com (Rubiños) — Biomoléculas orgánicas, ejercicios resueltos, Pregunta 8"
+    }
+  ]
+}

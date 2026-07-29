@@ -1,0 +1,567 @@
+{
+  "courseName": "Aritmética",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Teoría de Conjuntos",
+      "questions": [
+        {
+          "bodyTypst": "De un grupo de 50 estudiantes que aprobaron el curso de Aritmética o el curso de Álgebra, se sabe que el número de mujeres que aprobaron solo Álgebra es la quinta parte del número de mujeres que aprobaron solo Aritmética. El número de estudiantes que aprobaron Aritmética y Álgebra excede en 5 al número de estudiantes hombres que aprobaron solo Aritmética y este último es igual al número de estudiantes hombres que aprobaron solo Álgebra. ¿Cuál es la mínima cantidad de estudiantes que aprobaron solo Álgebra?",
+          "alternatives": ["6", "8", "7", "5", "9"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://profe-alexz.blogspot.com/2016/02/examen-admision-san-marcos-2016-i.html",
+          "sourceName": "Examen de admisión UNMSM (San Marcos) 2016-I, pregunta 10"
+        },
+        {
+          "bodyTypst": "Dado el conjunto $A = \\{x^2 + 1 | x in ZZ, -3 <= x <= 3\\}$, ¿cuántos subconjuntos tiene $A$?",
+          "alternatives": ["15", "16", "32", "31"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/conjunto-potencia-y-subconjuntos.html",
+          "sourceName": "Matemáticas N — banco abierto de conjunto potencia y subconjuntos"
+        },
+        {
+          "bodyTypst": "Si el conjunto $A$ tiene 3 elementos más que $B$ y, a su vez, 56 subconjuntos más que este último, determine el cardinal de $B$.",
+          "alternatives": ["3", "4", "5", "6"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/conjunto-potencia-y-subconjuntos.html",
+          "sourceName": "Matemáticas N — banco abierto de conjunto potencia y subconjuntos"
+        },
+        {
+          "bodyTypst": "Sean $A$ y $B$ dos conjuntos en los que la cantidad de subconjuntos de $A$ es 512 y la cantidad de subconjuntos propios de $B$ es 15. Halle $n(A) + n(B)$.",
+          "alternatives": ["10", "11", "12", "13"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/conjunto-potencia-y-subconjuntos.html",
+          "sourceName": "Matemáticas N — banco abierto de conjunto potencia y subconjuntos"
+        }
+      ]
+    },
+    {
+      "name": "Sistemas de Numeración",
+      "questions": [
+        {
+          "bodyTypst": "Gustavo recibe una tarjeta de crédito de una entidad financiera y, para no olvidar su clave, usa el número que representa su edad, pero expresado en el sistema de numeración de base 3. Si Gustavo tiene 35 años, ¿cuál es la suma de las cifras de la clave que generó para su tarjeta?",
+          "alternatives": ["6", "7", "4", "5", "3"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/08/aritmetica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+          "sourceName": "Examen de admisión UNMSM (San Marcos), pregunta 18"
+        },
+        {
+          "bodyTypst": "Wilfredo nació el año $1900 + 10a + b$, siendo $10a+b$ la suma de todas las raíces cúbicas de los números cubos perfectos del sistema de numeración decimal que se representan con cuatro cifras en el sistema octal. ¿En qué año nació Wilfredo?",
+          "alternatives": ["1990", "1992", "1984", "1982", "1980"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/08/aritmetica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+          "sourceName": "Examen de admisión UNMSM (San Marcos), pregunta 15"
+        },
+        {
+          "bodyTypst": "El profesor Joaquín escribió en la pizarra el número $121011_k$ para que sus alumnos hicieran la conversión a otros sistemas de numeración. Benjamín, al convertirlo a base $k^2$, obtuvo un número de tres cifras, y Bertha, al convertirlo a base $k^3$, obtuvo un número de dos cifras; además, al sumar las cifras de dichos números se obtuvo 96. Halle la base $k$.",
+          "alternatives": ["heptanario (base 7)", "senario (base 6)", "octanario (base 8)", "cuaternario (base 4)"],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://razonamientopdf.blogspot.com/2019/11/aritmetica-preuniversitaria-clase-4-teoria-y-ejercicios-resueltos-de-pre-universidad.html",
+          "sourceName": "CEPRE San Marcos — Semana 4, aritmética preuniversitaria"
+        }
+      ]
+    },
+    {
+      "name": "Operaciones Fundamentales",
+      "questions": [
+        {
+          "bodyTypst": "El producto de tres enteros consecutivos es 720. Calcular la suma de dichos números.",
+          "alternatives": ["15", "18", "27", "24", "21"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+          "sourceName": "Matemáticas N — ejercicios resueltos de Cuatro Operaciones"
+        },
+        {
+          "bodyTypst": "El producto de dos números que se diferencian en 5 unidades es 150. Calcular la suma de las cifras del mayor de dichos números.",
+          "alternatives": ["1", "3", "4", "6", "7"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+          "sourceName": "Matemáticas N — ejercicios resueltos de Cuatro Operaciones"
+        },
+        {
+          "bodyTypst": "La suma de los términos de una sustracción es 1000, el sustraendo es la quinta parte del minuendo. Hallar el complemento aritmético de la diferencia.",
+          "alternatives": ["400", "600", "500", "150", "450"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sustraccion-aritmetica-problemas-con.html",
+          "sourceName": "Matemáticas N — Sustracción y Complemento Aritmético"
+        },
+        {
+          "bodyTypst": "Hallar el complemento aritmético del mayor número de cuatro cifras diferentes que existe en base octal. Dar como respuesta la suma de sus cifras.",
+          "alternatives": ["6", "8", "7", "10", "9"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sustraccion-aritmetica-problemas-con.html",
+          "sourceName": "Matemáticas N — Sustracción y Complemento Aritmético"
+        }
+      ]
+    },
+    {
+      "name": "Divisibilidad",
+      "questions": [
+        {
+          "bodyTypst": "Del 1 al 300, ¿cuántos son múltiplos de 17?",
+          "alternatives": ["17", "13", "21", "16", "15"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/divisibilidad-ejercicios-resueltos-de.html",
+          "sourceName": "Matemáticas N — Divisibilidad ejercicios resueltos"
+        },
+        {
+          "bodyTypst": "Del 1 al 42, ¿cuántos números no son múltiplos de 2 ni de 3?",
+          "alternatives": ["12", "13", "14", "7", "21"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/divisibilidad-ejercicios-resueltos-de.html",
+          "sourceName": "Matemáticas N — Divisibilidad ejercicios resueltos"
+        },
+        {
+          "bodyTypst": "¿Cuántos números divisibles entre 4 y 5 existen entre 301 y 499?",
+          "alternatives": ["9", "8", "7", "6", "10"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/divisibilidad-ejercicios-resueltos-de.html",
+          "sourceName": "Matemáticas N — Divisibilidad ejercicios resueltos"
+        },
+        {
+          "bodyTypst": "¿Cuántos números de tres cifras que terminan en 6 son divisibles entre 18?",
+          "alternatives": ["5", "6", "7", "8", "10"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/divisibilidad-problemas-resueltos-tipo.html",
+          "sourceName": "Matemáticas N — Divisibilidad, problemas resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Números Primos, MCD y MCM",
+      "questions": [
+        {
+          "bodyTypst": "Indique la suma de los factores primos del número 12 600.",
+          "alternatives": ["10", "17", "14", "16"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aritmetica-ejercicios-del-primer_22.html",
+          "sourceName": "Matemáticas N — banco gratuito de ejercicios de aritmética"
+        },
+        {
+          "bodyTypst": "Tres timbres suenan simultáneamente a las 7:45 a.m. El primero suena cada 25 minutos; el segundo, cada 30 minutos; y el tercero, cada 45 minutos. ¿Cuál es la hora más próxima en que volverán a sonar simultáneamente?",
+          "alternatives": ["13:45", "11:45", "15:45", "15:15"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aritmetica-ejercicios-del-primer_22.html",
+          "sourceName": "Matemáticas N — banco gratuito de ejercicios de aritmética"
+        },
+        {
+          "bodyTypst": "Se tienen 3 números primos cuya suma es 30; además, la diferencia entre el mayor y el menor de dichos números es 15. Halle el número primo intermedio.",
+          "alternatives": ["13", "7", "11", "5"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aritmetica-ejercicios-del-primer_22.html",
+          "sourceName": "Matemáticas N — banco gratuito de ejercicios de aritmética"
+        },
+        {
+          "bodyTypst": "Sean $a$ y $b$ números enteros positivos tales que $a < b$, $\"MCD\"(a, b) = 36$ y $\"MCM\"(a, b) = 504$. ¿Cuántos pares $(a, b)$ cumplen estas condiciones?",
+          "alternatives": ["5", "3", "2", "4", "1"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/08/Solucionario-de-aritmetica-uni-examen-resuelto-de-admision-universidad-de-ingenieria-pdf.html",
+          "sourceName": "Matemáticas N — solucionario de aritmética UNI"
+        }
+      ]
+    },
+    {
+      "name": "Números Racionales",
+      "questions": [
+        {
+          "bodyTypst": "En una reunión, si los varones sacaran a bailar a todas las mujeres, $1/10$ de los varones se quedaría sin bailar. Si la cantidad de varones disminuye en $19/100$ y las mujeres aumentaran en $1/10$ para nuevamente salir todos a bailar, ¿qué fracción del número de mujeres se quedará sin bailar?",
+          "alternatives": ["$1/10$", "$3/20$", "$2/11$", "$1/4$", "$1/5$"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/07/fracciones-12-preguntas-resueltos.html",
+          "sourceName": "Matemáticas N — 12 preguntas resueltas de fracciones"
+        },
+        {
+          "bodyTypst": "Paolo gasta los $3/7$ de lo que tiene, luego gana $1/4$ de lo que le quedaba y luego pierde $1/3$ de lo que tiene en ese momento, finalmente queda con S/ 120. ¿Cuánto tenía inicialmente?",
+          "alternatives": ["S/ 320", "S/ 240", "S/ 336", "S/ 252", "S/ 273"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/07/fracciones-12-preguntas-resueltos.html",
+          "sourceName": "Matemáticas N — 12 preguntas resueltas de fracciones"
+        },
+        {
+          "bodyTypst": "Perdí $3/4$ de lo que tenía. Si hubiera perdido los $2/3$ de lo que perdí, tendría 100 soles más de lo que tengo. ¿Cuánto tengo?",
+          "alternatives": ["S/ 100", "S/ 500", "S/ 150", "S/ 250", "S/ 370"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/07/fracciones-12-preguntas-resueltos.html",
+          "sourceName": "Matemáticas N — 12 preguntas resueltas de fracciones"
+        },
+        {
+          "bodyTypst": "Si $1/3 + 1/15 + 1/35 + 1/63 + dots.h + 1/(m times n) = 18/37$. Halle el valor de $m+n$.",
+          "alternatives": ["68", "72", "70", "74", "76"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "http://razonamiento-matematico-problemas.blogspot.com/2013/03/fracciones-pregunta-examen-de-admision.html",
+          "sourceName": "Razonamiento Matemático - Problemas, fracciones"
+        }
+      ]
+    },
+    {
+      "name": "Razones y Proporciones",
+      "questions": [
+        {
+          "bodyTypst": "La relación entre las edades de dos hermanas es, actualmente, 3/2. Se sabe que, dentro de 8 años, dicha relación será 5/4. ¿Cuál es la edad actual de la hermana menor?",
+          "alternatives": ["4 años", "6 años", "8 años", "10 años", "12 años"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://profe-alexz.blogspot.com/2012/08/razones-proporciones-problemas.html",
+          "sourceName": "Blog del Profe Alex — examen de admisión UNSA 2012"
+        },
+        {
+          "bodyTypst": "Dos pescadores tienen 5 y 4 truchas respectivamente. Se encuentran con un cazador cansado y de hambre, con quien comparten las truchas en partes iguales. El cazador, al despedirse, como agradecimiento, les obsequia 42 soles. ¿Cuánto le corresponde a cada pescador?",
+          "alternatives": ["30 y 12", "26 y 16", "28 y 14", "21 y 21", "70/3 y 56/3"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://profe-alexz.blogspot.com/2012/08/razones-proporciones-problemas.html",
+          "sourceName": "Blog del Profe Alex — examen de admisión UNP 2012"
+        },
+        {
+          "bodyTypst": "En una bolsa hay 165 monedas. Si por cada 5 monedas de S/.2 hay 8 monedas de S/.5, y por cada 2 monedas de S/.5 hay 5 monedas de S/.1, halle el número de monedas de S/.5.",
+          "alternatives": ["32", "56", "48", "64", "40"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://profe-alexz.blogspot.com/2012/08/razones-proporciones-problemas.html",
+          "sourceName": "Blog del Profe Alex — examen de admisión UNSA 2010"
+        },
+        {
+          "bodyTypst": "En una fábrica embotelladora se tienen 3 máquinas (A, B y C). Por cada 7 botellas que produce la máquina A, la máquina B produce 5; y por cada 3 botellas que produce la máquina B, la máquina C produce 2. En un día, la máquina A produjo 4400 botellas más que C. ¿Cuántas botellas produjo la máquina B ese día?",
+          "alternatives": ["2000", "4000", "6000", "3000", "8000"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://profe-alexz.blogspot.com/2012/08/razones-proporciones-problemas.html",
+          "sourceName": "Blog del Profe Alex — examen de admisión UNMSM 2011"
+        }
+      ]
+    },
+    {
+      "name": "Regla de Tres y Porcentajes",
+      "questions": [
+        {
+          "bodyTypst": "Se vendió los 2/7 de una tela y los 3/8 del resto. Si el precio de la fracción de tela que queda sin vender es de S/. 35, halle el precio de toda la tela.",
+          "alternatives": ["S/. 78,4", "S/. 84,2", "S/. 64,4", "S/. 58,8", "S/. 75,2"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://examen-admision-san-marcos.blogspot.com/2013/06/problema-de-fracciones-y-regla-de-tres.html",
+          "sourceName": "Banco de Preguntas - Examen de Admisión San Marcos, UNMSM 2013-II"
+        },
+        {
+          "bodyTypst": "Se disminuye el ancho de un afiche rectangular en 10% y el largo, en 30%. ¿Qué porcentaje del área original representa el área del afiche restante?",
+          "alternatives": ["45%", "77%", "63%", "70%"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "http://video-educativo.blogspot.com/2012/07/examen-admision-unmsm-2011-i-pregunta-08.html",
+          "sourceName": "Examen de Admisión UNMSM 2011-I, Pregunta 08"
+        },
+        {
+          "bodyTypst": "Se tiene dos cestos con 136 pescados. Si del que tiene más se pasara al otro el 20%, quedarían ambos cestos con igual cantidad de pescados. Halle la diferencia positiva de la cantidad de pescados que hay en los cestos.",
+          "alternatives": ["14", "40", "42", "34", "18"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://examen-admision-san-marcos.blogspot.com/2013/06/pregunta-de-porcentajes.html",
+          "sourceName": "Banco de Preguntas - Examen de Admisión San Marcos, UNMSM 2013-II"
+        },
+        {
+          "bodyTypst": "De un total de 50 camisas, un comerciante vende cierta cantidad ganando el 30% y vende el resto perdiendo el 20%. Si al final no ganó ni perdió, ¿con cuántas camisas vendidas obtuvo tal ganancia?",
+          "alternatives": ["30", "15", "35", "20", "25"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://examen-admision-san-marcos.blogspot.com/2013/05/problema-de-porcentajes.html",
+          "sourceName": "Banco de Preguntas - Examen de Admisión San Marcos, UNMSM 2013-II"
+        }
+      ]
+    },
+    {
+      "name": "Magnitudes Proporcionales",
+      "questions": [
+        {
+          "bodyTypst": "El precio de un diamante es directamente proporcional al cuadrado de su peso. Así, un diamante cuyo peso es 1,5 gramos cuesta S/. 18 000. Si este diamante se parte en dos pedazos, ¿cuál sería el peso (en gramos) de cada parte para tener un precio total óptimo?",
+          "alternatives": ["0,3 y 1,2", "0,5 y 1", "0,6 y 0,9", "0,7 y 0,8", "0,75 y 0,75"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/02/simulacro-de-matematicas-fisica-y.html",
+          "sourceName": "Matemáticas N — problemas resueltos de examen de admisión UNI"
+        },
+        {
+          "bodyTypst": "Se tiene el siguiente cuadro de valores de las magnitudes $A$ y $B$: $A$: 1, 2, 4, ...; $B$: 32, 8, 2, .... Halla $B$ cuando $A = 8$.",
+          "alternatives": ["0,2", "0,5", "0,1", "0,25", "0,125"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/magnitudes-proporcionales-ejercicios.html",
+          "sourceName": "Matemáticas N — banco de magnitudes proporcionales (colección Rubiños)"
+        },
+        {
+          "bodyTypst": "Si $A$ es inversamente proporcional (IP) a $B$, y cuando $A = 26$, $B = 10$. Determina $B$ cuando $A = 52$.",
+          "alternatives": ["6", "5", "4", "3", "2"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/magnitudes-proporcionales-ejercicios.html",
+          "sourceName": "Matemáticas N — banco de magnitudes proporcionales (colección Rubiños)"
+        },
+        {
+          "bodyTypst": "$x$ es inversamente proporcional (IP) al cuadrado de $y$. Cuando $x = 3$, $y = 4$. Cuando $x = 12$, ¿cuánto vale $y$?",
+          "alternatives": ["16", "13", "1", "2", "3"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/magnitudes-proporcionales-ejercicios.html",
+          "sourceName": "Matemáticas N — banco de magnitudes proporcionales (colección Rubiños)"
+        }
+      ]
+    },
+    {
+      "name": "Interés y Descuento",
+      "questions": [
+        {
+          "bodyTypst": "Se impone un capital de S/. 8 000 al 15% anual durante 9 meses. ¿Cuál es el interés producido?",
+          "alternatives": ["S/. 1080", "S/. 10 800", "S/. 900", "S/. 1200", "S/. 2000"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/11/regla-de-interes-simple-y-compuesto.html",
+          "sourceName": "Matemáticas N — banco de ejercicios de interés simple"
+        },
+        {
+          "bodyTypst": "Con un capital de S/. 9 000 impuesto a una tasa del 10% anual durante 4 meses, ¿cuál es el interés generado?",
+          "alternatives": ["S/. 200", "S/. 400", "S/. 300", "S/. 600", "S/. 360"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/interes-y-descuento-simple-ejercicios.html",
+          "sourceName": "Matemáticas N — ejercicios de interés y descuento simple"
+        },
+        {
+          "bodyTypst": "Calcula el monto que se obtiene al colocar S/. 4 000 al 10% trimestral, capitalizable trimestralmente, durante 9 meses.",
+          "alternatives": ["S/. 1 331", "S/. 2 662", "S/. 3 993", "S/. 5 324", "S/. 6 655"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/interes-y-descuento-simple-ejercicios.html",
+          "sourceName": "Matemáticas N — interés compuesto"
+        },
+        {
+          "bodyTypst": "Marta invierte S/. 16 000 al 20% anual durante 5 años. Si el interés se acumula continuamente, el monto acumulado al final, en soles, es aproximadamente:",
+          "alternatives": ["S/. 43 495,88", "S/. 43 493,68", "S/. 43 491,58", "S/. 43 492,48", "S/. 43 490,78"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aritmetica-problemas-resueltos-tutorial.html",
+          "sourceName": "Matemáticas N — problemas atribuidos a exámenes de admisión UNI"
+        }
+      ]
+    },
+    {
+      "name": "Promedios y Mezclas",
+      "questions": [
+        {
+          "bodyTypst": "Indique el valor que corresponde a la media aritmética de los valores mostrados en la siguiente tabla de frecuencias: valor 12 (frecuencia 3), valor 13 (frecuencia 3), valor 14 (frecuencia 3), valor 15 (frecuencia 1), valor 16 (frecuencia 3), valor 17 (frecuencia 4), valor 18 (frecuencia 1), valor 19 (frecuencia 1).",
+          "alternatives": ["12,6", "14,2", "14,6", "15,0", "17,0"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20101.pdf",
+          "sourceName": "UNI - Solucionario del Examen de Admisión 2010-1, Pregunta 22"
+        },
+        {
+          "bodyTypst": "La siguiente tabla muestra los tiempos de espera (en minutos) de los clientes de dos bancos, A y B, en determinado periodo. Banco A: 6,1; 6,4; 6,8; 7,2; 7,5; 7,8; 7,8; 8,0. Banco B: 5,6; 5,8; 6,0; 6,4; 7,0; 7,9; 8,9; 10,0. Se afirma que: 1. El promedio aritmético en A es 7,2. 2. El promedio aritmético en B es 7,2. 3. Si en cada caso se eliminan los valores mínimo y máximo, entonces el promedio de A es menor que el promedio de B. Son verdaderas:",
+          "alternatives": ["Solo 1", "Solo 1 y 2", "Solo 2 y 3", "Ninguna"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://files.pucp.education/homepucp/uploads/sites/2/2020/04/21175955/Modelo-de-prueba-de-admision-PUCP-2016.pdf",
+          "sourceName": "PUCP - Modelo de Pruebas de Admisión (2016), Ejemplo 41"
+        },
+        {
+          "bodyTypst": "Un estudiante debe rendir, en uno de sus cursos, 5 prácticas, un examen parcial y un examen final. Las notas de sus 5 prácticas son 12, 14, 11, 12 y 11, y la nota de su examen parcial es 16. La nota final del curso se obtiene asignando los pesos 40%, 30% y 30% al promedio de prácticas, al examen parcial y al examen final, respectivamente. ¿Cuál debe ser la nota mínima que debe obtener el alumno en el examen final para que la nota final del curso sea, por lo menos, de 15?",
+          "alternatives": ["16", "17", "18", "19"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://files.pucp.education/homepucp/uploads/sites/2/2020/04/21175955/Modelo-de-prueba-de-admision-PUCP-2016.pdf",
+          "sourceName": "PUCP - Modelo de Pruebas de Admisión (2016), Ejemplo 42"
+        },
+        {
+          "bodyTypst": "Se mezclan dos tipos de cocoa de S/. 7 y S/. 15 el kilogramo. Para obtener 80 kg de cocoa por un valor de S/. 800, ¿cuántos kilogramos de cocoa de S/. 7 se utilizó?",
+          "alternatives": ["50 kg", "20 kg", "45 kg", "60 kg", "35 kg"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/mezcla-y-aleacion-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+          "sourceName": "Blog educativo abierto — mezcla y aleación"
+        },
+        {
+          "bodyTypst": "Para obtener 100 litros de alcohol de 74° mezclando 30 litros de alcohol de 80° con alcohol puro y agua, ¿qué cantidad de alcohol puro habrá que mezclar?",
+          "alternatives": ["50 L", "20 L", "30 L", "40 L", "60 L"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/mezcla-y-aleacion-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+          "sourceName": "Blog educativo abierto — mezcla y aleación"
+        },
+        {
+          "bodyTypst": "El 40% de una aleación es oro puro. ¿Cuántos gramos de oro puro se deben añadir a 20 gramos de esta aleación para que resulte oro de 12 kilates?",
+          "alternatives": ["5", "4", "6", "7", "3"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/mezcla-y-aleacion-ejercicios-y-problemas-resueltos-en-pdf-y-videos.html",
+          "sourceName": "Blog educativo abierto — mezcla y aleación"
+        },
+        {
+          "bodyTypst": "Una mezcla de 90 litros contiene vino de S/. 40 y S/. 70 el litro. Si un litro de la mezcla cuesta S/. 45, ¿qué cantidad de vino de S/. 70 interviene en la mezcla?",
+          "alternatives": ["10 L", "12 L", "15 L", "18 L", "20 L"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicaj.blogspot.com/2019/01/mezcla-y-aleacion-ejercicios-resueltos.html",
+          "sourceName": "Blog educativo abierto — mezcla y aleación"
+        }
+      ]
+    },
+    {
+      "name": "Potenciación y Radicación",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál es el menor número por el que se debe multiplicar a 240 para que el resultado sea un cuadrado perfecto?",
+          "alternatives": ["25", "3", "5", "15", "8"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/potenciacion-y-radicacion-aritmetica.html",
+          "sourceName": "Matemáticas N — Potenciación y Radicación, ejercicios preuniversitarios"
+        },
+        {
+          "bodyTypst": "¿Cuál es el menor número por el cual es necesario multiplicar a 720 para que el resultado sea un cubo perfecto?",
+          "alternatives": ["300", "100", "400", "900", "750"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/11/potenciacion-y-radicacion-aritmetica.html",
+          "sourceName": "Matemáticas N — Potenciación y Radicación, ejercicios preuniversitarios"
+        },
+        {
+          "bodyTypst": "Determine el menor entero positivo por el cual se debe multiplicar a 216 000 para obtener un número que sea cuadrado perfecto y cubo perfecto a la vez.",
+          "alternatives": ["2575", "3025", "3575", "3375", "4525"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/11/potenciacion-y-radicacion-aritmetica.html",
+          "sourceName": "Matemáticas N — Potenciación y Radicación, ejercicios preuniversitarios"
+        },
+        {
+          "bodyTypst": "¿Cuántos números de tres cifras existen tales que, al dividir su cuadrado entre 71, el residuo obtenido es 16?",
+          "alternatives": ["25", "26", "27", "28", "29"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/potenciacion-y-radicacion-aritmetica.html",
+          "sourceName": "Matemáticas N — Potenciación y Radicación, ejercicios preuniversitarios"
+        }
+      ]
+    },
+    {
+      "name": "Estadística Descriptiva",
+      "questions": [
+        {
+          "bodyTypst": "Un gráfico circular muestra la distribución de las preferencias de 500 alumnos por su curso favorito (cada alumno votó por un solo curso): Matemáticas 40%, Ciencias 30%, Física 20% y Arte 10%. Dadas las siguientes proposiciones: I. La cantidad total de alumnos que eligieron Matemáticas y Física como curso favorito es 300. II. Los que prefirieron Arte son la octava parte de los que eligieron los otros cursos. III. El total de alumnos que prefirieron Ciencias es igual a la suma de los que prefirieron Arte y los que prefirieron Física. Señale la alternativa que presenta la secuencia correcta, después de determinar si cada proposición es verdadera (V) o falsa (F):",
+          "alternatives": ["V V F", "V F F", "F V V", "F F V", "V F V"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "Solucionario oficial UNI, Examen de Admisión 2021-1, Razonamiento Matemático, pregunta 12"
+        },
+        {
+          "bodyTypst": "Un diagrama de barras muestra la producción anual de lápices (en millones de unidades) de una fábrica: año 2013: 12; año 2014: 9; año 2015: 3; año 2016: 6; año 2017: 9. Respecto a esta información, es correcto afirmar lo siguiente:",
+          "alternatives": [
+            "El promedio de producción de los últimos tres años supera al promedio del total de los años.",
+            "El promedio de producción de los cuatro primeros años supera al promedio total de los años.",
+            "El promedio de producción del segundo, tercero y cuarto año supera al promedio de producción de los últimos tres años.",
+            "El promedio de producción del segundo y cuarto año es mayor al promedio de producción de los primeros cuatro años.",
+            "El promedio de producción del primer y tercer año es igual al promedio de producción del segundo y cuarto año."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "Solucionario oficial UNI, Examen de Admisión 2018-2, Razonamiento Matemático, pregunta 32"
+        },
+        {
+          "bodyTypst": "La distribución de la religión de 72 alcaldes del Perú se representa en el gráfico 1: sector Católico con ángulo central de 220°, sector Evangélico con 90° y el resto correspondiente a Otras religiones. El gráfico 2 muestra la distribución de los alcaldes católicos según su ciudad de origen: Lima con ángulo central de 180°, Arequipa con 90° y el resto correspondiente a otras ciudades. Determine la veracidad de las siguientes proposiciones: I. El número de alcaldes católicos limeños es 44. II. El número de alcaldes evangélicos es mayor que el número de alcaldes católicos arequipeños. III. El número de alcaldes católicos limeños es superior al número de alcaldes no católicos.",
+          "alternatives": ["Solo I", "Solo II", "Solo III", "Solo I y II", "Solo II y III"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "Solucionario oficial UNI, Examen de Admisión 2018-2, Razonamiento Matemático, pregunta 34"
+        }
+      ]
+    },
+    {
+      "name": "Combinatoria y Probabilidad",
+      "questions": [
+        {
+          "bodyTypst": "Se tienen dos tetraedros regulares idénticos, con los números del 1 al 4 pintados en cada cara. Determine la probabilidad de que al lanzar los tetraedros, la suma de los números en sus bases resulte un número par mayor a 5.",
+          "alternatives": ["$1/4$", "$5/16$", "$7/16$", "$1/2$", "$5/8$"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20172.pdf",
+          "sourceName": "Solucionario oficial UNI, Examen de Admisión 2017-II, pregunta 27"
+        },
+        {
+          "bodyTypst": "Se elige aleatoriamente un número de tres cifras en el sistema ternario. Si X es la variable aleatoria que indica la suma de las cifras del número elegido, calcule el valor esperado de X.",
+          "alternatives": ["$3/2$", "2", "$5/2$", "3", "$7/2$"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20172.pdf",
+          "sourceName": "Solucionario oficial UNI, Examen de Admisión 2017-II, Matemática 1, pregunta 6"
+        },
+        {
+          "bodyTypst": "Rosa compra tres libros de matemática, dos libros de biología y dos libros de física, todos de diferentes autores. Si Rosa ordena aleatoriamente los libros que compró en una fila del librero, ¿cuál es la probabilidad de que los libros del mismo curso estén siempre juntos?",
+          "alternatives": ["$2/35$", "$1/35$", "$31/35$", "$3/35$", "$34/35$"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/08/aritmetica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+          "sourceName": "Aritmética San Marcos - examen resuelto (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "En una caja se tienen 6 pares de zapatos diferentes. Si se sacan uno a uno sin reposición, ¿cuántos zapatos se deben extraer como mínimo si se quiere estar seguro de haber extraído un par de zapatos del mismo tipo?",
+          "alternatives": ["4", "5", "6", "7", "8"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20172.pdf",
+          "sourceName": "Solucionario oficial UNI, Examen de Admisión 2017-II, pregunta 6"
+        }
+      ]
+    },
+    {
+      "name": "Razonamiento Matemático Aplicado (Aritmética)",
+      "questions": [
+        {
+          "bodyTypst": "Determine el siguiente término de la sucesión: 109A; 111C; 113E; 115G; 117I; …",
+          "alternatives": ["119A", "119B", "119C", "119G", "119H"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf",
+          "sourceName": "Solucionario oficial UNI, Examen de Admisión Ordinario 2016-II, Razonamiento Matemático"
+        },
+        {
+          "bodyTypst": "Halle el número que continúa en la siguiente serie: 2456, 3050, 3347, 3941, …",
+          "alternatives": ["4229", "4523", "4739", "5129", "5239"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf",
+          "sourceName": "Solucionario oficial UNI, Examen de Admisión Ordinario 2016-II, Razonamiento Matemático"
+        },
+        {
+          "bodyTypst": "Actualmente las edades de dos hermanos están en la relación de $b$ a $(b+3)$, y dentro de $(b+2)$ años esta relación será de $(b-1)$ a $(b+1)$. Determine la diferencia entre las edades del hermano mayor y el menor, hace $b$ años ($b > 3$).",
+          "alternatives": ["$(6b+1)/(b-3)$", "$(6b+2)/(b-3)$", "$(6b+3)/(b-3)$", "$(6b+4)/(b-3)$", "$(6b+5)/(b-3)$"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf",
+          "sourceName": "Solucionario oficial UNI, Examen de Selección Ingreso Directo 2016-II, Primer Examen Parcial"
+        }
+      ]
+    }
+  ]
+}

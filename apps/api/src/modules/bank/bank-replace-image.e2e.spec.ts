@@ -11,11 +11,12 @@ import { assets, courses, questions, tenants, topics, users } from "../../db/sch
 import { TokenService } from "../auth/token.service";
 
 /**
- * Full HTTP e2e for `POST /bank/questions/:id/image` — swaps an image
- * question's backing asset (Task 2, question-editing design). Separate file
- * from `bank.e2e.spec.ts` (same convention as `bank-edit-approved.e2e.spec.ts`)
- * to keep its own minimal fixture set: one course/topic, two tenants, one
- * teacher each.
+ * Full HTTP e2e for `POST /bank/questions/:id/image` — swaps a question's
+ * backing image asset (Task 2, question-editing design). Works for both
+ * `type='image'` (the whole question) and `type='structured'` (an optional
+ * complement image). Separate file from `bank.e2e.spec.ts` (same convention
+ * as `bank-edit-approved.e2e.spec.ts`) to keep its own minimal fixture set:
+ * one course/topic, two tenants, one teacher each.
  */
 describe("Bank module — replace image question's image (e2e)", () => {
   let app: INestApplication;
@@ -185,12 +186,21 @@ describe("Bank module — replace image question's image (e2e)", () => {
     expect(after.body.imageAssetId).not.toBe(before.body.imageAssetId);
   });
 
-  it("400 when the question is structured (no image to replace)", async () => {
+  it("attaches a complement image to a structured question, reflected on a follow-up GET", async () => {
     const id = await createStructuredQuestion(tenantAToken);
+    const before = await getByIdRequest(tenantAToken, id).expect(200);
+    expect(before.body.imageAssetId).toBeNull();
 
-    await replaceImageRequest(tenantAToken, id)
+    const replaced = await replaceImageRequest(tenantAToken, id)
       .attach("file", replacementPngBuffer, { filename: "new.png", contentType: "image/png" })
-      .expect(400);
+      .expect(201);
+    expect(replaced.body.id).toBe(id);
+
+    const after = await getByIdRequest(tenantAToken, id).expect(200);
+    await trackAssetForQuestion(id);
+
+    expect(after.body.imageAssetId).toBeDefined();
+    expect(after.body.imageAssetId).not.toBeNull();
   });
 
   it("404 when replacing the image of another tenant's question", async () => {

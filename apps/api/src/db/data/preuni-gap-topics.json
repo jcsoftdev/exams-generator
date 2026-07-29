@@ -1,0 +1,40 @@
+{
+  "entries": [
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "bodyTypst": "El gráfico circular adjunto muestra la distribución de 500 alumnos según su curso favorito (cada uno votó por un solo curso). Dadas las siguientes proposiciones:\nI. La cantidad total de alumnos que eligieron Matemáticas y Física como su curso favorito es 300.\nII. Los que prefirieron Artes es la octava parte de los que eligieron los otros cursos.\nIII. El total de alumnos que prefirieron Ciencias es igual a la suma de los que prefirieron Arte y los que prefirieron Física.\nSeñale la alternativa que presenta la secuencia correcta, después de determinar si cada proposición es verdadera (V) o falsa (F).",
+      "alternatives": ["VVF", "VFF", "FVV", "FFV", "VFV"],
+      "correctAnswer": "4",
+      "difficulty": "medium",
+      "imagePath": "gap-topic-images/graficos-estadisticos-circular.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI admisión 2021-1, Razonamiento Matemático P12"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "bodyTypst": "En la figura adjunta, la esfera de 600 N se mantiene en reposo apoyada sobre un plano inclinado liso y sujeta por una cuerda anclada al techo. Calcule (en N) el valor de la suma de las magnitudes de la tensión de la cuerda más la reacción del plano inclinado.",
+      "alternatives": ["$400 sqrt(3)$", "$500 sqrt(3)$", "$600 sqrt(2)$", "$700 sqrt(2)$", "$700 sqrt(3)$"],
+      "correctAnswer": "0",
+      "difficulty": "medium",
+      "imagePath": "gap-topic-images/estatica-esfera-plano-inclinado.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2015.pdf",
+      "sourceName": "UNI admisión 2015-1, Física P20 (OCAD-UNI)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "bodyTypst": "En la figura adjunta se muestra el cuadrado ABCD. Si se traza una recta paralela al lado DC sobre dicho cuadrado, determine cuántos triángulos como máximo se pueden contar.",
+      "alternatives": ["8", "9", "10", "11", "12"],
+      "correctAnswer": "3",
+      "difficulty": "medium",
+      "imagePath": "gap-topic-images/conteo-figuras-cuadrado-abcd.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2015.pdf",
+      "sourceName": "UNI admisión 2015-1, Razonamiento Matemático P53 (OCAD-UNI)"
+    }
+  ]
+}

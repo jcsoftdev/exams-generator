@@ -1,0 +1,176 @@
+{
+  "courseName": "Estadística y Probabilidades",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Análisis Combinatorio",
+      "questions": [
+        {
+          "bodyTypst": "En una caja no transparente, Juan Carlos tiene doce fichas numeradas del 1 al 6, de modo tal que dos fichas tienen la misma numeración: hay dos fichas numeradas con el 1, dos con el 2, dos con el 3, y así sucesivamente hasta el 6. ¿Cuántas fichas, como mínimo, debe extraer al azar para tener con certeza, entre las extraídas, dos fichas cuyo producto de los números sea un número par?",
+          "alternatives": ["6", "7", "2", "8", "5"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://editoradelta.blogspot.com/p/preguntas-san-marcos.html",
+          "sourceName": "Editora Delta — banco de preguntas UNMSM (San Marcos) 2023-I"
+        },
+        {
+          "bodyTypst": "Un grupo de 5 varones y 4 mujeres, entre ellos Nancy y Martín que son pareja, al igual que Magaly y Leo, van al cine y se sientan en una fila de 9 asientos. Si ambas parejas deben sentarse en los extremos de la fila, ¿de cuántas maneras pueden hacerlo?",
+          "alternatives": ["1020", "480", "1000", "960", "240"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/03/examen-admision-unsa-solucionario-pdf.html",
+          "sourceName": "Solucionario examen de admisión UNSA (Biomédicas)"
+        }
+      ]
+    },
+    {
+      "name": "Probabilidades",
+      "questions": [
+        {
+          "bodyTypst": "En un concurso participan 8 alumnos y 9 alumnas; debe haber 2 ganadores. ¿Cuál es la probabilidad de que los ganadores formen una pareja mixta (un alumno y una alumna)?",
+          "alternatives": ["81/136", "36/136", "80/136", "93/136", "72/136"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/12/matematicas-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+          "sourceName": "Solucionario examen de admisión UNCP"
+        },
+        {
+          "bodyTypst": "En una reunión de 30 profesionales entre médicos y odontólogos, 22 son hombres, 14 son odontólogos y 2 son médicos mujeres. Para cierta tarea se eligen al azar, y a la vez, 5 profesionales. Si las personas elegidas resultan ser mujeres, halle la probabilidad de que sean odontólogas.",
+          "alternatives": ["5/16", "7/32", "3/28", "3/36", "6/14"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/03/examen-admision-unsa-solucionario-pdf.html",
+          "sourceName": "Solucionario examen de admisión UNSA (Biomédicas)"
+        }
+      ]
+    },
+    {
+      "name": "Estadística Descriptiva: Distribución de Frecuencias",
+      "questions": [
+        {
+          "bodyTypst": "Identifica y clasifica las siguientes variables estadísticas cuantitativas: I. Peso de un grupo de niños recién nacidos. II. Número de hijos de los asistentes a una conferencia. III. Toneladas de desmonte que transporta un volquete.",
+          "alternatives": ["Continua - Continua - Continua", "Continua - Discreta - Continua", "Discreta - Discreta - Discreta", "Continua - Discreta - Discreta", "Discreta - Discreta - Continua"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/12/matematicas-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+          "sourceName": "Solucionario examen de admisión UNCP"
+        },
+        {
+          "bodyTypst": "Determina el valor de verdad de los siguientes enunciados respecto a las variables estadísticas: I. Una variable es una característica común que se puede encontrar solo en una muestra. II. Las variables estadísticas son cualitativas y cuantitativas. III. Las variables cuantitativas continuas son aquellas cuyos valores se presentan en valores enteros.",
+          "alternatives": ["FFF", "VVF", "FVF", "VFF", "FVV"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/12/matematicas-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+          "sourceName": "Solucionario examen de admisión UNCP"
+        },
+        {
+          "bodyTypst": "En un estudio se consideran las siguientes variables: profesión, número de hijos, grado de instrucción, comida favorita y estatura. Indica cuál es la variable cualitativa ordinal.",
+          "alternatives": ["Número de hijos", "Estatura", "Grado de instrucción", "Profesión", "Comida favorita"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-uncp-pdf.html",
+          "sourceName": "Solucionario examen de admisión UNCP (Sociales)"
+        },
+        {
+          "bodyTypst": "Los tiempos de vida útil (en días) de un tipo de batería se tabularon en una distribución de frecuencias de 5 intervalos de igual amplitud, con frecuencias relativas acumuladas: 0.10; 0.25; 0.55; 0.80 y 1.00. Determina la distribución de frecuencias absolutas si la tercera frecuencia absoluta acumulada es 11, si la segunda marca de clase es 6, y si el límite inferior del cuarto intervalo es 12.",
+          "alternatives": ["1, 4, 6, 4, 5", "2, 4, 5, 6, 3", "2, 3, 6, 5, 4", "4, 2, 5, 6, 3", "3, 4, 4, 5, 4"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unc-pdf.html",
+          "sourceName": "Solucionario examen de admisión UNC (Cajamarca)"
+        }
+      ]
+    },
+    {
+      "name": "Gráficos Estadísticos",
+      "questions": []
+    },
+    {
+      "name": "Medidas de Tendencia Central",
+      "questions": [
+        {
+          "bodyTypst": "Los salarios de una empresa (en dólares) son: 252; 396; 328; 920; 375; 430. Determina la mediana.",
+          "alternatives": ["375.2", "385.5", "385.1", "380.1", "383.4"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/12/matematicas-uncp-primera-seleccion-solucionario-examen-admision-universidad-del-centro-pdf.html",
+          "sourceName": "Solucionario examen de admisión UNCP"
+        },
+        {
+          "bodyTypst": "En una tienda de venta de electrodomésticos se registró el número de televisores vendidos durante 20 días: 4; 0; 1; 3; 2; 4; 3; 0; 4; 5; 2; 1; 4; 3; 2; 1; 4; 2; 1; 4. Al sumar la mediana y la moda se obtiene:",
+          "alternatives": ["6.5", "6.4", "6.3", "6.2", "6.1"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-unt-pdf.html",
+          "sourceName": "Solucionario examen de admisión UNT (Trujillo)"
+        },
+        {
+          "bodyTypst": "Se tienen diez números primos mayores que 3. Dato I: el promedio de los cinco números menores es 25. Dato II: el promedio de los cinco números mayores es 73. Para conocer el promedio de los diez números primos, se puede afirmar que:",
+          "alternatives": ["El dato I es suficiente y el dato II no lo es", "Cada dato por separado es suficiente", "El dato II es suficiente y el dato I no lo es", "Es necesario usar los datos I y II"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://editoradelta.blogspot.com/p/preguntas-san-marcos.html",
+          "sourceName": "Editora Delta — banco de preguntas UNMSM (San Marcos) 2022-I"
+        }
+      ]
+    },
+    {
+      "name": "Medidas de Dispersión",
+      "questions": [
+        {
+          "bodyTypst": "La media y la varianza de dos números son 3 y 1.5, respectivamente. Si se agrega el número 6, ¿cuál será la varianza de los tres números?",
+          "alternatives": ["3.2", "2.5", "2.6", "2.8", "3"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/03/examen-admision-unsa-solucionario-pdf.html",
+          "sourceName": "Solucionario examen de admisión UNSA"
+        },
+        {
+          "bodyTypst": "En un salón de 10 alumnos, las notas de un examen fueron: 08; 09; 09; 10; 10; 12; 14; 14; 15; 17. Halla la media, la varianza y la desviación estándar, y da como respuesta la suma de estas tres cantidades.",
+          "alternatives": ["19.08", "21.03", "23.05", "24.16", "25.01"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-varianza-ejercicios-resueltos-pdf.html",
+          "sourceName": "Ejercicios resueltos de varianza (Rubiños)"
+        },
+        {
+          "bodyTypst": "Las notas obtenidas en un examen por diez estudiantes son: 12; 14; 14; 11; 15; 13; 14; 12; 14; 13. Halla la varianza de dichas notas.",
+          "alternatives": ["1.54", "1.63", "1.25", "1.30", "1.36"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-varianza-ejercicios-resueltos-pdf.html",
+          "sourceName": "Ejercicios resueltos de varianza (Rubiños)"
+        }
+      ]
+    },
+    {
+      "name": "Medidas de Posición",
+      "questions": [
+        {
+          "bodyTypst": "Las edades de 18 estudiantes son: 16; 17; 16; 18; 17; 17; 20; 18; 18; 16; 17; 18; 20; 16; 20; 17; 16; 20. Calcula el quinto decil (D5) de estos datos.",
+          "alternatives": ["16", "9.5", "18", "17", "17.5"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/cuartiles-y-deciles-ejemplos-resueltos.html",
+          "sourceName": "Ejercicios resueltos de cuartiles y deciles (Rubiños)"
+        },
+        {
+          "bodyTypst": "Los precios en dólares de 13 televisores son: 180, 250, 300, 100, 400, 550, 200, 350, 75, 750, 600, 675, 480. El precio que corresponde al tercer cuartil (Q3) es:",
+          "alternatives": ["200", "550", "225", "250"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/cuartiles-y-deciles-ejemplos-resueltos.html",
+          "sourceName": "Ejercicios resueltos de cuartiles y deciles (Rubiños)"
+        },
+        {
+          "bodyTypst": "Con los precios en dólares de 13 televisores: 180, 250, 300, 100, 400, 550, 200, 350, 75, 750, 600, 675, 480; al calcular el cuarto decil (D4) obtienes:",
+          "alternatives": ["225", "220", "300", "212.50"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/cuartiles-y-deciles-ejemplos-resueltos.html",
+          "sourceName": "Ejercicios resueltos de cuartiles y deciles (Rubiños)"
+        }
+      ]
+    }
+  ]
+}

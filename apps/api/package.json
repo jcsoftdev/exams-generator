@@ -6,7 +6,7 @@
     "start": "node dist/main.js",
     "start:dev": "DOTENV_CONFIG_PATH=../../.env PORT=3012 ts-node-dev --respawn --exit-child --transpile-only -r dotenv/config -r tsconfig-paths/register src/main.ts",
     "dev": "DOTENV_CONFIG_PATH=../../.env PORT=3012 ts-node-dev --respawn --exit-child --transpile-only -r dotenv/config -r tsconfig-paths/register src/main.ts",
-    "build": "tsc -p tsconfig.build.json && cp -R src/db/data dist/db/data",
+    "build": "tsc -p tsconfig.build.json && mkdir -p dist/db/data && cp -R src/db/data/. dist/db/data/",
     "test": "jest --selectProjects non-e2e && jest --selectProjects e2e --runInBand; status=$?; pnpm db:purge-test-taxonomy; exit $status",
     "test:watch": "jest --watch",
     "lint": "eslint .",

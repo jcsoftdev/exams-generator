@@ -199,10 +199,13 @@ export class ExamVersionGenerationService {
 
     const workDir = await fs.mkdtemp(path.join(os.tmpdir(), "exam-gen-"));
     try {
-      // Image materialization only ever applies to `type='image'` questions
-      // — `type='structured'` questions render from `bodyTypst`/
-      // `alternatives`/`figureCode` text, no on-disk image involved.
-      const imageQuestions = exam.selectedQuestions.filter((q) => q.type !== "structured");
+      // `type='image'` questions ALWAYS have a backing image. `type='structured'`
+      // questions render from `bodyTypst`/`alternatives`/`figureCode` text, but
+      // MAY also carry an optional complement image (a chart/diagram/passage
+      // scan attached via `POST :id/image` — see `bank.service.ts`
+      // `replaceImage`) — materialize for any question that has one, regardless
+      // of type.
+      const imageQuestions = exam.selectedQuestions.filter((q) => q.imageStorageKey != null);
       const imagePathByQuestionId = await this.materializeQuestionImages(workDir, imageQuestions);
       const logoPath = await this.materializeLogo(workDir, exam);
 
@@ -357,8 +360,10 @@ export class ExamVersionGenerationService {
    * `bodyTypst`/`figureCode` plus `version.shuffledAlternatives[questionId]`
    * — the ALREADY-PERMUTED alternative texts for this specific version, so
    * the printed lettering (A/B/C…) matches `version.answerKey[position]`
-   * (see `VersionShuffler`'s invariant docstring). `type='image'` questions
-   * keep rendering from the materialized on-disk path, unchanged.
+   * (see `VersionShuffler`'s invariant docstring), plus an optional
+   * `imageAbsolutePath` if this structured question has a complement image
+   * materialized in `imagePathByQuestionId`. `type='image'` questions keep
+   * rendering from the materialized on-disk path, unchanged.
    */
   private buildPdfQuestion(
     questionId: string,
@@ -378,6 +383,7 @@ export class ExamVersionGenerationService {
         bodyTypst: question.bodyTypst ?? "",
         alternatives: version.shuffledAlternatives[questionId] ?? question.alternatives ?? [],
         figureCode: question.figureCode ?? undefined,
+        imageAbsolutePath: imagePathByQuestionId.get(questionId),
       };
     }
 

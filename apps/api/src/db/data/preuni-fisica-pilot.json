@@ -1,0 +1,120 @@
+{
+  "courseName": "Física",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Análisis dimensional y vectorial",
+      "questions": [
+        {"bodyTypst": "La siguiente fórmula es dimensionalmente correcta: $A = A_0 cos(alpha t^2 + beta x^(1/2))$, donde \"t\" es el tiempo y \"x\" el desplazamiento. Encuentre la dimensión de $alpha/beta$.", "alternatives": ["$T^(-3) L^(1/2)$", "$T^(-2) L^(-1/2)$", "$T^(-2) L^(1/2)$", "$T^(2) L^(-1/2)$", "$T^(3) L^(1/2)$"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf", "sourceName": "UNI admisión 2020-1, Física P1"},
+        {"bodyTypst": "Dos móviles A y B se mueven con velocidades constantes $arrow(v)_A = 2hat(i)$ m/s y $arrow(v)_B = 3hat(j)$ m/s. Calcule en m/s, la velocidad de A medida por el móvil B.", "alternatives": ["$3hat(j) - 2hat(i)$", "$2hat(i) - 3hat(j)$", "$2hat(i) + 3hat(j)$", "$sqrt(13)(hat(i)+hat(j))$", "$5(hat(i)+hat(j))$"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf", "sourceName": "UNI admisión 2021-1, Física P3"},
+        {"bodyTypst": "Dada la ecuación dimensionalmente correcta $E = x F v$, determine la dimensión de x si E es energía, F es fuerza y v es velocidad.", "alternatives": ["$M$", "$L$", "$T$", "$M L$", "$L T$"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf", "sourceName": "UNI admisión 2019-2, Física P1"}
+      ]
+    },
+    {
+      "name": "Cinemática",
+      "questions": [
+        {"bodyTypst": "Se lanza un proyectil con una rapidez inicial $V_0$ y un ángulo de 37° con la horizontal, alcanzando una altura máxima de 63 m. Calcule en m, la altura que alcanza el proyectil si se lanza con la misma rapidez inicial $V_0$ y con un ángulo de 53°.", "alternatives": ["35", "70", "84", "112", "160"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf", "sourceName": "UNI admisión 2020-1, Física P12"},
+        {"bodyTypst": "Pedro y María corren sobre una pista circular con rapidez constante de $v_P = 10$ m/s y $v_M = 5$ m/s respectivamente. Si parten del mismo punto en sentido opuesto demoran 8 s en cruzarse. Si parten del mismo punto y ambos corren en el mismo sentido, calcule en m, la distancia que ha recorrido Pedro cuando alcanza por primera vez a María.", "alternatives": ["80", "100", "120", "240", "280"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf", "sourceName": "UNI admisión 2020-1, Física P16"},
+        {"bodyTypst": "Una partícula se mueve por una trayectoria circular de radio 8 m, con una rapidez que varía según $v = 2+2t$, donde t está en s y v en m/s. Determine el ángulo entre el vector de la aceleración total con su componente normal después de 1 s de iniciado el movimiento.", "alternatives": ["30°", "60°", "45°", "53°", "90°"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf", "sourceName": "UNI admisión 2019-2, Física P3"}
+      ]
+    },
+    {
+      "name": "Estática",
+      "questions": []
+    },
+    {
+      "name": "Dinámica",
+      "questions": [
+        {"bodyTypst": "Un bloque de masa m se desliza libremente hacia abajo sobre un plano inclinado en un ángulo $alpha$ con respecto a la horizontal con una aceleración constante $g/2$ (donde g es la aceleración de la gravedad). Si el coeficiente de rozamiento cinético entre el bloque y el plano es $mu = 0.5$, calcule el ángulo $alpha$.", "alternatives": ["30°", "37°", "43°", "53°", "60°"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf", "sourceName": "UNI admisión 2016-2, Física P4"},
+        {"bodyTypst": "Una bola de masa $m_A = 400$ g moviéndose con una rapidez de 1 m/s en la dirección +x choca frontal y elásticamente con una bola de masa $m_B = 200$ g que se mueve en la dirección opuesta con una rapidez de 2 m/s. Después de la colisión las velocidades de $m_A$ y $m_B$, en m/s, son respectivamente:", "alternatives": ["$-hat(i), hat(i)$", "$-hat(i), 2hat(i)$", "$-0.5hat(i), hat(i)$", "$-0.5hat(i), 2hat(i)$", "$0.5hat(i), hat(i)$"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf", "sourceName": "UNI admisión 2016-2, Física P8"},
+        {"bodyTypst": "Sobre una recta se colocan consecutivamente 10 partículas puntuales e idénticas, separadas una distancia de 1 m una de la otra. Sobre la recta se acerca otra partícula idéntica a las anteriores con una rapidez de 10 m/s. Calcule el tiempo (en s) que transcurre desde que se produce el primer choque hasta el último si todos los choques son completamente inelásticos.", "alternatives": ["5", "5.1", "5.2", "5.3", "5.4"], "correctAnswer": "4", "difficulty": "hard", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf", "sourceName": "UNI admisión 2019-2, Física P8"}
+      ]
+    },
+    {
+      "name": "Gravitación universal",
+      "questions": [
+        {"bodyTypst": "El volumen de un planeta A es 8 veces el volumen de la Tierra. Encuentre la aceleración de la gravedad en la superficie del planeta A, si su masa es 3 veces la masa de la Tierra (g es la gravedad en la superficie de la Tierra).", "alternatives": ["$2g/9$", "$3g/8$", "$4g/9$", "$3g/4$", "$7g/9$"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf", "sourceName": "UNI admisión 2020-1, Física P4"},
+        {"bodyTypst": "El peso de un cuerpo en la superficie de la Tierra es 625 N. Calcule aproximadamente a qué altura (en km) su peso es de 576 N. Considere el radio de la Tierra 6370 km.", "alternatives": ["65", "165", "265", "365", "465"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf", "sourceName": "UNI admisión 2019-2, Física P6"},
+        {"bodyTypst": "Un escritor de ciencia ficción especula que la Tierra tiene un segundo satélite natural de igual masa que la Luna (Luna 2) y cuya órbita tiene un radio igual a la mitad del radio de la órbita de la Luna. Considerando que la Luna tiene un período de 28 días y que las lunas no interactúan, halle aproximadamente el período de la Luna 2 (en días).", "alternatives": ["4.2", "5.6", "8.4", "9.9", "12.6"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf", "sourceName": "UNI admisión 2016-2, Física P5"}
+      ]
+    },
+    {
+      "name": "Trabajo, energía y potencia",
+      "questions": [
+        {"bodyTypst": "Un vagón de ferrocarril se mueve con una velocidad $10hat(i)$ m/s, y se acopla a otros 4 vagones que están unidos y que tenían una velocidad de $4hat(i)$ m/s. Si la masa de cada vagón es de $50 times 10^3$ kg, calcule en kJ, la energía que se pierde durante el acople.", "alternatives": ["32", "72", "676", "720", "144"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf", "sourceName": "UNI admisión 2020-1, Física P10"},
+        {"bodyTypst": "Calcule en kW, la potencia de un motor a gasolina que funciona a 30 ciclos por segundo y que realiza un trabajo de 3000 J por ciclo.", "alternatives": ["60", "70", "80", "85", "90"], "correctAnswer": "4", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf", "sourceName": "UNI admisión 2020-1, Física P19"},
+        {"bodyTypst": "Un cuerpo se lanza hacia arriba con una rapidez de 3 m/s. Calcule la masa del cuerpo (en kg) si el trabajo que realiza la fuerza gravitatoria desde que se lanzó el cuerpo hasta que llega a su altura máxima es -0.9 J.", "alternatives": ["0.1", "0.2", "0.3", "0.4", "0.5"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf", "sourceName": "UNI admisión 2019-2, Física P7"}
+      ]
+    },
+    {
+      "name": "Oscilaciones y ondas mecánicas",
+      "questions": [
+        {"bodyTypst": "Un objeto oscila con una frecuencia angular de 4 rad/s. En t=0 s, se encuentra a 4 cm de su posición de equilibrio con una rapidez de 12 cm/s. Calcule en cm, la amplitud de la oscilación.", "alternatives": ["1", "2", "3", "4", "5"], "correctAnswer": "4", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf", "sourceName": "UNI admisión 2020-1, Física P5"},
+        {"bodyTypst": "La función de onda mecánica formada en una cuerda es de la forma $y(x,t) = 1/9 sin(5 pi x - 9 pi t)$ m, donde t está en s y x en m. Si la potencia media es de 18 mW, calcule aproximadamente en g/m, la densidad lineal de la cuerda.", "alternatives": ["1", "2", "3", "4", "5"], "correctAnswer": "1", "difficulty": "hard", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf", "sourceName": "UNI admisión 2020-1, Física P14"},
+        {"bodyTypst": "El nivel de sonido a 2 m de una fuente sonora que emite ondas acústicas homogéneamente en todas las direcciones es 100 dB. La potencia de la fuente (en W) es:", "alternatives": ["$1/(16 pi) times 10^(-2)$", "$(16 pi/3) times 10^(-2)$", "$(8 pi/3) times 10^(-2)$", "$8 pi times 10^(-2)$", "$16 pi times 10^(-2)$"], "correctAnswer": "4", "difficulty": "hard", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf", "sourceName": "UNI admisión 2019-2, Física P10"}
+      ]
+    },
+    {
+      "name": "Hidrostática",
+      "questions": [
+        {"bodyTypst": "Calcule aproximadamente en N, el peso aparente de 100 g de aluminio que está sumergido en el agua. Densidad del aluminio 2698.4 kg/m3, densidad del agua 1000 kg/m3.", "alternatives": ["0.51", "0.61", "0.71", "0.81", "0.91"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf", "sourceName": "UNI admisión 2021-1, Física P5"},
+        {"bodyTypst": "Un tubo en forma de 'U' contiene mercurio. Calcule la altura (en cm) de agua que se debe verter en una rama del tubo para que el mercurio se eleve 15 mm de su nivel inicial. Densidad del mercurio: 13.6 g/cm3.", "alternatives": ["13.6", "27.2", "40.8", "54.4", "81.6"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf", "sourceName": "UNI admisión 2019-2, Física P11"},
+        {"bodyTypst": "En un recipiente con agua se encuentra flotando un cuerpo sólido uniforme con el 90% de su volumen dentro del agua. Al recipiente se le agrega lentamente aceite hasta que el cuerpo queda totalmente sumergido, quedando el 20% del cuerpo dentro del agua. Calcule la densidad del aceite (en kg/m3).", "alternatives": ["775", "825", "875", "925", "975"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20171.pdf", "sourceName": "UNI admisión 2017-1, Física P11"}
+      ]
+    },
+    {
+      "name": "Temperatura, calorimetría y fenómenos térmicos",
+      "questions": [
+        {"bodyTypst": "Dos varillas metálicas tienen la misma longitud $ell$, a una temperatura de 40°C. Si a una temperatura de 100°C la diferencia de sus longitudes es de 3.6 mm, calcule en m, el valor de $ell$. $alpha_2 = 2alpha_1 = 4 times 10^(-5) \"°C\"^(-1)$.", "alternatives": ["1", "2", "3", "4", "5"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf", "sourceName": "UNI admisión 2020-1, Física P8"},
+        {"bodyTypst": "En un hospital se observa que un termómetro mal calibrado indica 102°C en el punto de ebullición del agua y que la única temperatura para la cual el termómetro indica un valor correcto es 36°C. Calcule aproximadamente en °C, la temperatura que marca el termómetro mal calibrado en el punto de congelación del agua.", "alternatives": ["-2.1", "-1.1", "-0.1", "1.1", "2.1"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf", "sourceName": "UNI admisión 2021-1, Física P6"},
+        {"bodyTypst": "Una masa de hielo de 600 g a 0°C se coloca sobre la estufa, que le suministra calor a razón de 200 J cada segundo. Determine aproximadamente el tiempo (en minutos) que demora el hielo en derretirse completamente. Calor latente de fusión del agua $L = 3.33 times 10^5$ J/kg.", "alternatives": ["15.2", "16.6", "17.8", "20.2", "21.5"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf", "sourceName": "UNI admisión 2019-2, Física P13"}
+      ]
+    },
+    {
+      "name": "Termodinámica",
+      "questions": [
+        {"bodyTypst": "En un laboratorio de química se encuentra un balón con ozono ($O_3$) a una temperatura de 270.45°C. Después, todo el ozono se convierte en oxígeno ($O_2$) manteniendo la presión constante. Calcule en °C, la temperatura final.", "alternatives": ["29.3", "49.3", "69.3", "89.3", "109.3"], "correctAnswer": "3", "difficulty": "hard", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf", "sourceName": "UNI admisión 2021-1, Física P9"},
+        {"bodyTypst": "Un gas ideal a la presión $P_0$ y volumen $V_0$ (estado a) se expande isobáricamente hasta duplicar su temperatura (estado b), luego se reduce su presión a la mitad, a volumen constante (estado c). Calcule el trabajo realizado por el gas en todo el proceso.", "alternatives": ["$1/2 P_0 V_0$", "$P_0 V_0$", "$3/2 P_0 V_0$", "$2 P_0 V_0$", "$5/2 P_0 V_0$"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20171.pdf", "sourceName": "UNI admisión 2017-1, Física P13"}
+      ]
+    },
+    {
+      "name": "Electrostática",
+      "questions": [
+        {"bodyTypst": "Una partícula A con carga eléctrica q, que se mueve con una rapidez $v_0$, describe una trayectoria circular de radio r alrededor de otra partícula con carga eléctrica -q. Determine la rapidez que debe tener la partícula A para que describa una trayectoria circular de radio 2r. La partícula con carga -q se encuentra en el centro de cada trayectoria circular.", "alternatives": ["$v_0/4$", "$v_0/2$", "$v_0/sqrt(2)$", "$2v_0$", "$4v_0$"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf", "sourceName": "UNI admisión 2020-1, Física P17"},
+        {"bodyTypst": "Una partícula electrizada ingresa con rapidez de $2 times 10^4$ m/s a una zona donde se tiene un campo compuesto eléctrico y magnético. Si el campo magnético es B=0.05 T y la partícula sigue una trayectoria rectilínea, encuentre (en kN/C) la intensidad del campo eléctrico E.", "alternatives": ["1", "2", "3", "4", "5"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20171.pdf", "sourceName": "UNI admisión 2017-1, Física P17"}
+      ]
+    },
+    {
+      "name": "Electrodinámica",
+      "questions": [
+        {"bodyTypst": "Calcule aproximadamente en $Omega$, la resistencia de una radio que tiene una potencia de 10 W cuando se le conecta a una batería de 4.5 V.", "alternatives": ["0.025", "1.025", "2.025", "3.025", "4.025"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf", "sourceName": "UNI admisión 2021-1, Física P7"},
+        {"bodyTypst": "Cuando se conectan 2 resistencias $R_1$ y $R_2$ en serie a una fuente $V_0 = 24$ V, por las resistencias circula una corriente $I_1 = 0.6$ A. Si las resistencias se conectan en paralelo con la misma fuente $V_0$, la corriente total es $I_2 = 3.2$ A. Determine el valor de cada resistencia (en $Omega$).", "alternatives": ["20 y 20", "10 y 30", "40 y 10", "20 y 35", "10 y 35"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf", "sourceName": "UNI admisión 2019-2, Física P15"},
+        {"bodyTypst": "Un condensador almacena 5 nJ de energía cuando se le aplica una diferencia de potencial V. Si se conectan en serie 5 condensadores idénticos al anterior y se les aplica en los extremos la misma diferencia de potencial V, calcule (en nJ) la energía total que se almacena en el circuito.", "alternatives": ["1", "2", "3", "4", "5"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20171.pdf", "sourceName": "UNI admisión 2017-1, Física P14"}
+      ]
+    },
+    {
+      "name": "Magnetismo y electromagnetismo",
+      "questions": [
+        {"bodyTypst": "La corriente que fluye por un solenoide de 25 cm de largo y 3 cm de radio es de 8 A. Si el solenoide contiene 600 espiras, calcule aproximadamente en T, el campo magnético en su centro. $mu_0 = 4 pi times 10^(-7)$ T m/A.", "alternatives": ["0.024", "0.042", "0.062", "0.082", "0.092"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf", "sourceName": "UNI admisión 2020-1, Física P18"},
+        {"bodyTypst": "Una onda electromagnética plana que se propaga en el vacío tiene una frecuencia de 101.1 MHz. Calcule aproximadamente en m, la longitud de onda. Velocidad de la luz en el vacío: $3 times 10^8$ m/s.", "alternatives": ["1.97", "2.97", "3.97", "4.97", "5.97"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf", "sourceName": "UNI admisión 2021-1, Física P8"},
+        {"bodyTypst": "Una carga de 1 μC y 0.1 mg de masa se mueve por una trayectoria circular en el plano XY, debido a la acción de un campo magnético de 1 T en la dirección del eje Z. Determine el radio de la órbita circular, en m, si la rapidez de la partícula es de 100 m/s.", "alternatives": ["5", "10", "15", "20", "25"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf", "sourceName": "UNI admisión 2019-2, Física P16"}
+      ]
+    },
+    {
+      "name": "Óptica geométrica",
+      "questions": [
+        {"bodyTypst": "Determine aproximadamente en m, la profundidad real de una piscina, si la profundidad aparente que se observa, visto desde arriba, es de 1.2 m. Considere el índice de refracción del agua igual a 1.33.", "alternatives": ["0.61", "0.82", "1.59", "1.81", "2.45"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf", "sourceName": "UNI admisión 2020-1, Física P2"},
+        {"bodyTypst": "Un objeto de 3 cm de alto está situado a 10 cm delante de un espejo convexo, cuyo radio de curvatura es 6 cm. Determine aproximadamente el tamaño (en cm) de la imagen formada.", "alternatives": ["0.25", "0.69", "1.28", "2.61", "3.15"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf", "sourceName": "UNI admisión 2019-2, Física P19"},
+        {"bodyTypst": "Un rayo de luz incide desde el medio 1 ($n_1=2$), pasando por el medio 2 ($n_2=1.5$), hacia el medio 3 ($n_3=1$). Calcule el ángulo de incidencia mínimo del rayo incidente $R_i$, tal que no se observe ningún rayo en el medio 3.", "alternatives": ["30°", "37°", "45°", "53°", "60°"], "correctAnswer": "0", "difficulty": "hard", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf", "sourceName": "UNI admisión 2016-2, Física P20"}
+      ]
+    },
+    {
+      "name": "Física moderna",
+      "questions": [
+        {"bodyTypst": "Si la longitud de onda de un fotón es $lambda = 500$ nm, calcule aproximadamente en eV, su energía. $h = 6.626 times 10^(-34)$ J s, $c = 3 times 10^8$ m/s, $1 \"eV\" = 1.602 times 10^(-19)$ J.", "alternatives": ["1.48", "2.48", "3.48", "4.48", "5.48"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf", "sourceName": "UNI admisión 2020-1, Física P7"},
+        {"bodyTypst": "Una superficie de cierto metal se irradia con una fuente de luz con longitud de onda $lambda = 200$ nm. Si los electrones emitidos tienen una energía de 1.2 eV, determine aproximadamente en eV, la función de trabajo del metal.", "alternatives": ["4", "5", "6", "7", "8"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf", "sourceName": "UNI admisión 2020-1, Física P13"},
+        {"bodyTypst": "Calcule aproximadamente la frecuencia umbral (en $10^15$ Hz) del silicio, si su función de trabajo es 4.8 eV.", "alternatives": ["1.16", "2.16", "3.16", "4.16", "5.16"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf", "sourceName": "UNI admisión 2019-2, Física P20"}
+      ]
+    }
+  ]
+}

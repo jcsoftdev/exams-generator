@@ -524,27 +524,25 @@ export class BankService {
   }
 
   /**
-   * Task 2 (question editing): swaps an image question's backing image
-   * asset. Reuses `requireManageableQuestion` — the SAME 404/403/409 gate
+   * Task 2 (question editing): swaps a question's backing image asset.
+   * Reuses `requireManageableQuestion` — the SAME 404/403/409 gate
    * `editQuestion` uses — so only a draft/approved question the caller can
-   * manage (never archived/central-read-only) is eligible. Only
-   * `type='image'` questions have an image to replace (400 otherwise, mirror
-   * of `previewQuestion`'s `type='structured'`-only check). Uploads the new
-   * object to storage BEFORE writing to the DB, same ordering as
-   * `createImageQuestion` (a rejected/failed DB write never leaves a
-   * question referencing a missing DB row, though — unlike creation — an
-   * orphaned MinIO object on a later DB failure is accepted here, same as
-   * `createImageQuestion`'s tradeoff).
+   * manage (never archived/central-read-only) is eligible. Works for BOTH
+   * `type='image'` (the whole question is the image) AND `type='structured'`
+   * (an optional complement image for a chart/diagram/passage that can't be
+   * authored in Typst — see `figureCode` for the vector-drawing alternative).
+   * Uploads the new object to storage BEFORE writing to the DB, same
+   * ordering as `createImageQuestion` (a rejected/failed DB write never
+   * leaves a question referencing a missing DB row, though — unlike
+   * creation — an orphaned MinIO object on a later DB failure is accepted
+   * here, same as `createImageQuestion`'s tradeoff).
    */
   async replaceImage(
     user: AuthTokenPayload,
     id: string,
     file: Express.Multer.File,
   ): Promise<{ id: string }> {
-    const question = await this.requireManageableQuestion(user, id);
-    if (question.type !== "image") {
-      throw new BadRequestException("Only image questions have an image to replace");
-    }
+    await this.requireManageableQuestion(user, id);
 
     const storageKey = `bank/questions/${randomUUID()}`;
     await this.storage.put(storageKey, file.buffer, file.mimetype);

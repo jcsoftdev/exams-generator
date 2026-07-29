@@ -1,0 +1,28 @@
+{
+  "entries": [
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "bodyTypst": "A continuación se presenta un diagrama de fases genérico (presión $P$ vs. temperatura $T$) de una sustancia, en el que se señalan los puntos I, II, III, IV y V sobre las curvas y regiones sólido, líquido y gas. ¿En qué puntos, de los señalados, se observarán 2 fases en equilibrio?",
+      "alternatives": ["I, III y V", "II y IV", "III y V", "I y IV", "I y III"],
+      "correctAnswer": "0",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/quimica-diagrama-fases-generico.png",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2019/01/examen-admision-uni-resuelto-quimica.html",
+      "sourceName": "quimicapdf.blogspot.com — Examen de admisión UNI resuelto de Química, Pregunta 6 (Rpta.: A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Soluciones",
+      "gradeLevel": "pre",
+      "bodyTypst": "Se tiene el siguiente sistema: una solución saturada simultáneamente de $\"NaNO\"_3$ y $\"KNO\"_3$, en presencia de sus sales sólidas y a 65°C. De acuerdo a las gráficas de solubilidad mostradas (solubilidad $S$ en g de soluto/100 g $\"H\"_2\"O\"$ vs. temperatura $T$), ¿cuáles de las siguientes proposiciones son correctas?\nI. Si a este sistema se le agrega algo más de $\"NaNO\"_3$ y se agita, manteniendo la temperatura, disminuirá la masa de $\"KNO\"_3$ disuelto.\nII. Si el sistema se enfría, se cristalizará mayor masa de $\"KNO\"_3$ que de $\"NaNO\"_3$.\nIII. Si el sistema se calienta, se disolverá mayor masa de $\"NaNO\"_3$ que de $\"KNO\"_3$.",
+      "alternatives": ["Solo I", "Solo II", "Solo III", "II y III", "I, II y III"],
+      "correctAnswer": "1",
+      "difficulty": "hard",
+      "imagePath": "science-image-questions/quimica-curva-solubilidad-kno3-nano3.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf",
+      "sourceName": "UNI admisión 2016-2, solucionario oficial (admision.uni.edu.pe) — Química, Pregunta 9 (Respuesta: B)"
+    }
+  ]
+}

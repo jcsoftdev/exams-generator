@@ -118,6 +118,33 @@
         <textarea class="mt-1 block w-full rounded-field border border-n200 p-2 text-sm" rows="4" [value]="sAlternatives()" (input)="sAlternatives.set($any($event.target).value)"></textarea>
       </label>
       <ui-input label="Clave (a/b/c/d)" [value]="sCorrectAnswer()" (valueChange)="sCorrectAnswer.set($event)"></ui-input>
+
+      <div data-testid="structured-image-upload" class="flex flex-col gap-2">
+        <span class="text-sm font-medium text-n700">Imagen complementaria (opcional)</span>
+        <label
+          class="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-card border-2 border-dashed border-n300 bg-n50 px-4 py-6 text-center transition-colors hover:border-primary-400 hover:bg-primary-50"
+        >
+          <input type="file" accept="image/*" class="sr-only" (change)="onStructuredImageSelected($event)" />
+          @if (sImagePreviewUrl()) {
+            <img
+              data-testid="structured-image-upload-preview"
+              [src]="sImagePreviewUrl()"
+              alt="Vista previa de la imagen complementaria"
+              class="h-24 w-24 rounded-field object-cover"
+            />
+            <span data-testid="structured-image-upload-filename" class="flex items-center gap-1.5 text-sm font-medium text-n900">
+              <lucide-angular name="image" class="h-4 w-4 text-primary-500"></lucide-angular>
+              {{ sImage()?.name }}
+            </span>
+            <span data-testid="structured-image-upload-change" class="text-sm font-medium text-primary-500">Cambiar imagen</span>
+          } @else {
+            <lucide-angular name="upload" class="h-6 w-6 text-n500"></lucide-angular>
+            <span class="text-sm text-n700">Solo si hay un gráfico, diagrama o pasaje que no se pueda escribir en Typst</span>
+            <span class="text-xs text-n500">PNG o JPG</span>
+          }
+        </label>
+      </div>
+
       @if (!structuredValid()) {
         <p data-testid="structured-validation" class="text-xs text-hard-text">
           Completa grado, curso, tema, nivel, enunciado, al menos 2 alternativas y la clave para poder guardar.

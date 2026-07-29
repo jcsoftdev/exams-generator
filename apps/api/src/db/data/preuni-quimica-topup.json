@@ -1,0 +1,378 @@
+{
+  "courseName": "Química",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Contaminación ambiental y ecología aplicada",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál de los siguientes elementos no es tóxico ni venenoso?",
+          "alternatives": ["Mercurio", "Plomo", "Arsénico", "Magnesio", "Cromo"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/contaminacion-ambiental-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+          "sourceName": "Blog Rubiños (matematicasn.blogspot.com), Banco de preguntas resueltas de Contaminación Ambiental, Pregunta 1"
+        },
+        {
+          "bodyTypst": "Gonzalo regresó a su pueblo natal después de varios años. Fue al río donde antes solía bañarse y capturar algunos peces, pero se dio con la sorpresa de que las aguas tenían un color rojo oscuro, ya no había peces y se vertían líquidos residuales de la minería ilegal que había proliferado en la zona. Gonzalo dedujo, entonces, que esta actividad había generado contaminantes como:",
+          "alternatives": ["pesticidas clorados.", "alquil sulfonatos.", "metales pesados.", "óxidos de carbono."],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/contaminacion-ambiental-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+          "sourceName": "Blog Rubiños (matematicasn.blogspot.com), Banco de preguntas resueltas de Contaminación Ambiental, Pregunta 22"
+        },
+        {
+          "bodyTypst": "En la última década se le ha dado mucha importancia a la conservación del ambiente; se ha determinado que los microplásticos son el mayor problema que afecta la vida en el planeta a causa de su baja biodegradabilidad y gran toxicidad. Si se construyera una bacteria con capacidad para degradar estos microplásticos en las profundidades del ambiente marino, ¿en cuál de los ciclos biogeoquímicos ubicaría los componentes del plástico?",
+          "alternatives": ["fósforo", "nitrógeno", "azufre", "carbono"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/contaminacion-ambiental-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+          "sourceName": "Blog Rubiños (matematicasn.blogspot.com), Banco de preguntas resueltas de Contaminación Ambiental, Pregunta 10"
+        }
+      ]
+    },
+    {
+      "name": "Materia y energía",
+      "questions": [
+        {
+          "bodyTypst": "Señala la materia que no tiene masa.",
+          "alternatives": ["Tierra", "Agua", "Aire", "Calor", "Niebla"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+          "sourceName": "Blog Rubiños (matematicasn.blogspot.com), Materia y Energía, Primera Práctica, Pregunta 2"
+        },
+        {
+          "bodyTypst": "Las mezclas pueden separarse por métodos físicos en base a las diferentes propiedades físicas de cada uno de sus componentes, como densidad, temperaturas de ebullición, entre otras. Al respecto, seleccione el valor de verdad (V o F) de cada proposición.\n\nI. La mezcla de arcilla y monedas de acero paramagnético se separan con un imán.\n\nII. La mezcla de agua y etanol del vino se separan por destilación simple.\n\nIII. La mezcla del agua de mar y arena se separan por decantación.",
+          "alternatives": ["VVV", "FVF", "VFV", "FVV", "FFV"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+          "sourceName": "Blog Rubiños (matematicasn.blogspot.com), Materia y Energía, Segunda Práctica, Pregunta 1"
+        },
+        {
+          "bodyTypst": "En la naturaleza, la materia cambia continuamente. Estos cambios pueden ser químicos, físicos o nucleares. La diferencia entre estos cambios se evalúa en función a la composición y características de la materia después del cambio. Al respecto, seleccione la alternativa correcta.",
+          "alternatives": [
+            "La corrosión del acero no galvanizado sometido altas temperaturas es un cambio físico.",
+            "El metabolismo catabólico de los alimentos es un cambio físico, ya que no implica la reacción con enzimas digestivas.",
+            "Cuando el yodo sólido se sublima, se modifica su composición química, obteniéndose yodo en fase gaseosa.",
+            "A través de la desintegración radiactiva del plutonio, se forma un nuevo elemento químico.",
+            "Cuando el nitrógeno líquido es liberado al ambiente y se convierte en gas, representa a un cambio químico."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+          "sourceName": "Blog Rubiños (matematicasn.blogspot.com), Materia y Energía, Segunda Práctica, Pregunta 2"
+        }
+      ]
+    },
+    {
+      "name": "Química aplicada: nanotecnología y materiales modernos",
+      "questions": [
+        {
+          "bodyTypst": "Respecto a los polímeros, analice si las siguientes proposiciones son verdaderas (V) o falsas (F) e indique la secuencia correcta.\n\nI. Un polímero es una especie de alta masa molar.\n\nII. Entre otras posibilidades, pueden obtenerse por reacciones de adición o de condensación.\n\nIII. Solo existen polímeros orgánicos.",
+          "alternatives": ["VVV", "VVF", "VFV", "FVV", "FFF"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20172.pdf",
+          "sourceName": "UNI, Solucionario del Examen de Admisión 2017-2, Tercera Prueba (Física y Química), Pregunta 34"
+        },
+        {
+          "bodyTypst": "Acerca de los polímeros, ¿cuáles de las siguientes proposiciones son correctas?\n\nI. El Etileno ($\"CH\"_2 = \"CH\"_2$) y el estireno son monómeros.\n\nII. El caucho es un polímero natural.\n\nIII. Un ejemplo de polímero sintético es el polipropileno.",
+          "alternatives": ["Solo I", "Solo II", "I y III", "II y III", "I, II y III"],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf",
+          "sourceName": "UNI, Solucionario del Examen de Admisión 2016-2, Tercera Prueba (Física y Química), Pregunta 36"
+        }
+      ]
+    },
+    {
+      "name": "Unidades químicas de masa",
+      "questions": [
+        {
+          "bodyTypst": "Un recipiente cerrado de 0,5 L contiene $\"H\"_2 (g)$ a 1 atm y 0 °C, y otro de la misma capacidad, y a las mismas condiciones de presión y temperatura, contiene $\"NH\"_3 (g)$. Al respecto, ¿cuáles de las siguientes proposiciones son correctas?\n\nI. Ambos contienen la misma masa de gas.\n\nII. Ambos contienen el mismo número de moléculas de gas.\n\nIII. Ambos contienen la misma cantidad de hidrógeno.",
+          "alternatives": ["Solo I", "Solo II", "Solo III", "I y II", "I, II y III"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf",
+          "sourceName": "UNI 2016-2, Examen de Admisión, Tercera Prueba (Química), Pregunta 28"
+        },
+        {
+          "bodyTypst": "Se tiene una mezcla gaseosa que contiene 0,55 g de $\"CH\"_4$, 0,75 g de $\"C\"_2\"H\"_6$ y 1,03 g de $\"C\"_3\"H\"_8$, que ocupan un volumen de 2 L a la temperatura de 20 °C. Al respecto, ¿cuáles de las siguientes proposiciones son correctas?\n\nI. La presión parcial de $\"CH\"_4$ es menor a 0,3 atm.\n\nII. La presión parcial de $\"C\"_2\"H\"_6$ es mayor a 0,28 atm.\n\nIII. La presión total del sistema es mayor a 1,2 atm.",
+          "alternatives": ["Solo I", "Solo II", "Solo III", "I y II", "I y III"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf",
+          "sourceName": "UNI 2016-2, Examen de Admisión, Tercera Prueba (Química), Pregunta 29"
+        }
+      ]
+    },
+    {
+      "name": "Ácidos, bases y sales",
+      "questions": [
+        {
+          "bodyTypst": "Si se mezclan 4 mL de una solución de $\"HCl\"$ 0,15 N con 1 mL de una solución de $\"NaOH\"$ 0,4 N. El pOH de la solución resultante es (considere $log 2 = 0,3$):",
+          "alternatives": ["0,7", "5,3", "7,5", "10,2", "12,6"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/07/acido-y-bases-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños – matematicasn.blogspot.com, banco de ejercicios resueltos de Química, sección Ácidos y Bases"
+        },
+        {
+          "bodyTypst": "A 25 °C, el agua de lluvia puede llegar a tener un pOH de hasta 12. En este caso, ¿cuántas veces mayor es la concentración de iones hidronio de esta agua con respecto al agua neutra?",
+          "alternatives": ["12/7", "2/7", "5", "$10^(5)$", "$10^(12)$"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/07/acido-y-bases-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños – matematicasn.blogspot.com, banco de ejercicios resueltos de Química, sección Ácidos y Bases"
+        }
+      ]
+    },
+    {
+      "name": "Electroquímica",
+      "questions": [
+        {
+          "bodyTypst": "Un estudiante analiza los potenciales estándar de reducción: de $\"Al\"^(3+)$ a $\"Al\"$, $E° = -1,66$ V; de $\"Fe\"^(3+)$ a $\"Fe\"$, $E° = -0,04$ V. De su análisis deduce que el aluminio debería corroerse más fácilmente que el hierro y, siendo así, una lata hecha de aluminio con gaseosa debería corroerse más rápidamente. Por lo tanto, las latas de gaseosa deberían hacerse de hierro. Sin embargo, esto no ocurre así. ¿Cuál es la razón por la cual ese proceso de corrosión no se observa en las latas de aluminio?",
+          "alternatives": [
+            "Debido a la capa de óxido de aluminio ($\"Al\"_2\"O\"_3$) que se forma en la superficie del metal y lo protege.",
+            "El potencial de oxidación del aluminio es muy bajo.",
+            "El aluminio es pintado con alguna capa de barniz.",
+            "Se forma carbonato de aluminio insoluble, $\"Al\"_2(\"CO\"_3)_3$, sobre el metal y lo protege.",
+            "El líquido de una gaseosa no es un medio corrosivo."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños – matematicasn.blogspot.com, banco de ejercicios resueltos de Química, sección Electroquímica"
+        },
+        {
+          "bodyTypst": "Dada la siguiente información de potenciales estándar de reducción, en voltios: para $\"Ag\"^(+)$ a $\"Ag\"$, $+0,80$; para $\"Cu\"^(2+)$ a $\"Cu\"$, $+0,34$; para $\"Ni\"^(2+)$ a $\"Ni\"$, $-0,25$. Indique la representación abreviada de la celda galvánica que puede construirse y que genere el mayor potencial (en voltios).",
+          "alternatives": [
+            "$\"Ag\"$(s) / $\"Ag\"^(+)$(1 M) || $\"Cu\"^(2+)$(1 M) / $\"Cu\"$(s)",
+            "$\"Ag\"$(s) / $\"Ag\"^(+)$(1 M) || $\"Ni\"^(2+)$(1 M) / $\"Ni\"$(s)",
+            "$\"Cu\"$(s) / $\"Cu\"^(2+)$(1 M) || $\"Ag\"^(+)$(1 M) / $\"Ag\"$(s)",
+            "$\"Cu\"$(s) / $\"Cu\"^(2+)$(1 M) || $\"Ni\"^(2+)$(1 M) / $\"Ni\"$(s)",
+            "$\"Ni\"$(s) / $\"Ni\"^(2+)$(1 M) || $\"Ag\"^(+)$(1 M) / $\"Ag\"$(s)"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños – matematicasn.blogspot.com, banco de ejercicios resueltos de Química, sección Electroquímica"
+        }
+      ]
+    },
+    {
+      "name": "Enlace químico",
+      "questions": [
+        {
+          "bodyTypst": "El tetracloruro de carbono ($\"CCl\"_4$) es una sustancia utilizada como solvente. Señale la alternativa que presenta la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F):\n\nI. La molécula presenta 4 enlaces polares.\n\nII. El $\"CCl\"_4$ es una molécula apolar.\n\nIII. La polaridad del $\"CCl\"_4$ no depende de la geometría molecular.\n\nElectronegatividad: $\"C\" = 2,5$ ; $\"Cl\" = 3,0$",
+          "alternatives": ["V V V", "V V F", "V F F", "F V F", "F F F"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "UNI 2018-2, Examen de Admisión (Solucionario Oficial), Tercera Prueba - Química, Pregunta 24"
+        },
+        {
+          "bodyTypst": "¿Cuáles de las siguientes moléculas presentan momento dipolar nulo?\n\nI. $\"CCl\"_4$   II. $\"H\"_2\"S\"$   III. $\"H\"_2\"O\"$\n\nNúmeros atómicos: $\"C\" = 6$, $\"Cl\" = 17$, $\"H\" = 1$, $\"S\" = 16$, $\"O\" = 8$",
+          "alternatives": ["Solo I", "Solo II", "Solo III", "II y III", "I, II y III"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "UNI 2019-1, Examen de Admisión (Solucionario Oficial), Tercera Prueba - Química, Pregunta 31"
+        }
+      ]
+    },
+    {
+      "name": "Estados de la materia",
+      "questions": [
+        {
+          "bodyTypst": "Se tiene una muestra de 100 g de clorato de potasio ($\"KClO\"_3$) al 90 % de pureza, la cual se somete a calentamiento obteniéndose oxígeno molecular ($\"O\"_2$) y cloruro de potasio ($\"KCl\"$). Si la reacción tiene una eficiencia de solo 70 %, ¿cuál sería el volumen (en L) de $\"O\"_2$ obtenido, medido a condiciones normales?\n\n$R = 0,082 (\"atm\" dot \"L\")/(\"mol\" dot \"K\")$\n\nMasas atómicas: $\"K\" = 39$, $\"Cl\" = 35,5$, $\"O\" = 16$",
+          "alternatives": ["9,19", "14,13", "17,28", "29,32", "39,18"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "UNI 2019-1, Examen de Admisión (Solucionario Oficial), Tercera Prueba - Química, Pregunta 28"
+        },
+        {
+          "bodyTypst": "Un recipiente rígido contiene 1000 litros de gas metano ($\"CH\"_4$) a 0 °C y una atmósfera. Si se libera el gas hasta que su presión disminuye a la mitad de su valor inicial, manteniendo la misma temperatura, ¿cuántos gramos de metano quedarán en el balón?\n\n$R = 0,082 (\"atm\" dot \"L\")/(\"mol\" dot \"K\")$\n\nMasas atómicas: $\"H\" = 1$, $\"C\" = 12$",
+          "alternatives": ["22,3", "44,6", "357,2", "714,5", "1429,4"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "UNI 2019-1, Examen de Admisión (Solucionario Oficial), Tercera Prueba - Química, Pregunta 29"
+        }
+      ]
+    },
+    {
+      "name": "Estequiometría y reacciones químicas",
+      "questions": [
+        {
+          "bodyTypst": "Para analizar el poder calorífico de una mezcla formada por 60 moles de propano y 40 moles de butano, se llevan a cabo las siguientes reacciones de combustión (sin balancear), en un reactor de volumen constante:\n\n$\"C\"_3\"H\"_8 (g) + \"O\"_2 (g) -> \"CO\"_2 (g) + \"H\"_2\"O\" (g)$\n\n$\"C\"_4\"H\"_10 (g) + \"O\"_2 (g) -> \"CO\"_2 (g) + \"H\"_2\"O\" (g)$\n\nPara asegurar la combustión completa, el reactor contiene 20 % en exceso de oxígeno. Si al finalizar la reacción el número de moles en el reactor aumentó en 5 %, y considerando el mismo rendimiento para ambas reacciones, calcule el rendimiento (%) de las reacciones.\n\nMasas atómicas: $\"H\" = 1$; $\"C\" = 12$; $\"O\" = 16$",
+          "alternatives": ["32,1", "43,9", "65,4", "89,5", "99,9"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+          "sourceName": "UNI 2019-2, Examen de Admisión, Tercera Prueba (Química), Pregunta 27"
+        },
+        {
+          "bodyTypst": "El proceso de obtención del hierro ($\"Fe\"$) a partir del $\"Fe\"_2\"O\"_3$ se da mediante la siguiente reacción química con un rendimiento del 75 %:\n\n$\"Fe\"_2\"O\"_3 (s) + 3 \"CO\" (g) -> 2\"Fe\" (s) + 3\"CO\"_2 (g)$\n\nEn un alto horno se procesaron 150 toneladas de $\"Fe\"_2\"O\"_3$ y el producto se recuperó en forma de lingotes de hierro crudo que contienen 92,65 % de Fe. Determine el número de lingotes que se obtuvieron, si cada lingote tiene una masa de 200 kg.\n\nMasas atómicas: $\"C\" = 12$; $\"O\" = 16$; $\"Fe\" = 56$",
+          "alternatives": ["393", "425", "525", "750", "850"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf",
+          "sourceName": "UNI 2016-2, Examen de Admisión, Tercera Prueba (Química), Pregunta 30"
+        }
+      ]
+    },
+    {
+      "name": "Estructura atómica",
+      "questions": [
+        {
+          "bodyTypst": "Dadas las siguientes proposiciones referidas a los números cuánticos:\n\nI. El número cuántico principal define el nivel energético, y sus valores están relacionados directamente con la distancia promedio del electrón respecto al núcleo.\n\nII. El número cuántico azimutal define el subnivel energético, y sus valores están relacionados con la forma de los orbitales.\n\nIII. El número cuántico magnético define al orbital y la orientación espacial de los mismos.\n\nSon correctas:",
+          "alternatives": ["Solo I", "Solo II", "Solo III", "I y II", "I, II y III"],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "UNI 2018-2, Examen de Admisión (Solucionario Oficial), Tercera Prueba - Química, Pregunta 22"
+        },
+        {
+          "bodyTypst": "Señale la alternativa que presenta la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F):\n\nI. El número máximo de orbitales atómicos correspondientes al tercer nivel de energía es nueve.\n\nII. Un orbital atómico tipo p, presenta forma tetralobular.\n\nIII. El orbital atómico $7p_z$ presenta mayor tamaño que el orbital atómico $6p_z$.",
+          "alternatives": ["V F V", "V F F", "F V V", "V V V", "F F F"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "UNI 2019-1, Examen de Admisión (Solucionario Oficial), Tercera Prueba - Química, Pregunta 25"
+        }
+      ]
+    },
+    {
+      "name": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "questions": [
+        {
+          "bodyTypst": "Es un líquido muy volátil de olor característico, soluble en agua, alcohol y éter, muy inflamable, excelente disolvente de pinturas y barnices; se encuentra en pequeñas cantidades en la orina y en la sangre; de masa molar 58, es el compuesto más importante de las cetonas.",
+          "alternatives": ["Heptanona", "Hexanona-3", "Pentanona", "Butenona", "Propanona"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-oxigenados-organicos-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Blog rubiños (matematicasn.blogspot.com), \"Funciones Oxigenadas – Ejercicios Resueltos\", Pregunta 4"
+        },
+        {
+          "bodyTypst": "Se conocen como AMIDAS a:",
+          "alternatives": [
+            "Los cuerpos en que el nitrógeno tiene sus tres enlaces en un sólo carbono.",
+            "Los cuerpos resultantes de la sustitución de alguno de los hidrógenos del amoniaco por radicales ácidos.",
+            "Los cuerpos oxihidrocarburos que contienen el grupo $\"CO\"$ divalente.",
+            "Los que tienen la molécula formada de la unión de dos grupos ácidos por medio de un oxígeno.",
+            "Ninguna corresponde."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/08/compuestos-nitrogenados-organicos-nomenclatura-formulas-ejemplos-problemas-resueltos-de-quimica-de-secundaria-y-pre-universidad-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Blog rubiños (matematicasn.blogspot.com), \"Funciones Nitrogenadas – Ejercicios Resueltos\", Pregunta 3"
+        }
+      ]
+    },
+    {
+      "name": "Nomenclatura inorgánica",
+      "questions": [
+        {
+          "bodyTypst": "Los hidróxidos son compuestos del tipo $\"M\"(\"OH\")_x$, se caracterizan por poseer el grupo $-\"OH\"$. De los siguientes óxidos, ¿cuántos NO forman hidróxidos? $\"Fe\"_2\"O\"_3$; $\"P\"_2\"O\"_5$; $\"CrO\"_3$; $\"K\"_2\"O\"$; $\"MgO\"$; $\"SO\"_2$; $\"CuO\"$",
+          "alternatives": ["1", "5", "3", "2", "4"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+          "sourceName": "Blog rubiños (matematicasn.blogspot.com), \"Nomenclatura Inorgánica – Ejercicios Resueltos\", Problema 1"
+        },
+        {
+          "bodyTypst": "La roca caliza, materia prima para la industria del cemento, presenta impurezas como $\"Al\"_2\"O\"_3$, $\"Fe\"_2\"O\"_3$ y $\"SiO\"_2$. Al respecto, seleccione la alternativa que contiene la nomenclatura sistemática del compuesto de aluminio, la nomenclatura tradicional del compuesto de hierro y la nomenclatura stock del compuesto de silicio, respectivamente.",
+          "alternatives": [
+            "Trióxido de dialuminio, óxido ferroso, óxido de silicio (IV)",
+            "Óxido de aluminio, óxido de hierro (III), dióxido de silicio",
+            "Trióxido de dialuminio, óxido férrico, óxido de silicio (IV)",
+            "Óxido de aluminio, trióxido de hierro, dióxido de silicio",
+            "Trióxido de dialuminio, óxido férrico, óxido de silicio (II)"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html",
+          "sourceName": "Blog rubiños (matematicasn.blogspot.com), \"Nomenclatura Inorgánica – Ejercicios Resueltos\", Segunda Práctica, Problema 1"
+        }
+      ]
+    },
+    {
+      "name": "Química del carbono",
+      "questions": [
+        {
+          "bodyTypst": "Indique cuál es una propiedad química del carbono.",
+          "alternatives": ["Densidad", "Estado sólido", "Cambio alotrópico", "Punto de fusión", "Autosaturación"],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/07/quimica-del-carbono-numero-de-enlaces-sigma-pi-simple-doble-triple-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-examen-admision-universidad-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Blog rubiños (matematicasn.blogspot.com), \"Química del Carbono – Ejercicios Resueltos\", Pregunta 1"
+        },
+        {
+          "bodyTypst": "Indicar la afirmación incorrecta:",
+          "alternatives": [
+            "El coke es un carbono artificial.",
+            "El grafito y el diamante son formas alotrópicas.",
+            "La autosaturación del carbono le permite formar hasta cuatro pares enlazantes entre cinco átomos de carbono unidos entre sí.",
+            "La tetravalencia permite formar hasta cuatro enlaces por cada carbono.",
+            "En los alquinos, el $\"CaC\"_2$ es un compuesto covalente."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/07/quimica-del-carbono-numero-de-enlaces-sigma-pi-simple-doble-triple-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-examen-admision-universidad-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Blog rubiños (matematicasn.blogspot.com), \"Química del Carbono – Ejercicios Resueltos\", Pregunta 4"
+        }
+      ]
+    },
+    {
+      "name": "Soluciones",
+      "questions": [
+        {
+          "bodyTypst": "La solubilidad de la úrea, $\"CO\"(\"NH\"_2)_2$, en etanol, $\"C\"_2\"H\"_5\"OH\"$, es de 16,8 g por 100 mL de etanol a 25 °C. Si la densidad del etanol es de 0,79 g/mL, ¿cuál es la molalidad (mol/kg) de una solución saturada de úrea en etanol?\n\nMasas atómicas: $\"H\" = 1$; $\"C\" = 12$; $\"N\" = 14$; $\"O\" = 16$",
+          "alternatives": ["0,21", "2,80", "3,54", "5,84", "9,50"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+          "sourceName": "UNI 2020-1, Examen de Admisión, Tercera Prueba (Química), Pregunta 27"
+        },
+        {
+          "bodyTypst": "El ácido acético puro, $\"CH\"_3\"COOH\"$, es un líquido que tiene una densidad de 1,049 g/mL a 25 °C. Calcule la concentración molar de una solución que resulta al mezclar 10 mL de ácido acético con suficiente cantidad de agua para obtener 125 mL de solución.\n\nMasa molar $\"CH\"_3\"COOH\" = 60$ g/mol",
+          "alternatives": ["0,40", "0,70", "0,85", "1,40", "2,40"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+          "sourceName": "UNI 2019-2, Examen de Admisión, Tercera Prueba (Química), Pregunta 31"
+        }
+      ]
+    },
+    {
+      "name": "Tabla periódica",
+      "questions": [
+        {
+          "bodyTypst": "Indique el grupo y el periodo de la tabla periódica, respectivamente, correspondientes a un elemento químico cuya configuración electrónica termina en $3\"d\"^10 4\"s\"^1$.",
+          "alternatives": ["IA; 4", "IIIA; 3", "VA; 4", "VIIIB; 3", "IB; 4"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/01/tabla-periodica-moderna-ejemplos-problemas-resueltos-de-quimica-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños – matematicasn.blogspot.com, banco de ejercicios resueltos de Química, sección Tabla Periódica"
+        },
+        {
+          "bodyTypst": "Se sabe que los elementos de números atómicos 11 ($\"Na\"$), 12 ($\"Mg\"$), 13 ($\"Al\"$), 14 ($\"Si\"$), 15 ($\"P\"$), 16 ($\"S\"$) y 17 ($\"Cl\"$) se encuentran ubicados en una misma fila (periodo) de la tabla periódica. En ellos se cumple que:",
+          "alternatives": [
+            "El sodio ($\"Na\"$) es el elemento que tiene mayor radio atómico.",
+            "Todos tienen el mismo número de electrones de valencia.",
+            "El cloro ($\"Cl\"$) es el elemento con menor afinidad electrónica.",
+            "El magnesio ($\"Mg\"$) es más electronegativo que el azufre ($\"S\"$)."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/01/tabla-periodica-moderna-ejemplos-problemas-resueltos-de-quimica-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños – matematicasn.blogspot.com, banco de ejercicios resueltos de Química, sección Tabla Periódica"
+        }
+      ]
+    }
+  ]
+}

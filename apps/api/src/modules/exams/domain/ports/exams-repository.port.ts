@@ -137,14 +137,15 @@ export interface ExamQuestionRecord {
 }
 
 /**
- * `type='image'` questions carry `imageStorageKey`/`imageMime`
- * (`bodyTypst`/`alternatives`/`figureCode` are `null`); `type='structured'`
- * questions (design doc §5.4) carry `bodyTypst`/`alternatives`/`figureCode`
- * instead (`imageStorageKey`/`imageMime` are `null`). Both variants always
- * carry `correctAnswer`, but its MEANING differs by type — see
- * `SelectedQuestion` in `domain/version-shuffler.ts` for the exact contract
- * (answer letter for image, 0-based index into `alternatives` for
- * structured).
+ * `type='image'` questions always carry `imageStorageKey`/`imageMime`;
+ * `type='structured'` questions (design doc §5.4) carry
+ * `bodyTypst`/`alternatives`/`figureCode`, and MAY also carry
+ * `imageStorageKey`/`imageMime` if a complement image (chart/diagram/passage
+ * scan) was attached via `POST :id/image` — see `bank.service.ts`
+ * `replaceImage`. Both variants always carry `correctAnswer`, but its
+ * MEANING differs by type — see `SelectedQuestion` in
+ * `domain/version-shuffler.ts` for the exact contract (answer letter for
+ * image, 0-based index into `alternatives` for structured).
  */
 export interface SelectedQuestionForGeneration {
   readonly questionId: string;

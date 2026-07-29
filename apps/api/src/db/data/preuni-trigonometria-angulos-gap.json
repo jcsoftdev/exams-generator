@@ -1,0 +1,19 @@
+{
+  "courseName": "Trigonometría",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Ángulos y Sistemas de Medición Angular",
+      "questions": [
+        {
+          "bodyTypst": "Dados dos ángulos, calcule la medida del menor ángulo en radianes, si la diferencia de los cuatro tercios del número de grados sexagesimales de uno y los tres quintos del número de grados centesimales del otro es 20. Además, son complementarios.",
+          "alternatives": ["$4pi/7$", "$4pi/9$", "$2pi/9$", "$pi/9$", "$pi/16$"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "UNI admisión 2018-2, Trigonometría P33"
+        }
+      ]
+    }
+  ]
+}

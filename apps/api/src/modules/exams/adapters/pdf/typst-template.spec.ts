@@ -169,6 +169,67 @@ describe("renderExamTypst — structured questions", () => {
     expect(source).not.toContain("undefined");
   });
 
+  it("embeds a structured question's complement image via #image() when imageAbsolutePath is provided", () => {
+    const input: ExamPdfDocumentInput = {
+      title: "Simulacro San Marcos",
+      versionLabel: "Version A",
+      questions: [
+        {
+          id: "sq1",
+          type: "structured",
+          bodyTypst: "Según el gráfico adjunto, calcule...",
+          alternatives: ["a", "b"],
+          imageAbsolutePath: "/fixtures/complement-chart.png",
+        },
+      ],
+    };
+
+    const source = renderExamTypst(input);
+
+    expect(source).toContain('#image("/fixtures/complement-chart.png"');
+  });
+
+  it("renders both figureCode and imageAbsolutePath when a structured question has both", () => {
+    const input: ExamPdfDocumentInput = {
+      title: "Simulacro San Marcos",
+      versionLabel: "Version A",
+      questions: [
+        {
+          id: "sq1",
+          type: "structured",
+          bodyTypst: "Observa la figura y el gráfico",
+          alternatives: ["a", "b"],
+          figureCode: "#box[triangle placeholder]",
+          imageAbsolutePath: "/fixtures/complement-chart.png",
+        },
+      ],
+    };
+
+    const source = renderExamTypst(input);
+
+    expect(source).toContain("#box[triangle placeholder]");
+    expect(source).toContain('#image("/fixtures/complement-chart.png"');
+  });
+
+  it("omits any complement image() call when imageAbsolutePath is not provided", () => {
+    const input: ExamPdfDocumentInput = {
+      title: "Simulacro San Marcos",
+      versionLabel: "Version A",
+      questions: [
+        {
+          id: "sq1",
+          type: "structured",
+          bodyTypst: "Sin imagen complementaria",
+          alternatives: ["a", "b"],
+        },
+      ],
+    };
+
+    const source = renderExamTypst(input);
+
+    expect(source).not.toContain("#image(");
+  });
+
   it("renders image and structured questions side by side in the same document, each with its own marker", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",

@@ -1,0 +1,108 @@
+{
+  "courseName": "Educación Cívica",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "La convivencia social y la formación intercultural",
+      "questions": [
+        {"bodyTypst": "La diversidad cultural es una de las expresiones de la capacidad creadora de los pueblos y las diversas sociedades humanas en el mundo y sus diferentes regiones. Esta diversidad cultural genera, además, un correspondiente:", "alternatives": ["orgullo de clase social", "desarrollo estamental", "sentido de pertenencia", "impulso transcultural", "progreso social"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "La intolerancia religiosa entre los católicos y los grupos cristianos constituye una manifestación de violencia:", "alternatives": ["política", "estructural", "callejera", "microsocial", "sociocultural"], "correctAnswer": "4", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"}
+      ]
+    },
+    {
+      "name": "Identidad y patrimonio nacional",
+      "questions": [
+        {"bodyTypst": "Tupe y Catahuasi son dos distritos de la provincia de Yauyos, ubicados en la región andina de Lima. Sus pocos pobladores hablan una lengua perteneciente a la familia lingüística Aru. Según los especialistas, esta lengua corre el riesgo de desaparecer, ya que los jóvenes y los niños están dejando de hablarla. ¿De qué lengua se trata?", "alternatives": ["quechua", "aymara", "achuar", "jaqaru", "quechua chanka"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "El conjunto de personas nacidas en determinado territorio, con una misma tradición histórica, se le puede llamar:", "alternatives": ["Nación", "Departamento", "República", "Patria", "Estado"], "correctAnswer": "0", "difficulty": "easy", "sourceUrl": "https://webmaterialacademico.blogspot.com/2021/09/preguntas-de-civica-examen-de-admision.html", "sourceName": "Preguntas de Cívica de exámenes de admisión UNMSM (examen 1978)"}
+      ]
+    },
+    {
+      "name": "Participación ciudadana en el sistema democrático",
+      "questions": [
+        {"bodyTypst": "Los mecanismos de participación ciudadana contribuyen a garantizar los derechos ciudadanos y a reforzar:", "alternatives": ["la configuración de la sociedad civil", "los gobiernos de corte democrático", "la propuesta gubernamental estatista", "los intereses de los grupos de poder", "los ideales de gobiernos autocráticos"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "En el Perú, país democrático, tienen derecho al voto:", "alternatives": ["Solo los menores de 15 años", "Solamente los varones de 18 años", "Solo las personas que lo deseen", "Todas las personas mayores de 18 años que tengan su DNI", "Todas las personas que tienen DNI, incluidos los menores de edad"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "Los vecinos de un distrito limeño han descubierto que su alcalde ha cometido actos de corrupción en la construcción de un conjunto de losas deportivas. Para lograr la revocatoria de esa autoridad, dichos vecinos deben conseguir firmas de un:", "alternatives": ["25% de electores no procesados", "10% del electorado nacional", "25% del electorado local", "10% de electores locales", "5% de ciudadanos locales"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "Es el Presidente que otorgó el derecho al sufragio a la mujer peruana:", "alternatives": ["Manuel Prado Ugarteche", "Manuel Odría Amoretti", "José Luis Bustamante y Rivero", "Fernando Belaúnde Terry", "Juan Velasco Alvarado"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"}
+      ]
+    },
+    {
+      "name": "El Estado de Derecho y la Carta Magna",
+      "questions": [
+        {"bodyTypst": "La vigente Constitución del Perú determina que el fin supremo de la sociedad y del Estado es la defensa de:", "alternatives": ["la persona humana y el respeto de su dignidad", "la integridad territorial", "la democracia", "los recursos naturales", "la cultura nacional"], "correctAnswer": "0", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "La acción de inconstitucionalidad tiene como objetivo mantener:", "alternatives": ["la democracia", "las garantías", "la supremacía de la Constitución", "la integridad territorial", "la cultura nacional"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "Se constituyen en una obligación o responsabilidad del Estado con las personas, para asegurar la vigencia de los derechos que consagra la Constitución:", "alternatives": ["Derechos civiles", "Obligaciones políticas", "Deberes constitucionales", "Garantías constitucionales", "Deberes políticos"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "La acción popular se interpone ante:", "alternatives": ["el Congreso de la República", "el Poder Judicial", "el Ministerio de Justicia", "la Corte Superior", "el pueblo"], "correctAnswer": "3", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"}
+      ]
+    },
+    {
+      "name": "Reconociendo el ordenamiento jurídico",
+      "questions": [
+        {"bodyTypst": "Respecto al concebido, señale lo correcto:", "alternatives": ["tiene derecho a nombre propio", "se inicia con el enamoramiento de la pareja", "jurídicamente, es parte del cuerpo de la madre", "posee derechos patrimoniales, siempre que nazca vivo", "el aborto es legal si la vida del concebido está en peligro"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "De acuerdo con el Código Civil peruano, la vida humana se inicia con:", "alternatives": ["el nacimiento", "la mayoría de edad", "la inscripción en el Registro Civil", "la concepción", "la inscripción en el Registro Público"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "En caso de conflicto entre la ley de la República y los tratados internacionales celebrados por el Perú con otros Estados, prevalece:", "alternatives": ["la ley de la República", "la decisión del Parlamento", "la resolución del presidente de la República", "el dictamen del Tribunal de Garantías Constitucionales", "el tratado internacional"], "correctAnswer": "4", "difficulty": "hard", "sourceUrl": "https://webmaterialacademico.blogspot.com/2021/09/preguntas-de-civica-examen-de-admision.html", "sourceName": "Preguntas de Cívica de exámenes de admisión UNMSM (examen 1987, Constitución de 1979, art. 101)"}
+      ]
+    },
+    {
+      "name": "Los derechos humanos",
+      "questions": [
+        {"bodyTypst": "El derecho que tiene todo ciudadano de defender su libertad individual se halla consagrado por:", "alternatives": ["la acción de hábeas corpus", "la acción de amparo", "el recurso de apelación", "la inviolabilidad de domicilio", "la petición de asilo"], "correctAnswer": "0", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "Señale un derecho económico:", "alternatives": ["a elegir y ser elegido", "a la libertad de opinión", "a la libertad de tránsito", "a la vida", "a un trabajo digno"], "correctAnswer": "4", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "Dos estudiantes de una universidad pública manifiestan que toda persona tiene derecho a un nivel de vida adecuado que le asegure a ella y a su familia la salud, la alimentación, el vestido, la vivienda, la asistencia médica y los servicios sociales necesarios. El texto se refiere a los derechos:", "alternatives": ["de segunda generación", "civiles y políticos", "de tercera generación", "individuales y políticos", "de primera generación"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "En el caso de que una persona fuera excluida del proceso de selección a un cargo público, se vulneraría su derecho constitucional a la:", "alternatives": ["igualdad", "responsabilidad", "integridad", "competencia", "reputación"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"}
+      ]
+    },
+    {
+      "name": "El Estado peruano I",
+      "questions": [
+        {"bodyTypst": "Administrar justicia en el Perú es propio del Poder Judicial, con excepción de los casos que impliquen:", "alternatives": ["narcotraficantes", "delitos políticos", "altos funcionarios públicos", "extranjeros", "materia electoral"], "correctAnswer": "4", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "La Constitución dispone que las funciones de aprobar, interpretar, modificar o derogar las leyes son atribuciones del:", "alternatives": ["Tribunal de Garantías", "Congreso Nacional", "Poder Ejecutivo", "Poder Judicial", "Ministerio Público"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://webmaterialacademico.blogspot.com/2021/09/preguntas-de-civica-examen-de-admision.html", "sourceName": "Preguntas de Cívica de exámenes de admisión UNMSM (examen 1997)"}
+      ]
+    },
+    {
+      "name": "El Estado peruano II",
+      "questions": [
+        {"bodyTypst": "Son objetivos del Acuerdo Nacional, excepto:", "alternatives": ["Reducción de la pobreza", "Democracia y Estado de Derecho", "Estado eficiente, transparente y descentralizado", "Equidad y justicia social", "Competitividad del país"], "correctAnswer": "0", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "Son los únicos jueces a los cuales se les puede revocar:", "alternatives": ["los jueces de paz letrados", "los jueces de familia", "los jueces de trabajo", "los jueces de paz", "los jueces civiles"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"}
+      ]
+    },
+    {
+      "name": "Organismos constitucionales autónomos I",
+      "questions": [
+        {"bodyTypst": "Indique cuál de las siguientes alternativas no se relaciona con el Banco Central de Reserva del Perú (BCRP):", "alternatives": ["Emisión de billetes y monedas", "Administrar las reservas internacionales", "Fijar el encaje bancario", "Dictar las leyes que regulen la oferta monetaria", "Preservar la estabilidad monetaria"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "Órgano encargado de elaborar el padrón electoral para los procesos electorales en nuestro país:", "alternatives": ["ONPE", "JNE", "RENIEC", "MEF", "INEI"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"}
+      ]
+    },
+    {
+      "name": "Organismos constitucionales autónomos II",
+      "questions": [
+        {"bodyTypst": "La Defensoría del Pueblo está facultada para intervenir en los procesos de garantías constitucionales como:", "alternatives": ["acción popular", "acción de incumplimiento", "hábeas corpus", "hábeas data", "acción de inconstitucionalidad"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "Último lugar donde se presentan las garantías constitucionales:", "alternatives": ["la Defensoría del Pueblo", "el Ministerio Público", "la Corte Suprema de Justicia", "el Tribunal Constitucional", "el Consejo Nacional de la Magistratura"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "Encargado de supervisar la legalidad de la ejecución del presupuesto del Estado:", "alternatives": ["MEF", "INEI", "SUNAT", "SBS", "Contraloría General de la República"], "correctAnswer": "4", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"}
+      ]
+    },
+    {
+      "name": "Conflicto y violencia",
+      "questions": [
+        {"bodyTypst": "Tras el final de la violencia política, se creó la Comisión de la Verdad y Reconciliación (CVR) para investigar y documentar las violaciones a los derechos humanos ocurridas entre 1980 y 2000; su informe final reveló datos cruciales sobre el conflicto. ¿Cuál fue la conclusión sociopolítica más reveladora del Informe Final de la CVR respecto a las víctimas mortales del conflicto armado interno y su distribución étnico-social?", "alternatives": ["El terrorismo fue un fenómeno que solo afectó a los miembros de los partidos políticos de izquierda", "El número de víctimas fatales fue insignificante, sin impacto real en la demografía del país", "La mayoría de las víctimas fueron miembros de la élite de Lima, de raza blanca y con altos ingresos económicos", "La mayoría de las víctimas mortales fueron campesinos quechuahablantes de las zonas rurales andinas, lo que evidencia el sesgo étnico y social de la violencia", "La violencia se concentró exclusivamente en las grandes ciudades, como Lima, y fue de carácter urbano"], "correctAnswer": "3", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "Una de las formas de violencia que ha afectado a la sociedad peruana, y cuyas consecuencias se pueden percibir aún hoy, fue el terrorismo entre los años 1980 y 2000. Para evitar que este tipo de fenómenos vuelva a ocurrir, la Comisión de la Verdad y Reconciliación (CVR) recomendó un proceso de reconciliación nacional como un nuevo pacto fundacional entre el gobierno y la sociedad peruana. A partir de esta recomendación, se puede inferir que, para la CVR, una de las causas del conflicto armado interno en el Perú fue la:", "alternatives": ["carencia de medidas democráticas en el país", "separación entre Estado y sociedad civil", "inexistencia de un contrato social moderno", "representatividad estatal deficitaria", "falta de acceso a la justicia social"], "correctAnswer": "4", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"}
+      ]
+    },
+    {
+      "name": "Seguridad y bienestar nacional",
+      "questions": [
+        {"bodyTypst": "Se considera exceptuado del cumplimiento del servicio militar voluntario:", "alternatives": ["quien tiene obligaciones familiares de carácter excepcional", "quien reúne las condiciones de aptitud e idoneidad para el servicio en el activo", "quien concurre a instrucción o entrenamiento durante periodos determinados", "quien forma parte de la reserva", "quien tiene obligación con alguna unidad de base"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "El Consejo de Seguridad Nacional está presidido por:", "alternatives": ["el jefe del Comando Conjunto de las Fuerzas Armadas", "el ministro de Defensa", "el presidente del Consejo Nacional de Inteligencia", "el presidente de la República", "el ministro de Justicia"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "La detención preventiva de una persona es por un plazo máximo de veinticuatro horas; sin embargo, se puede extender por un término no mayor de quince días en el caso de:", "alternatives": ["terrorismo", "tráfico ilícito de drogas", "espionaje", "terrorismo y tráfico ilícito de drogas", "terrorismo, tráfico ilícito de drogas y espionaje"], "correctAnswer": "4", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"}
+      ]
+    },
+    {
+      "name": "El Perú en el mundo globalizado",
+      "questions": [
+        {"bodyTypst": "En cuanto a la Organización de las Naciones Unidas, marque la que no corresponde:", "alternatives": ["Se ha convertido en un escenario donde los Estados pueden llegar a resolver sus problemas", "En la actualidad la conforman 193 Estados", "Nació oficialmente el 24 de octubre de 1955", "Su sede se encuentra en la ciudad de Nueva York", "Es un mecanismo para que los gobiernos puedan encontrar ámbitos de acuerdo común"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "Fecha en que se celebra, todos los años, el Día de las Naciones Unidas:", "alternatives": ["26 de julio", "15 de agosto", "26 de junio", "23 de agosto", "24 de octubre"], "correctAnswer": "4", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/civica-resuelta-ingreso-universidad-dpcc.html", "sourceName": "Banco de preguntas resueltas de Educación Cívica"},
+        {"bodyTypst": "La controversia de delimitación marítima entre Perú y Chile fue decidida por:", "alternatives": ["el Pacto de San José de Costa Rica", "la Organización de Estados Americanos", "el Tribunal Internacional de Justicia de La Haya", "el Mercado Común del Sur", "el Consejo de Seguridad de las Naciones Unidas"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://webmaterialacademico.blogspot.com/2021/09/preguntas-de-civica-examen-de-admision.html", "sourceName": "Preguntas de Cívica de exámenes de admisión UNMSM (examen 2014-I)"},
+        {"bodyTypst": "El Perú no puede aplicar la pena de muerte, puesto que ha suscrito:", "alternatives": ["el acuerdo de la Corte Internacional de La Haya", "el Pacto de San José de Costa Rica", "la Declaración de los Derechos Humanos", "la Carta Democrática Interamericana", "los principios de las Naciones Unidas"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://webmaterialacademico.blogspot.com/2021/09/preguntas-de-civica-examen-de-admision.html", "sourceName": "Preguntas de Cívica de exámenes de admisión UNMSM (examen 2014-I)"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "courseName": "Lenguaje",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "La comunicación",
+      "questions": [
+        {
+          "bodyTypst": "Relaciona las clases de comunicación con sus respectivos ejemplos. I. No lingüística; II. De difusión; III. Indirecta. a. La lectura de la novela María por un estudiante de la UNCP. b. El sonido de las campanas de la iglesia antes de iniciar la misa. c. Un seminario sobre Inteligencia Artificial.",
+          "alternatives": ["Ia – IIb – IIIc", "Ia – IIc – IIIb", "Ib – IIa – IIIc", "Ic – IIb – IIIa", "Ib – IIc – IIIa"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.dehuancayo.com/examen/UNCP-2024I.pdf",
+          "sourceName": "UNCP, Examen de Admisión 2024-I, Solucionario Área I"
+        },
+        {
+          "bodyTypst": "Completa el organizador referido a las funciones del lenguaje. Poética: 'Por una mirada, una sonrisa, un cielo...'. x: 'La morfología estudia la estructura interna de la palabra'. Fática: '¿Me escuchas, claro?'. y: 'Ven temprano a clases.'. Emotiva: '¡Qué alegría volver a verte!'. z: 'Filiberto es muy puntual en todo.' Halle x, y, z respectivamente.",
+          "alternatives": ["Metalingüística – Expresiva – Referencial", "Apelativa – Referencial – Metalingüística", "Metalingüística – Relacional – Expresiva", "Referencial – Apelativa – Fática", "Metalingüística – Apelativa – Referencial"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.dehuancayo.com/examen/UNCP-2024I.pdf",
+          "sourceName": "UNCP, Examen de Admisión 2024-I, Solucionario Área I"
+        }
+      ]
+    },
+    {
+      "name": "Uso de grafías",
+      "questions": [
+        {
+          "bodyTypst": "Alternativa que presenta una palabra incorrectamente escrita:",
+          "alternatives": ["Juan pellizcó a su compañero.", "Ralla zanahorias para el tallarín.", "Ralló la mesa con las llaves.", "Le arrolló un auto al cruzar la calle.", "Cruzó el arroyo sin dificultades."],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/uso-de-grafias-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Uso de grafías — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Identificar la palabra mal escrita:",
+          "alternatives": ["espectación", "estrafalario", "explanada", "estrambótico", "expedición"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/uso-de-grafias-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Uso de grafías — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Completa la letra que corresponde en los espacios en blanco del siguiente enunciado: 'La actri#\"___\" empe#\"___\"ó a re#\"___\"itar una ora#\"___\"ión'.",
+          "alternatives": ["z – z – c – c", "z – s – s – c", "z – s – c – c", "z – z – s – s", "z – s – s – s"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/uso-de-grafias-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Uso de grafías — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Elija la alternativa que presenta una ortografía correcta.",
+          "alternatives": ["brebage", "ambajes", "garage", "cirujía", "crujía"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/uso-de-grafias-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Uso de grafías — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Señale la alternativa que presenta correcta escritura en todas sus palabras: I) Honrrado, hueso, hundir. II) Coherente, inhóspito, escribir. III) Oveja, nobato, vesícula. IV) Verbena, adbervio, invensión. V) Geranio, peregil, ungüento.",
+          "alternatives": ["I", "II", "IV", "V", "III"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/uso-de-grafias-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Uso de grafías — banco de preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Acentuación",
+      "questions": [
+        {
+          "bodyTypst": "Marque la alternativa que presenta correcto uso de tildación.",
+          "alternatives": ["Es tarde, conqué apurate.", "Mira la toga con qué graduare.", "¡Con que frescura me contesto!", "¿Con qué dinero viajó?", "Este es el lápiz con que escribo."],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ortografiasecuencia-vocalica-acentuacion-preguntas-resueltas-lenguaje-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Acentuación — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Presenta incorrecto uso de tildación:",
+          "alternatives": ["Lo hice porque me lo mandaron.", "Dime por qué no acudiste a la cita.", "Conozco el porque de tu actuacion.", "Esos son los motivos por que dimitió el Presidente.", "Porque levantaste la mano, te llamaron."],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ortografiasecuencia-vocalica-acentuacion-preguntas-resueltas-lenguaje-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Acentuación — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "¿Cuál es la opción que no necesita de tilde ortográfica?",
+          "alternatives": ["La exegesis es la explicación o interpretación de un texto.", "Mira las notas musicales que escribi en el pentagrama.", "El misil alcanzo su objetivo tal y como estaba previsto.", "El poema que compuso el escritor tiene un tono elegiaco.", "Es un poliglota: sabe hablar inglés, frances, chino, etc."],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ortografiasecuencia-vocalica-acentuacion-preguntas-resueltas-lenguaje-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Acentuación — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "¿Cuál de las siguientes oraciones solo emplea tildación de proparoxítonas?",
+          "alternatives": ["El miércoles y el sábado hay práctica.", "El té y el anís son bebidas que me agradan.", "Tú debes prepararte para el examen.", "Él y yo sabemos el secreto.", "Te lo dije, fue así."],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ortografiasecuencia-vocalica-acentuacion-preguntas-resueltas-lenguaje-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Acentuación — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "¿En qué alternativa el monosílabo 'si' no lleva tilde?",
+          "alternatives": ["El joven volvió en si.", "Si, mañana iré a la fiesta contigo.", "Quisiera decir si.", "Ella tocó una melodía en si menor.", "Lo pensó para si."],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ortografiasecuencia-vocalica-acentuacion-preguntas-resueltas-lenguaje-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Acentuación — banco de preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Categorías gramaticales",
+      "questions": [
+        {
+          "bodyTypst": "Señale la serie en la que todas las palabras son preposiciones.",
+          "alternatives": ["cuando, luego, como", "antes, después, hoy", "por, en, desde", "así, según, mas", "ya, ora, bien"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/preposiciones-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "La preposición — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Señale las expresiones donde 'de' indica solamente pertenencia.",
+          "alternatives": ["casa del perro", "canasta de mimbre", "lección de inglés", "vino de la montaña", "saco de arroz"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/preposiciones-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "La preposición — banco de preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Morfología",
+      "questions": [
+        {
+          "bodyTypst": "El estudio de la estructura de las palabras pertenece a la:",
+          "alternatives": ["Morfonémica", "Fonología", "Sintaxis", "Ortología", "Morfología"],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/morfologia-morfemas-flexivos-y-derivativos-estructura-formacion-de-palabras-ejemplos-preguntas-resueltas-lenguaje-preuniversitario-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Morfología — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Marque la alternativa donde la palabra se ha formado por derivación.",
+          "alternatives": ["Grises", "Ardiente", "Cantamos", "Motocar", "Roja"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/morfologia-morfemas-flexivos-y-derivativos-estructura-formacion-de-palabras-ejemplos-preguntas-resueltas-lenguaje-preuniversitario-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Morfología — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Señale la palabra que se ha formado por prefijación:",
+          "alternatives": ["Cartero", "Antiquísimo", "Cortaplumas", "Descortés", "Caprichoso"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/formacion-de-palabras-derivacion-composicion-parasintesis-acronimia-siglas-acortamiento-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-secundaria-respuestas-word-pdf.html",
+          "sourceName": "Formación de palabras — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Señale la palabra que no se ha formado por parasíntesis:",
+          "alternatives": ["Sietemesino", "Quinceañera", "Pordiosero", "Terrorista", "Picapedrero"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/formacion-de-palabras-derivacion-composicion-parasintesis-acronimia-siglas-acortamiento-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-secundaria-respuestas-word-pdf.html",
+          "sourceName": "Formación de palabras — banco de preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Fonética y fonología",
+      "questions": [
+        {
+          "bodyTypst": "Un grafema es:",
+          "alternatives": ["La representación gráfica de un sonido.", "La segmentación que se ha materializado a través del aparato fonador.", "El sonido que se ha materializado a través del aparato fonador.", "La variante que sufre el sonido al ser pronunciado.", "Cualquier unidad sonora."],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/fonologia-fonemas-grafemas-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Fonología — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "La unidad de trabajo de la fonología es:",
+          "alternatives": ["Morfema", "Sintagma", "Semantema", "Fonema", "Monema"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/fonologia-fonemas-grafemas-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Fonología — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "La fonología estudia los sonidos #\"______\" y la fonética, los sonidos #\"______\" de la lengua.",
+          "alternatives": ["mentales - concretos", "materiales - mentales", "articulados - inarticulados", "reales - abstractos", "vocálicos - consonánticos"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/la-fonetica-fonos-digrafos-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Fonética — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "El acento y la entonación son considerados fonemas porque:",
+          "alternatives": ["se representan entre barras", "diferencian significados", "se manifiestan en el habla", "varían en cada persona", "se relacionan con el habla"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/fonologia-fonemas-grafemas-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Fonología — banco de preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Semántica",
+      "questions": [
+        {
+          "bodyTypst": "Durante su gestión como mandatario, el cambio en el precio de los alimentos benefició a los pobladores de condiciones menos favorecidas. Elija el término que, al sustituir la palabra subrayada 'benefició', permita expresar el significado opuesto de la oración.",
+          "alternatives": ["lastimó", "perjudicó", "molestó", "subvencionó", "dañó"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+          "sourceName": "UNI, Solucionario oficial del examen de admisión 2019-II"
+        },
+        {
+          "bodyTypst": "Dadas las siguientes oraciones: I) Un profesor de la UNI recibió una montaña de elogios. II) Los alumnos de la UNI son tigres para matemática. III) Los leones son depredadores voraces. Señale la alternativa que tiene oraciones con significado connotativo.",
+          "alternatives": ["Solo I", "Solo II", "I y II", "II y III", "I, II y III"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+          "sourceName": "UNI, Solucionario oficial del examen de admisión 2019-II"
+        },
+        {
+          "bodyTypst": "El ministro de Economía y Finanzas decidió que se debe subir el precio de la gasolina. Determine la alternativa que, al sustituir la palabra subrayada 'subir', precise el sentido del enunciado.",
+          "alternatives": ["elevar", "levantar", "alzar", "incrementar", "ascender"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+          "sourceName": "UNI, Solucionario oficial del examen de admisión 2019-II"
+        },
+        {
+          "bodyTypst": "En el enunciado 'Ayer traje dinero para comprarle un traje a mi padre', las palabras subrayadas presentan la relación de:",
+          "alternatives": ["Meronimia", "Hiponimia", "Paronimia", "Homonimia", "Polisemia"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/relaciones-semanticas-preguntas-resueltas-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+          "sourceName": "Relaciones semánticas — banco de preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Sintaxis",
+      "questions": [
+        {
+          "bodyTypst": "Marque la alternativa que contiene una oración transitiva.",
+          "alternatives": ["Juan era una persona respetuosa.", "Su padre retornará pronto a Lima.", "Todos los días se despierta temprano.", "Katy escribió un mensaje a su padre.", "Retornó a su casa después de dos años."],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sintaxis-unidades-sintacticas-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Sintaxis — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Identifique la oración bimembre.",
+          "alternatives": ["Había muchas personas en la protesta.", "Prohibido botar basura.", "Ayer hizo demasiado frío.", "Todavía es muy temprano.", "Juan, revisa tu agenda."],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sintaxis-unidades-sintacticas-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Sintaxis — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Marque la alternativa que presenta una oración interrogativa indirecta total (completa).",
+          "alternatives": ["Ignoro cuánto obtuviste en el examen.", "Dime si volverás mañana lunes.", "¿Sabes dónde jugará el Cienciano?", "¿Con qué fuiste a la ceremonia?", "Aún no sé por qué hiciste eso."],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sintaxis-unidades-sintacticas-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Sintaxis — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Indique la oración compuesta.",
+          "alternatives": ["Darío Muchotrigo fue un gran futbolista de los noventa.", "Quiere mucho a sus pequeños hijos.", "Tendrá que leer más si quiere aprobar el curso de Lecturas Críticas.", "Su mascota crece más cada día."],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sintaxis-unidades-sintacticas-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Sintaxis — banco de preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Signos de puntuación",
+      "questions": [
+        {
+          "bodyTypst": "Marque la alternativa que presenta puntuación correcta.",
+          "alternatives": ["José estudia Química en San Marcos; Elías, Medicina.", "La cantante Sonia, visitó París, Roma y España.", "Señor este producto es bueno y económico; cómprelo.", "El Dr. Reyes, le explicó con claridad y precisión.", "El que persevera tiene asegurado el éxito hermano."],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://es.slideshare.net/slideshow/preguntas-de-examen-de-admisin-puntuacin/65258375",
+          "sourceName": "Compilación abierta de preguntas de examen de admisión UNMSM, puntuación"
+        },
+        {
+          "bodyTypst": "Marque la alternativa en la que aparece la coma de vocativo.",
+          "alternatives": ["Elsa llegó con Héctor, su esposo.", "Betty, la de lentes oscuros, es bella.", "En la feria, Luisa recibió un regalo.", "Señora Julia, su hijo es muy listo.", "Al anochecer, Ana y Raúl regresaron."],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://es.slideshare.net/slideshow/preguntas-de-examen-de-admisin-puntuacin/65258375",
+          "sourceName": "Compilación abierta de preguntas de examen de admisión UNMSM, puntuación"
+        },
+        {
+          "bodyTypst": "Lea los enunciados y marque la alternativa que presenta coma explicativa: I) A través de los años, ella adquirió una amplia experiencia laboral. II) La señora Martina, por temor al corte del servicio, pagó aquella deuda. III) Compré flores, las envolví, las llevé y las entregué a su domicilio. IV) Comenzó la conferencia agradeciendo a Salazar, organizador del evento.",
+          "alternatives": ["I y II", "II y IV", "I y III", "II y III", "III y IV"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/signos-de-puntuacion-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Signos de puntuación — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Identifique la alternativa en la que se han empleado correctamente los dos puntos.",
+          "alternatives": ["Con esa dejadez: no lograrán ingresar a San Marcos, jóvenes.", "Sus discursos hablan a favor del obrero: pero en la práctica lo explotan.", "La verdad, escribe un estudiante: se debe sustentar con hechos.", "La ciudad de Lima camina insegura: la delincuencia ha aumentado.", "El dinero, la juventud, los honores: pasan fugazmente como el humo."],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/signos-de-puntuacion-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Signos de puntuación — banco de preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Normativa (dequeísmo y queísmo)",
+      "questions": [
+        {
+          "bodyTypst": "¿Qué alternativa presenta dequeísmo?",
+          "alternatives": ["Se puede tener confianza de que todo saldrá bien.", "Me agradaría de que todo salga bien.", "Me alegro de que todo lo que planificaste se logró en el tiempo propuesto.", "El abogado los convenció de que es necesario cumplir con las obligaciones.", "Está convencido de que su propuesta es idónea."],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/vicios-del-lenguaje-solecismo-redundancia-anfibologia-barbarismo-cacofonia-ejemplos-preguntas-resueltas-preuniversitarias-secundaria-word-pdf.html",
+          "sourceName": "Vicios del lenguaje: dequeísmo — banco de preguntas resueltas"
+        },
+        {
+          "bodyTypst": "¿Qué alternativa presenta uso adecuado del «de que»?",
+          "alternatives": ["Aguardan de que te vayas pronto.", "La mujer dice de que volverá mañana.", "Pedro piensa de que aprobará el examen.", "Me gustó de que regresara.", "Nos convenció de que apostáramos."],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/vicios-del-lenguaje-solecismo-redundancia-anfibologia-barbarismo-cacofonia-ejemplos-preguntas-resueltas-preuniversitarias-secundaria-word-pdf.html",
+          "sourceName": "Vicios del lenguaje: uso de \"de que\" — banco de preguntas resueltas"
+        }
+      ]
+    }
+  ]
+}

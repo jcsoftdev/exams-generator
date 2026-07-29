@@ -147,6 +147,9 @@ export class BankNewComponent {
   protected readonly sBody = signal('');
   protected readonly sAlternatives = signal('');
   protected readonly sCorrectAnswer = signal('');
+  /** Optional complement image (chart/diagram/passage scan) — never required, `structuredValid()` doesn't check it. */
+  protected readonly sImage = signal<File | null>(null);
+  protected readonly sImagePreviewUrl = signal<string | null>(null);
 
   /**
    * Consumed once by the `sGradeLevel`/`sCourseId` effects below — lets
@@ -238,6 +241,20 @@ export class BankNewComponent {
     }
     this.pImage.set(file);
     this.pImagePreviewUrl.set(file ? URL.createObjectURL(file) : null);
+  }
+
+  protected onStructuredImageSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    this.setStructuredImage(input.files?.[0] ?? null);
+  }
+
+  private setStructuredImage(file: File | null): void {
+    const previous = this.sImagePreviewUrl();
+    if (previous) {
+      URL.revokeObjectURL(previous);
+    }
+    this.sImage.set(file);
+    this.sImagePreviewUrl.set(file ? URL.createObjectURL(file) : null);
   }
 
   protected photoValid(): boolean {
@@ -385,10 +402,25 @@ export class BankNewComponent {
       .filter((l) => l.length > 0);
   }
 
+  /**
+   * Set once `createStructuredQuestion` succeeds — if the follow-up
+   * `replaceQuestionImage` step then fails, a resubmit must only retry
+   * attaching the image, never call `createStructuredQuestion` again
+   * (which would silently create a duplicate question).
+   */
+  private sCreatedQuestionId: string | null = null;
+
   protected submitStructured(): void {
     if (this.saving() || !this.structuredValid()) return;
     this.saving.set(true);
     this.saveError.set(null);
+
+    const existingId = this.sCreatedQuestionId;
+    if (existingId) {
+      this.attachStructuredImageAndFinish(existingId);
+      return;
+    }
+
     this.bankService
       .createStructuredQuestion({
         courseId: this.sCourseId(),
@@ -400,14 +432,35 @@ export class BankNewComponent {
         alternatives: this.alternativesList(),
       })
       .subscribe({
-        next: () => {
-          this.saving.set(false);
-          this.router.navigate(['/app/bank']);
+        next: ({ id }) => {
+          this.sCreatedQuestionId = id;
+          this.attachStructuredImageAndFinish(id);
         },
         error: (_e: HttpErrorResponse) => {
           this.saving.set(false);
           this.saveError.set('No se pudo guardar la pregunta. Revisa los datos e inténtalo de nuevo.');
         },
       });
+  }
+
+  private attachStructuredImageAndFinish(id: string): void {
+    const image = this.sImage();
+    if (!image) {
+      this.saving.set(false);
+      this.router.navigate(['/app/bank']);
+      return;
+    }
+    this.bankService.replaceQuestionImage(id, image).subscribe({
+      next: () => {
+        this.saving.set(false);
+        this.router.navigate(['/app/bank']);
+      },
+      error: () => {
+        this.saving.set(false);
+        this.saveError.set(
+          'La pregunta se guardó, pero no se pudo adjuntar la imagen complementaria. Edítala desde el banco para volver a intentarlo.',
+        );
+      },
+    });
   }
 }

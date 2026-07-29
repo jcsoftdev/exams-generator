@@ -1,0 +1,58 @@
+{
+  "entries": [
+    {
+      "courseName": "Ecología",
+      "topicName": "Rocas y suelo",
+      "gradeLevel": "pre",
+      "bodyTypst": "La figura permite ilustrar la composición de las rocas. Identifique los elementos representados por X e Y, respectivamente.",
+      "alternatives": [
+        "Cuarzo - Pizarra",
+        "Calcita - Pizarra",
+        "Mármol - Calcita",
+        "Calcita - Mármol",
+        "Cuarzo - Mármol"
+      ],
+      "correctAnswer": "4",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/ecologia-sweep-rocas-marmol-cuarzo.png",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com (Rubiños) — Ecología, examen resuelto de admisión a universidad, Pregunta 6"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Clima y desastres naturales",
+      "gradeLevel": "pre",
+      "bodyTypst": "En el esquema mostrado, identifique la característica de las aguas representadas por X para la ocurrencia del Fenómeno del Niño.",
+      "alternatives": [
+        "Aguas heladas",
+        "Aguas termales",
+        "Aguas ácidas",
+        "Aguas cálidas",
+        "Aguas minerales"
+      ],
+      "correctAnswer": "3",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/ecologia-sweep-fenomeno-nino-aguas-calidas.png",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/12/ecologia-examen-resuelto-de-admision-a-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+      "sourceName": "matematicasn.blogspot.com (Rubiños) — Ecología, examen resuelto de admisión a universidad, Pregunta 10"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Ecorregiones del Perú, biomas y áreas naturales protegidas",
+      "gradeLevel": "pre",
+      "bodyTypst": "Respecto a la distribución mundial de especies de acuerdo con la gradiente latitudinal representada en el gráfico, identifique la alternativa correcta.",
+      "alternatives": [
+        "En \"x\" hay mayor biodiversidad que en \"y\".",
+        "En \"y\" la biodiversidad disminuye.",
+        "En \"y\" la biodiversidad se incrementa.",
+        "En \"x\" la biodiversidad se incrementa.",
+        "En \"x\" e \"y\" la biodiversidad es semejante."
+      ],
+      "correctAnswer": "2",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/ecologia-sweep-gradiente-latitudinal-biodiversidad.png",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+      "sourceName": "matematicasn.blogspot.com (Rubiños) — Ecología, banco de preguntas resueltas, Segunda Práctica, Pregunta 11"
+    }
+  ]
+}

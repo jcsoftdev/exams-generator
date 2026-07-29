@@ -1,0 +1,381 @@
+{
+  "courseName": "Geometría",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Segmentos y Ángulos",
+      "questions": [
+        {
+          "bodyTypst": "Sobre una recta se ubican los puntos consecutivos A, B, C y D, de modo que AC = 12 y AD + CD = 32. Halle AD.",
+          "alternatives": ["21", "24", "22", "10", "12"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — ejercicios de segmentos"
+        },
+        {
+          "bodyTypst": "Los puntos A, B, C y D se encuentran sobre una línea recta, de modo que AB = 8 y BC = 12. Luego se toma el punto medio F de AC. Calcule BF.",
+          "alternatives": ["1", "2", "1.5", "0.5", "3"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — ejercicios de segmentos"
+        },
+        {
+          "bodyTypst": "Sobre una recta se toman los puntos consecutivos A, B, C y D, de modo que AB = BD = 4·CD. Halle CD, si AD = 24.",
+          "alternatives": ["1", "2", "4", "3", "6"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/11/segmentos-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — ejercicios de segmentos"
+        },
+        {
+          "bodyTypst": "Halle la medida de un ángulo sabiendo que su suplemento es igual al triple de su complemento.",
+          "alternatives": ["$35 degree$", "$55 degree$", "$65 degree$", "$45 degree$", "$75 degree$"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/angulos-ejercicios-resueltos-cuarto-de.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — ejercicios de ángulos"
+        }
+      ]
+    },
+    {
+      "name": "Triángulos",
+      "questions": [
+        {
+          "bodyTypst": "En un triángulo isósceles, la suma de las medidas de dos ángulos diferentes es $110 degree$. Halle la suma de las medidas de los ángulos adyacentes a la base.",
+          "alternatives": ["$120 degree$", "$140 degree$", "$150 degree$", "$135 degree$", "$145 degree$"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/los-triangulos-y-sus-propiedades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — triángulos y propiedades"
+        },
+        {
+          "bodyTypst": "Las medidas de los ángulos interiores de un triángulo son proporcionales a los números 2, 3 y 5. Halle la diferencia entre el mayor y el menor de dichos ángulos.",
+          "alternatives": ["$18 degree$", "$24 degree$", "$36 degree$", "$54 degree$", "$90 degree$"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/los-triangulos-y-sus-propiedades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — triángulos y propiedades"
+        },
+        {
+          "bodyTypst": "En un triángulo rectángulo, el producto de las longitudes de los catetos es 120 y la suma de dichas longitudes es 23. Calcule la longitud de la hipotenusa.",
+          "alternatives": ["15", "13", "12", "17"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/los-triangulos-y-sus-propiedades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — triángulos y propiedades"
+        }
+      ]
+    },
+    {
+      "name": "Congruencia y Semejanza",
+      "questions": [
+        {
+          "bodyTypst": "El perímetro de un triángulo cuyos lados miden 6, 9 y 10 es igual a 25. Si este triángulo es semejante a otro cuya razón de semejanza respecto al primero es 5, calcule el perímetro del segundo triángulo.",
+          "alternatives": ["5", "25", "100", "125", "250"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/semejanza-de-triangulos-ejercicios.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — semejanza de triángulos"
+        },
+        {
+          "bodyTypst": "Una torre proyecta una sombra de 8 m en el mismo instante en que un poste de 5 m de altura proyecta una sombra de 2 m. Halle la altura de la torre.",
+          "alternatives": ["15 m", "20 m", "30 m", "18 m", "24 m"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/semejanza-de-triangulos-ejercicios.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — semejanza de triángulos"
+        },
+        {
+          "bodyTypst": "Una torre de 15 m de altura proyecta una sombra de 60 m de longitud. ¿Cuál es la estatura de un niño que, a la misma hora, proyecta una sombra de 4 m de longitud?",
+          "alternatives": ["1 m", "1.2 m", "1.4 m", "1.6 m", "1.8 m"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/semejanza-de-triangulos-ejercicios.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — semejanza de triángulos"
+        },
+        {
+          "bodyTypst": "Los catetos de un triángulo rectángulo miden 6 m y 8 m. Calcule la longitud de la mediana relativa a la hipotenusa.",
+          "alternatives": ["3 m", "5 m", "6 m", "4 m", "10 m"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/aplicaciones-de-la-congruencia-de.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — aplicaciones de la congruencia"
+        }
+      ]
+    },
+    {
+      "name": "Proporcionalidad y Relaciones Métricas",
+      "questions": [
+        {
+          "bodyTypst": "En un triángulo rectángulo, un cateto mide 6 y la hipotenusa mide 9. Halle la proyección de dicho cateto sobre la hipotenusa.",
+          "alternatives": ["2", "3", "4", "5", "6"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/relaciones-metricas-en-triangulos_30.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — relaciones métricas en el triángulo rectángulo"
+        },
+        {
+          "bodyTypst": "En un triángulo rectángulo cuyos catetos miden 6 y 8, calcule la longitud de la altura relativa a la hipotenusa.",
+          "alternatives": ["3.6", "4.8", "5.2", "7.6", "3.8"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/relaciones-metricas-en-triangulos_30.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — relaciones métricas en el triángulo rectángulo"
+        },
+        {
+          "bodyTypst": "La hipotenusa y uno de los catetos de un triángulo rectángulo miden 29 cm y 21 cm, respectivamente. Calcule la longitud del otro cateto.",
+          "alternatives": ["18 cm", "16 cm", "20 cm", "22 cm", "23 cm"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/relaciones-metricas-en-triangulos_30.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — relaciones métricas en el triángulo rectángulo"
+        },
+        {
+          "bodyTypst": "Halle la longitud del mayor cateto de un triángulo rectángulo cuyos lados están en progresión aritmética de razón 3.",
+          "alternatives": ["9", "12", "15", "18", "21"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/relaciones-metricas-en-triangulos_30.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — relaciones métricas en el triángulo rectángulo"
+        }
+      ]
+    },
+    {
+      "name": "Polígonos y Cuadriláteros",
+      "questions": [
+        {
+          "bodyTypst": "Calcule la medida del ángulo externo de un icoságono regular (polígono regular de 20 lados).",
+          "alternatives": ["$12 degree$", "$16 degree$", "$20 degree$", "$18 degree$", "$32 degree$"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — polígonos"
+        },
+        {
+          "bodyTypst": "¿Qué polígono regular tiene 44 diagonales?",
+          "alternatives": ["Hexágono", "Endecágono", "Triángulo", "Icoságono"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/11/poligonos-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — polígonos"
+        },
+        {
+          "bodyTypst": "Uno de los lados de un rectángulo es el doble del otro. Si el perímetro del rectángulo es 90, halle la longitud del lado mayor.",
+          "alternatives": ["20", "25", "30", "35", "40"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — cuadriláteros"
+        },
+        {
+          "bodyTypst": "Las medidas de dos ángulos consecutivos de un paralelogramo están en la razón de 4 a 5. Halle la medida del menor de dichos ángulos.",
+          "alternatives": ["$80 degree$", "$100 degree$", "$90 degree$", "$45 degree$", "$20 degree$"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/11/cuadrilateros-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — cuadriláteros"
+        }
+      ]
+    },
+    {
+      "name": "Circunferencia",
+      "questions": [
+        {
+          "bodyTypst": "En un triángulo rectángulo, los catetos miden 15 m y 20 m. Halle la longitud del inradio (radio de la circunferencia inscrita).",
+          "alternatives": ["3", "5", "6", "8", "12"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/11/circunferencia-plana-ejercicios.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — circunferencia"
+        },
+        {
+          "bodyTypst": "En un triángulo ABC, con AB = 8, BC = 10 y AC = 12, la circunferencia inscrita determina el punto M sobre AC. Calcule AM.",
+          "alternatives": ["3", "5", "6", "8", "12"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/11/circunferencia-plana-ejercicios.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — circunferencia"
+        },
+        {
+          "bodyTypst": "En un triángulo rectángulo, el semiperímetro mide 16 cm y el inradio mide 4 cm. Calcule la longitud de la hipotenusa.",
+          "alternatives": ["13", "15", "16", "18", "12"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/11/circunferencia-plana-ejercicios.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — circunferencia"
+        }
+      ]
+    },
+    {
+      "name": "Áreas de Regiones Planas",
+      "questions": [
+        {
+          "bodyTypst": "Los lados de una región triangular miden 10, 21 y 17. Calcule la longitud de su inradio.",
+          "alternatives": ["$7/3$", "$7/2$", "$5/2$", "4", "$6/5$"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/areas-de-regiones-triangulares.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — áreas de regiones triangulares"
+        },
+        {
+          "bodyTypst": "Los lados de una región triangular miden 30, 30 y 48. Calcule la longitud de su circunradio.",
+          "alternatives": ["35", "25", "50", "24", "16"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/areas-de-regiones-triangulares.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — áreas de regiones triangulares"
+        },
+        {
+          "bodyTypst": "En un trapecio isósceles ABCD, AB = 5, BC = 4 y AD = 10. Calcule el área del trapecio.",
+          "alternatives": ["$25 u^2$", "$26 u^2$", "$27 u^2$", "$28 u^2$"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-de-regiones-cuadrangulares.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — áreas de regiones cuadrangulares"
+        },
+        {
+          "bodyTypst": "El área de un círculo es $36 pi \"cm\"^2$. Halle el área del cuadrado inscrito en la circunferencia de dicho círculo.",
+          "alternatives": ["$72 \"cm\"^2$", "$48 pi \"cm\"^2$", "$64 pi \"cm\"^2$", "$96 pi \"cm\"^2$", "$90 pi \"cm\"^2$"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-de-regiones-circulares-ejercicios.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — áreas de regiones circulares"
+        }
+      ]
+    },
+    {
+      "name": "Isoperimetría, Número Áureo y Simetría",
+      "questions": [
+        {
+          "bodyTypst": "Un rectángulo tiene $60 \"cm\"^2$ de área. Si sus lados son números enteros (en centímetros), halle el perímetro mínimo posible.",
+          "alternatives": ["30", "32", "34", "36", "38"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/maximos-y-minimos-problemas-con.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — máximos y mínimos / isoperimetría"
+        },
+        {
+          "bodyTypst": "¿Para qué valor del radio se hace máxima el área de un sector circular de perímetro $2p$?",
+          "alternatives": ["$p/5$", "$p/4$", "$p/3$", "$p/2$", "$p$"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/maximos-y-minimos-problemas-con.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — máximos y mínimos / isoperimetría"
+        },
+        {
+          "bodyTypst": "Determine las coordenadas del punto simétrico de A(-4, 6) respecto del punto P(-1, 2).",
+          "alternatives": ["(-3, 2)", "(2, -2)", "(3, -3)", "(0, -2)"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/06/simetrias-y-reflexiones-ejercicios-resueltos-de-razonamiento-matematico-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-aptitud-academica-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — simetrías y reflexiones"
+        },
+        {
+          "bodyTypst": "Del cuadrado ABCD se sabe que A(1, 1), B(1, -4) y C(6, -4). A dicho cuadrado se le aplica una simetría central respecto del origen de coordenadas. Halle la menor suma de coordenadas entre los vértices del cuadrado simétrico resultante.",
+          "alternatives": ["-2", "-5", "-7", "-10"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/06/simetrias-y-reflexiones-ejercicios-resueltos-de-razonamiento-matematico-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-aptitud-academica-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — simetrías y reflexiones"
+        }
+      ]
+    },
+    {
+      "name": "Geometría del Espacio (Poliedros)",
+      "questions": [
+        {
+          "bodyTypst": "En un poliedro convexo, el número de caras es igual al número de vértices. Si la razón entre el número de aristas y el número de caras es $12/7$, calcule la suma de los números de caras, aristas y vértices.",
+          "alternatives": ["26", "52", "24", "36", "30"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — poliedros"
+        },
+        {
+          "bodyTypst": "Un poliedro está limitado por 3 cuadriláteros convexos y 6 pentágonos convexos. Halle el número de aristas.",
+          "alternatives": ["18", "20", "25", "21", "24"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — poliedros"
+        },
+        {
+          "bodyTypst": "Un poliedro está limitado por 4 triángulos y 5 hexágonos convexos. Halle el número de vértices.",
+          "alternatives": ["16", "14", "18", "12", "20"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/poliedros-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — poliedros"
+        },
+        {
+          "bodyTypst": "Si la arista de un cubo mide 6 cm, calcule su volumen.",
+          "alternatives": ["$180 \"cm\"^3$", "$192 \"cm\"^3$", "$206 \"cm\"^3$", "$216 \"cm\"^3$", "$128 \"cm\"^3$"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/poliedros-regulares-problemas-con.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — poliedros regulares"
+        }
+      ]
+    },
+    {
+      "name": "Cuerpos Redondos",
+      "questions": [
+        {
+          "bodyTypst": "Calcule la longitud del radio de una esfera, sabiendo que el área de su superficie total es numéricamente igual a su volumen.",
+          "alternatives": ["1 cm", "2 cm", "3 cm", "4 cm", "6 cm"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — la esfera"
+        },
+        {
+          "bodyTypst": "El área de la superficie lateral de un cilindro de revolución es igual al área de su base. Si el radio de la base mide 6, halle la altura del cilindro.",
+          "alternatives": ["1", "2", "3", "4", "0.5"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — el cilindro"
+        },
+        {
+          "bodyTypst": "La altura de un cono de revolución mide 12 y el diámetro de su base mide 10. Halle el área de su superficie lateral.",
+          "alternatives": ["$60 pi$", "$64 pi$", "$62 pi$", "$65 pi$", "$70 pi$"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — el cono"
+        },
+        {
+          "bodyTypst": "La generatriz de un cono recto mide 5 m, y al desarrollar su superficie lateral se obtiene un sector circular de $216 degree$. Calcule el volumen de dicho cono, en $\"m\"^3$.",
+          "alternatives": ["$12 pi$", "$16 pi$", "$18 pi$", "$20 pi$", "$70 pi$"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — el cono"
+        }
+      ]
+    },
+    {
+      "name": "Razonamiento Matemático Aplicado (Geometría)",
+      "questions": [
+        {
+          "bodyTypst": "Se diseña una maqueta en la que el largo y el ancho del rectángulo que representa un campo deportivo miden 20 cm y 10 cm, respectivamente. Si la escala empleada es 1:500, calcule el perímetro real del campo deportivo.",
+          "alternatives": ["250 m", "300 m", "120 m", "350 m"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/220-problemas-resueltos-de-razonamiento.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — problemas de razonamiento geométrico"
+        },
+        {
+          "bodyTypst": "Una escalera de 2.5 m está apoyada en una pared vertical; el pie de la escalera se encuentra a 0.7 m de la pared. Si la parte superior se desliza 0.4 m hacia abajo, calcule cuánto se desliza el pie de la escalera.",
+          "alternatives": ["2.3", "1.5", "0.8", "0.9", "2.5"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/220-problemas-resueltos-de-razonamiento.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — problemas de razonamiento geométrico"
+        }
+      ]
+    }
+  ]
+}

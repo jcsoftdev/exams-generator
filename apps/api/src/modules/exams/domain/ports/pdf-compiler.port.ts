@@ -3,10 +3,12 @@
  * answer-key PDF for one exam version. `type='image'` questions are single
  * baked images (enunciado + alternativas already flattened into one image)
  * embedded as-is. `type='structured'` questions (design doc §5.4) carry
- * Typst-markup `bodyTypst`, a JSON `alternatives` array, and an optional
- * CeTZ `figureCode` — the template renders enunciado + numbered
- * alternatives + figure with the SAME two-column, numbered visual style as
- * image questions.
+ * Typst-markup `bodyTypst`, a JSON `alternatives` array, an optional CeTZ
+ * `figureCode` (vector drawing), and an optional `imageAbsolutePath` (a
+ * complement raster image — a chart/diagram/passage scan that can't be
+ * authored in Typst) — the template renders enunciado + numbered
+ * alternatives + figure/image with the SAME two-column, numbered visual
+ * style as image questions.
  */
 export interface ExamPdfImageQuestion {
   readonly id: string;
@@ -20,6 +22,7 @@ export interface ExamPdfStructuredQuestion {
   readonly bodyTypst: string;
   readonly alternatives: readonly string[];
   readonly figureCode?: string;
+  readonly imageAbsolutePath?: string;
 }
 
 export type ExamPdfQuestion = ExamPdfImageQuestion | ExamPdfStructuredQuestion;

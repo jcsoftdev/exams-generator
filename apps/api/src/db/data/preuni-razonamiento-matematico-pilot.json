@@ -1,0 +1,268 @@
+{
+  "courseName": "Razonamiento Matemático",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Razonamiento Lógico",
+      "questions": [
+        {
+          "bodyTypst": "Mi abuelo es hijo único, pero yo no. ¿Qué parentesco tengo con la nieta de la madre del padre de mi padre?",
+          "alternatives": ["Ninguno", "Hijo", "Sobrino", "Hermano", "Primo"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2019-1"
+        },
+        {
+          "bodyTypst": "Si LIMA + COVID = WUHAN + SARS (comparando el número de letras de cada lado), entonces PANDEMIA = ¿?",
+          "alternatives": ["6", "8", "9", "10", "12"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2021-1"
+        },
+        {
+          "bodyTypst": "Tres amigos, Hugo, Paco y Luis, hacen las siguientes afirmaciones: Hugo dice: \"Yo soy mayor de edad\". Paco dice: \"Hugo miente\". Luis dice: \"Paco es mayor de edad\". Se sabe que solo uno de los tres miente y que solo uno de los tres es mayor de edad. ¿Quién es mayor de edad?",
+          "alternatives": ["Luis", "Hugo", "Paco", "Ninguno de los tres"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-logico-admision-universidad.html",
+          "sourceName": "matematicasn.blogspot.com — Razonamiento Lógico"
+        }
+      ]
+    },
+    {
+      "name": "Razonamiento Lógico Formal",
+      "questions": [
+        {
+          "bodyTypst": "Se definen dos operaciones entre proposiciones: $p star q equiv (not p) and q$ y $p diamond.stroked q equiv p or (not q)$. Además, se sabe que $not [ (q star p) arrow (q diamond.stroked r) ] equiv V$. Determine los valores de verdad de $p$, $q$ y $r$, respectivamente.",
+          "alternatives": ["F F F", "F V V", "V F V", "V V F", "V V V"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2019-1"
+        },
+        {
+          "bodyTypst": "¿Cuál o cuáles de las siguientes proposiciones son equivalentes a $(p arrow q) arrow r$? I. $not (p and (not q) and (not r))$ II. $(p and (not q)) or r$ III. $(r or q) and ((not r) and q)$ IV. $(not p) or q or r$ V. $p and (not q) and (not r)$",
+          "alternatives": ["Solo I", "Solo II", "Solo III", "I y II", "III y V"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2018-2"
+        },
+        {
+          "bodyTypst": "Simplifique la proposición: $[(p arrow q) and (q arrow r) and p] arrow (q and r)$",
+          "alternatives": ["p", "q", "r", "V", "F"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2018-2"
+        }
+      ]
+    },
+    {
+      "name": "Razonamiento Analítico",
+      "questions": [
+        {
+          "bodyTypst": "Juana tiene tres amigos: Marcos, Luis y Víctor, que viven en tres ciudades distintas: Lima, Cusco e Iquitos, y tienen tres caracteres distintos: tímido, liberal y agresivo. Se desea saber dónde vive Víctor y cuál es su carácter. Información brindada: I. Marcos no está en Lima ni Luis en Cusco, y el que vive en Iquitos es agresivo. II. El que está en Lima no es tímido, y Luis no es liberal ni tímido. Para resolver el problema:",
+          "alternatives": ["La información I es suficiente", "La información II es suficiente", "Es necesario utilizar ambas informaciones", "Cada información, por separado, es suficiente", "Falta información"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2019-1"
+        },
+        {
+          "bodyTypst": "Se desea averiguar si $x = y$. Hechos: I. $(x - 50)^2 = (y - 50)^2$. II. $(x+y) (1/x + 1/y) = 4$. Escoja la mejor respuesta:",
+          "alternatives": ["I por sí sola es suficiente para resolver el problema", "II por sí sola es suficiente para resolver el problema", "Se necesita usar tanto I como II para resolver el problema", "Cada hecho, en forma independiente, puede resolver el problema", "Aparte de I y II se necesita información adicional"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2021-1"
+        }
+      ]
+    },
+    {
+      "name": "Razonamiento Inductivo-Deductivo",
+      "questions": [
+        {
+          "bodyTypst": "Si se afirma que: \"Algunos relajados van a fiestas\" y \"Todos los que van a fiestas pierden tiempo\", determine la conclusión correcta.",
+          "alternatives": ["Los que van a fiestas no son relajados", "Los que van a fiestas son relajados", "Algunos relajados pierden tiempo", "Todos los relajados aprovechan el tiempo", "No todos los que van a fiestas pierden tiempo"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2019-1"
+        },
+        {
+          "bodyTypst": "Si $f(1) = 3 times 1 + 4$, $f(2) = 6 times 4 - 8$ y $f(3) = 9 times 9 + 12$, calcule $f(4)$ siguiendo el mismo patrón de formación.",
+          "alternatives": ["208", "176", "131", "184", "192"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/psicotecnico-numerico-literales-graficos.html",
+          "sourceName": "matematicasn.blogspot.com — Psicotécnico numérico"
+        }
+      ]
+    },
+    {
+      "name": "Operaciones y Operadores Matemáticos",
+      "questions": [
+        {
+          "bodyTypst": "Se define el operador $Delta$ mediante la siguiente tabla de doble entrada (el valor corresponde a $a Delta b$): $1 Delta 1=1$, $1 Delta 2=2$, $1 Delta 3=3$, $1 Delta 4=4$; $2 Delta 1=2$, $2 Delta 2=3$, $2 Delta 3=4$, $2 Delta 4=5$; $3 Delta 1=3$, $3 Delta 2=4$, $3 Delta 3=5$, $3 Delta 4=6$; $4 Delta 1=4$, $4 Delta 2=5$, $4 Delta 3=6$, $4 Delta 4=7$. Halle el valor de $(5 Delta 7) Delta (6 Delta 4)$.",
+          "alternatives": ["16", "17", "18", "19", "20"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2021-1"
+        },
+        {
+          "bodyTypst": "Se define el operador $star$ en el conjunto ${0,1,2,3,4}$ mediante una tabla de doble entrada: $0 star 0=0$, $0 star 1=1$, $0 star 2=2$, $0 star 3=3$, $0 star 4=4$; $1 star 0=1$, $1 star 1=2$, $1 star 2=3$, $1 star 3=4$, $1 star 4=0$; $2 star 0=2$, $2 star 1=3$, $2 star 2=4$, $2 star 3=0$, $2 star 4=1$; $3 star 0=3$, $3 star 1=4$, $3 star 2=0$, $3 star 3=1$, $3 star 4=2$; $4 star 0=4$, $4 star 1=0$, $4 star 2=1$, $4 star 3=2$, $4 star 4=3$. Halle el valor de $x$ que verifica: $(2 star x) star (x star 3) = (x star 1) star 4$.",
+          "alternatives": ["0", "1", "2", "3", "4"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2019-1"
+        }
+      ]
+    },
+    {
+      "name": "Planteo de Ecuaciones",
+      "questions": [
+        {
+          "bodyTypst": "Inocente gasta todos los días la mitad del dinero que posee más S/20; al cabo de tres días ha gastado todo su dinero. ¿Cuánto dinero tenía al inicio?",
+          "alternatives": ["S/550", "S/380", "S/440", "S/280", "S/480"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-matematico-ejercicios.html",
+          "sourceName": "matematicasn.blogspot.com — Razonamiento Matemático resuelto"
+        },
+        {
+          "bodyTypst": "Una persona sube una escalera de tal manera que por cada 8 gradas que sube, baja 3. Si recorrió en total 173 gradas, ¿cuántas gradas en total descendió?",
+          "alternatives": ["34", "38", "45", "48", "50"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2019-1"
+        },
+        {
+          "bodyTypst": "Alexander está en el club el triple de años de los que está Sebastián. Hace 3 años, estaba el quíntuple de años de los que estaba Sebastián. ¿Cuántos años lleva cada uno en el club (Sebastián y Alexander, respectivamente)?",
+          "alternatives": ["4 y 12", "2 y 6", "6 y 18", "3 y 9", "5 y 15"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-matematico-ejercicios.html",
+          "sourceName": "matematicasn.blogspot.com — Razonamiento Matemático resuelto"
+        },
+        {
+          "bodyTypst": "Mateo le dio a Xiomara tantas veces 25 céntimos como soles tenía en su billetera. Si aún le quedan S/225, ¿cuántos soles tenía Mateo en su billetera?",
+          "alternatives": ["280", "300", "320", "330", "350"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2019-1"
+        }
+      ]
+    },
+    {
+      "name": "Problemas con Fracciones y Porcentajes",
+      "questions": [
+        {
+          "bodyTypst": "Un gráfico circular muestra la distribución de 500 alumnos según su curso favorito (cada uno votó por un solo curso): Matemáticas 40%, Física 20%, Ciencias 30%, Arte 10%. Dadas las siguientes proposiciones: I. La cantidad total de alumnos que eligieron Matemáticas y Física es 300. II. Los que prefirieron Arte son la octava parte de los que eligieron los demás cursos. III. El total de alumnos que prefirieron Ciencias es igual a la suma de los que prefirieron Arte y Física. Señale la secuencia correcta, tras determinar si cada proposición es verdadera (V) o falsa (F):",
+          "alternatives": ["V V F", "V F F", "F V V", "F F V", "V F V"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2021-1"
+        },
+        {
+          "bodyTypst": "En una fábrica, la producción de la línea A se incrementa en 5% del año 2016 al 2017, y la producción de la línea B aumenta en 10% en ese mismo periodo. Se desea saber cuántas unidades se produjeron en 2016 en la línea A. Información brindada: I. Las dos líneas combinadas produjeron 100 000 unidades en 2016. II. Las dos líneas combinadas produjeron 107 500 unidades en 2017. Para resolver el problema:",
+          "alternatives": ["La información I es suficiente", "La información II es suficiente", "Es necesario utilizar ambas informaciones", "Cada información, por separado, es suficiente", "Falta información"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2019-1"
+        }
+      ]
+    },
+    {
+      "name": "Cronometría y Móviles",
+      "questions": [
+        {
+          "bodyTypst": "La esposa de un presidente tiene un reloj extraño de forma circular, dividido en ocho partes iguales. Cada \"nueva hora\" (NH) equivale a 40 \"nuevos minutos\" (NM), y cada \"nuevo minuto\" (NM) equivale a 40 \"nuevos segundos\" (NS). Si al preguntarle a qué hora se acostó él, ella responde que fue a las 2NH12NM (en el reloj extraño), ¿a qué hora, en el horario normal, se está durmiendo?",
+          "alternatives": ["3H 18M", "3H 20M", "3H 25M", "3H 27M", "2H 28M"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2021-1"
+        },
+        {
+          "bodyTypst": "¿Qué hora es, si el tiempo transcurrido del día representa los 3/5 del tiempo que falta transcurrir para que termine el día?",
+          "alternatives": ["17 h", "8 h", "9 h", "10 h", "12 h"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/10/razonamiento-logico-matematico.html",
+          "sourceName": "matematicasn.blogspot.com — Razonamiento Lógico Matemático"
+        }
+      ]
+    },
+    {
+      "name": "Sucesiones, Series y Analogías Numéricas",
+      "questions": [
+        {
+          "bodyTypst": "Seis números se agrupan en tres pares opuestos, unidos por líneas que se cruzan en un punto central: un par está formado por 27 y 73; otro par por 82 y 29; y el tercer par por 48 y un número desconocido. Cada par de números opuestos se relaciona mediante la misma regla. Determine el número que falta (el opuesto de 48).",
+          "alternatives": ["29", "38", "64", "76", "85"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2021-1"
+        },
+        {
+          "bodyTypst": "Halle el término que continúa en la sucesión: 2, 2, 6, 12, 30, 72, ...",
+          "alternatives": ["124", "152", "164", "178", "182"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "Solucionario oficial Admisión UNI 2018-2"
+        },
+        {
+          "bodyTypst": "Halle el número de términos de la siguiente progresión: 4, 6, 11, 19, 30, ..., 555",
+          "alternatives": ["18", "30", "26", "25", "20"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-matematico-ejercicios.html",
+          "sourceName": "matematicasn.blogspot.com — Razonamiento Matemático resuelto"
+        }
+      ]
+    },
+    {
+      "name": "Conteo de Figuras",
+      "questions": []
+    },
+    {
+      "name": "Psicotécnico",
+      "questions": [
+        {
+          "bodyTypst": "Determine el número que sigue en la sucesión: 12, 13, 15, 16, 18, ...",
+          "alternatives": ["23", "21", "20", "19", "16"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/psicotecnico-numerico-literales-graficos.html",
+          "sourceName": "matematicasn.blogspot.com — Psicotécnico numérico"
+        },
+        {
+          "bodyTypst": "Determine el número que sigue en la sucesión: 46, 58, 72, 88, ...",
+          "alternatives": ["90", "100", "110", "106", "112"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/psicotecnico-numerico-literales-graficos.html",
+          "sourceName": "matematicasn.blogspot.com — Psicotécnico numérico"
+        },
+        {
+          "bodyTypst": "Halle la letra que continúa en la sucesión alfabética: C, E, G, I, K, ...",
+          "alternatives": ["R", "B", "H", "M", "N"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/psicotecnico-numerico-literales-graficos.html",
+          "sourceName": "matematicasn.blogspot.com — Psicotécnico numérico"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "courseName": "Ecología",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Clima y desastres naturales",
+      "questions": [
+        {
+          "bodyTypst": "Volcán ubicado en el departamento de Moquegua.",
+          "alternatives": ["Tutupaca", "Coropuna", "Sabancaya", "Ubinas", "Ampato"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Geografía, banco de preguntas resueltas — volcanes del Perú"
+        },
+        {
+          "bodyTypst": "La topografía de la cordillera de los Andes ejerce una marcada influencia sobre los sistemas meteorológicos: la incursión de masas de aire frío y seco procedentes de la región polar hacia latitudes tropicales genera fenómenos climáticos como heladas en la región andina y friajes en la selva. Respecto de lo expresado, ¿cuáles de los siguientes enunciados son correctos? I. Los centros poblados altoandinos del sur del Perú experimentan heladas durante el invierno. II. Como frente seco, el friaje avanza por valles interandinos aumentando la sensación térmica de frío. III. La clasificación de heladas a partir de su origen puede ser por advección y por radiación. IV. La donación de frazadas y el asistencialismo contribuyen a reducir el impacto socioeconómico.",
+          "alternatives": ["Solo II y IV", "I y III", "II, III y IV", "Solo III y IV", "I y II"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Geografía, banco de preguntas resueltas — heladas y friaje en el Perú"
+        },
+        {
+          "bodyTypst": "Un docente de Geografía plantea el siguiente enunciado: «Dos ciudades del Perú tienen la misma posición con respecto al plano ecuatorial; sin embargo, una de ellas posee un clima semicálido muy seco y la otra, un clima frígido». ¿Cuáles de los siguientes factores determinan, respectivamente, la diferencia climática entre ambas urbes?",
+          "alternatives": ["La corriente peruana y la cordillera de los Andes", "La contracorriente ecuatorial y la cordillera de los Andes", "El anticiclón del Pacífico sur y la baja latitud", "El ciclón ecuatorial y la cordillera de los Andes"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Geografía, banco de preguntas resueltas — factores climáticos del Perú"
+        }
+      ]
+    },
+    {
+      "name": "Contaminación ambiental",
+      "questions": [
+        {
+          "bodyTypst": "Determine la relación correcta.",
+          "alternatives": ["Plaguicidas – contaminación atmosférica", "Contaminación del agua – relaves mineros", "Erosión de suelos – aguas servidas", "Contaminación del suelo – monóxido de carbono", "Contaminación atmosférica – eutrofización"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/biologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Biología, banco de preguntas resueltas — tipos de contaminación"
+        },
+        {
+          "bodyTypst": "Identifique el tipo de contaminación al que pertenece la afectación física, química o biológica del sistema auditivo y olfativo.",
+          "alternatives": ["Mecánica", "Electromagnética", "Biológica", "Sensorial", "Crónica"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — tipos de contaminación"
+        },
+        {
+          "bodyTypst": "El impacto ambiental no implica #\"_________\", ya que este puede ser tanto negativo como positivo; la importancia del impacto dependerá de su intensidad, duración, permanencia, magnitud y de los efectos en el ambiente.",
+          "alternatives": ["adversidad", "homogeneidad", "equilibrio", "inmediatez", "singularidad"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — impacto ambiental"
+        }
+      ]
+    },
+    {
+      "name": "Ecorregiones del Perú, biomas y áreas naturales protegidas",
+      "questions": [
+        {
+          "bodyTypst": "Identifica la ecorregión del Perú de la que es representativa la Quina, nuestro árbol nacional.",
+          "alternatives": ["páramo", "bosque tropical del Pacífico", "selva alta", "bosque seco ecuatorial", "sabana de palmeras"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — la Quina y las ecorregiones del Perú"
+        },
+        {
+          "bodyTypst": "El Santuario Nacional de Tabaconas Namballe fue establecido el 20 de mayo de 1988, y se localiza en la provincia de",
+          "alternatives": ["Cajamarca", "Santa Cruz", "Cutervo", "San Ignacio", "San Pablo"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — Santuario Nacional Tabaconas Namballe"
+        },
+        {
+          "bodyTypst": "Promover el uso adecuado de los espacios naturales protegidos sin comprometer la conservación de la diversidad biológica y sus recursos asociados es función de las Áreas Naturales Protegidas (ANP). Ana requiere hacer turismo e investigación en un área pequeña que protege la biodiversidad con carácter de intangible. ¿Qué ANP cumple con los requerimientos de Ana?",
+          "alternatives": ["Santuario Nacional", "Reserva Comunal", "Parque Nacional", "Reserva Nacional", "Reserva Paisajística"],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — categorías de Áreas Naturales Protegidas"
+        }
+      ]
+    },
+    {
+      "name": "Luz y calor",
+      "questions": [
+        {
+          "bodyTypst": "El agua cuando se encuentra en estado sólido cumple la función biológica de ser",
+          "alternatives": ["termoaislante", "electroaislante", "conductor de calor", "termorregulador", "disolvente"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/biologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Biología, banco de preguntas resueltas — propiedades del agua"
+        },
+        {
+          "bodyTypst": "#\"________\" es el fenómeno natural que regula la temperatura de la atmósfera terrestre.",
+          "alternatives": ["El cambio climático", "La variabilidad climática", "El efecto invernadero", "El ciclo biogeoquímico del carbono", "La inversión térmica"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Geografía, banco de preguntas resueltas — problemas atmosféricos"
+        },
+        {
+          "bodyTypst": "Una de las preocupaciones a nivel mundial es el calentamiento global originado por las actividades del hombre. Al respecto, señale la alternativa que presenta la secuencia correcta después de determinar si las proposiciones son verdaderas (V) o falsas (F). I. El calentamiento global es consecuencia del aumento de la temperatura en la atmósfera terrestre. II. El cambio climático que ocurre en la Tierra está relacionado principalmente al impacto de los gases de efecto invernadero. III. El término efecto invernadero se refiere a la retención del calor en la atmósfera por parte de una capa de gases en la atmósfera, como por ejemplo el dióxido de carbono, el vapor de agua y metano.",
+          "alternatives": ["VVV", "VFV", "VFF", "FFV", "FFF"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — calentamiento global y efecto invernadero"
+        }
+      ]
+    },
+    {
+      "name": "Reino Vegetal",
+      "questions": [
+        {
+          "bodyTypst": "Los meristemos apicales producen fitohormonas entre las cuales predominan las auxinas, cuya función es",
+          "alternatives": ["inhibir la formación de etileno", "estimular la división celular", "estimular la caída prematura de frutos", "activar el proceso de germinación", "inhibir la senescencia"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://editoradelta.blogspot.com/p/preguntas-san-marcos.html",
+          "sourceName": "Editora Delta — Examen de Admisión UNMSM San Marcos 2008-I (23 de setiembre de 2007), Biología, pregunta 2"
+        },
+        {
+          "bodyTypst": "La hemoglobina es al hierro como la clorofila es al",
+          "alternatives": ["cloro", "calcio", "magnesio", "manganeso", "sodio"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/biologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Biología, banco de preguntas resueltas — pigmentos vegetales"
+        },
+        {
+          "bodyTypst": "Generalmente las plantas toleran la luz directa por lo cual son llamadas",
+          "alternatives": ["Heliófilas", "Anádromas", "Glucófitas", "Halófitas", "Tropófitas"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — adaptación de las plantas a la luz"
+        }
+      ]
+    },
+    {
+      "name": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "questions": [
+        {
+          "bodyTypst": "Los líquenes y micorrizas son ejemplos de:",
+          "alternatives": ["amensalismo", "comensalismo", "parasitismo", "mutualismo", "depredación"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — relaciones de mutualismo"
+        },
+        {
+          "bodyTypst": "Identifica el tipo de sucesión vegetal que se desarrolla a partir de una zona desnuda hasta alcanzar el clímax.",
+          "alternatives": ["Regresiva", "Secundaria", "Primaria", "Disclímax", "Evolutiva"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — sucesión ecológica"
+        },
+        {
+          "bodyTypst": "Relacione correctamente. I. Las garrapatas del perro. II. La rémora alimentándose de las sobras que deja el tiburón. III. La shushupe y el majaz habitando en la misma madriguera. a. sinequia. b. parasitismo. c. comensalismo.",
+          "alternatives": ["Ic - IIb - IIIa", "Ia - IIc - IIIb", "Ib - IIc - IIIa", "Ic - IIa - IIIb", "Ib - IIa - IIIc"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — relaciones interespecíficas"
+        }
+      ]
+    },
+    {
+      "name": "Rocas y suelo",
+      "questions": [
+        {
+          "bodyTypst": "La erosión es un proceso de la geodinámica externa que presenta algunas características que pueden identificarse y ser determinantes para diferenciarla de la meteorización. Determine el valor de verdad (V o F) de los siguientes enunciados relativos al tema. I. En la meteorización, el transporte de materiales acelera los procesos químicos. II. La meteorización física determina el proceso de oxidación de los sedimentos. III. El transporte de sedimentos diferencia la erosión de la meteorización. IV. Los agentes geológicos depositan materiales en cuencas sedimentarias.",
+          "alternatives": ["FFFF", "FVFV", "VVFV", "VFVV", "FFVV"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Geografía, banco de preguntas resueltas — erosión y meteorización"
+        },
+        {
+          "bodyTypst": "Un estudiante de Arqueología aprovecha un viaje a la región andina para recolectar algunas muestras de rocas que podrían ayudarle en su trabajo de investigación. Entre estas, una de color rosado llama más su atención, por lo que decide preguntarle a un geólogo por esa extraña tonalidad. El científico le responde que el oxígeno es uno de los causantes de dicha coloración, por haber corroído el hierro presente en la roca. Indique la proposición correcta sobre el proceso mencionado.",
+          "alternatives": ["En el lugar se efectuó la transformación de la estructura química de la roca.", "Las fuerzas internas son las principales responsables del cambio de color.", "El proceso se realiza en un mismo espacio por la agradación eólica intensa.", "La destrucción y agradación mecánica de la roca explican su extraña coloración."],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Geografía, banco de preguntas resueltas — meteorización química de las rocas"
+        },
+        {
+          "bodyTypst": "Capa superficial del suelo donde se acumula humus:",
+          "alternatives": ["horizonte B", "horizonte C", "la roca madre", "horizonte de lavado", "horizonte de acumulación"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — horizontes del suelo"
+        }
+      ]
+    },
+    {
+      "name": "Saneamiento ambiental",
+      "questions": [
+        {
+          "bodyTypst": "Identifica los componentes biológicos afectados por los vertidos de aguas servidas en los ríos.",
+          "alternatives": ["Biodiversidad", "Sólidos suspendidos", "Calidad estética", "Transparencia del agua", "Actividad económica"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — vertido de aguas servidas"
+        },
+        {
+          "bodyTypst": "Identifica el proceso de combustión anaeróbica de la madera (en ausencia de oxígeno) para fabricar carbón vegetal.",
+          "alternatives": ["Pirólisis", "Reutilización", "Vermicultura", "Compostaje", "Reciclaje"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — manejo de residuos orgánicos"
+        },
+        {
+          "bodyTypst": "Referente a los usos del agua, relaciona: I. piscigranja. II. doméstico. III. recreación. a. uso primario. b. uso terciario. c. uso secundario.",
+          "alternatives": ["Ic - IIb - IIIa", "Ia - IIc - IIIb", "Ib - IIa - IIIc", "Ic - IIa - IIIb", "Ib - IIc - IIIa"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — usos del agua"
+        }
+      ]
+    },
+    {
+      "name": "Agua y aire",
+      "questions": [
+        {
+          "bodyTypst": "La destrucción de la capa de ozono se produce por acumulación de",
+          "alternatives": ["CFC", "O₃", "CO₂", "CO", "H₂O"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — capa de ozono"
+        },
+        {
+          "bodyTypst": "El Basiliscus es un reptil que puede correr sobre el agua sin hundirse, lo cual le permite escaparse de sus depredadores. La propiedad del agua que participa en este ejemplo es",
+          "alternatives": ["la densidad", "la capilaridad", "el elevado calor específico", "la tensión superficial", "la constante dieléctrica"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/biologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Biología, banco de preguntas resueltas — propiedades físicas del agua"
+        }
+      ]
+    },
+    {
+      "name": "Ecología, universo, sistema solar y Tierra",
+      "questions": [
+        {
+          "bodyTypst": "Estabiliza el eje de rotación de la Tierra y frena la velocidad de rotación de la misma. Este fenómeno es producido por la influencia:",
+          "alternatives": ["del seseo", "de la Luna", "del Sol", "de la nutación", "de la precesión"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Geografía, banco de preguntas resueltas — movimientos de la Tierra"
+        },
+        {
+          "bodyTypst": "El fenómeno por el cual la órbita de la Tierra se hace circular se denomina:",
+          "alternatives": ["nutación", "seseo", "precesión", "excentricidad", "apogeo"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Geografía, banco de preguntas resueltas — órbita terrestre"
+        }
+      ]
+    },
+    {
+      "name": "Flujo de materia y energía / recursos naturales",
+      "questions": [
+        {
+          "bodyTypst": "En el siguiente ejemplo de cadena trófica: Fitoplancton → crustáceo krill → pingüino emperador → leopardo marino → orca. Indique el consumidor secundario y el que recibe la menor cantidad de energía en la cadena, respectivamente.",
+          "alternatives": ["Crustáceo krill - leopardo marino", "Fitoplancton - orca", "Pingüino emperador - fitoplancton", "Leopardo marino - orca", "Pingüino emperador - orca"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — cadena trófica antártica"
+        },
+        {
+          "bodyTypst": "Sobre los siguientes recursos naturales que a continuación se indican, determine el que corresponde a un recurso no renovable:",
+          "alternatives": ["Agua", "Gas carbónico", "Aire", "Suelo", "Gas natural"],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Ecología, banco de preguntas resueltas — recursos naturales renovables y no renovables"
+        }
+      ]
+    },
+    {
+      "name": "Reino Animal",
+      "questions": [
+        {
+          "bodyTypst": "De las siguientes afirmaciones, ¿cuáles son correctas? 1. Los cangrejos respiran por branquias. 2. Los insectos no tienen exoesqueleto. 3. Los peripatos son artrópodos. 4. Los peines de mar son celentéreos. 5. Las garrapatas tienen 8 patas.",
+          "alternatives": ["2 - 3 - 4", "1 - 2 - 3", "1 - 3 - 5", "3 - 4 - 5", "1 - 2 - 4"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://editoradelta.blogspot.com/p/preguntas-san-marcos.html",
+          "sourceName": "Editora Delta — Examen de Admisión UNMSM San Marcos 2008-I (23 de setiembre de 2007), Biología, pregunta 7"
+        },
+        {
+          "bodyTypst": "Los animales vertebrados se clasifican en:",
+          "alternatives": ["Aves, peces, carnívoros, omnívoros y anfibios", "Autótrofos, herbívoros, carnívoros y omnívoros", "Craneata, gnatostomata, mammalia y dipnoi", "Peces, anfibios, reptiles, aves y mamíferos", "Mamíferos, saurofidios, aves, peces y craneados"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/biologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Biología, banco de preguntas resueltas — taxonomía animal"
+        }
+      ]
+    },
+    {
+      "name": "Reino Monera, Protista y Fungi",
+      "questions": [
+        {
+          "bodyTypst": "Treponema pallidum, agente causal de la sífilis, es un(a):",
+          "alternatives": ["cianobacteria", "protista", "liquen", "hongo", "bacteria"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/biologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Biología, banco de preguntas resueltas — procariontes de importancia médica"
+        },
+        {
+          "bodyTypst": "La Candida albicans es un organismo oportunista que ataca generalmente a pacientes con SIDA y pertenece al reino",
+          "alternatives": ["Monera", "Protista", "Fungi", "Animal", "Vegetal"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/biologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños/matematicasn.blogspot.com — Biología, banco de preguntas resueltas — clasificación de microorganismos"
+        }
+      ]
+    }
+  ]
+}

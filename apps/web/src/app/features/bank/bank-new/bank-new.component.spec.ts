@@ -23,6 +23,7 @@ function setup(
   over: {
     uploadImpl?: () => unknown;
     structuredImpl?: () => unknown;
+    replaceImageImpl?: () => unknown;
     getCourses?: () => unknown;
     getTopics?: (courseId: string) => unknown;
     extractQuestionFromImageImpl?: (image: File) => unknown;
@@ -30,6 +31,7 @@ function setup(
 ) {
   const uploadImageQuestion = vi.fn(over.uploadImpl ?? (() => of({ id: 'img-q' })));
   const createStructuredQuestion = vi.fn(over.structuredImpl ?? (() => of({ id: 'str-q' })));
+  const replaceQuestionImage = vi.fn(over.replaceImageImpl ?? (() => of({ id: 'str-q' })));
   const getCourses = vi.fn(over.getCourses ?? (() => of(COURSES)));
   const getTopics = vi.fn(
     over.getTopics ?? ((courseId: string) => of(courseId === 'c1' ? TOPICS_C1 : TOPICS_C2)),
@@ -46,7 +48,7 @@ function setup(
   TestBed.configureTestingModule({
     imports: [BankNewComponent],
     providers: [
-      { provide: BankService, useValue: { uploadImageQuestion, createStructuredQuestion } },
+      { provide: BankService, useValue: { uploadImageQuestion, createStructuredQuestion, replaceQuestionImage } },
       { provide: TaxonomyService, useValue: { getCourses, getTopics } },
       { provide: AiService, useValue: { extractQuestionFromImage } },
       { provide: Router, useValue: { navigate } },
@@ -59,6 +61,7 @@ function setup(
     compiled: fixture.nativeElement as HTMLElement,
     uploadImageQuestion,
     createStructuredQuestion,
+    replaceQuestionImage,
     getCourses,
     getTopics,
     extractQuestionFromImage,
@@ -117,6 +120,17 @@ function pickImage(fixture: { detectChanges(): void }, compiled: HTMLElement): F
   return file;
 }
 
+function pickStructuredImage(fixture: { detectChanges(): void }, compiled: HTMLElement): File {
+  const file = new File(['bytes'], 'grafico.png', { type: 'image/png' });
+  const nativeFileInput = compiled.querySelector(
+    '[data-testid="tab-structured-panel"] input[type="file"]',
+  ) as HTMLInputElement;
+  Object.defineProperty(nativeFileInput, 'files', { value: [file], configurable: true });
+  nativeFileInput.dispatchEvent(new Event('change'));
+  fixture.detectChanges();
+  return file;
+}
+
 describe('BankNewComponent', () => {
   it('shows the photo tab by default and switches to the structured tab', () => {
     const { fixture, compiled } = setup();
@@ -131,7 +145,7 @@ describe('BankNewComponent', () => {
   });
 
   it('creates a structured question and navigates back to /app/bank', () => {
-    const { fixture, compiled, createStructuredQuestion, navigate } = setup();
+    const { fixture, compiled, createStructuredQuestion, replaceQuestionImage, navigate } = setup();
     (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
     fixture.detectChanges();
     set(fixture, 'sGradeLevel', 'pre');
@@ -152,6 +166,84 @@ describe('BankNewComponent', () => {
       bodyTypst: '¿Cuánto es 2+2?',
       alternatives: ['4', '3', '5', '6'],
     });
+    // No complement image was picked — the second-step call must not fire.
+    expect(replaceQuestionImage).not.toHaveBeenCalled();
+    expect(navigate).toHaveBeenCalledWith(['/app/bank']);
+  });
+
+  it('attaches a picked complement image after creating the structured question, then navigates back', () => {
+    const { fixture, compiled, replaceQuestionImage, navigate } = setup();
+    (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    set(fixture, 'sGradeLevel', 'pre');
+    set(fixture, 'sCourseId', 'c1');
+    set(fixture, 'sTopicId', 't1');
+    set(fixture, 'sDifficulty', 'easy');
+    set(fixture, 'sBody', 'Según el gráfico adjunto...');
+    set(fixture, 'sAlternatives', 'a\nb');
+    set(fixture, 'sCorrectAnswer', 'a');
+    const file = pickStructuredImage(fixture, compiled);
+    (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement).click();
+
+    expect(replaceQuestionImage).toHaveBeenCalledWith('str-q', file);
+    expect(navigate).toHaveBeenCalledWith(['/app/bank']);
+  });
+
+  it('shows a partial-failure message when the question is created but the complement image fails to upload, and does not navigate', () => {
+    const { fixture, compiled, navigate } = setup({
+      replaceImageImpl: () => throwError(() => new HttpErrorResponse({ status: 500 })),
+    });
+    (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    set(fixture, 'sGradeLevel', 'pre');
+    set(fixture, 'sCourseId', 'c1');
+    set(fixture, 'sTopicId', 't1');
+    set(fixture, 'sDifficulty', 'easy');
+    set(fixture, 'sBody', 'Según el gráfico adjunto...');
+    set(fixture, 'sAlternatives', 'a\nb');
+    set(fixture, 'sCorrectAnswer', 'a');
+    pickStructuredImage(fixture, compiled);
+    (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(compiled.querySelector('[data-testid="save-error"]')?.textContent).toContain(
+      'no se pudo adjuntar la imagen complementaria',
+    );
+    expect(navigate).not.toHaveBeenCalled();
+  });
+
+  it('retrying after a failed image attach only re-attaches the image — never creates a duplicate question', () => {
+    let attempt = 0;
+    const { fixture, compiled, createStructuredQuestion, replaceQuestionImage, navigate } = setup({
+      replaceImageImpl: () => {
+        attempt++;
+        return attempt === 1 ? throwError(() => new HttpErrorResponse({ status: 500 })) : of({ id: 'str-q' });
+      },
+    });
+    (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    set(fixture, 'sGradeLevel', 'pre');
+    set(fixture, 'sCourseId', 'c1');
+    set(fixture, 'sTopicId', 't1');
+    set(fixture, 'sDifficulty', 'easy');
+    set(fixture, 'sBody', 'Según el gráfico adjunto...');
+    set(fixture, 'sAlternatives', 'a\nb');
+    set(fixture, 'sCorrectAnswer', 'a');
+    pickStructuredImage(fixture, compiled);
+
+    // First submit: question is created, image attach fails.
+    (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    expect(createStructuredQuestion).toHaveBeenCalledTimes(1);
+    expect(replaceQuestionImage).toHaveBeenCalledTimes(1);
+    expect(navigate).not.toHaveBeenCalled();
+
+    // Retry: must NOT call createStructuredQuestion again, only retry the image attach.
+    (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+    expect(createStructuredQuestion).toHaveBeenCalledTimes(1);
+    expect(replaceQuestionImage).toHaveBeenCalledTimes(2);
+    expect(replaceQuestionImage).toHaveBeenLastCalledWith('str-q', expect.any(File));
     expect(navigate).toHaveBeenCalledWith(['/app/bank']);
   });
 
@@ -314,6 +406,53 @@ describe('BankNewComponent', () => {
       );
       expect(compiled.querySelector('[data-testid="image-upload-preview"]')).toBeTruthy();
       expect(compiled.querySelector('[data-testid="image-upload-change"]')).toBeTruthy();
+    });
+  });
+
+  describe('styled file upload (structured tab, complement image)', () => {
+    it('renders an optional styled upload control, not the native file input', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      const structuredPanel = compiled.querySelector('[data-testid="tab-structured-panel"]') as HTMLElement;
+      expect(structuredPanel.querySelector('[data-testid="structured-image-upload"]')).toBeTruthy();
+      const nativeFileInput = structuredPanel.querySelector('input[type="file"]') as HTMLInputElement;
+      expect(nativeFileInput).toBeTruthy();
+      expect(nativeFileInput.classList.contains('sr-only')).toBe(true);
+    });
+
+    it('shows the chosen filename and a thumbnail preview after picking a complement image', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      vi.spyOn(URL, 'createObjectURL').mockReturnValue('blob:fake-url');
+      vi.spyOn(URL, 'revokeObjectURL').mockImplementation(() => undefined);
+
+      pickStructuredImage(fixture, compiled);
+
+      expect(compiled.querySelector('[data-testid="structured-image-upload-filename"]')?.textContent).toContain(
+        'grafico.png',
+      );
+      expect(compiled.querySelector('[data-testid="structured-image-upload-preview"]')).toBeTruthy();
+      expect(compiled.querySelector('[data-testid="structured-image-upload-change"]')).toBeTruthy();
+    });
+
+    it('does not gate structuredValid() on the complement image — form stays submittable without it', () => {
+      const { fixture, compiled } = setup();
+      (compiled.querySelector('[data-testid="tab-structured"]') as HTMLButtonElement).click();
+      fixture.detectChanges();
+      set(fixture, 'sGradeLevel', 'pre');
+      set(fixture, 'sCourseId', 'c1');
+      set(fixture, 'sTopicId', 't1');
+      set(fixture, 'sDifficulty', 'easy');
+      set(fixture, 'sBody', 'x');
+      set(fixture, 'sAlternatives', 'a\nb');
+      set(fixture, 'sCorrectAnswer', 'a');
+
+      expect(compiled.querySelector('[data-testid="structured-validation"]')).toBeFalsy();
+      expect(
+        (compiled.querySelector('[data-testid="structured-submit"] button') as HTMLButtonElement).disabled,
+      ).toBe(false);
     });
   });
 

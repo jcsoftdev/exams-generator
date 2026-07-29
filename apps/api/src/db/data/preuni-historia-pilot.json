@@ -1,0 +1,142 @@
+{
+  "courseName": "Historia",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Prehistoria y comunidad primitiva",
+      "questions": [
+        {"bodyTypst": "Es considerada la 'cuna de la humanidad'.", "alternatives": ["América", "África", "Asia", "Asia Menor", "Pekín"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"},
+        {"bodyTypst": "Este periodo incluye los acontecimientos ocurridos antes de que fuera inventada la escritura.", "alternatives": ["Paleohistoria", "Historiografía", "Protohistoria", "Prehistoria", "Historia"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"},
+        {"bodyTypst": "Especie humana que pobló América.", "alternatives": ["Homo hábilis", "Pitecántropus", "Australopithecus", "Sinántropus", "Homo sapiens sapiens"], "correctAnswer": "4", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"}
+      ]
+    },
+    {
+      "name": "Poblamiento americano y culturas preincaicas",
+      "questions": [
+        {"bodyTypst": "Los arqueólogos discuten cuáles son las primeras evidencias de presencia humana en el Perú. Dos de los sitios arqueológicos más antiguos y debatidos son:", "alternatives": ["Pacaicasa y Guitarrero I", "Lauricocha y Paiján", "Paiján y Toquepala", "Pacaicasa y Piquimachay", "Pacaicasa y Nanchoc"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"},
+        {"bodyTypst": "Investigador que planteó el origen mesoamericano de las altas culturas peruanas:", "alternatives": ["Luis G. Lumbreras", "Federico Kauffmann", "Julio C. Tello", "Max Uhle", "Pablo Macera"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"},
+        {"bodyTypst": "La periodización de John Rowe para la secuencia cultural andina se basa principalmente en:", "alternatives": ["dieta y costumbres", "festividades y religiones", "antigüedad y dominio", "espacio e influencias culturales", "cerámica y textilería"], "correctAnswer": "4", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"}
+      ]
+    },
+    {
+      "name": "Civilizaciones antiguas de Oriente",
+      "questions": [
+        {"bodyTypst": "Al aparecer el excedente de producción surge la escritura; la más antigua fue", "alternatives": ["la cuneiforme", "el alfabeto", "jeroglífica", "hierática", "demótica"], "correctAnswer": "0", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"},
+        {"bodyTypst": "La escritura cuneiforme, 'forma de cuña', fue una invención de los", "alternatives": ["egipcios", "persas", "asirios", "babilonios", "sumerios"], "correctAnswer": "4", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"},
+        {"bodyTypst": "Creó el Estado hebreo, fundó Jerusalén como capital y escribió los Salmos. ¿A qué rey hebreo se refiere el texto?", "alternatives": ["Salomón", "Samuel", "David", "Jeroboam", "Saúl"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"}
+      ]
+    },
+    {
+      "name": "Grecia y Roma: culturas clásicas de Occidente",
+      "questions": [
+        {"bodyTypst": "El mayor aporte de la civilización griega lo encontramos en", "alternatives": ["el alfabeto", "el derecho", "la navegación", "la democracia", "la vida urbana"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"},
+        {"bodyTypst": "En las guerras del Peloponeso se enfrentaron", "alternatives": ["Samos y Rodas", "Esparta y Atenas", "Atenas y Persia", "Esparta y Delos", "Tracia y Atenas"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"},
+        {"bodyTypst": "El punto de partida del derecho romano se encuentra en", "alternatives": ["la ley Canuleya", "la ley de las Doce Tablas", "la ley Frumentaria", "la ley Licinia", "el Código de Hamurabi"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"}
+      ]
+    },
+    {
+      "name": "El Tahuantinsuyo",
+      "questions": [
+        {"bodyTypst": "Indique cuál es el país que formó parte del Imperio incaico y que hoy no limita con el Perú.", "alternatives": ["Bolivia", "Ecuador", "Argentina", "Chile", "Colombia"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"},
+        {"bodyTypst": "En las colcas incaicas se almacenaba principalmente el excedente de las tierras", "alternatives": ["de la comunidad y las destinadas al culto", "de la comunidad y el Estado", "del Estado", "del Estado y las destinadas al culto", "de la comunidad"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"},
+        {"bodyTypst": "El templo más importante del Cusco, dedicado al Sol, fue:", "alternatives": ["Intihuatana", "Sacsayhuamán", "Ollantaytambo", "Coricancha", "Machu Picchu"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"}
+      ]
+    },
+    {
+      "name": "Edad Media y el feudalismo europeo",
+      "questions": [
+        {"bodyTypst": "Fue la nota característica de la Edad Media.", "alternatives": ["El desarrollo de las ideas cristianas", "Las masivas invasiones bárbaras", "Los lances caballerescos", "El triunfo del cristianismo y del papado"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/2023/04/la-edad-media-ejemplos-preguntas-resueltas-de-historia-universal-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html", "sourceName": "La Edad Media — banco de preguntas"},
+        {"bodyTypst": "En las relaciones feudo-vasalláticas, la protección al vasallo era brindada por", "alternatives": ["el conde", "el barón", "el marqués", "el señor feudal", "el vasallo"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/2023/04/el-feudalismo-medieval-ejemplos-preguntas-resueltas-de-historia-universal-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html", "sourceName": "El Feudalismo Medieval — banco de preguntas"},
+        {"bodyTypst": "El sermón de Urbano II en Clermont hizo referencia a", "alternatives": ["los ataques vikingos del siglo IX", "el pedido de la Iglesia de recuperar los territorios cristianos de Oriente", "el pedido de Luis para la unidad carolingia", "las derrotas bizantinas ante la expansión árabe"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/2023/04/el-feudalismo-medieval-ejemplos-preguntas-resueltas-de-historia-universal-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html", "sourceName": "El Feudalismo Medieval — banco de preguntas"}
+      ]
+    },
+    {
+      "name": "Conquista y Virreinato del Perú",
+      "questions": [
+        {"bodyTypst": "El inca Atahualpa supo granjearse la amistad de dos conquistadores que fueron alejados por orden de Francisco Pizarro, estos fueron", "alternatives": ["Hernando Pizarro y Hernando de Soto", "Diego de Almagro y Pedro Cataño", "Pedro de Candia y Diego de Mora", "Martín de Estete y Juan Tafur", "García Holguín y Juan Roldán Dávila"], "correctAnswer": "0", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"},
+        {"bodyTypst": "En el primer viaje de Pizarro se funda la primera ciudad denominada:", "alternatives": ["San Miguel", "Tumbes", "Cajamarca", "Lima", "Jauja"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"},
+        {"bodyTypst": "Juan Chocne, líder mesiánico del Taqui Onqoy, anunciaba:", "alternatives": ["la confiscación de las tierras a los españoles", "el rechazo a los esclavos", "la abolición de la mita minera", "la expulsión de las órdenes religiosas", "el castigo y expulsión de los españoles"], "correctAnswer": "4", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"}
+      ]
+    },
+    {
+      "name": "Edad Moderna",
+      "questions": [
+        {"bodyTypst": "Una de las características del Humanismo, ideología burguesa surgida en el siglo XVI, fue", "alternatives": ["la revaloración del individuo y el libre albedrío", "la defensa del teocentrismo como idea principal", "el uso de la razón como sustento de la teología", "que tuvo como uno de sus representantes a Dante Alighieri", "que la razón debía desarrollarse aislada de la experiencia"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"},
+        {"bodyTypst": "El Humanismo fue un movimiento europeo que se basó en la revalorización de la cultura clásica. ¿Cuál de los siguientes es un autor del Humanismo fuera de Italia?", "alternatives": ["René Descartes", "Dante Alighieri", "Pico de la Mirandola", "Giovanni Boccaccio", "Erasmo de Rotterdam"], "correctAnswer": "4", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"},
+        {"bodyTypst": "Según Cristóbal Keller, la Edad Moderna termina con la", "alternatives": ["caída de Constantinopla", "caída del imperio bizantino", "invención de la rueda", "revolución francesa de 1789", "caída del imperio macedónico"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"}
+      ]
+    },
+    {
+      "name": "Revoluciones burguesas y Revolución Francesa",
+      "questions": [
+        {"bodyTypst": "Una causa ideológica de la Revolución francesa fue:", "alternatives": ["el Barroco", "la desigualdad social", "el absolutismo", "la Ilustración", "la crisis económica"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/2023/04/la-revolucion-francesa-causas-etapas-y-consecuencias-ejemplos-preguntas-resueltas-de-historia-universal-preuniversitaria-y-de-secundaria-word-pdf.html", "sourceName": "La Revolución Francesa — banco de preguntas"},
+        {"bodyTypst": "Fue la medida más importante durante la Asamblea Constituyente en la Revolución francesa.", "alternatives": ["La Declaración de los Derechos del Hombre y del Ciudadano", "El establecimiento del gobierno del terror", "La ejecución del rey", "La rebelión de la Vendée", "El autogolpe girondino"], "correctAnswer": "0", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/2023/04/la-revolucion-francesa-causas-etapas-y-consecuencias-ejemplos-preguntas-resueltas-de-historia-universal-preuniversitaria-y-de-secundaria-word-pdf.html", "sourceName": "La Revolución Francesa — banco de preguntas"},
+        {"bodyTypst": "Clase social que dirigió la Revolución francesa.", "alternatives": ["La burguesía", "El clero", "La nobleza", "El pueblo", "El proletariado"], "correctAnswer": "0", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/2023/04/la-revolucion-francesa-causas-etapas-y-consecuencias-ejemplos-preguntas-resueltas-de-historia-universal-preuniversitaria-y-de-secundaria-word-pdf.html", "sourceName": "La Revolución Francesa — banco de preguntas"}
+      ]
+    },
+    {
+      "name": "Independencia del Perú y emancipación americana",
+      "questions": [
+        {"bodyTypst": "Las Campañas a Puertos Intermedios, llevadas a cabo por La Mar y Riva Agüero para acabar con el virrey La Serna, fracasaron por", "alternatives": ["falta de unidad entre los mandos", "el apoyo de Olañeta a La Serna", "un mejor armamento realista", "la indiferencia del pueblo peruano", "la traición de las montoneras"], "correctAnswer": "0", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"},
+        {"bodyTypst": "La victoria de Junín y Ayacucho, por el ejército patriota, estuvo determinada por", "alternatives": ["el genio militar de Simón Bolívar", "la falta de efectivos en las tropas realistas", "el peso de la artillería patriota", "la ayuda de Inglaterra al Perú", "la participación de las montoneras"], "correctAnswer": "4", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"},
+        {"bodyTypst": "El principal proyecto político de Simón Bolívar, la Federación de los Andes, se plasmó mediante", "alternatives": ["el Congreso Constituyente", "la Entrevista de Guayaquil", "el Congreso de Panamá", "la Constitución Vitalicia", "la Carta de Jamaica"], "correctAnswer": "3", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"}
+      ]
+    },
+    {
+      "name": "Revolución industrial y desarrollo del capitalismo",
+      "questions": [
+        {"bodyTypst": "Es la clase social que nace con la Revolución industrial", "alternatives": ["burguesía", "nobleza", "proletariado", "comerciantes", "campesinado"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"},
+        {"bodyTypst": "Se considera que el país que inició este proceso de industrialización fue", "alternatives": ["Alemania", "Holanda", "Francia", "Inglaterra", "EE.UU."], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"},
+        {"bodyTypst": "¿Qué elemento no corresponde a la Primera Revolución Industrial?", "alternatives": ["Locomotora", "Telégrafo", "Telar mecánico", "Siderurgia", "Máquina sembradora"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/2023/04/revolucion-industrial-papel-de-las-maquinas-en-la-nueva-produccion-capitalista-ejemplos-preguntas-resueltas-de-historia-universal-preuniversitaria-secundaria-prueba-respuestas-word-pdf.html", "sourceName": "Revolución Industrial — banco de preguntas"}
+      ]
+    },
+    {
+      "name": "República del Perú (siglo XIX) y dependencia inglesa",
+      "questions": [
+        {"bodyTypst": "La guerra del guano y el salitre entre Perú y Chile se inició durante el gobierno de #\"___\", quien viajó a Europa para gestionar un empréstito", "alternatives": ["Pastor Dávila", "Mariano Ignacio Prado", "Manuel Candamo", "Manuel Prado", "Miguel Iglesias"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"},
+        {"bodyTypst": "Es considerado el primer golpe de Estado de la etapa republicana del Perú:", "alternatives": ["Motín de Balconcillo", "Destitución del Presidente Torre Tagle", "Conferencia de Miraflores", "Motín de Aznapuquio", "Conferencia de Punchauca"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"},
+        {"bodyTypst": "Durante el gobierno de José Balta, el contrato Dreyfus significó el cambio de sistema de venta de guano, lo que trajo como consecuencia", "alternatives": ["la imposición del monopolio de una casa comercial europea", "el aumento de los impuestos por exportación", "la mayor cantidad de competencia comercial", "la destrucción de las bases y posterior desaparición del Partido Civil", "el aumento de los vendedores de salitre"], "correctAnswer": "0", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-del-peru-resuelta-universidades.html", "sourceName": "Banco de preguntas resueltas de Historia del Perú"}
+      ]
+    },
+    {
+      "name": "Periodo de entreguerras y guerras mundiales",
+      "questions": [
+        {"bodyTypst": "No se establecía en el Tratado de Versalles de 1919", "alternatives": ["El pago de una gran indemnización por Alemania", "La pérdida de Alsacia y Lorena", "Mantenimiento del II Reich", "Pérdida de las colonias alemanas", "Limitación del ejército alemán"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"},
+        {"bodyTypst": "Alemania, al ser derrotada en la Primera Guerra Mundial, vio sus colonias repartidas entre", "alternatives": ["EE.UU. e Inglaterra", "Francia e Inglaterra", "Francia y EE.UU.", "Austria y Hungría", "Polonia y Austria"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"},
+        {"bodyTypst": "Tratado que firmó Austria después de la Primera Guerra Mundial", "alternatives": ["Trianon", "Versalles", "Neuilly", "Saint Germain", "Sèvres"], "correctAnswer": "3", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"}
+      ]
+    },
+    {
+      "name": "Perú: el Oncenio de Leguía",
+      "questions": [
+        {"bodyTypst": "El gobierno de Augusto B. Leguía, durante el Oncenio, entregó los ferrocarriles definitivamente a:", "alternatives": ["La Internacional Petroleum Company", "Miguel Grace y compañía", "La Peruvian Corporation", "La Cerro de Pasco Copper Corporation", "Foundation Company"], "correctAnswer": "2", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/2021/02/el-oncenio-de-leguia-peru-contemporaneo-preguntas-resueltas-historia-admision-universidad-academia-preuniversitaria.html", "sourceName": "El Oncenio de Leguía — banco de preguntas"},
+        {"bodyTypst": "La ley de conscripción vial que promulgó el gobierno de Leguía perjudicó principalmente a:", "alternatives": ["los gamonales", "la clase media", "los indios", "la burguesía", "los artesanos y comerciantes"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/2021/02/el-oncenio-de-leguia-peru-contemporaneo-preguntas-resueltas-historia-admision-universidad-academia-preuniversitaria.html", "sourceName": "El Oncenio de Leguía — banco de preguntas"},
+        {"bodyTypst": "El golpe de Estado contra Leguía fue llevado a cabo por", "alternatives": ["Manuel Odría", "Óscar R. Benavides", "Luis Sánchez Cerro", "Mariano Ignacio Prado", "Nicolás de Piérola"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/2021/02/el-oncenio-de-leguia-peru-contemporaneo-preguntas-resueltas-historia-admision-universidad-academia-preuniversitaria.html", "sourceName": "El Oncenio de Leguía — banco de preguntas"}
+      ]
+    },
+    {
+      "name": "Guerra Fría",
+      "questions": [
+        {"bodyTypst": "¿Cuál fue el nombre más común para el defoliante que usó el Ejército de EE.UU. durante la Guerra de Vietnam para despejar la vegetación?", "alternatives": ["Código azul", "Marea roja", "Oro negro", "Agente Naranja", "Gas Lacrimógeno"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"},
+        {"bodyTypst": "Potencia derrotada por los vietnamitas en la batalla de Dien-Bien-Phu, y tratado por el que tuvo que retirarse de la región de Indochina", "alternatives": ["EE.UU. - Conferencia de París", "Francia - Conferencia de Ginebra", "Inglaterra - Armisticio de Panmunjon", "EE.UU. - Conferencia de Ginebra", "Francia - Conferencia de París"], "correctAnswer": "1", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"},
+        {"bodyTypst": "EE.UU., para evitar la irradiación de la influencia producida en Latinoamérica por la Revolución Cubana, ejecutó en su política externa", "alternatives": ["Alianza para Todos", "Alianza del Desarrollo", "Alianza para el Progreso", "Alianza Capitalista", "OTAN"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/historia-universal-resueltas-universidad.html", "sourceName": "Banco de preguntas resueltas de Historia Universal"}
+      ]
+    },
+    {
+      "name": "República del Perú: 1930-1980",
+      "questions": [
+        {"bodyTypst": "Durante su primera fase, bajo la presidencia de Juan Velasco Alvarado, el Gobierno Revolucionario de la Fuerza Armada (GRFA) sostuvo una política económica de industrialización por sustitución de importaciones (ISI), contraria a la tradición económica liberal. Al respecto: I. Promovió la libre inversión extranjera en actividades estratégicas. II. Estableció controles sobre los precios de la moneda extranjera. III. Generó barreras a la importación de productos manufacturados. IV. Otorgó ventajas arancelarias para la importación de bienes de capital. ¿Qué medidas económicas promovió el GRFA?", "alternatives": ["Solo II y III", "Solo II y IV", "I, II y III", "II, III y IV"], "correctAnswer": "3", "difficulty": "hard", "sourceUrl": "https://banco-preguntas.blogspot.com/2025/08/preguntas-de-san-marcos-2022-i-historia.html", "sourceName": "Preguntas de San Marcos 2022-I, Historia"},
+        {"bodyTypst": "Militar que derrocó a Fernando Belaunde Terry y promulgó la Ley de Reforma Agraria.", "alternatives": ["Ricardo Pérez Godoy", "Juan Velasco Alvarado", "Alberto Fujimori", "Francisco Morales Bermúdez", "Andrés Avelino Cáceres"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/2023/04/gobierno-revolucionario-de-las-fuerzas-armadas-1968-1980-velasco-alvarado-morales-bermudez-ejemplos-preguntas-resueltas-de-historia-del-peru-preuniversitaria-secundaria-word-pdf.html", "sourceName": "Gobierno Revolucionario de las FF.AA. 1968-1980 — banco de preguntas"},
+        {"bodyTypst": "El gobierno de Bustamante y Rivero, apoyado por el Frente Democrático Nacional, tuvo que hacer frente a graves problemas políticos antes del golpe de Odría. El más significativo fue", "alternatives": ["La ruptura del Frente Democrático Nacional", "El receso parlamentario de 1947", "La sublevación de los marineros del Callao en 1948", "La escasez de productos alimenticios", "El asesinato de Francisco Graña, director de \"La Prensa\""], "correctAnswer": "2", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/2023/04/el-tercer-militarismo-ejemplos-preguntas-resueltas-de-historia-del-peru-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html", "sourceName": "El Tercer Militarismo — banco de preguntas"}
+      ]
+    },
+    {
+      "name": "Perú contemporáneo: retorno a la democracia (1980-2000)",
+      "questions": [
+        {"bodyTypst": "La primera ley antiterrorista fue promulgada en el gobierno de:", "alternatives": ["Belaúnde Terry (1er Gob.)", "Alberto Fujimori (1er Gob.)", "Belaúnde Terry (2do Gob.)", "Alan García Pérez", "Alejandro Toledo"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/2023/04/decada-de-los-80-del-peru-segundo-gobierno-de-belaunde-terry-primero-de-alan-garcia-ejemplos-preguntas-resueltas-de-historia-preuniversitaria-secundaria-word-pdf.html", "sourceName": "Década de los 80 del Perú — banco de preguntas"},
+        {"bodyTypst": "La devaluación monetaria y la inflación durante el primer gobierno de Alan García Pérez fueron combatidas a partir de 1987 con", "alternatives": ["la creación de subsidios a los productos de primera necesidad", "el intento de aplicar la ley de estatización de la banca", "la aplicación de reformas como la ley de regionalización", "los desembalses y los paquetazos a los bienes de consumo", "la creación del programa de apoyo al ingreso temporal"], "correctAnswer": "3", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/2023/04/decada-de-los-80-del-peru-segundo-gobierno-de-belaunde-terry-primero-de-alan-garcia-ejemplos-preguntas-resueltas-de-historia-preuniversitaria-secundaria-word-pdf.html", "sourceName": "Década de los 80 del Perú — banco de preguntas"},
+        {"bodyTypst": "En las elecciones presidenciales del año 2000, diversos medios de comunicación tuvieron una marcada posición en favor de la candidatura del presidente Alberto Fujimori para su tercera reelección, lo cual se comprobó a través de los llamados 'vladivideos', donde se evidenció el pago de sobornos a los dueños de dichos medios. Regímenes como este, en los que el Estado favorece a una élite gobernante mientras limita la competencia de la oposición pese a la existencia de elecciones, representan gobiernos", "alternatives": ["dictatoriales con elementos democráticos", "autoritarios con elementos democráticos", "totalitarios con control de todos los partidos", "democráticos de sistema presidencialista"], "correctAnswer": "1", "difficulty": "hard", "sourceUrl": "https://banco-preguntas.blogspot.com/2025/08/preguntas-de-san-marcos-2022-i-historia.html", "sourceName": "Preguntas de San Marcos 2022-I, Historia"}
+      ]
+    }
+  ]
+}

@@ -239,6 +239,37 @@ describe("ExamVersionGenerationService.generateVersions", () => {
     }
   });
 
+  it("materializes a structured question's complement image and sets imageAbsolutePath alongside bodyTypst/alternatives", async () => {
+    const { service, repository, storage, pdfCompiler } = buildDeps();
+    await storage.put("bank/questions/q3-complement", Buffer.from("fake-chart-png"), "image/png");
+
+    const examWithComplementImage: ExamForGenerationRecord = {
+      ...READY_EXAM,
+      selectedQuestions: [
+        ...READY_EXAM.selectedQuestions,
+        {
+          ...STRUCTURED_QUESTION_RECORD,
+          imageStorageKey: "bank/questions/q3-complement",
+          imageMime: "image/png",
+        },
+      ],
+    };
+    repository.getExamForGeneration.mockResolvedValue(examWithComplementImage);
+    repository.createAsset.mockResolvedValue({ id: "asset-id" });
+
+    const results = await service.generateVersions(TEACHER, "exam-1", 1);
+
+    expect(results).toHaveLength(1);
+    const examCall = pdfCompiler.examCalls[0]!;
+    const structuredQuestion = examCall.questions.find((q) => q.id === "q3");
+    expect(structuredQuestion?.type).toBe("structured");
+    if (structuredQuestion?.type !== "structured") {
+      throw new Error("expected q3 to render as a structured question");
+    }
+    expect(structuredQuestion.bodyTypst).toBe(STRUCTURED_QUESTION_RECORD.bodyTypst);
+    expect(structuredQuestion.imageAbsolutePath).toMatch(/^\//);
+  });
+
   it("wraps TypstCompilationError into ExamPdfGenerationError, surfacing the failing question id", async () => {
     const { service, repository, pdfCompiler } = buildDeps();
     repository.getExamForGeneration.mockResolvedValue(READY_EXAM);

@@ -45,19 +45,25 @@ function renderQuestionBlock(question: ExamPdfQuestion, number: number): string 
  * as image questions, this block explicitly numbers the statement (`N.`)
  * and letters each alternative (`A)`, `B)`, ...). `bodyTypst` and
  * `figureCode` are trusted Typst/CeTZ markup, embedded verbatim (same trust
- * model as the image path string above).
+ * model as the image path string above). `imageAbsolutePath`, when present,
+ * is a complement raster image (chart/diagram/passage scan that can't be
+ * authored in Typst) — it renders alongside (not instead of) `figureCode`,
+ * since one is vector drawing and the other is a real photo/scan.
  */
 function renderStructuredQuestionBlock(
   question: Extract<ExamPdfQuestion, { type: "structured" }>,
   number: number,
 ): string {
   const figureBlock = question.figureCode ? `\n\n${question.figureCode}` : "";
+  const imageBlock = question.imageAbsolutePath
+    ? `\n\n#image("${question.imageAbsolutePath}", width: 100%)`
+    : "";
   const alternativesBlock = question.alternatives
     .map((alternative, index) => `${ALTERNATIVE_LETTERS[index] ?? index + 1}) ${alternative}`)
     .join(" \\ \n");
 
   return `// q:${question.id}
-*${number}.* ${question.bodyTypst}${figureBlock}
+*${number}.* ${question.bodyTypst}${figureBlock}${imageBlock}
 
 ${alternativesBlock}`;
 }

@@ -1,0 +1,124 @@
+{
+  "courseName": "Química",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Materia y energía",
+      "questions": [
+        {"bodyTypst": "Indique la secuencia correcta después de determinar si cada enunciado es verdadero (V) o falso (F):\nI. La energía cinética es una propiedad extensiva de la materia.\nII. Un sistema homogéneo presenta una sola fase.\nIII. La densidad es una propiedad intensiva.", "alternatives": ["VVV", "FVV", "VFV", "FFV", "FVF"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — banco de preguntas"},
+        {"bodyTypst": "Se tiene una mezcla de agua y aceite. Respecto a este sistema, indique la afirmación correcta.", "alternatives": ["Es una mezcla homogénea", "Presenta una sola fase", "Es un sistema heterogéneo de dos fases", "Es una sustancia pura", "No tiene interfase visible"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — banco de preguntas"},
+        {"bodyTypst": "Una muestra de 40 g de una sustancia libera 200 cal al enfriarse de 50°C a 30°C. Calcule el calor específico de la sustancia, en cal/(g°C).", "alternatives": ["0.15", "0.20", "0.25", "0.30", "0.35"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — calorimetría"}
+      ]
+    },
+    {
+      "name": "Estructura atómica",
+      "questions": [
+        {"bodyTypst": "Un átomo neutro tiene número atómico 26 y número de masa 56. Determine el número de protones, neutrones y electrones respectivamente.", "alternatives": ["26, 26, 30", "26, 30, 26", "30, 26, 26", "26, 26, 26", "30, 30, 26"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — estructura atómica"},
+        {"bodyTypst": "Para el ion $\"X\"^(3+)$ con 21 electrones y número de masa 51, determine el número atómico Z y el número de neutrones.", "alternatives": ["Z=21, n=27", "Z=24, n=27", "Z=24, n=30", "Z=18, n=30", "Z=21, n=30"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — iones"},
+        {"bodyTypst": "Determine la configuración electrónica correcta para el elemento con Z=20 y clasifique su bloque.", "alternatives": ["$1s^2 2s^2 2p^6 3s^2 3p^6 4s^2$, bloque s", "$1s^2 2s^2 2p^6 3s^2 3p^6 3d^2$, bloque d", "$1s^2 2s^2 2p^6 3s^2 3p^6 4s^1 3d^1$, bloque d", "$1s^2 2s^2 2p^6 3s^2 3p^6 4p^2$, bloque p", "$1s^2 2s^2 2p^6 3s^2 3p^4$, bloque p"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — configuración electrónica"}
+      ]
+    },
+    {
+      "name": "Tabla periódica",
+      "questions": [
+        {"bodyTypst": "Un elemento se ubica en el periodo 4, grupo 16 (VIA) de la tabla periódica. Indique su número atómico.", "alternatives": ["32", "33", "34", "35", "36"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — tabla periódica"},
+        {"bodyTypst": "Respecto a las propiedades periódicas, indique la secuencia correcta de verdadero (V) o falso (F):\nI. El radio atómico aumenta al bajar en un grupo.\nII. La electronegatividad aumenta de izquierda a derecha en un periodo.\nIII. La energía de ionización disminuye al bajar en un grupo.", "alternatives": ["VVV", "FVV", "VFF", "FFV", "VVF"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — propiedades periódicas"},
+        {"bodyTypst": "Ordene los siguientes elementos en orden creciente de radio atómico: Na, Mg, Al, Si (todos del periodo 3).", "alternatives": ["Na < Mg < Al < Si", "Si < Al < Mg < Na", "Al < Si < Mg < Na", "Mg < Na < Si < Al", "Si < Mg < Al < Na"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — radio atómico"}
+      ]
+    },
+    {
+      "name": "Enlace químico",
+      "questions": [
+        {"bodyTypst": "Indique el tipo de enlace predominante y la geometría molecular de la molécula $\"NH\"_3$.", "alternatives": ["Iónico, lineal", "Covalente polar, piramidal trigonal", "Covalente no polar, tetraédrica", "Metálico, plana", "Covalente polar, plana trigonal"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — enlace químico"},
+        {"bodyTypst": "La diferencia de electronegatividad entre dos átomos A y B es 2.1. Indique el tipo de enlace que forman.", "alternatives": ["Covalente no polar", "Covalente polar", "Iónico", "Metálico", "Puente de hidrógeno"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — electronegatividad y enlace"},
+        {"bodyTypst": "Determine el número de electrones de valencia totales usados en los enlaces de la molécula $\"CO\"_2$ según su estructura de Lewis (considere solo los enlaces, no los pares libres).", "alternatives": ["4", "6", "8", "10", "12"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — estructuras de Lewis"}
+      ]
+    },
+    {
+      "name": "Nomenclatura inorgánica",
+      "questions": [
+        {"bodyTypst": "Indique el nombre correcto (nomenclatura stock) del compuesto $\"Fe\"_2\"O\"_3$.", "alternatives": ["Óxido de hierro (II)", "Óxido de hierro (III)", "Óxido férrico (II)", "Peróxido de hierro", "Óxido ferroso"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — nomenclatura de óxidos"},
+        {"bodyTypst": "La fórmula correcta del hidróxido de calcio es:", "alternatives": ["$\"CaOH\"$", "$\"Ca\"(\"OH\")_2$", "$\"Ca\"_2\"OH\"$", "$\"CaO\"_2\"H\"_2$", "$\"Ca\"(\"OH\")_3$"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — hidróxidos"},
+        {"bodyTypst": "Indique el nombre del ácido $\"H\"_2\"SO\"_4$ y su anión correspondiente.", "alternatives": ["Ácido sulfuroso, sulfito", "Ácido sulfúrico, sulfato", "Ácido tiosulfúrico, tiosulfato", "Ácido persulfúrico, persulfato", "Ácido sulfhídrico, sulfuro"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — oxácidos"}
+      ]
+    },
+    {
+      "name": "Unidades químicas de masa",
+      "questions": [
+        {"bodyTypst": "Calcule el número de moles contenidos en 88 g de $\"CO\"_2$ (masas atómicas: C=12, O=16).", "alternatives": ["1", "1.5", "2", "2.5", "3"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — mol y masa molar"},
+        {"bodyTypst": "Determine el número de átomos de oxígeno presentes en 3 moles de $\"H\"_2\"SO\"_4$. $N_A = 6.022 times 10^23$.", "alternatives": ["$3.6 times 10^24$", "$7.2 times 10^24$", "$1.08 times 10^25$", "$1.8 times 10^24$", "$2.4 times 10^24$"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — número de Avogadro"},
+        {"bodyTypst": "¿Cuántos gramos de $\"CaCO\"_3$ (M=100 g/mol) se necesitan para obtener 2.5 moles de dicha sustancia?", "alternatives": ["150 g", "200 g", "250 g", "300 g", "350 g"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — masa molar"}
+      ]
+    },
+    {
+      "name": "Estequiometría y reacciones químicas",
+      "questions": [
+        {"bodyTypst": "En la reacción $\"N\"_2 + 3\"H\"_2 -> 2\"NH\"_3$, si reaccionan 4 moles de $\"N\"_2$ con 9 moles de $\"H\"_2$, determine el reactivo limitante.", "alternatives": ["$\"N\"_2$", "$\"H\"_2$", "$\"NH\"_3$", "Ambos se consumen por igual", "No hay reactivo limitante"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — reactivo limitante"},
+        {"bodyTypst": "Para la reacción balanceada $2\"H\"_2 + \"O\"_2 -> 2\"H\"_2\"O\"$, calcule cuántos moles de agua se producen a partir de 5 moles de $\"O\"_2$ (exceso de $\"H\"_2$).", "alternatives": ["5", "8", "10", "12", "15"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — estequiometría"},
+        {"bodyTypst": "Se hacen reaccionar 20 g de $\"CaCO\"_3$ (M=100) según $\"CaCO\"_3 -> \"CaO\" + \"CO\"_2$. Si el rendimiento real es 80%, calcule los gramos de CaO (M=56) obtenidos realmente.", "alternatives": ["7.168", "8.96", "11.2", "14", "17.6"], "correctAnswer": "1", "difficulty": "hard", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — rendimiento de reacción"}
+      ]
+    },
+    {
+      "name": "Estados de la materia",
+      "questions": [
+        {"bodyTypst": "Un gas ideal ocupa 4 L a 2 atm y 300 K. Calcule el volumen (en L) que ocupará a 1 atm y 300 K.", "alternatives": ["2", "4", "6", "8", "10"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — ley de Boyle"},
+        {"bodyTypst": "Una muestra de gas a 27°C y 1 atm se calienta a presión constante hasta 327°C. Calcule el factor por el cual aumenta su volumen.", "alternatives": ["1", "1.5", "2", "2.5", "3"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — ley de Charles"},
+        {"bodyTypst": "Calcule el volumen molar (en L) de un gas ideal en condiciones normales (0°C, 1 atm). Use R=0.082 atm·L/(mol·K).", "alternatives": ["18.4", "20.4", "22.4", "24.4", "26.4"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — ecuación de estado"}
+      ]
+    },
+    {
+      "name": "Soluciones",
+      "questions": [
+        {"bodyTypst": "Se disuelven 20 g de $\"NaOH\"$ (M=40 g/mol) en agua hasta completar 500 mL de solución. Calcule la molaridad de la solución.", "alternatives": ["0.5 M", "1 M", "1.5 M", "2 M", "2.5 M"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — molaridad"},
+        {"bodyTypst": "Una solución de $\"HCl\"$ tiene una concentración de 2 M. Calcule el volumen (en mL) de esta solución necesario para preparar 500 mL de solución 0.5 M por dilución.", "alternatives": ["100", "125", "150", "175", "200"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — dilución"},
+        {"bodyTypst": "Una solución contiene 15 g de soluto en 135 g de solvente. Calcule el porcentaje en masa del soluto en la solución.", "alternatives": ["8%", "10%", "12%", "15%", "18%"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — porcentaje en masa"}
+      ]
+    },
+    {
+      "name": "Ácidos, bases y sales",
+      "questions": [
+        {"bodyTypst": "Calcule el pH de una solución cuya concentración de iones $\"H\"^+$ es $10^(-4)$ mol/L.", "alternatives": ["2", "4", "6", "8", "10"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — pH"},
+        {"bodyTypst": "Si el pOH de una solución es 3, determine la concentración de iones $\"OH\"^-$, en mol/L.", "alternatives": ["$10^(-11)$", "$10^(-3)$", "$10^(-7)$", "$10^(3)$", "$10^(-4)$"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — pOH"},
+        {"bodyTypst": "En la reacción de neutralización $\"HCl\" + \"NaOH\" -> \"NaCl\" + \"H\"_2\"O\"$, si reaccionan 0.2 moles de HCl con 0.2 moles de NaOH, indique el carácter de la sal formada en solución.", "alternatives": ["Ácida", "Básica", "Neutra", "Anfótera", "No se puede determinar"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — neutralización y sales"}
+      ]
+    },
+    {
+      "name": "Electroquímica",
+      "questions": [
+        {"bodyTypst": "En la reacción redox $\"Zn\" + \"Cu\"^(2+) -> \"Zn\"^(2+) + \"Cu\"$, identifique el agente oxidante y el agente reductor respectivamente.", "alternatives": ["Zn, $\"Cu\"^(2+)$", "$\"Cu\"^(2+)$, Zn", "Cu, $\"Zn\"^(2+)$", "$\"Zn\"^(2+)$, Cu", "Zn, Cu"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — reacciones redox"},
+        {"bodyTypst": "Determine el número de oxidación del azufre en el ion sulfato $\"SO\"_4^(2-)$.", "alternatives": ["+2", "+4", "+6", "-2", "+8"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — números de oxidación"},
+        {"bodyTypst": "En una celda electroquímica, determine en qué electrodo ocurre la oxidación y cómo se le denomina.", "alternatives": ["Cátodo, se reduce", "Ánodo, se oxida", "Cátodo, se oxida", "Ánodo, se reduce", "En ambos electrodos por igual"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — celdas electroquímicas"}
+      ]
+    },
+    {
+      "name": "Química del carbono",
+      "questions": [
+        {"bodyTypst": "Determine el tipo de hibridación del átomo de carbono en la molécula de etileno ($\"CH\"_2=\"CH\"_2$).", "alternatives": ["$\"sp\"$", "$\"sp\"^2$", "$\"sp\"^3$", "$\"sp\"^3 d$", "No hibridiza"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — hibridación del carbono"},
+        {"bodyTypst": "Indique el nombre IUPAC del alcano de fórmula $\"C\"_5\"H\"_12$ de cadena lineal.", "alternatives": ["Butano", "Pentano", "Hexano", "Propano", "Heptano"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — nomenclatura de alcanos"},
+        {"bodyTypst": "Clasifique el siguiente carbono según su tipo de enlace: un carbono unido a otros 4 carbonos por enlaces simples.", "alternatives": ["Carbono primario", "Carbono secundario", "Carbono terciario", "Carbono cuaternario", "Carbono asimétrico"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — clasificación de carbonos"}
+      ]
+    },
+    {
+      "name": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "questions": [
+        {"bodyTypst": "Indique el grupo funcional presente en el compuesto $\"CH\"_3-\"CH\"_2-\"OH\"$ y su nombre correspondiente.", "alternatives": ["Cetona, propanona", "Alcohol, etanol", "Ácido carboxílico, ácido acético", "Éter, dietil éter", "Aldehído, acetaldehído"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — funciones oxigenadas"},
+        {"bodyTypst": "El grupo funcional $-\"COOH\"$ corresponde a la función:", "alternatives": ["Alcohol", "Cetona", "Éster", "Ácido carboxílico", "Amina"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — ácidos carboxílicos"},
+        {"bodyTypst": "Identifique la función nitrogenada presente en el compuesto $\"CH\"_3-\"NH\"_2$.", "alternatives": ["Amida", "Nitrilo", "Amina primaria", "Amina secundaria", "Imina"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — aminas"}
+      ]
+    },
+    {
+      "name": "Contaminación ambiental y ecología aplicada",
+      "questions": [
+        {"bodyTypst": "Indique cuál de los siguientes gases es el principal responsable del efecto invernadero antropogénico.", "alternatives": ["Nitrógeno ($\"N\"_2$)", "Oxígeno ($\"O\"_2$)", "Dióxido de carbono ($\"CO\"_2$)", "Argón (Ar)", "Helio (He)"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — contaminación atmosférica"},
+        {"bodyTypst": "La lluvia ácida se forma principalmente por la reacción del agua atmosférica con los óxidos de:", "alternatives": ["Carbono y oxígeno", "Azufre y nitrógeno", "Sodio y potasio", "Calcio y magnesio", "Hierro y aluminio"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — lluvia ácida"}
+      ]
+    },
+    {
+      "name": "Química aplicada: nanotecnología y materiales modernos",
+      "questions": [
+        {"bodyTypst": "El grafeno es un material formado por una monocapa de átomos de:", "alternatives": ["Silicio", "Carbono", "Hierro", "Azufre", "Aluminio"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Química — nanomateriales"},
+        {"bodyTypst": "Los nanomateriales se caracterizan por tener al menos una de sus dimensiones en el orden de:", "alternatives": ["Metros", "Milímetros", "Micrómetros", "Nanómetros", "Centímetros"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Química — escala nanométrica"}
+      ]
+    }
+  ]
+}

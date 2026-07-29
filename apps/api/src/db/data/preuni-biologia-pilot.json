@@ -1,0 +1,120 @@
+{
+  "courseName": "Biología",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Composición química de los seres vivos",
+      "questions": [
+        {"bodyTypst": "El agua es la sustancia más abundante en los seres vivos. Indique la propiedad del agua que explica su elevado calor específico y su rol en la termorregulación.", "alternatives": ["Tensión superficial", "Cohesión molecular", "Puentes de hidrógeno", "Capilaridad", "Baja densidad en estado sólido"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — bioelementos y biomoléculas"},
+        {"bodyTypst": "Indique cuál de los siguientes elementos NO es considerado un bioelemento primario (los 4 elementos más abundantes en la materia viva).", "alternatives": ["Carbono", "Hidrógeno", "Oxígeno", "Fósforo", "Nitrógeno"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — bioelementos"},
+        {"bodyTypst": "Los oligoelementos son bioelementos que se encuentran en la materia viva en cantidades menores al 0.1%. Indique un ejemplo de oligoelemento esencial.", "alternatives": ["Carbono", "Hierro", "Oxígeno", "Hidrógeno", "Nitrógeno"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Biología — oligoelementos"}
+      ]
+    },
+    {
+      "name": "Proteínas y ácidos nucleicos",
+      "questions": [
+        {"bodyTypst": "Indique la unidad estructural básica (monómero) que forma las proteínas mediante enlaces peptídicos.", "alternatives": ["Nucleótidos", "Monosacáridos", "Aminoácidos", "Ácidos grasos", "Glicerol"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — proteínas"},
+        {"bodyTypst": "Respecto a la molécula de ADN, indique la afirmación correcta.", "alternatives": ["Es de cadena simple", "Contiene ribosa como azúcar", "Contiene uracilo como base nitrogenada", "Es de doble cadena antiparalela con desoxirribosa", "No contiene grupo fosfato"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — ácidos nucleicos"},
+        {"bodyTypst": "Si una hebra de ADN tiene la secuencia de bases ATG-CGT-TAC, indique la secuencia de la hebra complementaria.", "alternatives": ["ATG-CGT-TAC", "TAC-GCA-ATG", "GTA-CGT-ATG", "CAT-GCA-TAG", "UAC-GCA-AUG"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Biología — complementariedad de bases"}
+      ]
+    },
+    {
+      "name": "Citología",
+      "questions": [
+        {"bodyTypst": "Indique el organelo celular responsable de la síntesis de ATP mediante la respiración celular aeróbica.", "alternatives": ["Ribosoma", "Aparato de Golgi", "Mitocondria", "Lisosoma", "Retículo endoplasmático liso"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — organelos celulares"},
+        {"bodyTypst": "Indique la característica que diferencia a una célula procariota de una célula eucariota.", "alternatives": ["Presencia de membrana plasmática", "Presencia de ribosomas", "Ausencia de núcleo definido delimitado por envoltura nuclear", "Presencia de citoplasma", "Capacidad de realizar metabolismo"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — procariotas y eucariotas"},
+        {"bodyTypst": "El retículo endoplasmático rugoso se caracteriza por presentar ribosomas adheridos a su membrana. Indique su función principal.", "alternatives": ["Síntesis de lípidos", "Síntesis de proteínas", "Digestión intracelular", "Almacenamiento de calcio exclusivamente", "Producción de energía"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Biología — retículo endoplasmático"}
+      ]
+    },
+    {
+      "name": "Fisiología celular",
+      "questions": [
+        {"bodyTypst": "El proceso de difusión de agua a través de una membrana semipermeable, desde una región de menor concentración de soluto hacia una de mayor concentración, se denomina:", "alternatives": ["Difusión simple", "Ósmosis", "Transporte activo", "Fagocitosis", "Pinocitosis"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — transporte celular"},
+        {"bodyTypst": "Si una célula animal se coloca en una solución hipertónica, ¿qué le ocurrirá?", "alternatives": ["Se hincha y puede lisarse", "Se deshidrata y se arruga (crenación)", "Permanece igual", "Se divide por mitosis", "Aumenta su volumen indefinidamente"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — tonicidad celular"},
+        {"bodyTypst": "El transporte de sustancias en contra de su gradiente de concentración, con gasto de energía en forma de ATP, se denomina:", "alternatives": ["Difusión facilitada", "Ósmosis", "Transporte activo", "Difusión simple", "Filtración"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Biología — transporte activo"}
+      ]
+    },
+    {
+      "name": "Histología animal I",
+      "questions": [
+        {"bodyTypst": "El tejido que recubre las superficies externas e internas del cuerpo (piel, mucosas) y que carece de vasos sanguíneos propios se denomina:", "alternatives": ["Tejido conectivo", "Tejido epitelial", "Tejido muscular", "Tejido nervioso", "Tejido óseo"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — tejido epitelial"},
+        {"bodyTypst": "Indique el tipo de tejido muscular que es estriado y de control voluntario.", "alternatives": ["Músculo liso", "Músculo cardiaco", "Músculo esquelético", "Tejido conectivo", "Tejido adiposo"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — tejido muscular"}
+      ]
+    },
+    {
+      "name": "Histología animal II y vegetal",
+      "questions": [
+        {"bodyTypst": "El tejido vegetal responsable del crecimiento en longitud de la planta, ubicado en los ápices de raíz y tallo, se denomina:", "alternatives": ["Parénquima", "Meristemo apical", "Xilema", "Floema", "Colénquima"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — tejidos vegetales"},
+        {"bodyTypst": "Indique el tejido vascular vegetal encargado del transporte de agua y sales minerales desde la raíz hacia las hojas.", "alternatives": ["Floema", "Xilema", "Epidermis", "Parénquima clorofílico", "Colénquima"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Biología — tejido vascular vegetal"}
+      ]
+    },
+    {
+      "name": "Función de nutrición",
+      "questions": [
+        {"bodyTypst": "Indique el orden correcto del recorrido del bolo alimenticio en el sistema digestivo humano.", "alternatives": ["Boca-esófago-estómago-intestino delgado-intestino grueso", "Boca-estómago-esófago-intestino delgado-intestino grueso", "Boca-esófago-intestino delgado-estómago-intestino grueso", "Boca-intestino delgado-estómago-esófago-intestino grueso", "Esófago-boca-estómago-intestino delgado-intestino grueso"], "correctAnswer": "0", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — sistema digestivo"},
+        {"bodyTypst": "La digestión química de las proteínas se inicia en el estómago gracias a la acción de la enzima:", "alternatives": ["Amilasa salival", "Pepsina", "Lipasa pancreática", "Tripsina", "Lactasa"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — enzimas digestivas"},
+        {"bodyTypst": "La absorción de los nutrientes producto de la digestión ocurre principalmente en:", "alternatives": ["El estómago", "El esófago", "El intestino delgado", "El intestino grueso", "La boca"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Biología — absorción intestinal"}
+      ]
+    },
+    {
+      "name": "Función de circulación",
+      "questions": [
+        {"bodyTypst": "Indique la cavidad del corazón humano que recibe la sangre oxigenada proveniente de las venas pulmonares.", "alternatives": ["Aurícula derecha", "Ventrículo derecho", "Aurícula izquierda", "Ventrículo izquierdo", "Vena cava"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — anatomía cardiaca"},
+        {"bodyTypst": "Indique el tipo de célula sanguínea encargada principalmente del transporte de oxígeno.", "alternatives": ["Leucocitos", "Plaquetas", "Eritrocitos (glóbulos rojos)", "Linfocitos", "Monocitos"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — componentes de la sangre"},
+        {"bodyTypst": "El circuito de circulación que lleva la sangre del ventrículo derecho a los pulmones y regresa a la aurícula izquierda se denomina:", "alternatives": ["Circulación sistémica", "Circulación pulmonar (menor)", "Circulación portal", "Circulación coronaria", "Circulación fetal"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Biología — circulación pulmonar"}
+      ]
+    },
+    {
+      "name": "Función de respiración y excreción",
+      "questions": [
+        {"bodyTypst": "El intercambio gaseoso entre el aire y la sangre ocurre a nivel de las estructuras pulmonares denominadas:", "alternatives": ["Bronquios", "Bronquiolos", "Tráquea", "Alvéolos pulmonares", "Laringe"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — sistema respiratorio"},
+        {"bodyTypst": "Indique la unidad estructural y funcional del riñón encargada de la filtración de la sangre y formación de la orina.", "alternatives": ["Uréter", "Nefrona", "Uretra", "Vejiga", "Pelvis renal"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — sistema excretor"},
+        {"bodyTypst": "El principal producto de desecho nitrogenado eliminado por el riñón humano, proveniente del metabolismo de las proteínas, es:", "alternatives": ["Glucosa", "Urea", "Ácido láctico", "Bilirrubina", "Colesterol"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Biología — excreción de urea"}
+      ]
+    },
+    {
+      "name": "Coordinación química",
+      "questions": [
+        {"bodyTypst": "La glándula endocrina que regula el metabolismo basal mediante la secreción de las hormonas tiroxina y triyodotironina es:", "alternatives": ["Hipófisis", "Tiroides", "Páncreas", "Suprarrenal", "Paratiroides"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — sistema endocrino"},
+        {"bodyTypst": "La hormona insulina, secretada por las células beta del páncreas, tiene como función principal:", "alternatives": ["Elevar la glucosa en sangre", "Disminuir la glucosa en sangre favoreciendo su ingreso a las células", "Regular el calcio sanguíneo", "Estimular el crecimiento óseo", "Regular la presión arterial"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Biología — insulina"}
+      ]
+    },
+    {
+      "name": "Coordinación nerviosa",
+      "questions": [
+        {"bodyTypst": "Indique la célula especializada del tejido nervioso encargada de la transmisión del impulso nervioso.", "alternatives": ["Célula de Schwann", "Neurona", "Astrocito", "Microglía", "Oligodendrocito"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — sistema nervioso"},
+        {"bodyTypst": "La región del encéfalo humano encargada de coordinar el equilibrio y la coordinación motora fina es:", "alternatives": ["Cerebro", "Cerebelo", "Bulbo raquídeo", "Tálamo", "Hipotálamo"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — encéfalo"},
+        {"bodyTypst": "El espacio de comunicación entre dos neuronas, donde se liberan neurotransmisores, se denomina:", "alternatives": ["Axón", "Dendrita", "Sinapsis", "Núcleo", "Vaina de mielina"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Biología — sinapsis"}
+      ]
+    },
+    {
+      "name": "Función de reproducción, salud y enfermedad",
+      "questions": [
+        {"bodyTypst": "El proceso de división celular que da origen a los gametos (células sexuales) con la mitad de la carga cromosómica se denomina:", "alternatives": ["Mitosis", "Meiosis", "Fecundación", "Gastrulación", "Citocinesis"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — reproducción"},
+        {"bodyTypst": "Indique el órgano donde ocurre normalmente la fecundación en la especie humana.", "alternatives": ["Útero", "Ovario", "Trompa de Falopio", "Vagina", "Cuello uterino"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Biología — fecundación humana"}
+      ]
+    },
+    {
+      "name": "Genética, evolución y biotecnología",
+      "questions": [
+        {"bodyTypst": "En un cruce entre dos individuos heterocigotos (Aa × Aa) para un carácter con dominancia completa, indique la proporción fenotípica esperada en la descendencia.", "alternatives": ["1:1", "1:2:1", "3:1", "9:3:3:1", "1:3"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — leyes de Mendel"},
+        {"bodyTypst": "El mecanismo evolutivo propuesto por Darwin, según el cual los individuos mejor adaptados al ambiente tienen mayor probabilidad de sobrevivir y reproducirse, se denomina:", "alternatives": ["Mutación", "Deriva génica", "Selección natural", "Flujo génico", "Herencia de caracteres adquiridos"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — evolución"},
+        {"bodyTypst": "La técnica de biotecnología que permite obtener múltiples copias idénticas de un fragmento específico de ADN se denomina:", "alternatives": ["Electroforesis", "Reacción en cadena de la polimerasa (PCR)", "Secuenciación de Sanger", "Clonación reproductiva", "Transcripción inversa"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Biología — biotecnología"}
+      ]
+    },
+    {
+      "name": "Fundamentos de la biología",
+      "questions": [
+        {"bodyTypst": "Indique cuál de las siguientes es considerada una característica común a todos los seres vivos.", "alternatives": ["Locomoción activa", "Homeostasis", "Presencia de sistema nervioso", "Reproducción sexual exclusivamente", "Presencia de esqueleto"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — características de los seres vivos"},
+        {"bodyTypst": "Según el sistema de clasificación de los tres dominios, indique cuáles son los dominios de la vida.", "alternatives": ["Animalia, Plantae, Fungi", "Bacteria, Archaea, Eukarya", "Procariota, Eucariota, Virus", "Monera, Protista, Animalia", "Vertebrados, Invertebrados, Plantas"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Biología — dominios de la vida"}
+      ]
+    },
+    {
+      "name": "Microbiología",
+      "questions": [
+        {"bodyTypst": "Indique cuál de los siguientes microorganismos carece de estructura celular y requiere obligatoriamente de una célula huésped para replicarse.", "alternatives": ["Bacteria", "Hongo unicelular", "Virus", "Protozoario", "Alga unicelular"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Biología — virus"},
+        {"bodyTypst": "Las bacterias son microorganismos procariotas. Indique la estructura que les confiere rigidez y protección, compuesta principalmente por peptidoglicano.", "alternatives": ["Membrana plasmática", "Pared celular", "Cápsula", "Flagelo", "Pili"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Biología — pared celular bacteriana"}
+      ]
+    }
+  ]
+}

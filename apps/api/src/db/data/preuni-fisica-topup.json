@@ -1,0 +1,555 @@
+{
+  "courseName": "Física",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Estática",
+      "questions": [
+        {
+          "bodyTypst": "Determine la magnitud de la fuerza horizontal $arrow(F)$, en N, para que el bloque de $20$ #\"kg\" de la figura descienda sobre el plano inclinado rugoso a velocidad constante, si se sabe que, recorriendo una distancia de $6$ #\"m\" sobre el plano, el trabajo realizado por la fuerza de fricción es de $54$ #\"J\". El plano inclinado tiene una altura de $7$ #\"m\" y una base horizontal de $24$ #\"m\" (de modo que su longitud es $25$ #\"m\", formando con la horizontal un ángulo $theta$ tal que $tan theta = 7/24$). ($g = 9.81 \"m/s\"^2$)",
+          "alternatives": [
+            "23,92",
+            "24,70",
+            "37,26",
+            "47,85",
+            "52,64"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20172.pdf",
+          "sourceName": "Solucionario oficial UNI 2017-2, Física P3 (Tercera Prueba)"
+        },
+        {
+          "bodyTypst": "Un hombre aplica una fuerza de $8$ #\"N\" perpendicularmente al mango de un martillo que se usa para extraer un clavo, tal como se muestra en la figura: el mango mide $26$ #\"cm\" desde el punto donde se aplica la fuerza hasta el punto de apoyo (fulcro) del martillo sobre la madera, y el clavo dista $4$ #\"cm\" de dicho punto de apoyo. ¿Cuál es la fuerza, en N, que se ejerce sobre el clavo?",
+          "alternatives": [
+            "8 N",
+            "39 N",
+            "52 N",
+            "26 N",
+            "13 N"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/momento-de-una-fuerza-o-torque-ejemplos-problemas-resueltos-estatica-segunda-condicion-de-equilibrio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Momento de una fuerza (torque), Pregunta 1"
+        },
+        {
+          "bodyTypst": "En la figura se muestra un sistema en equilibrio: una barra horizontal de longitud $L$ y peso de magnitud $P$ está articulada en el extremo $A$ a una pared vertical; desde un punto de la pared ubicado por encima de $A$ parte una cuerda hacia el extremo opuesto $B$ de la barra, formando un ángulo de $30°$ con la barra en $B$. Del punto de la barra ubicado a $3L/4$ de la articulación $A$ cuelga un bloque de peso $P/2$. Calcule la magnitud de la fuerza que actúa sobre la barra en el punto $A$.",
+          "alternatives": [
+            "$P sqrt(43)/2$",
+            "$P sqrt(43)/3$",
+            "$P sqrt(43)/5$",
+            "$P sqrt(43)/4$",
+            "$P sqrt(43)/6$"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/momento-de-una-fuerza-o-torque-ejemplos-problemas-resueltos-estatica-segunda-condicion-de-equilibrio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Momento de una fuerza (torque), Pregunta 2"
+        },
+        {
+          "bodyTypst": "En el sistema en equilibrio de la figura, una barra horizontal $A B$ ingrávida (sin peso), de $5$ #\"m\" de longitud, se apoya sobre un soporte ubicado a $4$ #\"m\" del extremo $A$ y a $1$ #\"m\" del extremo $B$. Del extremo $A$ parte una cuerda hacia un punto fijo $C$, formando un ángulo de $37°$ con la vertical. Del extremo $B$ cuelga un bloque de peso $40$ #\"kgf\". Calcule la tensión en la cuerda $A C$ (en kgf).",
+          "alternatives": [
+            "1,0 kgf",
+            "10,0 kgf",
+            "12,5 kgf",
+            "22,5 kgf",
+            "25,0 kgf"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/momento-de-una-fuerza-o-torque-ejemplos-problemas-resueltos-estatica-segunda-condicion-de-equilibrio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Momento de una fuerza (torque), Pregunta 3"
+        }
+      ]
+    },
+    {
+      "name": "Electrostática",
+      "questions": [
+        {
+          "bodyTypst": "Si una esfera conductora es tocada por una barra cargada positivamente, la esfera adquiere una carga de $4 \"nC\"$. Calcule el número de cargas elementales o fundamentales que son transferidas debido al contacto.",
+          "alternatives": [
+            "La esfera gana $25 times 10^9$ protones",
+            "La esfera pierde $50 times 10^9$ electrones",
+            "La esfera pierde $25 times 10^9$ electrones",
+            "La esfera gana $25 times 10^(18)$ protones",
+            "La esfera gana $25 times 10^9$ electrones"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com (rubiños) — Electrostática problemas resueltos, Problema 5, Rpta.: C"
+        },
+        {
+          "bodyTypst": "Se tiene dos cargas de $5 \"μC\"$ y $-4 \"μC\"$ separadas por una distancia de $3 \"cm\"$. Calcula la fuerza de atracción entre ellas.",
+          "alternatives": [
+            "$2 \"N\"$",
+            "$12 \"N\"$",
+            "$20 \"N\"$",
+            "$120 \"N\"$",
+            "$200 \"N\"$"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com (rubiños) — Electrostática problemas resueltos, Problema 12, Rpta.: E"
+        },
+        {
+          "bodyTypst": "Dos cargas puntuales $Q_1$ y $Q_2$, separadas a una distancia $r$, se atraen con una cierta fuerza. Suponga que el valor de $Q_1$ se duplica y el de $Q_2$ se divide entre $8$, ¿cuál será la distancia entre las cargas para que dicha fuerza permanezca invariable?",
+          "alternatives": [
+            "$r$",
+            "$2r$",
+            "$r/2$",
+            "$r/3$"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com (rubiños) — Electrostática problemas resueltos, Problema 15, Rpta.: C"
+        }
+      ]
+    },
+    {
+      "name": "Termodinámica",
+      "questions": [
+        {
+          "bodyTypst": "Dos moles de un gas ideal se encuentran a 52 °C en un depósito rígido. Si la constante universal de los gases es 8,31 J/(mol·K), la energía cinética traslacional total de la masa de gas, en J, es:",
+          "alternatives": [
+            "5565",
+            "6091",
+            "8102",
+            "8212",
+            "9110"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Termodinámica, Problemas Resueltos, Pregunta 1 (energía cinética traslacional de un gas ideal)"
+        },
+        {
+          "bodyTypst": "La temperatura del reservorio caliente de una máquina térmica que opera bajo un ciclo de Carnot es de 200 °C y la del reservorio frío es de 50 °C. El calor que libera la máquina es de 1000 J. Calcule aproximadamente, en J, el trabajo que realiza la máquina.",
+          "alternatives": [
+            "564",
+            "264",
+            "464",
+            "164",
+            "364"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Termodinámica, Problemas Resueltos, Pregunta 5 (trabajo de una máquina de Carnot)"
+        },
+        {
+          "bodyTypst": "Una máquina térmica x tiene la mitad de la eficiencia de una máquina de Carnot que opera entre las temperaturas de 67 °C y 577 °C. Si la máquina x recibe 40 kJ de calor por ciclo, el trabajo que realiza por ciclo, en kJ, es:",
+          "alternatives": [
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/termodinamica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Termodinámica, Problemas Resueltos, Pregunta 6 (eficiencia de una máquina térmica respecto a un ciclo de Carnot)"
+        }
+      ]
+    },
+    {
+      "name": "Análisis dimensional y vectorial",
+      "questions": [
+        {
+          "bodyTypst": "En la figura se muestra una circunferencia. Desde un punto $P$ de la circunferencia parten los vectores $arrow(A)$ y $arrow(B)$: el vector $arrow(B)$ va hacia la parte superior de la circunferencia formando un ángulo de $53°$ con el diámetro horizontal, y el vector $arrow(A)$ va hacia la parte inferior de la circunferencia formando un ángulo de $37°$ con dicho diámetro. El vector $arrow(C)$ va desde el centro de la circunferencia hasta el extremo derecho de esta, a lo largo del diámetro horizontal. Si $|arrow(A)| = 16$ #\"u\", determine $M = |arrow(A) + arrow(B) + 3 arrow(C)|$ (en u).",
+          "alternatives": [
+            "30 u",
+            "40 u",
+            "60 u",
+            "80 u",
+            "100 u"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20152.pdf",
+          "sourceName": "Solucionario oficial UNI 2015-2, Física P1 (Tercera Prueba)"
+        },
+        {
+          "bodyTypst": "Se ha determinado que la magnitud $F$ de una fuerza que actúa sobre un satélite que órbita la Tierra depende de la rapidez $v$ del satélite, de la distancia media del satélite al centro de la Tierra $R$ y de la masa $m$ del satélite, según la relación $F = k m^alpha v^beta R^gamma$, siendo $k$ una constante adimensional. Determine $alpha + beta + gamma$.",
+          "alternatives": [
+            "$-2$",
+            "$-1$",
+            "$0$",
+            "$1$",
+            "$2$"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20171.pdf",
+          "sourceName": "Solucionario oficial UNI 2017-1, Física P1 (Tercera Prueba)"
+        }
+      ]
+    },
+    {
+      "name": "Cinemática",
+      "questions": [
+        {
+          "bodyTypst": "Observando el siguiente gráfico de movimiento unidimensional de una partícula que parte del reposo: en el gráfico posición-tiempo, para $t in [0,2]$ #\"s\" la trayectoria es una parábola que parte del origen y alcanza $z=4$ #\"m\" en $t=2$ #\"s\"; luego, para $t in [2,4]$ #\"s\", la trayectoria es una recta que desciende desde $z=4$ #\"m\" hasta $z=0$ en $t=4$ #\"s\". Se enuncian las siguientes proposiciones:\n\nI) El módulo de la aceleración del móvil entre $[0,2]$ segundos es $1 \"m/s\"^2$.\n\nII) La velocidad para $t=1$ #\"s\" es $(2 \"m/s\") hat(k)$.\n\nIII) La velocidad para $t=3$ #\"s\" es $(-0.5 \"m/s\") hat(k)$.\n\n¿Cuáles son verdaderas?",
+          "alternatives": [
+            "Solo I",
+            "Solo II",
+            "Solo III",
+            "I y II",
+            "II y III"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2015.pdf",
+          "sourceName": "Solucionario oficial UNI 2015-1, Física P2 (Segunda Prueba)"
+        },
+        {
+          "bodyTypst": "Un auto parte del origen de coordenadas con una velocidad $arrow(v) = (12.0 hat(i) + 16.0 hat(j)) \"m/s\"$. Si después de 3 segundos de movimiento el auto acelera con $arrow(a) = (2 \"m/s\"^2) hat(j)$, determine aproximadamente la magnitud de su desplazamiento, en m, en el instante $t=5$ #\"s\".",
+          "alternatives": [
+            "92,22",
+            "100,22",
+            "103,22",
+            "115,22",
+            "120,22"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2015.pdf",
+          "sourceName": "Solucionario oficial UNI 2015-1, Física P3 (Segunda Prueba)"
+        }
+      ]
+    },
+    {
+      "name": "Dinámica",
+      "questions": [
+        {
+          "bodyTypst": "En el sistema mostrado, sobre una superficie horizontal lisa se encuentran tres bloques de masas $m_3$, $m_2$ y $m_1$ (de izquierda a derecha), unidos en serie mediante cables inextensibles y de peso despreciable: el cable \"2\" une $m_3$ con $m_2$, y el cable \"1\" une $m_2$ con $m_1$. Sobre $m_1$ se aplica una fuerza horizontal $arrow(F)$ dirigida hacia la derecha, alejando a los bloques en dicho orden. Calcule el valor de la tensión en el cable \"2\".",
+          "alternatives": [
+            "$(m_3-m_1-m_2)/m_3 F$",
+            "$(m_3-m_1+m_2)/m_3 F$",
+            "$(m_3+m_1-m_2)/m_3 F$",
+            "$m_3/(m_3+m_2+m_1) F$",
+            "$m_3/(m_3-m_2+m_1) F$"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2015.pdf",
+          "sourceName": "Solucionario oficial UNI 2015-1, Física P4 (Segunda Prueba)"
+        },
+        {
+          "bodyTypst": "Se tienen tres cuerpos dispuestos como se muestra en la figura: un bloque de masa $m_1$ está apoyado sobre una mesa horizontal sin fricción; sobre $m_1$ descansa un bloque de masa $m_3$ (existiendo fricción entre $m_1$ y $m_3$, con coeficientes $mu_s = 0.6$ y $mu_k = 0.4$); el bloque $m_1$ está unido mediante una cuerda que pasa por una polea fija en el borde de la mesa a un bloque de masa $m_2$ que cuelga verticalmente. Las masas de $m_1$ y $m_3$ son $10$ #\"kg\" y $8$ #\"kg\" respectivamente. Determine el máximo valor de $m_2$ (en kg) para que $m_1$ y $m_3$ se muevan juntos sin resbalar. ($g = 9.81 \"m/s\"^2$)",
+          "alternatives": [
+            "7,2",
+            "10,8",
+            "12,0",
+            "18,0",
+            "27,0"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20152.pdf",
+          "sourceName": "Solucionario oficial UNI 2015-2, Física P4 (Tercera Prueba)"
+        }
+      ]
+    },
+    {
+      "name": "Electrodinámica",
+      "questions": [
+        {
+          "bodyTypst": "Indicar verdadero (V) o falso (F). I) La corriente eléctrica en un conductor metálico se debe al movimiento orientado de los electrones libres. II) El sentido convencional de la corriente eléctrica es de la zona de mayor a menor potencial eléctrico. III) La resistencia eléctrica en un conductor metálico es directamente proporcional a la longitud.",
+          "alternatives": [
+            "VVF",
+            "FFV",
+            "VFF",
+            "VVV",
+            "FFF"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/12/intensidad-de-corriente-electrica-formula-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com (rubiños) — Intensidad de corriente eléctrica, problemas resueltos, Pregunta 3, Rpta.: D"
+        },
+        {
+          "bodyTypst": "Sobre el concepto de dependencia de la densidad de corriente ($J$) con el campo eléctrico ($E$) indique las proposiciones verdaderas (V) o falsas (F). I) La Ley de Ohm describe de modo general que $J$ es directamente proporcional a $E$. II) Los buenos conductores eléctricos suelen ser buenos conductores del calor. III) La resistividad de todas las sustancias aumenta al aumentar la temperatura.",
+          "alternatives": [
+            "FFV",
+            "VVF",
+            "FVF",
+            "FFV",
+            "FVV"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/12/intensidad-de-corriente-electrica-formula-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com (rubiños) — Intensidad de corriente eléctrica, problemas resueltos, Pregunta 4, Rpta.: B"
+        }
+      ]
+    },
+    {
+      "name": "Física moderna",
+      "questions": [
+        {
+          "bodyTypst": "Se aceleran electrones hasta una energía cinética de $10^6$ eV. Determine el porcentaje de aumento de masa de los electrones por efectos relativistas, sabiendo que 1 eV $= 1.6 times 10^(-19)$ J y 1 MeV $= 10^6$ eV. (Energía relativista del electrón en reposo: $E_0 = m_0 c^2 approx 0.5$ MeV)",
+          "alternatives": [
+            "300%",
+            "100%",
+            "200%",
+            "400%",
+            "500%"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Física Moderna, sección Ejercicios (PDF enlazado), Ejercicio 1 (aumento relativista de masa)"
+        },
+        {
+          "bodyTypst": "Para tomar una radiografía convencional se requiere acelerar electrones con un voltaje de 30 000 V, y por el fenómeno de frenamiento se generan los rayos X. Determine la longitud de onda de los rayos X si solo el 20% de la energía cinética de un electrón se transformó en energía de un fotón. (Datos: c $= 3 times 10^8$ m/s, h $= 4 times 10^(-15)$ eV·s, 1 Å $= 1 times 10^(-10)$ m, e $= 1.6 times 10^(-19)$ C, 1 eV $= 1.6 times 10^(-19)$ J)",
+          "alternatives": [
+            "4 Å",
+            "2,5 Å",
+            "0,4 Å",
+            "2 Å",
+            "0,8 Å"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Física Moderna, sección Ejercicios (PDF enlazado), Ejercicio 6 (longitud de onda de rayos X por frenamiento)"
+        }
+      ]
+    },
+    {
+      "name": "Gravitación universal",
+      "questions": [
+        {
+          "bodyTypst": "Una estrella de neutrones tiene cinco veces la masa del Sol ($M_\"sol\"$), concentrada en una esfera de $10$ $\"km\"$ de radio. Calcule aproximadamente la gravedad (en unidades de $10^(10)$ $\"m/s\"^2$) en la superficie de dicha estrella. $(G = 6,67 times 10^(-11) \"N\" dot.c \"m\"^2 / \"kg\"^2, quad M_\"Sol\" = 1,99 times 10^(30) \"kg\")$",
+          "alternatives": [
+            "481",
+            "664",
+            "842",
+            "1215",
+            "2340"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "Solucionario oficial UNI 2018-2, Física P05"
+        },
+        {
+          "bodyTypst": "Considere dos planetas $A$ y $B$ de masas $M_A$ y $M_B$ y radios $R_A$ y $R_B$ respectivamente; se sabe que $M_B = 2 M_A$ y que la aceleración de la gravedad sobre la superficie de ambos planetas es la misma. Calcule $R_B / R_A$.",
+          "alternatives": [
+            "$sqrt(3) / 3$",
+            "$sqrt(2) / 2$",
+            "$sqrt(2)$",
+            "$sqrt(3)$",
+            "4"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2015.pdf",
+          "sourceName": "Solucionario oficial UNI 2015-1 (OCAD-UNI), Física P05 de la Segunda Prueba"
+        }
+      ]
+    },
+    {
+      "name": "Hidrostática",
+      "questions": [
+        {
+          "bodyTypst": "Una roca de masa $M$ tiene una densidad el doble que la del agua y está en el fondo de un tanque de agua. Encuentre el módulo de la fuerza normal ejercida sobre la roca ($g$ es la aceleración de la gravedad).",
+          "alternatives": [
+            "$M g / 3$",
+            "$M g / 2$",
+            "$M g$",
+            "$2 M g$",
+            "$3 M g$"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "Solucionario oficial UNI 2018-2, Física P11"
+        },
+        {
+          "bodyTypst": "Un bloque de masa $M$ se encuentra en el fondo de un balde (completamente sumergido) lleno de un líquido cuya densidad es la quinta parte de la del bloque. Calcule la magnitud de la fuerza normal ejercida por el fondo del balde sobre el bloque ($g = 9,81$ $\"m/s\"^2$).",
+          "alternatives": [
+            "$M g / 5$",
+            "$2 M g / 5$",
+            "$3 M g / 5$",
+            "$4 M g / 5$",
+            "$M g$"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2015.pdf",
+          "sourceName": "Solucionario oficial UNI 2015-1 (OCAD-UNI), Física P10 de la Segunda Prueba"
+        }
+      ]
+    },
+    {
+      "name": "Magnetismo y electromagnetismo",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuántas de las siguientes proposiciones son verdaderas? 1) Existen imanes de un sólo polo magnético. 2) El polo magnético norte de la Tierra está en el hemisferio norte terrestre. 3) El campo magnético terrestre se debe a corrientes circulares que existen en el centro de la Tierra. 4) El origen de todo campo magnético está en los dipolos magnéticos. 5) El origen de todo campo magnético está en las cargas eléctricas en movimiento. 6) Las líneas de campo magnético son siempre cerradas. 7) Todo sólido exhibe magnetización espontánea. 8) Los polos nortes geográficos y magnéticos coinciden. 9) El magnetismo de una sustancia resulta básicamente del movimiento de las cargas eléctricas contenidas en ella. 10) Puede encontrarse un imán de un sólo polo magnético. 11) Sólo hay sustancias paramagnéticas. 12) El magnetismo de una sustancia resulta de la atracción gravitacional.",
+          "alternatives": [
+            "8",
+            "7",
+            "6",
+            "3",
+            "4"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2025/09/campo-magnetico-ejemplos-problemas-resueltos-formulas-biot-savar-oersted-induccion-magnetica-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com (rubiños) — Campo magnético ejercicios resueltos, Ejercicio 1, Clave: D"
+        },
+        {
+          "bodyTypst": "¿Cuál de los siguientes enunciados describe el fenómeno de la inducción electromagnética?",
+          "alternatives": [
+            "Una barra de hierro se imanta en un campo magnético.",
+            "Una variación de la intensidad de un campo eléctrico genera un campo magnético.",
+            "Un cambio de flujo magnético a través de una espira de un alambre genera una corriente eléctrica en ella.",
+            "Las cargas eléctricas de un campo se redistribuyen si este cuerpo es introducido en un campo eléctrico."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2025/10/induccion-electromagnetica-flujo-magnetico-ejemplos-problemas-resueltos-formulas-ley-de-lenz-ley-de-faraday-regla-de-la-mano-derecha-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com (rubiños) — Inducción electromagnética ejercicios resueltos, Ejercicio 2, Clave: C"
+        }
+      ]
+    },
+    {
+      "name": "Óptica geométrica",
+      "questions": [
+        {
+          "bodyTypst": "Un rayo de luz incide desde el aire sobre la superficie plana de un material transparente con un ángulo de 53° respecto a la normal. Se observa que los rayos reflejado y refractado son mutuamente perpendiculares. ¿Cuál es el ángulo crítico para la reflexión total interna?",
+          "alternatives": [
+            "sen⁻¹(0,30)",
+            "sen⁻¹(0,45)",
+            "sen⁻¹(0,50)",
+            "sen⁻¹(0,75)",
+            "sen⁻¹(0,90)"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/refraccion-de-la-luz-ley-de-snell-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Óptica Geométrica / Refracción de la Luz, Problemas Resueltos, Problema 7 (ángulo crítico con rayos reflejado y refractado perpendiculares)"
+        },
+        {
+          "bodyTypst": "Cuando se sumerge en el agua, un buzo ve el Sol a un ángulo aparente de 45° respecto de la vertical. ¿A qué ángulo respecto de la vertical vería el Sol el buzo si estuviese fuera del agua? (Índice de refracción del agua: η = 1,33)",
+          "alternatives": [
+            "sen⁻¹(0,34)",
+            "sen⁻¹(0,52)",
+            "sen⁻¹(0,62)",
+            "sen⁻¹(0,82)",
+            "sen⁻¹(0,94)"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/refraccion-de-la-luz-ley-de-snell-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Óptica Geométrica / Refracción de la Luz, Problemas Resueltos, Problema 8 (posición aparente del Sol vista por un buzo)"
+        }
+      ]
+    },
+    {
+      "name": "Oscilaciones y ondas mecánicas",
+      "questions": [
+        {
+          "bodyTypst": "Un cuerpo de $1$ $\"kg\"$ de masa se une al final de un resorte fijo por su otro extremo. El sistema realiza 4 oscilaciones por segundo con una amplitud de $0,4$ $\"m\"$. Calcule aproximadamente la energía total (en $\"J\"$) del sistema masa-resorte.",
+          "alternatives": [
+            "48,03",
+            "50,48",
+            "52,43",
+            "57,83",
+            "60,23"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "Solucionario oficial UNI 2018-2, Física P08"
+        },
+        {
+          "bodyTypst": "La función de onda en una cuerda es $0,4 sin(3 pi x - 4 pi t)$ en unidades del S.I. Si la potencia media de la onda es de $3$ $\"mW\"$, calcule la densidad lineal de la cuerda en $\"kg/m\"$.",
+          "alternatives": [
+            "$1 / (5120 pi^2)$",
+            "$3 / (5120 pi^2)$",
+            "$9 / (5120 pi^2)$",
+            "$9 / (2560 pi^2)$",
+            "$9 / (1280 pi^2)$"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "Solucionario oficial UNI 2018-2, Física P09"
+        }
+      ]
+    },
+    {
+      "name": "Temperatura, calorimetría y fenómenos térmicos",
+      "questions": [
+        {
+          "bodyTypst": "Se tienen tres ciudades muy alejadas cuyas temperaturas ambientales son: Ciudad I: 26 °C, Ciudad II: 88 °F, Ciudad III: 293 K. Indique el orden de menor a mayor temperatura.",
+          "alternatives": [
+            "I < II < III",
+            "I < III < II",
+            "II < I < III",
+            "III < I < II",
+            "III < II < I"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Termometría, Problemas Resueltos, Problema 8 (comparación de temperaturas en °C, °F y K)"
+        },
+        {
+          "bodyTypst": "Una solución de sal (NaCl) con agua (H₂O) congela a -10 °C. ¿Cuál será el punto de congelación de la solución, en °F y en K?",
+          "alternatives": [
+            "-22 °F; 283 K",
+            "-10 °F; 263 K",
+            "7 °F; 170 K",
+            "14 °F; 263 K",
+            "263 °F; 526 K"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Termometría, Problemas Resueltos, Problema 13 (punto de congelación de una solución en distintas escalas)"
+        }
+      ]
+    },
+    {
+      "name": "Trabajo, energía y potencia",
+      "questions": [
+        {
+          "bodyTypst": "Una plancha tiene una potencia de $1,2$ $\"kW\"$. Calcule cuánto cuesta (en céntimos) el consumo de energía eléctrica al usar la plancha durante 40 minutos, sabiendo que $1$ $\"kWh\"$ cuesta 40 céntimos.",
+          "alternatives": [
+            "16",
+            "20",
+            "24",
+            "28",
+            "32"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "Solucionario oficial UNI 2018-2, Física P06"
+        },
+        {
+          "bodyTypst": "La magnitud de la fuerza (en $\"N\"$) sobre un objeto que actúa a lo largo del eje $x$ varía según la gráfica $F$ vs $x$ siguiente: $F$ crece linealmente desde $0$ en $x=0$ hasta $400$ en $x=3$ $\"m\"$; permanece constante en $400$ hasta $x=7$ $\"m\"$; decrece linealmente hasta $0$ en $x=10$ $\"m\"$; continúa decreciendo linealmente hasta $-200$ en $x=12$ $\"m\"$; se mantiene constante en $-200$ hasta $x=13$ $\"m\"$; y crece linealmente hasta $0$ en $x=15$ $\"m\"$. Calcule el trabajo realizado por esta fuerza (en joules) para mover el objeto desde el origen hasta el punto $x=15$ $\"m\"$.",
+          "alternatives": [
+            "2 000",
+            "2 200",
+            "2 400",
+            "2 600",
+            "2 800"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2015.pdf",
+          "sourceName": "Solucionario oficial UNI 2015-1 (OCAD-UNI), Física P06 de la Segunda Prueba"
+        }
+      ]
+    }
+  ]
+}

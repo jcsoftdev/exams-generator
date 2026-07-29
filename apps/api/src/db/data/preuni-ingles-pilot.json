@@ -1,0 +1,126 @@
+{
+  "courseName": "Inglés",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Aptitud comunicativa (inglés)",
+      "questions": [
+        {"bodyTypst": "Choose the correct response: \"Nice to meet you.\"", "alternatives": ["I'm fine, thanks.", "Nice to meet you too.", "You're welcome.", "See you later.", "Excuse me."], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — expresiones comunicativas"},
+        {"bodyTypst": "Choose the correct response to the question: \"How are you doing?\"", "alternatives": ["I'm a student.", "I'm doing great, thanks.", "I'm from Peru.", "It's on the table.", "I'm 18 years old."], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — expresiones comunicativas"}
+      ]
+    },
+    {
+      "name": "Verb to be (present) / greetings & wh-questions",
+      "questions": [
+        {"bodyTypst": "Complete the sentence: \"She #\"___\" a doctor.\"", "alternatives": ["am", "is", "are", "be", "been"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — verb to be"},
+        {"bodyTypst": "Choose the correct wh-question for the answer: \"I am from Lima.\"", "alternatives": ["What is your name?", "Where are you from?", "How old are you?", "Who are you?", "When were you born?"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — wh-questions"},
+        {"bodyTypst": "Complete the sentence: \"#\"___\" you a teacher?\"", "alternatives": ["Am", "Is", "Are", "Be", "Was"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Inglés — verb to be interrogative"}
+      ]
+    },
+    {
+      "name": "Singular and plural nouns",
+      "questions": [
+        {"bodyTypst": "Choose the correct plural form of the noun \"child\".", "alternatives": ["childs", "childes", "children", "childrens", "child's"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — plural irregular nouns"},
+        {"bodyTypst": "Choose the correct plural form of the noun \"box\".", "alternatives": ["boxs", "boxes", "boxies", "box's", "boxen"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — plural nouns ending in -x"},
+        {"bodyTypst": "Choose the correct plural form of the noun \"mouse\" (the animal).", "alternatives": ["mouses", "mice", "mices", "mouse's", "mouseses"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Inglés — plural irregular nouns"}
+      ]
+    },
+    {
+      "name": "Countable and uncountable nouns",
+      "questions": [
+        {"bodyTypst": "Choose the correct quantifier: \"There isn't #\"___\" milk in the fridge.\"", "alternatives": ["many", "much", "a few", "several", "some many"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — countable/uncountable nouns"},
+        {"bodyTypst": "Choose the correct quantifier: \"How #\"___\" books do you have?\"", "alternatives": ["much", "many", "a lot", "little", "any much"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — countable nouns con many"},
+        {"bodyTypst": "Choose the uncountable noun among the following options.", "alternatives": ["apples", "chairs", "information", "books", "students"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Inglés — sustantivos incontables"}
+      ]
+    },
+    {
+      "name": "Simple present tense",
+      "questions": [
+        {"bodyTypst": "Complete the sentence: \"He #\"___\" to school every day.\"", "alternatives": ["go", "goes", "going", "gone", "went"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — simple present"},
+        {"bodyTypst": "Choose the correct negative form: \"They #\"___\" like fast food.\"", "alternatives": ["doesn't", "don't", "isn't", "aren't", "not"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — simple present negative"},
+        {"bodyTypst": "Choose the correct question: \"#\"___\" she work on Saturdays?\"", "alternatives": ["Do", "Does", "Is", "Are", "Did"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Inglés — simple present interrogative"}
+      ]
+    },
+    {
+      "name": "Present continuous",
+      "questions": [
+        {"bodyTypst": "Complete the sentence: \"Look! The children #\"___\" in the park right now.\"", "alternatives": ["play", "plays", "are playing", "played", "playing"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — present continuous"},
+        {"bodyTypst": "Choose the correct form: \"I #\"___\" a letter at the moment.\"", "alternatives": ["write", "writes", "am writing", "wrote", "writing"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — present continuous affirmative"}
+      ]
+    },
+    {
+      "name": "Present and past progressive",
+      "questions": [
+        {"bodyTypst": "Choose the correct sentence describing an action interrupted by another in the past.", "alternatives": ["I was watching TV when the phone rang.", "I watch TV when the phone rang.", "I am watching TV when the phone rang.", "I watched TV when the phone was ringing.", "I have watched TV when the phone rang."], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — past progressive interrupted action"},
+        {"bodyTypst": "Complete the sentence: \"She #\"___\" dinner while I was setting the table.\"", "alternatives": ["cooks", "is cooking", "was cooking", "cooked", "has cooked"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Inglés — past progressive"}
+      ]
+    },
+    {
+      "name": "Past continuous",
+      "questions": [
+        {"bodyTypst": "Complete the sentence: \"At 8 pm yesterday, we #\"___\" dinner.\"", "alternatives": ["have", "had", "were having", "has", "having"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — past continuous"},
+        {"bodyTypst": "Choose the correct negative form: \"They #\"___\" studying when I arrived.\"", "alternatives": ["didn't", "weren't", "don't", "aren't", "wasn't"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Inglés — past continuous negative"}
+      ]
+    },
+    {
+      "name": "Simple past tense",
+      "questions": [
+        {"bodyTypst": "Choose the correct past form of the verb \"go\".", "alternatives": ["goed", "gone", "went", "going", "goes"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — verbos irregulares"},
+        {"bodyTypst": "Complete the sentence: \"She #\"___\" to Cusco last summer.\"", "alternatives": ["travel", "travels", "traveled", "traveling", "has traveled"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — simple past regular verbs"},
+        {"bodyTypst": "Choose the correct question form: \"#\"___\" you see that movie last night?\"", "alternatives": ["Do", "Does", "Did", "Were", "Have"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Inglés — simple past interrogative"}
+      ]
+    },
+    {
+      "name": "Present perfect tense",
+      "questions": [
+        {"bodyTypst": "Complete the sentence: \"I #\"___\" never #\"___\" sushi before.\"", "alternatives": ["has / eaten", "have / eaten", "have / ate", "had / eaten", "have / eat"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — present perfect con never"},
+        {"bodyTypst": "Choose the correct sentence using the present perfect for an unfinished action.", "alternatives": ["She lived in Lima for ten years and moved away.", "She has lived in Lima for ten years.", "She lives in Lima for ten years.", "She is living in Lima for ten years ago.", "She had lived in Lima for ten years."], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Inglés — present perfect for/since"}
+      ]
+    },
+    {
+      "name": "Past perfect tense",
+      "questions": [
+        {"bodyTypst": "Complete the sentence: \"When I arrived at the station, the train #\"___\" already #\"___\".\"", "alternatives": ["has / left", "had / left", "have / left", "was / leaving", "did / leave"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — past perfect"},
+        {"bodyTypst": "Choose the sentence that correctly shows an action completed before another past action.", "alternatives": ["She had finished her homework before her mother arrived.", "She finished her homework before her mother had arrived.", "She has finished her homework before her mother arrived.", "She finishes her homework before her mother arrived.", "She was finishing her homework before her mother arrived."], "correctAnswer": "0", "difficulty": "hard", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Inglés — past perfect sequence of actions"}
+      ]
+    },
+    {
+      "name": "Future: will / going to",
+      "questions": [
+        {"bodyTypst": "Complete the sentence expressing a spontaneous decision: \"It's cold in here. I #\"___\" close the window.\"", "alternatives": ["am going to", "will", "am closing", "close", "closed"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — will para decisiones espontáneas"},
+        {"bodyTypst": "Complete the sentence expressing a plan already decided: \"Look at those clouds! It #\"___\" rain.\"", "alternatives": ["will", "is going to", "would", "shall", "may"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Inglés — going to para predicciones con evidencia"}
+      ]
+    },
+    {
+      "name": "Modal verbs",
+      "questions": [
+        {"bodyTypst": "Choose the modal verb that correctly expresses obligation: \"Students #\"___\" wear their uniform at school.\"", "alternatives": ["can", "might", "must", "would", "could"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — modal verbs de obligación"},
+        {"bodyTypst": "Choose the modal verb that correctly expresses ability in the past: \"When I was young, I #\"___\" run very fast.\"", "alternatives": ["can", "could", "must", "should", "will"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Inglés — modal could para habilidad pasada"},
+        {"bodyTypst": "Choose the modal verb that correctly expresses advice: \"You #\"___\" study more if you want to pass the exam.\"", "alternatives": ["must", "can", "should", "may", "will"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — modal should para consejo"}
+      ]
+    },
+    {
+      "name": "Infinitive and gerund",
+      "questions": [
+        {"bodyTypst": "Complete the sentence: \"She enjoys #\"___\" novels in her free time.\"", "alternatives": ["read", "to read", "reading", "reads", "readed"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — gerund después de enjoy"},
+        {"bodyTypst": "Complete the sentence: \"I want #\"___\" a new car next year.\"", "alternatives": ["buy", "buying", "to buy", "bought", "buys"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Inglés — infinitivo después de want"}
+      ]
+    },
+    {
+      "name": "Comparatives and superlatives",
+      "questions": [
+        {"bodyTypst": "Complete the sentence: \"This building is #\"___\" than that one.\"", "alternatives": ["tall", "taller", "tallest", "more tall", "the tallest"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — comparativos"},
+        {"bodyTypst": "Complete the sentence: \"Mount Everest is #\"___\" mountain in the world.\"", "alternatives": ["the highest", "higher", "the more high", "high", "the highest of"], "correctAnswer": "0", "difficulty": "easy", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — superlativos"},
+        {"bodyTypst": "Complete the sentence with the correct comparative form of \"good\": \"Her English is #\"___\" than mine.\"", "alternatives": ["gooder", "more good", "better", "best", "the best"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Inglés — comparativos irregulares"}
+      ]
+    },
+    {
+      "name": "Conditionals (zero, first, second, third)",
+      "questions": [
+        {"bodyTypst": "Complete the zero conditional sentence: \"If you #\"___\" water to 100°C, it boils.\"", "alternatives": ["heat", "heated", "will heat", "would heat", "had heated"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — zero conditional"},
+        {"bodyTypst": "Complete the first conditional sentence: \"If it rains tomorrow, I #\"___\" stay home.\"", "alternatives": ["will", "would", "had", "am", "was"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://admision.unmsm.edu.pe/", "sourceName": "UNMSM admisión, Inglés — first conditional"},
+        {"bodyTypst": "Complete the second conditional sentence: \"If I #\"___\" a million dollars, I would travel around the world.\"", "alternatives": ["have", "had", "will have", "having", "has"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://admision.uni.edu.pe/", "sourceName": "UNI admisión, Inglés — second conditional"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "entries": [
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "bodyTypst": "A continuación se muestran tres piezas de hierro conectadas (o no) a otros metales, en tres escenarios distintos (I, II y III), junto con los potenciales estándar de reducción E° involucrados. ¿En cuáles de los 3 casos ocurrirá corrosión en el hierro?",
+      "alternatives": ["Solo I", "Solo II", "Solo III", "I y II", "I y III"],
+      "correctAnswer": "2",
+      "difficulty": "hard",
+      "imagePath": "science-image-questions/quimica-sweep-corrosion-electroquimica.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf",
+      "sourceName": "UNI 2016-2, Examen de Admisión, Tercera Prueba (Física y Química), Pregunta 35 (Respuesta: C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "bodyTypst": "La figura muestra un tubo en forma de U con un bulbo cerrado que contiene una mezcla gaseosa de $\"O\"_2$ y $\"N\"_2$, y una rama larga abierta a la atmósfera, con mercurio líquido en la base. Considerando que en la mezcla gaseosa el porcentaje molar del $\"N\"_2$ es 79 %, determine la masa (en g) de $\"O\"_2$ atrapados en el bulbo de 5 L a 25 °C. Suponga que el experimento se lleva a cabo al nivel del mar.\n\n$R = 0,082 (\"atm\" dot \"L\")/(\"mol\" dot \"K\")$",
+      "alternatives": ["2,75", "5,48", "6,74", "8,48", "9,05"],
+      "correctAnswer": "0",
+      "difficulty": "hard",
+      "imagePath": "science-image-questions/quimica-sweep-manometro-tubo-cerrado.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20171.pdf",
+      "sourceName": "UNI 2017-1, CEPRE-UNI, Solución del Examen Final, Química Pregunta 9 (Respuesta: A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "bodyTypst": "Teniendo en cuenta las estructuras de Lewis mostradas para el $\"SO\"_3$ y el $\"SO\"_3^(2-)$, indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F):\n\nI. El $\"SO\"_3$ presenta 3 estructuras resonantes.\n\nII. El $\"SO\"_3^(2-)$ tiene 4 estructuras resonantes.\n\nIII. La longitud del enlace oxígeno-azufre es menor en el $\"SO\"_3$ que en el $\"SO\"_3^(2-)$.",
+      "alternatives": ["V V V", "V F V", "F V F", "V V F", "F F V"],
+      "correctAnswer": "1",
+      "difficulty": "hard",
+      "imagePath": "science-image-questions/quimica-sweep-estructuras-lewis-so3-resonancia.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+      "sourceName": "UNI 2018-1, Examen de Admisión, Tercera Prueba (Química), Pregunta 22 (Respuesta: D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "bodyTypst": "Dados los compuestos orgánicos A y B mostrados en la figura, ¿cuáles de las siguientes proposiciones son correctas?\n\nI. A y B son moléculas planas.\n\nII. A y B tienen momento dipolar nulo.\n\nIII. De todos los carbonos presentes, solo uno tiene una hibridación diferente.",
+      "alternatives": ["Solo I", "Solo II", "Solo III", "I y II", "II y III"],
+      "correctAnswer": "2",
+      "difficulty": "hard",
+      "imagePath": "science-image-questions/quimica-sweep-moleculas-dicloroetileno-alleno.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+      "sourceName": "UNI 2018-1, Examen de Admisión, Tercera Prueba (Química), Pregunta 38 (Respuesta: C — Solo III)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "bodyTypst": "En la siguiente tabla se muestra a cinco líquidos: X, Y, Z, R y S, con diferentes valores de temperatura (°C) y presión de vapor saturado (mmHg). Indique la sustancia que tiene la menor temperatura de ebullición normal.",
+      "alternatives": ["X", "Y", "Z", "R", "S"],
+      "correctAnswer": "4",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/quimica-sweep-tabla-presion-vapor-liquidos.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI 2021-1, Examen de Admisión, Tercera Prueba (Química), Pregunta 12 (Respuesta: E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "bodyTypst": "De acuerdo a la nomenclatura IUPAC, señale a cuál de los siguientes nombres le corresponde la estructura mostrada en la figura.",
+      "alternatives": ["1,2-ciclohexanodiol", "1,2-bencenodiol", "1,2-ciclohexanol", "1,2-alcohol hexano", "Ciclohexano"],
+      "correctAnswer": "0",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/quimica-sweep-estructura-ciclohexanodiol.png",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+      "sourceName": "UNI 2021-1, Examen de Admisión, Tercera Prueba (Química), Pregunta 13 (Respuesta: A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "bodyTypst": "En tres tubos de ensayo de vidrio, de dimensiones iguales, se colocaron tres líquidos desconocidos, tal como se muestra en la figura. Respecto a la forma de los meniscos de los líquidos, indique la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F):\n\nI. El líquido A es más polar que el líquido C.\n\nII. El líquido B tiene mayor tensión superficial que el líquido C.\n\nIII. Los líquidos A y C corresponden a la misma sustancia.",
+      "alternatives": ["V V V", "V V F", "V F F", "F V F", "F F F"],
+      "correctAnswer": "1",
+      "difficulty": "hard",
+      "imagePath": "science-image-questions/quimica-sweep-meniscos-tubos-ensayo.png",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2019/01/examen-admision-uni-resuelto-quimica.html",
+      "sourceName": "quimicapdf.blogspot.com — Examen de admisión UNI resuelto de Química, Pregunta 24 (Respuesta: B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "bodyTypst": "Se sabe que pequeñas cantidades de sales disueltas en el agua potable la hacen conductora de la corriente eléctrica. En la figura se representa una celda electrolítica que contiene agua potable, por la que se hace pasar la corriente eléctrica y se produce la electrólisis del agua según la ecuación mostrada. Establezca el valor de verdad (V o F) para los siguientes enunciados:\n\nI. En el cátodo (–) ocurre la reducción y en el ánodo (+) la oxidación.\n\nII. Durante la electrólisis, se libera oxígeno gaseoso en el ánodo (+).\n\nIII. En ambos electrodos se libera igual número de moles de $\"H\"_2 (g)$ y $\"O\"_2 (g)$.",
+      "alternatives": ["V V V", "F V F", "F F F", "V F V", "V V F"],
+      "correctAnswer": "4",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/quimica-sweep-celda-electrolitica-agua-potable.png",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/02/electroquimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+      "sourceName": "Rubiños – matematicasn.blogspot.com, banco de ejercicios resueltos de Química, sección Electroquímica, Problema 12 (Rpta.: E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "bodyTypst": "Se presentan los triclorobencenos isómeros mostrados en la figura (I, II y III). Considerando las siguientes electronegatividades: $\"C\" = 2,5$; $\"Cl\" = 3,0$, ordene los tres isómeros en orden creciente a su momento dipolar.",
+      "alternatives": ["I < II < III", "III < I < II", "I < III < II", "II < III < I", "III < II < I"],
+      "correctAnswer": "4",
+      "difficulty": "hard",
+      "imagePath": "science-image-questions/quimica-sweep-triclorobencenos-isomeros.png",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2018/06/examen-admision-uni-las-fijas-de.html",
+      "sourceName": "quimicapdf.blogspot.com — Examen de admisión UNI Química resuelto (Las fijas), Pregunta 29 (Rpta.: III<II<I)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "bodyTypst": "La figura muestra la estructura de la forma neutra de la cocaína (\"crack\"), con distintos grupos funcionales señalados mediante las letras A, B, C, D y E. ¿Cuál es el sitio básico del crack?",
+      "alternatives": ["A", "B", "C", "D", "E"],
+      "correctAnswer": "0",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/quimica-sweep-estructura-crack-cocaina-sitio-basico.png",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2018/06/examen-admision-uni-las-fijas-de.html",
+      "sourceName": "quimicapdf.blogspot.com — Examen de admisión UNI Química resuelto (Las fijas), Pregunta 32 (Rpta.: A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "bodyTypst": "La siguiente reacción, representada en la figura mediante una serie de equilibrios, muestra la formación del acetato de etilo a partir de ácido acético y etanol. ¿En cuál de las estructuras señaladas (A, B, C, D o E) se presenta la función éter?",
+      "alternatives": ["A", "B", "C", "D", "E"],
+      "correctAnswer": "2",
+      "difficulty": "medium",
+      "imagePath": "science-image-questions/quimica-sweep-mecanismo-acetato-etilo-eter.png",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2018/06/examen-admision-uni-las-fijas-de.html",
+      "sourceName": "quimicapdf.blogspot.com — Examen de admisión UNI Química resuelto (Las fijas), Pregunta 37 (Rpta.: C)"
+    }
+  ]
+}

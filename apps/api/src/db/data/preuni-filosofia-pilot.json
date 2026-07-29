@@ -1,0 +1,100 @@
+{
+  "courseName": "Filosofía",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Origen y desarrollo del pensamiento filosófico",
+      "questions": [
+        {"bodyTypst": "La filosofía se acerca mucho a:", "alternatives": ["La Religión", "La visión artística", "La Cosmovisión", "El saber científico", "La Psicología"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"},
+        {"bodyTypst": "Tanto la filosofía como la ciencia no comparten con la religión su carácter:", "alternatives": ["incuestionable", "racional", "reflexivo", "sistemático", "metódico"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"},
+        {"bodyTypst": "Filósofo que plantea el 'fuego' como fundamento del cosmos:", "alternatives": ["Demócrito", "Pitágoras", "Tales", "Heráclito", "Parménides"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"}
+      ]
+    },
+    {
+      "name": "Historia de la filosofía: Antigua y Medieval",
+      "questions": [
+        {"bodyTypst": "Según Platón el alma racional posee por virtud la:", "alternatives": ["Sabiduría", "Valentía", "Fuerza", "Fortaleza", "Templanza"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"},
+        {"bodyTypst": "No es característica de Aristóteles:", "alternatives": ["Acepta dos mundos", "Hay un solo mundo", "Hilemorfismo", "Justo medio", "Animal racional"], "correctAnswer": "0", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"},
+        {"bodyTypst": "De acuerdo con el pasaje citado sobre San Agustín (su antropología, de fuerte impronta platónica, distingue entre sustancia espiritual y material; el hombre propiamente no es su cuerpo sino su alma), se infiere que la antropología agustiniana es eminentemente platónica porque:", "alternatives": ["concibe que el cuerpo está atado a un alma material", "rechaza críticamente toda antropología dualista", "establece que solamente Dios accede a la sabiduría", "considera que el cuerpo está subordinado al alma"], "correctAnswer": "3", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/2019/08/filosofia-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html", "sourceName": "Simulacro San Marcos (UNMSM) resuelto de admisión"}
+      ]
+    },
+    {
+      "name": "Historia de la filosofía: Moderna y Contemporánea",
+      "questions": [
+        {"bodyTypst": "Según Descartes, el conocimiento surge de la:", "alternatives": ["razón", "experiencia", "práctica", "ciencia", "universidad"], "correctAnswer": "0", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"},
+        {"bodyTypst": "Según Descartes el hombre es un compuesto de:", "alternatives": ["Mente-alma", "Alma-espíritu", "Cuerpo-materia", "Res cógitans y res extensa", "Naturaleza-material"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"},
+        {"bodyTypst": "La experiencia para #\"___\" es la fuente del conocimiento humano:", "alternatives": ["Hume", "Kant", "Nietzsche", "Hegel", "Marx"], "correctAnswer": "0", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"}
+      ]
+    },
+    {
+      "name": "Ontología y metafísica",
+      "questions": [
+        {"bodyTypst": "Señale la característica que posee la naturaleza según el filósofo idealista del periodo ontológico.", "alternatives": ["perfecta", "ideal", "eterna", "corpórea", "inmutable"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/2023/05/etapa-de-los-grandes-sistemas-metafisicos-periodo-ontologico-de-la-filosofia-antigua-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-con-respuestas-word-pdf.html", "sourceName": "Periodo ontológico de la filosofía antigua — banco de preguntas"},
+        {"bodyTypst": "El discípulo de Sócrates manifestó la existencia de un mundo diferente a la naturaleza, al que llamó el mundo de", "alternatives": ["las cosas", "los átomos", "las apariencias", "las ideas", "las copias"], "correctAnswer": "3", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/2023/05/etapa-de-los-grandes-sistemas-metafisicos-periodo-ontologico-de-la-filosofia-antigua-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-con-respuestas-word-pdf.html", "sourceName": "Periodo ontológico de la filosofía antigua — banco de preguntas"},
+        {"bodyTypst": "La naturaleza para Aristóteles está compuesta por #\"___\" y #\"___\"", "alternatives": ["ideas - formas", "formas - esencias", "materia - formas", "átomos - materia", "ideas - esencias"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/2023/05/etapa-de-los-grandes-sistemas-metafisicos-periodo-ontologico-de-la-filosofia-antigua-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-con-respuestas-word-pdf.html", "sourceName": "Periodo ontológico de la filosofía antigua — banco de preguntas"}
+      ]
+    },
+    {
+      "name": "Gnoseología y epistemología",
+      "questions": [
+        {"bodyTypst": "Si Epistemología es a ciencia, entonces Gnoseología es a #\"___\":", "alternatives": ["psicología", "conocimiento", "verdad", "razonamiento", "observación"], "correctAnswer": "1", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"},
+        {"bodyTypst": "¿Qué doctrina sostiene que la experiencia origina el conocimiento?", "alternatives": ["Relativismo", "Realismo", "Empirismo", "Escepticismo", "Idealismo"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"},
+        {"bodyTypst": "Kant manifiesta que solo podemos conocer:", "alternatives": ["lo aparente y lo real", "las impresiones", "lo que aparece en nuestra conciencia", "la cosa en sí y apariencia", "lo fuera de conciencia"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"}
+      ]
+    },
+    {
+      "name": "Antropología filosófica: el ser humano y el sentido de la vida",
+      "questions": [
+        {"bodyTypst": "El discípulo de Platón manifiesta que el hombre es un:", "alternatives": ["animal simbólico", "ser libre", "animal político", "ser espiritual", "animal libre"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"},
+        {"bodyTypst": "La teoría antropológica espiritualista es contraria a la teoría:", "alternatives": ["Positivista", "Materialista", "Idealista", "Optimista", "Racionalista"], "correctAnswer": "1", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"},
+        {"bodyTypst": "Para el existencialismo, el hombre es un ser:", "alternatives": ["espiritual", "racional", "libre", "simbólico", "político"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"}
+      ]
+    },
+    {
+      "name": "Axiología: los valores y la experiencia valorativa",
+      "questions": [
+        {"bodyTypst": "Es la realidad ideal, cuya influencia hace que las personas adquieran cualidades que nos inclinan a estimarlos. Concepto de:", "alternatives": ["Moral", "Ética", "Valor", "Axioma", "Axiología"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"},
+        {"bodyTypst": "Escoger una carrera profesional es una decisión que debe tomarse cuidadosamente. Por una parte, hay quienes sugieren evaluar la rentabilidad de la carrera elegida y, por otra, hay quienes inciden en que la carrera permita hacer investigación científica al más alto nivel. ¿Cuál de las características del valor está en juego cuando elegimos una carrera profesional dadas las condiciones citadas?", "alternatives": ["Polaridad", "Gradualidad", "Jerarquía", "Objetividad", "Aleatoriedad"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Banco de preguntas resueltas de Filosofía"},
+        {"bodyTypst": "Juan comenta a su hermana, María, acerca de lo que espera lograr una vez sea profesional. Sus anhelos de acumular riquezas lo han llevado a estudiar una carrera con la que espera tener un buen salario. Por otro lado, María no está muy convencida de las metas de Juan, ella considera que el estudiar una profesión debe ser por vocación y para servir a los demás. Se puede afirmar que:", "alternatives": ["lo manifestado por Juan no se basa en una valoración", "María ha establecido una jerarquía axiológica distinta a la de su hermano", "ambos hermanos mantienen valoraciones opuestas", "lo dicho por Juan es un ejemplo de gradualidad axiológica", "nos encontramos ante ejemplos de emotivismo axiológico"], "correctAnswer": "1", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/2019/08/filosofia-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html", "sourceName": "Simulacro San Marcos (UNMSM) resuelto de admisión"}
+      ]
+    },
+    {
+      "name": "Ética",
+      "questions": [
+        {"bodyTypst": "'Realizar su propia naturaleza' es una tesis del", "alternatives": ["hedonismo", "comunitarismo", "utilitarismo", "eudemonismo", "estoicismo"], "correctAnswer": "4", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/2023/05/la-moral-etica-ejemplos-preguntas-resueltas-de-filosofia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-ppt-doc-pdf.html", "sourceName": "La moral y la ética — banco de preguntas"},
+        {"bodyTypst": "La diferencia entre moral y ética radica en que la moral está constituida por costumbres y la ética estudia", "alternatives": ["los valores", "lo sobrenatural", "la moral", "las costumbres", "lo sistemático"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/2023/05/la-moral-etica-ejemplos-preguntas-resueltas-de-filosofia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-ppt-doc-pdf.html", "sourceName": "La moral y la ética — banco de preguntas"},
+        {"bodyTypst": "A decir de Kant, los imperativos categóricos se cumplen únicamente por", "alternatives": ["fe", "obligación externa", "algún provecho", "deber", "mandato estatal"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/2023/05/la-moral-etica-ejemplos-preguntas-resueltas-de-filosofia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-ppt-doc-pdf.html", "sourceName": "La moral y la ética — banco de preguntas"}
+      ]
+    },
+    {
+      "name": "Filosofía del Derecho",
+      "questions": [
+        {"bodyTypst": "La norma jurídica, a diferencia de la norma moral:", "alternatives": ["es anterior al Estado", "impone una sanción moral", "se estructura por el grupo social", "es un conjunto de acciones legales e ilegales", "es un conjunto de acciones adecuadas e inadecuadas"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/2023/05/la-moral-etica-ejemplos-preguntas-resueltas-de-filosofia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-ppt-doc-pdf.html", "sourceName": "Norma jurídica vs. norma moral — banco de preguntas"},
+        {"bodyTypst": "La norma moral, a diferencia de la norma jurídica:", "alternatives": ["es un conjunto de acciones legales e ilegales", "se impone por deberes y derechos", "es impuesta por el Estado", "se respeta por coacción", "se respeta por convicción"], "correctAnswer": "4", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/2023/05/la-moral-etica-ejemplos-preguntas-resueltas-de-filosofia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-ppt-doc-pdf.html", "sourceName": "Norma jurídica vs. norma moral — banco de preguntas"}
+      ]
+    },
+    {
+      "name": "Filosofía política",
+      "questions": [
+        {"bodyTypst": "Aristóteles, en cuestiones políticas, le aconsejaría al presidente de la República que la finalidad de su gobierno es buscar", "alternatives": ["el bienestar económico de la sociedad peruana", "la felicidad individual de los justos y sabios", "la felicidad de toda la sociedad peruana", "el bienestar de los políticos y gobernantes", "la felicidad y el bienestar económico de toda la sociedad"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/2023/05/etapa-de-los-grandes-sistemas-metafisicos-periodo-ontologico-de-la-filosofia-antigua-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-con-respuestas-word-pdf.html", "sourceName": "Periodo ontológico de la filosofía antigua — banco de preguntas"},
+        {"bodyTypst": "Debe organizarse una sociedad en la que todos puedan ser libres e iguales no solamente desde un punto de vista político, sino también desde una perspectiva económica. Esta idea corresponde a:", "alternatives": ["la Política de Aristóteles", "El Príncipe de Maquiavelo", "la Teoría de la justicia de Rawls", "El Segundo Ensayo de Hobbes", "las Leyes del filósofo Platón"], "correctAnswer": "2", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/2023/06/problemas-filosofico-politicos-filosofia-politica-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-con-respuestas-word-ppt-doc-pdf.html", "sourceName": "Problemas filosófico-políticos — banco de preguntas"},
+        {"bodyTypst": "Rousseau consideraba que el poder legislativo debía recaer sobre la voluntad general, para de esta manera evitar las injusticias propias, por lo general, de los intereses particulares. De ello se deduce que:", "alternatives": ["la democracia se sustenta en un solo poder", "los intereses particulares son antidemocráticos", "la voluntad general se sustenta en el bien común", "el poder legislativo evita la injusticia social", "las leyes deben estar a cargo de la totalidad del pueblo"], "correctAnswer": "4", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/2023/06/problemas-filosofico-politicos-filosofia-politica-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-con-respuestas-word-pdf.html", "sourceName": "Problemas filosófico-políticos — banco de preguntas"}
+      ]
+    },
+    {
+      "name": "Lógica",
+      "questions": [
+        {"bodyTypst": "Mientras que la #\"___\" está directamente relacionada con la inferencia, la #\"___\" lo está con las proposiciones.", "alternatives": ["rigurosidad - coherencia", "invalidez - validez", "cohesión - adecuación", "validez - verdad", "falsedad - simbolización"], "correctAnswer": "3", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/logica-filosofica-falacias-paradojas-pdf.html", "sourceName": "Lógica filosófica — banco de preguntas"},
+        {"bodyTypst": "El silogismo es:", "alternatives": ["Una proposición inferencial", "Más de dos premisas", "Una conclusión que deriva de dos premisas", "Premisa y conclusión", "Una conclusión que deriva de una premisa"], "correctAnswer": "2", "difficulty": "easy", "sourceUrl": "https://matematicasn.blogspot.com/p/logica-filosofica-falacias-paradojas-pdf.html", "sourceName": "Lógica filosófica — banco de preguntas"},
+        {"bodyTypst": "El argumento 'Si no estás conmigo, estás contra mí' presenta un error lógico al ignorar posiciones intermedias. Se trata de la falacia de:", "alternatives": ["Ad populum", "Ad hominem", "Causa falsa", "Ad ignorantiam", "Falso dilema"], "correctAnswer": "4", "difficulty": "medium", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Falacias lógicas — banco de preguntas"}
+      ]
+    },
+    {
+      "name": "Ética social y problemas contemporáneos",
+      "questions": [
+        {"bodyTypst": "La identidad equivale a la interpretación que uno hace de sí mismo, por tanto, nuestra identidad se moldea por el reconocimiento o por la falta de este. Así, el individuo o persona puede sufrir un daño, una deformación si la gente o sociedad que lo rodean le muestran, como reflejo, un cuadro limitativo, degradante o despreciable de sí mismo. Del texto se infiere que:", "alternatives": ["el feminismo contemporáneo es un claro ejemplo de reconocimiento multicultural", "el reconocimiento es la forma apropiada de una democracia en un plano de igualdad", "el rechazo del reconocimiento puede causar perjuicios a quienes se les niega", "las minorías multiculturales proyectan una imagen de inferioridad interiorizada"], "correctAnswer": "2", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/2019/08/filosofia-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html", "sourceName": "Simulacro San Marcos (UNMSM) resuelto de admisión (teoría del reconocimiento)"},
+        {"bodyTypst": "Para Fraser, dimensiones económica y cultural son:", "alternatives": ["comunitarias y alternativas", "constitutivas e irreductibles", "distributivas e inalterables", "participativas e indefinibles", "androcéntricas y opositivas"], "correctAnswer": "1", "difficulty": "hard", "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html", "sourceName": "Justicia y reconocimiento (Nancy Fraser) — banco de preguntas"}
+      ]
+    }
+  ]
+}

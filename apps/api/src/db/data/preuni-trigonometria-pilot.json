@@ -1,0 +1,333 @@
+{
+  "courseName": "Trigonometría",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Ángulos y Sistemas de Medición Angular",
+      "questions": [
+        {
+          "bodyTypst": "Un jugador crea un nuevo sistema de medición angular llamado Dota, tal que su unidad (1ª) es la $1/240$ parte del ángulo de una vuelta completa. Calcule el equivalente de $pi/12$ rad en el nuevo sistema.",
+          "alternatives": ["10ª", "12ª", "14ª", "16ª"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/sistemas-de-medidas-angulares-problemas-resueltos-de-trigonometria-pdf.html",
+          "sourceName": "Razonamiento PDF — sistemas de medidas angulares"
+        }
+      ]
+    },
+    {
+      "name": "Razones Trigonométricas",
+      "questions": [
+        {
+          "bodyTypst": "En un triángulo rectángulo, la suma de la hipotenusa y un cateto es el doble del otro cateto. Si $alpha$ es el ángulo agudo opuesto a este último cateto, halle: $N = 2(csc(alpha) - cot(alpha))$",
+          "alternatives": ["2", "3", "1", "4", "5"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/trigonometria-desarrollada-universidades.html",
+          "sourceName": "matematicasn.blogspot.com — banco de examen de admisión resuelto"
+        },
+        {
+          "bodyTypst": "En un triángulo rectángulo ABC, recto en C, se cumple que $cos(A) dot cos(B) = 2/5$. Halle $2(cot(A) + cot(B))$.",
+          "alternatives": ["4", "3", "5", "2/5", "2"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
+          "sourceName": "matematicasn.blogspot.com — razones trigonométricas"
+        },
+        {
+          "bodyTypst": "En un triángulo rectángulo ABC, recto en B, se cumple que $sin(A) dot sin(C) = 8/13$. Halle $8(tan(A) + tan(C))$.",
+          "alternatives": ["13", "14", "15", "16", "17"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
+          "sourceName": "matematicasn.blogspot.com — razones trigonométricas"
+        }
+      ]
+    },
+    {
+      "name": "Resolución de Triángulos",
+      "questions": [
+        {
+          "bodyTypst": "Las medidas de los lados de un triángulo son proporcionales a 6, 10 y 14. Si el menor ángulo interno es $theta$, determine el valor de $13tan(theta)$.",
+          "alternatives": ["$13sqrt(3)$", "3", "$2sqrt(3)$", "$3sqrt(3)$", "$4sqrt(3)$"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/trigonometria-desarrollada-universidades.html",
+          "sourceName": "matematicasn.blogspot.com — banco de examen de admisión resuelto"
+        },
+        {
+          "bodyTypst": "Una persona observa una torre con un ángulo de elevación de $60 degree$. ¿Cuánto debe retroceder para observar la misma torre con un ángulo de elevación de $30 degree$? La altura de la torre es $5sqrt(3)$ m y la altura de la persona es $sqrt(3)$ m.",
+          "alternatives": ["8 m", "6 m", "10 m", "7 m", "9 m"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/trigonometria-desarrollada-universidades.html",
+          "sourceName": "matematicasn.blogspot.com — banco de examen de admisión resuelto"
+        },
+        {
+          "bodyTypst": "En un triángulo ABC se tiene AB = 13, BC = 14 y AC = 15. Calcule $cos(B) dot sin(C)$.",
+          "alternatives": ["3/13", "4/13", "3/5", "4/5", "5/13"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/trigonometria-ejercicios-resueltos-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Trigonometría Rubiños"
+        },
+        {
+          "bodyTypst": "Los lados de un triángulo son tres números enteros consecutivos. Si el ángulo mayor es el doble del ángulo menor, determine el coseno del ángulo intermedio.",
+          "alternatives": ["1/16", "3/16", "7/16", "9/16", "1/3"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/trigonometria-ejercicios-resueltos-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Trigonometría Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Razones Trigonométricas de Cualquier Ángulo",
+      "questions": [
+        {
+          "bodyTypst": "Considerando la circunferencia trigonométrica, indique la expresión de mayor valor.",
+          "alternatives": ["$sin(20 degree)$", "$sin(120 degree)$", "$sin(220 degree)$", "$sin(240 degree)$", "$sin(320 degree)$"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+          "sourceName": "matematicasn.blogspot.com — circunferencia trigonométrica"
+        },
+        {
+          "bodyTypst": "Considerando la circunferencia trigonométrica, indique la expresión de menor valor.",
+          "alternatives": ["$sin(50 degree)$", "$sin(70 degree)$", "$sin(140 degree)$", "$sin(210 degree)$", "$sin(290 degree)$"],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+          "sourceName": "matematicasn.blogspot.com — circunferencia trigonométrica"
+        },
+        {
+          "bodyTypst": "Indique el valor de verdad de las siguientes proposiciones: I) $sin(100 degree) < sin(160 degree)$ II) $cos(290 degree) > cos(340 degree)$ III) $sin(200 degree) > cos(200 degree)$",
+          "alternatives": ["VVV", "VFF", "VFV", "FFF", "FFV"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+          "sourceName": "matematicasn.blogspot.com — circunferencia trigonométrica"
+        }
+      ]
+    },
+    {
+      "name": "Circunferencia Trigonométrica",
+      "questions": [
+        {
+          "bodyTypst": "Indicar verdadero (V) o falso (F) según corresponda: I) $sin(30 degree) > sin(60 degree)$ II) $sin(100 degree) > sin(150 degree)$",
+          "alternatives": ["VV", "VF", "FF", "FV"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/circunferencia-trigonometrica-linea_17.html",
+          "sourceName": "matematicasn.blogspot.com — circunferencia trigonométrica, problemas resueltos"
+        },
+        {
+          "bodyTypst": "Indicar verdadero (V) o falso (F) según corresponda: I) $cos(20 degree) > cos(40 degree)$ II) $cos(130 degree) < cos(160 degree)$",
+          "alternatives": ["VV", "VF", "FF", "FV"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/circunferencia-trigonometrica-linea_17.html",
+          "sourceName": "matematicasn.blogspot.com — circunferencia trigonométrica, problemas resueltos"
+        },
+        {
+          "bodyTypst": "Indicar verdadero (V) o falso (F) según corresponda: I) $sin(100 degree) < sin(140 degree)$ II) $sin(290 degree) > sin(340 degree)$",
+          "alternatives": ["VV", "VF", "FF", "FV"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/circunferencia-trigonometrica-linea_17.html",
+          "sourceName": "matematicasn.blogspot.com — circunferencia trigonométrica, problemas resueltos"
+        },
+        {
+          "bodyTypst": "Indicar verdadero (V) o falso (F) según corresponda: I) $cos(110 degree) < cos(160 degree)$ II) $cos(300 degree) > cos(350 degree)$",
+          "alternatives": ["VV", "VF", "FF", "FV"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/circunferencia-trigonometrica-linea_17.html",
+          "sourceName": "matematicasn.blogspot.com — circunferencia trigonométrica, problemas resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Identidades Trigonométricas",
+      "questions": [
+        {
+          "bodyTypst": "Reduce: $sec(x) - tan(x) sin(x)$",
+          "alternatives": ["$sin(x)$", "$csc(x)$", "$cos(x)$", "$sec(x)$", "1"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
+          "sourceName": "matematicasn.blogspot.com — identidades trigonométricas"
+        },
+        {
+          "bodyTypst": "Si $tan(x) + cot(x) = 3$, calcula $tan^3(x) + cot^3(x)$",
+          "alternatives": ["15", "16", "17", "18", "19"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
+          "sourceName": "matematicasn.blogspot.com — identidades trigonométricas"
+        },
+        {
+          "bodyTypst": "Si $sin(x) + cos(x) = sqrt(2)$, calcula $sin^4(x) + cos^4(x)$",
+          "alternatives": ["1", "1/2", "-1", "-1/2", "2"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
+          "sourceName": "matematicasn.blogspot.com — identidades trigonométricas"
+        },
+        {
+          "bodyTypst": "Simplifica: $sin^2(x) cos^2(x) (sec^2(x) + csc^2(x))$",
+          "alternatives": ["1", "1/2", "2", "$sin(x)$", "$cos(x)$"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/identidades-trigonometricas-ejercicios.html",
+          "sourceName": "matematicasn.blogspot.com — identidades trigonométricas"
+        }
+      ]
+    },
+    {
+      "name": "Ecuaciones e Inecuaciones Trigonométricas",
+      "questions": [
+        {
+          "bodyTypst": "Halle el número de soluciones de la siguiente ecuación: $2sin(x) - csc(x) = 1$; $x in [0, 2pi]$",
+          "alternatives": ["4", "5", "3", "2", "6"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/trigonometria-desarrollada-universidades.html",
+          "sourceName": "matematicasn.blogspot.com — banco de examen de admisión resuelto"
+        },
+        {
+          "bodyTypst": "Determine la suma de las soluciones de la ecuación $3tan(x) - tan(2x) = 0$ en el intervalo $[0, pi]$.",
+          "alternatives": ["$11pi/7$", "$pi$", "$3pi$", "$13pi$", "$2pi$"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/trigonometria-desarrollada-universidades.html",
+          "sourceName": "matematicasn.blogspot.com — banco de examen de admisión resuelto"
+        }
+      ]
+    },
+    {
+      "name": "Funciones Trigonométricas",
+      "questions": [
+        {
+          "bodyTypst": "El proceso rítmico de la respiración consta de periodos alternados de inhalación y exhalación. Cada 5 segundos se completa un ciclo. Si $F(t) = a sin(b t)$ representa el flujo de aire en el instante $t$ (en litros por segundo) y la máxima intensidad de flujo es de 0,6 litros/s, obtenga una fórmula que represente este proceso.",
+          "alternatives": ["$F(t) = 0.6 sin(pi t/5)$", "$F(t) = 6 sin(pi t/9)$", "$F(t) = 5 sin(pi t/3)$", "$F(t) = 4 sin(pi t/3)$", "$F(t) = 0.6 sin(2pi t/5)$"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/trigonometria-desarrollada-universidades.html",
+          "sourceName": "matematicasn.blogspot.com — banco de examen de admisión resuelto"
+        },
+        {
+          "bodyTypst": "El nivel del mar en cierto puerto varía según $h(x) = 10 sin(0.25pi (x - 6) + 0.5pi)$, donde $x$ representa las horas transcurridas desde las 8:00 a.m. ¿A qué hora se alcanza por primera vez el nivel máximo?",
+          "alternatives": ["11:00 a.m.", "1:00 p.m.", "2:00 p.m.", "3:00 p.m.", "4:00 p.m."],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/trigonometria-ejercicios-resueltos-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Trigonometría Rubiños"
+        },
+        {
+          "bodyTypst": "La función $f(x) = 80 sin(5x + 60 degree) sin(5x)$ modela el número de estudiantes matriculados en un aula virtual. Determine el número máximo de estudiantes permitido.",
+          "alternatives": ["50", "60", "70", "75", "45"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/trigonometria-ejercicios-resueltos-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Trigonometría Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Funciones Trigonométricas Inversas",
+      "questions": [
+        {
+          "bodyTypst": "Calcule el rango de la siguiente función: $h(x) = 2pi + 5arcsin(4x) + 4arccos(4x)$",
+          "alternatives": ["$[5pi/2, 7pi/2]$", "$[3pi/2, 5pi/2]$", "$[9pi/2, 11pi/2]$", "$[7pi/2, 9pi/2]$", "$[11pi/2, 13pi/2]$"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/trigonometria-desarrollada-universidades.html",
+          "sourceName": "matematicasn.blogspot.com — banco de examen de admisión resuelto"
+        },
+        {
+          "bodyTypst": "Dada la ecuación $arccos(x) - arcsin(x) = arcsin(1 - x)$, halle el producto de sus raíces.",
+          "alternatives": ["0", "1/4", "1/3", "1/2", "1"],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/trigonometria-ejercicios-resueltos-pdf.html",
+          "sourceName": "matematicasn.blogspot.com — Trigonometría Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Geometría Analítica: La Recta",
+      "questions": [
+        {
+          "bodyTypst": "Las rectas $L_1: x - y = 0$ y $L_2: 3x + 4y - 21 = 0$ determinan con el eje de abscisas una región triangular. Calcule el área de dicha región.",
+          "alternatives": ["10.5", "6", "9", "12", "12.4"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-analitica-ejercicios-resueltos.html",
+          "sourceName": "matematicasn.blogspot.com — geometría analítica"
+        },
+        {
+          "bodyTypst": "Los rieles de una vía de tren siguen las rectas $L_1: a x + (a-1)y - 3 = 0$ y $L_2: 4x + 3y + 7 = 0$, que son paralelas en un tramo. Halle la distancia entre $L_1$ y $L_2$.",
+          "alternatives": ["1", "1.5", "2", "2.5", "3"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-analitica-ejercicios-resueltos.html",
+          "sourceName": "matematicasn.blogspot.com — geometría analítica"
+        },
+        {
+          "bodyTypst": "Las coordenadas de los vértices de un triángulo son A(-3,-1), B(-1,5) y C(5,3). Halle la ecuación de la recta que pasa por el vértice B y es paralela al lado AC.",
+          "alternatives": ["$2x - 4y - 10 = 0$", "$x - 2y + 12 = 0$", "$x - 2y + 11 = 0$", "$x - 2y + 13 = 0$", "$2x - 4y + 14 = 0$"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-analitica-ejercicios-resueltos.html",
+          "sourceName": "matematicasn.blogspot.com — geometría analítica"
+        },
+        {
+          "bodyTypst": "Halle la ecuación de la mediatriz del segmento determinado por la intersección de la recta $2x + y - 6 = 0$ con los ejes coordenados.",
+          "alternatives": ["$2x - y + 6 = 0$", "$2x - 4y + 9 = 0$", "$x - 2y + 12 = 0$", "$2x + 4y - 15 = 0$", "$2x - 4y - 9 = 0$"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-analitica-ejercicios-resueltos.html",
+          "sourceName": "matematicasn.blogspot.com — geometría analítica"
+        }
+      ]
+    },
+    {
+      "name": "Geometría Analítica: Cónicas",
+      "questions": [
+        {
+          "bodyTypst": "Si la ecuación de una parábola es $x^2 = 4y$ y la ecuación de una recta es $x - y = 0$, halle uno de los puntos de intersección entre la parábola y la recta.",
+          "alternatives": ["(1,1)", "(2,1)", "(2,2)", "(3,3)", "(4,4)"],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-analitica-ejercicios-resueltos.html",
+          "sourceName": "matematicasn.blogspot.com — geometría analítica"
+        },
+        {
+          "bodyTypst": "Dada la circunferencia $x^2 + y^2 - 6x - 6y = -9$ y el punto $P = (8,3)$, calcule la longitud del segmento tangente trazado desde P a dicha circunferencia.",
+          "alternatives": ["3", "$3sqrt(2)$", "4", "$4sqrt(2)$", "5"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-analitica-ejercicios-resueltos.html",
+          "sourceName": "matematicasn.blogspot.com — geometría analítica"
+        },
+        {
+          "bodyTypst": "Tres casas se ubican en los puntos A(0,0), B(5,12) y C(14,0). Halle la longitud, en metros, de la circunferencia que pasa por las tres casas.",
+          "alternatives": ["$61pi/3$", "$65pi/4$", "$67pi/3$", "$61pi/2$", "$61pi/7$"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-analitica-ejercicios-resueltos.html",
+          "sourceName": "matematicasn.blogspot.com — geometría analítica"
+        },
+        {
+          "bodyTypst": "Los puntos F(5,5) y V(1,2) son el foco y el vértice, respectivamente, de una parábola. Halle la ecuación de la directriz.",
+          "alternatives": ["$4x - 3y + 15 = 0$", "$4x + 3y + 15 = 0$", "$4x + 3y - 15 = 0$", "$3x + 4y + 15 = 0$", "$3x + 4y - 15 = 0$"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-analitica-ejercicios-resueltos.html",
+          "sourceName": "matematicasn.blogspot.com — geometría analítica"
+        }
+      ]
+    }
+  ]
+}

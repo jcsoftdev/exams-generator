@@ -1,0 +1,550 @@
+{
+  "courseName": "Álgebra",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Lógica Proposicional y Teoría de Conjuntos",
+      "questions": [
+        {
+          "bodyTypst": "Si una proposición $p$ es verdadera y $q$ es falsa, ¿cuál de las siguientes fórmulas es verdadera?",
+          "alternatives": ["$p arrow q$", "$p and q$", "$p arrow.l.r q$", "$p or q$", "$not p$"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/04/logica-examen-admision-resuelto.html",
+          "sourceName": "Examen de admisión UNFV - lógica proposicional, pregunta 15"
+        },
+        {
+          "bodyTypst": "Dado el siguiente esquema: $[(p or q) and not p] arrow q$, considerar que un argumento es cierto bajo aquella forma es reconocer la:",
+          "alternatives": [
+            "precisión de las proposiciones las cuales pueden comprobarse empíricamente",
+            "manifestación de los enunciados verdaderos o correctos sin importar la sintaxis",
+            "realización de una serie de actos del lenguaje dirigido a lograr la persuasión",
+            "validez, la cual se puede establecer por la estructura del razonamiento",
+            "concertación de ideas de una comunidad que investiga un aspecto de la realidad"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/04/logica-examen-admision-resuelto.html",
+          "sourceName": "Examen de admisión UNFV - lógica proposicional, pregunta 2"
+        },
+        {
+          "bodyTypst": "Simplifique la proposición $not (q or not r) arrow (p or not p)$",
+          "alternatives": ["$p$", "$q$", "$p and q$", "F", "V"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/examen-admision-uni-resuelto.html",
+          "sourceName": "Examen de admisión UNI - lógica proposicional, pregunta 11"
+        },
+        {
+          "bodyTypst": "En un salón de clase de la Facultad de Ciencias Matemáticas de la UNI, se observa que el número de estudiantes que pertenece a la Escuela de Matemática excede en dos al número de estudiantes que pertenecen a la Escuela de Estadística, además el número de subconjuntos binarios del conjunto de estudiantes que pertenecen a la Escuela de Matemática menos el número de subconjuntos binarios del conjunto de estudiantes que pertenecen a la Escuela de Estadística es 17. Si en un determinado momento el profesor desea formar grupos de trabajo con los estudiantes de la Escuela de Estadística, ¿cuántas opciones diferentes hay de elegir al menos dos estudiantes para formar el grupo de trabajo?",
+          "alternatives": ["55", "247", "119", "503", "164"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/matematica-preuniversitaria-problemas.html",
+          "sourceName": "Examen de admisión UNI - teoría de conjuntos y combinatoria"
+        }
+      ]
+    },
+    {
+      "name": "Teoría de Exponentes y Logaritmos",
+      "questions": [
+        {
+          "bodyTypst": "Indique la secuencia correcta, después de determinar si cada proposición es verdadera (V) o falsa (F). I. Para todo $x > 0$ se tiene $log_3 (x) = log_9 (x+1)$. II. La función logarítmica es una función decreciente. III. La función logaritmo es siempre positiva.",
+          "alternatives": ["V V V", "V F V", "F V V", "F F V", "F F F"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "Solucionario oficial UNI 2021-I, Segunda Prueba de Matemática, Álgebra Q8"
+        },
+        {
+          "bodyTypst": "Considere una función $f$ definida para todo $x in RR$ con $x != 0$, mediante $f(x) = abs(log_2 (abs(x)))$. Señale la alternativa que presenta la secuencia correcta, después de determinar si cada proposición es verdadera (V) o falsa (F). I. Existen únicamente dos valores de $x$ que hacen mínima a la función $f(x)$. II. $f$ es creciente en los intervalos $(-1, 0)$ y $(1, +infinity)$. III. $f$ es inyectiva en el intervalo $(0, +infinity)$.",
+          "alternatives": ["V V V", "V V F", "V F F", "F F V", "F F F"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+          "sourceName": "Solucionario oficial UNI 2019-II, Segunda Prueba de Matemática, Q18"
+        }
+      ]
+    },
+    {
+      "name": "Polinomios",
+      "questions": [
+        {
+          "bodyTypst": "La utilidad que se obtiene al vender $q$ unidades de cierto artículo está dada por el polinomio $U(q) = -q^3 + 23q^2 - 90q$. Calcule la suma de todas las cantidades enteras de artículos que se pueden vender para obtener utilidad (es decir, tal que $U(q) > 0$).",
+          "alternatives": ["140", "139", "138", "136", "137"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+          "sourceName": "Banco de problemas resueltos de Álgebra estilo admisión San Marcos"
+        },
+        {
+          "bodyTypst": "Determina el valor de $m$ si el grado de la expresión $x^4 y^m + x^5 y^(m+1) + x y^m + m x^m y^5$ es igual a 8.",
+          "alternatives": ["1", "2", "3", "4", "5"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grados-de-un-polinomio-problemas.html",
+          "sourceName": "Grados de un polinomio, banco de problemas resueltos"
+        },
+        {
+          "bodyTypst": "En la expresión $x^(n-3) y^4 + 2x^(n-1) y^(n+3) + x y^n$, el grado relativo respecto de $x$ es 9. Calcule el grado relativo respecto de $y$.",
+          "alternatives": ["4", "9", "10", "13", "14"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grados-de-un-polinomio-problemas.html",
+          "sourceName": "Grados de un polinomio, banco de problemas resueltos"
+        },
+        {
+          "bodyTypst": "Dado el polinomio $P(x) = 5x^(n+1) - 3x^5 + n x + n^2$. Si el grado absoluto de $P$ es 6, calcule $P(2)$.",
+          "alternatives": ["235", "236", "237", "238", "259"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2015/12/grados-de-un-polinomio-problemas.html",
+          "sourceName": "Grados de un polinomio, banco de problemas resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Productos Notables",
+      "questions": [
+        {
+          "bodyTypst": "Determine el valor de verdad (V o F) de las siguientes proposiciones, según el orden dado: I. $a^2 + b^2 = (a+b)^2$. II. $(a-b)^2 = a^2 - 2 a b + b^2$. III. $(a+b)^3 = a^3 + b^3$.",
+          "alternatives": ["VFV", "FVF", "VFF", "FVV", "FFF"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-uncp-pdf.html",
+          "sourceName": "Solucionario examen de admisión UNCP"
+        },
+        {
+          "bodyTypst": "La suma de los cubos de dos números es 3059 y su suma es 23. ¿Cuál es su producto?",
+          "alternatives": ["72", "132", "122", "142", "120"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2012/09/productos-notables-pdf-teoria-y_24.html",
+          "sourceName": "Práctica de Productos Notables con claves y respuestas"
+        },
+        {
+          "bodyTypst": "La suma de dos números es 21 y su producto es -50. Calcule la suma de sus cuadrados.",
+          "alternatives": ["541", "491", "421", "529", "531"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2012/09/productos-notables-pdf-teoria-y_24.html",
+          "sourceName": "Práctica de Productos Notables con claves y respuestas"
+        },
+        {
+          "bodyTypst": "El perímetro de un rectángulo de largo $L$ y ancho $A$ es 24 metros. Si el área de un rectángulo de largo $(L-3)$ y ancho $(A-4)$ es 4 metros cuadrados, calcule el valor numérico de $(A-4)^3 + (L-3)^3$.",
+          "alternatives": ["32", "50", "16", "65", "46"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2012/09/productos-notables-pdf-teoria-y_24.html",
+          "sourceName": "Práctica de Productos Notables con claves y respuestas"
+        }
+      ]
+    },
+    {
+      "name": "División Algebraica",
+      "questions": [
+        {
+          "bodyTypst": "Sea $p(x) = x^4 + 2x^3 + 3x^2 + 5$, $q(x) = x^2 + 5x - 4$. Sea $r(x)$ el resto que se obtiene al hacer la división de $p(x)$ entre $q(x)$. Halle $r(1)$.",
+          "alternatives": ["$-35$", "$-33$", "$-31$", "$-29$", "$-27$"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-de-algebra-preuniversitaria.html",
+          "sourceName": "Banco de problemas resueltos de Álgebra UNI"
+        },
+        {
+          "bodyTypst": "Lewis ganó un premio de $x^16 + x$ soles. Piensa quedarse con $x^5 + 1$ soles, y repartir el resto entre sus $x^2 + 1$ hijos, en partes iguales. ¿Cuánto dinero sobró luego de la repartición a los hijos?",
+          "alternatives": ["No sobró nada.", "Sobró x soles.", "Sobró (x - 1) soles.", "Faltó dinero."],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/07/division-de-polinomios-ejercicios.html",
+          "sourceName": "Ejercicios resueltos de división de polinomios"
+        },
+        {
+          "bodyTypst": "Halle el resto de dividir $4(3x - 7)^8 - (3x - 5)^5 + 8$ entre $x - 3$.",
+          "alternatives": ["$32$", "$-16$", "$-5$", "$8$"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/07/division-de-polinomios-ejercicios.html",
+          "sourceName": "Ejercicios resueltos de división de polinomios"
+        }
+      ]
+    },
+    {
+      "name": "Factorización",
+      "questions": [
+        {
+          "bodyTypst": "La descomposición del trinomio $3m^2 - 6 + 7m$ es:",
+          "alternatives": ["$(3m + 2)(m + 3)$", "$(3m - 2)(m - 2)$", "$(m + 3)(3m - 2)$", "$(m - 3)(3m + 2)$"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://examendeadmisionuniversidad.blogspot.com/2018/10/factorizacion-examen-de-admision.html",
+          "sourceName": "Examen de admisión de Matemática - ejercicios de factorización"
+        },
+        {
+          "bodyTypst": "$16x^2 - 25y^2$ se descompone en:",
+          "alternatives": ["$(16x - 25y)(x - y)$", "$(4x + 5y)(4x - 5y)$", "$(4x - 5y)(4x - 5y)$", "$(4x^2 + 5y^2)(4x - 5y)$"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://examendeadmisionuniversidad.blogspot.com/2018/10/factorizacion-examen-de-admision.html",
+          "sourceName": "Examen de admisión de Matemática - ejercicios de factorización"
+        },
+        {
+          "bodyTypst": "La descomposición del binomio $x^5 + y^5$ tiene al factor $x + y$. Halla el otro factor.",
+          "alternatives": ["$x^4 + y^4$", "$x^4 - x^3 y + x^2 y^2 - x y^3 + y^4$", "$x^4 - y^4$", "Ninguna de las anteriores"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://examendeadmisionuniversidad.blogspot.com/2018/10/factorizacion-examen-de-admision.html",
+          "sourceName": "Examen de admisión de Matemática - ejercicios de factorización"
+        },
+        {
+          "bodyTypst": "Paco, Mery y Ely están estudiando álgebra. Paco pregunta: ¿cuánto le falta al factor cuadrático primo de $p(x) = x^5 - 2x^2 - x - 1$ en $ZZ[x]$ para que sea igual a $(x+1)^2$? Después de varios minutos, Mery responde y Paco y Ely quedan satisfechos con la respuesta. Si Mery respondió correctamente, ¿cuál fue su respuesta?",
+          "alternatives": ["$x$", "$2x - 3$", "$-x^2 + 1$", "$x - 1$", "$x + 1$"],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/05/factorizacion-de-polinomios-ejercicios.html",
+          "sourceName": "Factorización de polinomios, ejercicios resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Fracciones y Radicación Algebraica",
+      "questions": [
+        {
+          "bodyTypst": "Efectúe: $(root(3, 5) - 1)(root(3, 25) + root(3, 5) + 1)$",
+          "alternatives": ["-4", "-5", "6", "4", "-6"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/05/algebra-unsa-examen-admision-agustin.html",
+          "sourceName": "UNSA admission exam algebra solucionario, Pregunta 5"
+        },
+        {
+          "bodyTypst": "Al simplificar la fracción $M(x) = frac(3 dot ((x+1)/(x-1))^2 - 4 dot (x+1)/(x-1) - 4, (x+1)/(x-1) - 2)$, determina la suma del numerador y denominador.",
+          "alternatives": ["$5x + 2$", "$6x$", "$7x$", "$4x + 2$", "$6x + 2$"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/05/algebra-unsa-examen-admision-agustin.html",
+          "sourceName": "UNSA admission exam algebra solucionario, Pregunta 10"
+        }
+      ]
+    },
+    {
+      "name": "Teoría de Ecuaciones",
+      "questions": [
+        {
+          "bodyTypst": "En la clase de Álgebra, el profesor escribe en la pizarra la ecuación $x^2 + 5x - 3 = 0$ y pide a sus alumnos que hallen una ecuación cuadrática cuyas raíces sean los cuadrados de las raíces de la ecuación indicada.",
+          "alternatives": [
+            "$x^2 - 9x + 31 = 0$",
+            "$x^2 - 31x + 9 = 0$",
+            "$x^2 + 31x + 9 = 0$",
+            "$x^2 - 31x - 9 = 0$",
+            "$x^2 + 9x - 31 = 0$"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+          "sourceName": "Problemas de álgebra tipo examen de admisión San Marcos"
+        },
+        {
+          "bodyTypst": "El valor numérico que representa el precio de una mascarilla KN95 satisface la ecuación $x^4 = 74 x^2 - 1225$. Determine la suma del mayor y el menor valor, en soles, que podría costar la mascarilla.",
+          "alternatives": ["10", "14", "11", "12", "15"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+          "sourceName": "Problemas de álgebra tipo examen de admisión San Marcos"
+        },
+        {
+          "bodyTypst": "Si $0 < a < b < c$ y el sistema $y = a dot x^2 + b dot x + c$, $y = c dot x^2 + b dot x + a$ tiene soluciones $(x_1, y_1)$ y $(x_2, y_2)$, con $x_1 < x_2$, determine el signo de estos valores.",
+          "alternatives": [
+            "$x_1, x_2, y_1, y_2 > 0$",
+            "$x_1, x_2 < 0$; $y_1, y_2 > 0$",
+            "$x_1, x_2 > 0$; $y_1, y_2 < 0$",
+            "$x_1 < 0$; $x_2, y_1, y_2 > 0$",
+            "$x_1 > 0$; $y_1, y_2 < 0$"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/examen-admision-uni-resuelto-algebra.html",
+          "sourceName": "Álgebra en PDF — examen de admisión UNI resuelto"
+        }
+      ]
+    },
+    {
+      "name": "Inecuaciones y Valor Absoluto",
+      "questions": [
+        {
+          "bodyTypst": "Halle el promedio de los valores máximo y mínimo de la función $f(x, y) = 4x + y + 3$ sujeta a la región $S = {(x, y) : abs(x - 2) + abs(y - 4) <= 3}$.",
+          "alternatives": ["3", "7", "10", "15", "19"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20172.pdf",
+          "sourceName": "Examen de Admisión UNI 2017-2, Pregunta 10"
+        },
+        {
+          "bodyTypst": "Dado el conjunto solución de la inecuación $(ln(x) - 2)(x - 1) > 0$, expresado como $]0, a[ union ]b, +infinity[$, determine el valor de $E = ln(b/a)$.",
+          "alternatives": ["1", "$e$", "2", "$e^2$", "3"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20152.pdf",
+          "sourceName": "Examen de Admisión UNI 2015-2, Pregunta 14"
+        },
+        {
+          "bodyTypst": "Si $x in ]6, 12[$, indique el intervalo al cual pertenece $2x - 7$.",
+          "alternatives": ["$]1, 15[$", "$]5, 17[$", "$[5, 9]$", "$[1, 15]$", "$]8, 13]$"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/04/algebra-examen-admision-villarreal-unfv.html",
+          "sourceName": "Álgebra UNFV, examen de admisión resuelto, Pregunta 9"
+        }
+      ]
+    },
+    {
+      "name": "Matrices y Determinantes",
+      "questions": [
+        {
+          "bodyTypst": "Si el polinomio característico de la matriz $A$ es $P(lambda) = lambda^2 - 4 lambda + 1$, determina la matriz inversa de $A$.",
+          "alternatives": ["$A - 2I$", "$2I - A$", "$4I - A$", "$A - 4I$", "$3I - A$"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI, Prueba de Admisión 2018-1, pregunta 11"
+        },
+        {
+          "bodyTypst": "Sea la matriz $A$ de orden $n times 1$, $A^T$ su transpuesta, $I$ la matriz identidad de orden $n times n$ y $B = I - A (A^T A)^(-1) A^T$. Calcula $B^p$, donde $p$ es un entero positivo.",
+          "alternatives": ["$I$", "$B$", "$I - B$", "$I - 2B$", "$I + 2B$"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI, Prueba de Admisión 2018-1, pregunta 12"
+        },
+        {
+          "bodyTypst": "Sea $A = mat(P, 1, 0; 0, P, 1; 0, 0, P)$. Halla el elemento de la segunda fila y tercera columna de $A^4$.",
+          "alternatives": ["$P^4$", "$3P^4$", "$4P^3$", "$6P^2$", "$P^3$"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI, Prueba de Admisión 2018-1, pregunta 13"
+        },
+        {
+          "bodyTypst": "Indica la secuencia correcta después de determinar si la proposición es verdadera (V) o falsa (F): I) El determinante de una matriz puede considerarse como una función del conjunto de las matrices cuadradas al conjunto de los números reales. II) $det(A + B) = det(A) + det(B)$. III) Si $B$ es la inversa de una matriz $A$, entonces $det(B) = 1 / det(A)$.",
+          "alternatives": ["F V V", "F F F", "V V V", "V F V", "V V F"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI, Prueba de Admisión 2018-1, pregunta 15"
+        }
+      ]
+    },
+    {
+      "name": "Sistemas de Ecuaciones",
+      "questions": [
+        {
+          "bodyTypst": "En el examen de admisión de la Universidad Nacional de Ingeniería (UNI), 2015-II, se da el sistema de ecuaciones lineales $cases(x + 2 K y + z = 4, x - y - z = -8, -x + y + K z = 6)$. Determine el o los valores de $K$ para que el sistema tenga solución única.",
+          "alternatives": [
+            "Todos los reales excepto K = 1 y K = -1/2",
+            "Todos los reales excepto K = -1 y K = 1/2",
+            "Todos los reales excepto K = 2 y K = -1",
+            "Todos los reales excepto K = -2 y K = 1",
+            "Únicamente K = 1 o K = 1/2"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20152.pdf",
+          "sourceName": "UNI, Examen de Admisión 2015-II, pregunta 20"
+        },
+        {
+          "bodyTypst": "En el Examen de Admisión Especial de la UNI (2017-II, para titulados/graduados y traslado externo) se da el sistema de ecuaciones $cases(x + 2y + a z = 1, x + b y + 2 z = 1, x + 3y + 2z = b)$, donde $a$ y $b$ son números reales. Determine todos los valores de $a$ y $b$ para que el sistema tenga solución única.",
+          "alternatives": [
+            "a y b reales, ambos distintos de 2",
+            "a y b reales, ambos distintos de 3",
+            "a real distinto de 2, y b real distinto de 3",
+            "a real distinto de 3, y b real distinto de 2",
+            "a real distinto de 2, y b real distinto de 1 y de 2"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20172.pdf",
+          "sourceName": "UNI, Examen de Admisión Especial 2017-II, pregunta 14"
+        },
+        {
+          "bodyTypst": "En un Centro de Salud de Lima, durante los dos últimos años se aplicaron dos tipos de vacuna: Neumococo (4 dosis cada una) y Hepatitis B (3 dosis cada una). Si en ese periodo se aplicaron 92 vacunas en total, distribuidas en 316 dosis, determine cuántas vacunas de Hepatitis B se aplicaron.",
+          "alternatives": ["52", "38", "40", "42"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://algebraenpdf.blogspot.com/2022/05/algebra-semana-13-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+          "sourceName": "Blog educativo abierto — Álgebra Semana 13"
+        }
+      ]
+    },
+    {
+      "name": "Números Complejos",
+      "questions": [
+        {
+          "bodyTypst": "Indique la alternativa correcta después de determinar si dicha proposición es verdadera (V) o falsa (F) según el orden dado. I. $sum_(k=0)^(100) ((1+i)/(1-i))^(4k) = 100$. II. El módulo del número complejo $w = ((1,2)(3,4))/((2,1))$ es 5. III. La suma de los números complejos que satisfacen la ecuación $(x+1)^2 + 2i = 4 + (3+y)i$ es $(-2,-2)$.",
+          "alternatives": ["V V V", "F V F", "F F V", "F V V", "F F F"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20152.pdf",
+          "sourceName": "UNI 2015-II, Segundo Examen Parcial, Matemática 1, pregunta 13"
+        },
+        {
+          "bodyTypst": "Si $abs(z) = 2$ y $w = z + 1/z$, entonces el valor numérico de la expresión $(Re(w))^2/(25/16) + (Im(w))^2/(9/16)$ es",
+          "alternatives": ["5", "4", "3", "$sqrt(2)$", "1"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf",
+          "sourceName": "UNI 2016-II, pregunta 24"
+        }
+      ]
+    },
+    {
+      "name": "Funciones",
+      "questions": [
+        {
+          "bodyTypst": "Indique la alternativa correcta después de determinar si las siguientes proposiciones son verdaderas (V) o falsas (F). Dada la función $f(x) = 2^x - 2^(abs(x))$, $x in RR$: I. $f(x) <= 0$ para todo $x$ número real. II. Existe la inversa de $f$. III. $f$ es estrictamente creciente.",
+          "alternatives": ["V V V", "V V F", "V F F", "F V V", "F F F"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20172.pdf",
+          "sourceName": "UNI 2017-II, pregunta 13"
+        },
+        {
+          "bodyTypst": "El mayor rango de la función $f(x) = (x^4 - 8x^2 + 15)/(x^2 - 5)$ es:",
+          "alternatives": [
+            "$[-3, infinity[$, excepto en $x = sqrt(5)$ y $x = -sqrt(5)$",
+            "$]-3, infinity[$",
+            "$[-3, infinity[$, excepto en x = 2",
+            "$]-2, infinity[$, excepto en x = 3",
+            "$[-2, infinity[$, excepto en x = 1"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "UNI 2018-II, pregunta 11"
+        },
+        {
+          "bodyTypst": "Indique la secuencia correcta después de determinar si las siguientes proposiciones son verdaderas (V) o falsas (F): I. La función $f(x) = 4^x + 4^(-x)$ es monótona. II. La función $g(x) = 4^x - 4^(-x)$ posee, en algún $x_0 in RR$, su valor mínimo. III. La función $h(x) = 2^x - 3^(-x)$ es una función impar.",
+          "alternatives": ["V V V", "V V F", "V F V", "F V V", "F F F"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+          "sourceName": "UNI 2018-II, pregunta 14"
+        }
+      ]
+    },
+    {
+      "name": "Progresiones y Límites de Sucesiones",
+      "questions": [
+        {
+          "bodyTypst": "Se tiene una progresión geométrica $(a_n)$ de razón $r$ que cumple $a_1 - a_2 + a_3 = 7$ y $a_4 - a_5 + a_6 = 56$. Calcule $a_1/r$.",
+          "alternatives": ["$frac(7,9)$", "$frac(7,6)$", "$frac(7,5)$", "2", "3"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/08/segunda-prueba-examen-uni-2016-2.html",
+          "sourceName": "Examen UNI, Álgebra — solucionario"
+        },
+        {
+          "bodyTypst": "Las edades de Ana, Betty y Clara suman 33 años y forman una progresión aritmética creciente. Si a estas edades se les suman 1, 5 y 17 años, respectivamente, se obtiene una progresión geométrica. ¿Cuál es la edad de la mayor?",
+          "alternatives": ["13 años", "16 años", "14 años", "18 años", "15 años"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/08/aritmetica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+          "sourceName": "Simulacro tipo examen San Marcos (UNMSM)"
+        },
+        {
+          "bodyTypst": "Se tiene una progresión geométrica donde el producto del primer término por el tercero es 64 y el sexto término es 128. Calcule el cuarto término.",
+          "alternatives": ["32", "24", "64", "30", "48"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.minedu.gob.pe/somospromo/pdf/preparacion/razonamiento-matematico/rm-progresiones-aritmeticas-y-geometricas.pdf",
+          "sourceName": "MINEDU — La Pre, Razonamiento Matemático, Semana 4"
+        },
+        {
+          "bodyTypst": "Calcule la suma de los infinitos términos de una progresión geométrica ilimitada si su primer término es $1/2$ y la razón es $1/3$.",
+          "alternatives": ["$frac(2,3)$", "$frac(5,6)$", "$frac(3,4)$", "$frac(3,2)$", "$frac(1,6)$"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.minedu.gob.pe/somospromo/pdf/preparacion/razonamiento-matematico/rm-progresiones-aritmeticas-y-geometricas.pdf",
+          "sourceName": "MINEDU — La Pre, Razonamiento Matemático, Semana 4"
+        }
+      ]
+    },
+    {
+      "name": "Programación Lineal",
+      "questions": [
+        {
+          "bodyTypst": "En una empresa, se le pide al analista de ventas averiguar los precios a los que se debe vender cada uno de los dos tipos de artículos, A y B, que ofrecen, de tal modo que la función de ingreso $f(x,y) = 3x + 4y$ sea máxima bajo las restricciones $6x + 15y <= 300$, $14x + 5y <= 280$, siendo x e y los precios de venta de cada uno de los artículos A y B. Los valores numéricos de estos precios son:",
+          "alternatives": ["20 y 12", "14 y 28", "15 y 20", "14 y 20", "15 y 14"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/08/algebra-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+          "sourceName": "Simulacro San Marcos (DECO UNMSM) resuelto"
+        },
+        {
+          "bodyTypst": "En una carpintería se elaboran puertas y ventanas. Para dicha producción se utilizan máquinas y trabajo manual. Para hacer una puerta, se requiere 1 hora con máquina y 2 horas de trabajo manual, mientras que para hacer una ventana se requiere 1 hora con máquina y 4 horas de trabajo manual. Se dispone, como máximo, de 4 horas diarias para el uso de la máquina y 12 horas diarias para el trabajo manual. Si por cada puerta fabricada se gana 30 dólares y por cada ventana 50 dólares, determine la cantidad de puertas y ventanas que se debe fabricar para tener la máxima ganancia posible.",
+          "alternatives": ["1 puerta y 3 ventanas", "2 puertas y 2 ventanas", "3 puertas y 1 ventana", "3 puertas y 2 ventanas", "1 puerta y 2 ventanas"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/08/algebra-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+          "sourceName": "Simulacro San Marcos (DECO UNMSM) resuelto"
+        },
+        {
+          "bodyTypst": "En la carta de una juguería, se ofrece dos tipos de jugos naturales. Para un litro del primer tipo se requiere medio kilo de papaya y tres plátanos, por lo que su precio es de nueve soles. Un litro del segundo tipo tiene un precio de siete soles y su preparación requiere medio kilo de papaya y dos plátanos. Si solo se dispone de seis kilos de papaya y treinta plátanos, ¿cuál será el ingreso máximo que se obtendrá por la venta de los jugos naturales?",
+          "alternatives": ["96 soles", "93 soles", "98 soles", "100 soles", "90 soles"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+          "sourceName": "San Marcos Álgebra - problemas resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Razonamiento Matemático Aplicado (Álgebra)",
+      "questions": [
+        {
+          "bodyTypst": "Establecer si el número $x$ está entre 0 y 1. Hechos: I. Se cumple $x^2 < x$. II. $x$ es positivo. Escoja la mejor respuesta.",
+          "alternatives": [
+            "I por sí solo es suficiente para resolver el problema",
+            "II por sí solo es suficiente para resolver el problema",
+            "Se necesita usar tanto I y II para resolver el problema",
+            "Cada hecho en forma independiente puede resolver el problema",
+            "Aparte de I y II se necesita información adicional para resolver el problema"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "Solucionario oficial UNI Admisión 2021-1, Razonamiento Matemático, pregunta 5"
+        },
+        {
+          "bodyTypst": "En una tabla se relacionan cuatro símbolos con valores numéricos fijos: corazón ($c$), triángulo ($t$), cuadrado ($s$) y rombo ($d$). Se cumple: $c + t + t + c = 26$, $t + t + t + t = 24$, $s + d + c + d = 27$, $s + c + s + t = 33$. Halle el valor de $d$ (rombo).",
+          "alternatives": ["5", "6", "7", "8", "9"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "Solucionario oficial UNI Admisión 2021-1, Razonamiento Matemático, pregunta 6"
+        },
+        {
+          "bodyTypst": "Se desea averiguar si $x = y$. Hechos: I. $(x - 50)^2 = (y - 50)^2$. II. $(x + y) (1/x + 1/y) = 4$. Escoja la mejor respuesta.",
+          "alternatives": [
+            "I por sí solo es suficiente para resolver el problema",
+            "II por sí solo es suficiente para resolver el problema",
+            "Se necesita usar tanto I y II para resolver el problema",
+            "Cada hecho en forma independiente puede resolver el problema",
+            "Aparte de I y II se necesita información adicional para resolver el problema"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "Solucionario oficial UNI Admisión 2021-1, Razonamiento Matemático, pregunta 10"
+        },
+        {
+          "bodyTypst": "Se define el operador $Delta$ mediante la siguiente tabla, para $a, b in {1,2,3,4}$: $1 Delta 1 = 1$, $1 Delta 2 = 2$, $1 Delta 3 = 3$, $1 Delta 4 = 4$, $2 Delta 1 = 2$, $2 Delta 2 = 3$, $2 Delta 3 = 4$, $2 Delta 4 = 5$, $3 Delta 1 = 3$, $3 Delta 2 = 4$, $3 Delta 3 = 5$, $3 Delta 4 = 6$, $4 Delta 1 = 4$, $4 Delta 2 = 5$, $4 Delta 3 = 6$, $4 Delta 4 = 7$. Siguiendo el patrón, halle el valor de $(5 Delta 7) Delta (6 Delta 4)$.",
+          "alternatives": ["16", "17", "18", "19", "20"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "Solucionario oficial UNI Admisión 2021-1, Razonamiento Matemático, pregunta 11"
+        }
+      ]
+    }
+  ]
+}

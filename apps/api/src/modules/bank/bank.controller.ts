@@ -233,12 +233,14 @@ export class BankController {
   }
 
   /**
-   * Task 2 (question editing): swaps an image question's backing image.
-   * `type='structured'` -> 400; archived/central-read-only -> 409 (via
-   * `requireManageableQuestion`); cross-tenant -> 404. Mirrors `POST
-   * /bank/questions/image`'s `FileInterceptor` usage, but the field name
-   * here is `file` (this endpoint has no other multipart fields to
-   * disambiguate from, unlike creation's `image` alongside taxonomy fields).
+   * Task 2 (question editing): swaps a question's backing image asset.
+   * Works for `type='image'` (the whole question) AND `type='structured'`
+   * (an optional complement image — see `bank.service.ts` `replaceImage`).
+   * Archived/central-read-only -> 409 (via `requireManageableQuestion`);
+   * cross-tenant -> 404. Mirrors `POST /bank/questions/image`'s
+   * `FileInterceptor` usage, but the field name here is `file` (this
+   * endpoint has no other multipart fields to disambiguate from, unlike
+   * creation's `image` alongside taxonomy fields).
    */
   @Post(":id/image")
   @HttpCode(HttpStatus.CREATED)

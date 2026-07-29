@@ -1,0 +1,312 @@
+{
+  "courseName": "Comunicación",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "La comunicación",
+      "questions": [
+        {
+          "bodyTypst": "En el enunciado «Desgraciadamente, solo logró un empate nuestro equipo», el elemento de la comunicación que se destaca es el:",
+          "alternatives": ["Emisor", "Receptor", "Mensaje", "Canal", "Código"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "http://academiaencasa.blogspot.com/2012/06/preguntas-de-lenguaje-tomadas-en.html",
+          "sourceName": "Preguntas de lenguaje tomadas en exámenes de admisión (UNMSM 2008-II)"
+        },
+        {
+          "bodyTypst": "En el enunciado «Los adverbios son categorías lexicales invariables en el castellano», predomina la función del lenguaje denominada:",
+          "alternatives": ["Metalingüística", "Expresiva o emotiva", "Apelativa o conativa", "Estética o poética", "Fática o de contacto"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "http://academiaencasa.blogspot.com/2012/06/preguntas-de-lenguaje-tomadas-en.html",
+          "sourceName": "Preguntas de lenguaje tomadas en exámenes de admisión (UNMSM 2008-II)"
+        },
+        {
+          "bodyTypst": "En los enunciados «El todo es igual a la suma de las partes», «¡Qué lindo enunciado!» y «Alumnos, escuchen atentamente», predominan las funciones del lenguaje denominadas, respectivamente:",
+          "alternatives": ["Representativa, apelativa y expresiva", "Representativa, expresiva y apelativa", "Apelativa, representativa y expresiva", "Apelativa, expresiva y representativa", "Expresiva, apelativa y representativa"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "http://academiaencasa.blogspot.com/2012/06/preguntas-de-lenguaje-tomadas-en.html",
+          "sourceName": "Preguntas de lenguaje tomadas en exámenes de admisión (UNMSM)"
+        },
+        {
+          "bodyTypst": "Cuando se dice que las lenguas son sistemas en los que, durante el proceso de comunicación, los significados que expresan sus unidades dependen en gran medida de la situación en que se producen, se destaca:",
+          "alternatives": ["el hecho de que la gramática es el único elemento válido", "el carácter abstracto e invariable de las lenguas naturales", "el carácter sociocultural de la lengua en la comunicación", "la obligación de los cambios antes que las variaciones", "la naturaleza estrictamente homogénea de las lenguas"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/08/lenguaje-examen-resuelto-de-admision-universidad-san-marcos-deco-sabado-areas-A-B-D-pdf.html",
+          "sourceName": "Lenguaje Área C — examen resuelto de admisión San Marcos (UNMSM)"
+        }
+      ]
+    },
+    {
+      "name": "Lingüística",
+      "questions": [
+        {
+          "bodyTypst": "Respecto de un zorrino del mundo real, elija la alternativa que relaciona correctamente cada signo con su clase respectiva: I. La fotografía del zorrino. II. El olor del zorrino. III. La palabra «zorrino». (a. Símbolo, b. Ícono, c. Índice)",
+          "alternatives": ["Ib, IIc, IIIa", "Ia, IIc, IIIb", "Ib, IIa, IIIc", "Ic, IIb, IIIa", "Ic, IIa, IIIb"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/08/lenguaje-examen-resuelto-de-admision-universidad-san-marcos-deco-sabado-areas-A-B-D-pdf.html",
+          "sourceName": "Lenguaje Área C — examen resuelto de admisión San Marcos (UNMSM)"
+        },
+        {
+          "bodyTypst": "En la lengua española, el tono final de la voz cumple una función distintiva en la oración. Según ello, señale la alternativa que denota inflexión tonal ascendente.",
+          "alternatives": ["¿Por qué no llegaste a la cita?", "¿Hoy es el cumpleaños de Liz?", "¿Cuándo será la inauguración?", "¿Dónde te encuentras, Juana?", "Anita, ¡qué linda presentación!"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/08/lenguaje-examen-resuelto-de-admision-universidad-san-marcos-deco-sabado-areas-A-B-D-pdf.html",
+          "sourceName": "Lenguaje Área C — examen resuelto de admisión San Marcos (UNMSM)"
+        }
+      ]
+    },
+    {
+      "name": "Ortografía",
+      "questions": [
+        {
+          "bodyTypst": "Los nombres propios de los accidentes geográficos se escriben con mayúscula inicial, pero no los sustantivos comunes genéricos que los acompañan. Señale la alternativa que respeta esta norma.",
+          "alternatives": ["El Desierto de Atacama es el más desértico del planeta.", "Moisés dividió el Mar Rojo según las Sagradas Escrituras.", "El Canal de Panamá es una vía de navegación interoceánica.", "No sé si Cabo Verde está situado en el océano Atlántico."],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ortografiasecuencia-vocalica-acentuacion-preguntas-resueltas-lenguaje-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Reglas de ortografía — preguntas resueltas de admisión (UNMSM)"
+        },
+        {
+          "bodyTypst": "Señale la alternativa que presenta uso adecuado de letras mayúsculas. I. El Dr. de la Torre trabaja en el Hospital San José. II. La Navidad es una gran festividad del cristianismo. III. La Vacuna BCG los protegerá de la Tuberculosis. IV. La papa (Solanum tuberosum) contiene vitaminas.",
+          "alternatives": ["I y II", "II y III", "II y IV", "I y IV"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ortografiasecuencia-vocalica-acentuacion-preguntas-resueltas-lenguaje-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Reglas de ortografía — preguntas resueltas de admisión (UNMSM)"
+        },
+        {
+          "bodyTypst": "Los dos puntos son un signo de puntuación que desempeña diferentes funciones, entre ellas, la explicación de una enumeración, la introducción de citas textuales y la relación semántica entre proposiciones. Según lo expuesto, ¿qué enunciado presenta correcto uso de los dos puntos?",
+          "alternatives": ["Amorosa, divertida, despreocupada, así es: su manera de ser.", "Me inscribí a dos cursos: uno de cocina y otro de baile moderno.", "En esa fecha unos se disfrazan: otros festejan con música criolla.", "«Utilizaré una billetera digital»: pensó el dueño del nuevo negocio.", "La torta lleva relleno de: frutas, crema chantillí y nueces picadas."],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ortografiasecuencia-vocalica-acentuacion-preguntas-resueltas-lenguaje-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Reglas de ortografía — preguntas resueltas de admisión (UNMSM)"
+        },
+        {
+          "bodyTypst": "El punto y coma se emplea para separar proposiciones yuxtapuestas que tienen una relación semántica muy estrecha. A partir de la afirmación anterior, señale la alternativa donde se debe emplear este signo de puntuación.",
+          "alternatives": ["Sebastián danza capoeira, actúa en el teatro y recita poemas.", "Los niños juegan en el patio, sus padres preparan el almuerzo.", "La actriz colombiana, una artista muy amable, saludó a sus fans.", "Nuevamente un político exclamó: «Juro por Dios y por la plata».", "Alejandro ya está por llegar porque vimos su auto en el garaje."],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ortografiasecuencia-vocalica-acentuacion-preguntas-resueltas-lenguaje-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Reglas de ortografía — preguntas resueltas de admisión (UNMSM)"
+        }
+      ]
+    },
+    {
+      "name": "Acentuación",
+      "questions": [
+        {
+          "bodyTypst": "Marque la alternativa que presenta correcto uso de tildación.",
+          "alternatives": ["Es tarde, con qué apúrate.", "Mira la toga con qué me graduaré.", "¡Con que frescura me contestó!", "¿Con qué dinero viajó?", "Este es el lápiz con que escribo."],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ortografiasecuencia-vocalica-acentuacion-preguntas-resueltas-lenguaje-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Reglas de ortografía y acentuación — preguntas resueltas (UNMSM)"
+        },
+        {
+          "bodyTypst": "Presenta incorrecto uso de tildación:",
+          "alternatives": ["Lo hice porque me lo mandaron.", "Dime por qué no acudiste a la cita.", "Conozco el porque de tu actuacion.", "Esos son los motivos por que dimitió el Presidente.", "Porque levantaste la mano, te llamaron."],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ortografiasecuencia-vocalica-acentuacion-preguntas-resueltas-lenguaje-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Reglas de ortografía y acentuación — preguntas resueltas (UNMSM)"
+        },
+        {
+          "bodyTypst": "Reconozca la serie de palabras que presenta una correcta tildación:",
+          "alternatives": ["Crustáceo, fácil, resúmen", "Murciélago, matriz, tí", "Petróleo, destruído, paz", "Fluido, ámbar, regímenes", "Crísis, periódico, almíbar"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ortografiasecuencia-vocalica-acentuacion-preguntas-resueltas-lenguaje-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Reglas de ortografía y acentuación — preguntas resueltas (UNMSM)"
+        },
+        {
+          "bodyTypst": "Marque la serie que presenta correcta tildación.",
+          "alternatives": ["puntapie, habilmente, veintiún", "veintidós, cortaúñas, bíceps", "ultimamente, decimoquinto, dieciseis", "decimonoveno, vahido, suavemente", "útilmente, hincapie, hazmerreír"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/01/ortografiasecuencia-vocalica-acentuacion-preguntas-resueltas-lenguaje-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Reglas de ortografía y acentuación — preguntas resueltas (UNMSM)"
+        }
+      ]
+    },
+    {
+      "name": "Morfología",
+      "questions": [
+        {
+          "bodyTypst": "La parasíntesis es el proceso de formación de palabras en el que se combinan la composición y la derivación (siete-mes-in-o), o la prefijación y la sufijación de manera simultánea sobre el lexema (a-boton-ar). Según esta información, marque la opción en la que hay palabras formadas mediante este proceso.",
+          "alternatives": ["Enrique, el hermano de Ricardo, es quinceañero.", "El padre de Alejandro es un experto paracaidista.", "Va a embolsar los polos para darlos al ropavejero.", "Los obreros municipales van a enrejar este parque.", "El entrecomillado de estas palabras es correcto."],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/08/lenguaje-examen-resuelto-de-admision-universidad-san-marcos-deco-sabado-areas-A-B-D-pdf.html",
+          "sourceName": "Lenguaje Área C — examen resuelto de admisión San Marcos (UNMSM)"
+        },
+        {
+          "bodyTypst": "Señale la opción donde la palabra presenta morfemas gramaticales, uno derivativo y otro flexivo.",
+          "alternatives": ["Relojes", "Rosal", "Lealtad", "Rojizo", "Brisas"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "http://academiaencasa.blogspot.com/2012/06/preguntas-de-lenguaje-tomadas-en.html",
+          "sourceName": "Preguntas de lenguaje tomadas en exámenes de admisión (UNMSM 2009-II)"
+        }
+      ]
+    },
+    {
+      "name": "Sintaxis",
+      "questions": [
+        {
+          "bodyTypst": "Determine el número de preposiciones del enunciado «La primera edición de este libro se exhibió en el Museo de la Nación entre los años 1911 y 1948».",
+          "alternatives": ["Tres", "Cinco", "Cuatro", "Dos", "Seis"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "http://preguntasdelenguaportemaunmsm.blogspot.com/",
+          "sourceName": "Preguntas de Lengua en la UNMSM por tema — examen de admisión 2002"
+        },
+        {
+          "bodyTypst": "¿Cuál de las alternativas constituye una frase preposicional?",
+          "alternatives": ["Esos viejos recuerdos", "Una limonada fría", "El padre del niño", "La casa que se cayó", "En su casa vieja"],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "http://preguntasdelenguaportemaunmsm.blogspot.com/",
+          "sourceName": "Preguntas de Lengua en la UNMSM por tema — examen de admisión 2004"
+        },
+        {
+          "bodyTypst": "Señale la frase nominal que cumple función de vocativo.",
+          "alternatives": ["Para el público, cantó.", "Compraron bizcochos.", "Fernando baila bien.", "Cocinaron pachamanca.", "Levántate, Ernestina."],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "http://preguntasdelenguaportemaunmsm.blogspot.com/",
+          "sourceName": "Preguntas de Lengua en la UNMSM por tema — examen de admisión 2007"
+        },
+        {
+          "bodyTypst": "En el enunciado «En el frondoso árbol de tu patio, al lado de la gruta, cantaron los hermosos ruiseñores al amanecer», la frase que cumple la función de sujeto es:",
+          "alternatives": ["al lado de la gruta", "el frondoso árbol", "de tu patio", "los hermosos ruiseñores", "al amanecer"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "http://academiaencasa.blogspot.com/2012/06/preguntas-de-lenguaje-tomadas-en.html",
+          "sourceName": "Preguntas de lenguaje tomadas en exámenes de admisión (UNMSM 2008-II)"
+        }
+      ]
+    },
+    {
+      "name": "Semántica",
+      "questions": [
+        {
+          "bodyTypst": "«Sembré una planta en el jardín» y «Me duele la planta del pie». La relación semántica entre las palabras destacadas es de:",
+          "alternatives": ["Hiponimia", "Homonimia", "Hiperonimia", "Polisemia", "Antonimia"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://preguntas-lenguaje.blogspot.com/2013/11/las-relaciones-semanticas.html",
+          "sourceName": "Las relaciones semánticas — banco de preguntas de lenguaje para examen de admisión"
+        },
+        {
+          "bodyTypst": "«El sobre que está sobre la mesa contiene la carta». Las palabras destacadas, que tienen la misma forma pero distinto origen y significado, constituyen un caso de:",
+          "alternatives": ["Sinónimas", "Parónimas", "Antónimas", "Homónimas", "Polisémicas"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://preguntas-lenguaje.blogspot.com/2013/11/las-relaciones-semanticas.html",
+          "sourceName": "Las relaciones semánticas — banco de preguntas de lenguaje para examen de admisión"
+        },
+        {
+          "bodyTypst": "La relación entre las palabras «espiar» y «expiar» es de:",
+          "alternatives": ["Sinonimia", "Antonimia", "Paronimia", "Homonimia", "Polisemia"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://preguntas-lenguaje.blogspot.com/2013/11/las-relaciones-semanticas.html",
+          "sourceName": "Las relaciones semánticas — banco de preguntas de lenguaje para examen de admisión"
+        },
+        {
+          "bodyTypst": "«Calle la boca cuando cruce la calle». Las palabras destacadas constituyen un caso de:",
+          "alternatives": ["Hipónimas", "Homógrafas", "Parónimas", "Polisémicas", "Hiperónimas"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://preguntas-lenguaje.blogspot.com/2013/11/las-relaciones-semanticas.html",
+          "sourceName": "Las relaciones semánticas — banco de preguntas de lenguaje para examen de admisión"
+        }
+      ]
+    },
+    {
+      "name": "Literatura",
+      "questions": [
+        {
+          "bodyTypst": "Rubén Darío profesó admiración por escritores franceses y norteamericanos, a quienes tomó como modelo para su obra. ¿Qué característica del modernismo se identifica en ello?",
+          "alternatives": ["Sincretismo", "Esteticismo", "Exotismo", "Hispanoamericanismo", "Cosmopolitismo"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/08/literatura-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+          "sourceName": "Literatura — simulacro resuelto de admisión San Marcos (UNMSM)"
+        },
+        {
+          "bodyTypst": "Relacione el acontecimiento con su ubicación en el «Poema de mío Cid»: I. El levantamiento del destierro a Ruy Díaz de Vivar. II. La justicia otorgada a la familia del Cid en las Cortes de Toledo. III. Las argucias del Cid para conseguir dinero de los judíos Raquel y Vidas. (a. Cantar primero, b. Cantar segundo, c. Cantar tercero)",
+          "alternatives": ["Ia, IIc, IIIb", "Ic, IIa, IIIb", "Ia, IIb, IIIc", "Ib, IIc, IIIa", "Ib, IIa, IIIc"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/08/literatura-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+          "sourceName": "Literatura — simulacro resuelto de admisión San Marcos (UNMSM)"
+        }
+      ]
+    },
+    {
+      "name": "Comprensión y producción textual",
+      "questions": [
+        {
+          "bodyTypst": "Lea el siguiente texto: «El enfoque de género puede ser definido como una forma de entender la vida social que permite identificar las diferencias en los roles y tareas que realizan mujeres y hombres, así como las asimetrías e inequidades en la forma en que se relacionan. Asimismo, facilita reconocer las causas que las producen para, a partir de ello, formular medidas (políticas, acciones afirmativas, normas, etc.) que contribuyan a superar las brechas sociales producidas por la desigualdad de género. Se trata, entonces, de una herramienta analítica y metodológica que posee, además, una dimensión política, en tanto busca la construcción de relaciones de género equitativas y justas, y reconoce la existencia de otras discriminaciones y desigualdades. A partir del enfoque de género, en las últimas décadas se han desarrollado políticas públicas para erradicar la desigualdad entre hombres y mujeres, a las que se denomina políticas de igualdad de género.» El texto constituye, fundamentalmente:",
+          "alternatives": ["un elogio de la perspectiva de género debido a sus ventajas para vivir las diferentes formas de sexualidad", "una definición del concepto de género y de sus usos en las políticas públicas contra la desigualdad", "una argumentación sociológica que destaca el enfoque de género como base de todas las políticas públicas", "un alegato moral para lograr la igualdad plena entre varones y mujeres, y luchar contra toda forma de desigualdad", "una reflexión histórica sobre las diferentes formas de construir culturalmente la naturaleza humana"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2018/09/examen-de-admision-san-marcos-2019-i.html",
+          "sourceName": "Examen de admisión San Marcos 2019-I — Comprensión de lectura (UNMSM)"
+        },
+        {
+          "bodyTypst": "Sobre el mismo texto del enfoque de género citado en la pregunta anterior: en el texto, la palabra «herramienta» equivale a:",
+          "alternatives": ["doctrina", "aparejo", "ideología", "categoría", "filosofía"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2018/09/examen-de-admision-san-marcos-2019-i.html",
+          "sourceName": "Examen de admisión San Marcos 2019-I — Comprensión de lectura (UNMSM)"
+        }
+      ]
+    },
+    {
+      "name": "Vocabulario y relaciones verbales",
+      "questions": [
+        {
+          "bodyTypst": "Señale el antónimo de RECHAZAR.",
+          "alternatives": ["agradar", "atraer", "autorizar", "aceptar", "afirmar"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2012/03/antonimos-ejercicios-resueltos-unmsm.html",
+          "sourceName": "Antónimos — ejercicios resueltos UNMSM 1991"
+        },
+        {
+          "bodyTypst": "Señale el antónimo de OBJETAR.",
+          "alternatives": ["afirmar", "reiterar", "absolver", "asentir", "confirmar"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2012/03/antonimos-ejercicios-resueltos-unmsm.html",
+          "sourceName": "Antónimos — ejercicios resueltos UNMSM 1991"
+        },
+        {
+          "bodyTypst": "Señale el antónimo de AMBIGUO.",
+          "alternatives": ["claro", "unívoco", "exacto", "diáfano", "categórico"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2012/03/antonimos-ejercicios-resueltos-unmsm.html",
+          "sourceName": "Antónimos — ejercicios resueltos UNMSM 1991"
+        },
+        {
+          "bodyTypst": "Señale el antónimo de MENOSCABAR.",
+          "alternatives": ["alabar", "fortalecer", "ensamblar", "reparar", "elevar"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2012/03/antonimos-ejercicios-resueltos-unmsm.html",
+          "sourceName": "Antónimos — ejercicios resueltos UNMSM 1992"
+        }
+      ]
+    }
+  ]
+}
