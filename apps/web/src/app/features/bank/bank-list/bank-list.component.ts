@@ -26,6 +26,7 @@ import { ModalComponent } from '../../../ui/modal/modal.component';
 import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
+import { MathTextComponent } from '../../../ui/math-text/math-text.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { BankService } from '../bank.service';
 import { BankQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, UpdateQuestionPayload } from '../bank.models';
@@ -148,6 +149,7 @@ const ERROR_MESSAGE = 'No se pudieron cargar las preguntas. Inténtalo de nuevo.
     InputComponent,
     SelectComponent,
     TagComponent,
+    MathTextComponent,
     QuestionTaxonomyFieldsComponent,
     QuestionContentFieldsComponent,
     AiReviseBoxComponent,
@@ -469,17 +471,16 @@ export class BankListComponent {
 
   /**
    * Short one-line preview of a structured question's statement for the tree
-   * leaf — `bodyTypst` is raw Typst, so it's shown as-is (collapsed whitespace,
-   * truncated). `null` for image questions (they have no statement text; the
-   * leaf falls back to the answer key), so text questions stop rendering as
-   * blank cards.
+   * leaf. Only whitespace is collapsed — the Typst markup is left intact for
+   * `ui-math-text` to typeset, and the leaf is cut off by the template's
+   * `truncate` class rather than by slicing characters here (slicing could
+   * land inside a `$…$` run and leave a dangling delimiter on screen).
+   * `null` for image questions (they have no statement text; the leaf falls
+   * back to the answer key), so text questions stop rendering as blank cards.
    */
   protected questionSnippet(question: BankQuestion): string | null {
     const raw = (question.bodyTypst ?? '').replace(/\s+/g, ' ').trim();
-    if (!raw) {
-      return null;
-    }
-    return raw.length > 70 ? `${raw.slice(0, 70)}…` : raw;
+    return raw || null;
   }
 
   /** Alternatives of a structured question, lettered a/b/c…, with the `correctAnswer` one flagged. Empty for image questions. */

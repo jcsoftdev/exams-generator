@@ -7,6 +7,7 @@ import { ButtonComponent } from '../../../ui/button/button.component';
 import { ProgressComponent } from '../../../ui/progress/progress.component';
 import { BannerComponent } from '../../../ui/banner/banner.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
+import { MathTextComponent } from '../../../ui/math-text/math-text.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { AiService } from '../ai.service';
 import { DraftCountService } from '../draft-count.service';
@@ -55,7 +56,7 @@ const STATUS_LABEL: Record<GenerationJob['status'], string> = {
 @Component({
   selector: 'app-generation-job-detail',
   standalone: true,
-  imports: [ButtonComponent, ProgressComponent, BannerComponent, TagComponent, DatePipe],
+  imports: [ButtonComponent, ProgressComponent, BannerComponent, TagComponent, MathTextComponent, DatePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './generation-job-detail.component.html',
 })

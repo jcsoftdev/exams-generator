@@ -100,14 +100,14 @@
         } @else if (previewFailedIds().has(q.id)) {
           <div data-testid="preview-fallback" class="rounded-card bg-n100 p-3 text-sm text-n700">
             <p class="mb-2 text-xs text-warn-text">No se pudo generar la vista de impresión; mostramos el contenido.</p>
-            <p class="text-sm leading-snug text-n900">{{ q.bodyTypst }}</p>
+            <p class="text-sm leading-snug text-n900"><ui-math-text [value]="q.bodyTypst ?? ''"></ui-math-text></p>
             @if (q.alternatives) {
               <div class="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-n600">
                 @for (alt of q.alternatives; track $index; let altIndex = $index) {
                   @if (isCorrect(q, altIndex)) {
-                    <span class="font-bold text-easy-text">{{ letterAt(altIndex) }}) {{ alt }} ✓</span>
+                    <span class="font-bold text-easy-text">{{ letterAt(altIndex) }}) <ui-math-text [value]="alt"></ui-math-text> ✓</span>
                   } @else {
-                    <span>{{ letterAt(altIndex) }}) {{ alt }}</span>
+                    <span>{{ letterAt(altIndex) }}) <ui-math-text [value]="alt"></ui-math-text></span>
                   }
                 }
               </div>

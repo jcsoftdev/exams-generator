@@ -155,7 +155,9 @@
                               }
                               <div class="min-w-0 flex-1">
                                 @if (questionSnippet(q); as snippet) {
-                                  <p data-testid="question-snippet" class="truncate text-sm font-medium text-n900">{{ snippet }}</p>
+                                  <p data-testid="question-snippet" class="truncate text-sm font-medium text-n900">
+                                    <ui-math-text [value]="snippet"></ui-math-text>
+                                  </p>
                                   <p class="truncate text-xs text-n500">Clave: {{ q.correctAnswer }}</p>
                                 } @else {
                                   <p class="truncate text-sm font-medium text-n900">Clave: {{ q.correctAnswer }}</p>
@@ -298,7 +300,9 @@
               @if (q.bodyTypst) {
                 <div data-testid="panel-enunciado" class="mb-3">
                   <p class="mb-1 text-xs font-medium text-n500">Enunciado</p>
-                  <p class="whitespace-pre-wrap rounded-field bg-n50 px-3 py-2 text-sm text-n900">{{ q.bodyTypst }}</p>
+                  <p class="whitespace-pre-wrap rounded-field bg-n50 px-3 py-2 text-sm text-n900">
+                    <ui-math-text [value]="q.bodyTypst"></ui-math-text>
+                  </p>
                 </div>
               }
 
@@ -312,7 +316,7 @@
                       [class.text-n700]="!alt.correct"
                     >
                       <span class="font-medium">{{ alt.letter }})</span>
-                      <span class="min-w-0 flex-1">{{ alt.text }}</span>
+                      <span class="min-w-0 flex-1"><ui-math-text [value]="alt.text"></ui-math-text></span>
                       @if (alt.correct) {
                         <lucide-angular name="check" class="mt-0.5 h-4 w-4 shrink-0"></lucide-angular>
                       }

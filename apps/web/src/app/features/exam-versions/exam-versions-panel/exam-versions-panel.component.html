@@ -172,7 +172,7 @@
           @for (question of exam.questions; track question.id) {
             <li class="text-sm text-n700" data-testid="exam-content-item">
               <span class="font-medium text-n900">{{ question.position + 1 }}.</span>
-              {{ questionSummary(question) }}
+              <ui-math-text [value]="questionSummary(question)"></ui-math-text>
             </li>
           }
         </ul>

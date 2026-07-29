@@ -24,7 +24,7 @@
           [class.border-n200]="selected()?.id !== d.id"
           (click)="select(d)"
         >
-          <p class="truncate text-sm text-n800">{{ firstLine(d.bodyTypst) }}</p>
+          <p class="truncate text-sm text-n800"><ui-math-text [value]="firstLine(d.bodyTypst)"></ui-math-text></p>
           <p class="mt-1 flex items-center gap-1 text-xs text-n500">
             <span class="truncate">{{ courseTopicLabel(d) }}</span>
             <ui-tag [variant]="tagVariantFor(d.difficulty)">{{ difficultyLabel(d.difficulty) }}</ui-tag>
@@ -126,9 +126,9 @@
             } @else if (previewFailed()) {
               <div data-testid="preview-fallback" class="rounded-card bg-n100 p-3 text-sm text-n700">
                 <p class="mb-2 text-xs text-warn-text">No se pudo generar la vista de impresión; mostramos el contenido.</p>
-                <p class="font-medium text-n900">{{ d.bodyTypst }}</p>
+                <p class="font-medium text-n900"><ui-math-text [value]="d.bodyTypst ?? ''"></ui-math-text></p>
                 <ul class="mt-2 list-inside list-disc">
-                  @for (alt of d.alternatives ?? []; track alt) { <li>{{ alt }}</li> }
+                  @for (alt of d.alternatives ?? []; track alt) { <li><ui-math-text [value]="alt"></ui-math-text></li> }
                 </ul>
               </div>
             }

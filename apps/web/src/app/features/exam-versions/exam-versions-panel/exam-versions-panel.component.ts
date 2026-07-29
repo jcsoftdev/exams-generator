@@ -9,6 +9,8 @@ import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { ModalComponent } from '../../../ui/modal/modal.component';
+import { MathTextComponent } from '../../../ui/math-text/math-text.component';
+import { truncateTypst } from '../../../shared/typst/typst-to-latex';
 import { ExamVersionsService } from '../exam-versions.service';
 import { ExamVersion, ExamVersionJob } from '../exam-versions.models';
 import { ExamsService } from '../../exams/exams.service';
@@ -41,7 +43,15 @@ const DEFAULT_VERSION_COUNT = 2;
   // `<lucide-icon>` is used both here (plantilla/generar/colapsable icons)
   // and inside the nested `ui-empty-state` primitive, so the module itself
   // goes in `imports` this time (not just `.pick()`'s providers).
-  imports: [ButtonComponent, EmptyStateComponent, TagComponent, SelectComponent, ModalComponent, LucideAngularModule],
+  imports: [
+    ButtonComponent,
+    EmptyStateComponent,
+    TagComponent,
+    SelectComponent,
+    ModalComponent,
+    MathTextComponent,
+    LucideAngularModule,
+  ],
   // `ui-select` ("¿Cuántas formas?") needs Check too — this component-level
   // `.pick()` shadows the root `app.config.ts` registration for its subtree.
   providers: [LucideAngularModule.pick({ Folder, CopyPlus, ChevronDown, Plus, Check }).providers ?? []],
@@ -350,6 +360,8 @@ export class ExamVersionsPanelComponent {
     if (!raw) {
       return 'Pregunta estructurada';
     }
-    return raw.length > 80 ? `${raw.slice(0, 80)}…` : raw;
+    // Still raw Typst — `ui-math-text` typesets it in the template. Truncated
+    // Typst-aware so the cut can't orphan a `$` delimiter.
+    return truncateTypst(raw, 80);
   }
 }

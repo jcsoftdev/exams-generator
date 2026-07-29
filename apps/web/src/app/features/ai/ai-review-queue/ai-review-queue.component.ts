@@ -9,6 +9,7 @@ import { EmptyStateComponent } from '../../../ui/empty-state/empty-state.compone
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { ModalComponent } from '../../../ui/modal/modal.component';
+import { MathTextComponent } from '../../../ui/math-text/math-text.component';
 import { SelectOption } from '../../../ui/select/select.component';
 import { AiService } from '../ai.service';
 import { extractErrorMessage } from '../extract-error-message';
@@ -69,6 +70,7 @@ const DIFFICULTY_TAG_VARIANT: Record<Difficulty, TagVariant> = {
     EmptyStateComponent,
     TagComponent,
     ModalComponent,
+    MathTextComponent,
     QuestionTaxonomyFieldsComponent,
     QuestionContentFieldsComponent,
     AiReviseBoxComponent,
