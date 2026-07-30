@@ -17,6 +17,7 @@ import { BankRepository, QuestionListItem, QuestionListPagination } from "./bank
 import { assertStructuredQuestion } from "./domain/assert-structured-question";
 import { canManageQuestionTenant } from "./domain/can-manage-question-tenant";
 import { compilePreviewFromContent } from "./domain/compile-preview-from-content";
+import { hashBodyTypst } from "./domain/hash-body-typst";
 import { validateCreateImageQuestionInput } from "./domain/validate-create-image-question";
 import { validateCreateStructuredQuestionInput } from "./domain/validate-create-structured-question";
 import { validateQuestionTaxonomy } from "./domain/validate-question-taxonomy";
@@ -198,12 +199,19 @@ export class BankService {
       throw new BadRequestException(validation.errors);
     }
 
+    const bodyHash = hashBodyTypst(dto.bodyTypst as string);
+    const duplicate = await this.repository.findByBodyHash(user.tenantId, bodyHash);
+    if (duplicate) {
+      throw new ConflictException(`Question already exists (id: ${duplicate.id})`);
+    }
+
     return this.repository.createStructuredQuestion({
       tenantId: user.tenantId,
       topicId: dto.topicId as string,
       difficulty: dto.difficulty as Difficulty,
       gradeLevel: dto.gradeLevel as string,
       bodyTypst: dto.bodyTypst as string,
+      bodyHash,
       alternatives: dto.alternatives as readonly string[],
       correctAnswer: dto.correctAnswer as string,
       figureCode: dto.figureCode,

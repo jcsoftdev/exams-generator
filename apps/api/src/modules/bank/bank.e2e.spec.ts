@@ -634,7 +634,7 @@ describe("Bank module (e2e)", () => {
           topicId,
           difficulty: Difficulty.Easy,
           gradeLevel: "primaria_1",
-          bodyTypst: "pregunta aprobada para archive/delete tests",
+          bodyTypst: `pregunta aprobada para archive/delete tests ${randomUUID()}`,
           alternatives: ["a", "b"],
           correctAnswer: "0",
         })

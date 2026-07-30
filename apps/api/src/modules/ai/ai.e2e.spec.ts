@@ -38,7 +38,15 @@ class ScriptedQuestionGeneratorAdapter implements QuestionGeneratorPort {
   async generate(): Promise<GeneratedQuestion> {
     const result = this.script[this.callCount] ?? this.script[this.script.length - 1];
     this.callCount += 1;
-    return result as GeneratedQuestion;
+    // Real AI generation never produces byte-identical bodyTypst twice; a
+    // scripted fake replaying the SAME fixture across separate tests would
+    // otherwise collide with BankService's dedupe check (same bodyTypst,
+    // same tenant -> 409) as if it were a re-submission. The comment suffix
+    // is invisible in the compiled PDF (Typst line comment).
+    return {
+      ...(result as GeneratedQuestion),
+      bodyTypst: `${(result as GeneratedQuestion).bodyTypst} // ${randomUUID()}`,
+    };
   }
 
   async reviseQuestion(): Promise<GeneratedQuestion> {
@@ -223,7 +231,7 @@ describeIfTypst("AI generation workflow (e2e)", () => {
     expect(fetched.body.status).toBe("draft");
     expect(fetched.body.aiGenerated).toBe(true);
     expect(fetched.body.type).toBe("structured");
-    expect(fetched.body.bodyTypst).toBe(VALID_QUESTION.bodyTypst);
+    expect(fetched.body.bodyTypst).toContain(VALID_QUESTION.bodyTypst);
     // "b" -> 0-based index "1"
     expect(fetched.body.correctAnswer).toBe("1");
 
@@ -347,7 +355,7 @@ describeIfTypst("AI generation workflow (e2e)", () => {
       .get(`/bank/questions/${id}`)
       .set("Authorization", `Bearer ${tenantAToken}`)
       .expect(200);
-    expect(stillDraft.body.bodyTypst).toBe(VALID_QUESTION.bodyTypst);
+    expect(stillDraft.body.bodyTypst).toContain(VALID_QUESTION.bodyTypst);
   });
 
   it("approve/reject/edit: tenant B cannot approve/reject/edit tenant A's draft (404)", async () => {

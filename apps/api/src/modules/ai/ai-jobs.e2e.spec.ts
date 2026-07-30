@@ -21,7 +21,11 @@ const VALID_QUESTION: GeneratedQuestion = {
 
 class ScriptedQuestionGeneratorAdapter implements QuestionGeneratorPort {
   async generate(): Promise<GeneratedQuestion> {
-    return VALID_QUESTION;
+    // Real AI generation never repeats bodyTypst byte-for-byte; a fake that
+    // always returns the SAME content breaks `count > 1` jobs under
+    // BankService's dedupe check (2nd item collides with the 1st as a
+    // same-tenant duplicate). Comment suffix is invisible once compiled.
+    return { ...VALID_QUESTION, bodyTypst: `${VALID_QUESTION.bodyTypst} // ${randomUUID()}` };
   }
   async reviseQuestion(): Promise<GeneratedQuestion> {
     throw new Error("not used");

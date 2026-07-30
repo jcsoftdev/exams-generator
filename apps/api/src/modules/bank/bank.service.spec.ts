@@ -41,6 +41,7 @@ function buildDeps() {
   const repository = {
     createImageQuestion: jest.fn().mockResolvedValue({ id: "question-1" }),
     createStructuredQuestion: jest.fn().mockResolvedValue({ id: "question-2" }),
+    findByBodyHash: jest.fn().mockResolvedValue(undefined),
     listQuestions: jest.fn().mockResolvedValue([] as QuestionListItem[]),
     findQuestionById: jest.fn().mockResolvedValue(undefined as QuestionListItem | undefined),
     approveQuestion: jest.fn().mockResolvedValue(undefined as { id: string; status: string } | undefined),
@@ -306,6 +307,18 @@ describe("BankService.createStructuredQuestion", () => {
       service.createStructuredQuestion(STAFF_ROLE_WITH_TENANT_ID_USER, VALID_DTO),
     ).rejects.toBeInstanceOf(ForbiddenException);
 
+    expect(repository.createStructuredQuestion).not.toHaveBeenCalled();
+  });
+
+  it("throws ConflictException without inserting when a question with the same bodyTypst already exists in the same tenant", async () => {
+    const { service, repository } = buildDeps();
+    repository.findByBodyHash.mockResolvedValue({ id: "existing-question" });
+
+    await expect(service.createStructuredQuestion(TEACHER_USER, VALID_DTO)).rejects.toBeInstanceOf(
+      ConflictException,
+    );
+
+    expect(repository.findByBodyHash).toHaveBeenCalledWith("tenant-1", expect.any(String));
     expect(repository.createStructuredQuestion).not.toHaveBeenCalled();
   });
 });

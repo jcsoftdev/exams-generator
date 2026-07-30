@@ -55,6 +55,7 @@ async function main(): Promise<void> {
   const token = new TokenService().sign({ sub: adminRow.id, tenantId: null, role: Role.PlatformAdmin });
 
   let failures = 0;
+  let skipped = 0;
 
   for (const entry of data.entries) {
     const label = `${entry.courseName} / ${entry.topicName} — ${entry.sourceName}`;
@@ -84,6 +85,11 @@ async function main(): Promise<void> {
           correctAnswer: entry.correctAnswer,
         }),
       });
+      if (createResponse.status === 409) {
+        skipped++;
+        console.log(`SKIP ${label} (already exists)`);
+        continue;
+      }
       if (!createResponse.ok) {
         throw new Error(`create HTTP ${createResponse.status}: ${await createResponse.text()}`);
       }
@@ -109,7 +115,11 @@ async function main(): Promise<void> {
     }
   }
 
-  console.log(`\n${data.entries.length - failures}/${data.entries.length} gap questions seeded successfully.`);
+  console.log(
+    `\n${data.entries.length - failures - skipped}/${data.entries.length} gap questions seeded successfully` +
+      (skipped > 0 ? ` (${skipped} already existed, skipped)` : "") +
+      `.`,
+  );
   await pool.end();
   process.exitCode = failures > 0 ? 1 : 0;
 }

@@ -5,6 +5,7 @@ import { Observable } from "rxjs";
 import { AuthTokenPayload } from "../auth/token.service";
 import { BankRepository } from "../bank/bank.repository";
 import { PDF_COMPILER_PORT } from "../bank/bank.constants";
+import { hashBodyTypst } from "../bank/domain/hash-body-typst";
 import { GradeLevel } from "../exams/domain/value-objects/grade-level";
 import { PdfCompilerPort, TypstCompilationError } from "../exams/domain/ports/pdf-compiler.port";
 import { correctAnswerLetterToIndex } from "./domain/correct-answer-letter-to-index";
@@ -276,12 +277,19 @@ export class GenerateQuestionsService {
       }
 
       const question = generated as GeneratedQuestion;
+      const bodyHash = hashBodyTypst(question.bodyTypst);
+      const duplicate = await this.bankRepository.findByBodyHash(user.tenantId, bodyHash);
+      if (duplicate) {
+        return { ok: false, error: `Question already exists (id: ${duplicate.id})` };
+      }
+
       const { id } = await this.bankRepository.createStructuredQuestion({
         tenantId: user.tenantId,
         topicId: params.topicId,
         difficulty: params.difficulty,
         gradeLevel: params.gradeLevel,
         bodyTypst: question.bodyTypst,
+        bodyHash,
         alternatives: question.alternatives,
         correctAnswer: correctAnswerLetterToIndex(question.correctAnswer),
         figureCode: question.figureCode,

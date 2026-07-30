@@ -129,7 +129,7 @@ describeIfTypst("POST /ai/questions/:id/revise (e2e)", () => {
     await pool.end();
   });
 
-  async function createOwnQuestion(token: string): Promise<string> {
+  async function createOwnQuestion(token: string, bodyTypst?: string): Promise<string> {
     const response = await request(app.getHttpServer())
       .post("/bank/questions/structured")
       .set("Authorization", `Bearer ${token}`)
@@ -138,7 +138,7 @@ describeIfTypst("POST /ai/questions/:id/revise (e2e)", () => {
         topicId,
         difficulty: Difficulty.Easy,
         gradeLevel: "primaria_1",
-        bodyTypst: "¿Cuánto es $1 + 1$?",
+        bodyTypst: bodyTypst ?? `¿Cuánto es $1 + 1$? ${randomUUID()}`,
         alternatives: ["1", "2", "3", "4", "5"],
         correctAnswer: "1",
       })
@@ -154,7 +154,7 @@ describeIfTypst("POST /ai/questions/:id/revise (e2e)", () => {
   }
 
   it("returns a revised, validated, UNSAVED draft — the persisted question is left untouched", async () => {
-    const id = await createOwnQuestion(tenantAToken);
+    const id = await createOwnQuestion(tenantAToken, "¿Cuánto es $1 + 1$?");
 
     const response = await reviseRequest(tenantAToken, id)
       .send({ instruction: "más difícil" })

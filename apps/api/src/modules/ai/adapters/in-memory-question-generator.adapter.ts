@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 import {
   ExtractQuestionInput,
   GenerateProgressEvent,
@@ -23,8 +24,15 @@ export class InMemoryQuestionGeneratorAdapter implements QuestionGeneratorPort {
     onProgress?: (event: GenerateProgressEvent) => void,
     _previousCompileError?: string,
   ): Promise<GeneratedQuestion> {
+    // The real OpenRouter adapter never produces byte-identical output twice
+    // (model sampling temperature); this fake was deterministic per topic,
+    // which made repeated `generate()` calls for the same topic collide
+    // against BankService's dedupe check (same bodyTypst -> same tenant ->
+    // 409) as if they were re-submissions of one already-created question.
+    // The random suffix (invisible in Typst — it's inside a comment) keeps
+    // every call's content unique, matching real-world variance.
     const question: GeneratedQuestion = {
-      bodyTypst: `¿Cuál es el resultado de la operación sobre ${input.topic}? $ 1/2 + 1/4 $`,
+      bodyTypst: `¿Cuál es el resultado de la operación sobre ${input.topic}? $ 1/2 + 1/4 $ // ${randomUUID()}`,
       alternatives: ["1/4", "3/4", "1/2", "1", "2"],
       correctAnswer: "b",
       figureCode: input.withFigure

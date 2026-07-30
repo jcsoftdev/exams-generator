@@ -1,4 +1,4 @@
-import { boolean, index, jsonb, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
+import { boolean, index, jsonb, pgTable, text, timestamp, uniqueIndex, uuid } from "drizzle-orm/pg-core";
 import { assets } from "./assets.schema";
 import { difficultyEnum, questionStatusEnum, questionTypeEnum } from "./enums";
 import { gradeLevels } from "./grade-levels.schema";
@@ -52,6 +52,14 @@ export const questions = pgTable(
     bodyTypst: text("body_typst"),
     alternatives: jsonb("alternatives"),
     figureCode: text("figure_code"),
+    /**
+     * sha256 of `bodyTypst` (trimmed) — NULL for `type = 'image'` questions,
+     * which have no `bodyTypst` to hash. Backs `questions_tenant_id_body_hash_idx`
+     * so re-seeding or re-pasting the same statement into the same bank
+     * (central or a tenant's own) is caught at insert time instead of
+     * silently duplicating — see `hash-body-typst.ts`.
+     */
+    bodyHash: text("body_hash"),
     correctAnswer: text("correct_answer").notNull(),
     aiGenerated: boolean("ai_generated").notNull().default(false),
     createdBy: uuid("created_by")
@@ -68,5 +76,11 @@ export const questions = pgTable(
     difficultyIdx: index("questions_difficulty_idx").on(table.difficulty),
     statusIdx: index("questions_status_idx").on(table.status),
     poolIdx: index("questions_pool_idx").on(table.gradeLevel, table.status),
+    // Multiple NULL body_hash rows (all `type = 'image'` questions) never
+    // collide under Postgres' NULL-distinct unique-index semantics.
+    tenantIdBodyHashIdx: uniqueIndex("questions_tenant_id_body_hash_idx").on(
+      table.tenantId,
+      table.bodyHash,
+    ),
   }),
 );

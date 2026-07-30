@@ -122,7 +122,7 @@ describe("Bank module — edit approved questions + taxonomy (e2e)", () => {
       .set("Authorization", `Bearer ${token}`);
   }
 
-  async function createApprovedQuestion(token: string): Promise<string> {
+  async function createApprovedQuestion(token: string, bodyTypst?: string): Promise<string> {
     const response = await request(app.getHttpServer())
       .post("/bank/questions/structured")
       .set("Authorization", `Bearer ${token}`)
@@ -131,7 +131,7 @@ describe("Bank module — edit approved questions + taxonomy (e2e)", () => {
         topicId,
         difficulty: Difficulty.Easy,
         gradeLevel: "primaria_1",
-        bodyTypst: "pregunta aprobada para edit tests",
+        bodyTypst: bodyTypst ?? `pregunta aprobada para edit tests ${randomUUID()}`,
         alternatives: ["a", "b"],
         correctAnswer: "0",
       })
@@ -219,7 +219,8 @@ describe("Bank module — edit approved questions + taxonomy (e2e)", () => {
   });
 
   it("4xx on a nonexistent topicId, and leaves the question's content untouched (atomic — no partial write)", async () => {
-    const id = await createApprovedQuestion(tenantAToken);
+    const originalBody = `pregunta original intacta ${randomUUID()}`;
+    const id = await createApprovedQuestion(tenantAToken, originalBody);
     const bogusTopicId = randomUUID();
 
     const response = await editRequest(tenantAToken, id).send({
@@ -230,7 +231,7 @@ describe("Bank module — edit approved questions + taxonomy (e2e)", () => {
     expect(response.status).toBeLessThan(500);
 
     const fetched = await getByIdRequest(tenantAToken, id).expect(200);
-    expect(fetched.body.bodyTypst).toBe("pregunta aprobada para edit tests");
+    expect(fetched.body.bodyTypst).toBe(originalBody);
     expect(fetched.body.alternatives).toEqual(["a", "b"]);
     expect(fetched.body.topicId).toBe(topicId);
   });

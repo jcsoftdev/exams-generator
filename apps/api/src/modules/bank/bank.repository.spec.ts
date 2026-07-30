@@ -6,6 +6,7 @@ import { runMigrations } from "../../db/migrate";
 import { assets, courses, questions, tenants, topics, users } from "../../db/schema";
 import { QuestionStatus } from "../../db/schema/enums";
 import { BankRepository } from "./bank.repository";
+import { hashBodyTypst } from "./domain/hash-body-typst";
 
 /**
  * Integration test against the real docker-compose Postgres — same pattern
@@ -168,13 +169,16 @@ describe("BankRepository", () => {
     topicId?: string;
     difficulty?: Difficulty;
     gradeLevel?: string;
+    bodyTypst?: string;
   }): Promise<string> {
+    const bodyTypst = params.bodyTypst ?? "$x + 1 = 2$, resuelve para $x$";
     const { id } = await repository.createStructuredQuestion({
       tenantId: params.tenantId,
       topicId: params.topicId ?? topicId,
       difficulty: params.difficulty ?? Difficulty.Easy,
       gradeLevel: params.gradeLevel ?? "primaria_1",
-      bodyTypst: "$x + 1 = 2$, resuelve para $x$",
+      bodyTypst,
+      bodyHash: hashBodyTypst(bodyTypst),
       alternatives: ["1", "2", "3"],
       correctAnswer: "0",
       figureCode: undefined,
@@ -203,6 +207,7 @@ describe("BankRepository", () => {
       difficulty: Difficulty.Easy,
       gradeLevel: "primaria_1",
       bodyTypst: "figura triangular",
+      bodyHash: hashBodyTypst("figura triangular"),
       alternatives: ["a", "b"],
       correctAnswer: "1",
       figureCode: "cetz.canvas({ /* triangle */ })",
@@ -215,19 +220,23 @@ describe("BankRepository", () => {
   });
 
   it("listQuestions() and findQuestionById() surface structured fields (bodyTypst/alternatives/figureCode/type)", async () => {
-    const id = await createStructuredQuestion({ tenantId: null, createdBy: centralUserId });
+    const id = await createStructuredQuestion({
+      tenantId: null,
+      createdBy: centralUserId,
+      bodyTypst: "$y - 3 = 5$, resuelve para $y$",
+    });
 
     const list = await repository.listQuestions({ currentTenantId: null });
     const listed = list.find((q) => q.id === id);
     expect(listed).toBeDefined();
     expect(listed?.type).toBe("structured");
-    expect(listed?.bodyTypst).toBe("$x + 1 = 2$, resuelve para $x$");
+    expect(listed?.bodyTypst).toBe("$y - 3 = 5$, resuelve para $y$");
     expect(listed?.alternatives).toEqual(["1", "2", "3"]);
     expect(listed?.imageAssetId).toBeNull();
 
     const byId = await repository.findQuestionById(id, null);
     expect(byId?.type).toBe("structured");
-    expect(byId?.bodyTypst).toBe("$x + 1 = 2$, resuelve para $x$");
+    expect(byId?.bodyTypst).toBe("$y - 3 = 5$, resuelve para $y$");
   });
 
   it("listQuestions() surfaces type='image' with null structured fields for image questions", async () => {
@@ -312,7 +321,11 @@ describe("BankRepository", () => {
 
   describe("createStructuredQuestion() draft/AI workflow (Lane D3)", () => {
     it("defaults to status='approved' and aiGenerated=false when not provided (backwards compatible with manual creation)", async () => {
-      const id = await createStructuredQuestion({ tenantId: null, createdBy: centralUserId });
+      const id = await createStructuredQuestion({
+        tenantId: null,
+        createdBy: centralUserId,
+        bodyTypst: "$z^2 = 9$, resuelve para $z$",
+      });
 
       const [row] = await db.select().from(questions).where(inArray(questions.id, [id]));
       expect(row?.status).toBe("approved");
@@ -326,6 +339,7 @@ describe("BankRepository", () => {
         difficulty: Difficulty.Easy,
         gradeLevel: "primaria_1",
         bodyTypst: "pregunta generada por IA",
+        bodyHash: hashBodyTypst("pregunta generada por IA"),
         alternatives: ["1", "2", "3", "4", "5"],
         correctAnswer: "1",
         figureCode: undefined,
@@ -350,6 +364,7 @@ describe("BankRepository", () => {
           difficulty: Difficulty.Easy,
           gradeLevel: "primaria_1",
           bodyTypst: "draft q",
+          bodyHash: hashBodyTypst("draft q"),
           alternatives: ["1", "2"],
           correctAnswer: "0",
           figureCode: undefined,
@@ -359,7 +374,11 @@ describe("BankRepository", () => {
         })
       ).id;
       createdQuestionIds.push(draftId);
-      const approvedId = await createStructuredQuestion({ tenantId: null, createdBy: centralUserId });
+      const approvedId = await createStructuredQuestion({
+        tenantId: null,
+        createdBy: centralUserId,
+        bodyTypst: "$w/2 = 4$, resuelve para $w$",
+      });
 
       const drafts = await repository.listQuestions({ currentTenantId: null, status: "draft" });
       const ids = drafts.map((q) => q.id);
@@ -397,12 +416,14 @@ describe("BankRepository", () => {
 
   describe("approveQuestion() / rejectQuestion() / updateStructuredQuestion() (Lane D3 draft workflow)", () => {
     async function createDraft(tenantId: string | null, createdBy: string): Promise<string> {
+      const bodyTypst = `draft body ${randomUUID()}`;
       const { id } = await repository.createStructuredQuestion({
         tenantId,
         topicId,
         difficulty: Difficulty.Easy,
         gradeLevel: "primaria_1",
-        bodyTypst: "draft body",
+        bodyTypst,
+        bodyHash: hashBodyTypst(bodyTypst),
         alternatives: ["1", "2", "3"],
         correctAnswer: "0",
         figureCode: undefined,
@@ -630,6 +651,7 @@ describe("BankRepository", () => {
         difficulty: Difficulty.Medium,
         gradeLevel: "primaria_1",
         bodyTypst: "$x + 1 = 2$",
+        bodyHash: hashBodyTypst("$x + 1 = 2$"),
         alternatives: ["1", "2"],
         correctAnswer: "0",
         figureCode: undefined,

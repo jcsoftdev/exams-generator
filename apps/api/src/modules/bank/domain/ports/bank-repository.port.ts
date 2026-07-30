@@ -32,6 +32,8 @@ export interface CreateStructuredQuestionRecord {
   readonly difficulty: Difficulty;
   readonly gradeLevel: string;
   readonly bodyTypst: string;
+  /** `hashBodyTypst(bodyTypst)` — computed by the service, persisted as-is here. */
+  readonly bodyHash: string;
   readonly alternatives: readonly string[];
   readonly correctAnswer: string;
   readonly figureCode: string | undefined;
@@ -103,6 +105,12 @@ export interface BankRepositoryPort {
     pagination: QuestionListPagination,
   ): Promise<{ items: QuestionListItem[]; total: number }>;
   findQuestionById(id: string, currentTenantId: string | null): Promise<QuestionListItem | undefined>;
+  /**
+   * Scoped to the SAME `tenantId` the new row would be written to (not the
+   * central+tenant visibility OR) — a duplicate only matters within the
+   * exact bank (central, or one tenant's own) being written into.
+   */
+  findByBodyHash(tenantId: string | null, bodyHash: string): Promise<{ id: string } | undefined>;
   findCourseAndTopicNames(
     courseId: string,
     topicId: string,

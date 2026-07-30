@@ -4,6 +4,7 @@ import { and, count, eq, isNull, or, SQL } from "drizzle-orm";
 import { Database, DRIZZLE_DB } from "../../db/client";
 import { assets, courses, questions, subtopics, topics } from "../../db/schema";
 import { QuestionStatus } from "../../db/schema/enums";
+import { hashBodyTypst } from "./domain/hash-body-typst";
 import {
   BankRepositoryPort,
   BankStatusDifficultyCount,
@@ -108,6 +109,7 @@ export class BankRepository implements BankRepositoryPort {
         gradeLevel: record.gradeLevel,
         status: record.status ?? "approved",
         bodyTypst: record.bodyTypst,
+        bodyHash: record.bodyHash,
         alternatives: record.alternatives,
         figureCode: record.figureCode,
         correctAnswer: record.correctAnswer,
@@ -121,6 +123,23 @@ export class BankRepository implements BankRepositoryPort {
     }
 
     return { id: question.id };
+  }
+
+  /**
+   * Dedupe check (see `questions_tenant_id_body_hash_idx`) — scoped to the
+   * EXACT `tenantId` a new row would be written to, not the central+tenant
+   * visibility OR every other query here uses: a duplicate only matters
+   * within the specific bank being written into.
+   */
+  async findByBodyHash(tenantId: string | null, bodyHash: string): Promise<{ id: string } | undefined> {
+    const tenantMatch = tenantId === null ? isNull(questions.tenantId) : eq(questions.tenantId, tenantId);
+
+    const [row] = await this.db
+      .select({ id: questions.id })
+      .from(questions)
+      .where(and(tenantMatch, eq(questions.bodyHash, bodyHash)));
+
+    return row;
   }
 
   /**
@@ -333,6 +352,7 @@ export class BankRepository implements BankRepositoryPort {
       .update(questions)
       .set({
         bodyTypst: patch.bodyTypst,
+        bodyHash: hashBodyTypst(patch.bodyTypst),
         alternatives: patch.alternatives,
         correctAnswer: patch.correctAnswer,
         figureCode: patch.figureCode,
@@ -441,6 +461,7 @@ export class BankRepository implements BankRepositoryPort {
         .update(questions)
         .set({
           bodyTypst: contentPatch.bodyTypst,
+          bodyHash: hashBodyTypst(contentPatch.bodyTypst),
           alternatives: contentPatch.alternatives,
           correctAnswer: contentPatch.correctAnswer,
           figureCode: contentPatch.figureCode,

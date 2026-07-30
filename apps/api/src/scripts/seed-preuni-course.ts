@@ -29,9 +29,10 @@ const API_BASE_URL = process.env.API_BASE_URL ?? "http://localhost:3012";
  * course/topics/`BANK_SAMPLE_ADMIN` user) and the API must be reachable at
  * `API_BASE_URL`.
  *
- * Re-runnable: `POST /bank/questions/structured` has no dedupe key, so
- * running this script twice creates duplicate questions — only run it once
- * per environment, or clean up `questions` first.
+ * Re-runnable: `POST /bank/questions/structured` rejects a `bodyTypst` that
+ * already exists in the same bank with 409 (see `hashBodyTypst`), and this
+ * script treats that as a skip, not a failure — safe to re-run after a
+ * partial run (rate-limit, crash, etc.) without creating duplicates.
  */
 
 interface PilotQuestion {
@@ -57,6 +58,7 @@ interface PilotData {
 interface SeedResult {
   readonly label: string;
   readonly ok: boolean;
+  readonly skipped?: boolean;
   readonly error?: string;
 }
 
@@ -130,6 +132,12 @@ async function main(): Promise<void> {
           }),
         });
 
+        if (response.status === 409) {
+          results.push({ label, ok: true, skipped: true });
+          console.log(`SKIP ${label} (already exists)`);
+          continue;
+        }
+
         if (!response.ok) {
           const body = await response.text();
           throw new Error(`HTTP ${response.status}: ${body}`);
@@ -146,7 +154,12 @@ async function main(): Promise<void> {
   }
 
   const failed = results.filter((r) => !r.ok);
-  console.log(`\n${data.courseName}: ${results.length - failed.length}/${results.length} questions seeded successfully.`);
+  const skipped = results.filter((r) => r.skipped);
+  console.log(
+    `\n${data.courseName}: ${results.length - failed.length}/${results.length} questions seeded successfully` +
+      (skipped.length > 0 ? ` (${skipped.length} already existed, skipped)` : "") +
+      `.`,
+  );
   if (failed.length > 0) {
     console.error(`${failed.length} failure(s):`, failed);
   }

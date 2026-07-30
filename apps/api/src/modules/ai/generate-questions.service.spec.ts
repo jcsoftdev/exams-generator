@@ -39,6 +39,7 @@ function buildDeps() {
     findCourseAndTopicNames: jest
       .fn()
       .mockResolvedValue({ courseName: "Matemática", topicName: "Fracciones" }),
+    findByBodyHash: jest.fn().mockResolvedValue(undefined),
     createStructuredQuestion: jest
       .fn()
       .mockImplementation(async () => ({ id: `question-${Math.random()}` })),
