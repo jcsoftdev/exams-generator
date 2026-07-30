@@ -307,7 +307,9 @@ export class ExamBuilderComponent implements OnInit {
         // No track step for this university — selection is already
         // complete, so load the template right away instead of waiting
         // for a manual "Cargar plantilla" click.
-        if (list.length === 0) {
+        // Guard against stale responses: only auto-load if this response still
+        // corresponds to the currently-selected university.
+        if (list.length === 0 && this.selectedUniversityId() === universityId) {
           this.loadTemplate();
         }
       },

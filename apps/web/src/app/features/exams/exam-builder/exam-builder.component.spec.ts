@@ -993,6 +993,51 @@ describe('ExamBuilderComponent', () => {
       const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1:t1:hard"]');
       expect(input?.value).toBe('9');
     });
+
+    it('does NOT auto-load when a stale (delayed) empty-tracks response arrives after the university selection has changed', () => {
+      const resolveBlueprint = vi.fn(() =>
+        of<ResolveBlueprintResult>({
+          blueprint: [{ courseId: 'c1', topicId: 't1', count: 5, difficulty: Difficulty.Medium }],
+          weekNumber: 1,
+          templateId: 'tpl-2',
+        }),
+      );
+      // Use multiple universities to properly test the race condition
+      const multipleUniversities: University[] = [
+        { id: 'u1', code: 'uni', name: 'UNI' },
+        { id: 'u2', code: 'uni2', name: 'UNI 2' },
+      ];
+      // Return empty for any university, but control response timing per call
+      let callCount = 0;
+      const firstCallSubject = new Subject<Track[]>();
+      const secondCallSubject = new Subject<Track[]>();
+      const getUniversityTracks = vi.fn((_universityId: string) => {
+        callCount++;
+        return callCount === 1 ? firstCallSubject.asObservable() : secondCallSubject.asObservable();
+      });
+      const { compiled, fixture } = setup({
+        resolveBlueprint,
+        getUniversities: () => of(multipleUniversities),
+        getUniversityTracks,
+      });
+
+      selectGradeLevel(compiled, fixture, 'pre');
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      // getUniversityTracks('u1') called once, response pending via firstCallSubject
+
+      // User quickly changes university selection before first response resolves
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI 2');
+      // Now selectedUniversityId is 'u2', and getUniversityTracks('u2') called, response pending via secondCallSubject
+
+      // Emit the FIRST response (now stale because university changed to u2)
+      firstCallSubject.next([]);
+      firstCallSubject.complete();
+      fixture.detectChanges();
+
+      // resolveBlueprint should NOT have been called for the stale response (first call was for u1, but current selection is u2)
+      expect(resolveBlueprint).not.toHaveBeenCalled();
+    });
   });
 
   describe('tipo de examen — templateCourses catalog (Bug 1 & 2)', () => {
