@@ -102,9 +102,17 @@ const jsonLd = {
 	"@graph": [
 		{
 			"@type": "Organization",
+			"@id": "https://creaexamen.com/#organization",
 			name: "GeneraExamen",
 			url: "https://creaexamen.com",
 			logo: "https://creaexamen.com/icon-512.png",
+		},
+		{
+			"@type": "WebSite",
+			name: "GeneraExamen",
+			url: "https://creaexamen.com",
+			inLanguage: "es-PE",
+			publisher: { "@id": "https://creaexamen.com/#organization" },
 		},
 		{
 			"@type": "SoftwareApplication",
