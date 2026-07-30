@@ -319,6 +319,12 @@ export class ExamBuilderComponent implements OnInit {
 
   protected onTrackChange(trackId: string | null): void {
     this.selectedTrackId.set(trackId);
+    // Clearing the track (trackId === null) leaves the selection
+    // incomplete for a university that has tracks — only an actual
+    // pick auto-loads.
+    if (trackId) {
+      this.loadTemplate();
+    }
   }
 
   protected isCourseSelected(courseId: string): boolean {

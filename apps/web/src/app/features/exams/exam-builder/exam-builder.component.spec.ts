@@ -994,6 +994,26 @@ describe('ExamBuilderComponent', () => {
       expect(input?.value).toBe('9');
     });
 
+    it('auto-loads the template when a track is selected, without clicking the button', () => {
+      const resolveBlueprint = vi.fn(() =>
+        of<ResolveBlueprintResult>({
+          blueprint: [{ courseId: 'c1', topicId: 't1', count: 7, difficulty: Difficulty.Easy }],
+          weekNumber: null,
+          templateId: 'tpl-2',
+        }),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of(TRACKS) });
+
+      selectGradeLevel(compiled, fixture, 'pre');
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+      selectFromUiSelect(compiled, fixture, 'track-select', 'Preuniversitario');
+
+      expect(resolveBlueprint).toHaveBeenCalledWith({ examTypeCode: 'eta', universityId: 'u1', trackId: 'trk1' });
+      const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1:t1:easy"]');
+      expect(input?.value).toBe('7');
+    });
+
     it('does NOT auto-load when a stale (delayed) empty-tracks response arrives after the university selection has changed', () => {
       const resolveBlueprint = vi.fn(() =>
         of<ResolveBlueprintResult>({
