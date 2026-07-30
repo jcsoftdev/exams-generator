@@ -28,7 +28,9 @@ Sin cambios: `loadTemplate()` reusa su manejo de 404 ("no hay plantilla configur
 
 ## 4. Reentrancia
 
-Cambiar de track o togglear un checkbox dos veces seguidas dispara `loadTemplate()` dos veces — mismo comportamiento que clickear el botón dos veces, ya soportado hoy (`mergeResolvedBlueprint` mezcla/sobreescribe filas vía `store.bulkLoadFromBlueprint`, no duplica).
+`bulkLoadFromBlueprint` mezcla/sobreescribe por clave (curso·tema·dificultad) vía `store.bulkLoadFromBlueprint`, pero es **aditivo**: nunca borra filas que ya no vienen en la respuesta. Consecuencia aceptada: desmarcar un checkbox de curso dispara un auto-load acotado a los cursos restantes, pero las filas del curso recién desmarcado quedan en el grid con su cantidad ya pedida — el usuario debe borrarlas a mano si ya no las quiere. Es el mismo comportamiento aditivo que ya tenía el flujo manual ("Cargar plantilla"), ahora simplemente alcanzable sin un click explícito.
+
+Antes de este cambio, el único punto de entrada a `loadTemplate()` era el botón "Cargar plantilla", y `ui-button` ignora clicks mientras `loading` es `true` — dos llamadas a `resolveBlueprint` en vuelo simultáneamente eran estructuralmente imposibles. Los 3 triggers automáticos saltan esa serialización implícita, así que respuestas fuera de orden sí son alcanzables (ej. marcar dos checkboxes en menos de un segundo). `loadTemplate()` usa un contador `templateRequestId` monotónico: cada llamada captura su propio id, y una respuesta (`next` o `error`) solo se aplica si su id sigue siendo el más reciente — una respuesta más vieja que llega tarde se descarta en silencio en vez de sobreescribir una selección más nueva.
 
 ## 5. Testing
 
