@@ -208,6 +208,14 @@ export class ExamBuilderComponent implements OnInit {
   protected readonly templateError = signal<string | null>(null);
   /** Raw text of the optional "Cantidad total de preguntas" field — only needed when a university (e.g. UNI) publishes point totals but no per-course question count (`totalQuestionsOverride`). */
   protected readonly templateTotalQuestions = signal<string>('');
+  /**
+   * Monotonic token guarding `loadTemplate()` against out-of-order
+   * responses. The 3 auto-load triggers bypass the "Cargar plantilla"
+   * button's `loading`-gated click suppression, so multiple
+   * `resolveBlueprint` calls can now be in flight at once — a response
+   * only applies if it's still from the most recently issued request.
+   */
+  private templateRequestId = 0;
 
   protected readonly examTypeOptions = computed(() =>
     this.examTypes().map((type) => ({ value: type.code, label: type.label })),
@@ -303,17 +311,27 @@ export class ExamBuilderComponent implements OnInit {
     }
     this.examsService.getUniversityTracks(universityId).subscribe({
       next: (list) => {
+        // Guard against stale responses: only apply this response if it
+        // still corresponds to the currently-selected university — a late
+        // response for a university the user already left must not
+        // clobber the track list or auto-load with mismatched state.
+        if (this.selectedUniversityId() !== universityId) {
+          return;
+        }
         this.tracks.set(list);
         // No track step for this university — selection is already
         // complete, so load the template right away instead of waiting
         // for a manual "Cargar plantilla" click.
-        // Guard against stale responses: only auto-load if this response still
-        // corresponds to the currently-selected university.
-        if (list.length === 0 && this.selectedUniversityId() === universityId) {
+        if (list.length === 0) {
           this.loadTemplate();
         }
       },
-      error: () => this.templateError.set('No se pudieron cargar los tracks.'),
+      error: () => {
+        if (this.selectedUniversityId() !== universityId) {
+          return;
+        }
+        this.templateError.set('No se pudieron cargar los tracks.');
+      },
     });
   }
 
@@ -374,12 +392,20 @@ export class ExamBuilderComponent implements OnInit {
       ...(totalQuestionsRaw ? { totalQuestionsOverride: Number(totalQuestionsRaw) } : {}),
     };
 
+    const requestId = ++this.templateRequestId;
+
     this.examsService.resolveBlueprint(payload).subscribe({
       next: (result) => {
+        if (requestId !== this.templateRequestId) {
+          return;
+        }
         this.loadingTemplate.set(false);
         this.mergeResolvedBlueprint(result.blueprint);
       },
       error: (error: HttpErrorResponse) => {
+        if (requestId !== this.templateRequestId) {
+          return;
+        }
         this.loadingTemplate.set(false);
         this.templateError.set(
           error.status === 404

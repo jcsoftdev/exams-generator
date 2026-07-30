@@ -1007,6 +1007,9 @@ describe('ExamBuilderComponent', () => {
       selectGradeLevel(compiled, fixture, 'pre');
       selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
       selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      expect(resolveBlueprint).not.toHaveBeenCalled();
+
       selectFromUiSelect(compiled, fixture, 'track-select', 'Preuniversitario');
 
       expect(resolveBlueprint).toHaveBeenCalledWith({ examTypeCode: 'eta', universityId: 'u1', trackId: 'trk1' });
@@ -1084,6 +1087,39 @@ describe('ExamBuilderComponent', () => {
 
       // resolveBlueprint should NOT have been called for the stale response (first call was for u1, but current selection is u2)
       expect(resolveBlueprint).not.toHaveBeenCalled();
+    });
+
+    it('leaves a course\'s previously-loaded rows in the grid when its checkbox is unchecked afterward (additive merge is accepted behavior — see design doc §4)', () => {
+      const courses: Course[] = [
+        { id: 'c1', name: 'Matemática' },
+        { id: 'c2', name: 'Comunicación' },
+      ];
+      const resolveBlueprint = vi.fn((payload: { selectedCourseIds?: string[] }) => {
+        const ids = payload.selectedCourseIds ?? [];
+        const blueprint = [
+          ...(ids.includes('c1') ? [{ courseId: 'c1', count: 5, difficulty: Difficulty.Medium }] : []),
+          ...(ids.includes('c2') ? [{ courseId: 'c2', count: 8, difficulty: Difficulty.Medium }] : []),
+        ];
+        return of<ResolveBlueprintResult>({ blueprint, weekNumber: null, templateId: 'tpl-3' });
+      });
+      const { compiled, fixture } = setup({ getCourses: () => of(courses), resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectGradeLevel(compiled, fixture, 'pre');
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Fastest');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      (compiled.querySelector('[data-testid="course-checkbox-c1"]') as HTMLInputElement).click();
+      fixture.detectChanges();
+      (compiled.querySelector('[data-testid="course-checkbox-c2"]') as HTMLInputElement).click();
+      fixture.detectChanges();
+
+      // Uncheck c2 — the auto-load re-fires scoped to just c1, but the
+      // grid must still show c2's previously-loaded row.
+      (compiled.querySelector('[data-testid="course-checkbox-c2"]') as HTMLInputElement).click();
+      fixture.detectChanges();
+
+      const c2Input = compiled.querySelector<HTMLInputElement>('input[name="requested-c2::medium"]');
+      expect(c2Input?.value).toBe('8');
     });
   });
 
