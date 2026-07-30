@@ -561,6 +561,34 @@ export function typstMathToLatex(math: string): string {
   return new MathParser(tokenize(math)).parseSequence(new Set());
 }
 
+/** The `#import "@preview/mitex:…": mi, mitex` line mitex usage requires. */
+const MITEX_IMPORT_PATTERN = /^[ \t]*#import\s+"[^"]*"\s*:[^\n]*\n?/gm;
+
+/**
+ * Flattens Typst markup to one line of plain prose, dropping the `$`
+ * delimiters and the `"…"` quoting inside math.
+ *
+ * For one-line, width-clipped rows (a tree leaf, a queue row) — NOT for a
+ * detail panel, which should use `ui-math-text`. Typeset math cannot survive
+ * `text-overflow: ellipsis`: KaTeX lays a `\left(`/`\right)` pair out as
+ * absolutely-positioned stretchy spans, and clipping the row mid-expression
+ * strands their glyphs across it (`(. ( ) ) (`). Truncating the SOURCE does
+ * not help either — 70 characters of Typst still typeset wider than the row.
+ * So a row that will be clipped gets text, and only a container that can show
+ * the whole expression gets math.
+ */
+export function typstToPlainText(source: string): string {
+  return source
+    .replace(MITEX_IMPORT_PATTERN, '')
+    .replace(/#mi(?:tex)?\(\s*[`"]([\s\S]*?)[`"]\s*\)/g, '$1')
+    // One pass, so an escaped `\$` becomes a literal `$` WITHOUT the next
+    // rule then stripping it as if it were a delimiter.
+    .replace(/\\\$|\$/g, (match) => (match === '\\$' ? '$' : ''))
+    .replace(/"([^"]*)"/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 /**
  * Shortens Typst markup to at most `maxLength` characters WITHOUT cutting a
  * `$…$` run in half. A blind `slice` can land inside one, and the orphaned
@@ -594,8 +622,6 @@ export function truncateTypst(source: string, maxLength: number): string {
 
   return `${source.slice(0, cut).trimEnd()}…`;
 }
-
-const MITEX_IMPORT_PATTERN = /^[ \t]*#import\s+"[^"]*"\s*:[^\n]*\n?/gm;
 
 /**
  * Reads the argument of a `#mi(…)`/`#mitex(…)` call at `start` (the index of

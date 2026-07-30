@@ -10,6 +10,7 @@ import { TagComponent } from '../../../ui/tag/tag.component';
 import { TagVariant } from '../../../ui/ui.types';
 import { ModalComponent } from '../../../ui/modal/modal.component';
 import { MathTextComponent } from '../../../ui/math-text/math-text.component';
+import { truncateTypst, typstToPlainText } from '../../../shared/typst/typst-to-latex';
 import { SelectOption } from '../../../ui/select/select.component';
 import { AiService } from '../ai.service';
 import { extractErrorMessage } from '../extract-error-message';
@@ -207,8 +208,17 @@ export class AiReviewQueueComponent {
   }
 
   /** First line of the Typst body, truncated by CSS in the row — falls back to '' for a missing/empty body. */
+  /**
+   * One-line queue-row preview: PLAIN text, not typeset. The row is clipped by
+   * `truncate`, and clipping through KaTeX output strands the glyphs of a
+   * half-shown stretchy delimiter across it — see `questionSnippet` in
+   * `bank-list.component.ts`. The draft's typeset statement is in the detail
+   * pane next to it.
+   */
   protected firstLine(body: string | null): string {
-    return (body ?? '').split('\n')[0] ?? '';
+    // Split BEFORE flattening: `typstToPlainText` collapses newlines, so
+    // flattening first would fold the alternatives into the row too.
+    return truncateTypst(typstToPlainText((body ?? '').split('\n')[0] ?? ''), 70);
   }
 
   protected courseTopicLabel(draft: DraftQuestion): string {

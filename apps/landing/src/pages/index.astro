@@ -1,5 +1,99 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import katex from "katex";
+import "katex/dist/katex.min.css";
+
+/**
+ * Central-bank scale. Measured on 2026-07-30 against the seeded bank:
+ *
+ *   SELECT COUNT(*), COUNT(DISTINCT t.id), COUNT(DISTINCT t.course_id)
+ *   FROM questions q JOIN topics t ON t.id = q.topic_id
+ *   WHERE q.tenant_id IS NULL AND q.status = 'approved';
+ *
+ * `status = 'approved'` is load-bearing: 55 more rows exist but are archived,
+ * and an archived question never reaches an exam — quoting the raw 1121 would
+ * be advertising stock a customer cannot draw from.
+ *
+ * Hardcoded on purpose: this page is statically built and must not depend on
+ * the API being reachable at build time. Re-run the query (see README) when it
+ * drifts — publishing a number we have not measured is worse than publishing
+ * none.
+ */
+const bank = {
+	questions: 1066,
+	/** Pre-formatted (Peruvian convention: comma groups thousands) instead of
+	 *  `toLocaleString`, so the baked output cannot shift with the ICU data of
+	 *  whichever machine runs the static build. */
+	questionsLabel: "1,066",
+	courses: 21,
+	topics: 276,
+};
+
+/** Same query, grouped by course. Order: most questions first. */
+const courses: readonly (readonly [string, number])[] = [
+	["Física", 102],
+	["Biología", 87],
+	["Química", 86],
+	["Comunicación", 82],
+	["Ecología", 69],
+	["Razonamiento Verbal", 60],
+	["Aritmética", 59],
+	["Álgebra", 52],
+	["Historia", 51],
+	["Economía", 42],
+	["Geografía", 42],
+	["Inglés", 40],
+	["Psicología", 40],
+	["Geometría", 39],
+	["Educación Cívica", 37],
+	["Lenguaje", 36],
+	["Trigonometría", 35],
+	["Filosofía", 34],
+	["Literatura", 28],
+	["Razonamiento Matemático", 27],
+	["Estadística y Probabilidades", 18],
+];
+
+/**
+ * Typeset at BUILD time, so the page ships static HTML with no KaTeX runtime.
+ *
+ * The LaTeX below is not hand-written: it is the output of the app's own
+ * transpiler (`apps/web/src/app/shared/typst/typst-to-latex.ts`) fed the exact
+ * Typst stored for this question — `$36 pi "cm"^2$` etc. So what a visitor
+ * reads here is character-for-character what the app renders and what the
+ * Typst compiler puts in the PDF. Preferred over a screenshot: it stays sharp
+ * at any zoom, and it cannot silently go stale the way `bank.png` did.
+ */
+const tex = (latex: string): string =>
+	katex.renderToString(latex, { throwOnError: false, output: "htmlAndMathml" });
+
+const sampleQuestion = {
+	course: "Geometría · Áreas de Regiones Planas",
+	before: "El área de un círculo es ",
+	math: tex("36 \\pi \\text{cm}^{2}"),
+	after:
+		". Halle el área del cuadrado inscrito en la circunferencia de dicho círculo.",
+	alternatives: [
+		{ math: tex("72 \\text{cm}^{2}"), correct: true },
+		{ math: tex("48 \\pi \\text{cm}^{2}"), correct: false },
+		{ math: tex("64 \\pi \\text{cm}^{2}"), correct: false },
+		{ math: tex("96 \\pi \\text{cm}^{2}"), correct: false },
+		{ math: tex("90 \\pi \\text{cm}^{2}"), correct: false },
+	],
+};
+
+/** A few more real expressions from the bank, to show the range it handles. */
+const mathShowcase = [
+	{ label: "Sumatorias y complejos", math: tex("\\sum_{k = 0}^{100} \\left(\\frac{1 + i}{1 - i}\\right)^{4 k} = 100") },
+	{ label: "Vectores", math: tex("\\vec{v}_{A} = 2 \\hat{i}") },
+	{ label: "Radicales", math: tex("\\left(\\sqrt[3]{5} - 1\\right)\\left(\\sqrt[3]{25} + \\sqrt[3]{5} + 1\\right)") },
+	{ label: "Matrices", math: tex("A = \\begin{pmatrix}P & 1 & 0 \\\\ 0 & P & 1 \\\\ 0 & 0 & P\\end{pmatrix}") },
+	{ label: "Sistemas", math: tex("\\begin{cases}x + 2y + a z = 1 \\\\ x + b y + 2 z = 1\\end{cases}") },
+	{ label: "Trigonometría", math: tex("\\sin\\left(x\\right) = \\frac{\\sqrt{3}}{2} \\Rightarrow x = 60 ^\\circ") },
+];
+
+/** Shared by the meta description, OG tags and the JSON-LD payload. */
+const metaDescription = `Banco central con ${bank.questionsLabel} preguntas de admisión en ${bank.courses} cursos + el banco privado de tu colegio + generación con IA que tú apruebas. Hasta 5 formas barajadas, cada una con su hoja de claves, en PDF.`;
 
 // TODO: swap in the real razón social/RUC once registered (same placeholder
 // bucket as astro.config.mjs's `site` and the /privacidad, /terminos pages).
@@ -17,8 +111,7 @@ const jsonLd = {
 			name: "GeneraExamen",
 			applicationCategory: "EducationalApplication",
 			operatingSystem: "Web",
-			description:
-				"Banco central de preguntas + banco privado de tu colegio + generación con IA revisada por ti. Formas A/B/C barajadas, listas en PDF.",
+			description: metaDescription,
 			offers: {
 				"@type": "Offer",
 				availability: "https://schema.org/InStock",
@@ -30,7 +123,7 @@ const jsonLd = {
 
 <Layout
 	title="GeneraExamen — Arma el examen de admisión en una tarde"
-	description="Banco central de preguntas + banco privado de tu colegio + generación con IA revisada por ti. Formas A/B/C barajadas, listas en PDF."
+	description={metaDescription}
 >
 	<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 	<div class="stage">
@@ -90,6 +183,20 @@ const jsonLd = {
 							hasta 5 formas barajadas, cada una con su hoja de claves, lista
 							para la fotocopiadora.
 						</p>
+						<dl class="stat-row">
+							<div>
+								<dt>preguntas listas</dt>
+								<dd>{bank.questionsLabel}</dd>
+							</div>
+							<div>
+								<dt>cursos</dt>
+								<dd>{bank.courses}</dd>
+							</div>
+							<div>
+								<dt>temas</dt>
+								<dd>{bank.topics}</dd>
+							</div>
+						</dl>
 						<div class="cta-row">
 							<a
 								class="btn btn-primary"
@@ -107,14 +214,14 @@ const jsonLd = {
 						<div class="shot-window">
 							<img
 								src="/screens/bank.png"
-								alt="Banco de preguntas de GeneraExamen, organizado por curso: Álgebra, Aritmética, Biología, Comunicación, Física, Geometría, Matemática, Trigonometría"
-								width="1200"
-								height="708"
+								alt="Banco de preguntas de GeneraExamen: árbol de Álgebra con 55 preguntas repartidas en sus temas, y al costado el detalle de la pregunta seleccionada con la fórmula ya compuesta y la clave marcada"
+								width="1440"
+								height="700"
 								loading="eager"
 							/>
 						</div>
 						<figcaption class="shot-cap"
-							>↑ el banco de preguntas real, tal cual lo ve tu colegio</figcaption
+							>↑ el banco real, con la fórmula ya compuesta — no es texto crudo</figcaption
 						>
 					</figure>
 				</section>
@@ -147,6 +254,51 @@ const jsonLd = {
 						</ul>
 					</div>
 
+					<div class="block mathproof" id="matematica">
+						<div class="kicker">Fórmulas</div>
+						<h2>Una pregunta real, tal cual sale.</h2>
+						<p>
+							Esto no es una captura de pantalla: es una pregunta del banco,
+							compuesta aquí mismo con el mismo motor que arma el examen.
+							Acércale el zoom — no se pixelea, porque no es una imagen.
+						</p>
+
+						<figure class="qcard">
+							<figcaption class="qcard-course">{sampleQuestion.course}</figcaption>
+							<p class="qcard-body">
+								{sampleQuestion.before}<span
+									set:html={sampleQuestion.math}
+								/>{sampleQuestion.after}
+							</p>
+							<ol class="qcard-alts">
+								{
+									sampleQuestion.alternatives.map((alt, i) => (
+										<li class={alt.correct ? "is-correct" : undefined}>
+											<span class="alt-letter">{"abcde"[i]})</span>
+											<span set:html={alt.math} />
+											{alt.correct && (
+												<span class="alt-check" title="respuesta correcta">
+													✓
+												</span>
+											)}
+										</li>
+									))
+								}
+							</ol>
+						</figure>
+
+						<ul class="math-showcase">
+							{
+								mathShowcase.map((item) => (
+									<li>
+										<span class="ms-label">{item.label}</span>
+										<span class="ms-math" set:html={item.math} />
+									</li>
+								))
+							}
+						</ul>
+					</div>
+
 					<div class="block features">
 						<div class="kicker">Todo lo que hace</div>
 						<h2>Más que un generador de exámenes.</h2>
@@ -173,10 +325,11 @@ const jsonLd = {
 								</p>
 							</div>
 							<div class="trust-item">
-								<span class="forma-tag">Fórmulas y figuras nítidas</span>
+								<span class="forma-tag">Fórmulas de verdad</span>
 								<p>
-									Motor de composición profesional: fórmulas matemáticas y
-									figuras salen limpias en el PDF, no como imagen pegada.
+									Motor de composición profesional: las fórmulas se componen
+									como matemática, no como imagen pegada. Se ven igual en
+									pantalla y en el PDF — <a href="#matematica">míralas aquí</a>.
 								</p>
 							</div>
 							<div class="trust-item">
@@ -194,6 +347,27 @@ const jsonLd = {
 								</p>
 							</div>
 						</div>
+					</div>
+
+					<div class="block courses" id="cursos">
+						<div class="kicker">Lo que ya está cargado</div>
+						<h2>{bank.courses} cursos. No solo matemática.</h2>
+						<p>
+							{bank.questionsLabel} preguntas aprobadas,
+							repartidas en {bank.topics} temas de ciencias, letras y aptitud.
+							Ninguna la escribió la IA — el banco central es material humano
+							revisado. Tu colegio suma las suyas encima, privadas.
+						</p>
+						<ul class="course-grid">
+							{
+								courses.map(([name, count]) => (
+									<li>
+										<span class="c-name">{name}</span>
+										<span class="c-count">{count}</span>
+									</li>
+								))
+							}
+						</ul>
 					</div>
 
 					<div class="block trust" id="confianza">
@@ -319,6 +493,7 @@ const jsonLd = {
 			bar would just cover them.
 		-->
 		<nav class="floating-nav" id="floatingNav" aria-label="Navegación de secciones">
+			<a href="#cursos">Cursos</a>
 			<a href="#confianza">Confianza</a>
 			<a href="#como-funciona">Cómo funciona</a>
 			<a
@@ -758,7 +933,9 @@ const jsonLd = {
 
 	/* Anchor targets clear the top edge instead of butting against it. */
 	#confianza,
-	#como-funciona {
+	#como-funciona,
+	#cursos,
+	#matematica {
 		scroll-margin-top: clamp(16px, 4vw, 48px);
 	}
 
@@ -1035,6 +1212,178 @@ const jsonLd = {
 		color: var(--blue);
 		font-size: 19px;
 		transform: rotate(-8deg);
+	}
+
+	/* Hero proof numbers. Measured figures (see the `bank` const), so they get
+	   chalk-heading weight rather than being buried in the paragraph. */
+	.stat-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: clamp(18px, 3vw, 34px);
+		margin: 0 0 28px;
+	}
+	.stat-row div {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.stat-row dd {
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: clamp(26px, 3.4vw, 38px);
+		line-height: 1;
+		margin: 0;
+		color: var(--yellow);
+		transform: rotate(-1.5deg);
+	}
+	.stat-row dt {
+		font-size: 13px;
+		color: var(--write-soft);
+		margin-top: 4px;
+	}
+
+	.block.mathproof,
+	.block.courses {
+		grid-column: 1 / span 12;
+	}
+
+	/*
+	 * The live-typeset question. Sits on `--paper` (not on the board) because it
+	 * stands in for what the app and the PDF show — both are paper-white in
+	 * either theme, so its text colour is fixed rather than themed.
+	 */
+	.qcard {
+		background: var(--paper);
+		color: #2a2e33;
+		border-radius: 4px;
+		margin: 18px 0 0;
+		padding: clamp(14px, 2.4vw, 22px);
+		box-shadow:
+			0 18px 34px -18px var(--shadow),
+			0 2px 0 color-mix(in srgb, #000 12%, transparent);
+		transform: rotate(-0.5deg);
+		max-width: 680px;
+	}
+	.qcard-course {
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: 13px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: #8a6100;
+		margin-bottom: 10px;
+	}
+	/*
+	 * Selector is `.qcard .qcard-body`, not `.qcard-body`: the section-wide
+	 * `.block p` rule (class + type = higher specificity) would otherwise win
+	 * and paint this ink-on-paper paragraph in `--write-soft`, i.e. chalk grey
+	 * on cream — plus cap it at its 46ch measure inside a 680px card.
+	 */
+	.qcard .qcard-body {
+		font-size: clamp(15px, 1.8vw, 17px);
+		line-height: 1.55;
+		margin: 0;
+		max-width: none;
+		color: inherit;
+	}
+	.qcard-alts {
+		list-style: none;
+		margin: 16px 0 0;
+		padding: 0;
+		display: grid;
+		gap: 4px;
+	}
+	.qcard-alts li {
+		display: flex;
+		align-items: baseline;
+		gap: 8px;
+		padding: 7px 10px;
+		border-radius: 5px;
+		font-size: 15px;
+	}
+	.qcard-alts .is-correct {
+		background: #d3ecdb;
+		color: #14532d;
+		font-weight: 700;
+		box-shadow: inset 0 0 0 1.5px #7cbf95;
+	}
+	.alt-letter {
+		font-weight: 700;
+		min-width: 1.6em;
+	}
+	.alt-check {
+		margin-left: auto;
+		color: #15803d;
+	}
+
+	/* Range of notation the composer handles, straight from the bank. */
+	.math-showcase {
+		list-style: none;
+		padding: 0;
+		margin: 26px 0 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+		gap: clamp(14px, 2.2vw, 26px);
+	}
+	.math-showcase li {
+		border-left: 3px dashed color-mix(in srgb, var(--write) 30%, transparent);
+		padding-left: 14px;
+		min-width: 0;
+	}
+	.ms-label {
+		display: block;
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: 13px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: var(--blue);
+		margin-bottom: 6px;
+	}
+	/* Wide notation (3×3 matrix, sumatoria) must scroll in its own box rather
+	   than push the board into a horizontal scroll. */
+	.ms-math {
+		display: block;
+		overflow-x: auto;
+		overflow-y: hidden;
+		padding-bottom: 2px;
+	}
+
+	/*
+	 * KaTeX ships its own font stack (correct — math should look like math) but
+	 * inherits `color`, so on the board it writes in chalk and on the `.qcard`
+	 * paper it writes in ink, with no per-theme override needed.
+	 */
+	.mathproof :global(.katex) {
+		color: inherit;
+		font-size: 1.1em;
+	}
+
+	.course-grid {
+		list-style: none;
+		padding: 0;
+		margin: 18px 0 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+		gap: 2px clamp(16px, 2.4vw, 30px);
+	}
+	.course-grid li {
+		display: flex;
+		align-items: baseline;
+		gap: 8px;
+		padding: 8px 0;
+		border-bottom: 1.5px dashed
+			color-mix(in srgb, var(--write) 20%, transparent);
+	}
+	.c-name {
+		font-size: 15.5px;
+		color: var(--write);
+	}
+	.c-count {
+		margin-left: auto;
+		font-family: var(--font-hand);
+		font-weight: 700;
+		font-size: 17px;
+		color: var(--yellow);
 	}
 
 	.block.trust {

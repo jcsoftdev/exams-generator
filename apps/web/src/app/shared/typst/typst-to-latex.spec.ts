@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { parseTypst, truncateTypst, typstMathToLatex } from './typst-to-latex';
+import { parseTypst, truncateTypst, typstMathToLatex, typstToPlainText } from './typst-to-latex';
 
 /**
  * Every expectation here was calibrated against the REAL `typst 0.15.1`
@@ -113,6 +113,26 @@ describe('typstMathToLatex', () => {
     // Unwrapped LaTeX is invalid Typst (the API validator rejects it), but a
     // legacy row could still hold it — it must not become live LaTeX markup.
     expect(typstMathToLatex('\\frac{1}{2}')).not.toContain('\\frac{1}{2}');
+  });
+});
+
+describe('typstToPlainText', () => {
+  it('drops the math delimiters and the in-math quoting', () => {
+    expect(typstToPlainText('El área es $36 pi "cm"^2$ exacto')).toBe('El área es 36 pi cm^2 exacto');
+    expect(typstToPlainText('$"MCD"(a, b) = 36$')).toBe('MCD(a, b) = 36');
+  });
+
+  it('collapses newlines so the result always fits one row', () => {
+    expect(typstToPlainText('primera\n\n  segunda')).toBe('primera segunda');
+  });
+
+  it('keeps an escaped dollar as a literal dollar', () => {
+    expect(typstToPlainText('cuesta \\$5')).toBe('cuesta $5');
+  });
+
+  it('unwraps mitex and drops its import line', () => {
+    const source = '#import "@preview/mitex:0.2.7": mi\nSi #mi("\\angle BAD = 70") entonces';
+    expect(typstToPlainText(source)).toBe('Si \\angle BAD = 70 entonces');
   });
 });
 

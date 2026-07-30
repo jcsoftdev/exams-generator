@@ -155,9 +155,7 @@
                               }
                               <div class="min-w-0 flex-1">
                                 @if (questionSnippet(q); as snippet) {
-                                  <p data-testid="question-snippet" class="truncate text-sm font-medium text-n900">
-                                    <ui-math-text [value]="snippet"></ui-math-text>
-                                  </p>
+                                  <p data-testid="question-snippet" class="truncate text-sm font-medium text-n900">{{ snippet }}</p>
                                   <p class="truncate text-xs text-n500">Clave: {{ q.correctAnswer }}</p>
                                 } @else {
                                   <p class="truncate text-sm font-medium text-n900">Clave: {{ q.correctAnswer }}</p>

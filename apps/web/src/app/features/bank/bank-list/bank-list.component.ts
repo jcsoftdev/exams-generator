@@ -27,6 +27,7 @@ import { InputComponent } from '../../../ui/input/input.component';
 import { SelectComponent, SelectOption } from '../../../ui/select/select.component';
 import { TagComponent } from '../../../ui/tag/tag.component';
 import { MathTextComponent } from '../../../ui/math-text/math-text.component';
+import { truncateTypst, typstToPlainText } from '../../../shared/typst/typst-to-latex';
 import { TagVariant } from '../../../ui/ui.types';
 import { BankService } from '../bank.service';
 import { BankQuestion, GRADE_LEVELS, GRADE_LEVEL_LABELS, UpdateQuestionPayload } from '../bank.models';
@@ -471,16 +472,21 @@ export class BankListComponent {
 
   /**
    * Short one-line preview of a structured question's statement for the tree
-   * leaf. Only whitespace is collapsed — the Typst markup is left intact for
-   * `ui-math-text` to typeset, and the leaf is cut off by the template's
-   * `truncate` class rather than by slicing characters here (slicing could
-   * land inside a `$…$` run and leave a dangling delimiter on screen).
+   * leaf — PLAIN TEXT, deliberately not typeset.
+   *
+   * The leaf is a one-line index clipped by the template's `truncate` class,
+   * and typeset math cannot survive that: KaTeX lays stretchy delimiters out
+   * as absolutely-positioned spans, so a row clipped mid-expression strands
+   * their glyphs across it (`(. ( ) ) (`). Truncating the source first does
+   * not fix it — 70 characters of Typst still typeset wider than the row. The
+   * rendered statement lives in the detail panel, which has room for it.
+   *
    * `null` for image questions (they have no statement text; the leaf falls
    * back to the answer key), so text questions stop rendering as blank cards.
    */
   protected questionSnippet(question: BankQuestion): string | null {
-    const raw = (question.bodyTypst ?? '').replace(/\s+/g, ' ').trim();
-    return raw || null;
+    const text = typstToPlainText(question.bodyTypst ?? '');
+    return text ? truncateTypst(text, 70) : null;
   }
 
   /** Alternatives of a structured question, lettered a/b/c…, with the `correctAnswer` one flagged. Empty for image questions. */
