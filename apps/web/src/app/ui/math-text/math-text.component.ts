@@ -1,6 +1,19 @@
 import { ChangeDetectionStrategy, Component, ElementRef, effect, inject, input } from '@angular/core';
-import katex from 'katex';
 import { parseTypst } from '../../shared/typst/typst-to-latex';
+
+/**
+ * KaTeX itself is ~500kB of the raw initial bundle — dynamic import splits it
+ * into a chunk fetched only when a statement actually contains math, instead
+ * of shipping on every page load. Its CSS stays in angular.json's global
+ * `styles` (esbuild's dynamic import doesn't resolve the font url()s a raw
+ * CSS import needs), but that file alone is a few kB gzipped.
+ */
+let katexModule: Promise<typeof import('katex')> | undefined;
+
+function loadKatex(): Promise<typeof import('katex')> {
+  katexModule ??= import('katex');
+  return katexModule;
+}
 
 /**
  * Renders a stored Typst statement (`bodyTypst`, an alternative, …) the way
@@ -40,14 +53,16 @@ export class MathTextComponent {
           continue;
         }
         const holder = document.createElement('span');
-        katex.render(segment.latex, holder, {
-          displayMode: segment.display,
-          throwOnError: false,
-          strict: false,
-          trust: false,
-          output: 'htmlAndMathml',
-        });
         target.appendChild(holder);
+        loadKatex().then(({ default: katex }) => {
+          katex.render(segment.latex, holder, {
+            displayMode: segment.display,
+            throwOnError: false,
+            strict: false,
+            trust: false,
+            output: 'htmlAndMathml',
+          });
+        });
       }
     });
   }
