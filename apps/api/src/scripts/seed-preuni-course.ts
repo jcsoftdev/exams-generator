@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { and, eq } from "drizzle-orm";
+import { and, eq, inArray } from "drizzle-orm";
 import { db, pool } from "../db/client";
 import { courses, topics, users } from "../db/schema";
 import { TokenService } from "../modules/auth/token.service";
@@ -87,23 +87,27 @@ async function main(): Promise<void> {
     role: Role.PlatformAdmin,
   });
 
-  const [courseRow] = await db
+  // A course name can exist once per stage (escuela/colegio/preuniversitario);
+  // topics for primaria_* live under the 'escuela' row and secundaria_* under
+  // 'colegio', so the topic lookup must span every same-named course row.
+  const courseRows = await db
     .select({ id: courses.id })
     .from(courses)
     .where(eq(courses.name, data.courseName));
 
-  if (!courseRow) {
+  if (courseRows.length === 0) {
     throw new Error(`Course '${data.courseName}' not found — run 'pnpm --filter api db:seed' first.`);
   }
+  const courseIds = courseRows.map((row) => row.id);
 
   const results: SeedResult[] = [];
 
   for (const topic of data.topics) {
     const [topicRow] = await db
-      .select({ id: topics.id })
+      .select({ id: topics.id, courseId: topics.courseId })
       .from(topics)
       .where(
-        and(eq(topics.courseId, courseRow.id), eq(topics.name, topic.name), eq(topics.gradeLevel, data.gradeLevel)),
+        and(inArray(topics.courseId, courseIds), eq(topics.name, topic.name), eq(topics.gradeLevel, data.gradeLevel)),
       );
 
     if (!topicRow) {
@@ -122,7 +126,7 @@ async function main(): Promise<void> {
           method: "POST",
           headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
           body: JSON.stringify({
-            courseId: courseRow.id,
+            courseId: topicRow.courseId,
             topicId: topicRow.id,
             difficulty: question.difficulty,
             gradeLevel: data.gradeLevel,
