@@ -38,5 +38,7 @@ Nuevos casos en el describe `'tipo de examen — cargar plantilla'` (`exam-build
 - Auto-load sin click al elegir universidad sin tracks (`getUniversityTracks: () => of([])`).
 - Auto-load sin click al elegir un track (`getUniversityTracks: () => of(TRACKS)` + seleccionar track).
 - Auto-load sin click al marcar un checkbox de curso (exam type `courseScope: 'selected'`, ej. "Fastest").
+- Negativo: seleccionar una universidad con tracks NO dispara la carga por sí sola — solo elegir el track lo hace (`not.toHaveBeenCalled` antes de seleccionar el track).
+- Las filas de un curso sobreviven a que se desmarque su propio checkbox (mezcla aditiva — ver §4).
 
-Se verificó que ningún test existente afirma ausencia de llamada previa al click (`not.toHaveBeenCalled` / `toHaveBeenCalledTimes` no se usan sobre `resolveBlueprint` en el archivo) — los tests actuales siguen pasando tal cual.
+Se verificó que ningún test previo a este cambio afirmaba ausencia de llamada previa al click — los tests actuales siguen pasando tal cual.
