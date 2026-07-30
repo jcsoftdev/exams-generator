@@ -333,6 +333,9 @@ export class ExamBuilderComponent implements OnInit {
 
   protected toggleCourseSelection(courseId: string): void {
     this.selectedCourseIds.update((current) => toggleInSet(current, courseId));
+    if (this.canLoadTemplate()) {
+      this.loadTemplate();
+    }
   }
 
   protected onTemplateTotalQuestionsChange(value: string): void {

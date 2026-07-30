@@ -1014,6 +1014,33 @@ describe('ExamBuilderComponent', () => {
       expect(input?.value).toBe('7');
     });
 
+    it('auto-loads the template scoped to the checked course when a course checkbox is toggled, without clicking the button', () => {
+      const resolveBlueprint = vi.fn(() =>
+        of<ResolveBlueprintResult>({
+          blueprint: [{ courseId: 'c1', count: 5, difficulty: Difficulty.Medium }],
+          weekNumber: null,
+          templateId: 'tpl-3',
+        }),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectGradeLevel(compiled, fixture, 'pre');
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'Fastest');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      resolveBlueprint.mockClear();
+      (compiled.querySelector('[data-testid="course-checkbox-c1"]') as HTMLInputElement).click();
+      fixture.detectChanges();
+
+      expect(resolveBlueprint).toHaveBeenCalledWith({
+        examTypeCode: 'fastest',
+        universityId: 'u1',
+        selectedCourseIds: ['c1'],
+      });
+      const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1::medium"]');
+      expect(input?.value).toBe('5');
+    });
+
     it('does NOT auto-load when a stale (delayed) empty-tracks response arrives after the university selection has changed', () => {
       const resolveBlueprint = vi.fn(() =>
         of<ResolveBlueprintResult>({
