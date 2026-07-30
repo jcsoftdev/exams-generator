@@ -302,7 +302,15 @@ export class ExamBuilderComponent implements OnInit {
       return;
     }
     this.examsService.getUniversityTracks(universityId).subscribe({
-      next: (list) => this.tracks.set(list),
+      next: (list) => {
+        this.tracks.set(list);
+        // No track step for this university — selection is already
+        // complete, so load the template right away instead of waiting
+        // for a manual "Cargar plantilla" click.
+        if (list.length === 0) {
+          this.loadTemplate();
+        }
+      },
       error: () => this.templateError.set('No se pudieron cargar los tracks.'),
     });
   }

@@ -974,6 +974,25 @@ describe('ExamBuilderComponent', () => {
       const NOT_FOUND_MESSAGE = 'No hay una plantilla configurada para esta universidad/track todavía.';
       expect(errorEl!.textContent?.trim()).not.toBe(NOT_FOUND_MESSAGE);
     });
+
+    it('auto-loads the template when the selected university has no tracks, without clicking the button', () => {
+      const resolveBlueprint = vi.fn(() =>
+        of<ResolveBlueprintResult>({
+          blueprint: [{ courseId: 'c1', topicId: 't1', count: 9, difficulty: Difficulty.Hard }],
+          weekNumber: null,
+          templateId: 'tpl-1',
+        }),
+      );
+      const { compiled, fixture } = setup({ resolveBlueprint, getUniversityTracks: () => of([]) });
+
+      selectGradeLevel(compiled, fixture, 'pre');
+      selectFromUiSelect(compiled, fixture, 'exam-type-select', 'ETA');
+      selectFromUiSelect(compiled, fixture, 'university-select', 'UNI');
+
+      expect(resolveBlueprint).toHaveBeenCalledWith({ examTypeCode: 'eta', universityId: 'u1' });
+      const input = compiled.querySelector<HTMLInputElement>('input[name="requested-c1:t1:hard"]');
+      expect(input?.value).toBe('9');
+    });
   });
 
   describe('tipo de examen — templateCourses catalog (Bug 1 & 2)', () => {
