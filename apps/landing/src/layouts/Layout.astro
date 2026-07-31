@@ -6,9 +6,18 @@ interface Props {
 	title: string;
 	description: string;
 	ogImage?: string;
+	ogImageAlt?: string;
+	/** Utility pages (login, 404) set this so they never reach search results. */
+	noindex?: boolean;
 }
 
-const { title, description, ogImage = "/screens/bank.png" } = Astro.props;
+const {
+	title,
+	description,
+	ogImage = "/screens/bank.png",
+	ogImageAlt = "Banco de preguntas de GeneraExamen: árbol de cursos y temas con el detalle de la pregunta seleccionada",
+	noindex = false,
+} = Astro.props;
 const ogImageUrl = new URL(ogImage, Astro.url).toString();
 ---
 
@@ -22,7 +31,25 @@ const ogImageUrl = new URL(ogImage, Astro.url).toString();
 		<link rel="manifest" href="/site.webmanifest" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content={description} />
-		<link rel="canonical" href={Astro.url.toString()} />
+		{
+			/* noindex pages get no canonical either: a self-canonical on a page
+			   asking to be de-indexed sends robots mixed signals. */
+			noindex ? (
+				<meta name="robots" content="noindex" />
+			) : (
+				<link rel="canonical" href={Astro.url.toString()} />
+			)
+		}
+		<meta
+			name="theme-color"
+			media="(prefers-color-scheme: light)"
+			content="#ecefe9"
+		/>
+		<meta
+			name="theme-color"
+			media="(prefers-color-scheme: dark)"
+			content="#21362c"
+		/>
 		<title>{title}</title>
 
 		<meta property="og:type" content="website" />
@@ -30,6 +57,7 @@ const ogImageUrl = new URL(ogImage, Astro.url).toString();
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={ogImageUrl} />
+		<meta property="og:image:alt" content={ogImageAlt} />
 		<meta property="og:url" content={Astro.url.toString()} />
 		<meta property="og:locale" content="es_PE" />
 
@@ -37,6 +65,7 @@ const ogImageUrl = new URL(ogImage, Astro.url).toString();
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={ogImageUrl} />
+		<meta name="twitter:image:alt" content={ogImageAlt} />
 		<script is:inline>
 			// Set theme before paint so there's no flash: respects a stored
 			// choice first, falls back to the OS preference otherwise.

@@ -1,0 +1,5 @@
+# Tenant SPAs ({slug}.creaexamen.com) are private, per-school workspaces
+# behind auth — nothing here should be crawled or indexed. The public,
+# indexable site lives on the root domain (apps/landing).
+User-agent: *
+Disallow: /
