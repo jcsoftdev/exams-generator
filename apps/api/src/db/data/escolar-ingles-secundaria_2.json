@@ -1,0 +1,244 @@
+{
+  "courseName": "Inglés como Lengua Extranjera",
+  "gradeLevel": "secundaria_2",
+  "topics": [
+    {
+      "name": "Presente simple y presente continuo",
+      "questions": [
+        {
+          "bodyTypst": "I ___ an e-mail at the moment.",
+          "alternatives": [
+            "type",
+            "typing",
+            "am typing",
+            "typed"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/esl-beginners-quiz.html",
+          "sourceName": "GrammarBank – ESL Beginners Quiz 5"
+        },
+        {
+          "bodyTypst": "What ___ those people doing?",
+          "alternatives": [
+            "is",
+            "all",
+            "are",
+            "some"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/beginners-english-test-5.html",
+          "sourceName": "GrammarBank – Beginners English Test 5"
+        },
+        {
+          "bodyTypst": "Don't disturb me, I ___ for an important exam.",
+          "alternatives": [
+            "am studying",
+            "study",
+            "studied",
+            "studying"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/beginners-english-test-5.html",
+          "sourceName": "GrammarBank – Beginners English Test 5"
+        }
+      ]
+    },
+    {
+      "name": "Comparativos y superlativos",
+      "questions": [
+        {
+          "bodyTypst": "Switzerland is ___ than Britain.",
+          "alternatives": [
+            "as small",
+            "smallest",
+            "more small",
+            "smaller"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/beginners-English-quiz.html",
+          "sourceName": "GrammarBank – Beginners English Quiz 4"
+        },
+        {
+          "bodyTypst": "Motor racing is the ___ sport in the world.",
+          "alternatives": [
+            "most expensive",
+            "more expensive",
+            "expensivest",
+            "as expensive"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/beginners-English-quiz.html",
+          "sourceName": "GrammarBank – Beginners English Quiz 4"
+        },
+        {
+          "bodyTypst": "I think Josh is a little bit ___ than you.",
+          "alternatives": [
+            "more tall",
+            "taller",
+            "tallest",
+            "most taller"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/beginners-english-test-5.html",
+          "sourceName": "GrammarBank – Beginners English Test 5"
+        }
+      ]
+    },
+    {
+      "name": "Pasado simple",
+      "questions": [
+        {
+          "bodyTypst": "He always cried when he ___ a baby.",
+          "alternatives": [
+            "got",
+            "was",
+            "were",
+            "is"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/esl-beginners-quiz.html",
+          "sourceName": "GrammarBank – ESL Beginners Quiz 5"
+        },
+        {
+          "bodyTypst": "___ you do any work before you came here?",
+          "alternatives": [
+            "Did",
+            "Do",
+            "Have",
+            "Can"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/esl-beginners-quiz.html",
+          "sourceName": "GrammarBank – ESL Beginners Quiz 5"
+        },
+        {
+          "bodyTypst": "Who ___ you see at the party?",
+          "alternatives": [
+            "were",
+            "are",
+            "did",
+            "have"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/esl-beginners-quiz.html",
+          "sourceName": "GrammarBank – ESL Beginners Quiz 5"
+        },
+        {
+          "bodyTypst": "When ___ you go to the USA? Last year.",
+          "alternatives": [
+            "did",
+            "was",
+            "went",
+            "have"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/beginners-English-quiz.html",
+          "sourceName": "GrammarBank – Beginners English Quiz 4"
+        }
+      ]
+    },
+    {
+      "name": "Producción escrita: descripciones y narraciones",
+      "questions": [
+        {
+          "bodyTypst": "He ___ born in 1963 in America.",
+          "alternatives": [
+            "had",
+            "is",
+            "was",
+            "did"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/beginners-English-quiz.html",
+          "sourceName": "GrammarBank – Beginners English Quiz 4"
+        },
+        {
+          "bodyTypst": "It ___ all day long yesterday.",
+          "alternatives": [
+            "was rained",
+            "raining",
+            "rained",
+            "has rained"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/efl-worksheet.html",
+          "sourceName": "GrammarBank – Basic Grammar Quiz 7"
+        }
+      ]
+    },
+    {
+      "name": "Comunicación oral: diálogos y presentaciones",
+      "questions": [
+        {
+          "bodyTypst": "\"Have you got a computer?\" \"Yes, ___.\"",
+          "alternatives": [
+            "I got",
+            "I've got",
+            "I am",
+            "I have"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/starter-English-test.html",
+          "sourceName": "GrammarBank – Starter English Test 3"
+        },
+        {
+          "bodyTypst": "\"What time ___ the train arrive?\"",
+          "alternatives": [
+            "is",
+            "does",
+            "do",
+            "has"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/efl-worksheet.html",
+          "sourceName": "GrammarBank – Basic Grammar Quiz 7"
+        }
+      ]
+    },
+    {
+      "name": "Comprensión auditiva (listening)",
+      "questions": [
+        {
+          "bodyTypst": "Read the following short text and answer.\n\nLast summer, we decided to spend our vacation at the beach because the weather was very hot in the mountains. The travel agent said that traveling by bus was the cheapest way, but we went by plane because it was faster. We wanted to have more time to spend at the beach. The weather was beautiful and we had a great time.\n\nWe decided to go to the beach because ___.",
+          "alternatives": [
+            "it was cheaper than going to the mountains",
+            "the travel agent said that it was the cheapest",
+            "of the hot weather in the mountains",
+            "we wanted to spend time at the beach"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/reading-comprehension-test.html",
+          "sourceName": "GrammarBank – Beginners Reading Comprehension Test 1"
+        },
+        {
+          "bodyTypst": "Read the following short text and answer.\n\nLast summer, we decided to spend our vacation at the beach because the weather was very hot in the mountains. The travel agent said that traveling by bus was the cheapest way, but we went by plane because it was faster. We wanted to have more time to spend at the beach. The weather was beautiful and we had a great time.\n\nThe bus was the ___ way to travel.",
+          "alternatives": [
+            "best",
+            "easiest",
+            "cheapest",
+            "slowest"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/reading-comprehension-test.html",
+          "sourceName": "GrammarBank – Beginners Reading Comprehension Test 1"
+        }
+      ]
+    }
+  ]
+}

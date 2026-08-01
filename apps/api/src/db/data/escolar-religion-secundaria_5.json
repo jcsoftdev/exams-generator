@@ -1,0 +1,24 @@
+{
+  "courseName": "Educación Religiosa",
+  "gradeLevel": "secundaria_5",
+  "topics": [
+    {
+      "name": "Doctrina social de la Iglesia",
+      "questions": [
+        {
+          "bodyTypst": "La disciplina filosófica que estudia los valores se llama:",
+          "alternatives": [
+            "Axiología",
+            "Ontología",
+            "Psicología",
+            "Estética"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/2417692/prueba-de-etica-y-valores",
+          "sourceName": "Prueba de Ética y Valores - GoConqr"
+        }
+      ]
+    }
+  ]
+}

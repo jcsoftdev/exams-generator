@@ -1,0 +1,25 @@
+{
+  "courseName": "Personal Social",
+  "gradeLevel": "primaria_6",
+  "topics": [
+    {
+      "name": "La independencia del Perú",
+      "questions": [
+        {
+          "bodyTypst": "¿En qué año se proclamó la independencia del Perú?",
+          "alternatives": [
+            "1810",
+            "1818",
+            "1820",
+            "1821",
+            "1822"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/proceso-de-independencia-preguntas-resueltas-historia-del-peru-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - Independencia del Perú Ejercicios Resueltos"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "courseName": "Educación para el Trabajo",
+  "gradeLevel": "secundaria_1",
+  "topics": [
+    {
+      "name": "Tecnologías de la información básica",
+      "questions": [
+        {
+          "bodyTypst": "¿Qué aplicación permite mantener actualizado el sistema operativo Windows de forma automática?",
+          "alternatives": [
+            "Windows Upgrade.",
+            "Windows Update.",
+            "Windows Defender.",
+            "Windows Firewall."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://opocademy.com/test-de-informatica-para-oposiciones-auxiliar-administrativo/",
+          "sourceName": "Opocademy - Test de informática básica para oposiciones, con respuestas correctas marcadas en la página"
+        },
+        {
+          "bodyTypst": "¿Qué puede encontrar el buscador de Windows 10 que se incluye en la barra de tareas?",
+          "alternatives": [
+            "Documentos.",
+            "Aplicaciones.",
+            "Páginas web.",
+            "Todas las anteriores son correctas."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://opocademy.com/test-de-informatica-para-oposiciones-auxiliar-administrativo/",
+          "sourceName": "Opocademy - Test de informática básica para oposiciones, con respuestas correctas marcadas en la página"
+        }
+      ]
+    }
+  ]
+}

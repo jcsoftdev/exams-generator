@@ -1,0 +1,267 @@
+{
+  "courseName": "Ciencia y Tecnología",
+  "gradeLevel": "secundaria_1",
+  "topics": [
+    {
+      "name": "Ecosistemas y biodiversidad",
+      "questions": [
+        {
+          "bodyTypst": "El bioma sabana es propio de regiones",
+          "alternatives": [
+            "que presentan lluvias durante todo el año.",
+            "ubicadas mayormente en zonas de latitudes bajas.",
+            "que presentan climas templados.",
+            "ubicadas en zonas de latitudes medias."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/ecosistemas-y-biomas-del-mundo-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Ecosistemas y biomas del mundo, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "¿Qué bioma encontramos entre la estepa y la tundra?",
+          "alternatives": [
+            "selva",
+            "desierto",
+            "pradera",
+            "taiga",
+            "sabana"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/ecosistemas-y-biomas-del-mundo-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Ecosistemas y biomas del mundo, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "¿A qué bioma se le conoce como bosque de coníferas?",
+          "alternatives": [
+            "tundra",
+            "selva tropical",
+            "sabana",
+            "desierto",
+            "taiga"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/ecosistemas-y-biomas-del-mundo-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Ecosistemas y biomas del mundo, preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "La célula: estructura y función",
+      "questions": [
+        {
+          "bodyTypst": "Las amebas son organismos:",
+          "alternatives": [
+            "procariotas y heterótrofas.",
+            "Procariotas y autótrofos.",
+            "Eucariotas y heteromorfos.",
+            "Eucariotas y heterótrofos."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teoria-celular-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Teoría celular, preguntas resueltas (secundaria y preuniversitaria)"
+        },
+        {
+          "bodyTypst": "Con respecto a la Teoría celular es falso:",
+          "alternatives": [
+            "Fue formulada por Schawnn y Schleiden",
+            "Todo ser vivo está formado por células",
+            "Ninguna célula proviene de otra",
+            "Los organismos más pequeños son unicelulares",
+            "a y b"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teoria-celular-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Teoría celular, preguntas resueltas (secundaria y preuniversitaria)"
+        },
+        {
+          "bodyTypst": "La euglena es un ejemplo de organismo:",
+          "alternatives": [
+            "autótrofo.",
+            "heterótrofo.",
+            "autótrofo y procariota.",
+            "mixótrofo y eucariota.",
+            "procariota y heterótrofo."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/biologia-celular-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Biología celular, preguntas resueltas (secundaria y preuniversitaria)"
+        },
+        {
+          "bodyTypst": "En la pared celular de los vegetales existe:",
+          "alternatives": [
+            "Quitina",
+            "Queratina",
+            "Celulosa",
+            "Peptidoglucano",
+            "Fosfolípidos"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/biologia-celular-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Biología celular, preguntas resueltas (secundaria y preuniversitaria)"
+        }
+      ]
+    },
+    {
+      "name": "La materia: propiedades y estados",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál no corresponde a un cambio químico?",
+          "alternatives": [
+            "disolución de cloruro de sodio en agua",
+            "fermentación de azúcares",
+            "oxidación de un metal",
+            "digestión biológica",
+            "reacción redox"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+          "sourceName": "Rubiños - Materia y energía, preguntas resueltas de química"
+        },
+        {
+          "bodyTypst": "¿Cuál de los siguientes procesos es un cambio físico?",
+          "alternatives": [
+            "La digestión de un alimento.",
+            "La generación de energía a partir de la combustión del gas natural.",
+            "La obtención de hidrógeno gaseoso a partir de agua.",
+            "El sudor que se evapora, al descansar, luego de jugar tenis.",
+            "Una cuchara de plata que se oscurece por acción del aire."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+          "sourceName": "Rubiños - Materia y energía, preguntas resueltas de química"
+        },
+        {
+          "bodyTypst": "Identifique la relación donde todas son sustancias puras.",
+          "alternatives": [
+            "Papel - agua regia - bronce",
+            "Acero - bronce - oxígeno",
+            "Agua - tinta - hielo",
+            "Azúcar - agua - latón",
+            "Hielo - cobre - estaño"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+          "sourceName": "Rubiños - Materia y energía, preguntas resueltas de química"
+        }
+      ]
+    },
+    {
+      "name": "Método científico y diseño experimental",
+      "questions": [
+        {
+          "bodyTypst": "Indique la opción que presenta los pasos ordenados del método científico.",
+          "alternatives": [
+            "hipótesis- experimentación- conclusiones- resultados-leyes.",
+            "hipótesis- experimentación- teoría- resultados-leyes.",
+            "observación-hipótesis-experimentación- resultados-conclusiones.",
+            "observación-experimentación-hipótesis- resultados-conclusiones.",
+            "observación-hipótesis-experimentación- conclusiones-resultados."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        },
+        {
+          "bodyTypst": "Fase del método científico en el cual se explica con evidencias un fenómeno natural.",
+          "alternatives": [
+            "observación",
+            "ley",
+            "hipótesis",
+            "teoría",
+            "experimentación"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        },
+        {
+          "bodyTypst": "En la fase experimental del método científico, la condición qué distingue al grupo experimental del control se conoce como",
+          "alternatives": [
+            "factor constante",
+            "cofactor",
+            "multifactorial",
+            "unifactorial",
+            "factor variable"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        }
+      ]
+    },
+    {
+      "name": "Nutrición y sistemas del cuerpo humano",
+      "questions": [
+        {
+          "bodyTypst": "Los ácidos biliares son producidos por",
+          "alternatives": [
+            "la vesícula biliar.",
+            "el hígado.",
+            "el estómago.",
+            "el páncreas.",
+            "el intestino delgado."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-digestivo-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Aparato digestivo humano, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "La ventilación pulmonar es el proceso",
+          "alternatives": [
+            "mediante el cual solamente sale aire de los pulmones.",
+            "de intercambio gaseoso en los pulmones.",
+            "mediante el cual se produce ATP en las células.",
+            "mediante el cual fluye el aire de la atmósfera a los pulmones y viceversa.",
+            "por el cual se conduce el oxígeno por la sangre."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-respiratorio-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Aparato respiratorio humano, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Histológicamente, la capa más gruesa del corazón es el:",
+          "alternatives": [
+            "endocardio",
+            "miocardio",
+            "epicardio",
+            "pericardio seroso",
+            "pericardio fibroso"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Aparato cardiovascular humano, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "NO forma parte del encéfalo:",
+          "alternatives": [
+            "Cerebro",
+            "Bulbo raquídeo",
+            "Medula espinal",
+            "Cerebelo",
+            "Diencéfalo"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-nervioso-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Sistema nervioso humano, preguntas resueltas"
+        }
+      ]
+    }
+  ]
+}

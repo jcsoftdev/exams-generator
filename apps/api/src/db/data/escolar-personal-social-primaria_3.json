@@ -1,0 +1,39 @@
+{
+  "courseName": "Personal Social",
+  "gradeLevel": "primaria_3",
+  "topics": [
+    {
+      "name": "Recursos naturales y actividades económicas",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál de las siguientes alternativas corresponde a un recurso no renovable?",
+          "alternatives": [
+            "Agua",
+            "Hierro",
+            "Pescado",
+            "Madera",
+            "Aguaje"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/recursos-naturales-desertificacion-deforestacion-contaminacion-del-agua-aire-suelos-perdida-de-biodiversidad-ejemplos-preguntas-resueltas-de-geografia-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Geografía: Recursos naturales, desertificación y deforestación, preguntas resueltas (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Son considerados Recursos Naturales Renovables:",
+          "alternatives": [
+            "suelo - sub suelo",
+            "recursos petrolíferos",
+            "recursos animales",
+            "agua del río, pastos y aire",
+            "minerales metálicos y no metálicos"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/recursos-naturales-desertificacion-deforestacion-contaminacion-del-agua-aire-suelos-perdida-de-biodiversidad-ejemplos-preguntas-resueltas-de-geografia-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Geografía: Recursos naturales, desertificación y deforestación, preguntas resueltas (matematicasn.blogspot.com)"
+        }
+      ]
+    }
+  ]
+}

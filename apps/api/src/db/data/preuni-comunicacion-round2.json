@@ -1,0 +1,589 @@
+{
+  "courseName": "Comunicación",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Comprensión y producción textual",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál alternativa mejor expresa las características de un texto?",
+          "alternatives": [
+            "A) Constituye texto claro semánticamente",
+            "B) Contiene más palabras invariables",
+            "C) Comprende palabras relacionadas entre sí",
+            "D) Están presentes coherencia y cohesión"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Identifique la oración que presenta incorrecta construcción por falta de coherencia.",
+          "alternatives": [
+            "A) Elena solamente estudia, es decir, trabaja",
+            "B) Renzo no habla demasiado, pero razona bien",
+            "C) A veces canta, pero siempre entona canciones",
+            "D) Jaime no estudia, no trabaja ni planea futuro"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "¿Cuál enunciado garantiza coherencia al completar la oración: \"La selva amazónica posee mayor biodiversidad...\"?",
+          "alternatives": [
+            "A) debido a montañas selva",
+            "B) según calendario mundial",
+            "C) porque no hay control medioambiente",
+            "D) porque presenta vegetación frondosa en zonas de latitud ecuatorial",
+            "E) de acuerdo a zonas latitud"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        }
+      ]
+    },
+    {
+      "name": "Literatura",
+      "questions": [
+        {
+          "bodyTypst": "La obra \"Lazarillo de Tormes\" es un ejemplo de:",
+          "alternatives": [
+            "A) Novela romántica del siglo XIX",
+            "B) Novela picaresca del Renacimiento Español",
+            "C) Cuento modernista de América Latina",
+            "D) Ensayo filosófico medieval"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "¿Cuál de las siguientes obras pertenece al movimiento del indigenismo literario?",
+          "alternatives": [
+            "A) Redoble por Rancas",
+            "B) La tía Julia y el escribidor",
+            "C) Conversación en La Catedral",
+            "D) El mundo es ancho y ajeno"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        }
+      ]
+    },
+    {
+      "name": "La comunicación",
+      "questions": [
+        {
+          "bodyTypst": "En el acto de comunicación: código, referente y circunstancia son elementos que se identifican en:",
+          "alternatives": [
+            "A) Lengua española, Gobierno colonial español, Paucarcolla",
+            "B) Ondas sonoras, Gobierno colonial español, Paucarcolla",
+            "C) Lengua quechua, Manuel Chambi Apaza, Paucarcolla",
+            "D) Lengua quechua, Gobierno colonial español, Paucarcolla"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "¿Cuál es la función del lenguaje que predomina en: \"¡Claro! Excelente idea, me encanta\"?",
+          "alternatives": [
+            "A) Referencial",
+            "B) Poética",
+            "C) Emotiva",
+            "D) Fática"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "La función fática del lenguaje enfatiza el elemento:",
+          "alternatives": [
+            "A) El código",
+            "B) El referente",
+            "C) El canal",
+            "D) El emisor",
+            "E) El mensaje"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Países donde se habla quechua como lengua nativa:",
+          "alternatives": [
+            "A) Venezuela, Ecuador y Bolivia",
+            "B) Perú, Uruguay y Paraguay",
+            "C) Argentina, Paraguay y Panamá",
+            "D) Chile, Venezuela y Uruguay"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        }
+      ]
+    },
+    {
+      "name": "Lingüística",
+      "questions": [
+        {
+          "bodyTypst": "¿Qué característica distingue la lengua del habla?",
+          "alternatives": [
+            "A) La lengua es individual; el habla es social",
+            "B) La lengua es sistemática; el habla es individual y asistemática",
+            "C) La lengua es oral; el habla es escrita",
+            "D) La lengua es efímera; el habla es permanente"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Identifique características del habla:",
+          "alternatives": [
+            "A) Potencial, sistemática, social",
+            "B) Efímera, psicofísica, sistemática",
+            "C) Efímera, psicofísica, individual",
+            "D) Permanente, social, oral"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "¿Cuántas sílabas tiene la palabra \"epistemología\"?",
+          "alternatives": [
+            "A) 3",
+            "B) 5",
+            "C) 6",
+            "D) 7",
+            "E) 9"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "La fonología estudia sonidos ___; la fonética estudia sonidos ___",
+          "alternatives": [
+            "A) mentales - concretos",
+            "B) materiales - mentales",
+            "C) articulados - inarticulados",
+            "D) reales - abstractos"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "¿Qué alternativa presenta mayor cantidad de dígrafos?",
+          "alternatives": [
+            "A) Alguien muy querido influyó en elección",
+            "B) En el lonche, algunos desean pan con chicharrón",
+            "C) En esa antigua parroquia se guardan reliquias",
+            "D) Aquellos chicos nos guiarán hacia cerro San Cristóbal"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        }
+      ]
+    },
+    {
+      "name": "Acentuación",
+      "questions": [
+        {
+          "bodyTypst": "Señale la alternativa que presenta uso correcto de la tilde:",
+          "alternatives": [
+            "A) Extremarón todas las medidas",
+            "B) Sufrió el desgarro distal del biceps",
+            "C) Leyó sus notas hechas al márgen",
+            "D) La celebración se inició el miércoles",
+            "E) Andrés ya no practica voley"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Señale alternativa con acentuación correcta (acentuación diacrítica):",
+          "alternatives": [
+            "A) Sé que dió todo de sí",
+            "B) Te convocó a tí y a mí",
+            "C) En exceso, él te hace daño",
+            "D) Dinos si estás ahí",
+            "E) Él dá para más"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "En el enunciado \"Ayer vi la película\", ¿cuántas palabras agudas hay?",
+          "alternatives": [
+            "A) Todas reciben tilde",
+            "B) No siempre la sílaba tónica se tilda",
+            "C) Todos los polisílabos reciben tilde",
+            "D) Contiene cinco palabras agudas",
+            "E) Todas las agudas reciben acento escrito"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Identifique el enunciado donde hay un triptongo:",
+          "alternatives": [
+            "A) Hiato",
+            "B) Reunión",
+            "C) Restaurante",
+            "D) Despreciáis",
+            "E) Dayana"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        }
+      ]
+    },
+    {
+      "name": "Ortografía",
+      "questions": [
+        {
+          "bodyTypst": "Marque la alternativa donde hay uso correcto de las letras mayúsculas:",
+          "alternatives": [
+            "A) El congresista Ramírez asegura que leer mucho causa Alzhéimer",
+            "B) El Ébola se detectó por primera vez en 1976 en África Oriental",
+            "C) La enfermedad del Zika se propagó por América del Sur en el 2023",
+            "D) Gonzalo Torres les dijo a sus padres: «No quiero ser Abogado»"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "¿Qué alternativa presenta correcto empleo de la letra 'v'?",
+          "alternatives": [
+            "A) El detenido no quiso revelar su identidad",
+            "B) La sabia contiene agua y sales minerales",
+            "C) Se quedó observando aquel vello paisaje",
+            "D) Debemos votar por un candidato honesto",
+            "E) Usó dos cámaras para gravar los videos"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Opción con uso incorrecto de signos de puntuación:",
+          "alternatives": [
+            "A) De haberlo sabido, no hubiera ido",
+            "B) Está cansado, así que irá a dormir",
+            "C) Mal de muchos; consuelo de tontos",
+            "D) Desaprobó examen: no estudió",
+            "E) No puedo ayudarte, sinceramente"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Emplea correctamente los signos de puntuación:",
+          "alternatives": [
+            "A) \"Si no se aprende: la humanidad se trueca...\"",
+            "B) \"Si, no se aprende la humanidad; se trueca...\"",
+            "C) \"Si no se aprende la humanidad, se trueca en...\"",
+            "D) \"Si no se aprende, la humanidad, se trueca...\"",
+            "E) \"Si no se aprende, la humanidad se trueca en...\""
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        }
+      ]
+    },
+    {
+      "name": "Semántica",
+      "questions": [
+        {
+          "bodyTypst": "La palabra \"lima\" (herramienta/fruta) es un ejemplo de:",
+          "alternatives": [
+            "A) Homonimia",
+            "B) Antonimia",
+            "C) Polisemia",
+            "D) Paronimia",
+            "E) Conimia"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "En \"actúan/actúan\", la relación semántica entre estas palabras es:",
+          "alternatives": [
+            "A) Homonimia paradigmática",
+            "B) Homonimia parcial",
+            "C) Homonimia absoluta",
+            "D) Polisemia",
+            "E) Antonimia"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Enunciado que presenta significado denotativo:",
+          "alternatives": [
+            "A) Correr por mañanas ayuda a quemar grasa",
+            "B) El orador locuaz ganó el corazón del público",
+            "C) Los hermanos Ruiz nos dieron una mano",
+            "D) El río Cañete es adecuado para canotaje",
+            "E) La renuncia del ministro corría de boca en boca"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "¿Cuál es imprescindible para identificar el significado?",
+          "alternatives": [
+            "A) Iris ha realizado el pago de telefonía",
+            "B) No identificaron las causas específicas de la falla",
+            "C) Carlos no quiere dejar la pluma por razón",
+            "D) El precio del oro, en el mercado, está por las nubes"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        }
+      ]
+    },
+    {
+      "name": "Sintaxis",
+      "questions": [
+        {
+          "bodyTypst": "Es una frase nominal compleja:",
+          "alternatives": [
+            "A) Felipe, el vigilante solicitó préstamo",
+            "B) Volvió de Colombia para aniversario",
+            "C) Carla estudió Lingüística en San Marcos",
+            "D) El artículo que redactaste será publicado",
+            "E) Liz, muy emocionada, recibió el premio"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Funciones de las frases nominales en: \"El presidente anunció alza de sueldos\":",
+          "alternatives": [
+            "A) Vocativo, sujeto",
+            "B) Aposición, objeto directo",
+            "C) Sujeto, objeto directo",
+            "D) Vocativo, circunstancial",
+            "E) Sujeto, circunstancial"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Oración compuesta coordinada conjuntiva copulativa:",
+          "alternatives": [
+            "A) Jefferson y Paolo son deportistas peruanos",
+            "B) En el cumpleaños, Emilio jugaba con primos",
+            "C) Estaban cansados, pero siguieron estudiando",
+            "D) Alejandro no realiza ejercicios ni practica deportes",
+            "E) El almuerzo de ayer estuvo delicioso, pero caro"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Proposición subordinada sustantiva que cumple función de objeto directo:",
+          "alternatives": [
+            "A) Sujeto de la oración principal",
+            "B) Complemento de verbo",
+            "C) Objeto directo del verbo principal",
+            "D) Complemento de nombre",
+            "E) Complemento de adjetivo"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Proposición adverbial concesiva:",
+          "alternatives": [
+            "A) Rodolfo trabaja donde venden artesanías",
+            "B) Los torturaron porque no querían confesar",
+            "C) Te lo diré aunque no quieras escucharme",
+            "D) Me convocaron para que elabore el examen",
+            "E) Leo es indisciplinado, aunque inteligente"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        }
+      ]
+    },
+    {
+      "name": "Morfología",
+      "questions": [
+        {
+          "bodyTypst": "Correcta segmentación morfológica de \"Esos congresistas votaron...\":",
+          "alternatives": [
+            "A) Es-o-s congres-ista-s vot-aron",
+            "B) E-s-os congres-ista-s vot-aron",
+            "C) Es-os congres-istas vot-aron",
+            "D) Comuniqu-é el mensaje a tu primo",
+            "E) Entregu-é los fólder-es a mis amigo-s"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Palabras \"entrecomillado\", \"guitarrista\", \"portaestandarte\" son:",
+          "alternatives": [
+            "A) Compuesta, derivada, compuesta",
+            "B) Parasintética, derivada, compuesta",
+            "C) Parasintética, derivada, derivada",
+            "D) Compuesta, derivada, derivada",
+            "E) Derivada, derivada, compuesta"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "¿Es un verbo irregular?",
+          "alternatives": [
+            "A) Pensar",
+            "B) Beber",
+            "C) Cantar",
+            "D) Vivir",
+            "E) Besar"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "El sustantivo sirve para:",
+          "alternatives": [
+            "A) Señalar un adjetivo",
+            "B) Nombrar personas",
+            "C) Indicar cualidad",
+            "D) Nombrar seres y objetos",
+            "E) Determinar un nombre"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Alternativa con morfemas derivativo y flexivo:",
+          "alternatives": [
+            "A) Amigos",
+            "B) Central",
+            "C) Facilidad",
+            "D) Cristalino",
+            "E) Cafetería"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        }
+      ]
+    },
+    {
+      "name": "Vocabulario y relaciones verbales",
+      "questions": [
+        {
+          "bodyTypst": "Marque alternativa con \"préstamos\" americanismos en lengua española:",
+          "alternatives": [
+            "A) Jaime cría cóndor en la azotea",
+            "B) El jeque consume quinua negra",
+            "C) Los incas hablaban lengua aimara",
+            "D) Consumía galletas de maca sin azúcar",
+            "E) Javier es alcaide en cárcel de Ica"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Correlacione expresiones subrayadas con categorías lingüísticas:",
+          "alternatives": [
+            "A) Expresiones con locuciones adverbiales y nominales",
+            "B) Palabras simples y compuestas",
+            "C) Sustantivos derivados y adjetivos calificativos",
+            "D) Verbos conjugados y adverbios",
+            "E) Locuciones, palabras compuestas, sustantivos derivados y adjetivos"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        },
+        {
+          "bodyTypst": "Oraciones con locuciones adverbiales: \"a duras penas\", \"de manos\"",
+          "alternatives": [
+            "A) Aparecen en tres enunciados diferentes",
+            "B) Son expresiones que funcionan como adverbios",
+            "C) Modifican el significado del verbo principal",
+            "D) Todas contienen preposición y sustantivo",
+            "E) Son palabras que no pueden separarse"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+          "sourceName": "Rubiños - Lenguaje Resuelto"
+        }
+      ]
+    }
+  ]
+}

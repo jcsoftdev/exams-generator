@@ -1,0 +1,60 @@
+{
+  "courseName": "Educación Física",
+  "gradeLevel": "secundaria_2",
+  "topics": [
+    {
+      "name": "Atletismo",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuánto mide una pista de atletismo al aire libre?",
+          "alternatives": [
+            "200 m",
+            "100 m",
+            "400 m"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/16329375/test-sobre-atletismo",
+          "sourceName": "GoConqr - Test sobre atletismo"
+        },
+        {
+          "bodyTypst": "¿Cuál de las siguientes disciplinas no es una prueba de atletismo?",
+          "alternatives": [
+            "400 m con vallas",
+            "Lanzamiento de jabalina",
+            "110 m con vallas",
+            "15 km"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/16329375/test-sobre-atletismo",
+          "sourceName": "GoConqr - Test sobre atletismo"
+        },
+        {
+          "bodyTypst": "¿Cuántas calles tiene una pista de atletismo?",
+          "alternatives": [
+            "7 calles",
+            "5 calles",
+            "8 calles"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/16329375/test-sobre-atletismo",
+          "sourceName": "GoConqr - Test sobre atletismo"
+        },
+        {
+          "bodyTypst": "¿Cuándo fueron los primeros Juegos Olímpicos?",
+          "alternatives": [
+            "2006",
+            "1040",
+            "776 a. C."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/16329375/test-sobre-atletismo",
+          "sourceName": "GoConqr - Test sobre atletismo"
+        }
+      ]
+    }
+  ]
+}

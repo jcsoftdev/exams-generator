@@ -1,0 +1,61 @@
+{
+  "courseName": "Arte y Cultura",
+  "gradeLevel": "secundaria_5",
+  "topics": [
+    {
+      "name": "Artes visuales contemporáneas",
+      "questions": [
+        {
+          "bodyTypst": "En este movimiento artístico, la luz y su incidencia en la realidad en momentos precisos es la característica principal:",
+          "alternatives": [
+            "Neoclasicismo",
+            "Impresionismo",
+            "Romanticismo"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/es/quiz/15750108/examen-artistica",
+          "sourceName": "GoConqr - Examen artística"
+        },
+        {
+          "bodyTypst": "Este movimiento rechaza la pseudo-superficialidad del impresionismo, que observa solo apariencias externas, y marcó el cambio de siglo:",
+          "alternatives": [
+            "Impresionismo",
+            "Neoclasicismo",
+            "Post Impresionismo"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.goconqr.com/es/quiz/15750108/examen-artistica",
+          "sourceName": "GoConqr - Examen artística"
+        },
+        {
+          "bodyTypst": "¿Cuáles son las disciplinas de las artes visuales?",
+          "alternatives": [
+            "Pintura, grabado, escultura, fotografía, arte digital, arte ecológico.",
+            "Música, Danza, Teatro y Artes visuales",
+            "Pintura, grabado, fotografía, escultura, teatro"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/es/cuestionario/6670479/cuestionario-de-artes-visuales",
+          "sourceName": "GoConqr - Cuestionario de Artes Visuales"
+        },
+        {
+          "bodyTypst": "El arte medieval tenía como misión:",
+          "alternatives": [
+            "Instruir sobre las religiones a la clase trabajadora.",
+            "Instruir sobre el cristianismo católico a toda la población.",
+            "Instruir sobre el arte católico a los clérigos.",
+            "Representar al clero.",
+            "Hablar de Dios."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/4031525/simulador-de-historia-del-arte",
+          "sourceName": "GoConqr - Simulador de Historia del Arte"
+        }
+      ]
+    }
+  ]
+}

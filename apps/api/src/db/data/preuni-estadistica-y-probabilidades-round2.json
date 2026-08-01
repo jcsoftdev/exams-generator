@@ -1,0 +1,49 @@
+{
+  "courseName": "Estadística y Probabilidades",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Análisis Combinatorio",
+      "questions": []
+    },
+    {
+      "name": "Estadística Descriptiva: Distribución de Frecuencias",
+      "questions": []
+    },
+    {
+      "name": "Gráficos Estadísticos",
+      "questions": []
+    },
+    {
+      "name": "Medidas de Dispersión",
+      "questions": []
+    },
+    {
+      "name": "Medidas de Posición",
+      "questions": []
+    },
+    {
+      "name": "Medidas de Tendencia Central",
+      "questions": [
+        {
+          "bodyTypst": "Los pesos en kilogramos de los 7 sobrinos de Daniel son números enteros tales que la media, mediana y moda son $41$, $42$ y $38$ kilogramos, respectivamente. Si ninguno de ellos pesa menos de $35$ kilogramos, ¿cuál es el mayor peso en kilogramos que podría tener uno de los sobrinos?",
+          "alternatives": [
+            "53",
+            "45",
+            "49",
+            "51",
+            "47"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://editoradelta.blogspot.com/p/preguntas-san-marcos.html",
+          "sourceName": "EDITORA DELTA - Preguntas San Marcos"
+        }
+      ]
+    },
+    {
+      "name": "Probabilidades",
+      "questions": []
+    }
+  ]
+}

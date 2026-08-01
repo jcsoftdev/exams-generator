@@ -1,0 +1,25 @@
+{
+  "courseName": "Personal Social",
+  "gradeLevel": "primaria_5",
+  "topics": [
+    {
+      "name": "Culturas prehispánicas y el Tahuantinsuyo",
+      "questions": [
+        {
+          "bodyTypst": "El control vertical de los pisos ecológicos permitía:",
+          "alternatives": [
+            "el acceso a tierras de diferentes ecologías",
+            "el comercio entre diferentes regiones",
+            "el intercambio de los alimentos",
+            "la libertad de los campesinos",
+            "la abundancia de mano de obra indígena"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/tahuantinsuyo-incas-preguntas-resueltas-historia-del-peru-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - Tahuantinsuyo Ejercicios Resueltos"
+        }
+      ]
+    }
+  ]
+}

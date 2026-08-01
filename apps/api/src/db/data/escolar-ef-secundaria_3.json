@@ -1,0 +1,23 @@
+{
+  "courseName": "Educación Física",
+  "gradeLevel": "secundaria_3",
+  "topics": [
+    {
+      "name": "Condición física: resistencia, fuerza y flexibilidad",
+      "questions": [
+        {
+          "bodyTypst": "¿Qué es un circuito motriz?",
+          "alternatives": [
+            "Es un conjunto de ejercicios organizados y estructurados en los que un grupo de ejecutantes recorre un trayecto con diferentes estaciones en las que deberán realizar ciertos ejercicios.",
+            "Es un sistema para el entrenamiento en atletismo que consiste en hacer diversos ejercicios, tanto aeróbicos como anaeróbicos, principalmente ejercicios de carrera, caracterizados por los cambios de ritmo realizados en intervalos.",
+            "Es un tipo de ejercicio de carrera que se caracteriza por comenzar con un trote ligero como calentamiento, seguido por un aumento progresivo de la velocidad, hasta lograr mantener el ritmo sin agotamiento, y, finalmente, un trote suave para volver al estado inicial."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia2/C45_EBRS_21_SECUNDARIA_EDU_FISICA_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación Física Secundaria (C45-EBRS-21, Forma 1), con clave de respuestas oficial"
+        }
+      ]
+    }
+  ]
+}

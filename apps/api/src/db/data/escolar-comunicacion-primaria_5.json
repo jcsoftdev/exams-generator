@@ -1,0 +1,63 @@
+{
+  "courseName": "Comunicación",
+  "gradeLevel": "primaria_5",
+  "topics": [
+    {
+      "name": "Comprensión lectora inferencial y crítica",
+      "questions": [
+        {
+          "bodyTypst": "Lee el texto.\n\nLa mariquita\n\nLa mariquita es un insecto muy pequeño. Es tan diminuta que puede llegar a medir la mitad de la uña de un dedo meñique. Su cuerpo es redondeado y tiene alas. ¡Cuatro alas! Las mariquitas más comunes son las de color rojo con puntos negros, pero también hay mariquitas de color amarillo y anaranjado. Incluso, algunas son de color marrón. Su color intenso y sus puntos negros son una advertencia para cualquier animal que quiera comérselas. Para defenderse, las mariquitas expulsan por las patas un veneno de sabor muy desagradable. De esta manera, evitan el ataque de arañas, aves pequeñas y otras mariquitas de mayor tamaño. La mayoría de las mariquitas son carnívoras. Se alimentan de otros insectos más pequeños, como los pulgones, los cuales se reproducen muy rápido y se comen las hojas de las plantas. Se calcula que, en un mes, una mariquita carnívora puede comer hasta 5000 pulgones. Este tipo de mariquita es muy valorado por los agricultores. Sin embargo, no todas las mariquitas se alimentan de insectos. Hay algunas que se comen las plantas. Este tipo de mariquita no es beneficioso para la agricultura.\n\n¿De qué color son las mariquitas más comunes?",
+          "alternatives": [
+            "Anaranjado.",
+            "Amarillo.",
+            "Marrón.",
+            "Rojo."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-5.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 5.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-5.pdf"
+        },
+        {
+          "bodyTypst": "Lee el cuento.\n\nEl misterio del auqui\n\nEn un pueblo de los Andes, vivía Sarita junto a su abuelita. Cada mañana, Sarita llevaba a sus ovejas a pastar al valle y volvía al atardecer. Mientras tanto, su abuelita se quedaba en casa esperándola con la comida caliente. Un día, una terrible sequía afectó al pueblo de Sarita. Como no había lluvias, los sembríos se secaron y pronto los alimentos se fueron acabando. Las personas y los animales pasaban hambre. Los pobladores salían a lugares lejanos en busca de alimentos y lo poco que encontraban lo compartían entre todos los del pueblo. Una mañana, Sarita salió con sus ovejas flacas en busca de agua hacia un pequeño manantial en lo alto de una montaña. Al llegar al lugar, sus ovejitas se atropellaban para beber agua y la niña trataba de ordenarlas. De pronto, escuchó una voz. —Niña, tengo mucha sed. ¿Podrías darme un poco de agua? Sarita volteó y vio a un anciano. Rápidamente, la niña recogió el agua juntando sus manos y se la dio de beber. También, le invitó un poco de cancha (maíz tostado) que aún tenía. El anciano se despidió de ella y le dijo: —Eres una niña muy buena. Por eso, en agradecimiento, tu pueblo y tú no volverán a pasar hambre —y se alejó.\n\n¿Cuál es la principal característica del auqui?",
+          "alternatives": [
+            "Era amable.",
+            "Era trabajador.",
+            "Era agradecido.",
+            "Era preocupado."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-5.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 5.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-5.pdf"
+        },
+        {
+          "bodyTypst": "Lee el texto.\n\nEl Sol y las estrellas\n\nA simple vista, nos puede parecer que el Sol y las estrellas son muy diferentes entre sí, como el día y la noche. Así, en las mañanas, el Sol se ve enorme, brillando con su color amarillo, iluminándolo todo. De noche, en cambio, las estrellas parecen pequeñas luces de un color más bien blanco y tenue, como velas a punto de apagarse. Sin embargo, resulta que el Sol también es una estrella. Al igual que todas las estrellas, nuestro astro rey es una enorme esfera de \"fuego\" que produce su propia luz y energía desde hace millones de años. Para nosotros, el Sol se ve más grande que cualquier otra estrella. Sin embargo, otras estrellas tienen un tamaño mayor que el del Sol, como Rigel o Antares. Se puede decir que nuestro Sol tiene un tamaño regular, igual que muchas estrellas en el universo. Lo que hace que este se vea tan grande para nosotros es, simplemente, que está más cerca de nuestro planeta, la Tierra.\n\n¿Para qué se ha escrito principalmente este texto?",
+          "alternatives": [
+            "Para describir las partes del Sol y las estrellas.",
+            "Para opinar sobre el origen del Sol y las estrellas.",
+            "Para explicar el parecido entre el Sol y las estrellas.",
+            "Para demostrar la importancia del Sol y las estrellas."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-5.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 5.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-5.pdf"
+        },
+        {
+          "bodyTypst": "Lee el texto.\n\n¡Miles de animales NUNCA más regresarán a su hogar! Entre los años 2000 y 2016, se han rescatado cerca de 67 000 animales vivos. Se rescataron 1897 ranas gigantes del lago Titicaca. Estas son una de las especies más traficadas. Solo en el año 2017, 10 000 animales vivos fueron rescatados, entre aves, mamíferos, reptiles y otras especies. Puno, Ucayali, Lima y Loreto son las regiones con el mayor número de animales rescatados. ¡Luchemos juntos contra el tráfico ilegal de animales silvestres! El tráfico de animales consiste en comprar o vender un animal silvestre. Ocurre principalmente porque algunas personas creen que estos animales se pueden tener como mascotas. Otras razones menos frecuentes son el uso de estos animales como amuletos de la suerte o, incluso, como insumos para preparar comida exótica. Lo que muchos no saben es que los traficantes los sacan de sus lugares de origen y los transportan en condiciones que ponen en riesgo sus vidas. Para conocer animales silvestres, visita áreas protegidas como el Parque Nacional Tingo María o la Reserva Nacional de Tambopata.\n\n¿Para qué se ha escrito principalmente este texto?",
+          "alternatives": [
+            "Para enseñarnos a denunciar el tráfico ilegal de animales silvestres.",
+            "Para mostrar las características de dos animales silvestres secuestrados.",
+            "Para convencernos de luchar contra el tráfico ilegal de animales silvestres.",
+            "Para motivar la visita a áreas protegidas con el fin de conocer animales silvestres."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-5.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 5.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-5.pdf"
+        }
+      ]
+    }
+  ]
+}

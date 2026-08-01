@@ -1,0 +1,63 @@
+{
+  "courseName": "Comunicación",
+  "gradeLevel": "primaria_4",
+  "topics": [
+    {
+      "name": "Comprensión lectora inferencial y crítica",
+      "questions": [
+        {
+          "bodyTypst": "Lee el texto.\n\nUna persona muy especial para mí\nPor Gabriela Alarcón\n\nMi madrina se llama Elena Vásquez. Tiene 30 años y vive en la ciudad de Iquitos. Está casada y tiene dos hijos muy amables que son mayores que yo: Luis y Sofía. Mi madrina tiene ojos grandes y pelo largo. Le gusta vestirse de verde y, cuando sale a la calle, se pone lentes oscuros y un sombrero. Ella es alegre y le gusta cantar las canciones de moda. Ella trabaja en una peluquería. ¡Sus clientes dicen que es la mejor peluquera de la ciudad! Ella se ríe cuando dicen eso, pero se nota que está orgullosa del buen trabajo que hace. Me encanta quedarme en casa de mi madrina, porque ella cocina muy rico. El plato que mejor le sale es el tacacho y los juanes de gallina. Mi madrina siempre cree que prepara mucho y que va a sobrar, pero sus hijos y yo nos comemos todo sin dejar un solo rastro. El domingo pasado, mi madrina me llevó a pasear por el río y terminamos la tarde pescando. No atrapé ningún pez, pero ella me hizo reír mucho con sus historias y la pasé muy bien. Me ha prometido que el próximo domingo iremos con su familia a la Isla de los Monos. ¡No puedo esperar!\n\nSegún Gabriela, ¿cómo son los ojos de Elena Vásquez?",
+          "alternatives": [
+            "Verdes.",
+            "Bonitos.",
+            "Oscuros.",
+            "Grandes."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-4.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 4.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-4.pdf"
+        },
+        {
+          "bodyTypst": "Lee el texto.\n\nUna persona muy especial para mí\nPor Gabriela Alarcón\n\nMi madrina se llama Elena Vásquez. Tiene 30 años y vive en la ciudad de Iquitos. Está casada y tiene dos hijos muy amables que son mayores que yo: Luis y Sofía. Mi madrina tiene ojos grandes y pelo largo. Le gusta vestirse de verde y, cuando sale a la calle, se pone lentes oscuros y un sombrero. Ella es alegre y le gusta cantar las canciones de moda. Ella trabaja en una peluquería. ¡Sus clientes dicen que es la mejor peluquera de la ciudad! Ella se ríe cuando dicen eso, pero se nota que está orgullosa del buen trabajo que hace. Me encanta quedarme en casa de mi madrina, porque ella cocina muy rico. El plato que mejor le sale es el tacacho y los juanes de gallina. Mi madrina siempre cree que prepara mucho y que va a sobrar, pero sus hijos y yo nos comemos todo sin dejar un solo rastro. El domingo pasado, mi madrina me llevó a pasear por el río y terminamos la tarde pescando. No atrapé ningún pez, pero ella me hizo reír mucho con sus historias y la pasé muy bien. Me ha prometido que el próximo domingo iremos con su familia a la Isla de los Monos. ¡No puedo esperar!\n\n¿Para qué se ha escrito principalmente este texto?",
+          "alternatives": [
+            "Para narrar una historia.",
+            "Para dar recomendaciones.",
+            "Para describir a una persona.",
+            "Para convencer de una idea."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-4.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 4.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-4.pdf"
+        },
+        {
+          "bodyTypst": "Lee el texto.\n\n¿POR QUÉ PICAN LOS MOSQUITOS?\n\nMuchas personas creen que los mosquitos nos pican porque tenemos la sangre dulce. Sin embargo, esto es falso. Los mosquitos pican a las personas porque pueden \"oler\" con mucha facilidad ciertas sustancias que produce nuestro cuerpo. Los mosquitos se sienten atraídos por el dióxido de carbono que producen las personas cuando respiran. Ellos huelen este gas en el aire y saben que cerca hay sangre para chupar. Los adultos producen más cantidad de dióxido de carbono que los niños. Esta cantidad, además, cambia según lo que comamos y el ejercicio físico que hagamos. Los mosquitos también se sienten atraídos por el ácido láctico. Este ácido está presente en nuestro sudor. Por eso, con frecuencia, las personas que sudan mucho son \"blancos perfectos\" para la picadura de los mosquitos. Para evitar que los mosquitos te piquen, es importante que mantengas una buena higiene personal. Si no limpias tu cuerpo del sudor de uno o más días, es más probable que los mosquitos se acerquen para picarte. Otra manera de alejar a los mosquitos es aplicando diversos productos a la piel. Por ejemplo, si frotas tu piel con hojas de eucalipto, estos insectos se mantendrán alejados debido al olor de esta planta. También, puedes usar un repelente para evitar que tu sangre sea el alimento de los mosquitos.\n\nSegún el texto, ¿por qué pican los mosquitos?",
+          "alternatives": [
+            "Porque huelen la sangre dulce de las personas a las que van a picar.",
+            "Porque los atrae el dióxido de carbono que producen las personas.",
+            "Porque se aprovechan de que algunas personas no usan repelente.",
+            "Porque se sienten atraídos por el olor de los alimentos que comemos."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-4.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 4.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-4.pdf"
+        },
+        {
+          "bodyTypst": "Lee el texto.\n\n¡Susy cumple 1 año!\n\nLa bebé chimpancé Susy va a cumplir 1 año de edad este jueves 15 de agosto. Ella es uno de los animales más queridos del zoológico de La Rosaleda. Los administradores del zoológico celebrarán su cumpleaños el sábado 17 de agosto. Como regalo, Susy recibirá una torta de plátanos (el plátano es su fruta favorita). También habrá otra torta gigante que se compartirá con todos los niños que asistan a la fiesta. La directora del zoológico de La Rosaleda, la señora Teófila Soto, comentó que Susy es probablemente uno de los animales que más visitas recibe, junto con la elefante Olga y la sachavaca Edwin. Susy llegó del Congo, un país de África, hace seis meses. Se había quedado sin su papá y su mamá, y la agencia de protección de animales buscaba a alguien que la adoptara. Cuando la señora Soto y su asistente Ricardo Pérez se enteraron, hicieron los trámites para que la bebé chimpancé pudiera venir y quedarse. Desde el primer día en el zoológico la Rosaleda, Susy se robó los corazones de todos los vecinos y visitantes. Le encantan los niños. Cuando vienen a visitarla, Susy se luce haciendo equilibrio sobre una cuerda y saltando muy alto.\n\n¿Cuál de las siguientes acciones ocurrió primero?",
+          "alternatives": [
+            "Susy cumple un año en el zoológico de La Rosaleda.",
+            "Susy llega al zoológico de La Rosaleda.",
+            "El zoológico celebra la fiesta de cumpleaños de Susy.",
+            "Susy pierde a su papá y a su mamá."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-4.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 4.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-4.pdf"
+        }
+      ]
+    }
+  ]
+}

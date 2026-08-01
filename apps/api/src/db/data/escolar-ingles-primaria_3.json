@@ -1,0 +1,143 @@
+{
+  "courseName": "Inglés como Lengua Extranjera",
+  "gradeLevel": "primaria_3",
+  "topics": [
+    {
+      "name": "Presente simple (rutinas diarias)",
+      "questions": [
+        {
+          "bodyTypst": "Do you like classical music? ___.",
+          "alternatives": [
+            "Yes, I likes",
+            "Yes, I like",
+            "Yes, I does",
+            "Yes, I do"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/beginners-English-quiz.html",
+          "sourceName": "GrammarBank – Beginners English Quiz 4"
+        },
+        {
+          "bodyTypst": "He ___ in an office every morning from eight to twelve.",
+          "alternatives": [
+            "working",
+            "works",
+            "work",
+            "am working"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/easy-esl-worksheet.html",
+          "sourceName": "GrammarBank – Easy ESL Worksheet 2"
+        },
+        {
+          "bodyTypst": "Do you speak English? No, I ___.",
+          "alternatives": [
+            "don't speak",
+            "not",
+            "don't",
+            "speak not"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/easy-esl-worksheet.html",
+          "sourceName": "GrammarBank – Easy ESL Worksheet 2"
+        },
+        {
+          "bodyTypst": "What does he do? ___.",
+          "alternatives": [
+            "He's teacher",
+            "He's teaching",
+            "He's a teacher",
+            "Yes, he does"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/easy-esl-worksheet.html",
+          "sourceName": "GrammarBank – Easy ESL Worksheet 2"
+        }
+      ]
+    },
+    {
+      "name": "Verb to be y pronombres personales",
+      "questions": [
+        {
+          "bodyTypst": "Here are Jorge and Maria. ___ are from Valencia in Spain.",
+          "alternatives": [
+            "Their",
+            "They",
+            "Them",
+            "This"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/starter-English-test.html",
+          "sourceName": "GrammarBank – Starter English Test 3"
+        },
+        {
+          "bodyTypst": "Is that ___ car? No, it isn't.",
+          "alternatives": [
+            "they",
+            "their",
+            "there",
+            "they're"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/starter-English-test.html",
+          "sourceName": "GrammarBank – Starter English Test 3"
+        }
+      ]
+    },
+    {
+      "name": "Vocabulario básico: colores, números y familia",
+      "questions": [
+        {
+          "bodyTypst": "Rafi and Jan work in their ___ shop.",
+          "alternatives": [
+            "father",
+            "fathers'",
+            "fathers",
+            "father's"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/esl-beginners-quiz.html",
+          "sourceName": "GrammarBank – ESL Beginners Quiz 5"
+        },
+        {
+          "bodyTypst": "The men are working. Their ___ are at home.",
+          "alternatives": [
+            "wife",
+            "husbands",
+            "husband",
+            "wives"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/efl-worksheet.html",
+          "sourceName": "GrammarBank – Basic Grammar Quiz 7"
+        }
+      ]
+    },
+    {
+      "name": "Vocabulario temático (animales, comida, escuela)",
+      "questions": [
+        {
+          "bodyTypst": "___ is a place where you borrow books.",
+          "alternatives": [
+            "a laundromat",
+            "a theatre",
+            "a library",
+            "a gym"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/beginners-english-test.html",
+          "sourceName": "GrammarBank – Beginners English Test 1 (KET/PET Vocabulary)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "courseName": "Ciencia y Tecnología",
+  "gradeLevel": "secundaria_3",
+  "topics": [
+    {
+      "name": "Ecología y problemática ambiental",
+      "questions": [
+        {
+          "bodyTypst": "No es biodegradable.",
+          "alternatives": [
+            "Carbón",
+            "Algodón",
+            "Desechos orgánicos",
+            "Almidón",
+            "Vidrio"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/contaminacion-ambiental-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+          "sourceName": "Rubiños - Contaminación ambiental, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "No es contaminante químico:",
+          "alternatives": [
+            "tóxicos",
+            "ácidos",
+            "relaves mineros",
+            "pesticidas",
+            "detergentes"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/contaminacion-ambiental-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+          "sourceName": "Rubiños - Contaminación ambiental, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "El mayor parque nacional es:",
+          "alternatives": [
+            "el Manu.",
+            "el Pacaya Samiria.",
+            "el Candamo.",
+            "el Tambopata.",
+            "Machu Picchu."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/conservacion-de-los-recursos-naturales-areas-protegidas-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Conservación de recursos naturales y áreas protegidas, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Es un recurso natural irrenovable:",
+          "alternatives": [
+            "agua",
+            "aire",
+            "suelos",
+            "tiempo",
+            "flora"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/conservacion-de-los-recursos-naturales-areas-protegidas-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Conservación de recursos naturales y áreas protegidas, preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Energía: formas y transformaciones",
+      "questions": [
+        {
+          "bodyTypst": "Un ladrillo es jalado por una fuerza horizontal F=20N si su masa es 10kg. Hallar su energía cinética luego de 5s.",
+          "alternatives": [
+            "100J",
+            "200J",
+            "300J",
+            "400J",
+            "500J"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+          "sourceName": "Rubiños - Energía mecánica (cinética, potencial, elástica), problemas resueltos"
+        },
+        {
+          "bodyTypst": "Un móvil es lanzado sobre su energía. Calcula su energía cinética cuando su rapidez sea 2m/s, sabiendo que su masa es 2kg.",
+          "alternatives": [
+            "2J",
+            "3J",
+            "4J",
+            "8J",
+            "1J"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+          "sourceName": "Rubiños - Energía mecánica (cinética, potencial, elástica), problemas resueltos"
+        },
+        {
+          "bodyTypst": "¿A qué temperatura coinciden las escalas Farenheit (ºF) y Celsius (ºC)?.",
+          "alternatives": [
+            "– 45 °C = – 45 °F",
+            "32 °C = 32 °F",
+            "0 °C = 0 °F",
+            "– 40 °C = – 40 °F"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Termometría, escalas de temperatura, problemas resueltos"
+        },
+        {
+          "bodyTypst": "Halle la temperatura exacta, del cero absoluto en grados Fahrenheit , conociendo que en grados Celsius es –273,16",
+          "alternatives": [
+            "– 439,52",
+            "– 459,69",
+            "–762,12",
+            "–672,32",
+            "–563,3"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Termometría, escalas de temperatura, problemas resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Estructura atómica y tabla periódica",
+      "questions": [
+        {
+          "bodyTypst": "Determina la carga y signo de un ion que tiene 24 electrones asociados a un núcleo con 26 cargas positivas (protones).",
+          "alternatives": [
+            "+4",
+            "–1",
+            "+1",
+            "–2",
+            "+2"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/01/estructura-atomica-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Estructura atómica, problemas resueltos de química"
+        },
+        {
+          "bodyTypst": "¿Cuál de las siguientes alternativas es correcta?",
+          "alternatives": [
+            "El radio aniónico siempre es menor que el radio del átomo original.",
+            "Todas las afinidades electrónicas son exotérmicas y llevan signo negativo.",
+            "La energía de ionización es la energía necesaria para arrancar un electrón de un átomo de un compuesto sólido, y convertirlo en un catión.",
+            "El radio catiónico siempre es menor que el radio del átomo original.",
+            "La electronegatividad es la energía que se debe aplicar a un átomo para atraer a un electrón hacia sí mismo."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/01/tabla-periodica-moderna-ejemplos-problemas-resueltos-de-quimica-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Tabla periódica moderna, problemas resueltos de química"
+        },
+        {
+          "bodyTypst": "Diga qué expresión es incorrecta :",
+          "alternatives": [
+            "Energía cinética es la energía de un cuerpo que se mueve.",
+            "Materia es todo aquello que posee masa.",
+            "La teoría atómica se debe a Dalton.",
+            "Isótopo es el elemento que tiene el mismo número atómico y la misma masa.",
+            "La temperatura mide la intensidad calorífica."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/08/modelo-atomico-de-dalton-thomson-rutherford-bohr-y-actual-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Modelos atómicos (Dalton, Thomson, Rutherford, Bohr y actual), problemas resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Fuerzas y movimiento (cinemática)",
+      "questions": [
+        {
+          "bodyTypst": "Un auto recorre 2,4 km en 60s. Calcula su rapidez en m/s.",
+          "alternatives": [
+            "24m/s",
+            "30m/s",
+            "42m/s",
+            "40m/s",
+            "28m/s"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/mru-movimiento-rectilineo-uniforme-ejercicios-resueltos-de-secundaria-formulas-ejemplos-examen-prueba-claves-respuestas-word-doc-fisica-pdf.html",
+          "sourceName": "Rubiños - MRU (movimiento rectilíneo uniforme), ejercicios resueltos de secundaria"
+        },
+        {
+          "bodyTypst": "Con respecto a la Segunda Ley de Newton se cumple:",
+          "alternatives": [
+            "La fuerza resultante y la aceleración tienen diferentes sentidos.",
+            "La fuerza resultante y la aceleración tienen direcciones perpendiculares.",
+            "La fuerza resultante y la aceleración tiene la misma dirección y sentido.",
+            "La fuerza resultante y la aceleración tienen la misma dirección y sentido opuestos.",
+            "La fuerza resultante y la aceleración no tienen la misma dirección y sentido."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/dinamica-ejemplos-problemas-resueltos-segunda-ley-de-newton-fuerza-masa-aceleracion-inercia-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "Rubiños - Dinámica, segunda ley de Newton, problemas resueltos"
+        },
+        {
+          "bodyTypst": "Un auto recorre 18000m en 50 minutos. ¿Cuál es su rapidez?",
+          "alternatives": [
+            "8m/s",
+            "10",
+            "12",
+            "6",
+            "4"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/mru-movimiento-rectilineo-uniforme-ejercicios-resueltos-de-secundaria-formulas-ejemplos-examen-prueba-claves-respuestas-word-doc-fisica-pdf.html",
+          "sourceName": "Rubiños - MRU (movimiento rectilíneo uniforme), ejercicios resueltos de secundaria"
+        }
+      ]
+    },
+    {
+      "name": "Método científico y diseño experimental",
+      "questions": [
+        {
+          "bodyTypst": "El método científico es el ordenamiento de procedimientos que hace uso la investigación científica, ésta estructura debe guardar un orden secuencial para su desarrollo. Señale el orden de las tres primeras etapas que debe mantener el método científico.",
+          "alternatives": [
+            "Hipótesis – experimentación – ley",
+            "Experimentación – observación – teoría",
+            "Ley – teoría – experimentación",
+            "Observación – experimentación – hipótesis",
+            "Observación – hipótesis – experimentación."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        },
+        {
+          "bodyTypst": "Un científico quiere conocer las especies de algas que se encuentran en dos lagos con distintas salinidades; encontrando, a partir de muestras de agua, mayor variedad y cantidad de algas en el lago más salado. ¿Cuál es la fase del método científico que se ha realizado?",
+          "alternatives": [
+            "Observación",
+            "Teoría",
+            "Conclusión",
+            "Experimentación",
+            "Hipótesis"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        },
+        {
+          "bodyTypst": "Respecto al Método Científico, complete los espacios en blanco. I) ______ es aquello que se atestigua, puede registrarse y con ello se buscará la posible respuesta. II) ______ es un conjunto de hipótesis comprobadas que proporcionan una explicación general de un fenómeno natural.",
+          "alternatives": [
+            "Experimentación – observación",
+            "Hipótesis – teoría",
+            "Teoría – hipótesis",
+            "Observación – teoría",
+            "Observación – experimentación"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        }
+      ]
+    },
+    {
+      "name": "Nutrición y sistemas del cuerpo humano",
+      "questions": [
+        {
+          "bodyTypst": "Las placas de Peyer ubicadas en el ileon tienen función",
+          "alternatives": [
+            "Digestiva",
+            "Inmunológica",
+            "Contráctil",
+            "Secretora",
+            "Absortiva"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-digestivo-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Aparato digestivo humano, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Son las divisiones de la vía respiratoria, excepto",
+          "alternatives": [
+            "laringe",
+            "tráquea",
+            "esófago",
+            "faringe",
+            "fosas nasales"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-respiratorio-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Aparato respiratorio humano, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "El nodo sinoauricular se encuentra en",
+          "alternatives": [
+            "la aurícula derecha.",
+            "el ventrículo derecho.",
+            "el ápex del corazón.",
+            "el ventrículo izquierdo.",
+            "la aurícula izquierda."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Aparato cardiovascular humano, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Los plexos coroides se encuentran en:",
+          "alternatives": [
+            "Simpático",
+            "Parasimpático",
+            "Coroides",
+            "Meninges",
+            "a y b"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-nervioso-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Sistema nervioso humano, preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Reproducción y salud sexual",
+      "questions": [
+        {
+          "bodyTypst": "Al cuello del glande se le conoce como:",
+          "alternatives": [
+            "Falo",
+            "Surco balano prepusial",
+            "Frenillo",
+            "Cuerpo cavernoso",
+            "Acrosoma"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-reproductor-masculino-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Sistema reproductor masculino, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "La vasectomía consiste en la ligadura de:",
+          "alternatives": [
+            "los conductos eferentes",
+            "los conductos eyaculadores",
+            "los conductos deferentes",
+            "la próstata",
+            "la vesícula seminal"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-reproductor-masculino-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Sistema reproductor masculino, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "No es una función de la vagina:",
+          "alternatives": [
+            "Permite la salida de la placenta durante el parto",
+            "Permite la copulación",
+            "Permite la salida del flujo menstrual",
+            "a y b",
+            "N.A."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-reproductor-de-la-mujer-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Sistema reproductor de la mujer, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "No es una función de la Trompa:",
+          "alternatives": [
+            "Permite el desplazamiento de gametos",
+            "Facilita la fecundación y la anidación",
+            "Nutre al ovocito y al cigote",
+            "b y c"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-reproductor-de-la-mujer-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Sistema reproductor de la mujer, preguntas resueltas"
+        }
+      ]
+    }
+  ]
+}

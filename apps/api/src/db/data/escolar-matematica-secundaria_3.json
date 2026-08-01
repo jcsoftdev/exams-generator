@@ -1,0 +1,86 @@
+{
+  "courseName": "Matemática",
+  "gradeLevel": "secundaria_3",
+  "topics": [
+    {
+      "name": "Ecuaciones e inecuaciones de primer grado",
+      "questions": [
+        {
+          "bodyTypst": "Camila desea comprar un televisor pagando una cuota inicial y el resto en cuotas mensuales iguales durante dos años. Ella llega a un acuerdo con el vendedor, representado por la expresión:\n\n$T = 200 + 50m$\n\nSi $T$ es la cantidad total de dinero pagado por el televisor al transcurrir $m$ meses, ¿cuál de las siguientes alternativas explica correctamente el acuerdo de Camila con el vendedor?",
+          "alternatives": [
+            "Camila pagará 50 soles de cuota inicial y 200 soles mensuales",
+            "Camila pagará 200 soles de cuota inicial y 50 soles mensuales",
+            "Camila pagará 250 soles de cuota inicial",
+            "Camila pagará 250 soles mensuales"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.carlosguarnizteaches.com/2022/03/prueba-diagnostica-de-matematica-3.html",
+          "sourceName": "MINEDU - Kit de Evaluación de Diagnóstico, Prueba de Matemática 3° secundaria, pregunta 11, con clave oficial en Manual de uso de la prueba de Matemática 3° secundaria (repositorio.minedu.gob.pe/handle/20.500.12799/8072)"
+        },
+        {
+          "bodyTypst": "¿Cuánto vale $x$ en la siguiente ecuación?\n\n$3x - x + 4 = 5x - 8$",
+          "alternatives": [
+            "$x = -6$",
+            "$x = 2$",
+            "$x = -2$",
+            "$x = 4$"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.carlosguarnizteaches.com/2022/03/prueba-diagnostica-de-matematica-3.html",
+          "sourceName": "MINEDU - Kit de Evaluación de Diagnóstico, Prueba de Matemática 3° secundaria, pregunta 13, con clave oficial en Manual de uso de la prueba de Matemática 3° secundaria (repositorio.minedu.gob.pe/handle/20.500.12799/8072)"
+        },
+        {
+          "bodyTypst": "Gabriela quiere postular a la Escuela de Oficiales del Ejército. Para ello, necesita cumplir el siguiente requisito de edad:\n\nEdad mínima: 15 años (*). Edad máxima: 21 años, 11 meses y 29 días (*).\n(*) Computados al 31 de diciembre del año anterior al proceso.\n\nSi $x$ es la edad requerida expresada en años, ¿cuál de las siguientes expresiones representa el requisito de edad que debe cumplir Gabriela para postular?",
+          "alternatives": [
+            "$15 < x < 21$",
+            "$15 <= x < 22$",
+            "$15 <= x <= 21$",
+            "$15 < x <= 22$"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.carlosguarnizteaches.com/2022/03/prueba-diagnostica-de-matematica-3.html",
+          "sourceName": "MINEDU - Kit de Evaluación de Diagnóstico, Prueba de Matemática 3° secundaria, pregunta 14, con clave oficial en Manual de uso de la prueba de Matemática 3° secundaria (repositorio.minedu.gob.pe/handle/20.500.12799/8072)"
+        }
+      ]
+    },
+    {
+      "name": "Probabilidad",
+      "questions": [
+        {
+          "bodyTypst": "Raúl alista su ropa de baile para ensayar danzas con sus amigos del colegio. Él puede vestirse de diferentes maneras, pero siempre debe utilizar una camisa, un pantalón y un par de zapatos. Si cuenta con 3 pantalones, 2 camisas y 2 pares de zapatos, en total, ¿de cuántas maneras diferentes podría vestirse Raúl?",
+          "alternatives": [
+            "6 maneras",
+            "7 maneras",
+            "10 maneras",
+            "12 maneras"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.carlosguarnizteaches.com/2022/03/prueba-diagnostica-de-matematica-3.html",
+          "sourceName": "MINEDU - Kit de Evaluación de Diagnóstico, Prueba de Matemática 3° secundaria, pregunta 26, con clave oficial en Manual de uso de la prueba de Matemática 3° secundaria (repositorio.minedu.gob.pe/handle/20.500.12799/8072)"
+        }
+      ]
+    },
+    {
+      "name": "Sistemas de ecuaciones lineales",
+      "questions": [
+        {
+          "bodyTypst": "José fue a un mercado local y compró 2 kg de papa y 3 kg de tomate, pagando en total S/14,20. María compró en el mismo mercado 3 kg de papa y 2 kg de tomate, por un total de S/14,30. El precio por kilogramo de cada producto es el mismo para ambos.\n\nDefiniendo $p$ como el precio del kilo de papa y $t$ como el precio del kilo de tomate, se plantean las ecuaciones:\n\n$2p + 3t = 14,20$\n$3p + 2t = 14,30$\n\nSofía resta la primera ecuación de la segunda y obtiene $p - t = 0,10$. Concluye: \"El kg de papa cuesta S/0,10 más que el kg de tomate\". ¿Es válida su afirmación?",
+          "alternatives": [
+            "No, porque no se pueden restar dos ecuaciones de un sistema",
+            "No, porque al restar ecuaciones siempre se cometen errores de signo",
+            "Sí, pero solo si ambas ecuaciones tienen los mismos coeficientes",
+            "Sí, porque restar miembro a miembro dos igualdades verdaderas produce otra igualdad verdadera"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://drive.google.com/file/d/1RaVMRPjxJs7Fa3Y9UCNxncNRbj3olVNq/view",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 3° secundaria, Cuadernillo A (Evaluación diagnóstica), situación 5 \"Compras de mercado\", pregunta 18, con clave oficial en Orientaciones para el registro y análisis de la prueba diagnóstica (repositorio.minedu.gob.pe/handle/20.500.12799/12703)"
+        }
+      ]
+    }
+  ]
+}

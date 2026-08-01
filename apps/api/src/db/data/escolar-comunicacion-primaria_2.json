@@ -1,0 +1,59 @@
+{
+  "courseName": "Comunicación",
+  "gradeLevel": "primaria_2",
+  "topics": [
+    {
+      "name": "Comprensión lectora literal",
+      "questions": [
+        {
+          "bodyTypst": "Lee el texto.\n\nUn día, Natalia fue a comprar leche con su mamá. Cuando regresaba, se tropezó con una piedra y toda la leche se le cayó al suelo. Natalia se sintió muy triste. Al ver lo ocurrido, su mamá la abrazó para que se sintiera mejor.\n\n¿Adónde fue Natalia?",
+          "alternatives": [
+            "A saludar a su mamá.",
+            "A comprar leche.",
+            "A vender leche."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-2.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 2.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-2.pdf"
+        },
+        {
+          "bodyTypst": "Lee el texto.\n\nEl oso hormiguero es un animal que vive en Sudamérica. En el Perú, se le puede encontrar en diversas zonas de la Amazonía. El oso hormiguero es uno de los animales más extraños del mundo porque su hocico es diferente al de otros osos. Parece que tuviera un tubo largo en la cara. También, tiene una lengua larga y pegajosa con la que atrapa a los insectos. Sus garras son enormes y muy duras. Estas le permiten romper fácilmente hormigueros y termiteros. Es un animal insectívoro. Solamente come hormigas, termitas y otros insectos que carcomen y destruyen los árboles.\n\nSegún el texto, ¿dónde vive el oso hormiguero?",
+          "alternatives": [
+            "En Sudamérica.",
+            "En todo el mundo.",
+            "En los hormigueros."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-2.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 2.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-2.pdf"
+        },
+        {
+          "bodyTypst": "Lee el texto.\n\nEl oso hormiguero es un animal que vive en Sudamérica. En el Perú, se le puede encontrar en diversas zonas de la Amazonía. El oso hormiguero es uno de los animales más extraños del mundo porque su hocico es diferente al de otros osos. Parece que tuviera un tubo largo en la cara. También, tiene una lengua larga y pegajosa con la que atrapa a los insectos. Sus garras son enormes y muy duras. Estas le permiten romper fácilmente hormigueros y termiteros. Es un animal insectívoro. Solamente come hormigas, termitas y otros insectos que carcomen y destruyen los árboles.\n\n¿De qué trata principalmente el texto que leíste?",
+          "alternatives": [
+            "Trata de cómo es el oso hormiguero.",
+            "Trata de dónde vive el oso hormiguero.",
+            "Trata de cuál es la comida del oso hormiguero."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-2.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 2.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-2.pdf"
+        },
+        {
+          "bodyTypst": "Lee el cuento.\n\nHace mucho tiempo, en un bosque lejano, todos los animales decidieron elegir a su rey. Se elegiría al animal que tuviera el pelaje más bonito. Entonces, los leones, los monos, los osos e, incluso, los lobos se preocuparon por verse mejor. Un pequeño erizo lleno de púas también quiso participar en la competencia. Sin embargo, pensaba que su aspecto no le ayudaría a ganar. Así que decidió cubrirse el lomo de rosas perfumadas. —¡Qué bien te ves! —le dijo el mono el día del concurso. —Definitivamente, tú serás nuestro rey —dijo el león. A la hora del concurso, luego de ver a todos los participantes, los animales decidieron elegir al erizo como el nuevo rey del bosque. Al día siguiente, el erizo fue a recoger su corona de rey, pero las rosas de su lomo se habían marchitado. Los demás se dieron cuenta del engaño y decidieron escoger a otro animal como rey.\n\n¿Qué nos enseña principalmente este cuento?",
+          "alternatives": [
+            "Que no debemos aparentar lo que no somos.",
+            "Que no debemos competir con nuestros amigos.",
+            "Que no debemos preocuparnos por vernos mejor."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-2.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 2.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-2.pdf"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,654 @@
+{
+  "courseName": "Razonamiento Verbal",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Analogías verbales",
+      "questions": [
+        {
+          "bodyTypst": "LIMNOLOGÍA : LAGOS::",
+          "alternatives": [
+            "Cardiología : riñones",
+            "Neonatología : recién nacido",
+            "Potamología : hidrografía fluvial",
+            "Bromatología : alimento",
+            "Histología : órganos"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "GALAXIA : UNIVERSO::",
+          "alternatives": [
+            "Conocimiento : acuerdo",
+            "Decisiones : opción",
+            "Trecho : camino",
+            "País : continente",
+            "Fase : etapa"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "MÚSICA : PARTITURA::",
+          "alternatives": [
+            "Boceto : dibujo",
+            "Diseño : cuadro",
+            "Esquema : secuencia",
+            "Baile : coreografía",
+            "Etapas : época"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "OASIS : DESIERTO::",
+          "alternatives": [
+            "calor : polo",
+            "tierra : erosión",
+            "península : puerto",
+            "isla : mar",
+            "mono : selva"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "YAKU : CICLÓN",
+          "alternatives": [
+            "Mentira : Castillo",
+            "Río : Marañón",
+            "Halley : Cometa",
+            "Gol : Arquero",
+            "Huaico : Cañete"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        }
+      ]
+    },
+    {
+      "name": "Aptitud comunicativa",
+      "questions": []
+    },
+    {
+      "name": "Coherencia y cohesión textual",
+      "questions": []
+    },
+    {
+      "name": "Comprensión de lectura",
+      "questions": [
+        {
+          "bodyTypst": "En el contexto de la tradición griega, ¿qué propone el texto como idea central?",
+          "alternatives": [
+            "El carácter vetusto de la tradición oratoria griega",
+            "Un elogio de las virtudes oratorias de la cultura helénica",
+            "La oratoria dinámica en poemas homéricos",
+            "El mérito de Néstor y Ulises como grandes oradores",
+            "La predisposición oratoria de los personajes homéricos"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "La eficacia argumentativa era empleada para:",
+          "alternatives": [
+            "evidenciar hechos históricos y fidedignos",
+            "facilitar las deliberaciones en situaciones difíciles",
+            "perpetuar los poemas homéricos en el tiempo",
+            "poner en práctica novedosas técnicas",
+            "permitir la confrontación de manera ejemplar"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "Según el texto en Psicología Cognitiva, ¿a qué se debe que hemos sido capaces de entender el carácter dinámico de la inteligencia?",
+          "alternatives": [
+            "A la psicología cognitiva",
+            "A los modelos explicativos",
+            "A la evaluación de lo actuado",
+            "A los esfuerzos de los teóricos",
+            "Al avance tecnológico"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "Si solo existe comprensión del funcionamiento de los mecanismos de la inteligencia, ¿qué sucedería?",
+          "alternatives": [
+            "mejorará la motivación del estudiante",
+            "no se alcanzarán los resultados esperados por los teóricos",
+            "se completarán los factores que los teóricos esperan",
+            "esta no será considerada como antes",
+            "se iniciará el cambio de los modelos explicativos"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "Sobre Sócrates, en el texto, ¿qué quiere decir el verbo 'desnudaba'?",
+          "alternatives": [
+            "Desdeñaba",
+            "Parodiaba",
+            "Calumniaba",
+            "Deshonraba",
+            "Cuestionaba"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "En el texto sobre Sócrates, se sostiene fundamentalmente que:",
+          "alternatives": [
+            "se burlaba de la clase política de su época por su total incompetencia",
+            "fue condenado a muerte por contravenir los intereses de la clase política ateniense",
+            "era considerado un perverso por perjudicar intelectualmente a la juventud",
+            "defendía las miserias de los gobernantes atenienses corruptos",
+            "nunca aceptó su condena, pero tuvo que conformarse con su nefasto destino"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "¿Qué se puede deducir del texto sobre Sócrates?",
+          "alternatives": [
+            "La libertad de opinión puede afectar los intereses del gobierno de turno",
+            "El hecho de ser irónicos se puede pagar con la prisión",
+            "Sócrates pensaba por encima de la ley para ejercer su filosofía",
+            "El falso poder de un gobernante termina siempre desenmascarado",
+            "Los gobernantes deben tener como misión la educación del pueblo"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "Si Sócrates hubiese escapado de la prisión ateniense, ¿qué habría sucedido?",
+          "alternatives": [
+            "se habría ganado el odio de todo el pueblo",
+            "sus enemigos habrían matado a sus discípulos",
+            "a los pocos meses habría sido capturado",
+            "habría sido incoherente con sus ideas",
+            "habría generado conflictos en otras polis"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        }
+      ]
+    },
+    {
+      "name": "Conectores lógicos",
+      "questions": [
+        {
+          "bodyTypst": "_______ no cambias esa actitud, no te irá bien _______.",
+          "alternatives": [
+            "Aunque - pues",
+            "Puesto que - así",
+            "Si - puesto que",
+            "Dado que - y",
+            "Si bien - entonces"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "En el año 334 volvió a Atenas y fundó su famoso Liceo, _______ fue una institución que influyó _______.",
+          "alternatives": [
+            "por eso - a",
+            "aunque - para",
+            "sobre - por",
+            "ya que - en",
+            "es decir - de"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "La música sonaba tenuemente, _______ se oía el chillar de los pájaros, _______ parecía que la naturaleza nos hablaba.",
+          "alternatives": [
+            "sin embargo - o - más bien",
+            "pues - y - mientras que",
+            "aunque - además - porque",
+            "ya que - mas - así que",
+            "vale decir - puesto que - y"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "_______ no haber dejado nada escrito, la influencia de Sócrates fue extraordinaria.",
+          "alternatives": [
+            "Porque - así que",
+            "Pese a - por que",
+            "Por - es decir",
+            "Asimismo - inclusive",
+            "Siempre que - o sea"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "La hipertensión es un asesino sigiloso; _______ muchas personas la padecen sin saberlo. _______ resulta fundamental hacer chequeos periódicos.",
+          "alternatives": [
+            "ya que - Tampoco",
+            "puesto que - Aun",
+            "aunque - Por ello",
+            "dado que - Si",
+            "porque - Si bien"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "El aprendizaje efectivo de un idioma extranjero es multifactorial. _______ el docente debe dominar la lengua, _______ el estudiante requiere motivación. _______, la exposición constante al idioma es fundamental.",
+          "alternatives": [
+            "no obstante - A modo de ilustración - Así",
+            "esto es - Verbigracia - Sin embargo",
+            "vale decir - Por eso - Además",
+            "por lo tanto - Así como - Inclusive",
+            "es decir - Por ejemplo - Asimismo"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        }
+      ]
+    },
+    {
+      "name": "Definiciones: género próximo y diferencia específica",
+      "questions": []
+    },
+    {
+      "name": "Eliminación de oraciones",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál de las siguientes oraciones es impertinente en un párrafo sobre energía en seres vivos? (I) La energía es la capacidad de realizar trabajo. (II) Las células convierten glucosa en ATP. (III) El ATP es la moneda energética de la célula. (IV) La fotosíntesis es un proceso exclusivo de plantas. (V) Sin energía, no hay vida posible.",
+          "alternatives": [
+            "I",
+            "IV",
+            "III",
+            "V",
+            "II"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "Elimine la oración que no pertenece al tema sobre la avidez: (I) La avidez es el deseo excesivo de riquezas. (II) Este sentimiento ha motivado muchas guerras. (III) Los romanos fueron maestros en arquitectura. (IV) Destruye relaciones humanas. (V) Conduce al fracaso personal.",
+          "alternatives": [
+            "III",
+            "IV",
+            "I",
+            "II",
+            "V"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "¿Cuál oración no corresponde a un texto sobre malaria? (I) La malaria es una enfermedad parasitaria. (II) Es transmitida por mosquitos Anopheles. (III) Afecta principalmente a países tropicales. (IV) Los antibióticos curan cualquier enfermedad. (V) Provoca fiebre y escalofríos.",
+          "alternatives": [
+            "V",
+            "I",
+            "II",
+            "IV",
+            "III"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        }
+      ]
+    },
+    {
+      "name": "Estrategias de lectura",
+      "questions": []
+    },
+    {
+      "name": "Macroestructura textual",
+      "questions": []
+    },
+    {
+      "name": "Marcadores textuales",
+      "questions": []
+    },
+    {
+      "name": "Oraciones incompletas",
+      "questions": [
+        {
+          "bodyTypst": "El _______ anual en una empresa es _______ para _______ los gastos e ingresos.",
+          "alternatives": [
+            "inventario - inviable - faltante",
+            "presupuesto - necesario - previsto",
+            "registro - clave - programado",
+            "balance - atrayente - planificado",
+            "deterioro - clave - proyectable"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "La memoria es el _______ de una serie de procesos que _______ nuestra capacidad de recordar.",
+          "alternatives": [
+            "anhelo - forjan",
+            "resultado - activan",
+            "proyecto - planean",
+            "logro - segregan",
+            "análisis - realizan"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "En la última década, el cine peruano ha crecido _______ aunque aún se considera _______ en el contexto latinoamericano.",
+          "alternatives": [
+            "prolíficamente - vasta",
+            "progresivamente - inenarrable",
+            "exponencialmente - incipiente",
+            "notoriamente - inefable",
+            "irrisoriamente - explosiva"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "Dada la naturaleza de su trabajo, a un _______ se le debe exigir una _______.",
+          "alternatives": [
+            "bombero – perfección",
+            "cirujano – destreza",
+            "portero – precisión",
+            "futbolista – limpieza",
+            "artista – intuición"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "En cuanto oyó su llamado habitual, bajó _______.",
+          "alternatives": [
+            "con cautela – del todo",
+            "aprisa – enteramente",
+            "expectante – bastante",
+            "con sigilo – muy poco",
+            "intrigado – en parte"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "La experiencia ajena es _______ en asuntos donde hay muchos _______.",
+          "alternatives": [
+            "importante – estímulos",
+            "prescindible – valores",
+            "recomendable – sentidos",
+            "indispensable – factores",
+            "impertinente – elementos"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        }
+      ]
+    },
+    {
+      "name": "Plan de redacción",
+      "questions": [
+        {
+          "bodyTypst": "Ordene las siguientes oraciones para formar un plan de redacción coherente sobre LOS MONOS: (I) Su organización social es muy compleja. (II) Los monos son primates de inteligencia notable. (III) Viven en grupos llamados manadas. (IV) Pueden resolver problemas de gran dificultad. (V) Algunos llegan a usar herramientas simples.",
+          "alternatives": [
+            "III - I - II - IV - V",
+            "II - IV - III - I - V",
+            "II - I - IV - III - V",
+            "II - IV - I - III - V",
+            "IV - I - V - III - II"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "Ordene sobre LA METAFÍSICA: (I) Sus problemas fundamentales son la esencia y la existencia. (II) Es la rama de la filosofía que estudia la realidad. (III) Se divide en varias disciplinas. (IV) Investiga la naturaleza de lo real más allá de la experiencia.",
+          "alternatives": [
+            "III-IV-II-I",
+            "II-I-III-IV",
+            "I-II-III-IV",
+            "II-I-IV-III",
+            "III-I-IV-II"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "Ordene sobre Deporte en las dunas de Dubai: (I) Las competiciones atraen a miles de espectadores. (II) Dubai es conocida por sus dunas de arena dorada. (III) Las actividades deportivas incluyen sandboarding y motocross. (IV) Estas prácticas han crecido significativamente en los últimos años. (V) El turismo de aventura genera millones en ingresos anuales.",
+          "alternatives": [
+            "IV - I - II - V - III",
+            "II - I - III - IV - V",
+            "I - III - IV - V - II",
+            "II - III - IV - I - V",
+            "IV - V - II - III - I"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        }
+      ]
+    },
+    {
+      "name": "Referencias textuales",
+      "questions": []
+    },
+    {
+      "name": "Relaciones léxico-semánticas",
+      "questions": []
+    },
+    {
+      "name": "Series verbales",
+      "questions": [
+        {
+          "bodyTypst": "Concentrar, dispersar; agrupar, desperdigar; _______.",
+          "alternatives": [
+            "influir, divergir",
+            "discurrir, irradiar",
+            "pensar, expandir",
+            "cavilar, publicar",
+            "centralizar, diseminar"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "Infringir, sancionar; ganar, premiar; _______.",
+          "alternatives": [
+            "discurrir, entristecer",
+            "delinquir, castigar",
+            "desarrollar, estimular",
+            "competir, distinguir",
+            "afligir, entristecer"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "Azotar, golpear, apalear...",
+          "alternatives": [
+            "ceñir",
+            "vapulear",
+            "embelesar",
+            "socavar",
+            "integrar"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "Develar, secreto; expurgar, culpa; _______.",
+          "alternatives": [
+            "cazar, animal",
+            "desvelar, sueño",
+            "combinar, distintos",
+            "adoptar, niño",
+            "delinquir, castigar"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "Devisar, atisbar, mirar,...",
+          "alternatives": [
+            "contradecir",
+            "objetar",
+            "lapidar",
+            "otear",
+            "descifrar"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        }
+      ]
+    },
+    {
+      "name": "Sinónimos y antónimos",
+      "questions": [
+        {
+          "bodyTypst": "CHALADO (antónimo):",
+          "alternatives": [
+            "indecente",
+            "inculto",
+            "aburrido",
+            "alelado",
+            "cuerdo"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "BARRUNTAR (antónimo):",
+          "alternatives": [
+            "ignorar",
+            "olvidar",
+            "inadvertir",
+            "prever",
+            "preconizar"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "CHAPUCERO (antónimo):",
+          "alternatives": [
+            "desmañado",
+            "torpe",
+            "inepto",
+            "perfeccionista",
+            "imbécil"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        },
+        {
+          "bodyTypst": "MULLIDO (antónimo):",
+          "alternatives": [
+            "rústico",
+            "macizo",
+            "duradero",
+            "deleznable",
+            "frágil"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-verbal-admision-universidad.html",
+          "sourceName": "Rubiños - Razonamiento Verbal Banco"
+        }
+      ]
+    },
+    {
+      "name": "Término excluido",
+      "questions": []
+    },
+    {
+      "name": "Textos argumentativos",
+      "questions": []
+    },
+    {
+      "name": "Textos narrativos y descriptivos / expresión escrita",
+      "questions": []
+    },
+    {
+      "name": "Textos periodísticos",
+      "questions": []
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "courseName": "Matemática",
+  "gradeLevel": "secundaria_5",
+  "topics": [
+    {
+      "name": "Programación lineal y optimización",
+      "questions": [
+        {
+          "bodyTypst": "Max va a alquilar una grúa cuyo alquiler cuesta S/50 por hora, más S/30 de pago único para el chofer. Max sabe que solo dispone de S/480 para ese servicio.\n\n¿Cuántas horas podrá Max alquilar la grúa sin que le falte dinero?",
+          "alternatives": [
+            "De 10 a más horas",
+            "Hasta 10 horas",
+            "De 9 a más horas",
+            "Hasta 9 horas"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.carlosguarnizteaches.com/2022/03/prueba-diagnostica-matematica-5.html",
+          "sourceName": "MINEDU - Kit de Evaluación de Diagnóstico, Prueba de Matemática 5° secundaria, pregunta 8, con clave oficial en Manual de uso de la prueba de Matemática 5° secundaria (repositorio.minedu.gob.pe/handle/20.500.12799/8074)"
+        },
+        {
+          "bodyTypst": "Dos agricultores cultivan productos y desean cercar sus terrenos rectangulares; cada uno dispone de 40 metros de cerco.\n\nEl agricultor A decide usar $x$ metros para el ancho de su terreno. El agricultor B decide usar $(x + 4)$ metros para el ancho de su terreno.\n\nConsiderando al agricultor B, ¿qué expresión representa su área $A_B$ en función de $x$?",
+          "alternatives": [
+            "$A_B (x) = (x + 4)(20 - x)$",
+            "$A_B (x) = (x + 4)(16 - x)$",
+            "$A_B (x) = x(16 - x)$",
+            "$A_B (x) = x(20 - x)$"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://drive.google.com/file/d/1shF0PBx2UEsRCl1dwuCEg_91z6ZKXncp/view",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 5° secundaria, Cuadernillo A (Evaluación diagnóstica), situación 4 \"Terrenos de cultivo\", pregunta 8, con clave oficial en Orientaciones para el registro y análisis de la prueba diagnóstica (repositorio.minedu.gob.pe/handle/20.500.12799/12700)"
+        },
+        {
+          "bodyTypst": "Dos agricultores cultivan productos y desean cercar sus terrenos rectangulares; cada uno dispone de 40 metros de cerco. El agricultor A usa $x$ metros para el ancho de su terreno, de modo que el área de su terreno en función de $x$ es $A(x) = x(20 - x)$.\n\n¿Cuál es el área máxima (en m²) que puede obtener el agricultor A y para qué valor de $x$ ocurre dicho máximo?",
+          "alternatives": [
+            "Área máxima de 80 m², cuando $x = 8$",
+            "Área máxima de 100 m², cuando $x = 10$",
+            "Área máxima de 120 m², cuando $x = 12$",
+            "Área máxima de 200 m², cuando $x = 20$"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://drive.google.com/file/d/1shF0PBx2UEsRCl1dwuCEg_91z6ZKXncp/view",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 5° secundaria, Cuadernillo A (Evaluación diagnóstica), situación 4 \"Terrenos de cultivo\", pregunta 10, con clave oficial en Orientaciones para el registro y análisis de la prueba diagnóstica (repositorio.minedu.gob.pe/handle/20.500.12799/12700)"
+        }
+      ]
+    },
+    {
+      "name": "Probabilidad",
+      "questions": [
+        {
+          "bodyTypst": "En un gráfico se muestran las temperaturas medias registradas en la región Junín durante el mes de junio en cada uno de los últimos 10 años (del 2015 al 2024): 21,2°C; 22,8°C; 21,6°C; 19°C; 18°C; 23°C; 17,2°C; 22°C; 23,8°C y 27,3°C (un valor por cada año, en orden). Cada año se considera igualmente probable al momento de ser elegido al azar.\n\nSi se elige al azar y con la misma probabilidad uno de los años entre 2015 y 2024, ¿qué se puede decir, según los datos, sobre la probabilidad de que la temperatura media del mes de junio haya estado entre 20°C y 25°C inclusive?",
+          "alternatives": [
+            "La probabilidad es 0",
+            "Es muy poco probable",
+            "Es poco probable",
+            "Es bastante probable"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://drive.google.com/file/d/1shF0PBx2UEsRCl1dwuCEg_91z6ZKXncp/view",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 5° secundaria, Cuadernillo A (Evaluación diagnóstica), situación 8 \"Temperaturas en Junín\", pregunta 19, con clave oficial en Orientaciones para el registro y análisis de la prueba diagnóstica (repositorio.minedu.gob.pe/handle/20.500.12799/12700)"
+        }
+      ]
+    }
+  ]
+}

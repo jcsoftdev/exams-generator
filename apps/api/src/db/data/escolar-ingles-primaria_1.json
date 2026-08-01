@@ -1,0 +1,112 @@
+{
+  "courseName": "Inglés como Lengua Extranjera",
+  "gradeLevel": "primaria_1",
+  "topics": [
+    {
+      "name": "Saludos y presentaciones (greetings)",
+      "questions": [
+        {
+          "bodyTypst": "Hello Mario, ___? I'm very well, thank you.",
+          "alternatives": [
+            "How do you?",
+            "How are you?",
+            "How you are?",
+            "How is it?"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/starter-English-test.html",
+          "sourceName": "GrammarBank – Starter English Test 3"
+        },
+        {
+          "bodyTypst": "What is ___ name? — It's Laura.",
+          "alternatives": [
+            "you",
+            "your",
+            "yours",
+            "you're"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/starter-English-test.html",
+          "sourceName": "GrammarBank – Starter English Test 3"
+        },
+        {
+          "bodyTypst": "How old are you? ___.",
+          "alternatives": [
+            "I twenty",
+            "Me is twenty",
+            "I've twenty",
+            "I'm twenty"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/starter-English-test.html",
+          "sourceName": "GrammarBank – Starter English Test 3"
+        }
+      ]
+    },
+    {
+      "name": "Vocabulario básico: colores, números y familia",
+      "questions": [
+        {
+          "bodyTypst": "Your aunt is your ___.",
+          "alternatives": [
+            "father's brother",
+            "father's grandson",
+            "father's sister",
+            "mother's brother"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/beginners-english-test.html",
+          "sourceName": "GrammarBank – Beginners English Test 1 (KET/PET Vocabulary)"
+        },
+        {
+          "bodyTypst": "___ brothers have you got? — Just one.",
+          "alternatives": [
+            "How much",
+            "How old",
+            "How are",
+            "How many"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/easy-esl-worksheet.html",
+          "sourceName": "GrammarBank – Easy ESL Worksheet 2"
+        }
+      ]
+    },
+    {
+      "name": "Vocabulario temático (animales, comida, escuela)",
+      "questions": [
+        {
+          "bodyTypst": "___ is an insect that makes honey.",
+          "alternatives": [
+            "a bee",
+            "a spider",
+            "a crocodile",
+            "a fly"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/beginners-english-test.html",
+          "sourceName": "GrammarBank – Beginners English Test 1 (KET/PET Vocabulary)"
+        },
+        {
+          "bodyTypst": "___ are used for cutting paper.",
+          "alternatives": [
+            "litter",
+            "scissors",
+            "stocks",
+            "sharpener"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/beginners-english-test.html",
+          "sourceName": "GrammarBank – Beginners English Test 1 (KET/PET Vocabulary)"
+        }
+      ]
+    }
+  ]
+}

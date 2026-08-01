@@ -1,0 +1,47 @@
+{
+  "courseName": "Educación Física",
+  "gradeLevel": "secundaria_4",
+  "topics": [
+    {
+      "name": "Hábitos de vida saludable y nutrición deportiva",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál de las siguientes medidas de primeros auxilios se debe tomar en caso de contusión?",
+          "alternatives": [
+            "Aplicar frío de forma local inmediatamente después de la lesión a fin de disminuir el dolor y favorecer la vasoconstricción para controlar de ese modo una posible hemorragia y edema.",
+            "Buscar ayuda médica de inmediato e inmovilizar la zona lesionada evitando manipularla innecesariamente, para evitar agravar la lesión con cualquier movimiento.",
+            "Inmovilizar, elevar la zona afectada y aplicar frío localmente para promover la vasoconstricción y así aliviar el dolor y la inflamación."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/concursoascenso2018/ascensoinstrumentos/pdfs/ASCENSO/A05-EBRP-12%20VERSION%202/A05-EBRP-12-VERSION%202%20-%20EDUCACION%20FISICA.pdf",
+          "sourceName": "MINEDU - Concurso para el Ascenso de Escala en la Carrera Publica Magisterial 2018, Area Educacion Fisica (A05-EBRP-12), Hoja de Respuestas p.81"
+        },
+        {
+          "bodyTypst": "¿Cuál de las siguientes alternativas describe la forma de medir el pulso radial?",
+          "alternatives": [
+            "Colocar los dedos índice y medio en la parte interna de la muñeca por debajo de la base del pulgar, y contar durante un minuto las pulsaciones que se perciben.",
+            "Colocar los dedos índice y medio sobre el cuello en la arteria carótida, específicamente a un lado de la nuez de Adán, y contar durante un minuto las pulsaciones que se perciben.",
+            "Colocar los dedos índice y medio sobre el lado interno del brazo, en el canal formado por los bordes internos del bíceps y tríceps, y contar durante un minuto las pulsaciones que se perciben."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/concursoascenso2018/ascensoinstrumentos/pdfs/ASCENSO/A05-EBRP-12%20VERSION%202/A05-EBRP-12-VERSION%202%20-%20EDUCACION%20FISICA.pdf",
+          "sourceName": "MINEDU - Concurso para el Ascenso de Escala en la Carrera Publica Magisterial 2018, Area Educacion Fisica (A05-EBRP-12), Hoja de Respuestas p.81"
+        },
+        {
+          "bodyTypst": "¿Por qué nunca se debe utilizar el dedo pulgar al medir el pulso de una persona?",
+          "alternatives": [
+            "Porque el dedo pulgar no tiene la misma sensibilidad que los demás dedos y por eso no permite llevar a cabo las técnicas con facilidad.",
+            "Porque el dedo pulgar ejerce más presión y la persona que toma el pulso puede sin querer bloquear el flujo de sangre de la persona que está atendiendo.",
+            "Porque el dedo pulgar es atravesado por una arteria, lo que puede causar que la persona que está tomando el pulso confunda las pulsaciones de su dedo con las de la persona examinada."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/concursoascenso2018/ascensoinstrumentos/pdfs/ASCENSO/A05-EBRP-12%20VERSION%202/A05-EBRP-12-VERSION%202%20-%20EDUCACION%20FISICA.pdf",
+          "sourceName": "MINEDU - Concurso para el Ascenso de Escala en la Carrera Publica Magisterial 2018, Area Educacion Fisica (A05-EBRP-12), Hoja de Respuestas p.81"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "courseName": "Arte y Cultura",
+  "gradeLevel": "secundaria_3",
+  "topics": [
+    {
+      "name": "Cerámica y artesanía tradicional",
+      "questions": [
+        {
+          "bodyTypst": "Técnica de pintura de la cerámica nazca:",
+          "alternatives": [
+            "precocción",
+            "horror al vacío",
+            "poscocción",
+            "técnica “fugitiva”",
+            "paleteado"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/los-nascas-ubicacion-origen-caracteristicas-politica-religion-economia-ceramica-intermedio-temprano-ejemplos-preguntas-resueltas-de-historia-del-peru-preuniversitario-secundaria-word-pdf.html",
+          "sourceName": "Rubiños - Cultura Nazca (banco de preguntas resueltas de Historia del Perú)"
+        },
+        {
+          "bodyTypst": "La cerámica de Paracas Cavernas aplicó la técnica de:",
+          "alternatives": [
+            "precocción",
+            "poscocción",
+            "anillado",
+            "martillado",
+            "horror al vacío"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/los-paracas-en-periodo-formativo-ejemplos-preguntas-resueltas-de-historia-del-peru-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Cultura Paracas (banco de preguntas resueltas de Historia del Perú)"
+        },
+        {
+          "bodyTypst": "Características de la cerámica mochica:",
+          "alternatives": [
+            "bícroma y asa estribo",
+            "polícroma y asa puente",
+            "monócroma y horror al vacío",
+            "vaso ceremonial y monócroma",
+            "precocción y asa gollete"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/los-moches-ubicacion-origen-caracteristicas-politica-religion-economia-metalurgia-ceramica-ejemplos-preguntas-resueltas-de-historia-del-peru-preuniversitario-secundaria-word-pdf.html",
+          "sourceName": "Rubiños - Cultura Mochica (banco de preguntas resueltas de Historia del Perú)"
+        }
+      ]
+    },
+    {
+      "name": "Historia del arte peruano",
+      "questions": [
+        {
+          "bodyTypst": "Los huacos retrato representan los rostros de los señores de la cultura:",
+          "alternatives": [
+            "Mochica.",
+            "Nazca.",
+            "Paracas.",
+            "Chavín.",
+            "Wari."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/los-moches-ubicacion-origen-caracteristicas-politica-religion-economia-metalurgia-ceramica-ejemplos-preguntas-resueltas-de-historia-del-peru-preuniversitario-secundaria-word-pdf.html",
+          "sourceName": "Rubiños - Cultura Mochica (banco de preguntas resueltas de Historia del Perú)"
+        },
+        {
+          "bodyTypst": "¿En qué arte sobresalieron los Paracas?",
+          "alternatives": [
+            "cerámica",
+            "textilería",
+            "escultura",
+            "orfebrería",
+            "xilografía"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/los-paracas-en-periodo-formativo-ejemplos-preguntas-resueltas-de-historia-del-peru-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Cultura Paracas (banco de preguntas resueltas de Historia del Perú)"
+        }
+      ]
+    },
+    {
+      "name": "Teatro y expresión dramática",
+      "questions": [
+        {
+          "bodyTypst": "Comprende el teatro de las civilizaciones clásicas, escrito en latín o griego:",
+          "alternatives": [
+            "Contemporáneo",
+            "Siglo XX",
+            "Clásico"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/6869092/evaluacion-sobre-el-teatro",
+          "sourceName": "GoConqr - Evaluación sobre el teatro"
+        },
+        {
+          "bodyTypst": "Las obras dramáticas se escriben en diálogos y en...",
+          "alternatives": [
+            "primera persona",
+            "tercera persona",
+            "segunda persona"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/6869092/evaluacion-sobre-el-teatro",
+          "sourceName": "GoConqr - Evaluación sobre el teatro"
+        }
+      ]
+    }
+  ]
+}

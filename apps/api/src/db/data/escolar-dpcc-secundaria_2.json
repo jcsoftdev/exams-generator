@@ -1,0 +1,199 @@
+{
+  "courseName": "Desarrollo Personal, Ciudadanía y Cívica",
+  "gradeLevel": "secundaria_2",
+  "topics": [
+    {
+      "name": "Autoconocimiento e identidad personal",
+      "questions": [
+        {
+          "bodyTypst": "Determina la verdad (V) o falsedad (F) de las proposiciones relacionadas a las emociones. I. Dos o más personas pueden sentir distintas emociones sobre un mismo hecho. II. Dos personas que sienten alegría pueden demostrarlo de diferente modo. III. La demostración de ira de una persona no depende de su manejo emocional.",
+          "alternatives": [
+            "VFV",
+            "FFV",
+            "VFF",
+            "VVF",
+            "FVF"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/12/desarrollo-personal-ciudadania-civica-examen-resuelto-dpcc-admision-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+          "sourceName": "Rubiños - DPCC Admisión Universidad (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Identifica el siguiente organizador: \"Comprende todo aquel que se considera como 'nosotros', en el grupo puede ser tan reducido como un equipo de futbol barrial y tan amplio como la misma sociedad\".",
+          "alternatives": [
+            "Grupos terciarios",
+            "Grupos de pertenencia",
+            "Grupos de no pertenencia",
+            "Grupos secundarios",
+            "Grupos primarios"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/12/desarrollo-personal-ciudadania-civica-examen-resuelto-dpcc-admision-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+          "sourceName": "Rubiños - DPCC Admisión Universidad (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Derechos humanos y derechos del niño",
+      "questions": [
+        {
+          "bodyTypst": "En el Perú, durante las manifestaciones que se iniciaron en diciembre pasado, gran parte de la población del sector centro sur fue objeto de la mayor violencia y represión. Ante esta situación crítica, la organización que centra su labor en el análisis y una férrea demanda por el respeto de los derechos humanos fue y es",
+          "alternatives": [
+            "Amnistía Internacional.",
+            "Movimiento Manuela Ramos.",
+            "Asociación Negra de Defensa y Promoción de los Derechos Humanos.",
+            "Fundación Ecuménica para el Desarrollo y la Paz.",
+            "Asociación Servicios Educativos Rurales."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/derechos-economicos-sociales-culturales-civiles-y-politicos-organismos-de-proteccion-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Derechos Humanos y Organismos de Protección (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Lee las siguientes afirmaciones e indica si son \"verdaderas\" o \"falsas\". I) Podemos reclamar ante un Organismo Internacional si no se respetan nuestros derechos en nuestro país. II) El derecho Internacional es el que regula las relaciones entre los Estados. III) Cualquiera de nosotros puede renunciar voluntariamente a su libertad. IV) El Estado actúa como promotor de los Derechos Humanos. V) Los DDHH son aquellos atributos inherentes a todo ser humano, derivados de su propia naturaleza.",
+          "alternatives": [
+            "VVVVF",
+            "VFFFV",
+            "FFVVF",
+            "VVFFF",
+            "VVFVV"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/derechos-economicos-sociales-culturales-civiles-y-politicos-organismos-de-proteccion-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Derechos Humanos y Organismos de Protección (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "En Yemen la pobreza crónica, décadas de poco desarrollo y más de cinco años de un conflicto implacable han expuesto a los niños y sus familias a una combinación letal de violencia y enfermedad. La pandemia de COVID-19 ha convertido una profunda crisis en una catástrofe inminente. ¿Qué organismo de la ONU es el más idóneo para brindar ayuda humanitaria a estos niños y adolescentes?",
+          "alternatives": [
+            "Fondo de las Naciones Unidas para la Infancia (UNICEF).",
+            "Organización de las Naciones Unidas para la Educación y la Cultura (UNESCO).",
+            "Organización Internacional del Trabajo (OIT).",
+            "Programa Mundial de Alimentos.",
+            "Universidad para la Paz."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/onu-oea-organismos-internacionales-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Organismos Internacionales ONU/OEA (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Educación sexual integral",
+      "questions": [
+        {
+          "bodyTypst": "Identifica los factores protectores del embarazo al que corresponden las siguientes preguntas: ¿Sabes decir no?, ¿puedes reconocer situaciones de riesgo?, ¿sabes qué hacer frente a ellas?",
+          "alternatives": [
+            "Informándote debidamente.",
+            "Hablando abiertamente sobre el tema con personas de confianza.",
+            "Reconociendo tu etapa de madurez biológica y emocional.",
+            "Fortaleciendo tu capacidad de análisis para tomar decisiones sin presiones.",
+            "Acudiendo a los profesionales de psicología en los centros de salud."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/12/desarrollo-personal-ciudadania-civica-examen-resuelto-dpcc-admision-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+          "sourceName": "Rubiños - DPCC Admisión Universidad (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Identifica la dimensión de la sexualidad humana a la que corresponde lo siguiente: Permite desarrollar nuestra conciencia individual, voluntaria, libre y respetuosa sobre cómo vivir la sexualidad respetando los derechos de las personas.",
+          "alternatives": [
+            "Afectiva",
+            "Preventiva",
+            "Biológica",
+            "Emotiva",
+            "Ética"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/12/desarrollo-personal-ciudadania-civica-examen-resuelto-dpcc-admision-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+          "sourceName": "Rubiños - DPCC Admisión Universidad (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Determina la verdad (V) o falsedad (F) de las proposiciones sobre los mitos del amor. I. La forma de vestir de una chica nos indica si es una mujer \"fácil\". II. Si tu enamorado/a te cela y controla, es porque no te ama. III. Encontré mi príncipe azul. IV. Las mujeres deben tomar la iniciativa en las relaciones sexuales.",
+          "alternatives": [
+            "FVVF",
+            "VFVF",
+            "VFFV",
+            "VVFF",
+            "FFVV"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/12/desarrollo-personal-ciudadania-civica-examen-resuelto-dpcc-admision-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+          "sourceName": "Rubiños - DPCC Admisión Universidad (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Completa la oración relacionada al embarazo adolescente: Los programas de educación en sexualidad que solo promueven …… no preparan a las y los adolescentes para vivir una vida sexual y reproductiva de manera sana.",
+          "alternatives": [
+            "La castidad",
+            "El temor",
+            "La sanción",
+            "El castigo",
+            "La abstinencia"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/12/desarrollo-personal-ciudadania-civica-examen-resuelto-dpcc-admision-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+          "sourceName": "Rubiños - DPCC Admisión Universidad (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Prevención de la violencia y el bullying",
+      "questions": [
+        {
+          "bodyTypst": "En los últimos años la violencia, contra la mujer y los menores de edad, ha escalado a niveles preocupantes según las encuestas y datos de los organismos públicos. Una constante en casi todos los casos es que se manifiestan valores negativos muy arraigados en la sociedad, como en el machismo y los castigos corporales infringidos a niños. Contra estas manifestaciones de violencia muchas organizaciones públicas y privadas hacen sus esfuerzos por sensibilizar acerca de sus causas y consecuencias, en el marco de",
+          "alternatives": [
+            "una cultura de paz.",
+            "la tolerancia cero.",
+            "la no discriminación.",
+            "una democracia fuerte.",
+            "la paternidad responsable."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/problemas-de-convivencia-en-el-peru-sustentada-en-una-cultura-de-paz-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+          "sourceName": "Rubiños - Cultura de Paz en el Perú (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "La discriminación es uno de los grandes problemas en nuestro país, ocasionando en la población el menoscabo en el ejercicio o goce de sus derechos individuales o colectivos, por lo que es importante fortalecer la autoestima de las personas. Planteada esta problemática, determine el valor de verdad (V o F) de los enunciados que representen estrategias de solución. I) Realizar campañas que acepten la normalización de actos, frases o palabras denigrantes. II) Evidenciar que el uso de humor agresivo y lenguaje hiriente hacia las personas es una forma de violencia. III) Implementar eventos comunicacionales para poner énfasis que la discriminación es sancionable. IV) Minimizar que la difusión de bromas raciales en las redes sociales son acciones cotidianas de exclusión.",
+          "alternatives": [
+            "FVFF",
+            "VFFV",
+            "FVVF",
+            "FVFV",
+            "VFFF"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/problemas-de-convivencia-en-el-peru-sustentada-en-una-cultura-de-paz-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+          "sourceName": "Rubiños - Cultura de Paz en el Perú (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Resolución de conflictos y convivencia escolar",
+      "questions": [
+        {
+          "bodyTypst": "Prioriza y ordena de forma ascendente los pasos del proceso de construcción de las normas de convivencia: I. Las normas de convivencia deben ser evaluadas. II. Las normas de convivencia deben ser vistas como beneficio personal y colectivo. III. Las normas deben regular situaciones para la convivencia. IV. Las normas de convivencia tienen que ser elaboradas por los propios usuarios.",
+          "alternatives": [
+            "IV – III – II – I",
+            "II – III – IV – I",
+            "IV – II – III – I",
+            "II – IV – III – I",
+            "III – II – IV – I"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/12/desarrollo-personal-ciudadania-civica-examen-resuelto-dpcc-admision-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+          "sourceName": "Rubiños - DPCC Admisión Universidad (matematicasn.blogspot.com)"
+        }
+      ]
+    }
+  ]
+}

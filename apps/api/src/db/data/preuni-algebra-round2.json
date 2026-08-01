@@ -1,0 +1,85 @@
+{
+  "courseName": "Álgebra",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Fracciones y Radicación Algebraica",
+      "questions": [
+        {
+          "bodyTypst": "Sea $f(x) = x/sqrt(1-x^2) + sqrt(1-x^2)/x$, con $x in.not {-1, 0, 1}$. Calcule $m$ (con $m in RR^+$) si se cumple que $f(t) = 2$, donde $t = sqrt(1/2 - sqrt(1/4 - 1/m^2))$.",
+          "alternatives": ["1", "49", "2", "4", "$sqrt(11)$"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+          "sourceName": "UNI Solucionario Admisión 2020-1 (Segunda Prueba, Matemática, pregunta 11)"
+        },
+        {
+          "bodyTypst": "La ecuación $(x^2+3x)/(5x+12) = (m-1)/(m+1)$, en $x$, tiene raíces de signos opuestos y el mismo valor absoluto. Dadas las siguientes proposiciones: I. $m < 3$. II. $m in [2,6]$. III. $m in [5,10]$. Indique cuál (o cuáles) son las correctas.",
+          "alternatives": ["Solo I", "Solo II", "Solo III", "I y II", "II y III"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2020.pdf",
+          "sourceName": "UNI Solucionario Admisión 2020-1 (Segunda Prueba, Matemática, pregunta 19)"
+        },
+        {
+          "bodyTypst": "Calcule $root(3, 20+14sqrt(2)) + root(3, 20-14sqrt(2)) + 2.2$. Dé como respuesta la primera cifra decimal.",
+          "alternatives": ["0", "1", "2", "3", "4"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "UNI Solucionario Admisión 2019-1 (Segunda Prueba, Matemática, pregunta 7)"
+        }
+      ]
+    },
+    {
+      "name": "Teoría de Exponentes y Logaritmos",
+      "questions": [
+        {
+          "bodyTypst": "Sea $f: RR -> RR$ una función definida por $f(x) = 2^x - 1/2^x$. Entonces podemos decir que la función inversa $f^*$ de $f$ está dada por (en caso exista):",
+          "alternatives": ["$1/2 ln((x+sqrt(x^2+4))/2)$", "$1/2 ln((x-sqrt(x^2+4))/2)$", "No existe $f^*$", "$log_2 ((x+sqrt(x^2+4))/2)$", "$log_2 ((x-sqrt(x^2+4))/2)$"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "UNI Solucionario Admisión 2019-1 (Segunda Prueba, Matemática, pregunta 13)"
+        },
+        {
+          "bodyTypst": "Dado el conjunto $S = {x in RR : 0 < log(|x-1|) < 1}$. Determine $S sect ([0,2] union [12,20])$.",
+          "alternatives": ["$emptyset$", "$(1,2)$", "$[15,20]$", "$[12,15]$", "$[12,20]$"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2019.pdf",
+          "sourceName": "UNI Solucionario Admisión 2019-1 (Segunda Prueba, Matemática, pregunta 19)"
+        }
+      ]
+    },
+    {
+      "name": "Funciones",
+      "questions": [
+        {
+          "bodyTypst": "Considere la función $f: RR without {0} -> RR$ definida por $f(x) = |log_2 |x||$. Señale la alternativa que presenta la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F). I. Existen únicamente dos valores para $x$ que vuelven mínimo a la función $f(x)$. II. $f$ es creciente en los intervalos $(-1,0)$ y $(1,+infinity)$. III. $f$ es inyectiva en el intervalo $(0,+infinity)$.",
+          "alternatives": ["VVV", "VVF", "VFF", "FFV", "FFF"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+          "sourceName": "UNI Solucionario Admisión 2019-2 (Segunda Prueba, Matemática, pregunta 18)"
+        },
+        {
+          "bodyTypst": "Señale la alternativa que presente la secuencia correcta, después de determinar si la proposición es verdadera (V) o falsa (F). I. Existen funciones sobreyectivas que son inyectivas. II. Existen funciones de $NN$ en $ZZ$ que son biyectivas. III. La suma de dos funciones impares es impar.",
+          "alternatives": ["VVV", "VVF", "FVF", "FFV", "FFF"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+          "sourceName": "UNI Solucionario Admisión 2019-2 (Segunda Prueba, Matemática, pregunta 19)"
+        },
+        {
+          "bodyTypst": "Sean las funciones $g(x) = 2^(arctan|x|)$ y $h(x) = arcsin(x)$, con $x in [-1,1]$. Determine el número de elementos (la cardinalidad) de $S = {x in [-1,1] : g(x) = h(x)}$.",
+          "alternatives": ["6", "4", "3", "1", "0"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20192.pdf",
+          "sourceName": "UNI Solucionario Admisión 2019-2 (Segunda Prueba, Matemática, pregunta 33)"
+        }
+      ]
+    }
+  ]
+}

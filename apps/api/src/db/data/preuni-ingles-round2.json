@@ -1,0 +1,522 @@
+{
+  "courseName": "Inglés",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Aptitud comunicativa (inglés)",
+      "questions": [
+        {
+          "bodyTypst": "Wandering aimlessly, Peter found ---- in the kind of neighbourhood that his mother had warned ---- not to go into.\n\nA) his own / her\nB) him / himself\nC) himself / him\nD) he / his\nE) his / herself",
+          "alternatives": ["his own / her", "him / himself", "himself / him", "he / his", "his / herself"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/esl-grammar-quiz.html",
+          "sourceName": "GrammarBank - ESL Grammar Quiz"
+        },
+        {
+          "bodyTypst": "------- who is acquainted with Pat knows that they can always rely on -------.\n\nA) Everyone / her\nB) Someone / his\nC) Whoever / him\nD) Nobody / hers\nE) Anybody / he",
+          "alternatives": ["Everyone / her", "Someone / his", "Whoever / him", "Nobody / hers", "Anybody / he"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/esl-grammar-quiz.html",
+          "sourceName": "GrammarBank - ESL Grammar Quiz"
+        },
+        {
+          "bodyTypst": "Frank Lloyd Wright was a pioneer architect whose ideas were ---- ahead of his time, and he had to fight for acceptance of every new design.\n\nA) that\nB) such\nC) better\nD) well\nE) too",
+          "alternatives": ["that", "such", "better", "well", "too"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/esl-grammar-quiz.html",
+          "sourceName": "GrammarBank - ESL Grammar Quiz"
+        },
+        {
+          "bodyTypst": "Not ---- as a finalist in the spelling competition caused young Scott ---- from depression for months afterwards.\n\nA) to choose / suffering\nB) being chosen / to suffer\nC) to have chosen / to be suffered\nD) choosing / to have suffered\nE) to be chosen / suffered",
+          "alternatives": ["to choose / suffering", "being chosen / to suffer", "to have chosen / to be suffered", "choosing / to have suffered", "to be chosen / suffered"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/esl-grammar-quiz.html",
+          "sourceName": "GrammarBank - ESL Grammar Quiz"
+        }
+      ]
+    },
+    {
+      "name": "Comparatives and superlatives",
+      "questions": [
+        {
+          "bodyTypst": "My brother is ---- my sister.\n\nA) fatter than\nB) more fat than\nC) as fat as\nD) the fattest\nE) too fat",
+          "alternatives": ["fatter than", "more fat than", "as fat as", "the fattest", "too fat"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/prepositions-quiz.html",
+          "sourceName": "GrammarBank - Prepositions Quiz"
+        },
+        {
+          "bodyTypst": "Sam is ---- boy in our class.\n\nA) the tall\nB) the taller\nC) the tallest\nD) taller\nE) tall",
+          "alternatives": ["the tall", "the taller", "the tallest", "taller", "tall"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/prepositions-quiz.html",
+          "sourceName": "GrammarBank - Prepositions Quiz"
+        },
+        {
+          "bodyTypst": "My English is ---- your English.\n\nA) as good as\nB) goodest than\nC) better than\nD) the best\nE) gooder",
+          "alternatives": ["as good as", "goodest than", "better than", "the best", "gooder"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/prepositions-quiz.html",
+          "sourceName": "GrammarBank - Prepositions Quiz"
+        },
+        {
+          "bodyTypst": "Madonna is ---- Celine.\n\nA) more popular than\nB) popular more than\nC) the most popular\nD) more than popular\nE) popularmost",
+          "alternatives": ["more popular than", "popular more than", "the most popular", "more than popular", "popularmost"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/prepositions-quiz.html",
+          "sourceName": "GrammarBank - Prepositions Quiz"
+        }
+      ]
+    },
+    {
+      "name": "Conditionals (zero, first, second, third)",
+      "questions": [
+        {
+          "bodyTypst": "Many people who live near nuclear plants are concerned. ---- go wrong, the impact on the surrounding area could be disastrous.\n\nA) Something would\nB) Something will\nC) Should something\nD) Does something",
+          "alternatives": ["Something would", "Something will", "Should something", "Does something"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/if-clauses-quiz.html",
+          "sourceName": "GrammarBank - If Clauses Quiz"
+        },
+        {
+          "bodyTypst": "Had I known the carpenter was going to take three days to show up, I ---- the materials and done the work myself.\n\nA) will get\nB) would have gotten\nC) might get\nD) will have gotten",
+          "alternatives": ["will get", "would have gotten", "might get", "will have gotten"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/if-clauses-quiz.html",
+          "sourceName": "GrammarBank - If Clauses Quiz"
+        },
+        {
+          "bodyTypst": "I wish you ---- making that noise. It's bothering me.\n\nA) would stop\nB) are going to stop\nC) stop\nD) can stop",
+          "alternatives": ["would stop", "are going to stop", "stop", "can stop"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/if-clauses-quiz.html",
+          "sourceName": "GrammarBank - If Clauses Quiz"
+        },
+        {
+          "bodyTypst": "If I can speak Spanish, I ---- next year studying in Mexico.\n\nA) would spend\nB) would have spent\nC) had spent\nD) will spend",
+          "alternatives": ["would spend", "would have spent", "had spent", "will spend"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/if-clauses-quiz.html",
+          "sourceName": "GrammarBank - If Clauses Quiz"
+        },
+        {
+          "bodyTypst": "It would have been a much more serious accident ---- fast at the time.\n\nA) had she been driving\nB) was she driving\nC) she had driven\nD) she drove",
+          "alternatives": ["had she been driving", "was she driving", "she had driven", "she drove"],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/if-clauses-quiz.html",
+          "sourceName": "GrammarBank - If Clauses Quiz"
+        },
+        {
+          "bodyTypst": "If she ---- it back in time, you're welcome to borrow it.\n\nA) brought\nB) would bring\nC) had brought\nD) brings",
+          "alternatives": ["brought", "would bring", "had brought", "brings"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/if-clauses-quiz.html",
+          "sourceName": "GrammarBank - If Clauses Quiz"
+        },
+        {
+          "bodyTypst": "We ---- the game if we'd had a few more minutes.\n\nA) might have won\nB) won\nC) had won\nD) will win",
+          "alternatives": ["might have won", "won", "had won", "will win"],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/if-clauses-quiz.html",
+          "sourceName": "GrammarBank - If Clauses Quiz"
+        },
+        {
+          "bodyTypst": "If you ---- to my advice in the first place, you wouldn't be in this mess right now.\n\nA) listen\nB) will listen\nC) had listened\nD) listened",
+          "alternatives": ["listen", "will listen", "had listened", "listened"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/if-clauses-quiz.html",
+          "sourceName": "GrammarBank - If Clauses Quiz"
+        },
+        {
+          "bodyTypst": "If I ---- the same problems you had as a child, I might not have succeeded in life as well.\n\nA) have\nB) would have\nC) had had\nD) should have",
+          "alternatives": ["have", "would have", "had had", "should have"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/if-clauses-quiz.html",
+          "sourceName": "GrammarBank - If Clauses Quiz"
+        },
+        {
+          "bodyTypst": "---- more help, I could call my neighbor.\n\nA) Needed\nB) Should I need\nC) I have needed\nD) I should need",
+          "alternatives": ["Needed", "Should I need", "I have needed", "I should need"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/if-clauses-quiz.html",
+          "sourceName": "GrammarBank - If Clauses Quiz"
+        }
+      ]
+    },
+    {
+      "name": "Countable and uncountable nouns",
+      "questions": [
+        {
+          "bodyTypst": "The Amazon in Brazil is ---- longest river in ---- South America.\n\nA) the / -\nB) - / the\nC) - / -\nD) the / the\nE) a / the",
+          "alternatives": ["the / -", "- / the", "- / -", "the / the", "a / the"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/determiners-articles-quiz.html",
+          "sourceName": "GrammarBank - Determiners & Articles Quiz"
+        },
+        {
+          "bodyTypst": "We could barely get any information at the airport. ---- people seemed to have ---- idea about the flights.\n\nA) Many / any\nB) A lot of / any\nC) Only a few / some\nD) Few / no\nE) Any / no",
+          "alternatives": ["Many / any", "A lot of / any", "Only a few / some", "Few / no", "Any / no"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/determiners-articles-quiz.html",
+          "sourceName": "GrammarBank - Determiners & Articles Quiz"
+        },
+        {
+          "bodyTypst": "---- of what he said was very sensible.\n\nA) Many\nB) Much\nC) A few\nD) Few\nE) Every",
+          "alternatives": ["Many", "Much", "A few", "Few", "Every"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/determiners-articles-quiz.html",
+          "sourceName": "GrammarBank - Determiners & Articles Quiz"
+        },
+        {
+          "bodyTypst": "The report concludes sadly that ---- students have ---- knowledge of nuclear physics.\n\nA) some / a lot of\nB) both / whole\nC) none / any\nD) every / no\nE) very few / some",
+          "alternatives": ["some / a lot of", "both / whole", "none / any", "every / no", "very few / some"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/determiners-articles-quiz.html",
+          "sourceName": "GrammarBank - Determiners & Articles Quiz"
+        },
+        {
+          "bodyTypst": "---- his friends speaks any English.\n\nA) Both of\nB) Some\nC) All\nD) Many\nE) Neither of",
+          "alternatives": ["Both of", "Some", "All", "Many", "Neither of"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/determiners-articles-quiz.html",
+          "sourceName": "GrammarBank - Determiners & Articles Quiz"
+        }
+      ]
+    },
+    {
+      "name": "Future: will / going to",
+      "questions": [
+        {
+          "bodyTypst": "A new report suggests that a vaccine that offers at least partial protection against HIV ---- available in the near future.\n\nA) had to be\nB) could be\nC) used to be\nD) might have been\nE) would rather be",
+          "alternatives": ["had to be", "could be", "used to be", "might have been", "would rather be"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/modal-verbs-quiz.html",
+          "sourceName": "GrammarBank - Modal Verbs Quiz"
+        },
+        {
+          "bodyTypst": "With this comprehensive international report, the country's position ---- with measurable criteria.\n\nA) is to identify\nB) identifies\nC) will be identified\nD) identified\nE) is going to identify",
+          "alternatives": ["is to identify", "identifies", "will be identified", "identified", "is going to identify"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/passive-causative-quiz.html",
+          "sourceName": "GrammarBank - Passive & Causative Quiz"
+        },
+        {
+          "bodyTypst": "A more developed model of this car ---- in the showroom soon.\n\nA) is going to show\nB) will be shown\nC) was shown\nD) has been shown\nE) had shown",
+          "alternatives": ["is going to show", "will be shown", "was shown", "has been shown", "had shown"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/passive-causative-quiz.html",
+          "sourceName": "GrammarBank - Passive & Causative Quiz"
+        },
+        {
+          "bodyTypst": "Since an earthquake ---- at any time, it is always best to be prepared.\n\nA) will have occurred\nB) has occurred\nC) must have occurred\nD) ought to occur\nE) might occur",
+          "alternatives": ["will have occurred", "has occurred", "must have occurred", "ought to occur", "might occur"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/esl-grammar-quiz.html",
+          "sourceName": "GrammarBank - ESL Grammar Quiz"
+        }
+      ]
+    },
+    {
+      "name": "Infinitive and gerund",
+      "questions": [
+        {
+          "bodyTypst": "Not ---- as a finalist in the spelling competition caused young Scott ---- from depression for months afterwards.\n\nA) to choose / suffering\nB) being chosen / to suffer\nC) to have chosen / to be suffered\nD) choosing / to have suffered\nE) to be chosen / suffered",
+          "alternatives": ["to choose / suffering", "being chosen / to suffer", "to have chosen / to be suffered", "choosing / to have suffered", "to be chosen / suffered"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/esl-grammar-quiz.html",
+          "sourceName": "GrammarBank - ESL Grammar Quiz"
+        },
+        {
+          "bodyTypst": "I wish that I ---- Freddy that he won't be chosen for the school basketball team.\n\nA) haven't been telling\nB) won't have to tell\nC) don't have to tell\nD) didn't have to tell\nE) shouldn't be telling",
+          "alternatives": ["haven't been telling", "won't have to tell", "don't have to tell", "didn't have to tell", "shouldn't be telling"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/esl-grammar-quiz.html",
+          "sourceName": "GrammarBank - ESL Grammar Quiz"
+        },
+        {
+          "bodyTypst": "The Vaal River is one of the major rivers in South Africa but the runoff is not constant which means that large dams have to be built ---- store water for use.\n\nA) notwithstanding\nB) regardless of\nC) so as to\nD) thanks to\nE) with the aim of",
+          "alternatives": ["notwithstanding", "regardless of", "so as to", "thanks to", "with the aim of"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/conjunctions-quiz.html",
+          "sourceName": "GrammarBank - Conjunctions Quiz"
+        },
+        {
+          "bodyTypst": "They like to keep their old houses rather than building the new ones ---- it is very hard and expensive to maintain them.\n\nA) because\nB) even though\nC) on the contrary\nD) on account of\nE) for example",
+          "alternatives": ["because", "even though", "on the contrary", "on account of", "for example"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/conjunctions-quiz.html",
+          "sourceName": "GrammarBank - Conjunctions Quiz"
+        }
+      ]
+    },
+    {
+      "name": "Modal verbs",
+      "questions": [
+        {
+          "bodyTypst": "Apple Computers ---- the share of the market held by Microsoft in the late 1990s but unfortunately they didn't have a clear business plan.\n\nA) could capture\nB) needn't have captured\nC) should capture\nD) might have captured\nE) might capture",
+          "alternatives": ["could capture", "needn't have captured", "should capture", "might have captured", "might capture"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/modal-verbs-quiz.html",
+          "sourceName": "GrammarBank - Modal Verbs Quiz"
+        },
+        {
+          "bodyTypst": "Many immigrants now agree that they ---- their traditions when they first settled in America.\n\nA) shouldn't have given up\nB) don't have to give up\nC) may not have given up\nD) might not give up\nE) needn't give up",
+          "alternatives": ["shouldn't have given up", "don't have to give up", "may not have given up", "might not give up", "needn't give up"],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/modal-verbs-quiz.html",
+          "sourceName": "GrammarBank - Modal Verbs Quiz"
+        },
+        {
+          "bodyTypst": "Although working conditions ---- in many occupations in the past few years, one can never be safe.\n\nA) might improve\nB) can't have improved\nC) may have improved\nD) could improve\nE) needn't have improved",
+          "alternatives": ["might improve", "can't have improved", "may have improved", "could improve", "needn't have improved"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/modal-verbs-quiz.html",
+          "sourceName": "GrammarBank - Modal Verbs Quiz"
+        },
+        {
+          "bodyTypst": "A good supervisor ---- with people who attempt too much than with those who try too little.\n\nA) shouldn't work\nB) would rather work\nC) had better not work\nD) is not able to work\nE) can't work",
+          "alternatives": ["shouldn't work", "would rather work", "had better not work", "is not able to work", "can't work"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/modal-verbs-quiz.html",
+          "sourceName": "GrammarBank - Modal Verbs Quiz"
+        },
+        {
+          "bodyTypst": "If you want to get a good night's sleep, you ---- any tea or coffee in the evenings.\n\nA) would rather drink\nB) don't have to drink\nC) mustn't drink\nD) were able to drink\nE) could drink",
+          "alternatives": ["would rather drink", "don't have to drink", "mustn't drink", "were able to drink", "could drink"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/modal-verbs-quiz.html",
+          "sourceName": "GrammarBank - Modal Verbs Quiz"
+        },
+        {
+          "bodyTypst": "Road conditions ---- much in the last fifteen years, since the government hasn't invested anything.\n\nA) must have improved\nB) needn't have improved\nC) didn't need to improve\nD) ought to have improved\nE) can't have improved",
+          "alternatives": ["must have improved", "needn't have improved", "didn't need to improve", "ought to have improved", "can't have improved"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/modal-verbs-quiz.html",
+          "sourceName": "GrammarBank - Modal Verbs Quiz"
+        },
+        {
+          "bodyTypst": "He ---- technical support when his computer broke down because he doesn't know much about computers.\n\nA) must have had\nB) needn't have had\nC) can't have had\nD) didn't have to have\nE) shouldn't have had",
+          "alternatives": ["must have had", "needn't have had", "can't have had", "didn't have to have", "shouldn't have had"],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/modal-verbs-quiz.html",
+          "sourceName": "GrammarBank - Modal Verbs Quiz"
+        },
+        {
+          "bodyTypst": "The new steam powered and mechanized farm equipment ---- the work easier but they couldn't get it to work.\n\nA) was able to make\nB) can't have made\nC) didn't have to make\nD) might have made\nE) had better make",
+          "alternatives": ["was able to make", "can't have made", "didn't have to make", "might have made", "had better make"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/modal-verbs-quiz.html",
+          "sourceName": "GrammarBank - Modal Verbs Quiz"
+        },
+        {
+          "bodyTypst": "If you plan to take a long trip in the car, you must get a full tank of gas or you ---- out of gas.\n\nA) have to run\nB) should have run\nC) had better run\nD) might run\nE) are used to running",
+          "alternatives": ["have to run", "should have run", "had better run", "might run", "are used to running"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/modal-verbs-quiz.html",
+          "sourceName": "GrammarBank - Modal Verbs Quiz"
+        }
+      ]
+    },
+    {
+      "name": "Past perfect tense",
+      "questions": [
+        {
+          "bodyTypst": "No clinical studies ---- in this child disease research so far.\n\nA) had completed\nB) will be completed\nC) have completed\nD) had to complete\nE) have been completed",
+          "alternatives": ["had completed", "will be completed", "have completed", "had to complete", "have been completed"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/passive-causative-quiz.html",
+          "sourceName": "GrammarBank - Passive & Causative Quiz"
+        },
+        {
+          "bodyTypst": "If you would like to know what ---- in the project so far, you ---- the full report at our website.\n\nA) has been completed / may be visited\nB) completed / will be found\nC) will be completed / should be found\nD) was completed / had been found\nE) has been completed / can find",
+          "alternatives": ["has been completed / may be visited", "completed / will be found", "will be completed / should be found", "was completed / had been found", "has been completed / can find"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/passive-causative-quiz.html",
+          "sourceName": "GrammarBank - Passive & Causative Quiz"
+        },
+        {
+          "bodyTypst": "If you ---- to my advice in the first place, you wouldn't be in this mess right now.\n\nA) listen\nB) will listen\nC) had listened\nD) listened",
+          "alternatives": ["listen", "will listen", "had listened", "listened"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/if-clauses-quiz.html",
+          "sourceName": "GrammarBank - If Clauses Quiz"
+        },
+        {
+          "bodyTypst": "Had I known the carpenter was going to take three days, I ---- the materials and done the work myself.\n\nA) will get\nB) would have gotten\nC) might get\nD) will have gotten",
+          "alternatives": ["will get", "would have gotten", "might get", "will have gotten"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/if-clauses-quiz.html",
+          "sourceName": "GrammarBank - If Clauses Quiz"
+        }
+      ]
+    },
+    {
+      "name": "Present perfect tense",
+      "questions": [
+        {
+          "bodyTypst": "Most of the patient visits ---- to physician assistants in the recent years all around the world.\n\nA) have been made\nB) was made\nC) will have been made\nD) have made\nE) make",
+          "alternatives": ["have been made", "was made", "will have been made", "have made", "make"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/passive-causative-quiz.html",
+          "sourceName": "GrammarBank - Passive & Causative Quiz"
+        },
+        {
+          "bodyTypst": "Linda ---- a vegetarian three years ago after watching a documentary on animal rights, and she ---- meat since then.\n\nA) became / hasn't eaten\nB) had become / doesn't eat\nC) was becoming / isn't eating\nD) would become / didn't eat\nE) has become / hadn't eaten",
+          "alternatives": ["became / hasn't eaten", "had become / doesn't eat", "was becoming / isn't eating", "would become / didn't eat", "has become / hadn't eaten"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/esl-grammar-quiz.html",
+          "sourceName": "GrammarBank - ESL Grammar Quiz"
+        },
+        {
+          "bodyTypst": "The critics ---- that the review ---- as a book in English and in many other languages.\n\nA) are said / could be published\nB) say / can be published\nC) will say / had been published\nD) said / may publish\nE) have said / should publish",
+          "alternatives": ["are said / could be published", "say / can be published", "will say / had been published", "said / may publish", "have said / should publish"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/passive-causative-quiz.html",
+          "sourceName": "GrammarBank - Passive & Causative Quiz"
+        },
+        {
+          "bodyTypst": "These differences between two photographs ---- with the help of Photoshop.\n\nA) should remove\nB) must have removed\nC) have to remove\nD) could have been removed\nE) were able to remove",
+          "alternatives": ["should remove", "must have removed", "have to remove", "could have been removed", "were able to remove"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/passive-causative-quiz.html",
+          "sourceName": "GrammarBank - Passive & Causative Quiz"
+        }
+      ]
+    },
+    {
+      "name": "Simple past tense",
+      "questions": [
+        {
+          "bodyTypst": "New legislation ---- in congress but it ---- by many.\n\nA) was introduced / wasn't accepted\nB) introduced / didn't accept\nC) will be introduced / isn't accepted\nD) introduced / hadn't been accepted\nE) is introduced / won't accept",
+          "alternatives": ["was introduced / wasn't accepted", "introduced / didn't accept", "will be introduced / isn't accepted", "introduced / hadn't been accepted", "is introduced / won't accept"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/passive-causative-quiz.html",
+          "sourceName": "GrammarBank - Passive & Causative Quiz"
+        },
+        {
+          "bodyTypst": "The government ---- that the tasks ---- with great success.\n\nA) is confirming / maintained\nB) confirms / have been maintained\nC) was confirmed / have maintained\nD) will confirm / had been maintained\nE) confirmed / are maintaining",
+          "alternatives": ["is confirming / maintained", "confirms / have been maintained", "was confirmed / have maintained", "will confirm / had been maintained", "confirmed / are maintaining"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/passive-causative-quiz.html",
+          "sourceName": "GrammarBank - Passive & Causative Quiz"
+        },
+        {
+          "bodyTypst": "Due to ---- a lack of production ---- increasing housing prices, Liverpool is now ranked as one of the least affordable cities.\n\nA) neither / nor\nB) no sooner / than\nC) scarcely / before\nD) both / and\nE) hardly / when",
+          "alternatives": ["neither / nor", "no sooner / than", "scarcely / before", "both / and", "hardly / when"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/conjunctions-quiz.html",
+          "sourceName": "GrammarBank - Conjunctions Quiz"
+        }
+      ]
+    },
+    {
+      "name": "Simple present tense",
+      "questions": [
+        {
+          "bodyTypst": "These clothes ---- for daily use so you ---- them wherever you want.\n\nA) design / should be worn\nB) will be designed / must wear\nC) are designed / can wear\nD) were designed / could be worn\nE) designed / might be worn",
+          "alternatives": ["design / should be worn", "will be designed / must wear", "are designed / can wear", "were designed / could be worn", "designed / might be worn"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/passive-causative-quiz.html",
+          "sourceName": "GrammarBank - Passive & Causative Quiz"
+        },
+        {
+          "bodyTypst": "Since David lives in Mexico but speaks no Spanish, I wonder ---- he manages to talk to his neighbours and do his shopping.\n\nA) which\nB) what\nC) how\nD) whom\nE) why",
+          "alternatives": ["which", "what", "how", "whom", "why"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/esl-grammar-quiz.html",
+          "sourceName": "GrammarBank - ESL Grammar Quiz"
+        },
+        {
+          "bodyTypst": "Continued high-blood pressure is dangerous ---- it can increase the risk of heart disease and stroke.\n\nA) however\nB) so that\nC) as\nD) no matter although\nE) for instance",
+          "alternatives": ["however", "so that", "as", "no matter although", "for instance"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/conjunctions-quiz.html",
+          "sourceName": "GrammarBank - Conjunctions Quiz"
+        }
+      ]
+    },
+    {
+      "name": "Verb to be (present) / greetings & wh-questions",
+      "questions": [
+        {
+          "bodyTypst": "------- the president began to speak, protestors began chanting anti-war slogans.\n\nA) Already\nB) Even\nC) No longer\nD) The moment\nE) Provided that",
+          "alternatives": ["Already", "Even", "No longer", "The moment", "Provided that"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/esl-grammar-quiz.html",
+          "sourceName": "GrammarBank - ESL Grammar Quiz"
+        },
+        {
+          "bodyTypst": "------- a loss ---- a draw will be any good to us in this game. We have to win, or we're out of the league cup.\n\nA) Both / and\nB) Neither / nor\nC) Either / or\nD) Hardly / when\nE) Such / as",
+          "alternatives": ["Both / and", "Neither / nor", "Either / or", "Hardly / when", "Such / as"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/esl-grammar-quiz.html",
+          "sourceName": "GrammarBank - ESL Grammar Quiz"
+        },
+        {
+          "bodyTypst": "Mike has been told he will have to pay the fine ---- his high rank in the military.\n\nA) even if\nB) furthermore\nC) on grounds that\nD) despite\nE) on purpose that",
+          "alternatives": ["even if", "furthermore", "on grounds that", "despite", "on purpose that"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.grammarbank.com/conjunctions-quiz.html",
+          "sourceName": "GrammarBank - Conjunctions Quiz"
+        }
+      ]
+    }
+  ]
+}

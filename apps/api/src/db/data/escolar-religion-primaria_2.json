@@ -1,0 +1,24 @@
+{
+  "courseName": "Educación Religiosa",
+  "gradeLevel": "primaria_2",
+  "topics": [
+    {
+      "name": "Valores cristianos y la convivencia fraterna",
+      "questions": [
+        {
+          "bodyTypst": "El orden y cuidado de nuestras cosas y espacios nos ayuda a:",
+          "alternatives": [
+            "El cuidado y aseo personal de las cosas y espacios",
+            "Usar mejor nuestro tiempo y sacar provecho de nuestras actividades",
+            "Mantener la disciplina en la escuela",
+            "Ser obedientes con los adultos"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/es/quiz/10902136/evaluacion-de-etica-y-valores",
+          "sourceName": "Evaluación de Ética y Valores - GoConqr"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "courseName": "Matemática",
+  "gradeLevel": "primaria_3",
+  "topics": [
+    {
+      "name": "Suma y resta (sin y con canje)",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál es la suma de 65 y 27?",
+          "alternatives": ["38", "42", "82", "92"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 3.er grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Resuelve la resta: $64 - 35$",
+          "alternatives": ["21", "29", "31", "39"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 3.er grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Rosa guarda 63 botones en un frasco. 28 de estos botones son blancos y los demás son negros. ¿Cuántos botones son negros?",
+          "alternatives": ["35 botones.", "63 botones.", "91 botones."],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 3.er grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "En un taller de danzas, hay 23 niñas y 17 niños. ¿Cuántas niñas más que niños hay en este taller?",
+          "alternatives": ["40 niñas.", "23 niñas.", "17 niñas.", "6 niñas."],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 3.er grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Micaela llevaba una canasta con 32 huevos. En el camino, se le rompieron algunos huevos. Ahora, le quedan 18 huevos sin romper. ¿Cuántos huevos se le rompieron a Micaela?",
+          "alternatives": ["14 huevos.", "18 huevos.", "50 huevos."],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 3.er grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Medidas de longitud, peso, capacidad, tiempo y dinero",
+      "questions": [
+        {
+          "bodyTypst": "Amelia tiene S/38 y quiere comprar un poncho que cuesta S/55. ¿Cuánto dinero le falta a Amelia para comprar el poncho?",
+          "alternatives": ["S/17", "S/23", "S/93"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 3.er grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "División exacta e inexacta",
+      "questions": [
+        {
+          "bodyTypst": "Sandra tiene 68 pescados. ¿Cuántas bandejas con 10 pescados cada una puede armar Sandra con los 68 pescados?",
+          "alternatives": ["10 bandejas.", "8 bandejas.", "7 bandejas.", "6 bandejas."],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 3.er grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Números hasta 10 000",
+      "questions": [
+        {
+          "bodyTypst": "Un profesor necesita repartir 43 hojas de papel a sus estudiantes. ¿De qué paquete puede sacar esta cantidad de hojas?",
+          "alternatives": ["Un paquete de 34 hojas.", "Un paquete de 40 hojas.", "Un paquete de 50 hojas."],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 3.er grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Patrones y secuencias",
+      "questions": [
+        {
+          "bodyTypst": "Carmen colecciona piedritas para hacer collares. Ella las cuenta siguiendo esta secuencia: 27, 31, 35, 39, 43, … ¿Qué debes hacer para encontrar el número que sigue?",
+          "alternatives": ["Sumar 1 al 43.", "Sumar 3 al 43.", "Sumar 4 al 43.", "Sumar 7 al 43."],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 3.er grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Multiplicación: tablas y algoritmo",
+      "questions": [
+        {
+          "bodyTypst": "En el kiosco se realiza el siguiente canje: 3 tapitas por 1 oso de peluche. Jaime quiere canjear 4 osos de peluche. ¿Cuántas tapitas necesitará?",
+          "alternatives": ["3 tapitas.", "4 tapitas.", "7 tapitas.", "12 tapitas."],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 3.er grado de primaria (2021)"
+        }
+      ]
+    }
+  ]
+}

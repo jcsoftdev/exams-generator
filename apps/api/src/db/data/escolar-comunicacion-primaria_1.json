@@ -1,0 +1,59 @@
+{
+  "courseName": "Comunicación",
+  "gradeLevel": "primaria_1",
+  "topics": [
+    {
+      "name": "Comprensión lectora literal",
+      "questions": [
+        {
+          "bodyTypst": "Lee el texto.\n\nDespués de comer, Pedro se dio cuenta de que su perrito no estaba en la casa. Preocupado, salió con su papá a buscarlo a la calle. Luego de algunos minutos, lo encontró jugando en el parque. Pedro se puso muy feliz al ver que su perrito estaba bien. Después, él se fue a su escuela.\n\n¿Dónde encontró Pedro a su perrito?",
+          "alternatives": [
+            "En su casa.",
+            "En el parque.",
+            "En su escuela."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-1.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 1.er grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-1.pdf"
+        },
+        {
+          "bodyTypst": "Escucha (lee) este cuento.\n\nUn día, el loro y el sapo paseaban por la selva. De pronto, escucharon un ruido muy extraño y corrieron a ver qué estaba pasando. Al llegar al lugar de los ruidos, se dieron cuenta de que el mono estaba cortando un árbol. El loro preguntó al mono: —¿Qué estás haciendo? El mono le respondió: —Estoy cortando un árbol para hacerme una mesa nueva. Muy preocupado, el loro le dijo: —Pero para eso no necesitas cortar un árbol. Debemos cuidar la naturaleza. El sapo le dijo: —Cerca del río hay muchos troncos secos de árboles que se cayeron. Puedes hacer tu mesa con uno de esos troncos. Así, no tendrás que cortar un nuevo árbol. El mono se sintió muy triste. Él no sabía que proteger los árboles era importante. Entonces, el mono, el loro y el sapo decidieron plantar muchos árboles para reemplazar el árbol que el mono había cortado. Por eso, desde ese día, el mono cuidó los árboles de la selva.\n\nEn este cuento, ¿dónde estaban el loro, el sapo y el mono?",
+          "alternatives": [
+            "En el mar.",
+            "En la sierra.",
+            "En la selva."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-1.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 1.er grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-1.pdf"
+        },
+        {
+          "bodyTypst": "Escucha (lee) este cuento.\n\nUn día, el loro y el sapo paseaban por la selva. De pronto, escucharon un ruido muy extraño y corrieron a ver qué estaba pasando. Al llegar al lugar de los ruidos, se dieron cuenta de que el mono estaba cortando un árbol. El loro preguntó al mono: —¿Qué estás haciendo? El mono le respondió: —Estoy cortando un árbol para hacerme una mesa nueva. Muy preocupado, el loro le dijo: —Pero para eso no necesitas cortar un árbol. Debemos cuidar la naturaleza. El sapo le dijo: —Cerca del río hay muchos troncos secos de árboles que se cayeron. Puedes hacer tu mesa con uno de esos troncos. Así, no tendrás que cortar un nuevo árbol. El mono se sintió muy triste. Él no sabía que proteger los árboles era importante. Entonces, el mono, el loro y el sapo decidieron plantar muchos árboles para reemplazar el árbol que el mono había cortado. Por eso, desde ese día, el mono cuidó los árboles de la selva.\n\n¿Qué quería hacer el mono con el tronco del árbol?",
+          "alternatives": [
+            "Una cama.",
+            "Una mesa.",
+            "Una silla."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-1.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 1.er grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-1.pdf"
+        },
+        {
+          "bodyTypst": "Escucha (lee) este cuento.\n\nUn día, el loro y el sapo paseaban por la selva. De pronto, escucharon un ruido muy extraño y corrieron a ver qué estaba pasando. Al llegar al lugar de los ruidos, se dieron cuenta de que el mono estaba cortando un árbol. El loro preguntó al mono: —¿Qué estás haciendo? El mono le respondió: —Estoy cortando un árbol para hacerme una mesa nueva. Muy preocupado, el loro le dijo: —Pero para eso no necesitas cortar un árbol. Debemos cuidar la naturaleza. El sapo le dijo: —Cerca del río hay muchos troncos secos de árboles que se cayeron. Puedes hacer tu mesa con uno de esos troncos. Así, no tendrás que cortar un nuevo árbol. El mono se sintió muy triste. Él no sabía que proteger los árboles era importante. Entonces, el mono, el loro y el sapo decidieron plantar muchos árboles para reemplazar el árbol que el mono había cortado. Por eso, desde ese día, el mono cuidó los árboles de la selva.\n\nSegún el sapo, ¿dónde hay troncos secos?",
+          "alternatives": [
+            "Cerca del mar.",
+            "Cerca del cerro.",
+            "Cerca del río."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-1.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 1.er grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-1.pdf"
+        }
+      ]
+    }
+  ]
+}

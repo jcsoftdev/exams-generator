@@ -1,0 +1,198 @@
+{
+  "courseName": "Educación para el Trabajo",
+  "gradeLevel": "secundaria_5",
+  "topics": [
+    {
+      "name": "Contabilidad básica y costos",
+      "questions": [
+        {
+          "bodyTypst": "¿Dónde se localizan las cuentas bancarias de una empresa?",
+          "alternatives": [
+            "Activo exigible",
+            "Activo realizable",
+            "Activo disponible",
+            "Activo fijo"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/es-ES/p/5512119",
+          "sourceName": "GoConqr - Test de Contabilidad Básica"
+        },
+        {
+          "bodyTypst": "Los activos y derechos de una empresa se representan en:",
+          "alternatives": [
+            "Pasivos",
+            "Activos",
+            "Patrimonio",
+            "Ninguna de las anteriores"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/es-ES/p/5512119",
+          "sourceName": "GoConqr - Test de Contabilidad Básica"
+        },
+        {
+          "bodyTypst": "La cuenta Caja se localiza en:",
+          "alternatives": [
+            "Activo exigible",
+            "Activo realizable",
+            "Activo disponible",
+            "Activo fijo"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/es-ES/p/5512119",
+          "sourceName": "GoConqr - Test de Contabilidad Básica"
+        },
+        {
+          "bodyTypst": "¿Cuál es la ecuación contable correcta?",
+          "alternatives": [
+            "Pasivo = Activo + Patrimonio",
+            "Patrimonio = Activo - Pasivo",
+            "Patrimonio = Activo + Pasivo",
+            "Activo = Pasivo - Patrimonio"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/es-ES/p/5512119",
+          "sourceName": "GoConqr - Test de Contabilidad Básica"
+        },
+        {
+          "bodyTypst": "Las cuentas de resultado son:",
+          "alternatives": [
+            "Ingresos y activos",
+            "Pasivos y activo",
+            "Ingresos y egresos",
+            "Ninguna de las anteriores"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/es-ES/p/5512119",
+          "sourceName": "GoConqr - Test de Contabilidad Básica"
+        },
+        {
+          "bodyTypst": "¿En qué clasificación de costos se incluye el costo de la mano de obra?",
+          "alternatives": [
+            "Costo estándar",
+            "Costo variable",
+            "Costo fijo",
+            "Costo total"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.educaplay.com/learning-resources/2133997-punto_de_equilibrio.html",
+          "sourceName": "Educaplay - Punto de Equilibrio Quiz"
+        },
+        {
+          "bodyTypst": "¿Cómo se clasifican los costos de energía eléctrica de una oficina de proyecto?",
+          "alternatives": [
+            "Costo variable",
+            "Costo mensual",
+            "Costo fijo",
+            "Costo total"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.educaplay.com/learning-resources/2133997-punto_de_equilibrio.html",
+          "sourceName": "Educaplay - Punto de Equilibrio Quiz"
+        },
+        {
+          "bodyTypst": "¿Qué son los costos totales?",
+          "alternatives": [
+            "Suma de costos fijos más costos variables",
+            "Suma de todos los costos mensuales",
+            "Suma de todos los costos anuales",
+            "Suma de costos semivariables y semifijos"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.educaplay.com/learning-resources/2133997-punto_de_equilibrio.html",
+          "sourceName": "Educaplay - Punto de Equilibrio Quiz"
+        },
+        {
+          "bodyTypst": "Si el Precio de Venta es 100, Costo Variable es 75 y Costo Total es 5000, ¿cuál es el punto de equilibrio en unidades?",
+          "alternatives": [
+            "100 unidades",
+            "200 unidades",
+            "50 unidades",
+            "150 unidades"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.educaplay.com/learning-resources/2133997-punto_de_equilibrio.html",
+          "sourceName": "Educaplay - Punto de Equilibrio Quiz"
+        },
+        {
+          "bodyTypst": "Si el Precio de Venta es 100, Costo Variable es 75 y Costo Total es 5000, ¿cuál es el punto de equilibrio en valores monetarios?",
+          "alternatives": [
+            "Q200.00",
+            "Q25,000.00",
+            "Q50,000.00",
+            "Q20,000.00"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.educaplay.com/learning-resources/2133997-punto_de_equilibrio.html",
+          "sourceName": "Educaplay - Punto de Equilibrio Quiz"
+        }
+      ]
+    },
+    {
+      "name": "Comercialización y marketing",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuáles son los cuatro componentes principales del marketing mix?",
+          "alternatives": [
+            "Producto, Pago, Colocación, Publicidad",
+            "Producto, Precio, Plaza, Promoción",
+            "Producción, Precios, Puntos de venta, Promoción",
+            "Paquete, Precio, Plaza, Promoción"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.econosublime.com/2023/08/producto-final-nuestro-marketing-mix.html",
+          "sourceName": "EconSublime - Producto Final Marketing Mix"
+        },
+        {
+          "bodyTypst": "¿Cuál de las siguientes herramientas de marketing se utiliza para comunicar el valor a los clientes?",
+          "alternatives": [
+            "Distribución",
+            "Precios",
+            "Promoción",
+            "Diseño de producto"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.econosublime.com/2023/08/producto-final-nuestro-marketing-mix.html",
+          "sourceName": "EconSublime - Producto Final Marketing Mix"
+        },
+        {
+          "bodyTypst": "¿Qué elementos deben incluirse en la política de producto?",
+          "alternatives": [
+            "Solo el punto de precio",
+            "Características del producto, nombre de marca, logo, empaque y servicios posventa",
+            "Canales de distribución exclusivamente",
+            "Presupuestos de promoción"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.econosublime.com/2023/08/producto-final-nuestro-marketing-mix.html",
+          "sourceName": "EconSublime - Producto Final Marketing Mix"
+        },
+        {
+          "bodyTypst": "¿Cuántos segmentos de clientes deben considerarse en las decisiones de precios?",
+          "alternatives": [
+            "Solo un segmento",
+            "Múltiples segmentos con posibles variaciones de precio",
+            "Ningún segmento requiere consideración",
+            "Todos los clientes reciben el mismo precio"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.econosublime.com/2023/08/producto-final-nuestro-marketing-mix.html",
+          "sourceName": "EconSublime - Producto Final Marketing Mix"
+        }
+      ]
+    }
+  ]
+}

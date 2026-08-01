@@ -1,0 +1,144 @@
+{
+  "courseName": "Arte y Cultura",
+  "gradeLevel": "secundaria_4",
+  "topics": [
+    {
+      "name": "Cerámica y artesanía tradicional",
+      "questions": [
+        {
+          "bodyTypst": "Con los nazcas encontramos a los mejores maestros alfareros por su cerámica...",
+          "alternatives": [
+            "asa estribo",
+            "gollete",
+            "ideográfica",
+            "pictórica",
+            "escultórica"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/los-nascas-ubicacion-origen-caracteristicas-politica-religion-economia-ceramica-intermedio-temprano-ejemplos-preguntas-resueltas-de-historia-del-peru-preuniversitario-secundaria-word-pdf.html",
+          "sourceName": "Rubiños - Cultura Nazca (banco de preguntas resueltas de Historia del Perú)"
+        },
+        {
+          "bodyTypst": "El huaco retrato es un tipo de cerámica:",
+          "alternatives": [
+            "pictográfica.",
+            "escultórica.",
+            "ideográfica.",
+            "jeroglífica.",
+            "antropomorfa."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/los-moches-ubicacion-origen-caracteristicas-politica-religion-economia-metalurgia-ceramica-ejemplos-preguntas-resueltas-de-historia-del-peru-preuniversitario-secundaria-word-pdf.html",
+          "sourceName": "Rubiños - Cultura Mochica (banco de preguntas resueltas de Historia del Perú)"
+        },
+        {
+          "bodyTypst": "La cerámica de la cultura Vicús sobresale por:",
+          "alternatives": [
+            "desarrollar la técnica de horror al vacío.",
+            "botellas con asa estribo.",
+            "botellas silbadoras.",
+            "poscocción.",
+            "aplicar la técnica del anillado."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/los-paracas-en-periodo-formativo-ejemplos-preguntas-resueltas-de-historia-del-peru-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Cultura Paracas (banco de preguntas resueltas de Historia del Perú)"
+        }
+      ]
+    },
+    {
+      "name": "Historia del arte peruano",
+      "questions": [
+        {
+          "bodyTypst": "Diego Quispe Tito representa a la escuela de pintura:",
+          "alternatives": [
+            "cusqueña.",
+            "limeña.",
+            "iqueña.",
+            "ayacuchana.",
+            "iquiteña."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/educacion-y-arte--en-la-epoca-de-la-colonial-en-el-peru-rol-de-las-ordenes-religiosas-y-de-la-mujer-en-la-sociedad-virreinal-ejemplos-preguntas-resueltas-de-historia-preuniversitaria-secundaria-word-pdf.html",
+          "sourceName": "Rubiños - Educación y arte en la época colonial del Perú (banco de preguntas resueltas)"
+        },
+        {
+          "bodyTypst": "Las esculturas de madera cubiertas con pan de oro y colocadas detrás del altar se llaman:",
+          "alternatives": [
+            "barroco",
+            "tallado",
+            "retablo",
+            "santos",
+            "pinturas"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/educacion-y-arte--en-la-epoca-de-la-colonial-en-el-peru-rol-de-las-ordenes-religiosas-y-de-la-mujer-en-la-sociedad-virreinal-ejemplos-preguntas-resueltas-de-historia-preuniversitaria-secundaria-word-pdf.html",
+          "sourceName": "Rubiños - Educación y arte en la época colonial del Perú (banco de preguntas resueltas)"
+        },
+        {
+          "bodyTypst": "La iconografía mochica -lenguaje figurativo expresado en cerámica, arquitectura, textiles y metales- no fue un componente decorativo sino que, dentro de las liturgias mochica, funcionó principalmente como:",
+          "alternatives": [
+            "una herramienta ideológica para someter militarmente a otros pueblos del intermedio temprano.",
+            "un medio de cohesión entre la élite y el pueblo en torno a un sistema de creencias.",
+            "una expresión subjetiva e individual de los artesanos especializados de moche.",
+            "una forma de culto al dios degollador restringido a las élites."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/los-moches-ubicacion-origen-caracteristicas-politica-religion-economia-metalurgia-ceramica-ejemplos-preguntas-resueltas-de-historia-del-peru-preuniversitario-secundaria-word-pdf.html",
+          "sourceName": "Rubiños - Cultura Mochica (banco de preguntas resueltas de Historia del Perú)"
+        }
+      ]
+    },
+    {
+      "name": "Artes visuales contemporáneas",
+      "questions": [
+        {
+          "bodyTypst": "Movimiento artístico de finales de los años cincuenta, con mayor auge en los setenta del siglo XX, basado en acciones improvisadas del artista a modo de “collage” que involucran al público en la acción dramática:",
+          "alternatives": [
+            "Happening",
+            "Performance",
+            "Body art",
+            "Teatro invisible",
+            "Micro teatro"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/4031525/simulador-de-historia-del-arte",
+          "sourceName": "GoConqr - Simulador de Historia del Arte"
+        },
+        {
+          "bodyTypst": "La obra pictórica “La persistencia de la memoria” (“Los relojes blandos”) pertenece al estilo ___ y su autor es ___:",
+          "alternatives": [
+            "Realista, Botticelli.",
+            "Surrealista, Salvador Dalí.",
+            "Arte sacro, Anónimo.",
+            "Arte contemporáneo, Picasso.",
+            "Abstracto, Kandinsky."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/4031525/simulador-de-historia-del-arte",
+          "sourceName": "GoConqr - Simulador de Historia del Arte"
+        },
+        {
+          "bodyTypst": "Es el arte oficial de la Revolución Francesa:",
+          "alternatives": [
+            "Neoclasicismo",
+            "Romanticismo",
+            "Rococó"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/es/quiz/15750108/examen-artistica",
+          "sourceName": "GoConqr - Examen artística"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "courseName": "Educación Física",
+  "gradeLevel": "secundaria_1",
+  "topics": [
+    {
+      "name": "Condición física: resistencia, fuerza y flexibilidad",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál es el propósito principal de realizar ejercicio aeróbico?",
+          "alternatives": [
+            "Desarrollar la flexibilidad.",
+            "Desarrollar la potencia muscular.",
+            "Desarrollar la resistencia cardiovascular."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/concursoascenso2018/ascensoinstrumentos/pdfs/ASCENSO/A05-EBRP-12%20VERSION%202/A05-EBRP-12-VERSION%202%20-%20EDUCACION%20FISICA.pdf",
+          "sourceName": "MINEDU - Concurso para el Ascenso de Escala en la Carrera Publica Magisterial 2018, Area Educacion Fisica (A05-EBRP-12), Hoja de Respuestas p.81"
+        },
+        {
+          "bodyTypst": "¿Cuál de las siguientes actividades desarrolla la fuerza explosiva?",
+          "alternatives": [
+            "Realizar una carrera uniforme mantenida durante diez minutos.",
+            "Realizar flexiones consecutivas de tronco durante un minuto.",
+            "Lanzar el balón medicinal lo más lejos posible."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/concursoascenso2018/ascensoinstrumentos/pdfs/ASCENSO/A05-EBRP-12%20VERSION%202/A05-EBRP-12-VERSION%202%20-%20EDUCACION%20FISICA.pdf",
+          "sourceName": "MINEDU - Concurso para el Ascenso de Escala en la Carrera Publica Magisterial 2018, Area Educacion Fisica (A05-EBRP-12), Hoja de Respuestas p.81"
+        },
+        {
+          "bodyTypst": "¿Cuál de las siguientes actividades implica predominantemente la resistencia aeróbica?",
+          "alternatives": [
+            "Realizar una carrera continua a intensidad media durante 15 minutos.",
+            "Realizar en 20 segundos la mayor cantidad de zancadas con flexión profunda de piernas.",
+            "Realizar una carrera de velocidad recorriendo la mayor distancia posible en un periodo de tiempo máximo de dos minutos con 30 segundos."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/concursoascenso2018/ascensoinstrumentos/pdfs/ASCENSO/A05-EBRP-12%20VERSION%202/A05-EBRP-12-VERSION%202%20-%20EDUCACION%20FISICA.pdf",
+          "sourceName": "MINEDU - Concurso para el Ascenso de Escala en la Carrera Publica Magisterial 2018, Area Educacion Fisica (A05-EBRP-12), Hoja de Respuestas p.81"
+        },
+        {
+          "bodyTypst": "¿Qué tipo de prueba es la carrera de 400 metros planos?",
+          "alternatives": [
+            "De potencia.",
+            "De velocidad.",
+            "De resistencia."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/concursoascenso2018/ascensoinstrumentos/pdfs/ASCENSO/A05-EBRP-12%20VERSION%202/A05-EBRP-12-VERSION%202%20-%20EDUCACION%20FISICA.pdf",
+          "sourceName": "MINEDU - Concurso para el Ascenso de Escala en la Carrera Publica Magisterial 2018, Area Educacion Fisica (A05-EBRP-12), Hoja de Respuestas p.81"
+        },
+        {
+          "bodyTypst": "En el área de Educación Física, ¿qué tipo de resistencia se debe evitar trabajar con los estudiantes?",
+          "alternatives": [
+            "La resistencia aeróbica.",
+            "La resistencia anaeróbica láctica.",
+            "La resistencia anaeróbica aláctica."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/concursoascenso2018/ascensoinstrumentos/pdfs/ASCENSO/A05-EBRP-12%20VERSION%202/A05-EBRP-12-VERSION%202%20-%20EDUCACION%20FISICA.pdf",
+          "sourceName": "MINEDU - Concurso para el Ascenso de Escala en la Carrera Publica Magisterial 2018, Area Educacion Fisica (A05-EBRP-12), Hoja de Respuestas p.81"
+        },
+        {
+          "bodyTypst": "En las sesiones de Educación Física, ¿qué tipo de fuerza NO es recomendable trabajar con los estudiantes?",
+          "alternatives": [
+            "Fuerza máxima.",
+            "Fuerza explosiva.",
+            "Fuerza resistencia."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/concursoascenso2018/ascensoinstrumentos/pdfs/ASCENSO/A05-EBRP-12%20VERSION%202/A05-EBRP-12-VERSION%202%20-%20EDUCACION%20FISICA.pdf",
+          "sourceName": "MINEDU - Concurso para el Ascenso de Escala en la Carrera Publica Magisterial 2018, Area Educacion Fisica (A05-EBRP-12), Hoja de Respuestas p.81"
+        },
+        {
+          "bodyTypst": "Un docente utiliza una prueba de esfuerzo que consiste en realizar unos minutos de trote suave con el propósito de tener una referencia de la condición física de los estudiantes. ¿Cuál de las siguientes técnicas es la forma más precisa de evaluar la condición física de los estudiantes después de la prueba de esfuerzo?",
+          "alternatives": [
+            "Observar la postura corporal.",
+            "Registrar la frecuencia respiratoria.",
+            "Controlar la cantidad de pulsaciones."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/concursoascenso2018/ascensoinstrumentos/pdfs/ASCENSO/A05-EBRP-12%20VERSION%202/A05-EBRP-12-VERSION%202%20-%20EDUCACION%20FISICA.pdf",
+          "sourceName": "MINEDU - Concurso para el Ascenso de Escala en la Carrera Publica Magisterial 2018, Area Educacion Fisica (A05-EBRP-12), Hoja de Respuestas p.81"
+        },
+        {
+          "bodyTypst": "¿Cuál de las siguientes afirmaciones respecto al desarrollo de las capacidades físicas corresponde al enfoque dinámico e integrador de la Educación Física?",
+          "alternatives": [
+            "El desarrollo de las capacidades físicas hace posible la actividad física deportiva exitosa.",
+            "El desarrollo de las capacidades físicas es un factor determinante para la mejora del estado físico.",
+            "El desarrollo de las capacidades físicas es el pilar de mejora de la actividad cotidiana en beneficio de la salud."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/concursoascenso2018/ascensoinstrumentos/pdfs/ASCENSO/A05-EBRP-12%20VERSION%202/A05-EBRP-12-VERSION%202%20-%20EDUCACION%20FISICA.pdf",
+          "sourceName": "MINEDU - Concurso para el Ascenso de Escala en la Carrera Publica Magisterial 2018, Area Educacion Fisica (A05-EBRP-12), Hoja de Respuestas p.81"
+        }
+      ]
+    },
+    {
+      "name": "Deportes de conjunto: fútbol, vóley y básquet",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuánto mide la cancha de vóley?",
+          "alternatives": [
+            "8 m x 16 m",
+            "18 m x 8 m",
+            "9 m x 18 m"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/3000518/cuestionario-voleibol",
+          "sourceName": "GoConqr - Cuestionario Voleibol"
+        },
+        {
+          "bodyTypst": "¿Cuántos jugadores integran un equipo de vóley?",
+          "alternatives": [
+            "Un total de 10, 5 titulares y 5 suplentes.",
+            "Un total de 14, 6 titulares y 8 suplentes.",
+            "Un total de 12, 6 titulares y 6 suplentes."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/3000518/cuestionario-voleibol",
+          "sourceName": "GoConqr - Cuestionario Voleibol"
+        },
+        {
+          "bodyTypst": "¿Cómo se llama el jugador que utiliza un uniforme diferente al resto del equipo?",
+          "alternatives": [
+            "Central",
+            "Centro delantero",
+            "Líbero"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/3000518/cuestionario-voleibol",
+          "sourceName": "GoConqr - Cuestionario Voleibol"
+        },
+        {
+          "bodyTypst": "¿Cuáles son los fundamentos básicos del vóley?",
+          "alternatives": [
+            "Pase, recepción, voleo",
+            "Saque, toque, pase",
+            "Saque, recepción, voleo"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/3000518/cuestionario-voleibol",
+          "sourceName": "GoConqr - Cuestionario Voleibol"
+        },
+        {
+          "bodyTypst": "¿Cuántos toques puede realizar como máximo cada equipo por jugada?",
+          "alternatives": [
+            "Cada equipo puede realizar como máximo hasta 5 toques.",
+            "Cada equipo puede realizar como máximo hasta 4 toques.",
+            "Cada equipo puede realizar como máximo hasta 3 toques."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/3000518/cuestionario-voleibol",
+          "sourceName": "GoConqr - Cuestionario Voleibol"
+        },
+        {
+          "bodyTypst": "¿Desde dónde se realiza el saque en vóley?",
+          "alternatives": [
+            "Línea lateral",
+            "Línea media",
+            "Línea de fondo"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/3000518/cuestionario-voleibol",
+          "sourceName": "GoConqr - Cuestionario Voleibol"
+        },
+        {
+          "bodyTypst": "¿Cuándo se gana un partido de vóley?",
+          "alternatives": [
+            "Es ganado por el equipo que gana dos sets.",
+            "Es ganado por el equipo que gana un solo set.",
+            "Es ganado por el equipo que gana tres sets."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/3000518/cuestionario-voleibol",
+          "sourceName": "GoConqr - Cuestionario Voleibol"
+        },
+        {
+          "bodyTypst": "¿A cuántos toques consecutivos tiene derecho un mismo jugador en una jugada?",
+          "alternatives": [
+            "Dos",
+            "Tres",
+            "Uno"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/3000518/cuestionario-voleibol",
+          "sourceName": "GoConqr - Cuestionario Voleibol"
+        },
+        {
+          "bodyTypst": "Para ganar un set, ¿cuántos puntos se han de anotar?",
+          "alternatives": [
+            "Un total de 23 puntos.",
+            "Un total de 21 puntos.",
+            "Un total de 25 puntos."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/3000518/cuestionario-voleibol",
+          "sourceName": "GoConqr - Cuestionario Voleibol"
+        },
+        {
+          "bodyTypst": "¿Quién es el inventor del baloncesto?",
+          "alternatives": [
+            "William G. Morgan",
+            "Johnson",
+            "James Naismith"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/quiz/7609934/el-baloncesto",
+          "sourceName": "GoConqr - El Baloncesto (quiz)"
+        }
+      ]
+    }
+  ]
+}

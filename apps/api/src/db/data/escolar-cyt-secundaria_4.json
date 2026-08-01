@@ -1,0 +1,559 @@
+{
+  "courseName": "Ciencia y Tecnología",
+  "gradeLevel": "secundaria_4",
+  "topics": [
+    {
+      "name": "Ecología y problemática ambiental",
+      "questions": [
+        {
+          "bodyTypst": "No es un contaminante físico:",
+          "alternatives": [
+            "radioactividad",
+            "calor",
+            "ruido",
+            "sedimentos",
+            "abonos sintéticos"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/contaminacion-ambiental-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+          "sourceName": "Rubiños - Contaminación ambiental, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Gas inerte de origen antrópico:",
+          "alternatives": [
+            "CFC",
+            "NO 2",
+            "CO 2",
+            "SO 2",
+            "todas"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/contaminacion-ambiental-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+          "sourceName": "Rubiños - Contaminación ambiental, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Es uno de los mejores recursos de un país:",
+          "alternatives": [
+            "agua",
+            "aire",
+            "suelos",
+            "hombres",
+            "flora"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/conservacion-de-los-recursos-naturales-areas-protegidas-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Conservación de recursos naturales y áreas protegidas, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "De los 32 climas, en el Perú se encuentran:",
+          "alternatives": [
+            "16.",
+            "19.",
+            "20.",
+            "24.",
+            "28."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/conservacion-de-los-recursos-naturales-areas-protegidas-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Conservación de recursos naturales y áreas protegidas, preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Electricidad y magnetismo",
+      "questions": [
+        {
+          "bodyTypst": "Halla el número de electrones en exceso que posee una carga de –32 coulomb.",
+          "alternatives": [
+            "2×10 ² ⁰",
+            "3×10 ² ⁰",
+            "4×10 ² ⁰",
+            "5×10 ² ⁰",
+            "10 ² ⁰"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/carga-electrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "Rubiños - Carga eléctrica, fórmulas y problemas resueltos"
+        },
+        {
+          "bodyTypst": "Halla cuántos electrones ha ganado un cuerpo para que su carga sea –8C.",
+          "alternatives": [
+            "5×10 ¹ ⁸",
+            "10 ¹ ⁹",
+            "5x10 ¹ ⁹",
+            "5×10 ¹ ⁶",
+            "5×10 ² ⁰"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "Rubiños - Electrostática, fórmulas y problemas resueltos de física"
+        },
+        {
+          "bodyTypst": "Dos cargas de +4×10 − ⁶ C y –5×10 − ⁶ C se separan una distancia de 3m. ¿Con qué fuerza se atraen?",
+          "alternatives": [
+            "1N",
+            "10N",
+            "2×10 − ² N",
+            "20N",
+            "0,2N"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/fuerzas-electricas-ley-de-coulomb-formula-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "Rubiños - Fuerzas eléctricas, Ley de Coulomb, problemas resueltos"
+        },
+        {
+          "bodyTypst": "En relación a las propiedades de las líneas de fuerza o de campo eléctrico, identifique la proposición falsa:",
+          "alternatives": [
+            "Las líneas de campo siempre parten de las cargas positivas y terminan en las cargas negativas.",
+            "El número de líneas que salen o llegan a una carga es independiente de la magnitud de la carga.",
+            "La dirección del vector campo eléctrico es tangente en cada punto de una línea de fuerza.",
+            "La intensidad del campo es proporcional a la densidad de líneas por unidad de área.",
+            "Las líneas de fuerza generalmente no se cortan."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/campo-electrico-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "Rubiños - Campo eléctrico, fórmulas y problemas resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Energía: formas y transformaciones",
+      "questions": [
+        {
+          "bodyTypst": "Calcula la energía potencial de una roca de 100kg de masa cuando se encuentra a 20cm de altura respecto a tierra. (g=10m/s²)",
+          "alternatives": [
+            "10J",
+            "15J",
+            "20J",
+            "25J",
+            "5J"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+          "sourceName": "Rubiños - Energía mecánica (cinética, potencial, elástica), problemas resueltos"
+        },
+        {
+          "bodyTypst": "Si una pelota se encuentra a 5m de altura y su masa es igual a 2kg. Calcula su energía potencial respecto a tierra. (g=10m/s²)",
+          "alternatives": [
+            "50J",
+            "75J",
+            "100J",
+            "125J",
+            "150J"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+          "sourceName": "Rubiños - Energía mecánica (cinética, potencial, elástica), problemas resueltos"
+        },
+        {
+          "bodyTypst": "Una solución de sal (NaCℓ) con agua (H 2 O) congela a –10ºC. ¿Cuántos será el punto de congelación de la solución ºF y en K?.",
+          "alternatives": [
+            "–22°F; 283K",
+            "–10°F; 263K",
+            "7°F; 170K",
+            "14°F; 263K",
+            "263°F; 526K"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Termometría, escalas de temperatura, problemas resueltos"
+        },
+        {
+          "bodyTypst": "Se sabe que la temperatura en la superficie del sol es aproximadamente 6000°C. Exprese dicha temperatura en grados Fahrenheit.",
+          "alternatives": [
+            "1,18×10 4",
+            "1,328×10 4",
+            "1,10×10 3",
+            "1,08×10 5",
+            "1,08×10 4"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Termometría, escalas de temperatura, problemas resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Estructura atómica y tabla periódica",
+      "questions": [
+        {
+          "bodyTypst": "En el átomo neutro posee 57 neutrones y su masa atómica es el doble de su número de protones, más 12 unidades. ¿Cuál es el número atómico?",
+          "alternatives": [
+            "45",
+            "48",
+            "53",
+            "19",
+            "63"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/01/estructura-atomica-ejemplos-problemas-resueltos-quimica-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Estructura atómica, problemas resueltos de química"
+        },
+        {
+          "bodyTypst": "De los siguientes elementos: 1) Fe 2) B 3) A ℓ 4) Ge 5) Pd Son metaloides:",
+          "alternatives": [
+            "1, 2 y 3",
+            "1, 2 y 5",
+            "3, 4 y 5",
+            "1 y 5",
+            "2 y 4"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/01/tabla-periodica-moderna-ejemplos-problemas-resueltos-de-quimica-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Tabla periódica moderna, problemas resueltos de química"
+        },
+        {
+          "bodyTypst": "Según el modelo atómico de Thomson no se cumple",
+          "alternatives": [
+            "El átomo se asemeja a un «Budín con pasas»",
+            "Determina la relación carga - masa del electrón",
+            "El átomo es de naturaleza positiva y lleva incrustados a los electrones.",
+            "Eléctricamente el átomo es neutro .",
+            "El átomo posee un núcleo cargado positivamente , rodeado de cargas negativas."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/08/modelo-atomico-de-dalton-thomson-rutherford-bohr-y-actual-ejemplos-problemas-resueltos-de-quimica-de-pre-universidad-y-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Modelos atómicos (Dalton, Thomson, Rutherford, Bohr y actual), problemas resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Evolución y selección natural",
+      "questions": [
+        {
+          "bodyTypst": "En la evolución del hombre fue determinante:",
+          "alternatives": [
+            "la utilización del fuego y herramientas.",
+            "mantener una posición horizontal.",
+            "el aumento del volumen y de la capacidad craneana.",
+            "el uso de cavernas como moradas.",
+            "el agrandamiento de los caninos e incisivos."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/evolucion-biologica-del-ser-humano-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Evolución biológica del ser humano, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Según Hugo de Vries, la evolución es promovida por",
+          "alternatives": [
+            "el efecto de los cambios ambientales.",
+            "los cambios en la frecuencia génica.",
+            "las mutaciones.",
+            "la selección de los más aptos.",
+            "la acción de los caracteres adquiridos."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/evolucion-biologica-del-ser-humano-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Evolución biológica del ser humano, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Propuso la teoría quimiosintética:",
+          "alternatives": [
+            "Oparin",
+            "Engels",
+            "Huxley",
+            "Tyndall",
+            "Haldane"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teorias-de-la-evolucion-biologica-evidencias-evolutivas-ejemplos-preguntas-resueltas-biologia-preuniversitaria-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Teorías de la evolución biológica, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Son evidencias de evolución, excepto:",
+          "alternatives": [
+            "morfologías homólogas.",
+            "morfologías análogas.",
+            "paleontológicas.",
+            "fisiológicas.",
+            "competencia."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teorias-de-la-evolucion-biologica-evidencias-evolutivas-ejemplos-preguntas-resueltas-biologia-preuniversitaria-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Teorías de la evolución biológica, preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Fuerzas y movimiento (cinemática)",
+      "questions": [
+        {
+          "bodyTypst": "Una nave espacial recorre 1,2 km en 0,1s. Calcula su rapidez en km/s.",
+          "alternatives": [
+            "16km/s",
+            "12km/s",
+            "8km/s",
+            "6km/s",
+            "24km/s"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/mru-movimiento-rectilineo-uniforme-ejercicios-resueltos-de-secundaria-formulas-ejemplos-examen-prueba-claves-respuestas-word-doc-fisica-pdf.html",
+          "sourceName": "Rubiños - MRU (movimiento rectilíneo uniforme), ejercicios resueltos de secundaria"
+        },
+        {
+          "bodyTypst": "Sobre un cuerpo de masa 2 kg actúa una fuerza resultante de: F R = 10i + 6j ; determinar su aceleración:",
+          "alternatives": [
+            "5i – 3j (m/s ² )",
+            "–5i + 3j (m/s ² )",
+            "5i + 3j (m/s ² )",
+            "5i – 2j (m/s ² )",
+            "–5i – 3j (m/s ² )"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/dinamica-ejemplos-problemas-resueltos-segunda-ley-de-newton-fuerza-masa-aceleracion-inercia-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "Rubiños - Dinámica, segunda ley de Newton, problemas resueltos"
+        },
+        {
+          "bodyTypst": "Un auto deportivo recorre 4,8km en 2 minutos. Calcula su rapidez en m/s.",
+          "alternatives": [
+            "30m/s",
+            "20m/s",
+            "40m/s",
+            "60m/s",
+            "50m/s"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/mru-movimiento-rectilineo-uniforme-ejercicios-resueltos-de-secundaria-formulas-ejemplos-examen-prueba-claves-respuestas-word-doc-fisica-pdf.html",
+          "sourceName": "Rubiños - MRU (movimiento rectilíneo uniforme), ejercicios resueltos de secundaria"
+        }
+      ]
+    },
+    {
+      "name": "Genética y herencia",
+      "questions": [
+        {
+          "bodyTypst": "¿Qué se obtiene al cruzar Aa×aa?",
+          "alternatives": [
+            "25 % de homocigotes y 75 % de heterocigotes.",
+            "100 % de homocigotes.",
+            "50 % de homocigotes recesivos y 50 % de heterocigotes.",
+            "75 % de homocigotes y 25 % de heterocigotes.",
+            "50 % de heterocigotes y 50 % de homocigotes dominantes."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/genetica-mendeliana-leyes-de-mendel-cuadro-de-punnet-ejemplos-preguntas-resueltas-preuniversitarias-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Genética mendeliana, leyes de Mendel, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Un rasgo mendeliano está regido por:",
+          "alternatives": [
+            "tres alelos.",
+            "dos cromosomas.",
+            "genes maternos.",
+            "un par de alelos.",
+            "genes paternos."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/genetica-mendeliana-leyes-de-mendel-cuadro-de-punnet-ejemplos-preguntas-resueltas-preuniversitarias-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Genética mendeliana, leyes de Mendel, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "El factor Rh se define como",
+          "alternatives": [
+            "los anticuerpos formados contra la proteína D.",
+            "los anticuerpos contra los genes para la proteína D.",
+            "la proteína D con potencial antigénico sobre la superficie de los eritrocitos.",
+            "el alelo responsable de la formación de la proteína D."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/herencia-genetica-sanguinea-y-ligada-a-la-sexualidad-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Herencia genética sanguínea y ligada al sexo, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "La herencia que se transmite a través del cromosoma “y” se denomina",
+          "alternatives": [
+            "holándrica",
+            "autosómica",
+            "xerodermia",
+            "albinismo",
+            "ginándrica"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/herencia-genetica-sanguinea-y-ligada-a-la-sexualidad-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Herencia genética sanguínea y ligada al sexo, preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Método científico y diseño experimental",
+      "questions": [
+        {
+          "bodyTypst": "En el método científico, una hipótesis es una propuesta objetiva y lógica que ha sido formulada a través de la recolección de información, y aunque no esté confirmada sirve como respuesta a un problema de la naturaleza. Para probar la veracidad o falsedad de una hipótesis se lleva a cabo",
+          "alternatives": [
+            "la conclusión.",
+            "el planteamiento del problema.",
+            "la experimentación",
+            "la observación",
+            "el análisis de resultados"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        },
+        {
+          "bodyTypst": "Cuando decimos “Los dinosaurios desaparecieron de la tierra debido al impacto de meteoritos con nuestro planeta” o cuando concluimos que, a temperatura y masa constante “El volumen de un gas varía en forma inversa con la presión” nos estamos refiriendo a una ______ y ______ respectivamente.",
+          "alternatives": [
+            "hipótesis – observación",
+            "observación – ley",
+            "experimentación – hipótesis",
+            "teoría – hipótesis",
+            "hipótesis – ley"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        },
+        {
+          "bodyTypst": "Sebastián está haciendo turismo en el parque nacional Patagonia de Argentina. Hay caminar por la ladera rocosa de una montaña, encuentra sobre algunas piedras huellas fosilizadas de diferentes formas y cree que podrían ser de dinosaurios. De la descripción anterior, ¿Cuáles son las fases de métodos científico que Sebastián realizó?",
+          "alternatives": [
+            "deducción y conclusión",
+            "experimentación y deducción",
+            "observación y conclusión",
+            "inducción y conclusión",
+            "observación e hipótesis"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        }
+      ]
+    },
+    {
+      "name": "Ondas: sonido y luz",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál ha de ser el ángulo de incidencia de un rayo en un prisma de 60° que incide para que emerja con la mínima desviación?",
+          "alternatives": [
+            "30°",
+            "37°",
+            "45°",
+            "53°",
+            "60°"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/refraccion-de-la-luz-ley-de-snell-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "Rubiños - Refracción de la luz, ley de Snell, óptica geométrica, problemas resueltos"
+        },
+        {
+          "bodyTypst": "Si la velocidad de la luz fuera la misma en todos los medios que atraviesa ¿Cuál de los siguientes, fenómenos no podría ocurrir?",
+          "alternatives": [
+            "Interferencia",
+            "Difracción",
+            "Polarización",
+            "Refracción",
+            "Dispersión"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/refraccion-de-la-luz-ley-de-snell-formulas-ejemplos-problemas-resueltos-de-optica-geometrica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "Rubiños - Refracción de la luz, ley de Snell, óptica geométrica, problemas resueltos"
+        },
+        {
+          "bodyTypst": "Una cuerda tensa de 1,5 m de longitud forma una onda estacionaria con 3 nodos entre sus extremos. Halle la longitud de onda de la onda estacionaria, en metros.",
+          "alternatives": [
+            "1/4",
+            "1/2",
+            "3/4",
+            "1",
+            "5/4"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicaj.blogspot.com/2019/12/ondas-problemas-resueltos-de-fisica-preuniverisitaria-en-movimiento-ondulatorio-sonido-pdf.html",
+          "sourceName": "Rubiños - Ondas, movimiento ondulatorio y sonido, problemas resueltos de física"
+        },
+        {
+          "bodyTypst": "La distancia entre dos crestas sucesivas de una onda transversal es 1,20 m. Si un punto P que se encuentra en la trayectoria de la onda realiza ocho ciclos en un tiempo de 12,0 s, ¿cuál es la rapidez de la onda?",
+          "alternatives": [
+            "0,80 m/s",
+            "0,10 m/s",
+            "0,90 m/s",
+            "0,70 m/s",
+            "0,60 m/s"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicaj.blogspot.com/2019/12/ondas-problemas-resueltos-de-fisica-preuniverisitaria-en-movimiento-ondulatorio-sonido-pdf.html",
+          "sourceName": "Rubiños - Ondas, movimiento ondulatorio y sonido, problemas resueltos de física"
+        }
+      ]
+    },
+    {
+      "name": "Reacciones químicas",
+      "questions": [
+        {
+          "bodyTypst": "Una reacción endotérmica es aquella en que :",
+          "alternatives": [
+            "Hay que darle calor para que pueda realizarse.",
+            "Emite calor a medida que se va realizando.",
+            "Los reaccionantes no son consumidos totalmente sino que se llega a un equilibrio entre reaccionantes y productos.",
+            "Necesariamente se realiza en dos etapas.",
+            "Dos o más elementos se combinan para dar un producto"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/07/reacciones-quimicas-ejercicios.html",
+          "sourceName": "Rubiños - Reacciones químicas, ejercicios resueltos"
+        },
+        {
+          "bodyTypst": "Señale el enunciado falso relacionado con la velocidad de una reacción química :",
+          "alternatives": [
+            "Cambia con el incremento de la temperatura.",
+            "Depende de la naturaleza de los reactantes.",
+            "Varía con el empleo de catalizadores.",
+            "Es menor al inicio de la reacción.",
+            "Depende de la concentración de los reactantes."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/07/velocidad-de-una-reaccion-cinetica-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-examen-admision-universidad-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Velocidad de reacción (cinética química), problemas resueltos"
+        },
+        {
+          "bodyTypst": "Los tres factores más importantes en el aumento de la velocidad de las reacciones químicas son :",
+          "alternatives": [
+            "Temperatura, viscosidad, densidad.",
+            "Presión , volumen , catalizador.",
+            "Tensión superficial , presión , catalizador.",
+            "Temperatura, densidad , concentración.",
+            "Concentración, temperatura , catalizador."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/02/equilibrio-quimico-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Equilibrio químico, problemas resueltos"
+        }
+      ]
+    }
+  ]
+}

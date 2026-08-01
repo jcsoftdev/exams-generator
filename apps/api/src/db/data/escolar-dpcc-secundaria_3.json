@@ -1,0 +1,273 @@
+{
+  "courseName": "Desarrollo Personal, Ciudadanía y Cívica",
+  "gradeLevel": "secundaria_3",
+  "topics": [
+    {
+      "name": "Constitución Política del Perú",
+      "questions": [
+        {
+          "bodyTypst": "Identifique cuál es la garantía constitucional a la que se debe acoger una persona cuando pierde su libertad en forma arbitraria.",
+          "alternatives": [
+            "acción de inconstitucionalidad",
+            "acción popular",
+            "acción de hábeas data",
+            "acción de amparo",
+            "acción de hábeas corpus"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/proteccion-de-la-constitucion-garantias-procesos-constitucionales-en-el-peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Garantías Constitucionales del Perú (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "El órgano central de la Constitución es:",
+          "alternatives": [
+            "la Corte Suprema",
+            "el Consejo de Ministros",
+            "Poder Judicial",
+            "el Tribunal Constitucional",
+            "la Defensoría del Pueblo"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/evolucion-historica-de-las-constituciones-en-el-peru-estructura-de-la-constitucion-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Evolución histórica de la Constitución (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Cualquier propuesta de reforma constitucional debe ser aprobada por:",
+          "alternatives": [
+            "el acuerdo de las comisiones permanentes del Congreso.",
+            "una mayoría de dos tercios y un referéndum nacional.",
+            "un referéndum a nivel nacional y mayoría simple en el Congreso.",
+            "mayoría simple y dos legislaturas ordinarias en el Congreso.",
+            "una mayoría de dos tercios y ratificada por dos legislaturas ordinarias."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/evolucion-historica-de-las-constituciones-en-el-peru-estructura-de-la-constitucion-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Evolución histórica de la Constitución (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "En las sociedades complejas, como la peruana, el ordenamiento social está basado en",
+          "alternatives": [
+            "el Poder Ejecutivo y el Poder Legislativo.",
+            "los gobiernos regionales y municipales.",
+            "los poderes tanto Judicial como Electoral.",
+            "la Constitución, llamada Carta Magna.",
+            "el defensor del pueblo y los ministerios."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/la-normas-juridica-y-su-importancia-caracteristicas-jerarquias-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Normas Jurídicas del Perú (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Deberes y derechos ciudadanos",
+      "questions": [
+        {
+          "bodyTypst": "Los ciudadanos tienen, conforme a la Constitución Política, el derecho de participación ciudadana de manera individual o colectiva, pueden utilizar la revocatoria para destituir autoridades. Sin embargo, el mecanismo de la revocatoria no pueden aplicarse a:",
+          "alternatives": [
+            "Los Consejeros Regionales",
+            "Los Alcaldes",
+            "El Presidente de la República",
+            "Los Regidores Municipales",
+            "Los Gobernadores Regionales"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/participacion-ciudadana-deberes-y-derechos-de-los-ciudadanos-peruanos-la-ciudadania-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+          "sourceName": "Rubiños - Ciudadanía (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Toda persona tiene derecho a la igualdad ante la ley, por ello nadie debe ser",
+          "alternatives": [
+            "detenido por cometer un delito en territorio extranjero.",
+            "sentenciado por un tribunal que no sea el Poder Judicial.",
+            "detenido si no existe una orden judicial contra dicha persona.",
+            "procesando sin tener derecho a defenderse mediante un abogado.",
+            "discriminado por motivo de origen, raza, sexo, idioma, religión, opinión, etc."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/participacion-ciudadana-deberes-y-derechos-de-los-ciudadanos-peruanos-la-ciudadania-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+          "sourceName": "Rubiños - Ciudadanía (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Frente a la propuesta del Congreso de aprobar una norma sobre voluntariado laboral sin derecho a remuneración dirigida a los alumnos de institutos tecnológicos, varios estudiantes universitarios, en coordinación con los estudiantes directamente afectados, participan en una marcha multitudinaria de protesta, con el fin de suspender la referida norma. En este caso, la Constitución respalda el derecho de los estudiantes",
+          "alternatives": [
+            "a la libertad de información.",
+            "a la igualdad ante la ley.",
+            "a manifestarse pacíficamente.",
+            "al honor y la buena reputación."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/derechos-de-la-persona-segun-la-constitucion-politica-del-peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+          "sourceName": "Rubiños - Derechos Fundamentales de la Persona (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "La sociedad y el Estado imponen obligaciones a sus miembros con el propósito de:",
+          "alternatives": [
+            "garantizar la convivencia social.",
+            "promover la autorrealización personal.",
+            "evitar el predominio de grupos.",
+            "impedir que el grupo anule al individuo.",
+            "planificar el desarrollo social."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/participacion-ciudadana-deberes-y-derechos-de-los-ciudadanos-peruanos-la-ciudadania-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+          "sourceName": "Rubiños - Ciudadanía (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Derechos humanos y derechos del niño",
+      "questions": [
+        {
+          "bodyTypst": "El reconocimiento de los derechos humanos se sustenta en la concepción, según la cual estos son:",
+          "alternatives": [
+            "concedidos por el Estado.",
+            "otorgados por Dios.",
+            "ganados por el trabajador.",
+            "aprobado por las Naciones Unidas.",
+            "inherentes al ser humano."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/declaracion-universal-de-los-derechos-humanos-caracteristicas-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Derechos Humanos (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "En el marco de los principios y enfoques establecidos por la Convención sobre los Derechos del Niño, el Código del Niño y el Adolescente, del 2 de agosto del año 2000, se promulgó en el Perú la Ley 27337 que",
+          "alternatives": [
+            "sostiene que los niños están afectos a sanción penal si cometen algún delito.",
+            "garantiza la inalienabilidad física y moral tanto del niño como del adolescente.",
+            "establece que los niños extramatrimoniales tienen menos derechos que los legítimos.",
+            "afirma que los adolescentes que infrinjan la ley están exentos de concurrir a los juzgados.",
+            "estipula que la opinión del niño es irrelevante en un juicio de tenencia de menores."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/la-normas-juridica-y-su-importancia-caracteristicas-jerarquias-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Normas Jurídicas del Perú (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Edu es un niño de ocho años que vive en una situación de riesgo ya que sus padres y parientes están inmersos en el alcoholismo; esto les dificulta cumplir con los deberes de cuidado y protección, quedando el niño en abandono. A partir de ello, el Estado asume su rol protector como parte de la Convención sobre los Derechos del Niño. Del caso expuesto, ¿el Estado podría considerar la adopción de Edu a una nueva familia?",
+          "alternatives": [
+            "No, porque todo padre tiene derechos inalienables hacia los vástagos.",
+            "Sí, porque la pobreza es una condición para ser declarado en adopción.",
+            "No, porque ningún niño o niña debe separarse de sus padres, si ellos, aún viven.",
+            "Sí, porque el Estado está tomando en cuenta el interés superior del niño.",
+            "Sí, porque el alcoholismo es un problema estructural y puede ser transferido."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/proteccion-de-la-constitucion-garantias-procesos-constitucionales-en-el-peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Garantías Constitucionales del Perú (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Educación sexual integral",
+      "questions": [
+        {
+          "bodyTypst": "Determina la verdad (V) o falsedad (F) de las proposiciones sobre los mitos del amor.\nI. La forma de vestir de una chica nos indica si es una mujer \"fácil\".\nII. Si tu enamorado/a te cela y controla, es porque no te ama.\nIII. Encontré mi príncipe azul.\nIV. Las mujeres deben tomar la iniciativa en las relaciones sexuales.",
+          "alternatives": [
+            "FVVF",
+            "VFVF",
+            "VFFV",
+            "VVFF",
+            "FFVV"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/12/desarrollo-personal-ciudadania-civica-examen-resuelto-dpcc-admision-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+          "sourceName": "Rubiños - DPCC Admisión Universidad (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Instituciones democráticas del Perú",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál de los tres poderes del Estado es el encargado de establecer las leyes?",
+          "alternatives": [
+            "la Corte Suprema",
+            "el Poder Judicial",
+            "el Poder Legislativo",
+            "el Tribunal Constitucional",
+            "el Poder Ejecutivo"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/congreso-de-la-republica-del-peru-organizacion-funciones-atribuciones-del-poder-legislativo-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Congreso de la República del Perú (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "La potestad de administrar justicia emana del pueblo y se ejerce por el:",
+          "alternatives": [
+            "Poder Ejecutivo.",
+            "Poder Legislativo.",
+            "Poder Judicial.",
+            "Ministerio Público.",
+            "Consejo de Ministros."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organos-jurisdiccionales-del-poder-judicial-peruano-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Poder Judicial del Perú (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Con la finalidad de coordinar actividades conjuntas con los gobiernos locales y regionales, para realizar trabajos de reconstrucción de carreteras en el norte del país, el gobierno peruano ha emprendido esta labor dentro del marco de sus funciones. ¿A qué entidad del Estado le corresponde realizar esta obra?",
+          "alternatives": [
+            "Ministerio de Vivienda",
+            "Poder Judicial",
+            "Poder Legislativo",
+            "Ministerio de Comercio",
+            "Poder Ejecutivo"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/presidente-de-la-republica-del-peru-consejo-de-ministros-estructura-del-poder-ejecutivo-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Poder Ejecutivo del Perú (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "El ente del Estado encargado de la selección y nombramiento de los jueces y fiscales",
+          "alternatives": [
+            "son los juzgados especializados.",
+            "es la Academia de la Magistratura.",
+            "es la Junta Nacional de Justicia",
+            "es el Poder Judicial.",
+            "es el Tribunal Constitucional."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/organismos-y-poderes-del-estado-del%20peru-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Poderes del Estado Peruano (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Resolución de conflictos y convivencia escolar",
+      "questions": [
+        {
+          "bodyTypst": "¿En qué caso se presenta la conciliación como una forma de superar un conflicto?",
+          "alternatives": [
+            "José y María decidieron resolver sus diferencias a través del diálogo democrático y la buena voluntad de ambas partes.",
+            "El gerente de una empresa acaba de despedir sin razón alguna a uno de sus trabajadores y no desea escuchar los descargos de este.",
+            "Pedro y Carlos son muy buenos amigos del barrio, siempre están dispuestos a colaborar en cualquier problema que tenga a la familia de uno de ellos.",
+            "Julio y Carlos acaban de tener una fuerte discusión; luego de calmarse, ambos deciden buscar a un amigo común, quien luego de escuchar sus diferencias les propone una alternativa de solución.",
+            "Dos empresas han decidido demandar al Estado, por considerar que una medida adoptada por el Gobierno afecta su derecho a la libertad de empresa."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/problemas-de-convivencia-en-el-peru-sustentada-en-una-cultura-de-paz-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+          "sourceName": "Rubiños - Cultura de Paz en el Perú (matematicasn.blogspot.com)"
+        }
+      ]
+    }
+  ]
+}

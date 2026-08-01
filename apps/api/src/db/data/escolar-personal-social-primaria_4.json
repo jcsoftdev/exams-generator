@@ -1,0 +1,100 @@
+{
+  "courseName": "Personal Social",
+  "gradeLevel": "primaria_4",
+  "topics": [
+    {
+      "name": "Culturas prehispánicas y el Tahuantinsuyo",
+      "questions": [
+        {
+          "bodyTypst": "El trabajo del pueblo al servicio del Estado incaico se llamó:",
+          "alternatives": [
+            "mita",
+            "minca",
+            "ayni",
+            "huanca",
+            "aylluca"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/tahuantinsuyo-incas-preguntas-resueltas-historia-del-peru-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - Historia del Perú: Tahuantinsuyo e incas, preguntas resueltas (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "La huaca o waqa en el Perú antiguo estaba constituida por:",
+          "alternatives": [
+            "mercados y ferias",
+            "talleres textiles",
+            "lugares sagrados",
+            "los dioses del mar",
+            "herramientas de trabajo"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/tahuantinsuyo-incas-preguntas-resueltas-historia-del-peru-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - Historia del Perú: Tahuantinsuyo e incas, preguntas resueltas (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "La victoria cusqueña sobre los chancas fue mérito del inca:",
+          "alternatives": [
+            "Cápac Yupanqui",
+            "Túpac Yupanqui",
+            "Pachacútec",
+            "Huiracocha",
+            "Yahuar Huaca"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/tahuantinsuyo-incas-preguntas-resueltas-historia-del-peru-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - Historia del Perú: Tahuantinsuyo e incas, preguntas resueltas (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Los trabajos personales y familiares entre personas que benefició a los pueblos y comunidades se llamó:",
+          "alternatives": [
+            "ayni",
+            "aylluca",
+            "curaca",
+            "piñas",
+            "colectivismo"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/tahuantinsuyo-incas-preguntas-resueltas-historia-del-peru-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - Historia del Perú: Tahuantinsuyo e incas, preguntas resueltas (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Departamentos y regiones del Perú (geografía)",
+      "questions": [
+        {
+          "bodyTypst": "Después de Loreto, el departamento más extenso del país es:",
+          "alternatives": [
+            "Arequipa",
+            "Cusco",
+            "Madre de Dios",
+            "Puno",
+            "Ucayali"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/organizacion-politica-y-administrativa-del-territorio-peruano-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-secundaria-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Geografía: Organización política y administrativa del territorio peruano, preguntas resueltas (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "La división política actual del territorio peruano incluye:",
+          "alternatives": [
+            "25 regiones",
+            "24 regiones",
+            "26 regiones",
+            "24 departamentos",
+            "5 macrorregiones y 24 departamentos"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/organizacion-politica-y-administrativa-del-territorio-peruano-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-secundaria-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Geografía: Organización política y administrativa del territorio peruano, preguntas resueltas (matematicasn.blogspot.com)"
+        }
+      ]
+    }
+  ]
+}

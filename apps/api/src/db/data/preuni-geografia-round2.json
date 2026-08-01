@@ -1,0 +1,588 @@
+{
+  "courseName": "Geografía",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Geografía: fundamentos y objeto de estudio",
+      "questions": [
+        {
+          "bodyTypst": "La climatología, geomorfología, hidrografía, y biogeografía son ciencias que conforman la:",
+          "alternatives": ["geografía cultural", "geografía de los continentes", "geografía general", "geografía regional", "geografía física"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        },
+        {
+          "bodyTypst": "Fundador del determinismo geográfico:",
+          "alternatives": ["Jean Brunhes", "Alexander von Humboldt", "Karl Ritter", "Friedrich Ratzel", "Vidal de la Blache"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        },
+        {
+          "bodyTypst": "Fue el más grande astrónomo del mundo antiguo, replantea el sistema geocéntrico, precisa que la Tierra es esférica y está fija, a su alrededor se mueven el Sol y los planetas:",
+          "alternatives": ["Pitágoras", "Aristóteles", "Hiparco", "Heráclides de Ponto", "Newton"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        },
+        {
+          "bodyTypst": "Griego que midió la circunferencia de la Tierra con una precisión extraordinaria al determinar, a través de la astronomía, la diferencia de latitud entre la ciudad de Siena y Alejandría.",
+          "alternatives": ["Aristóteles", "Jenofonte", "Eratóstenes", "Estrabón", "Ptolomeo"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        },
+        {
+          "bodyTypst": "Estudia aspectos muy particulares de determinados sectores para conocer con más precisión y mejorar su aprovechamiento, pertenece a (la):",
+          "alternatives": ["corología", "recursos naturales", "litografía", "edafología", "geografía física"],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        }
+      ]
+    },
+    {
+      "name": "Geografía astronómica y coordenadas geográficas",
+      "questions": [
+        {
+          "bodyTypst": "El último departamento del Perú donde podemos observar la puesta del sol es:",
+          "alternatives": ["Madre de Dios", "Loreto", "Cusco", "Tumbes", "Piura"],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        },
+        {
+          "bodyTypst": "Estabiliza el eje de rotación de la Tierra y frena la velocidad de rotación de la misma. Este fenómeno es producido por la influencia:",
+          "alternatives": ["del seseo", "de la Luna", "del Sol", "de la nutación", "de la precesión"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        },
+        {
+          "bodyTypst": "El efecto de Coriolis desvía los vientos y corrientes marinas en el hemisferio sur de:",
+          "alternatives": ["NW a SE", "SE a NW", "NE a SW", "SW a NE", "NW a SW"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        },
+        {
+          "bodyTypst": "La disminución de la temperatura terrestre desde el ecuador hacia los polos es una consecuencia:",
+          "alternatives": ["de la distribución de la masa de agua", "del movimiento de rotación", "del movimiento de traslación", "de la inclinación del eje", "de la redondez de la Tierra"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        },
+        {
+          "bodyTypst": "La palabra ecuador proviene de la voz latina aequare que significa igualdad. Marque la alternativa que NO cumple con una característica de este trazo imaginario.",
+          "alternatives": ["Es un gran círculo de 40 076 km de longitud y que rodea a la Tierra equidistante de los polos", "Es considerado el paralelo base y el único que divide a nuestro planeta en dos partes iguales que llamamos hemisferios", "Incluye todos los puntos de longitud 0º, recibiendo los rayos solares perpendiculares dos veces al año durante el equinoccio (primavera y otoño)", "Se le denomina línea equinoccial", "Es el único lugar de la Tierra en donde todos los días del año, los días y las noches son de igual duración"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        }
+      ]
+    },
+    {
+      "name": "Orientación y localización absoluta (geodesia y husos horarios)",
+      "questions": [
+        {
+          "bodyTypst": "En un punto de la Tierra, cuando el Sol forma un ángulo de 135° con respecto a su superficie, en dicho punto es:",
+          "alternatives": ["6 am", "9 am", "3 am", "6 pm", "3 pm"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/lineas-geodesicas-husos-horarios-cartografia-preguntas-resueltas-geografia-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Líneas geodésicas y husos horarios — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Cuando el Sol alcanza el cenit de Huancayo, ¿dónde serán las 5:00 pm?",
+          "alternatives": ["Liverpool (0°)", "Vancouver (150°O)", "Bagdad (45°E)", "Manila (90°E)", "Belo Horizonte (45°O)"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/lineas-geodesicas-husos-horarios-cartografia-preguntas-resueltas-geografia-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Líneas geodésicas y husos horarios — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Cuando es mediodía en el Perú, ¿dónde será medianoche?",
+          "alternatives": ["A 150° al Oeste", "En el meridiano 120°LO", "En el meridiano 105°LE", "En el meridiano 75°LO", "A 50° al Este de Greenwich"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/lineas-geodesicas-husos-horarios-cartografia-preguntas-resueltas-geografia-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Líneas geodésicas y husos horarios — banco de preguntas"
+        },
+        {
+          "bodyTypst": "¿Cuál es la diferencia horaria entre Cuzco y Calcuta (75°LE)?",
+          "alternatives": ["12 horas", "10 horas", "11 horas", "09 horas", "05 horas"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/lineas-geodesicas-husos-horarios-cartografia-preguntas-resueltas-geografia-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Líneas geodésicas y husos horarios — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Son dos puntos de la Tierra ubicados en el mismo meridiano pero en hemisferios opuestos, equidistantes del ecuador. Se caracterizan por tener diferente estación, la misma hora y la misma longitud:",
+          "alternatives": ["Antecos", "Periecos", "Antípodas", "Diámetro", "Proyección"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        }
+      ]
+    },
+    {
+      "name": "Cartografía",
+      "questions": [
+        {
+          "bodyTypst": "¿Quién fue el primer cartógrafo que representó la forma esférica de la Tierra sobre un plano utilizando latitudes y longitudes?",
+          "alternatives": ["Mercator", "Copérnico", "Pitágoras", "Eratóstenes", "Ptolomeo"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+          "sourceName": "Cartografía, mapas, cartas — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Con el propósito de reactivar el sector minero, el gobierno informa a los inversionistas sobre zonas mineralizadas que existen en la cordillera de los Andes. Para dar mayor sustento a la explicación, provee a los concurrentes un documento cartográfico con información específica sobre la ubicación de depósitos geológicos. Tomando como referente la gestión, ¿cuál es el tipo de mapa suministrado a los inversores?",
+          "alternatives": ["Topográfico", "Edáfico", "Crenológico", "Metalogénico"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+          "sourceName": "Cartografía, mapas, cartas — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Según Porras Barrenechea, el pionero de la cartografía republicana es el coronel e ingeniero militar del estado #\"_______\", quien recorrió el Perú en muchas direcciones, levantando planos topográficos de las provincias con vista a trazar el mapa general del Perú.",
+          "alternatives": ["Clemente Althaus", "Martínez de Compañón", "Javier de Sobreviela", "Mariano Felipe Paz Soldán", "Abrahán Ortelius"],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+          "sourceName": "Cartografía, mapas, cartas — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Autor de una célebre carta y creador de un simplificado sistema de coordenadas geográficas mediante el trazado de una línea directriz, equidistante del sur y del norte, divisoria de la superficie de la Tierra en una parte septentrional y una parte meridional, iguales aproximadamente.",
+          "alternatives": ["Eratóstenes", "Ptolomeo", "Hiparco", "Copérnico", "Dicearco de Mesina"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+          "sourceName": "Cartografía, mapas, cartas — banco de preguntas"
+        },
+        {
+          "bodyTypst": "La proyección cartográfica UTM, utilizada desde el año 1958, ubica al Perú en las zonas de proyección:",
+          "alternatives": ["27, 28 y 29", "30, 31 y 32", "17, 18 y 19", "58, 59 y 60", "46, 47 y 48"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/cartografia-mapas-cartas-planos-cartograficos-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-word-ppt-pdf.html",
+          "sourceName": "Cartografía, mapas, cartas — banco de preguntas"
+        }
+      ]
+    },
+    {
+      "name": "Geografía física y relieve peruano",
+      "questions": [
+        {
+          "bodyTypst": "Los barrizales, se forman:",
+          "alternatives": ["A la orilla de los ríos", "Al pie de las colinas", "En el fondo de las cochas", "Por acción antrópica", "En las nacientes fluviales"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/relieves-de-la-costa-region-andina-y-selva-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Relieves de la costa, región andina y selva del Perú — banco de preguntas"
+        },
+        {
+          "bodyTypst": "¿Cuál de los siguientes relieves costeros es de mayor antigüedad?",
+          "alternatives": ["Los tablazos de Piura", "La cordillera Costera de Nazca", "Las lomas de Arequipa", "Las depresiones de Ica", "Los valles de la costa norte"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/relieves-de-la-costa-region-andina-y-selva-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Relieves de la costa, región andina y selva del Perú — banco de preguntas"
+        },
+        {
+          "bodyTypst": "¿Cuál de las siguientes afirmaciones sobre el relieve submarino es correcta?",
+          "alternatives": ["La amplitud del zócalo alcanza su mayor extensión en el sector norte", "El talud es una zona de pendiente muy inclinada sin relieves surcados", "La fosa peruano-chilena alcanza mayor profundidad frente a Matarani", "El zócalo es la región de la plataforma continental sumergida de declive suave"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/relieves-de-la-costa-region-andina-y-selva-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Relieves de la costa, región andina y selva del Perú — banco de preguntas"
+        },
+        {
+          "bodyTypst": "El cañón más profundo del mundo que se ubica en Arequipa – Perú, se llama:",
+          "alternatives": ["Cotahuasi", "Mismi", "Choquecorao", "Sabancaya", "Omate"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/relieves-de-la-costa-region-andina-y-selva-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Relieves de la costa, región andina y selva del Perú — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Lago navegable más alto del mundo, el cual tiene origen tectónico:",
+          "alternatives": ["Junín", "Choclococha", "Titicaca", "Marcapomacocha"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/relieves-de-la-costa-region-andina-y-selva-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Relieves de la costa, región andina y selva del Perú — banco de preguntas"
+        }
+      ]
+    },
+    {
+      "name": "Geomorfología",
+      "questions": [
+        {
+          "bodyTypst": "Los volcanes situados en áreas continentales surgen por la colisión de dos placas tectónicas. Estas erupciones volcánicas afectan los terrenos adyacentes a través de manifestaciones como:",
+          "alternatives": ["formación de batolitos en la base de los sistemas montañosos", "emisión de cenizas, lava, gases de azufre, metano y de dióxido de carbono", "formación de diques, sills, solfataras, conos volcánicos y lacolitos", "intensificación de plegamientos y fracturas de la corteza litosférica"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        },
+        {
+          "bodyTypst": "Por las constantes vibraciones en la litosfera, un experto del Instituto Geofísico del Perú informa a la comunidad que los daños que observan en mayor o menor grado son causados por ondas sísmicas. ¿A qué tipo de ondas se refiere el perito?",
+          "alternatives": ["Rayleigh y Love", "Longitudinales o primarias", "Transversales o secundarias", "Rayleigh y longitudinales"],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        },
+        {
+          "bodyTypst": "La teoría de las placas tectónicas afirma que la corteza de la Tierra está formada por un enorme mosaico de placas que se desplazan sobre el manto superior. El contacto por fricción entre los límites de las placas es responsable, en mayor parte, de:",
+          "alternatives": ["las llocllas", "los huracanes", "las inundaciones", "las neblinas", "los terremotos"],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        },
+        {
+          "bodyTypst": "Los movimientos orogénicos están asociados a los diversos procesos que se producen en las márgenes de las placas tectónicas, como el origen de deformaciones y desplazamientos en la corteza terrestre. Tomando en cuenta dicha información, determine el valor de verdad (V o F) de las siguientes proposiciones: I) Los movimientos orogénicos son procesos que dan origen a cordilleras y fosas marinas. II) En límites convergentes se forma nueva litósfera oceánica por subducción de placas tectónicas. III) Los movimientos orogénicos son procesos reversibles que se activan por ajustes isostáticos. IV) En los límites de placas tectónicas se producen sismos de diferente magnitud.",
+          "alternatives": ["FFFV", "FVFV", "FFVV", "VVVF", "VFFV"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        },
+        {
+          "bodyTypst": "Un estudiante de Arqueología aprovecha un viaje a la región andina para recolectar algunas muestras de rocas que podrían ayudarle en su trabajo de investigación. Entre estas, una de color rosado llama más su atención, por lo que decide preguntarle a un geólogo por esa extraña tonalidad. El científico le responde que el oxígeno es uno de los causantes de dicha coloración, por haber corroído el hierro presente en la roca. Indique la proposición correcta sobre el proceso mencionado.",
+          "alternatives": ["En el lugar se efectuó la transformación de la estructura química de la roca.", "Las fuerzas internas son las principales responsables del cambio de color.", "El proceso se realiza en un mismo espacio por la agradación eólica intensa.", "La destrucción y agradación mecánica de la roca explican su extraña coloración."],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        }
+      ]
+    },
+    {
+      "name": "Ecosistemas y ecorregiones del Perú",
+      "questions": [
+        {
+          "bodyTypst": "La ciudad de Cerro de Pasco, ubicada a 4200 m.s.n.m., se encuentra en la región:",
+          "alternatives": ["Yunga", "Puna", "Suni", "Janca", "Quechua"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/ecorregiones-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Ecorregiones del Perú — banco de preguntas"
+        },
+        {
+          "bodyTypst": "La Sabana de Palmeras se localiza en el departamento de:",
+          "alternatives": ["Piura", "Cajamarca", "Madre de Dios", "Cusco", "Puno"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/ecorregiones-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Ecorregiones del Perú — banco de preguntas"
+        },
+        {
+          "bodyTypst": "La ecorregión del Perú que presenta vegetación de lomas, clima semicálido y neblinas estacionales se denomina:",
+          "alternatives": ["Serranía Esteparia", "Páramo", "Desierto del Pacífico", "Sabana de Palmeras", "Puna"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/ecorregiones-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Ecorregiones del Perú — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Con respecto a las ecorregiones marinas, lo correcto es: I) La ecorregión Mar Tropical presenta un color verdoso debido a la acción pluvial. II) El Mar Frío debe la abundancia de recursos a la presencia del Anticiclón del Atlántico Sur. III) El límite se encuentra en Punta Agujas (5° de latitud sur). IV) Los recursos más extraídos del Mar Tropical son: Anchoveta y Sardina.",
+          "alternatives": ["I – II – IV", "I – II – III", "II – IV", "Solo III"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/ecorregiones-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Ecorregiones del Perú — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Sobre el Bosque Tropical del Pacífico, indique lo incorrecto: I) Ocupa una zona conocida con el nombre de El Caucho. II) Su flora es: Palo sangre, cedro, palo balsa. III) Limita con el Bosque Seco Ecuatorial. IV) Un alto porcentaje de su fauna es similar con la ecorregión de la Serranía Esteparia.",
+          "alternatives": ["Solo II", "Solo I", "I y II", "I, II y IV", "Solo IV"],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/ecorregiones-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Ecorregiones del Perú — banco de preguntas"
+        }
+      ]
+    },
+    {
+      "name": "Climas y biomas del mundo",
+      "questions": [
+        {
+          "bodyTypst": "Un profesor de Geografía explica que los biomas presentan características y problemas en su conservación. Por ejemplo, el bioma que se ubica entre los 15º latitud norte y 25º latitud sur se caracteriza por tener vegetación arbórea dispersa y encontrarse cubierto por grandes extensiones de pastizales, presentar una estación seca y lluviosa, y estar afectado por el sobrepastoreo, los incendios forestales y la caza ilegal.",
+          "alternatives": ["la sabana.", "la tundra.", "la taiga.", "el desierto."],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/ecosistemas-y-biomas-del-mundo-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Ecosistemas y biomas del mundo — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Los bosques denominados caducifolios son propios de los climas ________, mientras la vegetación xerófita se desarrolla en zonas de clima __________",
+          "alternatives": ["templados - tropical.", "tropicales - templado.", "fríos - desértico.", "templados - árido."],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/ecosistemas-y-biomas-del-mundo-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Ecosistemas y biomas del mundo — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Señale el bioma que predomina en países del norte del continente africano, como Argelia, Egipto y Marruecos.",
+          "alternatives": ["sabana", "desierto", "estepa", "bosque amazónico", "pradera"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/ecosistemas-y-biomas-del-mundo-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Ecosistemas y biomas del mundo — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Señale la alternativa que no corresponde a una característica propia de la sabana.",
+          "alternatives": ["Tiene una estación templada seca y otra calurosa lluviosa.", "La más famosa es el Serengueti, que está en Tanzania.", "Predominan los árboles gigantes con hojas de gran superficie, como la caoba, el cedro y el caucho.", "La vegetación forma un estrato herbáceo, salpicado por algún árbol.", "Se ubica en la zona tropical del planeta."],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/ecosistemas-y-biomas-del-mundo-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Ecosistemas y biomas del mundo — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Los biomas pueden ser definidos como grandes ecosistemas terrestres donde predomina un tipo de vegetación debido principalmente a las temperaturas y cantidad de precipitaciones; esta distribución se da principalmente por latitud, así, en zonas de latitud baja podemos ubicar a:",
+          "alternatives": ["la sabana y la selva.", "la tundra y la taiga.", "la estepa y la taiga.", "el desierto polar y la tundra."],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/ecosistemas-y-biomas-del-mundo-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Ecosistemas y biomas del mundo — banco de preguntas"
+        }
+      ]
+    },
+    {
+      "name": "Áreas naturales protegidas del Perú",
+      "questions": [
+        {
+          "bodyTypst": "Parque Nacional más extenso del Perú localizado entre Madre de Dios y Ucayali.",
+          "alternatives": ["Chacamarca", "Bosque Pomac", "Otishi", "Alto Purús", "Yanachaga"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/areas-naturales-protegidas-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Áreas naturales protegidas del Perú — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Reserva nacional ubicada en Ayacucho y es importante porque protege y posee la mayor reserva de vicuñas, se trata de:",
+          "alternatives": ["Calipuy", "Huascarán", "Cutervo", "Junín", "Pampa Galeras"],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/areas-naturales-protegidas-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Áreas naturales protegidas del Perú — banco de preguntas"
+        },
+        {
+          "bodyTypst": "¿En qué parques nacionales se protege, con carácter de intangible, tanto al gallito de las rocas como al oso de anteojos?",
+          "alternatives": ["Cutervo y Otishi", "Cordillera Azul y Güeppi-Sekimi", "Yanachaga Chemillen y Alto Purus", "Bahuaja Sonene y Alto Purus", "Cutervo y el Manu"],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/areas-naturales-protegidas-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Áreas naturales protegidas del Perú — banco de preguntas"
+        },
+        {
+          "bodyTypst": "En el año 2023, la Municipalidad de Lima propuso al gobierno la creación del área de conservación regional Sistema de Lomas de Lima, con el objetivo de proteger 5 lomas de Lima: Ancón, Carabayllo 1 y 2, Amancaes y Villa María. Dicha propuesta fue aprobada al año siguiente y se puede inferir que, en el proceso de evaluación, destacaron los estudios técnicos realizados por el:",
+          "alternatives": ["Minagri.", "Sinanpe.", "Serfor.", "Sernanp.", "Serpost."],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/areas-naturales-protegidas-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Áreas naturales protegidas del Perú — banco de preguntas"
+        },
+        {
+          "bodyTypst": "El Parque Nacional del Manu se localiza en los departamentos de:",
+          "alternatives": ["Lambayeque y Piura.", "La Libertad y Áncash.", "Tumbes y Piura.", "Cusco y Madre de Dios.", "Áncash y Lima."],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/areas-naturales-protegidas-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Áreas naturales protegidas del Perú — banco de preguntas"
+        }
+      ]
+    },
+    {
+      "name": "Hidrografía del Perú",
+      "questions": [
+        {
+          "bodyTypst": "A la vertiente cuyos ríos tienen salida al mar, se denomina:",
+          "alternatives": ["arreica.", "estuario.", "endorreica.", "exorreica.", "delta."],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/hidrografia-peruana-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Hidrografía peruana — banco de preguntas"
+        },
+        {
+          "bodyTypst": "El lago de origen residual más extenso del planeta es:",
+          "alternatives": ["del Oso", "Caspio", "Baikal", "Titicaca", "Volta"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/hidrografia-peruana-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Hidrografía peruana — banco de preguntas"
+        },
+        {
+          "bodyTypst": "¿Cuál es el único río navegable de la Costa?",
+          "alternatives": ["Tumbes", "La Leche", "Ica", "Chira", "Rímac"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/hidrografia-peruana-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Hidrografía peruana — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Son tipos de lago por su origen, excepto:",
+          "alternatives": ["volcánicos.", "residuales.", "tectónicos.", "de barrera.", "mineral."],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/hidrografia-peruana-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Hidrografía peruana — banco de preguntas"
+        },
+        {
+          "bodyTypst": "¿Qué acción es fundamental para el manejo sostenible de una cuenca hidrográfica?",
+          "alternatives": ["Manejo integral de la cuenca y adecuada protección de sus cabeceras", "Aprovechamiento intensivo de los recursos naturales en la cuenca alta", "Instalación de mayor capacidad hidroenergética en la cuenca baja", "Canalización de todos los tributarios y cursos hídricos principales", "Uso intensivo de tecnología de punta para superar el estrés hídrico"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/hidrografia-peruana-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Hidrografía peruana — banco de preguntas"
+        }
+      ]
+    },
+    {
+      "name": "Geografía económica",
+      "questions": [
+        {
+          "bodyTypst": "La industria de la palma aceitera tiene su producción en:",
+          "alternatives": ["Piura", "Moyobamba", "Utcubamba", "Tocache", "Bagua"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        },
+        {
+          "bodyTypst": "La maca es un cultivo que ofrece buenas oportunidades de ingresos económicos a los campesinos de la región:",
+          "alternatives": ["Selva Alta", "Suni", "Quechua", "Yunga", "Puna"],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        },
+        {
+          "bodyTypst": "Marque la relación correcta entre central hidroeléctrico y ubicación.",
+          "alternatives": ["Charcani V - Puno", "Restitución - Junín", "Carhuaquero - Áncash", "Huallanca - Áncash", "San Gabán - Arequipa"],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/hidrografia-peruana-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Hidrografía peruana — banco de preguntas"
+        }
+      ]
+    },
+    {
+      "name": "Población del Perú",
+      "questions": [
+        {
+          "bodyTypst": "La relación existente entre la superficie del territorio y la población se denomina:",
+          "alternatives": ["estructura", "volumen", "longitud", "densidad", "migración"],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/geografia-resuelta-ingreso-universidades.html",
+          "sourceName": "Banco de preguntas de Geografía para admisión"
+        }
+      ]
+    },
+    {
+      "name": "Geografía política y demarcación territorial",
+      "questions": [
+        {
+          "bodyTypst": "Complete: La región política administrativa de mayor superficie es #\"_____\" y las más pequeña es #\"_____\".",
+          "alternatives": ["Loreto - Ucayali", "Loreto - Callao", "Loreto - Tumbes", "Madre de Dios - Tacna", "San Martín - Tacna"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/organizacion-politica-y-administrativa-del-territorio-peruano-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-secundaria-word-ppt-doc-pdf.html",
+          "sourceName": "Organización política y administrativa del territorio peruano — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Las regiones son unidades territoriales geoeconómicas que se caracterizan por la diversidad de recursos naturales, sociales e institucionales. Establezca el valor de verdad (V) o falso (F): I. Están amparadas en la Ley de Bases de la Descentralización. II. En el Perú existen 24 regiones político-administrativas. III. El departamento de Lima está conformado por 43 distritos. IV. La capital de la república no pertenece a ninguna región.",
+          "alternatives": ["FFVF", "FVFV", "VFFV", "VVFF", "VFVV"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/organizacion-politica-y-administrativa-del-territorio-peruano-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-secundaria-word-ppt-doc-pdf.html",
+          "sourceName": "Organización política y administrativa del territorio peruano — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Con excepción de Lima Metropolitana, Lima y Callao, el proceso de regionalización actual en el Perú toma como región a la circunscripción territorial enmarcada por los límites:",
+          "alternatives": ["municipales", "provinciales", "de gobiernos regionales", "departamentales", "de varios departamentos"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/organizacion-politica-y-administrativa-del-territorio-peruano-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-secundaria-word-ppt-doc-pdf.html",
+          "sourceName": "Organización política y administrativa del territorio peruano — banco de preguntas"
+        },
+        {
+          "bodyTypst": "La división político-administrativa territorial del Perú, según la Constitución Política de 1993, se basa en el esquema:",
+          "alternatives": ["región - departamento - provincias - distritos", "región - subregión - provincias - distritos", "región - provincias - distritos", "Costa - Sierra - Selva", "norte - centro - sur - oriente"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/organizacion-politica-y-administrativa-del-territorio-peruano-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-secundaria-word-ppt-doc-pdf.html",
+          "sourceName": "Organización política y administrativa del territorio peruano — banco de preguntas"
+        },
+        {
+          "bodyTypst": "La división política actual del territorio peruano incluye:",
+          "alternatives": ["25 regiones", "24 regiones", "26 regiones", "24 departamentos", "5 macrorregiones y 24 departamentos"],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/organizacion-politica-y-administrativa-del-territorio-peruano-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-secundaria-word-ppt-doc-pdf.html",
+          "sourceName": "Organización política y administrativa del territorio peruano — banco de preguntas"
+        }
+      ]
+    },
+    {
+      "name": "Geopolítica y geografía mundial",
+      "questions": [
+        {
+          "bodyTypst": "Organismo de la ONU encargado de 'asegurar la acción para el mantenimiento de la paz' es:",
+          "alternatives": ["Consejo Mundial de la Alimentación", "Asamblea General", "Consejo de Seguridad", "Fondo Monetario Internacional", "La Corte Interamericana"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/peru-y-sus-relaciones-internacionales-preguntas-resueltas-geografia-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Perú y sus relaciones internacionales — banco de preguntas"
+        },
+        {
+          "bodyTypst": "La sede de las Naciones Unidas se encuentra en la ciudad de:",
+          "alternatives": ["Washington", "Londres", "Praga", "París", "New York"],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/peru-y-sus-relaciones-internacionales-preguntas-resueltas-geografia-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Perú y sus relaciones internacionales — banco de preguntas"
+        },
+        {
+          "bodyTypst": "La base del Perú en la Antártica se encuentra en la:",
+          "alternatives": ["Isla Rey Jorge", "Península Antártica", "Tierra Adelaida", "Mar de Ross", "Bahía de Weddell"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/peru-y-sus-relaciones-internacionales-preguntas-resueltas-geografia-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Perú y sus relaciones internacionales — banco de preguntas"
+        },
+        {
+          "bodyTypst": "Países que no forman parte del Sistema Económico Latinoamericano (SELA):",
+          "alternatives": ["México – Guatemala", "Bahamas – Panamá", "EE. UU – Canadá", "Brasil – Argentina", "Venezuela – Perú"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/peru-y-sus-relaciones-internacionales-preguntas-resueltas-geografia-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Perú y sus relaciones internacionales — banco de preguntas"
+        },
+        {
+          "bodyTypst": "En 1991, con la firma del 'Acuerdo de Asunción' se firmó la (el):",
+          "alternatives": ["Tratado Amazónico", "OEA", "Comunidad Andina de Naciones", "MERCOSUR", "ONU"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/peru-y-sus-relaciones-internacionales-preguntas-resueltas-geografia-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Perú y sus relaciones internacionales — banco de preguntas"
+        }
+      ]
+    }
+  ]
+}

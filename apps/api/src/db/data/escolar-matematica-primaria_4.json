@@ -1,0 +1,226 @@
+{
+  "courseName": "Matemática",
+  "gradeLevel": "primaria_4",
+  "topics": [
+    {
+      "name": "Gráficos, tablas, estadística y probabilidad",
+      "questions": [
+        {
+          "bodyTypst": "Respecto a lo que puede ocurrir en un partido de fútbol, ¿cuál de las siguientes afirmaciones es correcta?",
+          "alternatives": [
+            "Es imposible que los equipos empaten en goles.",
+            "Es seguro que en el partido se hagan más de 5 goles.",
+            "Es probable que el arquero tape 1 penal.",
+            "Es posible que la pelota se sostenga en el aire durante media hora."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf",
+          "sourceName": "MINEDU UMC - Cuadernillo modelo de Matemática 4.° grado de primaria"
+        },
+        {
+          "bodyTypst": "En un colegio, se decide llevar a los estudiantes de 1.°, 2.° y 3.° grado de primaria al museo. La cantidad de estudiantes por sección se observa en la siguiente tabla:\n\nSección A: 1.° = 25, 2.° = 25, 3.° = 30\nSección B: 1.° = 24, 2.° = 25, 3.° = 30\n\nLa entrada al museo cuesta S/5 y, debido a una promoción, los estudiantes de 1.º grado entraron gratis. ¿Cuánto se pagó en total por las entradas de los estudiantes de 2.º y de 3.º grado?",
+          "alternatives": ["S/110", "S/159", "S/550", "S/795"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf",
+          "sourceName": "MINEDU UMC - Cuadernillo modelo de Matemática 4.° grado de primaria"
+        }
+      ]
+    },
+    {
+      "name": "Medidas de longitud, peso, capacidad, tiempo y dinero",
+      "questions": [
+        {
+          "bodyTypst": "Tatiana tenía inicialmente S/6. Ella ahorró cada día S/4 durante 10 días. Si no gastó nada de lo ahorrado, ¿cuánto dinero llegó a juntar Tatiana?",
+          "alternatives": ["S/10", "S/40", "S/46", "S/64"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf",
+          "sourceName": "MINEDU UMC - Cuadernillo modelo de Matemática 4.° grado de primaria"
+        },
+        {
+          "bodyTypst": "Benjamín ha ahorrado dinero durante un tiempo y juntó S/346. Luego, va al banco a cambiar el dinero y pide que le den la cantidad máxima de billetes de S/10 y lo demás en monedas de S/1. ¿Cuántos billetes de S/10 recibirá Benjamín?",
+          "alternatives": ["4 billetes.", "34 billetes.", "46 billetes.", "340 billetes."],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 4.° grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Patrones y secuencias",
+      "questions": [
+        {
+          "bodyTypst": "Observa la siguiente secuencia: 2, 4, 8, 16, ___. ¿Qué se puede hacer para encontrar el término que falta?",
+          "alternatives": [
+            "Sumar 2 al número 16.",
+            "Sumar 8 al número 16.",
+            "Multiplicar por 8 al número 16.",
+            "Multiplicar por 2 al número 16."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf",
+          "sourceName": "MINEDU UMC - Cuadernillo modelo de Matemática 4.° grado de primaria"
+        },
+        {
+          "bodyTypst": "¿Cuál de los siguientes patrones aumenta de 6 en 6?",
+          "alternatives": [
+            "60, 63, 66, 69, …",
+            "6, 16, 26, 36, …",
+            "6, 12, 24, 42, …",
+            "5, 11, 17, 23, …"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 4.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Alberto elabora llaveros para vender. Hoy tiene 8 llaveros listos y se propone hacer 5 llaveros en cada uno de los siguientes días. ¿Qué tabla muestra la cantidad total de llaveros que va juntando Alberto en estos 6 días?",
+          "alternatives": [
+            "Día 1: 8, Día 2: 5, Día 3: 5, Día 4: 5, Día 5: 5, Día 6: 5",
+            "Día 1: 5, Día 2: 10, Día 3: 15, Día 4: 20, Día 5: 25, Día 6: 30",
+            "Día 1: 8, Día 2: 16, Día 3: 21, Día 4: 26, Día 5: 31, Día 6: 36",
+            "Día 1: 8, Día 2: 13, Día 3: 18, Día 4: 23, Día 5: 28, Día 6: 33"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 4.° grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Multiplicación: tablas y algoritmo",
+      "questions": [
+        {
+          "bodyTypst": "En una tienda ofrecen tres paquetes de mantequilla por S/5. Juan hace una tabla para calcular lo que gastaría en cierta cantidad de paquetes:\n\nCantidad de paquetes: 3, 6, 9\nPrecio (S/): 5, 10, 15\n\nSi Juan quiere comprar una docena de paquetes de mantequilla en esa tienda, ¿cuánto debe pagar?",
+          "alternatives": ["S/15", "S/20", "S/30", "S/60"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf",
+          "sourceName": "MINEDU UMC - Cuadernillo modelo de Matemática 4.° grado de primaria"
+        },
+        {
+          "bodyTypst": "Ana fabrica marcos cuadrados de madera de 20 cm de lado para colocar fotos. Vende 3 marcos por S/36. Si Ana vende 12 marcos cuadrados, ¿cuánto dinero debe recibir por la venta?",
+          "alternatives": ["S/12", "S/36", "S/144", "S/432"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf",
+          "sourceName": "MINEDU UMC - Cuadernillo modelo de Matemática 4.° grado de primaria"
+        }
+      ]
+    },
+    {
+      "name": "Fracciones",
+      "questions": [
+        {
+          "bodyTypst": "Carlos tenía en su casa $1/4$ kg de azúcar. Para preparar un queque fue a la tienda a comprar más azúcar. Ahora tiene $3/4$ kg de azúcar en total. ¿Cuál de las siguientes operaciones permite encontrar cuántos kilogramos de azúcar compró Carlos?",
+          "alternatives": ["$3/4 - 1/4$", "$3/4 times 1/4$", "$1/4 + 3/4$", "$1/4 - 3/4$"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf",
+          "sourceName": "MINEDU UMC - Cuadernillo modelo de Matemática 4.° grado de primaria"
+        }
+      ]
+    },
+    {
+      "name": "Números hasta 10 000",
+      "questions": [
+        {
+          "bodyTypst": "En la campaña de reciclaje, los estudiantes de secundaria recolectaron 1460 tapitas de plástico. Los estudiantes de primaria recolectaron 1712 tapitas de plástico más que los estudiantes de secundaria. ¿Cuántas tapitas de plástico recolectaron los estudiantes de primaria?",
+          "alternatives": [
+            "252 tapitas de plástico.",
+            "1460 tapitas de plástico.",
+            "1712 tapitas de plástico.",
+            "3172 tapitas de plástico."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf",
+          "sourceName": "MINEDU UMC - Cuadernillo modelo de Matemática 4.° grado de primaria"
+        },
+        {
+          "bodyTypst": "Tres estudiantes resolvieron en la pizarra la operación $237 - 198$. ¿Cuál de las siguientes operaciones es correcta?",
+          "alternatives": ["$237 - 198 = 161$", "$237 - 198 = 139$", "$237 - 198 = 39$"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 4.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "La biblioteca municipal se inauguró con 285 libros. Luego, la alcaldesa donó cierta cantidad de libros. Ahora, la biblioteca tiene en total 450 libros. ¿Cuántos libros donó la alcaldesa?",
+          "alternatives": ["735 libros.", "450 libros.", "275 libros.", "165 libros."],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 4.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Luciano tiene la siguiente cantidad de figuritas: 2 cajas de 100 figuritas cada una, 15 sobres de 10 figuritas cada uno y 4 figuritas sueltas. ¿Cuántas figuritas tiene Luciano en total?",
+          "alternatives": ["2154 figuritas.", "219 figuritas.", "264 figuritas.", "354 figuritas."],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 4.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "A Mónica le pidieron tejer 50 gorros de lana. Ella tejió 18 gorros de color rojo, 19 gorros de color azul y el resto de color verde. ¿Cuántos gorros de color verde tejió para cumplir con el pedido?",
+          "alternatives": ["13 gorros.", "37 gorros.", "87 gorros."],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 4.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Un profesor necesita repartir 132 hojas de papel a sus estudiantes. ¿De cuál paquete puede sacar esta cantidad de hojas?",
+          "alternatives": ["Un paquete de 130 hojas.", "Un paquete de 123 hojas.", "Un paquete de 200 hojas."],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 4.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "María tiene 60 pulseras y quiere colocar un adorno en cada una de ellas. En una bolsa tiene 21 adornos y en otra bolsa tiene 16 adornos. ¿Cuántos adornos más necesitará María?",
+          "alternatives": ["23 adornos.", "37 adornos.", "60 adornos.", "97 adornos."],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 4.° grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Perímetro, área y volumen",
+      "questions": [
+        {
+          "bodyTypst": "Ana fabrica marcos cuadrados de madera de 20 cm de lado para colocar fotos. Ana hizo 2 marcos cuadrados usando completamente una varilla de madera. ¿Cuál fue la longitud de la varilla que usó?",
+          "alternatives": ["160 cm", "80 cm", "40 cm", "20 cm"],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf",
+          "sourceName": "MINEDU UMC - Cuadernillo modelo de Matemática 4.° grado de primaria"
+        },
+        {
+          "bodyTypst": "Ana fabrica marcos cuadrados de madera de 20 cm de lado. Ana pega una cartulina cuadrada detrás de un marco, de tal forma que lo cubre completamente. ¿Cuál es el área de la cartulina que usa para ese marco?",
+          "alternatives": ["800 cm²", "400 cm²", "80 cm²", "40 cm²"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf",
+          "sourceName": "MINEDU UMC - Cuadernillo modelo de Matemática 4.° grado de primaria"
+        },
+        {
+          "bodyTypst": "Observa un manto de forma cuadrada de 60 cm de lado. Se quiere coser una cinta de tela en todo su contorno. ¿Cuántos centímetros de cinta se necesitarán para todo el contorno?",
+          "alternatives": ["60 cm", "120 cm", "240 cm", "3600 cm"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 4.° grado de primaria (2021)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "courseName": "Educación Religiosa",
+  "gradeLevel": "secundaria_3",
+  "topics": [
+    {
+      "name": "Ética y valores cristianos",
+      "questions": [
+        {
+          "bodyTypst": "Disciplina filosófica que estudia el ser y la realidad",
+          "alternatives": [
+            "Ontología",
+            "Axiología",
+            "Psicología",
+            "Epistemología"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/2417692/prueba-de-etica-y-valores",
+          "sourceName": "Prueba de Ética y Valores - GoConqr"
+        },
+        {
+          "bodyTypst": "Disciplina filosófica que estudia los valores",
+          "alternatives": [
+            "Axiología",
+            "Ontología",
+            "Psicología",
+            "Estética"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/2417692/prueba-de-etica-y-valores",
+          "sourceName": "Prueba de Ética y Valores - GoConqr"
+        }
+      ]
+    },
+    {
+      "name": "Sacramentos y liturgia",
+      "questions": [
+        {
+          "bodyTypst": "Es el sacramento donde se elimina el pecado original",
+          "alternatives": [
+            "Bautismo",
+            "Comunión",
+            "Confirmación",
+            "Penitencia"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/13324913/cuestionario-de-los-7-sacramentos",
+          "sourceName": "Cuestionario de los 7 Sacramentos - GoConqr"
+        },
+        {
+          "bodyTypst": "¿Qué es la Eucaristía?",
+          "alternatives": [
+            "Es la consagración del pan y vino en el cuerpo de Cristo",
+            "Es cuando te confiesas ante el padre y dices tus pecados",
+            "Es el sacramento de la confirmación",
+            "Es la celebración de la fe cristiana"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/13324913/cuestionario-de-los-7-sacramentos",
+          "sourceName": "Cuestionario de los 7 Sacramentos - GoConqr"
+        },
+        {
+          "bodyTypst": "¿Qué es la Penitencia?",
+          "alternatives": [
+            "Es cuando te confiesas y fortaleces tu alma para el conocimiento",
+            "Es cuando confiesas tus pecados y te arrepientes de estos",
+            "Es el sacramento de la reconciliación con Dios",
+            "Es la práctica de ayunos y sacrificios"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/13324913/cuestionario-de-los-7-sacramentos",
+          "sourceName": "Cuestionario de los 7 Sacramentos - GoConqr"
+        },
+        {
+          "bodyTypst": "¿Cuántos sacramentos hay?",
+          "alternatives": [
+            "Seis sacramentos",
+            "Siete sacramentos: Bautismo, Confirmación, Penitencia, Eucaristía, Unción de enfermos, Orden sacerdotal, Matrimonio",
+            "Cinco sacramentos",
+            "Ocho sacramentos"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/33646609/cuestionario-sobre-el-catecismo-de-la-iglesia-catolica",
+          "sourceName": "Cuestionario sobre el Catecismo de la Iglesia Católica - GoConqr"
+        },
+        {
+          "bodyTypst": "¿Qué es un sacramento?",
+          "alternatives": [
+            "Un signo invisible instituido por Jesús para darnos gracia",
+            "Un signo sensible instituido por Jesús para darnos gracia",
+            "Un signo sensible instituido por los sacerdotes para darnos gracia",
+            "Una ceremonia religiosa de la Iglesia"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/33646609/cuestionario-sobre-el-catecismo-de-la-iglesia-catolica",
+          "sourceName": "Cuestionario sobre el Catecismo de la Iglesia Católica - GoConqr"
+        }
+      ]
+    }
+  ]
+}

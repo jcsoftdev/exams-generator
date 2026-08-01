@@ -1,0 +1,89 @@
+{
+  "courseName": "Educación Religiosa",
+  "gradeLevel": "secundaria_1",
+  "topics": [
+    {
+      "name": "Ética y valores cristianos",
+      "questions": [
+        {
+          "bodyTypst": "Son ideales por cumplir, aquello que los humanos creemos que nos hace mejores seres humanos",
+          "alternatives": [
+            "Valores",
+            "Cualidades",
+            "Virtudes",
+            "Características"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/2417692/prueba-de-etica-y-valores",
+          "sourceName": "Prueba de Ética y Valores - GoConqr"
+        },
+        {
+          "bodyTypst": "La capacidad de elegir el comportamiento de uno mismo a través del autoconocimiento se llama:",
+          "alternatives": [
+            "Responsabilidad",
+            "Autonomía",
+            "Libertad",
+            "Independencia"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/2417692/prueba-de-etica-y-valores",
+          "sourceName": "Prueba de Ética y Valores - GoConqr"
+        },
+        {
+          "bodyTypst": "Ser capaz de responder por nuestras acciones y sus consecuencias se llama:",
+          "alternatives": [
+            "Responsabilidad",
+            "Compromiso",
+            "Obligación",
+            "Deber"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/2417692/prueba-de-etica-y-valores",
+          "sourceName": "Prueba de Ética y Valores - GoConqr"
+        },
+        {
+          "bodyTypst": "Proceso cognitivo que permite reflexión sobre valores con lucha interna se llama:",
+          "alternatives": [
+            "Juicio Moral",
+            "Juicio Legal",
+            "Juicio Crítico",
+            "Juicio de Valor"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/2417692/prueba-de-etica-y-valores",
+          "sourceName": "Prueba de Ética y Valores - GoConqr"
+        },
+        {
+          "bodyTypst": "Conjunto de normas que marcan la convivencia social, transmitido de generación en generación",
+          "alternatives": [
+            "Código Penal",
+            "Código Moral",
+            "Código Civil",
+            "Código de Justicia"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/2417692/prueba-de-etica-y-valores",
+          "sourceName": "Prueba de Ética y Valores - GoConqr"
+        },
+        {
+          "bodyTypst": "Estudia y guía la conducta humana desde la perspectiva del bien y el mal:",
+          "alternatives": [
+            "Ética",
+            "Psicología",
+            "Sociología",
+            "Antropología"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/2417692/prueba-de-etica-y-valores",
+          "sourceName": "Prueba de Ética y Valores - GoConqr"
+        }
+      ]
+    }
+  ]
+}

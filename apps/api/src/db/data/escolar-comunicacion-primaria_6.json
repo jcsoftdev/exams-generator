@@ -1,0 +1,63 @@
+{
+  "courseName": "Comunicación",
+  "gradeLevel": "primaria_6",
+  "topics": [
+    {
+      "name": "Comprensión lectora inferencial y crítica",
+      "questions": [
+        {
+          "bodyTypst": "Lee el texto.\n\nEsya es una adolescente de trece años que pertenece al pueblo masái del África oriental. Vive en un lugar llamado Sanya, en Tanzania. La familia de Esya tiene diez vacas, y algunas cabras, ovejas y burros. La choza familiar está hecha con troncos de madera y el techo es de paja. Su padre cuida los animales, y su madre recoge agua y se ocupa de la casa. Durante las sequías, hay que recorrer cerca de seis kilómetros cada día para recoger agua. Esya va al colegio con sus hermanos y caminan juntos tres kilómetros hasta llegar allí. Los maestros hablan suajili, la lengua oficial de Tanzania, pero, en su casa y con sus amigos, Esya habla masái, la lengua de su pueblo. Los masáis usan ropas de colores brillantes que, en su lengua, se llaman \"rubekas\". Las mujeres llevan la cabeza rapada y se ponen grandes collares formados por cientos de cuentas de madera pintadas de diferentes colores. Además, los masáis hacen sus propias sandalias y las llaman \"namukas\". En la escuela, Esya usa uniforme, pero, cuando llega a casa, se pone las prendas tradicionales de su pueblo.\n\n¿Cómo se llama la lengua que usan los maestros de Esya?",
+          "alternatives": [
+            "Masái.",
+            "Rubeka.",
+            "Namuka.",
+            "Suajili."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 6.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-6.pdf"
+        },
+        {
+          "bodyTypst": "Lee el texto.\n\nEsya es una adolescente de trece años que pertenece al pueblo masái del África oriental. Vive en un lugar llamado Sanya, en Tanzania. La familia de Esya tiene diez vacas, y algunas cabras, ovejas y burros. La choza familiar está hecha con troncos de madera y el techo es de paja. Su padre cuida los animales, y su madre recoge agua y se ocupa de la casa. Durante las sequías, hay que recorrer cerca de seis kilómetros cada día para recoger agua. Esya va al colegio con sus hermanos y caminan juntos tres kilómetros hasta llegar allí. Los maestros hablan suajili, la lengua oficial de Tanzania, pero, en su casa y con sus amigos, Esya habla masái, la lengua de su pueblo. Los masáis usan ropas de colores brillantes que, en su lengua, se llaman \"rubekas\". Las mujeres llevan la cabeza rapada y se ponen grandes collares formados por cientos de cuentas de madera pintadas de diferentes colores. Además, los masáis hacen sus propias sandalias y las llaman \"namukas\". En la escuela, Esya usa uniforme, pero, cuando llega a casa, se pone las prendas tradicionales de su pueblo.\n\n¿De qué trata principalmente este texto?",
+          "alternatives": [
+            "De la vida de una adolescente que pertenece al pueblo masái.",
+            "De las ropas brillantes que usa la gente del pueblo masái.",
+            "De cómo la familia de Esya se reparte las tareas de la casa.",
+            "De las dificultades que debe enfrentar Esya para ir a la escuela."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 6.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-6.pdf"
+        },
+        {
+          "bodyTypst": "Lee el texto.\n\nUn pequeño pez colgante\n\nLa cultura nasca se desarrolló en la actual región Ica hace aproximadamente 1700 años. Los artesanos de esta cultura retrataron muchos peces y distintos animales en sus textiles y cerámicas. ¿Te animas a seguir su ejemplo? A continuación, te mostramos cómo construir un móvil (pequeño adorno que se puede colgar del techo) inspirado en la cerámica que se muestra en la imagen.\n\nMateriales: una hoja A4 (papel bond), tijeras, pegamento, hilo, un lápiz con borrador, plumones o lápices de colores.\n\n¿Para qué se ha escrito principalmente este texto?",
+          "alternatives": [
+            "Para enseñarnos a construir un móvil.",
+            "Para contarnos la historia de la cultura nasca.",
+            "Para convencernos de la utilidad de un móvil.",
+            "Para describirnos las cerámicas de la cultura nasca."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 6.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-6.pdf"
+        },
+        {
+          "bodyTypst": "Lee esta parte del texto \"Un pequeño pez colgante\":\n\n\"A continuación, te mostramos cómo construir un móvil (pequeño adorno que se puede colgar del techo) inspirado en la cerámica que se muestra en la imagen\".\n\n¿Para qué se han usado los paréntesis en esta parte del texto?",
+          "alternatives": [
+            "Para resaltar una opinión.",
+            "Para señalar una advertencia.",
+            "Para explicar un concepto.",
+            "Para brindar un ejemplo."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 6.° grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-6.pdf"
+        }
+      ]
+    }
+  ]
+}

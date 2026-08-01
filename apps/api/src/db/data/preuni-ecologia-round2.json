@@ -1,0 +1,683 @@
+{
+  "courseName": "Ecología",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Agua y aire",
+      "questions": [
+        {
+          "bodyTypst": "Respecto del ciclo del agua, ¿cuál proposición es correcta?",
+          "alternatives": [
+            "Condensación al descongelarse",
+            "Sucesión de estados",
+            "Fusión bajo 0°C en nubes",
+            "Ciclo hidrológico interno",
+            "Escorrentía superficial"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "¿Cuál proposición sobre el ciclo del agua es verdadera?",
+          "alternatives": [
+            "Agua siempre pura en naturaleza",
+            "Agua lluvia en contenedor es pura",
+            "Biodegradables disminuyen oxígeno",
+            "Todas las anteriores"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "El río subterráneo Hamza se clasifica como:",
+          "alternatives": [
+            "Bioma de agua dulce léntica",
+            "Bioma pelágico",
+            "Bioma nerítico",
+            "Bioma de agua dulce lótica",
+            "No puede clasificarse como bioma"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Clima y desastres naturales",
+      "questions": [
+        {
+          "bodyTypst": "El calentamiento global resulta principalmente de:",
+          "alternatives": [
+            "Variación de energía solar",
+            "Cambio climático",
+            "Efecto invernadero por gases",
+            "Ciclos naturales",
+            "Variaciones orbitales"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "Proposiciones sobre calentamiento global (V/F): I) temperatura atmósfera aumenta (V) II) vinculado a gases (V) III) efecto invernadero por CO₂, H₂O, CH₄ (V)",
+          "alternatives": [
+            "Solo I",
+            "Solo II",
+            "I y II",
+            "I y III",
+            "Todas verdaderas"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Contaminación ambiental",
+      "questions": [
+        {
+          "bodyTypst": "La destrucción de la capa de ozono es causada por:",
+          "alternatives": [
+            "CFC",
+            "O₃",
+            "CO₂",
+            "CO",
+            "H₂O"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "El efecto invernadero es causado principalmente por:",
+          "alternatives": [
+            "CH₄",
+            "SO₂",
+            "NO₂",
+            "CO₂",
+            "H₂O"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "¿Cuál proposición sobre el agujero de ozono antártico es correcta?",
+          "alternatives": [
+            "Solo variación solar",
+            "Solo descomposición orgánica",
+            "Solo emisión de CFC",
+            "Variación solar y temperaturas",
+            "Emisión volcánica de cloro"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "La descarga de aguas residuales afecta principalmente a:",
+          "alternatives": [
+            "Biodiversidad",
+            "Sólidos suspendidos",
+            "Calidad estética",
+            "Transparencia",
+            "Actividad económica"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "La enfermedad de Minamata fue causada por contaminación con:",
+          "alternatives": [
+            "Tubercu",
+            "Clorosis",
+            "Plomo",
+            "Neumonía",
+            "Mercurio"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Ecología, universo, sistema solar y Tierra",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál de los siguientes es un ejemplo de regulador abiótico?",
+          "alternatives": [
+            "recurso abiótico",
+            "regulador abiótico",
+            "recurso biótico",
+            "regulador biótico",
+            "factor climático"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "¿Cuál de los siguientes términos se refiere al papel que juega un organismo en su comunidad?",
+          "alternatives": [
+            "biocenosis",
+            "bioma",
+            "biotipo",
+            "nicho ecológico",
+            "ecosistema"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "Una unidad geográfica grande con flora y fauna características en un clima específico se denomina:",
+          "alternatives": [
+            "Ecósfera",
+            "Ecotono",
+            "Biocenosis",
+            "Biotopo",
+            "Bioma"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "Las interacciones bióticas y los flujos de energía y materia forman:",
+          "alternatives": [
+            "biocenosis",
+            "población",
+            "ecosistema",
+            "depredación",
+            "simbiosis"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "¿Cuál es un ejemplo correcto de población?",
+          "alternatives": [
+            "Macanches en Río Abiseo 2025",
+            "Guano birds en Paracas 2024",
+            "Prosopis pallida en 2023",
+            "Solanum tuberosum en 2024",
+            "Estudiantes de un centro preuniversitario"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Ecorregiones del Perú, biomas y áreas naturales protegidas",
+      "questions": [
+        {
+          "bodyTypst": "El ANP de Pui Pui protege cuencas hidrográficas. ¿Qué tipo de ANP es?",
+          "alternatives": [
+            "bosque de protección",
+            "reserva nacional",
+            "coto de caza",
+            "área reservada"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://editoradelta.blogspot.com/p/preguntas-san-marcos.html",
+          "sourceName": "EditoraDelta"
+        },
+        {
+          "bodyTypst": "El árbol nacional del Perú representa cuál ecorregión:",
+          "alternatives": [
+            "Páramo",
+            "Bosque tropical del Pacífico",
+            "Bosque nuboso",
+            "Bosque seco",
+            "Sabana de palmas"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "El Santuario Nacional de Tabaconas Namballe se ubica en:",
+          "alternatives": [
+            "Cajamarca",
+            "Santa Cruz",
+            "Cutervo",
+            "San Ignacio",
+            "San Pablo"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "Un pequeña área natural intangible para conservación e investigación se llama:",
+          "alternatives": [
+            "Santuario Nacional",
+            "Reserva Comunal",
+            "Parque Nacional",
+            "Reserva Nacional",
+            "Reserva Paisajística"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "La clasificación de Ríos Abiseo como población se refiere al:",
+          "alternatives": [
+            "Territorio geográfico",
+            "Época específica",
+            "Especie Macanches",
+            "Todos los anteriores"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Flujo de materia y energía / recursos naturales",
+      "questions": [
+        {
+          "bodyTypst": "En cadena: Fitoplancton→krill→pingüino→foca→orca, ¿quién es el consumidor secundario?",
+          "alternatives": [
+            "Krill - foca",
+            "Fitoplancton - orca",
+            "Pingüino - fitoplancton",
+            "Foca - orca",
+            "Pingüino - orca"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "¿Cuál es un recurso natural no renovable?",
+          "alternatives": [
+            "Agua",
+            "Dióxido de carbono",
+            "Aire",
+            "Suelo",
+            "Gas natural"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "El cóndor andino que se alimenta de carroña se clasifica como:",
+          "alternatives": [
+            "productor",
+            "descomponedor",
+            "consumidor secundario",
+            "consumidor terciario",
+            "consumidor primario"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "Las plantas absorben en ciclo del nitrógeno sales minerales como:",
+          "alternatives": [
+            "Nitritos",
+            "Nitratos",
+            "Amoniaco",
+            "N₂",
+            "Óxido nítrico"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "Organismos pequeños que viven libres en agua se clasifican como:",
+          "alternatives": [
+            "Bentónicos",
+            "Plancton",
+            "Neuston",
+            "Nectón",
+            "Descomponedores"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Luz y calor",
+      "questions": [
+        {
+          "bodyTypst": "Plantas adaptadas a escasa iluminación en estratos inferiores se denominan:",
+          "alternatives": [
+            "Homeotermos",
+            "Poiquilotermos",
+            "Euritérmicos",
+            "Heliofilos",
+            "Esciófílos"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "Los cactus que almacenan agua en desiertos cálidos se consideran:",
+          "alternatives": [
+            "mesófitas",
+            "halófitas",
+            "xerófitas",
+            "hidrófitas",
+            "glucófitas"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Reino Animal",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál es un organismo acuático grande y nadador?",
+          "alternatives": [
+            "Bentónico",
+            "Plancton",
+            "Neuston",
+            "Nectón",
+            "Zooplancton"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "La tigrilla/ocelote es afectado en cuanto a:",
+          "alternatives": [
+            "Población",
+            "Hábitat",
+            "Nicho ecológico",
+            "Dinámica poblacional",
+            "Ecología"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "¿Cuál es un consumidor primario?",
+          "alternatives": [
+            "cuyes y venados",
+            "fitoplancton y zooplancton",
+            "termitas y bacterias",
+            "plancton y anfibios",
+            "ballenas y peces"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Reino Monera, Protista y Fungi",
+      "questions": [
+        {
+          "bodyTypst": "Son considerados como consumidores primarios:",
+          "alternatives": [
+            "cuyes y venados",
+            "fitoplancton y zooplancton",
+            "termitas y bacterias",
+            "plancton y anfibios",
+            "ballenas y peces"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Reino Vegetal",
+      "questions": [
+        {
+          "bodyTypst": "Los cactus que almacenan agua en desiertos se denominan:",
+          "alternatives": [
+            "mesófitas",
+            "halófitas",
+            "xerófitas",
+            "hidrófitas",
+            "glucófitas"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "Plantas adaptadas a iluminación escasa en estratos bajos:",
+          "alternatives": [
+            "Heliofilos",
+            "Poiquilotermos",
+            "Euritermicos",
+            "Homeotermos",
+            "Esciófílos"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Relaciones en el ecosistema y sucesiones ecológicas",
+      "questions": [
+        {
+          "bodyTypst": "Lichenes y micorrizas representan una relación de:",
+          "alternatives": [
+            "amensalismo",
+            "comensalismo",
+            "parasitismo",
+            "mutualismo",
+            "depredación"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "¿Qué tipo de sucesión ecológica ocurre después de un incendio forestal?",
+          "alternatives": [
+            "secundaria",
+            "primaria",
+            "evolutiva",
+            "regresiva",
+            "disclimax"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "La organización social de los abejorros con castas representa:",
+          "alternatives": [
+            "gregarismo",
+            "sociedades",
+            "predominio social",
+            "compensación",
+            "competencia"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "Especies con relación permanente de vida común y beneficio mutuo forman una:",
+          "alternatives": [
+            "Sociedad",
+            "Compensación",
+            "Comensalismo",
+            "Depredación",
+            "Simbiosis"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "La rata topo desnuda vive en colonias con roles definidos. Esta relación intraespecífica se denomina:",
+          "alternatives": [
+            "compensación",
+            "sociedad",
+            "territorialidad",
+            "cooperación"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://editoradelta.blogspot.com/p/preguntas-san-marcos.html",
+          "sourceName": "EditoraDelta"
+        },
+        {
+          "bodyTypst": "Una cadena alimenticia compleja que muestra movimiento de energía se denomina:",
+          "alternatives": [
+            "Cadena alimenticia",
+            "Sucesión ecológica",
+            "Cadena trófica",
+            "Red alimenticia",
+            "Equilibrio ecológico"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Rocas y suelo",
+      "questions": [
+        {
+          "bodyTypst": "Las adaptaciones de patas en animales responden al factor:",
+          "alternatives": [
+            "Suelo",
+            "Presión",
+            "Superficie",
+            "Tamaño",
+            "Presa"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "Proceso de combustión anaeróbica de madera para producir carbón:",
+          "alternatives": [
+            "Pirólisis",
+            "Reutilización",
+            "Vermicompostaje",
+            "Compostaje",
+            "Reciclaje"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "Clasificación de uso de agua (piscicultura, doméstico, recreación):",
+          "alternatives": [
+            "Ic, IIb, IIIa",
+            "Ia, IIc, IIIb",
+            "Ib, IIa, IIIc",
+            "Ic, IIa, IIIb",
+            "Ib, IIc, IIIa"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        }
+      ]
+    },
+    {
+      "name": "Saneamiento ambiental",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál es la acción con máxima racionalidad en conservación ambiental?",
+          "alternatives": [
+            "Estándares de calidad",
+            "Gestión ambiental",
+            "Externalidad",
+            "Calidad ambiental",
+            "Política ambiental"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        },
+        {
+          "bodyTypst": "El impacto ambiental no implica:",
+          "alternatives": [
+            "Adversidad",
+            "Homogeneidad",
+            "Equilibrio",
+            "Inmediatez",
+            "Singularidad"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+          "sourceName": "Rubiños"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "courseName": "Inglés como Lengua Extranjera",
+  "gradeLevel": "secundaria_3",
+  "topics": [
+    {
+      "name": "Pasado simple",
+      "questions": [
+        {
+          "bodyTypst": "Did she stay with friends? ___.",
+          "alternatives": [
+            "No, she didn't",
+            "No, she didn't stay",
+            "No, she didn't stayed",
+            "No, she stayed not"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/beginners-English-quiz.html",
+          "sourceName": "GrammarBank – Beginners English Quiz 4"
+        }
+      ]
+    },
+    {
+      "name": "Futuro: will / going to",
+      "questions": [
+        {
+          "bodyTypst": "When ___ you go on a vacation? Tomorrow.",
+          "alternatives": [
+            "do",
+            "did",
+            "are",
+            "will"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/efl-worksheet.html",
+          "sourceName": "GrammarBank – Basic Grammar Quiz 7"
+        },
+        {
+          "bodyTypst": "What time ___ you meet her tomorrow?",
+          "alternatives": [
+            "won't",
+            "do",
+            "are",
+            "will"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/efl-worksheet.html",
+          "sourceName": "GrammarBank – Basic Grammar Quiz 7"
+        },
+        {
+          "bodyTypst": "\"___ we go on vacation?\" \"Yes! That's a great idea.\"",
+          "alternatives": [
+            "Will",
+            "Have",
+            "Shall",
+            "Do"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/beginners-english-test.html",
+          "sourceName": "GrammarBank – Beginners English Test 1 (KET/PET Vocabulary)"
+        }
+      ]
+    },
+    {
+      "name": "Comunicación oral: diálogos y presentaciones",
+      "questions": [
+        {
+          "bodyTypst": "\"___ is your favorite sport?\"",
+          "alternatives": [
+            "Who",
+            "Where",
+            "What",
+            "Why"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/efl-worksheet.html",
+          "sourceName": "GrammarBank – Basic Grammar Quiz 7"
+        },
+        {
+          "bodyTypst": "\"What color ___ his eyes?\"",
+          "alternatives": [
+            "do",
+            "are",
+            "is",
+            "does"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/efl-worksheet.html",
+          "sourceName": "GrammarBank – Basic Grammar Quiz 7"
+        }
+      ]
+    }
+  ]
+}

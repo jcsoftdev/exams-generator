@@ -1,0 +1,180 @@
+{
+  "courseName": "Desarrollo Personal, Ciudadanía y Cívica",
+  "gradeLevel": "secundaria_1",
+  "topics": [
+    {
+      "name": "Autoconocimiento e identidad personal",
+      "questions": [
+        {
+          "bodyTypst": "Según el psicólogo Paul Ekman, la respuesta de algo inesperado, inusual o que no llegamos a comprender, genera desconcierto y sobresalto. El corazón se acelera. ¿A qué tipo de emoción hace referencia?",
+          "alternatives": [
+            "sorpresa",
+            "miedo",
+            "asco",
+            "tristeza",
+            "ira"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/12/desarrollo-personal-ciudadania-civica-examen-resuelto-dpcc-admision-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+          "sourceName": "Rubiños - DPCC Admisión Universidad (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Determina la verdad (V) o falsedad (F) de las proposiciones relacionadas a las emociones.\nI. Dos o más personas pueden sentir distintas emociones sobre un mismo hecho.\nII. Dos personas que sienten alegría pueden demostrarlo de diferente modo.\nIII. La demostración de ira de una persona no depende de su manejo emocional.",
+          "alternatives": [
+            "VFV",
+            "FFV",
+            "VFF",
+            "VVF",
+            "FVF"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/12/desarrollo-personal-ciudadania-civica-examen-resuelto-dpcc-admision-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+          "sourceName": "Rubiños - DPCC Admisión Universidad (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Derechos humanos y derechos del niño",
+      "questions": [
+        {
+          "bodyTypst": "El documento elaborado por representantes de todas las regiones del mundo, proclamada en las Naciones Unidas en 1948, y que contiene los derechos fundamentales de las personas se denomina",
+          "alternatives": [
+            "Constitución Política.",
+            "Declaración Universal de los Derechos Humanos.",
+            "Convención Americana de Derechos Humanos.",
+            "Convención de los Derechos del Hombre y del Ciudadano.",
+            "Pacto Internacional de Derechos Civiles y Políticos."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/declaracion-universal-de-los-derechos-humanos-caracteristicas-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Declaración Universal de los Derechos Humanos - Ejercicios resueltos (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Nadie será sometido a torturas ni penas o tratos crueles, inhumanos, degradantes según:",
+          "alternatives": [
+            "la Declaración Universal de los Derechos Humanos.",
+            "la Constitución Civil.",
+            "el Código Civil.",
+            "las garantías.",
+            "el derecho."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/declaracion-universal-de-los-derechos-humanos-caracteristicas-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Declaración Universal de los Derechos Humanos - Ejercicios resueltos (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "¿Cuál es el organismo internacional que protege de manera expresa y amplia al niño?",
+          "alternatives": [
+            "Organización de Estados Americanos",
+            "Unicef",
+            "Cruz Roja Internacional",
+            "Comunidad Andina de Naciones",
+            "Unesco"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/declaracion-universal-de-los-derechos-humanos-caracteristicas-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Declaración Universal de los Derechos Humanos - Ejercicios resueltos (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Prevención de la violencia y el bullying",
+      "questions": [
+        {
+          "bodyTypst": "Son formas de manifestar la discriminación, excepto",
+          "alternatives": [
+            "exclusión basada en el origen étnico.",
+            "preferencias por el color de cabello.",
+            "diferenciación por el color de piel.",
+            "restricción por preferencias sexuales.",
+            "construcción de veredas con accesibilidad para discapacitados."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/problemas-de-convivencia-en-el-peru-sustentada-en-una-cultura-de-paz-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+          "sourceName": "Cultura de paz en el Perú - Ejercicios resueltos (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "La discriminación es uno de los grandes problemas en nuestro país, ocasionando en la población el menoscabo en el ejercicio o goce de sus derechos individuales o colectivos, por lo que es importante fortalecer la autoestima de las personas. Planteada esta problemática, determine el valor de verdad (V o F) de los enunciados que representen estrategias de solución.\nI) Realizar campañas que acepten la normalización de actos, frases o palabras denigrantes.\nII) Evidenciar que el uso de humor agresivo y lenguaje hiriente hacia las personas es una forma de violencia.\nIII) Implementar eventos comunicacionales para poner énfasis que la discriminación es sancionable.\nIV) Minimizar que la difusión de bromas raciales en las redes sociales son acciones cotidianas de exclusión.",
+          "alternatives": [
+            "FVFF",
+            "VFFV",
+            "FVVF",
+            "FVFV",
+            "VFFF"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/problemas-de-convivencia-en-el-peru-sustentada-en-una-cultura-de-paz-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+          "sourceName": "Cultura de paz en el Perú - Ejercicios resueltos (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Resolución de conflictos y convivencia escolar",
+      "questions": [
+        {
+          "bodyTypst": "Prioriza y ordena de forma ascendente los pasos del proceso de construcción de las normas de convivencia:\nI. Las normas de convivencia deben ser evaluadas.\nII. Las normas de convivencia deben ser vistas como beneficio personal y colectivo.\nIII. Las normas deben regular situaciones para la convivencia.\nIV. Las normas de convivencia tienen que ser elaboradas por los propios usuarios.",
+          "alternatives": [
+            "IV – III – II – I",
+            "II – III – IV – I",
+            "IV – II – III – I",
+            "II – IV – III – I",
+            "III – II – IV – I"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/12/desarrollo-personal-ciudadania-civica-examen-resuelto-dpcc-admision-universidad-prueba-de-ingreso-desarrollada-simulacro-preguntas-claves-respuestas-descarga-word-pdf.html",
+          "sourceName": "Rubiños - DPCC Admisión Universidad (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Luego de escuchar su clase sobre convivencia democrática, Katerin puede afirmar que el concepto hace referencia a",
+          "alternatives": [
+            "únicamente respetar a los miembros de la familia.",
+            "convivir con el que piensa distinto respetando los derechos de los demás.",
+            "aprender a desarrollar actividades económicas y políticas.",
+            "convivir armoniosamente dentro de una dictadura.",
+            "la exclusión de los partidos políticos de izquierda."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/problemas-de-convivencia-en-el-peru-sustentada-en-una-cultura-de-paz-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+          "sourceName": "Cultura de paz en el Perú - Ejercicios resueltos (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "A Toto le gusta mucho de que escuchen sus ideas que, a propósito son muy buenas; sin embargo, cada vez que alguien quiere sugerirle o darle nuevas ideas se vuelve reacio a escuchar. A Toto le falta ser",
+          "alternatives": [
+            "tolerante.",
+            "disciplinado.",
+            "justo.",
+            "solidario.",
+            "respetuoso."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/problemas-de-convivencia-en-el-peru-sustentada-en-una-cultura-de-paz-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+          "sourceName": "Cultura de paz en el Perú - Ejercicios resueltos (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "En una reunión de vecinos, Junet ha recibido comentarios ofensivos sobre su persona por parte de Inocencio. Pero, en vez de responder airadamente frente a las ofensas, ella decide acercarse a Inocencio y pedirle explicaciones sobre lo sucedido. Luego de resolver sus diferencias, Inocencio le pide disculpas a Junet. En este caso se podría decir que Junet pone en práctica",
+          "alternatives": [
+            "un alto sentido de religiosidad.",
+            "una cultura de paz.",
+            "una autoridad indiscutible.",
+            "un sentido de pertenencia.",
+            "una sociedad igualitaria."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/problemas-de-convivencia-en-el-peru-sustentada-en-una-cultura-de-paz-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word.html",
+          "sourceName": "Cultura de paz en el Perú - Ejercicios resueltos (matematicasn.blogspot.com)"
+        }
+      ]
+    }
+  ]
+}

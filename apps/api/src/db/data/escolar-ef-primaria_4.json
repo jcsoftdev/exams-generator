@@ -1,0 +1,81 @@
+{
+  "courseName": "Educación Física",
+  "gradeLevel": "primaria_4",
+  "topics": [
+    {
+      "name": "Capacidades físicas (fuerza, velocidad, resistencia)",
+      "questions": [
+        {
+          "bodyTypst": "Durante el juego \"Mar y tierra\", los estudiantes del grupo \"mar\" y del grupo \"tierra\" se sientan en filas, uno frente al otro. A la señal del docente, el grupo mencionado se pone de pie rápidamente y sale corriendo para atrapar, en el menor tiempo posible, a los integrantes del otro grupo. ¿Qué capacidad física están aplicando principalmente los estudiantes al ponerse de pie con rapidez?",
+          "alternatives": [
+            "Fuerza.",
+            "Agilidad.",
+            "Resistencia."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia2/C45_EBRS_21_SECUNDARIA_EDU_FISICA_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación Física Secundaria (C45-EBRS-21, Forma 1), con clave de respuestas oficial"
+        }
+      ]
+    },
+    {
+      "name": "Deportes de conjunto (fútbol, vóley, básquet)",
+      "questions": [
+        {
+          "bodyTypst": "Durante un recreo, un grupo de estudiantes de diversos grados decide jugar un partido de voleibol mixto. Al definir los equipos, los estudiantes se distribuyen de forma consensuada entre los dos equipos, tomando en cuenta la edad, la estatura y las habilidades de cada uno, y establecen las posiciones y los roles de manera que ambos equipos queden equilibrados. ¿Qué tipo de habilidades están aplicando principalmente los estudiantes al distribuir las posiciones y los roles durante el juego?",
+          "alternatives": [
+            "Habilidades tácticas.",
+            "Habilidades técnicas.",
+            "Habilidades estratégicas."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia2/C45_EBRS_21_SECUNDARIA_EDU_FISICA_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación Física Secundaria (C45-EBRS-21, Forma 1), con clave de respuestas oficial"
+        },
+        {
+          "bodyTypst": "Una docente tiene como propósito que sus estudiantes aprendan el doble ritmo en el baloncesto, pues ya han trabajado los fundamentos del lanzamiento y el dribling. Explica la regla de los dos pasos, organiza a los estudiantes en grupos y estos practican el dribling acercándose al tablero para lanzar. ¿Cuál de los siguientes aspectos del baloncesto están desarrollando los estudiantes en la sesión descrita?",
+          "alternatives": [
+            "La táctica.",
+            "La técnica.",
+            "La estrategia."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia2/C45_EBRS_21_SECUNDARIA_EDU_FISICA_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación Física Secundaria (C45-EBRS-21, Forma 1), con clave de respuestas oficial"
+        }
+      ]
+    },
+    {
+      "name": "Higiene, nutrición y vida saludable",
+      "questions": [
+        {
+          "bodyTypst": "¿Qué se recomienda a un estudiante desayunar los días que tiene clase de Educación Física a la primera hora?",
+          "alternatives": [
+            "Venir en ayunas y luego consumir las calorías necesarias para recuperarse después de la sesión.",
+            "Tomar un desayuno ligero y luego complementar con otros alimentos después de la sesión.",
+            "Tomar un desayuno completo y beber mucha agua durante la sesión y después de ella."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia2/C45_EBRS_21_SECUNDARIA_EDU_FISICA_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación Física Secundaria (C45-EBRS-21, Forma 1), con clave de respuestas oficial"
+        },
+        {
+          "bodyTypst": "Un estudiante que integra el equipo de atletismo y corre 800 metros planos pregunta qué tipo de nutrientes debe incluir principalmente en su desayuno para obtener energía inmediata para la carrera. ¿Cuál es la respuesta correcta?",
+          "alternatives": [
+            "Grasas.",
+            "Proteínas.",
+            "Carbohidratos."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia2/C45_EBRS_21_SECUNDARIA_EDU_FISICA_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación Física Secundaria (C45-EBRS-21, Forma 1), con clave de respuestas oficial"
+        }
+      ]
+    }
+  ]
+}

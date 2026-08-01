@@ -1,0 +1,66 @@
+{
+  "courseName": "Arte y Cultura",
+  "gradeLevel": "secundaria_2",
+  "topics": [
+    {
+      "name": "Danza y expresión corporal",
+      "questions": [
+        {
+          "bodyTypst": "¿En dónde es popular el merengue?",
+          "alternatives": [
+            "Hispanoamérica",
+            "Latinoamérica",
+            "Norteamérica",
+            "Suramérica"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/6869671/test-sobre-la-danza",
+          "sourceName": "GoConqr - Test sobre la danza"
+        }
+      ]
+    },
+    {
+      "name": "Teatro y expresión dramática",
+      "questions": [
+        {
+          "bodyTypst": "El teatro es la rama de:",
+          "alternatives": [
+            "Las artes visuales",
+            "El canto",
+            "Las artes escénicas"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/6869092/evaluacion-sobre-el-teatro",
+          "sourceName": "GoConqr - Evaluación sobre el teatro"
+        },
+        {
+          "bodyTypst": "El teatro es entendido como:",
+          "alternatives": [
+            "arte dramático",
+            "arte natural",
+            "arte mimetismo"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/6869092/evaluacion-sobre-el-teatro",
+          "sourceName": "GoConqr - Evaluación sobre el teatro"
+        },
+        {
+          "bodyTypst": "Los personajes de una obra de teatro pueden ser:",
+          "alternatives": [
+            "títeres",
+            "marionetas",
+            "seres humanos",
+            "todas las anteriores"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/6869092/evaluacion-sobre-el-teatro",
+          "sourceName": "GoConqr - Evaluación sobre el teatro"
+        }
+      ]
+    }
+  ]
+}

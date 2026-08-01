@@ -1,0 +1,184 @@
+{
+  "courseName": "Matemática",
+  "gradeLevel": "primaria_6",
+  "topics": [
+    {
+      "name": "Números hasta 100 000 y valor posicional",
+      "questions": [
+        {
+          "bodyTypst": "Como parte de una campaña de reciclaje, los estudiantes de secundaria de una escuela recolectaron 1826 botellas de plástico. Ellos recolectaron 478 botellas de plástico menos que los estudiantes de primaria. ¿Cuántas botellas de plástico recolectaron los estudiantes de primaria?",
+          "alternatives": [
+            "478 botellas de plástico.",
+            "1348 botellas de plástico.",
+            "2294 botellas de plástico.",
+            "2304 botellas de plástico."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Mariana recibió 8 cajas con latas de pintura para su ferretería. En cada caja hay media docena de latas de pintura. Ella venderá cada lata a S/20. ¿Cuánto dinero recibirá Mariana por la venta de todas las latas de pintura?",
+          "alternatives": ["S/34", "S/160", "S/960", "S/1920"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Sergio tiene una piscigranja y necesita comprar 1980 kg de alimento balanceado para peces. El tipo de alimento que utiliza para sus peces solo se vende en bolsas de 50 kg. ¿Cuántas bolsas de alimento balanceado debe comprar Sergio?",
+          "alternatives": ["198 bolsas.", "50 bolsas.", "40 bolsas.", "39 bolsas."],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Resuelve la siguiente operación: $15 + 5 times 2$",
+          "alternatives": ["22", "25", "40", "150"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Eloísa preparó 56 bizcochos. Luego los colocó en 4 cajas con igual cantidad de bizcochos en cada una. Al terminar de guardarlos, le sobraron 8 bizcochos. ¿Cuántos bizcochos colocó en cada caja?",
+          "alternatives": ["12 bizcochos.", "14 bizcochos.", "16 bizcochos.", "22 bizcochos."],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Cuatro amigos quieren tomar un vaso de jugo de naranja cada uno, pero tienen diferentes cantidades de dinero: Mario tiene S/5, Eliana tiene S/7, José tiene S/8 y Lucía tiene S/4. Todos están de acuerdo en prestarse dinero entre ellos para que cada uno pueda comprar un vaso de jugo del mismo precio. En el cartel de la tienda se muestran estos precios disponibles para el vaso de jugo: S/8, S/6, S/5, S/4. ¿Cuál es el mayor precio que podrán pagar los cuatro amigos por cada vaso de jugo de naranja?",
+          "alternatives": ["S/4", "S/5", "S/6", "S/8"],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Números decimales y porcentajes",
+      "questions": [
+        {
+          "bodyTypst": "Abigail tiene dos piezas de soga de diferente longitud sobre una mesa: una mide 3 m y la otra 1,2 m. Ella usó completamente las dos piezas de soga para amarrar unos troncos de su corral de ovejas. ¿Qué longitud de soga usó Abigail en total?",
+          "alternatives": ["1,5 m", "1,8 m", "4,2 m", "15 m"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Antonio va a preparar tortillas para venderlas en el mercado. Él tenía 800 g de harina de yuca, pero esa cantidad no era suficiente. Por eso fue a comprar 1 kg y medio de harina de yuca. Luego de la compra, ¿qué cantidad de harina de yuca tiene Antonio en total?",
+          "alternatives": ["1 kg y 300 g", "1 kg y 500 g", "1 kg y 800 g", "2 kg y 300 g"],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Fracciones",
+      "questions": [
+        {
+          "bodyTypst": "Gabriela es una artesana de Chulucanas. Ella tiene una bolsa con $3/4$ kg de arcilla para fabricar unas cerámicas típicas de su región. Gabriela sabe que esa bolsa tiene $1/8$ kg de arcilla más que la cantidad que necesita. ¿Qué cantidad de arcilla necesita Gabriela?",
+          "alternatives": ["$5/8$ kg de arcilla.", "$4/12$ kg de arcilla.", "$2/4$ kg de arcilla.", "$2/8$ kg de arcilla."],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Óscar, un estudiante de Moyobamba, tenía cierta cantidad de arroz en una bolsa. Él usó $3/4$ kg de arroz para preparar juanes, un plato típico de su ciudad. Al terminar, le quedó $1/2$ kg de arroz en la bolsa. ¿Qué cantidad de arroz tenía Óscar en la bolsa al inicio?",
+          "alternatives": ["$5/4$ kg de arroz.", "$4/6$ kg de arroz.", "$2/2$ kg de arroz.", "$1/4$ kg de arroz."],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Patrones y secuencias",
+      "questions": [
+        {
+          "bodyTypst": "Benjamín desea ahorrar dinero para comprar una pelota. En la primera semana guardó 3 soles. A partir de la siguiente semana, guardó 4 soles cada semana. ¿Cuál de los siguientes patrones representa la cantidad total de dinero que tiene Benjamín cada semana?",
+          "alternatives": [
+            "3, 4, 4, 4, 4, …",
+            "4, 8, 12, 16, 20, …",
+            "3, 12, 48, 192, 768, …",
+            "3, 7, 11, 15, 19, …"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Juan vende tres paquetes de mantequilla por S/5. Él elaboró la siguiente tabla para calcular la cantidad de dinero que tendría que cobrar según la cantidad de paquetes que venda:\n\nCantidad de paquetes: 3, 6, 9, …\nDinero por cobrar (S/): 5, 10, 15, …\n\nJuan vendió una docena y media de paquetes de mantequilla. ¿Cuánto dinero cobrará por esa venta?",
+          "alternatives": ["S/60", "S/30", "S/20", "S/18"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Observa el siguiente patrón: 2, 4, 8, 16, … ¿Qué se puede hacer para encontrar el término que falta en el recuadro?",
+          "alternatives": [
+            "Sumar 2 al número 16.",
+            "Sumar 8 al número 16.",
+            "Multiplicar por 8 al número 16.",
+            "Multiplicar por 2 al número 16."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "¿Qué número debe escribirse en el recuadro para que se cumpla la igualdad? $2 times n + 6 = 38$",
+          "alternatives": ["13", "16", "22", "30"],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Gráficos, tablas, estadística y probabilidad",
+      "questions": [
+        {
+          "bodyTypst": "Pilar es deportista. Como parte de su entrenamiento, ella debe seguir una dieta especial para subir de peso. Pilar registró en la siguiente tabla su peso durante siete semanas:\n\nSemana 1: 48 kg\nSemana 2: 49 kg\nSemana 3: 52 kg\nSemana 4: 51 kg\nSemana 5: 53 kg\nSemana 6: 51 kg\nSemana 7: 52 kg\n\nSegún esta información, ¿entre qué semanas subió más de peso?",
+          "alternatives": [
+            "Entre la 1.a y la 2.a",
+            "Entre la 2.a y la 3.a",
+            "Entre la 4.a y la 5.a",
+            "Entre la 6.a y la 7.a"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Perímetro, área y volumen",
+      "questions": [
+        {
+          "bodyTypst": "Gustavo pegará unas fotos de su familia en un pedazo de cartulina que tiene la forma de dos cuadrados unidos: uno grande de 20 cm de lado y otro pequeño de 12 cm de lado. ¿Cuál es el área del pedazo de cartulina en el que Gustavo pegará las fotos?",
+          "alternatives": ["544 cm²", "240 cm²", "104 cm²", "32 cm²"],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 6.° grado de primaria (2021)"
+        }
+      ]
+    }
+  ]
+}

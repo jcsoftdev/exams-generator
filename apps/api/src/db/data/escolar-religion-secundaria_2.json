@@ -1,0 +1,24 @@
+{
+  "courseName": "Educación Religiosa",
+  "gradeLevel": "secundaria_2",
+  "topics": [
+    {
+      "name": "Ética y valores cristianos",
+      "questions": [
+        {
+          "bodyTypst": "Dar a cada quien lo que le corresponde",
+          "alternatives": [
+            "Justicia",
+            "Responsabilidad",
+            "Puntualidad",
+            "Equidad"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/2417692/prueba-de-etica-y-valores",
+          "sourceName": "Prueba de Ética y Valores - GoConqr"
+        }
+      ]
+    }
+  ]
+}

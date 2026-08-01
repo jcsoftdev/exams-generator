@@ -1,0 +1,24 @@
+{
+  "courseName": "Educación Religiosa",
+  "gradeLevel": "primaria_4",
+  "topics": [
+    {
+      "name": "Valores cristianos y la convivencia fraterna",
+      "questions": [
+        {
+          "bodyTypst": "Los bienes comunes se disfrutan con:",
+          "alternatives": [
+            "Armonía",
+            "Orden y cuidado",
+            "Equidad",
+            "Respeto y libertad"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/es/quiz/10902136/evaluacion-de-etica-y-valores",
+          "sourceName": "Evaluación de Ética y Valores - GoConqr"
+        }
+      ]
+    }
+  ]
+}

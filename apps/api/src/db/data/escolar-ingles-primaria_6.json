@@ -1,0 +1,63 @@
+{
+  "courseName": "Inglés como Lengua Extranjera",
+  "gradeLevel": "primaria_6",
+  "topics": [
+    {
+      "name": "Preposiciones y estructuras there is / there are",
+      "questions": [
+        {
+          "bodyTypst": "___ any messages for me?",
+          "alternatives": [
+            "Is there",
+            "Will there",
+            "Are there",
+            "Was there"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/efl-worksheet.html",
+          "sourceName": "GrammarBank – Basic Grammar Quiz 7"
+        },
+        {
+          "bodyTypst": "Look! The cup is empty. There ___ nothing in it.",
+          "alternatives": [
+            "is",
+            "will",
+            "are",
+            "isn't"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/efl-worksheet.html",
+          "sourceName": "GrammarBank – Basic Grammar Quiz 7"
+        },
+        {
+          "bodyTypst": "Listen! I think there is someone ___ the front door.",
+          "alternatives": [
+            "on",
+            "at",
+            "in",
+            "with"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/prepositions-quiz.html",
+          "sourceName": "GrammarBank – Prepositions Quiz (Easy)"
+        },
+        {
+          "bodyTypst": "See you ___ Monday morning.",
+          "alternatives": [
+            "under",
+            "at",
+            "in",
+            "on"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/prepositions-quiz.html",
+          "sourceName": "GrammarBank – Prepositions Quiz (Easy)"
+        }
+      ]
+    }
+  ]
+}

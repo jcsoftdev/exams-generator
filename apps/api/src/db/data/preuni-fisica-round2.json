@@ -1,0 +1,323 @@
+{
+  "courseName": "Física",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Análisis dimensional y vectorial",
+      "questions": [
+        {
+          "bodyTypst": "Una fuerza de fricción por aire sigue: $F = C A v^2$. Determine la dimensión de C.",
+          "alternatives": [
+            "$M L^(-2)$",
+            "$M L^(-3)$",
+            "$M L^(-1)$",
+            "$L^(-2)$",
+            "$L^(-3)$"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI 2018-1"
+        }
+      ]
+    },
+    {
+      "name": "Cinemática",
+      "questions": [
+        {
+          "bodyTypst": "Un automóvil que va a 88 km/h se encuentra a 110 m detrás de un camión que va a 75 km/h. Calcule aproximadamente el tiempo en segundos que le tomará al automóvil alcanzar al camión. Los dos vehículos realizan MRU.",
+          "alternatives": [
+            "15 s",
+            "20 s",
+            "25 s",
+            "30,5 s",
+            "35 s"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI 2018-1"
+        }
+      ]
+    },
+    {
+      "name": "Dinámica",
+      "questions": [
+        {
+          "bodyTypst": "Una fuerza $F$ de 27,62 N se aplica horizontalmente sobre una masa de 10 kg con coeficiente de rozamiento cinético de 0,2. Si parte del reposo y se desplaza 10 m, calcule la potencia media (en W). ($g = 9,81$ m/s²)",
+          "alternatives": [
+            "120 W",
+            "185 W",
+            "220 W",
+            "276 W",
+            "350 W"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI 2018-1"
+        },
+        {
+          "bodyTypst": "Una bala de 10 g impacta un cubo de madera de 5 kg en reposo, incrustándose en él. La rapidez del sistema es 0,6 m/s. Determine la rapidez inicial de la bala (en m/s). ($g = 9,81$ m/s²)",
+          "alternatives": [
+            "150,3 m/s",
+            "200,6 m/s",
+            "300,6 m/s",
+            "400,2 m/s",
+            "500,8 m/s"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI 2018-1"
+        }
+      ]
+    },
+    {
+      "name": "Electrodinámica",
+      "questions": [
+        {
+          "bodyTypst": "Calcule en Ω la resistencia de una radio de potencia 10 W conectada a 4,5 V.",
+          "alternatives": [
+            "0,025 Ω",
+            "1,025 Ω",
+            "2,025 Ω",
+            "3,025 Ω",
+            "4,025 Ω"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "UNI 2021-1"
+        },
+        {
+          "bodyTypst": "¿Cuántos focos de 5 V se deben conectar en serie para usar en red de 220 V?",
+          "alternatives": [
+            "22 focos",
+            "33 focos",
+            "44 focos",
+            "55 focos",
+            "66 focos"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI 2018-1"
+        }
+      ]
+    },
+    {
+      "name": "Física moderna",
+      "questions": [
+        {
+          "bodyTypst": "Función trabajo de material: 2 eV. ¿Longitud onda máxima (nm) para efecto fotoeléctrico? ($h = 4,14 times 10^(-15)$ eV·s; $c = 3 times 10^8$ m/s)",
+          "alternatives": [
+            "421 nm",
+            "521 nm",
+            "621 nm",
+            "721 nm",
+            "821 nm"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI 2018-1"
+        }
+      ]
+    },
+    {
+      "name": "Gravitación universal",
+      "questions": [
+        {
+          "bodyTypst": "Calcule aproximadamente la magnitud de la fuerza de gravedad terrestre (en N) sobre una nave espacial que se encuentra a 12 800 km de distancia de la superficie terrestre. La masa de la nave es de 1 350 kg. Considere $G = 6,67 times 10^(-11)$ N·m²/kg², radio terrestre = 6 370 km, masa terrestre = $5,97 times 10^(24)$ kg.",
+          "alternatives": [
+            "250 N",
+            "456 N",
+            "789 N",
+            "1463 N",
+            "2150 N"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI 2018-1"
+        },
+        {
+          "bodyTypst": "Un satélite de comunicaciones orbita a una altura de 36 000 km sobre la superficie terrestre. Si el radio de la Tierra es 6 370 km, calcule aproximadamente la razón entre la fuerza gravitacional en órbita y en la superficie. ($g = 9,81$ m/s² en superficie)",
+          "alternatives": [
+            "0,023",
+            "0,032",
+            "0,045",
+            "0,058",
+            "0,074"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI 2018-1"
+        }
+      ]
+    },
+    {
+      "name": "Hidrostática",
+      "questions": [
+        {
+          "bodyTypst": "Calcule aproximadamente en N el peso aparente de 100 g de aluminio sumergido en agua. Densidad aluminio: 2 698,4 kg/m³, agua: 1 000 kg/m³, $g = 9,81$ m/s²",
+          "alternatives": [
+            "0,51 N",
+            "0,61 N",
+            "0,71 N",
+            "0,81 N",
+            "0,91 N"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "UNI 2021-1"
+        }
+      ]
+    },
+    {
+      "name": "Magnetismo y electromagnetismo",
+      "questions": [
+        {
+          "bodyTypst": "Un solenoide largo con corriente de 4 A genera un campo magnético de $1,5 times 10^(-2)$ T. Si se quiere el mismo campo con 2,5 A, ¿en qué porcentaje aumentar el número de espiras por unidad de longitud?",
+          "alternatives": [
+            "30%",
+            "40%",
+            "50%",
+            "60%",
+            "70%"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI 2018-1"
+        }
+      ]
+    },
+    {
+      "name": "Óptica geométrica",
+      "questions": [
+        {
+          "bodyTypst": "Objeto a 20 cm de espejo cóncavo; distancia objeto-imagen es 5 cm. Calcule el radio de curvatura (en cm).",
+          "alternatives": [
+            "11,1 cm",
+            "13,1 cm",
+            "15,1 cm",
+            "17,1 cm",
+            "19,1 cm"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "UNI 2021-1"
+        },
+        {
+          "bodyTypst": "Un objeto a 60 cm de espejo convexo (R = 60 cm) se mueve cuando R se duplica. Calcule el desplazamiento de la imagen (en cm).",
+          "alternatives": [
+            "5 cm",
+            "8 cm",
+            "10 cm",
+            "12 cm",
+            "15 cm"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI 2018-1"
+        }
+      ]
+    },
+    {
+      "name": "Oscilaciones y ondas mecánicas",
+      "questions": [
+        {
+          "bodyTypst": "Una masa de 0,6 kg cuelga de un resorte y realiza 3 oscilaciones completas en 1 segundo con amplitud de 13 cm. Calcule la rapidez en el punto de equilibrio (en m/s). ($g = 9,81$ m/s²)",
+          "alternatives": [
+            "1,15 m/s",
+            "1,95 m/s",
+            "2,45 m/s",
+            "3,10 m/s",
+            "4,20 m/s"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI 2018-1"
+        },
+        {
+          "bodyTypst": "Una onda transversal: $y = 0,02 \\sin(0,5t - 1,2x + \\pi/6)$ (m). Calcule la rapidez máxima de un punto en la cuerda (en cm/s).",
+          "alternatives": [
+            "0,5 cm/s",
+            "0,75 cm/s",
+            "1,0 cm/s",
+            "1,5 cm/s",
+            "2,0 cm/s"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI 2018-1"
+        }
+      ]
+    },
+    {
+      "name": "Temperatura, calorimetría y fenómenos térmicos",
+      "questions": [
+        {
+          "bodyTypst": "Un termómetro mal calibrado indica 102°C en ebullición del agua y marca correcto en 36°C. ¿Qué marca en congelación? (en °C)",
+          "alternatives": [
+            "-2,1°C",
+            "-1,1°C",
+            "-0,1°C",
+            "1,1°C",
+            "2,1°C"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2021.pdf",
+          "sourceName": "UNI 2021-1"
+        }
+      ]
+    },
+    {
+      "name": "Termodinámica",
+      "questions": [
+        {
+          "bodyTypst": "Un gas ideal cumple $PV^(3/2) = $ constante. Si se expande a volumen final 4 veces el inicial, calcule razón de temperaturas $T_f/T_i$.",
+          "alternatives": [
+            "0,25",
+            "0,5",
+            "1,0",
+            "2,0",
+            "4,0"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI 2018-1"
+        }
+      ]
+    },
+    {
+      "name": "Trabajo, energía y potencia",
+      "questions": [
+        {
+          "bodyTypst": "Un cuerpo de 10 kg en reposo debe alcanzar 20 m/s en 4 s. Calcule la fuerza constante requerida (en N).",
+          "alternatives": [
+            "25 N",
+            "35 N",
+            "50 N",
+            "65 N",
+            "75 N"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+          "sourceName": "UNI 2018-1"
+        }
+      ]
+    }
+  ]
+}

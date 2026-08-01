@@ -1,0 +1,76 @@
+{
+  "courseName": "Educación para el Trabajo",
+  "gradeLevel": "secundaria_4",
+  "topics": [
+    {
+      "name": "Contabilidad básica y costos",
+      "questions": [
+        {
+          "bodyTypst": "Un equipo de estudiantes clasifica los costos de implementación de su proyecto de producción de quesos artesanales. ¿Cuál de los siguientes costos es un costo variable?",
+          "alternatives": [
+            "La compra de insumos para la elaboración del producto.",
+            "El alquiler de la tienda donde se venderán los productos.",
+            "El sueldo mensual del vendedor."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia1/C09_EBRS_11_SECUNDARIA_EPT_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación para el Trabajo Secundaria (C09-EBRS-11, Forma 1), con clave de respuestas oficial"
+        },
+        {
+          "bodyTypst": "Un equipo de estudiantes diseña su modelo de negocio con el Lienzo Lean Canvas: la venta de mantas producidas por artesanos de la zona. Adquirirán las mantas a S/ 80 por unidad y las venderán a S/ 100 por unidad. El costo de alquiler de un stand y el sueldo del personal encargado de su atención durante un mes es de S/ 1600. Si no se consideran otros costos, ¿qué cantidad de mantas deben vender en un mes para alcanzar el punto de equilibrio?",
+          "alternatives": [
+            "16 mantas.",
+            "20 mantas.",
+            "80 mantas."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia1/C09_EBRS_11_SECUNDARIA_EPT_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación para el Trabajo Secundaria (C09-EBRS-11, Forma 1), con clave de respuestas oficial"
+        }
+      ]
+    },
+    {
+      "name": "Gestión de proyectos y plan de negocio",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál de las siguientes recomendaciones permite orientar a los estudiantes en la selección de los early adopters para su proyecto de emprendimiento?",
+          "alternatives": [
+            "Proponerles identificar a los usuarios que estarán dispuestos a brindar retroalimentación a partir de su experiencia de compra.",
+            "Proponerles identificar a los usuarios que no tienen problemas o necesidades vinculados a la solución del producto o servicio ofrecidos.",
+            "Proponerles identificar a los usuarios que son influenciados por otros consumidores a utilizar un producto o servicio que no necesariamente requieren."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia1/C09_EBRS_11_SECUNDARIA_EPT_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación para el Trabajo Secundaria (C09-EBRS-11, Forma 1), con clave de respuestas oficial"
+        },
+        {
+          "bodyTypst": "Considerando el análisis de la matriz FODA de una empresa de producción de bienes, ¿cuál de las siguientes alternativas corresponde a la estrategia DO (debilidades-oportunidades)?",
+          "alternatives": [
+            "Aprovechar que los costos de la publicidad radial y televisiva han bajado, debido a que las empresas de la localidad no hacen publicidad.",
+            "Comprar maquinaria para satisfacer demanda no atendida, sabiendo que hay ofertas de créditos con baja tasa de interés.",
+            "Promover a un trabajador destacado para optimizar los canales de distribución que tienen dificultades."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia1/C09_EBRS_11_SECUNDARIA_EPT_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación para el Trabajo Secundaria (C09-EBRS-11, Forma 1), con clave de respuestas oficial"
+        },
+        {
+          "bodyTypst": "Considerando el análisis de la matriz FODA de una empresa de juguetes para niños, ¿cuál de las siguientes alternativas corresponde a la estrategia FO (fortalezas-oportunidades)?",
+          "alternatives": [
+            "Aprovechar el éxito de la estrategia de venta de sus juguetes para hacer convenios con empresas transnacionales que operan en su entorno.",
+            "Potenciar la promoción de sus juguetes porque han ingresado al mercado nuevos competidores con juguetes a precios más bajos.",
+            "Fijar un precio de venta más bajo porque la demanda de los juguetes está disminuyendo de forma constante."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "hard",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia1/C09_EBRS_11_SECUNDARIA_EPT_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación para el Trabajo Secundaria (C09-EBRS-11, Forma 1), con clave de respuestas oficial"
+        }
+      ]
+    }
+  ]
+}

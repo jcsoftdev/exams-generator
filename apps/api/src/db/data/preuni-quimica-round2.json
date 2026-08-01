@@ -1,0 +1,284 @@
+{
+  "courseName": "Química",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Ácidos, bases y sales",
+      "questions": [
+        {
+          "bodyTypst": "Las soluciones de nitrato de calcio Ca(NO₃)₂, ácido sulfúrico H₂SO₄ e hidróxido de calcio Ca(OH)₂ tienen muchos usos industriales. Determina el peso equivalente de cada compuesto respectivamente (M.A.: Ca=40, N=14, O=16, S=32, H=1).",
+          "alternatives": [
+            "64–98–74",
+            "82–49–25",
+            "82–49–37",
+            "49–25–37",
+            "30–49–82"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-desarrollada-ingreso-universidad.html",
+          "sourceName": "Matemáticas N - Banco de Preguntas Química DECO UNI"
+        }
+      ]
+    },
+    {
+      "name": "Contaminación ambiental y ecología aplicada",
+      "questions": []
+    },
+    {
+      "name": "Electroquímica",
+      "questions": []
+    },
+    {
+      "name": "Enlace químico",
+      "questions": []
+    },
+    {
+      "name": "Estados de la materia",
+      "questions": [
+        {
+          "bodyTypst": "Se tienen las sustancias siguientes: un vaso de agua mineral gasificada, un vaso de agua potable, un vaso de limonada mezclada con harina y unos gramos de detergente. ¿Cuántas mezclas homogéneas y cuántas heterogéneas hay?",
+          "alternatives": [
+            "2 homogéneas y 2 heterogéneas",
+            "1 homogénea y 3 heterogéneas",
+            "4 homogéneas y 0 heterogéneas",
+            "0 homogéneas y 4 heterogéneas",
+            "3 homogéneas y 1 heterogénea"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-desarrollada-ingreso-universidad.html",
+          "sourceName": "Matemáticas N - Banco de Preguntas Química DECO UNI"
+        }
+      ]
+    },
+    {
+      "name": "Estequiometría y reacciones químicas",
+      "questions": [
+        {
+          "bodyTypst": "Si 98 g de ácido sulfúrico contiene la misma cantidad de azufre que 284 g de sulfato de sodio (Na₂SO₄) comercial, el porcentaje de impurezas que contiene el sulfato de sodio es:",
+          "alternatives": [
+            "45%",
+            "50%",
+            "55%",
+            "67%",
+            "75%"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-desarrollada-ingreso-universidad.html",
+          "sourceName": "Matemáticas N - Banco de Preguntas Química DECO UNI"
+        },
+        {
+          "bodyTypst": "Se tienen 20 gramos de H₂ a condiciones normales. ¿Cuál es el volumen que ocuparía en litros?",
+          "alternatives": [
+            "112 L",
+            "168 L",
+            "224 L",
+            "280 L",
+            "336 L"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-ejercicios-resueltos-pdf-rubinos.html",
+          "sourceName": "Rubiños - Química 2026 - Ejercicios Resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Estructura atómica",
+      "questions": [
+        {
+          "bodyTypst": "El núcleo del átomo contiene neutrones equivalentes al doble de los protones. Si la suma del número de masa y de neutrones es 140, calcula los protones que posee.",
+          "alternatives": [
+            "31",
+            "34",
+            "28",
+            "30",
+            "40"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-desarrollada-ingreso-universidad.html",
+          "sourceName": "Matemáticas N - Banco de Preguntas Química DECO UNI"
+        },
+        {
+          "bodyTypst": "En un átomo la diferencia de cuadrados del número de masa y atómico es igual a 300. Determina el número de protones, si posee 10 neutrones.",
+          "alternatives": [
+            "15",
+            "4",
+            "8",
+            "10",
+            "20"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-desarrollada-ingreso-universidad.html",
+          "sourceName": "Matemáticas N - Banco de Preguntas Química DECO UNI"
+        },
+        {
+          "bodyTypst": "Determine la $\\Delta E$ cuando un electrón del átomo de hidrógeno pasa del quinto al tercer nivel.",
+          "alternatives": [
+            "$1.8 times 10^(-18)$ J",
+            "$-1.8 times 10^(-18)$ J",
+            "$1.5 times 10^(-19)$ J",
+            "$1.5 times 10^(-18)$ J",
+            "$-1.5 times 10^(-19)$ J"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-desarrollada-ingreso-universidad.html",
+          "sourceName": "Matemáticas N - Banco de Preguntas Química DECO UNI"
+        },
+        {
+          "bodyTypst": "Es imposible conocer con exactitud la posición y la velocidad de un electrón simultáneamente, corresponde al principio de ______.",
+          "alternatives": [
+            "exclusión de Pauli",
+            "incertidumbre de Heisemberg",
+            "incertidumbre de Pauli",
+            "exclusión de Hund",
+            "máxima multiplicidad de Hund"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-desarrollada-ingreso-universidad.html",
+          "sourceName": "Matemáticas N - Banco de Preguntas Química DECO UNI"
+        },
+        {
+          "bodyTypst": "Indique la alternativa que presenta un conjunto de números cuánticos permitidos para un electrón de la capa M.",
+          "alternatives": [
+            "3, 0, 0, +1/2",
+            "3, 1, 1, –1/2",
+            "3, 2, 2, +1/2",
+            "3, 1, –1, –1/2",
+            "4, 1, 0, +1/2"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-ejercicios-resueltos-pdf-rubinos.html",
+          "sourceName": "Rubiños - Química 2026 - Ejercicios Resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "questions": []
+    },
+    {
+      "name": "Materia y energía",
+      "questions": []
+    },
+    {
+      "name": "Nomenclatura inorgánica",
+      "questions": []
+    },
+    {
+      "name": "Química aplicada: nanotecnología y materiales modernos",
+      "questions": []
+    },
+    {
+      "name": "Química del carbono",
+      "questions": [
+        {
+          "bodyTypst": "Cuando se calienta a 250°C una muestra de 12.06 g de un compuesto orgánico que contiene C, H y O, se produce 17.67 g de CO₂ y 7.24 g de H₂O. Determine la fórmula empírica del compuesto (M.A.: C=12, H=1, O=16).",
+          "alternatives": [
+            "C₂H₂O",
+            "CH₂O",
+            "CHO₂",
+            "CHO",
+            "C₂HO"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-desarrollada-ingreso-universidad.html",
+          "sourceName": "Matemáticas N - Banco de Preguntas Química DECO UNI"
+        },
+        {
+          "bodyTypst": "Un hidrocarburo insaturado contiene 14.29% de hidrógeno en masa. Si la masa molecular del compuesto es 56 g/mol, determine su fórmula molecular.",
+          "alternatives": [
+            "C₃H₆",
+            "C₄H₈",
+            "C₅H₁₀",
+            "C₆H₁₂",
+            "C₇H₁₄"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-ejercicios-resueltos-pdf-rubinos.html",
+          "sourceName": "Rubiños - Química 2026 - Ejercicios Resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Soluciones",
+      "questions": [
+        {
+          "bodyTypst": "Se tiene una solución que contiene 0.02 mol/L de iones Ba²⁺ en 5 L. ¿Cuántos gramos de BaSO₄ se precipitarán cuando se añade sulfato de sodio en exceso? (M.A.: Ba=137, S=32, O=16)",
+          "alternatives": [
+            "11.65 g",
+            "16.50 g",
+            "19.70 g",
+            "23.30 g",
+            "29.40 g"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-ejercicios-resueltos-pdf-rubinos.html",
+          "sourceName": "Rubiños - Química 2026 - Ejercicios Resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Tabla periódica",
+      "questions": [
+        {
+          "bodyTypst": "Un elemento se encuentra en el período 5 del grupo VB de la tabla periódica. ¿Cuántos protones tiene su átomo en el núcleo?",
+          "alternatives": [
+            "23",
+            "33",
+            "41",
+            "51",
+            "61"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-ejercicios-resueltos-pdf-rubinos.html",
+          "sourceName": "Rubiños - Química 2026 - Ejercicios Resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Unidades químicas de masa",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuántos moles de átomos de oxígeno hay en 0.5 mol de H₂SO₄?",
+          "alternatives": [
+            "0.5 mol",
+            "1 mol",
+            "2 mol",
+            "3 mol",
+            "4 mol"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-desarrollada-ingreso-universidad.html",
+          "sourceName": "Matemáticas N - Banco de Preguntas Química DECO UNI"
+        },
+        {
+          "bodyTypst": "¿Cuál es la masa molar del compuesto Ca(OH)₂? (M.A.: Ca=40, O=16, H=1)",
+          "alternatives": [
+            "56 g/mol",
+            "57 g/mol",
+            "74 g/mol",
+            "92 g/mol",
+            "110 g/mol"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/p/quimica-ejercicios-resueltos-pdf-rubinos.html",
+          "sourceName": "Rubiños - Química 2026 - Ejercicios Resueltos"
+        }
+      ]
+    }
+  ]
+}

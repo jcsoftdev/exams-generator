@@ -1,0 +1,79 @@
+{
+  "courseName": "Educación para el Trabajo",
+  "gradeLevel": "secundaria_2",
+  "topics": [
+    {
+      "name": "Diseño y elaboración de productos",
+      "questions": [
+        {
+          "bodyTypst": "Como parte del análisis de un producto, un equipo de estudiantes desarma un lapicero, observa sus partes y cómo estas se relacionan entre sí, y luego lo vuelve a armar. ¿Qué tipo de análisis se evidencia en las acciones realizadas por el equipo de estudiantes?",
+          "alternatives": [
+            "Análisis estructural del producto.",
+            "Análisis tecnológico del producto.",
+            "Análisis morfológico del producto."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia1/C09_EBRS_11_SECUNDARIA_EPT_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación para el Trabajo Secundaria (C09-EBRS-11, Forma 1), con clave de respuestas oficial"
+        },
+        {
+          "bodyTypst": "Un equipo de estudiantes elabora el Diagrama de Operaciones del Proceso (DOP) para la elaboración del néctar de membrillo. A una de las actividades le han asignado el símbolo que se asemeja a una flecha gruesa orientada hacia la derecha. ¿Cuál de las siguientes actividades se corresponde con el símbolo descrito?",
+          "alternatives": [
+            "Trasladar insumo.",
+            "Verificar calidad del insumo.",
+            "Inspeccionar temperatura del insumo."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia1/C09_EBRS_11_SECUNDARIA_EPT_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación para el Trabajo Secundaria (C09-EBRS-11, Forma 1), con clave de respuestas oficial"
+        }
+      ]
+    },
+    {
+      "name": "Tecnologías de la información básica",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuáles de las siguientes son funciones del sistema operativo de una computadora?",
+          "alternatives": [
+            "Gestionar la memoria RAM.",
+            "Gestionar los procesos (programas) que se ejecutan.",
+            "Gestionar la entrada y salida de datos.",
+            "Todas son funciones del sistema operativo."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://opocademy.com/test-de-informatica-para-oposiciones-auxiliar-administrativo/",
+          "sourceName": "Opocademy - Test de informática básica para oposiciones, con respuestas correctas marcadas en la página"
+        },
+        {
+          "bodyTypst": "Si la dirección de una página web de Internet comienza con https://, es porque esa página:",
+          "alternatives": [
+            "Es una sede electrónica.",
+            "Indica que el servidor que la aloja utiliza el puerto 80.",
+            "Utiliza cifrado.",
+            "Es una página de intercambio de ficheros."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://opocademy.com/test-de-informatica-para-oposiciones-auxiliar-administrativo/",
+          "sourceName": "Opocademy - Test de informática básica para oposiciones, con respuestas correctas marcadas en la página"
+        },
+        {
+          "bodyTypst": "¿Qué resultado se obtiene en Microsoft Excel al realizar la operación =2^4?",
+          "alternatives": [
+            "8",
+            "0,5",
+            "16",
+            "Ninguna de las anteriores."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://opocademy.com/test-de-informatica-para-oposiciones-auxiliar-administrativo/",
+          "sourceName": "Opocademy - Test de informática básica para oposiciones, con respuestas correctas marcadas en la página"
+        }
+      ]
+    }
+  ]
+}

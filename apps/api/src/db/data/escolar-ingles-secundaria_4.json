@@ -1,0 +1,55 @@
+{
+  "courseName": "Inglés como Lengua Extranjera",
+  "gradeLevel": "secundaria_4",
+  "topics": [
+    {
+      "name": "Comunicación oral: diálogos y presentaciones",
+      "questions": [
+        {
+          "bodyTypst": "\"Hello Mario, ___?\" \"I'm very well, thank you.\"",
+          "alternatives": [
+            "How do you?",
+            "How are you?",
+            "How you are?",
+            "How is it?"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/starter-English-test.html",
+          "sourceName": "GrammarBank – Starter English Test 3"
+        }
+      ]
+    },
+    {
+      "name": "Comprensión auditiva (listening)",
+      "questions": [
+        {
+          "bodyTypst": "Read the following short text and answer.\n\nLast summer, we decided to spend our vacation at the beach because the weather was very hot in the mountains. The travel agent said that traveling by bus was the cheapest way, but we went by plane because it was faster. We wanted to have more time to spend at the beach. The weather was beautiful and we had a great time.\n\nTraveling by plane was ___ than by bus.",
+          "alternatives": [
+            "more fun",
+            "cheaper",
+            "expensive",
+            "faster"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/reading-comprehension-test.html",
+          "sourceName": "GrammarBank – Beginners Reading Comprehension Test 1"
+        },
+        {
+          "bodyTypst": "Read the following short text and answer.\n\nLast summer, we decided to spend our vacation at the beach because the weather was very hot in the mountains. The travel agent said that traveling by bus was the cheapest way, but we went by plane because it was faster. We wanted to have more time to spend at the beach. The weather was beautiful and we had a great time.\n\nWe ___ our vacation.",
+          "alternatives": [
+            "hated",
+            "didn't like",
+            "enjoyed",
+            "regretted"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/reading-comprehension-test.html",
+          "sourceName": "GrammarBank – Beginners Reading Comprehension Test 1"
+        }
+      ]
+    }
+  ]
+}

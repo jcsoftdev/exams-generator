@@ -1,0 +1,105 @@
+{
+  "courseName": "Educación para el Trabajo",
+  "gradeLevel": "secundaria_3",
+  "topics": [
+    {
+      "name": "Diseño y elaboración de productos",
+      "questions": [
+        {
+          "bodyTypst": "Un equipo de estudiantes elabora un diagrama de flujo de un servicio y busca representar la acción de inicio del flujo mediante un símbolo. ¿Cuál es el símbolo correcto para representar dicha acción?",
+          "alternatives": [
+            "El símbolo que tiene la forma de un rombo.",
+            "El símbolo que tiene la forma de un triángulo invertido.",
+            "El símbolo que tiene la forma de un rectángulo con esquinas redondeadas."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia1/C09_EBRS_11_SECUNDARIA_EPT_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación para el Trabajo Secundaria (C09-EBRS-11, Forma 1), con clave de respuestas oficial"
+        },
+        {
+          "bodyTypst": "Como parte del análisis de un producto, una docente pregunta a los estudiantes: \"¿Para qué sirve este producto?, ¿qué otros usos se le puede dar?\". ¿A qué tipo de análisis del producto corresponden estas preguntas?",
+          "alternatives": [
+            "Al análisis de funcionamiento.",
+            "Al análisis de impacto.",
+            "Al análisis funcional."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia1/C09_EBRS_11_SECUNDARIA_EPT_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación para el Trabajo Secundaria (C09-EBRS-11, Forma 1), con clave de respuestas oficial"
+        }
+      ]
+    },
+    {
+      "name": "Emprendimiento e ideas de negocio",
+      "questions": [
+        {
+          "bodyTypst": "Considerando el análisis FODA de una empresa de venta de útiles de escritorio, ¿cuál de las siguientes alternativas corresponde a una debilidad?",
+          "alternatives": [
+            "Escasa demanda de útiles de escritorio en algunos meses del año.",
+            "Empresas competidoras bien posicionadas y con más experiencia.",
+            "Productos almacenados, deteriorados y que no han sido vendidos."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia1/C09_EBRS_11_SECUNDARIA_EPT_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación para el Trabajo Secundaria (C09-EBRS-11, Forma 1), con clave de respuestas oficial"
+        },
+        {
+          "bodyTypst": "Considerando el análisis FODA de una empresa de servicios, ¿cuál de las siguientes alternativas corresponde a una amenaza?",
+          "alternatives": [
+            "Contar con empresas similares en la localidad que tienen mayor experiencia en el rubro.",
+            "Tener poco personal para atender la alta demanda del servicio en su localidad.",
+            "Poseer recursos limitados para realizar publicidad masiva en su localidad."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia1/C09_EBRS_11_SECUNDARIA_EPT_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación para el Trabajo Secundaria (C09-EBRS-11, Forma 1), con clave de respuestas oficial"
+        }
+      ]
+    },
+    {
+      "name": "Seguridad y salud ocupacional",
+      "questions": [
+        {
+          "bodyTypst": "Un docente presenta a los equipos de estudiantes un conjunto de señales de seguridad y les pide que seleccionen una señal para la evacuación de las personas en casos de sismo. ¿Qué color de fondo debe tener esta señal de seguridad?",
+          "alternatives": [
+            "Azul.",
+            "Rojo.",
+            "Verde."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia1/C09_EBRS_11_SECUNDARIA_EPT_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación para el Trabajo Secundaria (C09-EBRS-11, Forma 1), con clave de respuestas oficial"
+        },
+        {
+          "bodyTypst": "En un taller es necesario agregar una señal de seguridad para indicar el uso de protectores auditivos, pues al encender las máquinas estas emiten ruidos muy fuertes que pueden afectar la audición. ¿Qué características debe tener esta señal de seguridad?",
+          "alternatives": [
+            "Forma circular, color de fondo azul y pictograma de color blanco.",
+            "Forma triangular, color de fondo amarillo y pictograma de color negro.",
+            "Forma rectangular, color de fondo verde y pictograma de color blanco."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia1/C09_EBRS_11_SECUNDARIA_EPT_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación para el Trabajo Secundaria (C09-EBRS-11, Forma 1), con clave de respuestas oficial"
+        },
+        {
+          "bodyTypst": "La comisión de seguridad de una empresa señaliza sus diferentes áreas. Una de las señales indica que el personal que ingrese a una de las áreas debe protegerse de los ruidos muy fuertes que emiten las máquinas. ¿Qué tipo de señal de seguridad debe considerarse?",
+          "alternatives": [
+            "De advertencia.",
+            "De prohibición.",
+            "De obligación."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://evaluaciondocente.perueduca.pe/nombramiento2022/nombramientoinstrumentos/pdfs_cuadernillos/Dia1/C09_EBRS_11_SECUNDARIA_EPT_F1.pdf",
+          "sourceName": "MINEDU - Prueba Única Nacional, Concurso de Nombramiento Docente 2022 - Cuadernillo Educación para el Trabajo Secundaria (C09-EBRS-11, Forma 1), con clave de respuestas oficial"
+        }
+      ]
+    }
+  ]
+}

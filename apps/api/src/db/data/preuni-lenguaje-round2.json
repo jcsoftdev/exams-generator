@@ -1,0 +1,70 @@
+{
+  "courseName": "Lenguaje",
+  "gradeLevel": "pre",
+  "topics": [
+    {
+      "name": "Fonética y fonología",
+      "questions": [
+        {
+          "bodyTypst": "De la representación fonológica de la palabra \"exhausto\", es correcto afirmar que:",
+          "alternatives": [
+            "hay ocho fonemas segmentales",
+            "todos los fonemas son fricativos",
+            "hay consonantes sordas y sonoras",
+            "presenta más letras que fonemas",
+            "carece de vocales anteriores"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com",
+          "sourceName": "Rubiños - Matemáticas N"
+        },
+        {
+          "bodyTypst": "En el siguiente ejemplo: /pala/ y /mala/ se oponen elementos diferentes dando como resultado significaciones disímiles, ¿cómo se le denominan a los elementos contrapuestos?",
+          "alternatives": [
+            "Sílaba",
+            "Letra",
+            "Fono",
+            "Grafema",
+            "Fonema"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com",
+          "sourceName": "Rubiños - Matemáticas N"
+        },
+        {
+          "bodyTypst": "El modo de articulación describe la naturaleza (o grado) de obstrucción que encuentra el aire en la cavidad oral. De la aplicación de este criterio, las consonantes de la palabra \"besito\" son, sucesivamente:",
+          "alternatives": [
+            "oclusiva, fricativa y africada",
+            "oclusiva, fricativa y fricativa",
+            "africada, vibrante y lateral",
+            "oclusiva, fricativa y oclusiva"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://editoradelta.blogspot.com/p/preguntas-san-marcos.html",
+          "sourceName": "EDITORA DELTA - Examen UNMSM 2022"
+        }
+      ]
+    },
+    {
+      "name": "Sintaxis",
+      "questions": [
+        {
+          "bodyTypst": "Clasifique la oración compuesta por subordinación según el siguiente ejemplo: \"El problema empezó cuando se agotaron las entradas\"",
+          "alternatives": [
+            "consecutiva",
+            "de finalidad",
+            "temporal",
+            "causal"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://editoradelta.blogspot.com/p/preguntas-san-marcos.html",
+          "sourceName": "EDITORA DELTA - Pre San Marcos 2021"
+        }
+      ]
+    }
+  ]
+}

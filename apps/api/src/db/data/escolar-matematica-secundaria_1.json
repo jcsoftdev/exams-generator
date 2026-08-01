@@ -1,0 +1,112 @@
+{
+  "courseName": "Matemática",
+  "gradeLevel": "secundaria_1",
+  "topics": [
+    {
+      "name": "Fracciones, decimales y porcentajes",
+      "questions": [
+        {
+          "bodyTypst": "Ana necesita comprar queso para la alimentación de su familia y desea aprovechar las promociones de la bodega. La tabla muestra el precio normal por cada 100 g de cada tipo de queso y el descuento de la semana:\n\nQueso fresco: $S/1,60$ por 100 g, 10% de descuento\nQueso andino: $S/2,00$ por 100 g, 15% de descuento\nQueso paria: $S/2,40$ por 100 g, 20% de descuento\nQueso mantecoso: $S/2,25$ por 100 g, 12% de descuento\n\n(Nota: 1 kg = 10 porciones de 100 g)\n\nLa señora Ana compra 1 kg de queso fresco y 1/2 kg de queso paria. Ambos productos tienen el descuento correspondiente a la promoción de la semana. ¿Cuál es el procedimiento correcto que permite calcular cuánto pagó Ana por la compra?",
+          "alternatives": [
+            "Precio 1 kg de queso fresco: 10×1,60=16,00 soles. Precio con descuento: 16,50×0,10=1,60. Precio de 1/2 kg de queso paria: 10×2,40=24,00. Precio con descuento: 24,00×0,20=19,20. Ana pagó: 1,60+24,00=S/25,60",
+            "Precio 1 kg de queso fresco: 1×1,60=16 soles. Precio de 1/2 kg de queso paria: 5×2,40=12,00. Costo total: 16,00+12,00=28,00. Ana pagó: S/28,00",
+            "Precio de 1 kg de queso fresco: 10×1,60=16 soles. Precio con descuento: 0,5×0,10=0,05 soles. Precio de 1/2 kg de queso paria: 5×2,40=12,00. Precio con descuento: 12,00×0,20=2,40. Total descuento: 0,05+2,40=2,45. Ana pagó: S/2,45",
+            "Precio 1 kg de queso fresco: 10×1,60=16 soles. Precio con descuento: 16,00×0,90=14,40. Precio de 1/2 kg de queso paria: 5×2,40=12,00. Precio con descuento: 12,00×0,80=9,60. Ana pagó: 14,40+9,60=S/24,00"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.minedu.gob.pe/bitstream/handle/20.500.12799/12706/Matem%c3%a1tica%2c%20evaluaci%c3%b3n%20diagn%c3%b3stica%2c%201ero%20Secundaria%20Cuadernillo%20A.pdf?sequence=1&isAllowed=y",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 1° secundaria, Cuadernillo A (Evaluación diagnóstica), pregunta 1 con clave en Orientaciones para el registro y análisis de la prueba diagnóstica"
+        },
+        {
+          "bodyTypst": "La bodega tiene una tabla con la cantidad de proteína que aporta cada tipo de queso por cada 100 g de masa. Cada porción tiene una masa de 25 g. El queso fresco aporta 4,0 g de proteína por porción.\n\nUn niño debe consumir 20 g de proteína al día. En el desayuno consumió dos porciones de queso fresco. ¿Qué fracción de su requerimiento diario de proteína representa esa cantidad?",
+          "alternatives": [
+            "3/10",
+            "1/4",
+            "2/5",
+            "1/3"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.minedu.gob.pe/bitstream/handle/20.500.12799/12706/Matem%c3%a1tica%2c%20evaluaci%c3%b3n%20diagn%c3%b3stica%2c%201ero%20Secundaria%20Cuadernillo%20A.pdf?sequence=1&isAllowed=y",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 1° secundaria, Cuadernillo A (Evaluación diagnóstica), pregunta 5 con clave en Orientaciones para el registro y análisis de la prueba diagnóstica"
+        }
+      ]
+    },
+    {
+      "name": "Números enteros y operaciones",
+      "questions": [
+        {
+          "bodyTypst": "En la tienda de ropa \"Moda total\" se muestran los precios de la marca \"Sierra Nuestra\": Pantalón recto $S/138$, Camisa lisa $S/113$. Por la compra de cualquier prenda se aplica un 10% de descuento.\n\nUna familia está elaborando el presupuesto para comprar 4 pantalones rectos y 6 camisas lisas de la marca \"Sierra Nuestra\" para el uniforme escolar de sus hijos. Considerando los precios indicados (sin aplicar el descuento), ¿qué monto total debe incluir en su presupuesto?",
+          "alternatives": [
+            "S/1260",
+            "S/1200",
+            "S/1180",
+            "S/1230"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.minedu.gob.pe/bitstream/handle/20.500.12799/12706/Matem%c3%a1tica%2c%20evaluaci%c3%b3n%20diagn%c3%b3stica%2c%201ero%20Secundaria%20Cuadernillo%20A.pdf?sequence=1&isAllowed=y",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 1° secundaria, Cuadernillo A (Evaluación diagnóstica), pregunta 6 con clave en Orientaciones para el registro y análisis de la prueba diagnóstica"
+        },
+        {
+          "bodyTypst": "Un afiche presenta datos sobre la población del Perú: en junio de 2024 fue de 34 039 000 habitantes (INEI) y en junio de 2025 fue de 34 350 244 habitantes (INEI). El afiche además muestra una proyección para el año 2026 escrita en palabras: \"Treinta y cuatro millones seiscientos noventa y tres mil setecientos cuarenta y seis habitantes\".\n\n¿Cuál de los siguientes números representa la población proyectada del Perú para el año 2026?",
+          "alternatives": [
+            "34 693 746",
+            "34 963 746",
+            "34 693 646",
+            "34 693 046"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.minedu.gob.pe/bitstream/handle/20.500.12799/12706/Matem%c3%a1tica%2c%20evaluaci%c3%b3n%20diagn%c3%b3stica%2c%201ero%20Secundaria%20Cuadernillo%20A.pdf?sequence=1&isAllowed=y",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 1° secundaria, Cuadernillo A (Evaluación diagnóstica), pregunta 12 con clave en Orientaciones para el registro y análisis de la prueba diagnóstica"
+        },
+        {
+          "bodyTypst": "Según un afiche informativo, en el año 2024 la población del Perú fue de 34 039 000 habitantes y en el año 2025 fue de 34 350 244 habitantes.\n\n¿Cuántos habitantes aumentó la población en el año 2025 con respecto al año 2024?",
+          "alternatives": [
+            "311 024 habitantes",
+            "311 424 habitantes",
+            "311 244 habitantes",
+            "300 244 habitantes"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.minedu.gob.pe/bitstream/handle/20.500.12799/12706/Matem%c3%a1tica%2c%20evaluaci%c3%b3n%20diagn%c3%b3stica%2c%201ero%20Secundaria%20Cuadernillo%20A.pdf?sequence=1&isAllowed=y",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 1° secundaria, Cuadernillo A (Evaluación diagnóstica), pregunta 13 con clave en Orientaciones para el registro y análisis de la prueba diagnóstica"
+        },
+        {
+          "bodyTypst": "En el año 2024, la población del Perú fue de 34 039 000 habitantes. Se sabe que, del año 2023 al 2024, la población aumentó en 336 344 habitantes.\n\n¿Cuál es el procedimiento correcto para determinar cuántos habitantes tenía el Perú en el año 2023?",
+          "alternatives": [
+            "34 039 000 + 336 344 = 34 375 344",
+            "34 039 000 − 336 344 = 33 702 656",
+            "34 039 000 − 336 000 = 33 703 000",
+            "336 344 − 34 039 000 = 34 307 344"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.minedu.gob.pe/bitstream/handle/20.500.12799/12706/Matem%c3%a1tica%2c%20evaluaci%c3%b3n%20diagn%c3%b3stica%2c%201ero%20Secundaria%20Cuadernillo%20A.pdf?sequence=1&isAllowed=y",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 1° secundaria, Cuadernillo A (Evaluación diagnóstica), pregunta 15 con clave en Orientaciones para el registro y análisis de la prueba diagnóstica"
+        }
+      ]
+    },
+    {
+      "name": "Estadística: tablas, gráficos y medidas de tendencia central",
+      "questions": [
+        {
+          "bodyTypst": "Un gráfico de barras muestra el número total de prendas vendidas en la tienda \"Moda total\" en cada uno de 8 meses:\n\nEnero: 70, Febrero: 20, Marzo: 30, Abril: 80, Mayo: 50, Junio: 10, Julio: 40, Agosto: 60 (número de prendas vendidas)\n\n¿En qué mes se registró la mayor cantidad de prendas vendidas?",
+          "alternatives": [
+            "Mayo",
+            "Agosto",
+            "Enero",
+            "Abril"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.minedu.gob.pe/bitstream/handle/20.500.12799/12706/Matem%c3%a1tica%2c%20evaluaci%c3%b3n%20diagn%c3%b3stica%2c%201ero%20Secundaria%20Cuadernillo%20A.pdf?sequence=1&isAllowed=y",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 1° secundaria, Cuadernillo A (Evaluación diagnóstica), pregunta 11 con clave en Orientaciones para el registro y análisis de la prueba diagnóstica"
+        }
+      ]
+    }
+  ]
+}

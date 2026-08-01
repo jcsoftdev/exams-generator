@@ -1,0 +1,538 @@
+{
+  "courseName": "Ciencias Sociales",
+  "gradeLevel": "secundaria_2",
+  "topics": [
+    {
+      "name": "Conquista y virreinato del Perú",
+      "questions": [
+        {
+          "bodyTypst": "El nombre de nuestro país está relacionada con la expedición de:",
+          "alternatives": [
+            "Vasco Núñez de Balboa.",
+            "Pascual de Andagoya",
+            "Francisco de Becerra.",
+            "Pedro Arias Dávila.",
+            "Juan de Basurto."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/invasion-y-conquista-del-tahuantinsuyo-preguntas-resueltas-historia-del-peru-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - Invasión al Tahuantinsuyo (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Batalla que selló la derrota definitiva de Almagro el mozo:",
+          "alternatives": [
+            "Jaquijahuana",
+            "Chupas",
+            "Las Salinas",
+            "Huarina",
+            "Pachachaca"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/guerras-civiles-y-resistencia-indigena-preguntas-resueltas-historia-del-peru-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - Resistencia Andina (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Los más connotados auxilliares indígenas que Pizarro tuvo en el momento inicial de la conquista, estuvo representado por la etnia:",
+          "alternatives": [
+            "Chacha",
+            "Cañari",
+            "Chanca",
+            "Huanca",
+            "Aymara"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/guerras-civiles-y-resistencia-indigena-preguntas-resueltas-historia-del-peru-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - Resistencia Andina (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Los corregimientos fueron creados por:",
+          "alternatives": [
+            "Hurtado de Mendoza.",
+            "Lope García de Castro.",
+            "Francisco de Toledo.",
+            "Núñez de Vela.",
+            "Torres y Portugal."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/virreinato-preguntas-resueltas-historia-del-peru-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - Virreinato del Perú (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Es considerado como el máximo organizador del Virreynato del Perú:",
+          "alternatives": [
+            "Manuel Amat y Juniel.",
+            "Fernando de Abascal.",
+            "Francisco de Toledo.",
+            "Pedro Fernández de Castro.",
+            "Francisco Pizarro."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/virreinato-preguntas-resueltas-historia-del-peru-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - Virreinato del Perú (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Encontró el paso que intercomunica geográficamente el océano atlántico y el pacífico:",
+          "alternatives": [
+            "Vicente Yañez Pinzón",
+            "Juan Díaz de Solís",
+            "Hernando de Magallanes",
+            "Francisco Hernández de Córdova",
+            "Vasco Nuñez de Balboa"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/expansion-europea-invasion-a-america-preguntas-resueltas-historia-del-peru-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - Invasión a América (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Historia universal: Edad Media y Moderna",
+      "questions": [
+        {
+          "bodyTypst": "Fue la nota característica de la Edad Media.",
+          "alternatives": [
+            "El desarrollo de las ideas cristianas",
+            "Las masivas invasiones bárbaras",
+            "Los lances caballerescos",
+            "El triunfo del cristianismo y del papado"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/la-edad-media-ejemplos-preguntas-resueltas-de-historia-universal-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Edad Media (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Es una característica típica del feudalismo.",
+          "alternatives": [
+            "El recogimiento espiritual y la templanza",
+            "El recorte de los privilegios a los eclesiásticos",
+            "El trabajo de la tierra por los siervos",
+            "El trabajo de la tierra por los señores feudales"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/el-feudalismo-medieval-ejemplos-preguntas-resueltas-de-historia-universal-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Feudalismo (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Al rey, durante la época feudal, se le consideró como un",
+          "alternatives": [
+            "basileus.",
+            "augusto.",
+            "césar.",
+            "primus inter pares.",
+            "monarca absoluto."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/el-feudalismo-medieval-ejemplos-preguntas-resueltas-de-historia-universal-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Feudalismo (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Las Cruzadas son un ejemplo de guerra",
+          "alternatives": [
+            "civil",
+            "política",
+            "estatal",
+            "cultural",
+            "religiosa"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/las-cruzadas-medievales-ejemplos-preguntas-resueltas-de-historia-universal-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Las Cruzadas (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Ricardo Corazón de León, rival de Saladino, era rey de",
+          "alternatives": [
+            "Francia.",
+            "España.",
+            "Alemania.",
+            "Inglaterra.",
+            "Flandes."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/las-cruzadas-medievales-ejemplos-preguntas-resueltas-de-historia-universal-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Las Cruzadas (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Factor principal que impulsó el descubrimiento de américa fue:",
+          "alternatives": [
+            "el desarrollo de las cartas de navegación.",
+            "la actividad marítima de Colón.",
+            "el apoyo de los sabios de Salamanca.",
+            "el descubrimiento de la brújula.",
+            "la necesidad de nuevas rutas comerciales."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/importancia-causas-y-consecuencias-de-los-viajes-de-cristobal-colon-para-el-mundo-ejemplos-preguntas-resueltas-de-historia-preuniversitaria-y-de-secundaria-prueba-word-pdf.html",
+          "sourceName": "Rubiños - Viajes de Colón (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Geografía económica y recursos naturales",
+      "questions": [
+        {
+          "bodyTypst": "El complejo de Bayóvar es importante para el país por :",
+          "alternatives": [
+            "su yacimiento de hierro.",
+            "la producción de magnetita.",
+            "la explotación de carbón.",
+            "la explotación de los fosfatos.",
+            "la producción de hematita."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/la-mineria-y-recursos-naturales-en-geografia-economica-del-peru-ejemplos-preguntas-resueltas-preuniversitarias-secundaria-word-pdf.html",
+          "sourceName": "Rubiños - La Minería (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "En Camisea y Aguaytía se extrae:",
+          "alternatives": [
+            "oro",
+            "plata",
+            "gas natural",
+            "cobre",
+            "uranio"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/la-mineria-y-recursos-naturales-en-geografia-economica-del-peru-ejemplos-preguntas-resueltas-preuniversitarias-secundaria-word-pdf.html",
+          "sourceName": "Rubiños - La Minería (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Son centros azucareros de Lambayeque, excepto:",
+          "alternatives": [
+            "Pucalá",
+            "Pomalca",
+            "Paramonga",
+            "Tumán",
+            "Cayaltí"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/agricultura-y-pesca-en-geografia-economica-peruana-ejemplos-preguntas-resueltas-preuniversitarias-secundaria-word-pdf.html",
+          "sourceName": "Rubiños - Agricultura y Pesca (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Producto agroindustrial costeño no tradicional, que le da mayor divisas al Estado peruano:",
+          "alternatives": [
+            "mango papaya",
+            "coco",
+            "espárrago",
+            "cacao",
+            "algodón pima"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/agricultura-y-pesca-en-geografia-economica-peruana-ejemplos-preguntas-resueltas-preuniversitarias-secundaria-word-pdf.html",
+          "sourceName": "Rubiños - Agricultura y Pesca (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Las ventajas que el Perú tiene para el desarrollo de la industria principalmente son:",
+          "alternatives": [
+            "Materias primas y potencial energético",
+            "Disponibilidad de tecnología",
+            "Mano de obra calificada",
+            "Amplia y estratégica distribución de carreteras",
+            "Alto poder adquisitivo de su población"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/actividad-economica-agricultura-ganaderia-pesca-mineria-industria-comercio-transporte-y-turismo-ejemplos-preguntas-resueltas-de-geografia-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Actividades Económicas (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Señale la alternativa correcta que indica la actividad que desarrolló la población migrante china como mano de obra en el Perú del siglo XIX.",
+          "alternatives": [
+            "Extracción de caucho en la Amazonía.",
+            "Actividad agrícola del algodón en haciendas de la costa.",
+            "Actividad petrolera en la selva.",
+            "Actividad pesquera.",
+            "Actividad minera."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/actividad-economica-agricultura-ganaderia-pesca-mineria-industria-comercio-transporte-y-turismo-ejemplos-preguntas-resueltas-de-geografia-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Actividades Económicas (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Geografía física del Perú",
+      "questions": [
+        {
+          "bodyTypst": "La costa del Perú se caracteriza por:",
+          "alternatives": [
+            "tener un relieve inaccesible con numerosos depósitos de morrenas.",
+            "ser una gran planicie subtropical con vegetación arbórea.",
+            "tener gran amplitud y morfología llana hacia el sur.",
+            "ser estrecho y accidentado en el sector septentrional.",
+            "ser longitudinal y angosta."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/relieves-de-la-costa-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - El Relieve Costeño Peruano (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "¿Cuál de los siguientes relieves costeros tiene petróleo?",
+          "alternatives": [
+            "Las estribaciones costeras",
+            "Las depresiones",
+            "Las pampas",
+            "Las dunas",
+            "Los tablazos"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/relieves-de-la-costa-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - El Relieve Costeño Peruano (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Los Andes tiene gran importancia estratégica para el Perú sobre todo, porque:",
+          "alternatives": [
+            "facilita la defensa de las dos vertientes.",
+            "es una gran barrera geográfica con diversidad de climas.",
+            "es una gigantesca estructura geológica mineralizada.",
+            "ofrece diversidad de paisajes naturales para el turismo.",
+            "bloquea el paso de los vientos atlánticos a la capital."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/relieve-del-ande-peruano-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - El Relieve Andino Peruano (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Los valles muy estrechos y profundos formados por la acción erosiva de los ríos reciben el nombre de",
+          "alternatives": [
+            "valles interandinos",
+            "llanura preandina",
+            "estribaciones andinas",
+            "tablazos",
+            "cañones"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/relieve-del-ande-peruano-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - El Relieve Andino Peruano (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Una de las principales fuentes del desarrollo agrícola de las regiones son los reservorios, el reservorio de Poechos se ubica en _____",
+          "alternatives": [
+            "La Libertad",
+            "Lambayeque",
+            "Cajamarca",
+            "Piura",
+            "Moquegua"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/hidrografia-peruana-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Hidrografía Peruana (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "¿Cuál es el factor que favorece la gran variedad ictiológica del mar peruano?",
+          "alternatives": [
+            "la frialdad de sus aguas",
+            "el elevado color de las nubes",
+            "la intensidad de las lluvias",
+            "el talud continental estrecho",
+            "la poca salinidad"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/el-mar-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Mar Peruano (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Identifique el fenómeno natural que permite que las aguas profundas del mar peruano asciendan y las superficiales desciendan.",
+          "alternatives": [
+            "corrientes marinas",
+            "marea alta",
+            "marea baja",
+            "afloramiento",
+            "tsunami"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/el-mar-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Mar Peruano (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Regiones naturales y geografía de América",
+      "questions": [
+        {
+          "bodyTypst": "El Parque Nacional de Tingo María alberga a la cueva de las lechuzas. Dicha cueva se ubica en la región",
+          "alternatives": [
+            "Bosque seco ecuatorial",
+            "Desierto del Pacífico",
+            "Mar Tropical",
+            "Selva alta o de los Yungas",
+            "Sabana de Palmeras"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/ecorregiones-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Ecorregiones del Perú (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "El pudu es considerado como el siervo más pequeño del Perú, este vive en la ecorregión:",
+          "alternatives": [
+            "Puna altoandina",
+            "Bosque tropical",
+            "Bosque seco ecuatorial",
+            "sabana de palmeras",
+            "Paramo"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/ecorregiones-del-peru-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Ecorregiones del Perú (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Uno de los grandes países de América, cubierto por extensos bosques de coníferas, que lo hacen el mayor productor mundial de papel:",
+          "alternatives": [
+            "Canadá",
+            "México",
+            "Estados Unidos",
+            "Argentina",
+            "Brasil"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/06/3ro-4to-actividad-12-ccss-experiencia-4-resuelta-aprendo-en-casa-ciencias-sociales-web-tarea-radio-reto-tv-tercero-cuarto-grado-de-secundaria-aprendizaje-word-pdf.html",
+          "sourceName": "Rubiños - Grandes Biomas (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "El desierto más seco del mundo es:",
+          "alternatives": [
+            "Gobi",
+            "Negev",
+            "Siria",
+            "Sechura",
+            "Atacama"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/geografia-universal-comparada-america-europa-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - América y Europa, Geografía Universal (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Lago más extenso de Sudamérica",
+          "alternatives": [
+            "Maracaibo",
+            "Titicaca",
+            "Superior",
+            "Poopo",
+            "Managua"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/geografia-universal-comparada-america-europa-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - América y Europa, Geografía Universal (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Las cuencas de Orinoco y Amazonas están unidos a través del:",
+          "alternatives": [
+            "Lago Poopo",
+            "Sierra de Espinhacao",
+            "Cabo de Hornos",
+            "Catarata de Gocta",
+            "Canal de Casiquiare"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2021/02/geografia-universal-comparada-america-europa-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+          "sourceName": "Rubiños - América y Europa, Geografía Universal (matematicasn.blogspot.com)"
+        }
+      ]
+    },
+    {
+      "name": "Diversidad cultural y multiculturalidad",
+      "questions": [
+        {
+          "bodyTypst": "Las ferias gastronómicas son una de las pocas expresiones culturales que no generan discusión ni antagonismos, convirtiéndose en un factor de reafirmación de identidad, pero sobre todo de revaloración de comidas regionales, de tecnologías ancestrales presentes en la producción agropecuaria, además de ser acompañadas de diferentes manifestaciones folklóricas. El texto evidencia que la gastronomía en el Perú",
+          "alternatives": [
+            "promueve la participación industrial.",
+            "recomienda la práctica del folklore.",
+            "constituye un vínculo intercultural.",
+            "recibe marcada influencia foránea.",
+            "se desarrolla exclusivamente en la costa."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/aspectos-que-fundamentan-nuestra-peruanidad-sentido-de-pertenencia-costumbres-y-tradiciones-comunes-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Nuestra Peruanidad (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "El Perú logró su clasificación para participar en la Copa mundial de fútbol Rusia 2018 y nuestros corazones se pintaron de rojo y blanco. En los últimos partidos casi todos los peruanos vibramos con cada gol que anotó nuestra selección nacional, miles de peruanos se pusieron la “blanquirroja”. Todo ello produjo en nosotros",
+          "alternatives": [
+            "el sentido de competencia con cualquier equipo.",
+            "la seguridad de ganar la copa por ser los mejores.",
+            "la inadecuada forma de sentirnos peruanos.",
+            "un renovado sentido de pertenencia como peruanos.",
+            "una gran incertidumbre sobre el futuro próximo."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/aspectos-que-fundamentan-nuestra-peruanidad-sentido-de-pertenencia-costumbres-y-tradiciones-comunes-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Nuestra Peruanidad (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Un representante del Ministerio de Cultura afirma que el Patrimonio de la Nación no se compone solo de monumentos, colecciones de arte, paisajes y maravillas naturales. También incluye tradiciones vivas o expresiones transmitidas de generación en generación por nuestros antepasados a través de una práctica constante. Esta última afirmación hace referencia a la categoría de patrimonio",
+          "alternatives": [
+            "material inmueble.",
+            "material mueble.",
+            "inmaterial.",
+            "documental.",
+            "natural de la humanidad."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/valoracion-conservacion-y-defensa-del-patrimonio-historico-y-natural-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Patrimonio Cultural y Natural (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Un chofer que manejaba un tráiler ingresó al territorio reconocido como patrimonio cultural de las Líneas de Nasca y causó daños en tres geoglifos. En relación a la conservación y defensa del patrimonio cultural, señale la amenaza o delito cometido por el chofer.",
+          "alternatives": [
+            "Invasión",
+            "Tráfico ilícito",
+            "Vandalismo",
+            "Huaqueo",
+            "Robo"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/valoracion-conservacion-y-defensa-del-patrimonio-historico-y-natural-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Patrimonio Cultural y Natural (matematicasn.blogspot.com)"
+        },
+        {
+          "bodyTypst": "Cahuachi es un centro arqueológico de la cultura Nasca, considerado como el principal centro urbano. La ciudadela está construida en adobe con pirámides ceremoniales ¿A qué categoría de patrimonio cultural del Perú hace referencia el texto?",
+          "alternatives": [
+            "Material mueble",
+            "Histórico inmueble",
+            "Material inmueble",
+            "Prehispánico inmueble",
+            "Cultural mueble"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/06/valoracion-conservacion-y-defensa-del-patrimonio-historico-y-natural-ejemplos-preguntas-resueltas-de-educacion-civica-preuniversitaria-secundaria-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Patrimonio Cultural y Natural (matematicasn.blogspot.com)"
+        }
+      ]
+    }
+  ]
+}

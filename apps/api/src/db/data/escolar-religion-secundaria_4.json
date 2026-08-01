@@ -1,0 +1,63 @@
+{
+  "courseName": "Educación Religiosa",
+  "gradeLevel": "secundaria_4",
+  "topics": [
+    {
+      "name": "Doctrina social de la Iglesia",
+      "questions": [
+        {
+          "bodyTypst": "Ayudar a los vecinos frente a los problemas de la comunidad caracteriza el valor de:",
+          "alternatives": [
+            "Justicia",
+            "Solidaridad",
+            "Respeto y orden",
+            "Amor fraterno"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/es/quiz/10902136/evaluacion-de-etica-y-valores",
+          "sourceName": "Evaluación de Ética y Valores - GoConqr"
+        },
+        {
+          "bodyTypst": "Dar a cada quien lo que le corresponde es el principio fundamental de:",
+          "alternatives": [
+            "Justicia",
+            "Responsabilidad",
+            "Puntualidad",
+            "Equidad"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/2417692/prueba-de-etica-y-valores",
+          "sourceName": "Prueba de Ética y Valores - GoConqr"
+        },
+        {
+          "bodyTypst": "El trabajo realizado con dedicación, cuidado e inteligencia se llama:",
+          "alternatives": [
+            "Paciencia",
+            "Puntualidad",
+            "Laboriosidad",
+            "Disciplina"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/2417692/prueba-de-etica-y-valores",
+          "sourceName": "Prueba de Ética y Valores - GoConqr"
+        },
+        {
+          "bodyTypst": "Proceso cognitivo que permite reflexión sobre valores y la lucha interna se llama:",
+          "alternatives": [
+            "Juicio Moral",
+            "Juicio Legal",
+            "Juicio Crítico",
+            "Juicio de Valor"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/2417692/prueba-de-etica-y-valores",
+          "sourceName": "Prueba de Ética y Valores - GoConqr"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "courseName": "Arte y Cultura",
+  "gradeLevel": "secundaria_1",
+  "topics": [
+    {
+      "name": "Danza y expresión corporal",
+      "questions": [
+        {
+          "bodyTypst": "¿Cuál fue el primer género de baile del que se habló?",
+          "alternatives": [
+            "reguetón",
+            "salsa",
+            "merengue",
+            "hip hop"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/6869671/test-sobre-la-danza",
+          "sourceName": "GoConqr - Test sobre la danza"
+        },
+        {
+          "bodyTypst": "¿De dónde proviene la salsa?",
+          "alternatives": [
+            "mexicano",
+            "africano",
+            "cubano",
+            "asiático"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/6869671/test-sobre-la-danza",
+          "sourceName": "GoConqr - Test sobre la danza"
+        },
+        {
+          "bodyTypst": "¿A partir de qué año se usa el término 'salsa'?",
+          "alternatives": [
+            "1852",
+            "1356",
+            "1999",
+            "1960"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/6869671/test-sobre-la-danza",
+          "sourceName": "GoConqr - Test sobre la danza"
+        }
+      ]
+    }
+  ]
+}

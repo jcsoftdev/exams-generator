@@ -1,0 +1,81 @@
+{
+  "courseName": "Matemática",
+  "gradeLevel": "secundaria_2",
+  "topics": [
+    {
+      "name": "Fracciones, decimales y porcentajes",
+      "questions": [
+        {
+          "bodyTypst": "En el coliseo de una ciudad se jugó la final de un campeonato de vóley. En total, 1200 personas asistieron al coliseo. Esta cantidad de personas representa los $3/4$ de su capacidad total.\n\n¿Cuál es la capacidad que tiene este coliseo?",
+          "alternatives": [
+            "900 personas",
+            "1200 personas",
+            "1600 personas",
+            "4800 personas"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.carlosguarnizteaches.com/2022/04/prueba-diagnostica-de-matematica-2.html",
+          "sourceName": "MINEDU - Kit de Evaluación de Diagnóstico, Prueba de Matemática 2° secundaria, pregunta 2, con clave oficial en Manual de uso de la prueba de Matemática 2° secundaria (repositorio.minedu.gob.pe/handle/20.500.12799/8071)"
+        },
+        {
+          "bodyTypst": "Flor ha colocado $1 + 1/4$ kg de papa sobre su balanza. Si un cliente le quiere comprar 2 kg de papa, ¿cuántos kilogramos (kg) de papa debe agregar Flor sobre la balanza para cumplir con el pedido?",
+          "alternatives": [
+            "$3/4$ kg de papa",
+            "$1 + 3/4$ kg de papa",
+            "$1/4$ kg de papa",
+            "$1 + 1/4$ kg de papa"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.carlosguarnizteaches.com/2022/04/prueba-diagnostica-de-matematica-2.html",
+          "sourceName": "MINEDU - Kit de Evaluación de Diagnóstico, Prueba de Matemática 2° secundaria, pregunta 6, con clave oficial en Manual de uso de la prueba de Matemática 2° secundaria (repositorio.minedu.gob.pe/handle/20.500.12799/8071)"
+        },
+        {
+          "bodyTypst": "Una familia decide contratar el \"Servicio base\" y el \"Servicio adicional\" en dos estudios fotográficos, aplicando en cada caso todos los descuentos disponibles, en el orden indicado:\n\nEstudio \"Foto artística\": Servicio base S/150. Servicio adicional (5 impresiones + retoque): impresiones S/20, retoque S/10. Descuento familiar: 10% sobre el servicio base. Descuento por redes sociales: 5% sobre el nuevo costo total (servicio base ya descontado + servicio adicional). Condición final: se suma un cargo de S/5,50 por uso de estudio premium.\n\nEstudio \"Retrato pro\": Servicio base S/140. Servicio adicional: impresiones S/25, retoque S/15. Descuento familiar: 15% sobre el servicio base. Descuento por redes sociales: 10% sobre el costo del servicio base ya descontado. Condición final: descuento adicional de 10% sobre el total acumulado si se paga con código de bono de regalo.\n\nConsiderando el orden de aplicación de descuentos establecido en cada estudio, ¿cuánto dinero se ahorra la familia al elegir la alternativa más económica entre ambos estudios?",
+          "alternatives": [
+            "S/33,86",
+            "S/31,00",
+            "S/29,86",
+            "S/15,15"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://drive.google.com/file/d/1j1cNeehhUoj3qIO5WXQb7eT_X7CiHCyP/view",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 2° secundaria, Cuadernillo A (Evaluación diagnóstica), situación 1 \"Planes de estudios fotográficos\", pregunta 1, con clave oficial en Orientaciones para el registro y análisis de la prueba diagnóstica (repositorio.minedu.gob.pe/handle/20.500.12799/12702)"
+        },
+        {
+          "bodyTypst": "Una fábrica distribuye avena en tres niveles de presentación: empaques pequeños, cajas medianas y cajas grandes. Cada empaque pequeño contiene 200 gramos de avena. Cada caja mediana contiene 50 empaques pequeños. Cada caja grande contiene 8 cajas medianas.\n\nEl costo unitario de elaboración de cada tipo de envase (considerando únicamente el costo del envase correspondiente, no el contenido) es: envase pequeño S/0,80; envase mediano S/1,50; envase grande S/5,00. Cada caja mediana requiere, además de su propio envase, un envase pequeño para cada uno de sus 50 empaques; cada caja grande requiere, además de su propio envase, un envase mediano para cada una de sus 8 cajas medianas (y los envases pequeños dentro de cada una de ellas).\n\nPara la distribución en una tienda, se envían 3 cajas grandes y 4 cajas medianas. ¿Cuál es el costo total de elaboración de los envases enviados?",
+          "alternatives": [
+            "S/1017",
+            "S/1177",
+            "S/1547",
+            "S/2157"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://drive.google.com/file/d/1j1cNeehhUoj3qIO5WXQb7eT_X7CiHCyP/view",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 2° secundaria, Cuadernillo A (Evaluación diagnóstica), situación 3 \"Empaques y costos en una fábrica de avena\", pregunta 6, con clave oficial en Orientaciones para el registro y análisis de la prueba diagnóstica (repositorio.minedu.gob.pe/handle/20.500.12799/12702)"
+        }
+      ]
+    },
+    {
+      "name": "Razones, proporciones y regla de tres",
+      "questions": [
+        {
+          "bodyTypst": "Un almacén dispone de 105 sacos de arroz, cada uno con un peso de 50 kilogramos. La distribución se realiza así:\n\n- La bodega \"La espiga\" recibe primero $4/7$ del total de sacos.\n- La bodega \"La reserva\" recibe $5/9$ del número de sacos que quedaron sin distribuir después de eso.\n\nEl precio de venta es S/4,80 por kilogramo en ambas bodegas. Posteriormente: \"La espiga\" vende la totalidad de los sacos que recibió, mientras que \"La reserva\" vende únicamente $2/5$ de los sacos que recibió.\n\n¿Cuánto más ingresos obtuvo la bodega \"La espiga\" que la bodega \"La reserva\" por la venta de arroz?",
+          "alternatives": [
+            "S/12 000",
+            "S/10 800",
+            "S/8400",
+            "S/14 400"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://drive.google.com/file/d/1j1cNeehhUoj3qIO5WXQb7eT_X7CiHCyP/view",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 2° secundaria, Cuadernillo A (Evaluación diagnóstica), situación 5 \"Distribución y venta de arroz\", pregunta 13, con clave oficial en Orientaciones para el registro y análisis de la prueba diagnóstica (repositorio.minedu.gob.pe/handle/20.500.12799/12702)"
+        }
+      ]
+    }
+  ]
+}

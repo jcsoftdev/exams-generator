@@ -1,0 +1,435 @@
+{
+  "courseName": "Ciencia y Tecnología",
+  "gradeLevel": "secundaria_5",
+  "topics": [
+    {
+      "name": "Biotecnología y salud pública",
+      "questions": [
+        {
+          "bodyTypst": "La proposición incorrecta:",
+          "alternatives": [
+            "La nanotecnología es usada para definir las ciencias y técnicas que se aplican a un nivel de nanoescala.",
+            "La nanotecnología es el estudio , diseño , creación y aplicación de materiales del control de la materia a nanoescala",
+            "La nanotecnología en el futuro no resolverá nuestros problemas sociales y humanos .",
+            "Cuando se manipula la materia a la minúscula escala de los átomos y moléculas se encuentran fenómenos y propiedades nuevas.",
+            "En la actualidad los principales avances prácticos ya se dan en algunos campos como los nanotubos , nanopartículas ,...,etc."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/biotecnologia-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+          "sourceName": "Rubiños - Biotecnología, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "La biotecnología actual es la:",
+          "alternatives": [
+            "cunicultura.",
+            "zootecnia.",
+            "bovinotecnia.",
+            "agricultura.",
+            "tecnología del ADN recombinante."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/biotecnologia-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+          "sourceName": "Rubiños - Biotecnología, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Es falso en relación a la zoonosis:",
+          "alternatives": [
+            "Enfermedad de los animales que se transmite al hombre.",
+            "No se transmite de persona a persona.",
+            "Puede ser el dengue.",
+            "Puede ser la rabia y la salmonelosis.",
+            "Puede ser transmitido del hombre a un animal."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/salud-y-enfermedades-infecciosas-y-no-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Salud y enfermedades infecciosas y no infecciosas, preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Ecología y problemática ambiental",
+      "questions": [
+        {
+          "bodyTypst": "No corresponde a un contaminante físico:",
+          "alternatives": [
+            "radioactividad",
+            "calor",
+            "ruido",
+            "efectos mecánicos",
+            "detergentes"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/contaminacion-ambiental-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+          "sourceName": "Rubiños - Contaminación ambiental, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "¿Cuál no es una solución a la contaminación ambiental?",
+          "alternatives": [
+            "Empleo de compuestos biodegradables",
+            "El reciclaje de papel.",
+            "Lixiviación de minerales por bacterias.",
+            "Absorción de contaminantes con carbón activado",
+            "Uso y fabricación de clorofluorcarbonos , CFCs."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/contaminacion-ambiental-ejercicios-preguntas-resueltas-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-ejemplos-word-pdf.html",
+          "sourceName": "Rubiños - Contaminación ambiental, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Es la capital de la biodiversidad del mundo:",
+          "alternatives": [
+            "Tumbes",
+            "Serengueti",
+            "Pacaya Samiria",
+            "Madre de Dios",
+            "Loreto"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/conservacion-de-los-recursos-naturales-areas-protegidas-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Conservación de recursos naturales y áreas protegidas, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Los recursos, por su naturaleza, pueden ser:",
+          "alternatives": [
+            "irrenovables.",
+            "imperecibles.",
+            "renovables.",
+            "fitogenéticos.",
+            "medicinales."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/conservacion-de-los-recursos-naturales-areas-protegidas-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Conservación de recursos naturales y áreas protegidas, preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Electricidad y magnetismo",
+      "questions": [
+        {
+          "bodyTypst": "Halla el valor de la carga de un cuerpo que posee 5×10 ² ⁰ electrones en exceso.",
+          "alternatives": [
+            "80C",
+            "120C",
+            "–60C",
+            "60C",
+            "–80C"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/carga-electrica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "Rubiños - Carga eléctrica, fórmulas y problemas resueltos"
+        },
+        {
+          "bodyTypst": "Halla el valor de la carga de un cuerpo que posee 10 ² ⁰ electrones en defecto.",
+          "alternatives": [
+            "8C",
+            "12C",
+            "32C",
+            "16C",
+            "20C"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/electrostatica-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "Rubiños - Electrostática, fórmulas y problemas resueltos de física"
+        },
+        {
+          "bodyTypst": "Se tienen dos cargas de 2μC y 3μC respectivamente y están separadas 3cm. ¿Cuánto vale la fuerza de interacción electrostática?",
+          "alternatives": [
+            "60N",
+            "600N",
+            "6000N",
+            "6N",
+            "60000N"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/fuerzas-electricas-ley-de-coulomb-formula-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "Rubiños - Fuerzas eléctricas, Ley de Coulomb, problemas resueltos"
+        },
+        {
+          "bodyTypst": "Un cuerpo de 2,0 kg de masa y 0,8 coulomb de carga es dejado en un campo eléctrico uniforme de 5N/C. El valor de la aceleración que adquiere el cuerpo es:",
+          "alternatives": [
+            "12,5 m/s²",
+            "2 m/s ²",
+            "1,25 m/s ²",
+            "0,08 m/s ²",
+            "0,50 m/s ²"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/campo-electrico-formulas-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+          "sourceName": "Rubiños - Campo eléctrico, fórmulas y problemas resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Evolución y selección natural",
+      "questions": [
+        {
+          "bodyTypst": "De los siguientes ejemplos, ¿cuáles son considerados órganos homólogos?",
+          "alternatives": [
+            "Alas del murciélago y de la mariposa.",
+            "La aleta dorsal de un pez y ballena.",
+            "La cola de los peces y del mono.",
+            "La extremidad superior del murciélago y la aleta del delfín.",
+            "Patas de un caballo y escarabajo."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/evolucion-biologica-del-ser-humano-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Evolución biológica del ser humano, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Indique el libro publicado por Lamarck en el que plantea los posibles mecanismos que permiten la evolución.",
+          "alternatives": [
+            "Origen de las especies por selección natural",
+            "Principios de geología",
+            "Ensayo sobre los principios de la población",
+            "Evolución: la síntesis moderna",
+            "Filosofía zoológica"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/evolucion-biologica-del-ser-humano-ejemplos-preguntas-resueltas-de-biologia-preuniversitaria-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Evolución biológica del ser humano, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Stanley Miller demostró la teoría de:",
+          "alternatives": [
+            "Arrhenius.",
+            "Darwin.",
+            "Haldane.",
+            "Oparin.",
+            "Pasteur."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teorias-de-la-evolucion-biologica-evidencias-evolutivas-ejemplos-preguntas-resueltas-biologia-preuniversitaria-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Teorías de la evolución biológica, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "La ley del uso y desuso, fue fundamental en:",
+          "alternatives": [
+            "la teoría de Darwin.",
+            "la generación espontánea.",
+            "el lamarckismo",
+            "el neodarwinismo."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teorias-de-la-evolucion-biologica-evidencias-evolutivas-ejemplos-preguntas-resueltas-biologia-preuniversitaria-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Teorías de la evolución biológica, preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Física moderna: introducción",
+      "questions": [
+        {
+          "bodyTypst": "La superficie de una placa de sodio se expone a una radiación de frecuencia 8,6×10 14 Hz. ¿Cuál es la energía máxima que tienen los fotoelectrones que escapan de ese metal? Datos: frecuencia umbral del sodio 5,6×10 14 Hz h= 6,6×10 –34 J · s",
+          "alternatives": [
+            "16,6×10 –20 J",
+            "18,0×10 –20 J",
+            "15,6×10 –20 J",
+            "19,8×10 –20 J"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
+          "sourceName": "Rubiños - Física moderna, rayos X y mecánica cuántica, ejercicios resueltos"
+        },
+        {
+          "bodyTypst": "Al incidir una onda electromagnética sobre una superficie metálica cuya frecuencia es igual a 1,25×10 15 Hz, el potencial de frenado de los electrones es de 2,1V. Calcule aproximadamente (en eV) la función trabajo del metal. c =3×10 8 m/s h=6,63×10 –34 J · s e=1,6×10 –19 C",
+          "alternatives": [
+            "4,58",
+            "3,08",
+            "6,58",
+            "5,58",
+            "2,58"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
+          "sourceName": "Rubiños - Física moderna, rayos X y mecánica cuántica, ejercicios resueltos"
+        },
+        {
+          "bodyTypst": "Sobre una superficie metálica con función de trabajo igual a 3×10 –19 J, incide una onda electromagnética. Calcule aproximadamente la máxima longitud de onda (en nm), que debe de tener la onda electromagnética para que se observe el efecto fotoeléctrico. h=6,626×10 –34 J · s c =3×10 8 m/s nm= 10 –9 m",
+          "alternatives": [
+            "321,2",
+            "432,6",
+            "662,6",
+            "721,6",
+            "932,8"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
+          "sourceName": "Rubiños - Física moderna, rayos X y mecánica cuántica, ejercicios resueltos"
+        }
+      ]
+    },
+    {
+      "name": "Genética y herencia",
+      "questions": [
+        {
+          "bodyTypst": "Uno de los siguientes no es homocigoto dominante:",
+          "alternatives": [
+            "AABP",
+            "AA",
+            "BB",
+            "PB",
+            "A y D"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/genetica-mendeliana-leyes-de-mendel-cuadro-de-punnet-ejemplos-preguntas-resueltas-preuniversitarias-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Genética mendeliana, leyes de Mendel, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Para demostrar el principio de la dominancia, Mendel utilizó:",
+          "alternatives": [
+            "dos progenitores homocigotos y alélicos",
+            "dos progenitores homocigotos dominantes",
+            "dos progenitores; uno homocigoto dominante y el otro heterocigoto",
+            "dos progenitores heterocigotos",
+            "dos progenitores homocigotos recesivos"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/genetica-mendeliana-leyes-de-mendel-cuadro-de-punnet-ejemplos-preguntas-resueltas-preuniversitarias-secundaria-prueba-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Genética mendeliana, leyes de Mendel, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "La Declaración Internacional sobre los Datos genéticos humanos señala que",
+          "alternatives": [
+            "el genoma humano es patrimonio de toda la humanidad.",
+            "el mapa genético de nuestra especie comprende aproximadamente 25000 genes.",
+            "se debe permitir el acceso irrestricto a los avances en genética y medicina.",
+            "el recojo de material genético humano debe basarse en un consentimiento previo."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/herencia-genetica-sanguinea-y-ligada-a-la-sexualidad-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Herencia genética sanguínea y ligada al sexo, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Los alelos _____ se comportan de modo diferente a lo previsto por la genética mendeliana.",
+          "alternatives": [
+            "de la región homóloga del cromosoma Y",
+            "de la región diferencial del cromosoma X",
+            "del segmento homólogo del cromosoma X",
+            "de la región homóloga del cromosoma 20",
+            "de la región diferencial del cromosoma 21"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/herencia-genetica-sanguinea-y-ligada-a-la-sexualidad-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Herencia genética sanguínea y ligada al sexo, preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Método científico y diseño experimental",
+      "questions": [
+        {
+          "bodyTypst": "Con la finalidad de establecer si existe una relación entre la deforestación y el agotamiento del agua en las regiones alto andinas, los científicos están diseñando un programa informático que simula la concurrencia de los dos problemas ambientales en dichas regiones. lo anterior se refiere a la etapa de método científico denominada",
+          "alternatives": [
+            "observación.",
+            "hipótesis",
+            "análisis de resultados",
+            "experimentación",
+            "conclusión"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        },
+        {
+          "bodyTypst": "Mediante el uso del método científico los investigadores pueden llegar a descubrir nuevos fármacos para la cura de enfermedades, además de desarrollar nuevos protocolos de diagnóstico para el tratamiento de enfermedades. Para ello el método científico debe cumplir ciertas características. Señale la alternativa inconsistente con el método científico.",
+          "alternatives": [
+            "Objetivo",
+            "Empírico",
+            "Subjetivo",
+            "Riguroso",
+            "Reproducible"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        },
+        {
+          "bodyTypst": "Complete la información respecto al método científico: Mediante la ______ , los científicos perciben fenómenos que ocurren en la naturaleza; en el intento de explicarlos se plantea una ______ y mediante la ______ , se reproducen bajo condiciones controladas. Los resultados obtenidos son analizados, contrastados y, luego, generalizados en una ______ .",
+          "alternatives": [
+            "observación – experimentación – hipótesis – teoría",
+            "experimentación – teoría – observación – hipótesis",
+            "observación – experimentación – hipótesis – ley",
+            "observación – hipótesis – experimentación – ley",
+            "experimentación – observación – hipótesis – experimentación"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        }
+      ]
+    },
+    {
+      "name": "Reacciones químicas",
+      "questions": [
+        {
+          "bodyTypst": "Halle la suma de los coeficientes luego de balancear la siguiente ecuación: HNO 3 +H 2 S → NO+S",
+          "alternatives": [
+            "13",
+            "12",
+            "15",
+            "14",
+            "16"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2019/07/reacciones-quimicas-ejercicios.html",
+          "sourceName": "Rubiños - Reacciones químicas, ejercicios resueltos"
+        },
+        {
+          "bodyTypst": "Indique verdadero (V) o falso (F) según corresponda: I) A mayor concentración , mayor velocidad de reacción. II) La velocidad de reacción aumenta cuando hay mayor grado de división de las partículas de los reactantes. III) Los catalizadores no afectan a las velocidades de reacción .",
+          "alternatives": [
+            "VVV",
+            "VVF",
+            "FFV",
+            "FVF",
+            "FFF"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/07/velocidad-de-una-reaccion-cinetica-quimica-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-examen-admision-universidad-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Velocidad de reacción (cinética química), problemas resueltos"
+        },
+        {
+          "bodyTypst": "Con cuál de los siguientes procesos se verá incrementada la producción del CO 2 , en la siguiente reacción: C (s) +O 2(g) ↔ CO 2(g) +393 kJ",
+          "alternatives": [
+            "Aumento de la temperatura",
+            "Utilización de un catalizador",
+            "Aumento del volumen",
+            "Disminución de la temperatura",
+            "Disminución de la presión"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "hard",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/02/equilibrio-quimico-ejemplos-problemas-resueltos-formulas-de-secundaria-pre-universidad-prueba-desarrollada-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Equilibrio químico, problemas resueltos"
+        }
+      ]
+    }
+  ]
+}

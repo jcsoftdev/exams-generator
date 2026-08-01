@@ -1,0 +1,341 @@
+{
+  "courseName": "Ciencia y Tecnología",
+  "gradeLevel": "secundaria_2",
+  "topics": [
+    {
+      "name": "Ecosistemas y biodiversidad",
+      "questions": [
+        {
+          "bodyTypst": "El factor determinante en la diferenciación de un bioma es",
+          "alternatives": [
+            "la vegetación.",
+            "la fauna.",
+            "el suelo.",
+            "la cantidad de lluvias.",
+            "la extensión."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/ecosistemas-y-biomas-del-mundo-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Ecosistemas y biomas del mundo, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "El bioma que se caracteriza por su gran variedad, y cantidad de flora y fauna es",
+          "alternatives": [
+            "la selva.",
+            "la sabana.",
+            "la tundra.",
+            "la taiga.",
+            "el desierto."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/ecosistemas-y-biomas-del-mundo-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Ecosistemas y biomas del mundo, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "¿Cuál es el factor determinante para la existencia de los biomas a nivel mundial?",
+          "alternatives": [
+            "las zonas climáticas en la Tierra",
+            "los tipos de suelo y su extensión",
+            "la disposición de continentes y océanos",
+            "la distribución de la población mundial",
+            "la actividad transformadora del hombre"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/04/ecosistemas-y-biomas-del-mundo-ejemplos-preguntas-resueltas-de-geografia-preuniversitaria-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Ecosistemas y biomas del mundo, preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Energía: formas y transformaciones",
+      "questions": [
+        {
+          "bodyTypst": "Un bloque de masa 1kg se mueve con rapidez constante V si su energía cinética es 32J, Hallar “V”",
+          "alternatives": [
+            "4m/s",
+            "6m/s",
+            "7m/s",
+            "8m/s",
+            "4 √ 2 m/s"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+          "sourceName": "Rubiños - Energía mecánica (cinética, potencial, elástica), problemas resueltos"
+        },
+        {
+          "bodyTypst": "Cuando una mosca de 10g se encuentra a 40m de altura. Calcula su energía potencial respecto a tierra. (g=10m/s²)",
+          "alternatives": [
+            "20J",
+            "10J",
+            "5J",
+            "4J",
+            "3J"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+          "sourceName": "Rubiños - Energía mecánica (cinética, potencial, elástica), problemas resueltos"
+        },
+        {
+          "bodyTypst": "Convertir – 40ºF a ºC",
+          "alternatives": [
+            "– 40°C",
+            "40°C",
+            "80°C",
+            "–20°C",
+            "–60°C"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Termometría, escalas de temperatura, problemas resueltos"
+        },
+        {
+          "bodyTypst": "¿Cuál es el equivalente en grados Farenheit de – 40º centígrados?.",
+          "alternatives": [
+            "– 8°F",
+            "– 40°F",
+            "40°F"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/07/termometria-ejemplos-problemas-resueltos-temperatura-formulas-de-transformacion-de-escalas-celsius-fahrenheit-kelvin-rankine-secundaria-pre-universidad-prueba-con-respuestas-word-pdf.html",
+          "sourceName": "Rubiños - Termometría, escalas de temperatura, problemas resueltos"
+        }
+      ]
+    },
+    {
+      "name": "La célula: estructura y función",
+      "questions": [
+        {
+          "bodyTypst": "Las células bacterianas son células de tipo:",
+          "alternatives": [
+            "eucariotas",
+            "macroscópicas",
+            "procariotas",
+            "estrelladas",
+            "a y b"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teoria-celular-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Teoría celular, preguntas resueltas (secundaria y preuniversitaria)"
+        },
+        {
+          "bodyTypst": "El huevo de un ave es una célula que se caracteriza por ser:",
+          "alternatives": [
+            "microscópica – heterótrofa – eucariota",
+            "microscópica – autótrofa – eucariota",
+            "macroscópica – autótrofa – procariota",
+            "macroscópica – heterótrofa – procariota",
+            "macroscópica – heterótrofa – eucariota"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/teoria-celular-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Teoría celular, preguntas resueltas (secundaria y preuniversitaria)"
+        },
+        {
+          "bodyTypst": "La célula animal y vegetal se diferencian por:",
+          "alternatives": [
+            "el tamaño de las células.",
+            "los monosacáridos de reserva.",
+            "los tipos de ARN.",
+            "el tamaño de las vacuolas.",
+            "el número de cada organelo."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/biologia-celular-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Biología celular, preguntas resueltas (secundaria y preuniversitaria)"
+        },
+        {
+          "bodyTypst": "Sobre la teoría celular, señale lo incorrecto.",
+          "alternatives": [
+            "La célula es la unidad fundamental, estructural y fisiológica de la materia viva.",
+            "Schleiden y Schwann acotaron que sólo pueden aparecer nuevas células por división de las preexistentes.",
+            "Las células que viven actualmente se remontan a los tiempos más antiguos, fue señalado por Weismann.",
+            "Omnia cellula e cellula, fue una frase acuñada por Rudolf Virchow.",
+            "Existen 2 planos básicos de arquitectura celular: procariota y eucariota."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/biologia-celular-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Biología celular, preguntas resueltas (secundaria y preuniversitaria)"
+        }
+      ]
+    },
+    {
+      "name": "Método científico y diseño experimental",
+      "questions": [
+        {
+          "bodyTypst": "El método científico, de manera simplificada, tiene etapas como: teoría, hipótesis, observación, experimentación y conclusión. En función a lo mencionado, indique la primera etapa del método científico.",
+          "alternatives": [
+            "conclusión",
+            "hipótesis",
+            "observación",
+            "experimentación",
+            "teoría"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        },
+        {
+          "bodyTypst": "Después y realizaron experimento científico, se analizan los resultados obtenidos para dar una conclusión. Luego, podría plantearse la _____ es decir, una explicación comprobada a diferencia de la _____",
+          "alternatives": [
+            "observación - ley",
+            "ley - observación",
+            "hipótesis - teoría",
+            "teoría - hipótesis",
+            "ley – teoría"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        },
+        {
+          "bodyTypst": "Cuando se realiza un trabajo científico, se formulan algunos problemas acerca de la naturaleza. Esto nos lleva a plantear la ______ , es decir, una respuesta posible a la pregunta planteada tras la observación.",
+          "alternatives": [
+            "conclusión",
+            "ley",
+            "experimentación",
+            "hipótesis",
+            "teoría"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2022/11/metodo-cientifico-ejemplos-problemas-resueltos-quimica-biologia-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+          "sourceName": "Rubiños - Método científico, preguntas resueltas de química y biología"
+        }
+      ]
+    },
+    {
+      "name": "Nutrición y sistemas del cuerpo humano",
+      "questions": [
+        {
+          "bodyTypst": "La hormona gastrina estimula la secreción del",
+          "alternatives": [
+            "ácido clorhídrico y pepsinógeno.",
+            "jugo pancreático rico en enzimas.",
+            "líquido biliar.",
+            "jugo intestinal."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-digestivo-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Aparato digestivo humano, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "¿Cuál no es una función de las fosas nasales?",
+          "alternatives": [
+            "Calientan el aire inspirado.",
+            "Filtran el aire.",
+            "Humedecen el aire.",
+            "Recepcionan los estímulos olfatorios.",
+            "Producen los sonidos del habla."
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-respiratorio-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Aparato respiratorio humano, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Las venas son vasos divergentes que se caracterizan porque",
+          "alternatives": [
+            "desarrollan aneurismas.",
+            "son superficiales.",
+            "presentan gran presión.",
+            "salen de los ventrículos.",
+            "sus válvulas se llaman mitrales."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/aparato-cardiovascular-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Aparato cardiovascular humano, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "La lesión del área 44 de Broca produce:",
+          "alternatives": [
+            "Apraxia",
+            "Agnosia",
+            "Afasia",
+            "Dislexia",
+            "Ataxia"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-nervioso-humano-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Sistema nervioso humano, preguntas resueltas"
+        }
+      ]
+    },
+    {
+      "name": "Reproducción y salud sexual",
+      "questions": [
+        {
+          "bodyTypst": "La uretra masculina atraviesa el:",
+          "alternatives": [
+            "Cuerpo albicans",
+            "Cuerpo esponjoso",
+            "Cuerpo cavernoso",
+            "epidídimo",
+            "b y c"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-reproductor-masculino-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Sistema reproductor masculino, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "No es una vía espermática o seminal:",
+          "alternatives": [
+            "Tubos eferentes",
+            "Conducto eyaculador",
+            "Conducto deferente",
+            "Epidídimo",
+            "uréter"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-reproductor-masculino-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Sistema reproductor masculino, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "No forma parte de la vulva:",
+          "alternatives": [
+            "Monte de venus",
+            "Labio externo",
+            "Labio menor",
+            "Clítoris",
+            "Vagina"
+          ],
+          "correctAnswer": "4",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-reproductor-de-la-mujer-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Sistema reproductor de la mujer, preguntas resueltas"
+        },
+        {
+          "bodyTypst": "Interviene en la fecundación:",
+          "alternatives": [
+            "Vagina",
+            "Útero",
+            "Trompa uterina",
+            "Ovario",
+            "T.A."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://matematicasn.blogspot.com/2023/03/sistema-reproductor-de-la-mujer-ejemplos-preguntas-resueltas-preuniversitarias-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+          "sourceName": "Rubiños - Sistema reproductor de la mujer, preguntas resueltas"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "courseName": "Comunicación",
+  "gradeLevel": "primaria_3",
+  "topics": [
+    {
+      "name": "Comprensión lectora literal",
+      "questions": [
+        {
+          "bodyTypst": "Lee el texto.\n\nEl tití pigmeo es famoso por ser el mono más pequeño del mundo. Por eso, también es conocido como \"mono de bolsillo\". Es tan pequeño que cabe en la mano de una persona. El tití pigmeo tiene dedos delgados que terminan en garras muy pequeñas. Con ellas, puede sujetarse de las ramas de los árboles. Su cuerpo está cubierto con pelos suaves y esponjosos. Además, tiene una cola delgada y larga. Este diminuto mono vive en la selva del Perú. Hace sus nidos en las partes altas de los árboles. Allí, utiliza las hojas de los árboles para esconderse de águilas, halcones y otros animales que se lo pueden comer. La alimentación del tití pigmeo es variada. Trepa hasta lo alto de los árboles para alcanzar las hojas más tiernas, que son sus favoritas. También, se alimenta de insectos, frutas y de la savia, un líquido que se encuentra dentro de las plantas. Este animalito se encuentra en peligro de desaparecer. Muchas personas están cortando los árboles de la selva. Si no cuidamos la naturaleza, pronto el tití pigmeo no tendrá dónde vivir.\n\n¿Cómo son los pelos del tití pigmeo?",
+          "alternatives": [
+            "Esponjosos.",
+            "Largos.",
+            "Pequeños."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 3.er grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-3.pdf"
+        },
+        {
+          "bodyTypst": "Lee el texto.\n\n¿Te pica mucho la cabeza? Si es así, es posible que tengas piojos. Estos animalitos viven en la cabeza de las personas. Pero no te preocupes: eliminarlos es fácil. Para acabar con los piojos, primero necesitas conseguir un poco de vinagre, que es un antipiojos natural. Además, debes conseguir un peine fino llamado \"patrullero\". Con ayuda de un adulto, aplica un poco de vinagre en tu cabello seco y frótalo durante unos minutos. Hazlo sobre todo en tu nuca y detrás de tus orejas, ya que a los piojos les encantan estos lugares. Después, lávate el cabello con champú, enjuágalo y péinalo cuidadosamente usando el patrullero. De esta manera, quitarás los piojos muertos y las liendres, que son sus huevecillos. También, será necesario que laves bien las sábanas que hayas usado. Alguno de estos animales podría haberse quedado por ahí y podría volver a subir a tu cabello. Recuerda que, si mantienes tu cabello bien limpio y peinado, estarás más protegido de un nuevo contagio.\n\nSegún el texto, ¿cómo puedes protegerte de un nuevo contagio de piojos?",
+          "alternatives": [
+            "Pidiendo ayuda a un adulto.",
+            "Aplicando vinagre en el cabello seco.",
+            "Manteniendo el cabello limpio y peinado."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 3.er grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-3.pdf"
+        },
+        {
+          "bodyTypst": "Lee el texto.\n\n¿Te pica mucho la cabeza? Si es así, es posible que tengas piojos. Estos animalitos viven en la cabeza de las personas. Pero no te preocupes: eliminarlos es fácil. Para acabar con los piojos, primero necesitas conseguir un poco de vinagre, que es un antipiojos natural. Además, debes conseguir un peine fino llamado \"patrullero\". Con ayuda de un adulto, aplica un poco de vinagre en tu cabello seco y frótalo durante unos minutos. Hazlo sobre todo en tu nuca y detrás de tus orejas, ya que a los piojos les encantan estos lugares. Después, lávate el cabello con champú, enjuágalo y péinalo cuidadosamente usando el patrullero. De esta manera, quitarás los piojos muertos y las liendres, que son sus huevecillos. También, será necesario que laves bien las sábanas que hayas usado. Alguno de estos animales podría haberse quedado por ahí y podría volver a subir a tu cabello. Recuerda que, si mantienes tu cabello bien limpio y peinado, estarás más protegido de un nuevo contagio.\n\nPara acabar con los piojos, ¿qué es lo primero que debes hacer?",
+          "alternatives": [
+            "Peinar el cabello con el \"patrullero\".",
+            "Conseguir un poco de vinagre.",
+            "Lavar el cabello con champú."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 3.er grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-3.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Comprensión lectora inferencial y crítica",
+      "questions": [
+        {
+          "bodyTypst": "Lee el texto.\n\nEl tití pigmeo es famoso por ser el mono más pequeño del mundo. Por eso, también es conocido como \"mono de bolsillo\". Es tan pequeño que cabe en la mano de una persona. El tití pigmeo tiene dedos delgados que terminan en garras muy pequeñas. Con ellas, puede sujetarse de las ramas de los árboles. Su cuerpo está cubierto con pelos suaves y esponjosos. Además, tiene una cola delgada y larga. Este diminuto mono vive en la selva del Perú. Hace sus nidos en las partes altas de los árboles. Allí, utiliza las hojas de los árboles para esconderse de águilas, halcones y otros animales que se lo pueden comer. La alimentación del tití pigmeo es variada. Trepa hasta lo alto de los árboles para alcanzar las hojas más tiernas, que son sus favoritas. También, se alimenta de insectos, frutas y de la savia, un líquido que se encuentra dentro de las plantas. Este animalito se encuentra en peligro de desaparecer. Muchas personas están cortando los árboles de la selva. Si no cuidamos la naturaleza, pronto el tití pigmeo no tendrá dónde vivir.\n\nSegún el texto, ¿cuál es la principal característica del tití pigmeo?",
+          "alternatives": [
+            "Es muy ágil.",
+            "Es muy pequeño.",
+            "Es muy hambriento."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 3.er grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-3.pdf"
+        },
+        {
+          "bodyTypst": "Lee el texto.\n\nEl tití pigmeo es famoso por ser el mono más pequeño del mundo. Por eso, también es conocido como \"mono de bolsillo\". Es tan pequeño que cabe en la mano de una persona. El tití pigmeo tiene dedos delgados que terminan en garras muy pequeñas. Con ellas, puede sujetarse de las ramas de los árboles. Su cuerpo está cubierto con pelos suaves y esponjosos. Además, tiene una cola delgada y larga. Este diminuto mono vive en la selva del Perú. Hace sus nidos en las partes altas de los árboles. Allí, utiliza las hojas de los árboles para esconderse de águilas, halcones y otros animales que se lo pueden comer. La alimentación del tití pigmeo es variada. Trepa hasta lo alto de los árboles para alcanzar las hojas más tiernas, que son sus favoritas. También, se alimenta de insectos, frutas y de la savia, un líquido que se encuentra dentro de las plantas. Este animalito se encuentra en peligro de desaparecer. Muchas personas están cortando los árboles de la selva. Si no cuidamos la naturaleza, pronto el tití pigmeo no tendrá dónde vivir.\n\nSegún el texto, ¿por qué podría desaparecer el tití pigmeo?",
+          "alternatives": [
+            "Porque es un animal demasiado pequeño.",
+            "Porque están cortando los árboles de la selva.",
+            "Porque las águilas lo cazan para comerlo."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 3.er grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-3.pdf"
+        },
+        {
+          "bodyTypst": "Lee el texto.\n\n¿Te pica mucho la cabeza? Si es así, es posible que tengas piojos. Estos animalitos viven en la cabeza de las personas. Pero no te preocupes: eliminarlos es fácil. Para acabar con los piojos, primero necesitas conseguir un poco de vinagre, que es un antipiojos natural. Además, debes conseguir un peine fino llamado \"patrullero\". Con ayuda de un adulto, aplica un poco de vinagre en tu cabello seco y frótalo durante unos minutos. Hazlo sobre todo en tu nuca y detrás de tus orejas, ya que a los piojos les encantan estos lugares. Después, lávate el cabello con champú, enjuágalo y péinalo cuidadosamente usando el patrullero. De esta manera, quitarás los piojos muertos y las liendres, que son sus huevecillos. También, será necesario que laves bien las sábanas que hayas usado. Alguno de estos animales podría haberse quedado por ahí y podría volver a subir a tu cabello. Recuerda que, si mantienes tu cabello bien limpio y peinado, estarás más protegido de un nuevo contagio.\n\n¿Para qué fue escrito este texto?",
+          "alternatives": [
+            "Para darnos consejos para combatir los piojos.",
+            "Para contarnos cómo se contagian los piojos.",
+            "Para convencernos de lavarnos el cabello."
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/comunicacion/prueba-diagnostica-lectura-2021-3.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica de Lectura 3.er grado de primaria 2021 \"Conozcamos nuestros aprendizajes\" (UMC); clave confirmada en la Tabla de especificaciones del manual-prueba-diagnostica-2021-3.pdf"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "courseName": "Matemática",
+  "gradeLevel": "secundaria_4",
+  "topics": [
+    {
+      "name": "Ecuaciones cuadráticas",
+      "questions": [
+        {
+          "bodyTypst": "Resuelve la siguiente ecuación:\n\n$(x - 2)^2 = 25$\n\nMarca la alternativa que expresa los valores que puede tomar $x$ en la ecuación dada.",
+          "alternatives": [
+            "$x = 7$; $x = 5$",
+            "$x = -7$; $x = 3$",
+            "$x = -3$; $x = 7$",
+            "$x = -5$; $x = 5$"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.carlosguarnizteaches.com/2022/03/prueba-diagnostica-de-matematica-4.html",
+          "sourceName": "MINEDU - Kit de Evaluación de Diagnóstico, Prueba de Matemática 4° secundaria, pregunta 10, con clave oficial en Manual de uso de la prueba de Matemática 4° secundaria (repositorio.minedu.gob.pe/handle/20.500.12799/8073)"
+        }
+      ]
+    },
+    {
+      "name": "Probabilidad",
+      "questions": [
+        {
+          "bodyTypst": "Carlos y Sofía juegan a lanzar un dado en igualdad de condiciones. Sobre la base de su frecuencia relativa, la probabilidad de que Carlos gane es 0,25. A su vez, la probabilidad de que Sofía gane es 0,6.\n\nSegún esta información, ¿cuál de las siguientes afirmaciones es correcta?",
+          "alternatives": [
+            "Es más probable que gane Sofía",
+            "Es más probable que gane Carlos",
+            "Es imposible que Carlos gane",
+            "Es seguro que Sofía ganará"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.carlosguarnizteaches.com/2022/03/prueba-diagnostica-de-matematica-4.html",
+          "sourceName": "MINEDU - Kit de Evaluación de Diagnóstico, Prueba de Matemática 4° secundaria, pregunta 26, con clave oficial en Manual de uso de la prueba de Matemática 4° secundaria (repositorio.minedu.gob.pe/handle/20.500.12799/8073)"
+        }
+      ]
+    },
+    {
+      "name": "Funciones: lineal, afín y cuadrática",
+      "questions": [
+        {
+          "bodyTypst": "Una empresa de servicios de agua potable aplica tarifas progresivas por tramos de consumo mensual (en m³):\n\nTramo 1: de 0 a 10 m³, tarifa S/2,20 por m³. Tramo 2: más de 10 hasta 20 m³, tarifa S/2,36 por m³. Tramo 3: más de 20 hasta 50 m³, tarifa S/3,22 por m³. Tramo 4: más de 50 m³, tarifa S/7,32 por m³.\n\nAdemás del costo variable por consumo, el recibo incluye un cargo fijo mensual de S/6,25.\n\n¿Cuál de las siguientes expresiones representa el costo mensual del consumo de agua de una familia que utilizó 35 m³?",
+          "alternatives": [
+            "$(10 × 2,20) + (10 × 2,36) + (15 × 3,22) + 6,25$",
+            "$(35 × 3,22) + 6,25$",
+            "$(20 × 2,36) + (15 × 3,22) + 6,25$",
+            "$(35 × 2,20) + 6,25$"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "medium",
+          "sourceUrl": "https://drive.google.com/file/d/1JZM9LXRPpKGsV4HLRBVg7k5jCloRornw/view",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 4° secundaria, Cuadernillo A (Evaluación diagnóstica), situación 7 \"Tarifas de pago en Sedapal\", pregunta 18, con clave oficial en Orientaciones para el registro y análisis de la prueba diagnóstica (repositorio.minedu.gob.pe/handle/20.500.12799/12704)"
+        }
+      ]
+    },
+    {
+      "name": "Semejanza, congruencia y teorema de Pitágoras",
+      "questions": [
+        {
+          "bodyTypst": "Un diseñador gráfico crea un logotipo representado por la figura $P$ en un plano cartesiano. La figura $A$ se obtiene al reflejar la figura $P$ respecto de la recta $y = 1$.\n\n¿Cuál de las siguientes afirmaciones describe el efecto de esta transformación?",
+          "alternatives": [
+            "La figura cambia de tamaño, pero conserva completamente su forma",
+            "La figura conserva forma y tamaño, pero cambia su posición al reflejarse",
+            "La figura rota noventa grados alrededor del origen cartesiano",
+            "La figura se traslada verticalmente una unidad hacia arriba"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://drive.google.com/file/d/1JZM9LXRPpKGsV4HLRBVg7k5jCloRornw/view",
+          "sourceName": "MINEDU - Refuerzo Escolar 2026, Matemática 4° secundaria, Cuadernillo A (Evaluación diagnóstica), situación 8 \"Diseño de logotipo\", pregunta 21, con clave oficial en Orientaciones para el registro y análisis de la prueba diagnóstica (repositorio.minedu.gob.pe/handle/20.500.12799/12704)"
+        }
+      ]
+    }
+  ]
+}

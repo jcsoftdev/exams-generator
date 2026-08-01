@@ -1,0 +1,42 @@
+{
+  "courseName": "Educación Religiosa",
+  "gradeLevel": "primaria_1",
+  "topics": [
+    {
+      "name": "Dios creador y la creación",
+      "questions": [
+        {
+          "bodyTypst": "¿Quiénes forman la Sagrada Familia?",
+          "alternatives": [
+            "La Virgen María, San José y el Niño Jesús",
+            "La Virgen María, San José, el Niño Jesús, San Juan y Santa Isabel",
+            "La Virgen María y San José",
+            "Solo el Niño Jesús"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/33646609/cuestionario-sobre-el-catecismo-de-la-iglesia-catolica",
+          "sourceName": "Cuestionario sobre el Catecismo de la Iglesia Católica - GoConqr"
+        }
+      ]
+    },
+    {
+      "name": "Valores cristianos y la convivencia fraterna",
+      "questions": [
+        {
+          "bodyTypst": "Para convivir en familia debemos tener:",
+          "alternatives": [
+            "Consideración y tolerancia",
+            "Consideración y respeto",
+            "Amor por el prójimo",
+            "Disciplina y orden"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/es/quiz/10902136/evaluacion-de-etica-y-valores",
+          "sourceName": "Evaluación de Ética y Valores - GoConqr"
+        }
+      ]
+    }
+  ]
+}

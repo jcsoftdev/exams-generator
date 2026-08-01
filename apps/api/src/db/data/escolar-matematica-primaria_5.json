@@ -1,0 +1,123 @@
+{
+  "courseName": "Matemática",
+  "gradeLevel": "primaria_5",
+  "topics": [
+    {
+      "name": "Números hasta 100 000 y valor posicional",
+      "questions": [
+        {
+          "bodyTypst": "Nicolás tiene dos rollos de alambre y los usa para realizar un trabajo. En uno de los rollos hay 54 m de alambre. En el otro rollo hay 49 m de alambre. Luego de realizar el trabajo, le quedaron en total 27 m de alambre. ¿Cuántos metros de alambre usó Nicolás en el trabajo que realizó?",
+          "alternatives": [
+            "130 m de alambre.",
+            "76 m de alambre.",
+            "27 m de alambre.",
+            "22 m de alambre."
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 5.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Para sembrar lechugas en un huerto escolar, los estudiantes de quinto grado de primaria han preparado un terreno con 35 surcos. En cada surco se sembrarán 25 plantas de lechuga. ¿Cuántas plantas de lechuga necesitarán en total?",
+          "alternatives": ["60 plantas.", "245 plantas.", "755 plantas.", "875 plantas."],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 5.° grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "División exacta e inexacta",
+      "questions": [
+        {
+          "bodyTypst": "Los estudiantes y profesores de una escuela de Chachapoyas contratarán buses para realizar un paseo a la Fortaleza de Kuélap. Cada bus puede llevar hasta 40 personas. En total, entre profesores y estudiantes, irán 316 personas al paseo. ¿Cuántos buses necesitarán contratar?",
+          "alternatives": ["7 buses.", "8 buses.", "40 buses.", "356 buses."],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 5.° grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Fracciones",
+      "questions": [
+        {
+          "bodyTypst": "Teresa repartió un chocolate entre sus hermanos. Ella le dio $1/2$ del chocolate a Miguel, $1/4$ del chocolate a Diego y se quedó con el resto. ¿Qué parte del chocolate repartió Teresa entre sus hermanos?",
+          "alternatives": ["$1/8$ del chocolate.", "$2/4$ del chocolate.", "$3/4$ del chocolate.", "$2/6$ del chocolate."],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 5.° grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Gráficos, tablas, estadística y probabilidad",
+      "questions": [
+        {
+          "bodyTypst": "Cuatro padres de familia de quinto grado de primaria vendieron chicha morada en botellas de ½ litro y de 1 litro en el quiosco de la escuela. Observa la información de la siguiente tabla:\n\nBotellas de ½ litro / Botellas de 1 litro\nLuis: 10 / 5\nMari: 7 / 3\nJesús: 10 / 3\nDina: 6 / 5\n\nCada botella de ½ litro de chicha se vendió a S/1 y cada botella de 1 litro de chicha se vendió a S/2. En total, ¿cuánto dinero juntaron los padres de familia por la venta de la chicha morada?",
+          "alternatives": ["S/49", "S/65", "S/98"],
+          "correctAnswer": "1",
+          "difficulty": "hard",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 5.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "María juega a sacar, sin mirar, un botón de una caja que contiene botones grises y blancos. ¿Qué se puede afirmar de este juego?",
+          "alternatives": [
+            "Es imposible que saque un botón blanco.",
+            "Es seguro que saque un botón gris.",
+            "Es posible que saque un botón blanco.",
+            "Es posible que saque un botón cuadrado."
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 5.° grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Patrones y secuencias",
+      "questions": [
+        {
+          "bodyTypst": "Jorge prepara anticuchos de carne para venderlos. En la siguiente tabla registra la cantidad de trozos de carne que usará según la cantidad de palitos que prepare:\n\nCantidad de palitos: 1, 2, 3, 4, …\nCantidad de trozos de carne: 4, 8, 12, …\n\n¿Cuál de las siguientes afirmaciones expresa la relación entre la cantidad de palitos y la cantidad de trozos de carne mostrada en la tabla?",
+          "alternatives": [
+            "La cantidad de trozos de carne siempre es el doble de la cantidad de palitos.",
+            "La cantidad de palitos siempre es el doble de la cantidad de trozos de carne.",
+            "La cantidad de palitos siempre es el cuádruple de la cantidad de trozos de carne.",
+            "La cantidad de trozos de carne siempre es el cuádruple de la cantidad de palitos."
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 5.° grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Perímetro, área y volumen",
+      "questions": [
+        {
+          "bodyTypst": "Adela dibujó el plano del patio de su casa: un patio rectangular de 5 m de ancho por 8 m de largo. ¿Cuánto mide el contorno del patio de la casa de Adela?",
+          "alternatives": ["18 m", "23 m", "26 m", "40 m"],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 5.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "¿Cuánto mide el perímetro de un cuadrado de 16 m de lado?",
+          "alternatives": ["16 m", "32 m", "64 m", "256 m"],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 5.° grado de primaria (2021)"
+        }
+      ]
+    }
+  ]
+}

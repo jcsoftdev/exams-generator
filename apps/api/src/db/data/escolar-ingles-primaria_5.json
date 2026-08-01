@@ -1,0 +1,120 @@
+{
+  "courseName": "Inglés como Lengua Extranjera",
+  "gradeLevel": "primaria_5",
+  "topics": [
+    {
+      "name": "Comprensión de textos cortos y diálogos",
+      "questions": [
+        {
+          "bodyTypst": "Last summer, we decided to spend our vacation at the beach because the weather was very hot in the mountains. The travel agent said that traveling by bus was the cheapest way, but we went by plane because it was faster. We wanted to have more time to spend at the beach. The weather was beautiful and we had a great time.\n\nWe decided to go to the beach because ___.",
+          "alternatives": [
+            "it was cheaper than going to the mountains",
+            "the travel agent said that it was the cheapest",
+            "of the hot weather in the mountains",
+            "we wanted to spend time at the beach"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/reading-comprehension-test.html",
+          "sourceName": "GrammarBank – Beginners Reading Comprehension Test 1"
+        },
+        {
+          "bodyTypst": "Last summer, we decided to spend our vacation at the beach because the weather was very hot in the mountains. The travel agent said that traveling by bus was the cheapest way, but we went by plane because it was faster. We wanted to have more time to spend at the beach. The weather was beautiful and we had a great time.\n\nThe bus was the ___ way to travel.",
+          "alternatives": [
+            "best",
+            "easiest",
+            "cheapest",
+            "slowest"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/reading-comprehension-test.html",
+          "sourceName": "GrammarBank – Beginners Reading Comprehension Test 1"
+        },
+        {
+          "bodyTypst": "Last summer, we decided to spend our vacation at the beach because the weather was very hot in the mountains. The travel agent said that traveling by bus was the cheapest way, but we went by plane because it was faster. We wanted to have more time to spend at the beach. The weather was beautiful and we had a great time.\n\nTraveling by plane was ___ than by bus.",
+          "alternatives": [
+            "more fun",
+            "cheaper",
+            "expensive",
+            "faster"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/reading-comprehension-test.html",
+          "sourceName": "GrammarBank – Beginners Reading Comprehension Test 1"
+        },
+        {
+          "bodyTypst": "Last summer, we decided to spend our vacation at the beach because the weather was very hot in the mountains. The travel agent said that traveling by bus was the cheapest way, but we went by plane because it was faster. We wanted to have more time to spend at the beach. The weather was beautiful and we had a great time.\n\nWe ___ our vacation.",
+          "alternatives": [
+            "hated",
+            "didn't like",
+            "enjoyed",
+            "regretted"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/reading-comprehension-test.html",
+          "sourceName": "GrammarBank – Beginners Reading Comprehension Test 1"
+        }
+      ]
+    },
+    {
+      "name": "Preposiciones y estructuras there is / there are",
+      "questions": [
+        {
+          "bodyTypst": "There aren't ___ people here today.",
+          "alternatives": [
+            "many",
+            "a lot",
+            "much",
+            "the many"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/easy-esl-worksheet.html",
+          "sourceName": "GrammarBank – Easy ESL Worksheet 2"
+        },
+        {
+          "bodyTypst": "___ two hundred students in my school.",
+          "alternatives": [
+            "They are",
+            "It is",
+            "There are",
+            "There is"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/starter-English-test.html",
+          "sourceName": "GrammarBank – Starter English Test 3"
+        },
+        {
+          "bodyTypst": "Tokyo is the most crowded city ___ the world.",
+          "alternatives": [
+            "on",
+            "at",
+            "in",
+            "over"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/prepositions-quiz.html",
+          "sourceName": "GrammarBank – Prepositions Quiz (Easy)"
+        },
+        {
+          "bodyTypst": "I'm going to meet my friends, ___ Times Square tonight.",
+          "alternatives": [
+            "on",
+            "at",
+            "in",
+            "over"
+          ],
+          "correctAnswer": "2",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/prepositions-quiz.html",
+          "sourceName": "GrammarBank – Prepositions Quiz (Easy)"
+        }
+      ]
+    }
+  ]
+}

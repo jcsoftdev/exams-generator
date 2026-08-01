@@ -1,0 +1,81 @@
+{
+  "courseName": "Inglés como Lengua Extranjera",
+  "gradeLevel": "primaria_2",
+  "topics": [
+    {
+      "name": "Verb to be y pronombres personales",
+      "questions": [
+        {
+          "bodyTypst": "Is this your book? ___.",
+          "alternatives": [
+            "No, it isn't",
+            "No, isn't it",
+            "No, he isn't",
+            "No, there isn't"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/starter-English-test.html",
+          "sourceName": "GrammarBank – Starter English Test 3"
+        },
+        {
+          "bodyTypst": "Where is Anna from? ___ from Rome.",
+          "alternatives": [
+            "It is",
+            "Her is",
+            "He is",
+            "She is"
+          ],
+          "correctAnswer": "3",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/starter-English-test.html",
+          "sourceName": "GrammarBank – Starter English Test 3"
+        },
+        {
+          "bodyTypst": "___ name is John Smith.",
+          "alternatives": [
+            "His",
+            "He's",
+            "He",
+            "Her"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/starter-English-test.html",
+          "sourceName": "GrammarBank – Starter English Test 3"
+        },
+        {
+          "bodyTypst": "Sammy ___ a doctor, he's a teacher at the university.",
+          "alternatives": [
+            "aren't",
+            "isn't",
+            "doesn't",
+            "not"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.grammarbank.com/starter-English-test.html",
+          "sourceName": "GrammarBank – Starter English Test 3"
+        }
+      ]
+    },
+    {
+      "name": "Vocabulario básico: colores, números y familia",
+      "questions": [
+        {
+          "bodyTypst": "We haven't got ___.",
+          "alternatives": [
+            "some children",
+            "any children",
+            "a children",
+            "one children"
+          ],
+          "correctAnswer": "1",
+          "difficulty": "medium",
+          "sourceUrl": "https://www.grammarbank.com/easy-esl-worksheet.html",
+          "sourceName": "GrammarBank – Easy ESL Worksheet 2"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "courseName": "Matemática",
+  "gradeLevel": "primaria_2",
+  "topics": [
+    {
+      "name": "Suma y resta (sin y con canje)",
+      "questions": [
+        {
+          "bodyTypst": "A 19 quítale 7. ¿Cuánto queda?",
+          "alternatives": ["2", "12", "26"],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-2.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 2.° grado de primaria (2021)"
+        },
+        {
+          "bodyTypst": "Micaela llevaba una canasta con 12 huevos. En el camino, se le rompieron algunos huevos. Ahora, le quedan 8 huevos sin romper. ¿Cuántos huevos se le rompieron a Micaela?",
+          "alternatives": ["4 huevos.", "8 huevos.", "20 huevos."],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-2.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 2.° grado de primaria (2021)"
+        }
+      ]
+    },
+    {
+      "name": "Patrones y secuencias",
+      "questions": [
+        {
+          "bodyTypst": "Observa el siguiente patrón de números: 1, 3, 5, 7, 9. ¿En cuánto aumentan los números en el patrón?",
+          "alternatives": ["Aumentan de 1 en 1.", "Aumentan de 2 en 2.", "Aumentan de 3 en 3."],
+          "correctAnswer": "1",
+          "difficulty": "easy",
+          "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-2.pdf",
+          "sourceName": "MINEDU - Prueba diagnóstica Matemática 2.° grado de primaria (2021)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "courseName": "Arte y Cultura",
+  "gradeLevel": "primaria_5",
+  "topics": [
+    {
+      "name": "Apreciación y análisis de obras artísticas",
+      "questions": [
+        {
+          "bodyTypst": "¿Qué son las pinturas rupestres?",
+          "alternatives": [
+            "dibujos o bocetos en la roca",
+            "cuadros importantes",
+            "graffitis"
+          ],
+          "correctAnswer": "0",
+          "difficulty": "easy",
+          "sourceUrl": "https://www.goconqr.com/en/quiz/12912437/50-preguntas-sobre-religion",
+          "sourceName": "GoConqr - 50 preguntas sobre religión"
+        }
+      ]
+    }
+  ]
+}
