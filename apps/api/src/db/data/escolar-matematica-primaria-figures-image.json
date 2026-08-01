@@ -1,0 +1,39 @@
+{
+  "entries": [
+    {
+      "courseName": "Matemática", "topicName": "Figuras y cuerpos geométricos", "gradeLevel": "primaria_4", "difficulty": "medium",
+      "correctAnswer": "c",
+      "imagePath": "escolar-matematica-primaria-figures-image/mat-06-14.png",
+      "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf",
+      "sourceName": "MINEDU - Cuadernillo modelo Matemática 4to primaria"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Figuras y cuerpos geométricos", "gradeLevel": "primaria_4", "difficulty": "medium",
+      "correctAnswer": "a",
+      "imagePath": "escolar-matematica-primaria-figures-image/mat-07-15.png",
+      "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf",
+      "sourceName": "MINEDU - Cuadernillo modelo Matemática 4to primaria"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Figuras y cuerpos geométricos", "gradeLevel": "primaria_4", "difficulty": "medium",
+      "correctAnswer": "a",
+      "imagePath": "escolar-matematica-primaria-figures-image/mat-13-17.png",
+      "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf",
+      "sourceName": "MINEDU - Prueba diagnóstica Matemática 4to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Patrones y secuencias", "gradeLevel": "primaria_3", "difficulty": "medium",
+      "correctAnswer": "c",
+      "imagePath": "escolar-matematica-primaria-figures-image/mat-21-13.png",
+      "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-3.pdf",
+      "sourceName": "MINEDU - Prueba diagnóstica Matemática 3er primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Perímetro, área y volumen", "gradeLevel": "primaria_6", "difficulty": "medium",
+      "correctAnswer": "b",
+      "imagePath": "escolar-matematica-primaria-figures-image/mat-34-18.png",
+      "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf",
+      "sourceName": "MINEDU - Prueba diagnóstica Matemática 6to primaria 2021"
+    }
+  ]
+}

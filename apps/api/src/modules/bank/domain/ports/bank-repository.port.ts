@@ -150,6 +150,19 @@ export interface BankRepositoryPort {
     currentTenantId: string | null,
     image: { readonly storageKey: string; readonly mime: string },
   ): Promise<string | undefined>;
+  /**
+   * All-or-nothing re-attachment of a structured question's per-alternative
+   * images (Task: alternative images) — `images[index]` becomes the image
+   * for `alternatives[index]`. Replaces the FULL existing set (delete+insert
+   * in a transaction) rather than patching individual slots, since a partial
+   * patch could leave a stale image attached to a slot the caller meant to
+   * clear. Same tenant-visibility scoping as `replaceImageAsset`.
+   */
+  setAlternativeImages(
+    id: string,
+    currentTenantId: string | null,
+    images: readonly { readonly storageKey: string; readonly mime: string }[],
+  ): Promise<string | undefined>;
   updateStatus(id: string, status: QuestionStatus): Promise<void>;
   deleteQuestion(id: string): Promise<void>;
   countByDifficultyAndStatus(tenantId: string | null): Promise<BankStatusDifficultyCount[]>;

@@ -270,6 +270,53 @@ describe("ExamVersionGenerationService.generateVersions", () => {
     expect(structuredQuestion.imageAbsolutePath).toMatch(/^\//);
   });
 
+  it("materializes per-alternative images and threads alternativeImagePaths, staying attached to the SAME alternative text regardless of shuffle position", async () => {
+    const { service, repository, storage, pdfCompiler } = buildDeps();
+    await storage.put("bank/alt-images/five", Buffer.from("fake-alt-5-png"), "image/png");
+    await storage.put("bank/alt-images/seven", Buffer.from("fake-alt-7-png"), "image/png");
+
+    const examWithAlternativeImages: ExamForGenerationRecord = {
+      ...READY_EXAM,
+      selectedQuestions: [
+        ...READY_EXAM.selectedQuestions,
+        {
+          ...STRUCTURED_QUESTION_RECORD,
+          alternativeImages: [
+            { storageKey: "bank/alt-images/five", mime: "image/png" },
+            null,
+            { storageKey: "bank/alt-images/seven", mime: "image/png" },
+          ],
+        },
+      ],
+    };
+    repository.getExamForGeneration.mockResolvedValue(examWithAlternativeImages);
+    repository.createAsset.mockResolvedValue({ id: "asset-id" });
+
+    const results = await service.generateVersions(TEACHER, "exam-1", 3);
+
+    expect(results).toHaveLength(3);
+    for (const examCall of pdfCompiler.examCalls) {
+      const structuredQuestion = examCall.questions.find((q) => q.id === "q3");
+      expect(structuredQuestion?.type).toBe("structured");
+      if (structuredQuestion?.type !== "structured") {
+        throw new Error("expected q3 to render as a structured question");
+      }
+
+      expect(structuredQuestion.alternativeImagePaths).toHaveLength(3);
+
+      // "5" and "7" (original indices 0 and 2) have images; "6" (index 1)
+      // never had one — this must hold no matter where shuffling moved each
+      // alternative's printed position.
+      const indexOfFive = structuredQuestion.alternatives.indexOf("5");
+      const indexOfSix = structuredQuestion.alternatives.indexOf("6");
+      const indexOfSeven = structuredQuestion.alternatives.indexOf("7");
+
+      expect(structuredQuestion.alternativeImagePaths?.[indexOfFive]).toMatch(/^\//);
+      expect(structuredQuestion.alternativeImagePaths?.[indexOfSeven]).toMatch(/^\//);
+      expect(structuredQuestion.alternativeImagePaths?.[indexOfSix]).toBeUndefined();
+    }
+  });
+
   it("wraps TypstCompilationError into ExamPdfGenerationError, surfacing the failing question id", async () => {
     const { service, repository, pdfCompiler } = buildDeps();
     repository.getExamForGeneration.mockResolvedValue(READY_EXAM);

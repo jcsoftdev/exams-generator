@@ -1,0 +1,196 @@
+{
+  "entries": [
+    {
+      "courseName": "Matemática", "topicName": "Gráficos, tablas, estadística y probabilidad", "gradeLevel": "primaria_4", "difficulty": "easy",
+      "bodyTypst": "La biblioteca de una escuela tiene registrados libros de tres áreas: Ciencia y Ambiente, Matemática y Comunicación (gráfico de pictograma, cada ícono vale 5 libros). Según el gráfico, ¿cuántos libros de Matemática hay en la biblioteca?",
+      "alternatives": ["15 libros.", "9 libros.", "5 libros.", "3 libros."], "correctAnswer": "0",
+      "imagePath": "escolar-matematica-primaria-figures/mat-00-final.png", "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf", "sourceName": "MINEDU - Cuadernillo modelo Matemática 4to primaria"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Gráficos, tablas, estadística y probabilidad", "gradeLevel": "primaria_4", "difficulty": "medium",
+      "bodyTypst": "Un equipo de básquet anota canastas de 1, 2 o 3 puntos según el tipo de lanzamiento. El entrenador registró estos puntos en la pizarra (18 marcas en total, ver imagen). ¿Cuál de las siguientes tablas corresponde a esta información?",
+      "alternatives": ["1 punto: 7, 2 puntos: 6, 3 puntos: 18", "1 punto: 6, 2 puntos: 6, 3 puntos: 6", "1 punto: 7, 2 puntos: 5, 3 puntos: 6", "1 punto: 7, 2 puntos: 6, 3 puntos: 5"], "correctAnswer": "3",
+      "imagePath": "escolar-matematica-primaria-figures/mat-01-03.png", "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf", "sourceName": "MINEDU - Cuadernillo modelo Matemática 4to primaria"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Patrones y secuencias", "gradeLevel": "primaria_4", "difficulty": "medium",
+      "bodyTypst": "Observa la secuencia de figuras que utiliza Jorge para decorar una pared: plátano, fresa, tomate, pera, y se repite (14 figuras mostradas). Jorge utiliza 25 figuras en total para decorar toda la pared. ¿Qué figura ocupa la ubicación 25 de la secuencia?",
+      "alternatives": ["Plátano", "Tomate", "Fresa", "Pera"], "correctAnswer": "0",
+      "imagePath": "escolar-matematica-primaria-figures/mat-02-final.png", "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf", "sourceName": "MINEDU - Cuadernillo modelo Matemática 4to primaria"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Multiplicación: tablas y algoritmo", "gradeLevel": "primaria_4", "difficulty": "medium",
+      "bodyTypst": "Entre amigos de una escuela se realizan intercambios de yaces, canicas y figuras, según acuerdos mostrados en la imagen (grupos de figuras equivalen a canicas o a yaces). Según estos acuerdos, ¿cuántas figuras se pueden cambiar por una canica?",
+      "alternatives": ["5 figuras.", "6 figuras.", "2 figuras.", "3 figuras."], "correctAnswer": "3",
+      "imagePath": "escolar-matematica-primaria-figures/mat-03-06.png", "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf", "sourceName": "MINEDU - Cuadernillo modelo Matemática 4to primaria"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Medidas de longitud, peso, capacidad, tiempo y dinero", "gradeLevel": "primaria_4", "difficulty": "easy",
+      "bodyTypst": "Rosa llega al colegio a las 7:30 a.m. y cuando ella sale del colegio, el reloj indica las 3:00 de la tarde (ver imagen del reloj). Según esta información, ¿cuánto tiempo pasa Rosa en el colegio?",
+      "alternatives": ["2 horas.", "6 horas y 30 minutos.", "7 horas.", "7 horas y 30 minutos."], "correctAnswer": "3",
+      "imagePath": "escolar-matematica-primaria-figures/mat-04-07.png", "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf", "sourceName": "MINEDU - Cuadernillo modelo Matemática 4to primaria"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Fracciones", "gradeLevel": "primaria_4", "difficulty": "medium",
+      "bodyTypst": "En una bandeja hay 12 caramelos: unos son de fresa y otros de limón (ver imagen). ¿Qué fracción del total de caramelos de la bandeja son de limón?",
+      "alternatives": ["$5/7$", "$5/12$", "$7/12$", "$1/5$"], "correctAnswer": "1",
+      "imagePath": "escolar-matematica-primaria-figures/mat-05-10.png", "sourceUrl": "http://umc.minedu.gob.pe/wp-content/uploads/2017/06/Cuadernillo-modelo-de-matem%C3%A1tica-4p.pdf", "sourceName": "MINEDU - Cuadernillo modelo Matemática 4to primaria"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Medidas de longitud, peso, capacidad, tiempo y dinero", "gradeLevel": "primaria_4", "difficulty": "easy",
+      "bodyTypst": "Rosa llega al colegio a las 8:00 a.m. y el reloj indica la hora en que sale por la tarde (ver imagen del reloj). Según esta información, ¿cuánto tiempo pasó Rosa en el colegio?",
+      "alternatives": ["4 horas.", "4 horas y 30 minutos.", "5 horas.", "6 horas."], "correctAnswer": "2",
+      "imagePath": "escolar-matematica-primaria-figures/mat-08-final.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 4to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Multiplicación: tablas y algoritmo", "gradeLevel": "primaria_4", "difficulty": "easy",
+      "bodyTypst": "Gerardo está confeccionando camisas; cada camisa lleva 5 botones (ver imagen). ¿Cuántos botones necesitará en total para 6 camisas?",
+      "alternatives": ["5 botones.", "11 botones.", "30 botones.", "56 botones."], "correctAnswer": "2",
+      "imagePath": "escolar-matematica-primaria-figures/mat-09-09.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 4to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Patrones y secuencias", "gradeLevel": "primaria_4", "difficulty": "medium",
+      "bodyTypst": "Diego sube una escalera para llegar a su centro de trabajo. La altura de cada escalón es siempre la misma: los primeros escalones acumulan 17 cm, 34 cm, 51 cm y 68 cm de altura (ver imagen). ¿A qué altura del piso se encontrará Diego al subir toda la escalera?",
+      "alternatives": ["85 cm", "102 cm", "119 cm", "170 cm"], "correctAnswer": "0",
+      "imagePath": "escolar-matematica-primaria-figures/mat-10-final.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 4to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Medidas de longitud, peso, capacidad, tiempo y dinero", "gradeLevel": "primaria_4", "difficulty": "medium",
+      "bodyTypst": "La siguiente balanza está en equilibrio (ver imagen): de un lado hay cilindros iguales entre sí, del otro un peso conocido. Se sabe que todos los cilindros tienen igual peso. ¿Cuánto pesa cada cilindro?",
+      "alternatives": ["4 kg", "6 kg", "8 kg", "12 kg"], "correctAnswer": "1",
+      "imagePath": "escolar-matematica-primaria-figures/mat-11-11.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 4to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Patrones y secuencias", "gradeLevel": "primaria_4", "difficulty": "medium",
+      "bodyTypst": "Regina ordena unos objetos siguiendo un patrón (moneda plateada, moneda oscura, cubo — se repite; 10 posiciones mostradas). ¿Cuál será el último objeto de este ordenamiento si en total ordena 20 objetos?",
+      "alternatives": ["Moneda plateada", "Moneda oscura", "Cubo"], "correctAnswer": "1",
+      "imagePath": "escolar-matematica-primaria-figures/mat-12-12.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 4to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Figuras y cuerpos geométricos", "gradeLevel": "primaria_4", "difficulty": "easy",
+      "bodyTypst": "Observa la caja de regalo (ver imagen). ¿Qué forma tiene la base de la caja de regalo?",
+      "alternatives": ["Círculo", "Triángulo", "Rectángulo", "Cuadrado"], "correctAnswer": "3",
+      "imagePath": "escolar-matematica-primaria-figures/mat-14-18.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 4to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Perímetro, área y volumen", "gradeLevel": "primaria_4", "difficulty": "medium",
+      "bodyTypst": "Este es el plano de una habitación (ver imagen). La superficie del piso se cubrirá con losetas de forma cuadrada del tamaño que se muestra. ¿Cuántas losetas se necesitarán para cubrir todo el piso de la habitación?",
+      "alternatives": ["10 losetas.", "5 losetas.", "4 losetas.", "40 losetas."], "correctAnswer": "0",
+      "imagePath": "escolar-matematica-primaria-figures/mat-15-20.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 4to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Gráficos, tablas, estadística y probabilidad", "gradeLevel": "primaria_4", "difficulty": "medium",
+      "bodyTypst": "La biblioteca de una escuela tiene registrados los libros de diferentes áreas (Ciencia y Tecnología, Matemática, Comunicación) en un pictograma, donde cada ícono vale 5 libros (ver imagen). Según el gráfico, ¿cuántos libros de Comunicación hay en la biblioteca?",
+      "alternatives": ["4 libros", "5 libros.", "9 libros.", "20 libros."], "correctAnswer": "3",
+      "imagePath": "escolar-matematica-primaria-figures/mat-16b-22.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 4to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Gráficos, tablas, estadística y probabilidad", "gradeLevel": "primaria_4", "difficulty": "hard",
+      "bodyTypst": "En un recipiente, Juliana coloca unas bolitas blancas y otras negras (ver imagen). Juliana saca, sin mirar, una bolita del recipiente. ¿Cuál afirmación es correcta?",
+      "alternatives": ["Es seguro que esa bolita sea blanca.", "Es posible que esa bolita sea negra.", "Es imposible que esa bolita sea negra.", "Es posible que esa bolita sea roja."], "correctAnswer": "1",
+      "imagePath": "escolar-matematica-primaria-figures/mat-17-23.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-4.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 4to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Números hasta 10 000", "gradeLevel": "primaria_3", "difficulty": "hard",
+      "bodyTypst": "En un juego se usan claves (símbolos) para escribir los números; se muestran algunos símbolos con sus valores conocidos y falta uno por completar (ver imagen con los valores exactos). ¿Qué número corresponde al símbolo faltante?",
+      "alternatives": ["14", "41", "5"], "correctAnswer": "1",
+      "imagePath": "escolar-matematica-primaria-figures/mat-18-final.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-3.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 3er primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Patrones y secuencias", "gradeLevel": "primaria_3", "difficulty": "medium",
+      "bodyTypst": "Regina ordena unos objetos siguiendo un patrón: moneda clara, moneda oscura, cubo — se repite (10 posiciones mostradas, ver imagen). Ella ha ordenado en total 20 objetos. ¿Cuál será el último objeto de este ordenamiento?",
+      "alternatives": ["Moneda clara", "Moneda oscura", "Cubo"], "correctAnswer": "1",
+      "imagePath": "escolar-matematica-primaria-figures/mat-19-final.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-3.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 3er primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Medidas de longitud, peso, capacidad, tiempo y dinero", "gradeLevel": "primaria_3", "difficulty": "medium",
+      "bodyTypst": "La siguiente balanza está en equilibrio (ver imagen): de un lado hay cubos, del otro cilindros. Todos los cubos tienen igual peso y todos los cilindros pesan igual entre ellos. ¿Cuántos cubos pesa un cilindro?",
+      "alternatives": ["1 cubo", "3 cubos", "5 cubos", "6 cubos"], "correctAnswer": "1",
+      "imagePath": "escolar-matematica-primaria-figures/mat-20-11.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-3.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 3er primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Fracciones", "gradeLevel": "primaria_5", "difficulty": "medium",
+      "bodyTypst": "Observa la siguiente bandera dividida en 6 partes de distinto color (ver imagen). ¿Qué parte de la bandera es de color gris?",
+      "alternatives": ["$1/6$", "$2/4$", "$2/6$", "$6/2$"], "correctAnswer": "2",
+      "imagePath": "escolar-matematica-primaria-figures/mat-22-final.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 5to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Fracciones", "gradeLevel": "primaria_5", "difficulty": "medium",
+      "bodyTypst": "Fermín hizo un arreglo con globos. Algunos globos tenían diseños de estrellas y otros globos eran de color gris (ver imagen). ¿Qué parte del total de globos era de color gris?",
+      "alternatives": ["$3/8$", "$3/5$", "$1/8$", "$8/3$"], "correctAnswer": "0",
+      "imagePath": "escolar-matematica-primaria-figures/mat-23-06.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 5to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Patrones y secuencias", "gradeLevel": "primaria_5", "difficulty": "medium",
+      "bodyTypst": "Gabriela preparó unas tarjetas rectangulares para decorar el borde de un mural (ver imagen, patrón de triángulos de colores). ¿Cuál de las siguientes tarjetas ocuparía el lugar 18.° en el mural que decora Gabriela?",
+      "alternatives": ["Tarjeta A (triángulo claro, mitad izquierda)", "Tarjeta B (triángulo oscuro apuntando a la izquierda)", "Tarjeta C (rectángulo completo oscuro)", "Tarjeta D (triángulo oscuro apuntando a la derecha)"], "correctAnswer": "1",
+      "imagePath": "escolar-matematica-primaria-figures/mat-24-13.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 5to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Perímetro, área y volumen", "gradeLevel": "primaria_5", "difficulty": "medium",
+      "bodyTypst": "La familia López quiere comprar un terreno y va a escoger entre cuatro terrenos (A, B, C, D) representados en una cuadrícula (ver imagen). Ellos desean comprar el terreno que tiene mayor superficie. ¿Cuál de ellos deberían escoger?",
+      "alternatives": ["Terreno A.", "Terreno B.", "Terreno C.", "Terreno D."], "correctAnswer": "1",
+      "imagePath": "escolar-matematica-primaria-figures/mat-25-final.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 5to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Perímetro, área y volumen", "gradeLevel": "primaria_5", "difficulty": "medium",
+      "bodyTypst": "Félix guarda los envases de leche de su tienda en cajas como la que se muestra a continuación (ver imagen). En total, ¿cuántos envases de leche podrían entrar en una caja?",
+      "alternatives": ["7 envases.", "11 envases.", "18 envases.", "36 envases."], "correctAnswer": "3",
+      "imagePath": "escolar-matematica-primaria-figures/mat-26-final.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 5to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Perímetro, área y volumen", "gradeLevel": "primaria_5", "difficulty": "medium",
+      "bodyTypst": "Los estudiantes de Marta han dibujado unas láminas en la clase de Arte. Marta quiere saber cuántas láminas entran en el mural de su aula; para averiguarlo, representó el mural y una de las láminas en una cuadrícula (ver imagen). Todas las láminas son de la misma forma y tamaño y no se dejará espacio libre entre ellas. ¿Cuántas láminas entran en total en el mural del aula de Marta?",
+      "alternatives": ["12 láminas.", "8 láminas.", "6 láminas.", "4 láminas."], "correctAnswer": "0",
+      "imagePath": "escolar-matematica-primaria-figures/mat-27-21.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 5to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Gráficos, tablas, estadística y probabilidad", "gradeLevel": "primaria_5", "difficulty": "medium",
+      "bodyTypst": "En este envase hay 6 pelotitas de distintos colores (ver imagen). Con los ojos cerrados, Adrián saca una pelotita del envase. ¿Qué resultado es más probable que ocurra?",
+      "alternatives": ["Que Adrián saque una pelotita de color blanco.", "Que Adrián saque una pelotita de color gris.", "Que Adrián saque una pelotita de color negro."], "correctAnswer": "0",
+      "imagePath": "escolar-matematica-primaria-figures/mat-28-final.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 5to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Gráficos, tablas, estadística y probabilidad", "gradeLevel": "primaria_5", "difficulty": "medium",
+      "bodyTypst": "En un campeonato interescolar de atletismo, clasificaron estudiantes de cuatro regiones del Perú (Junín, Huancavelica, Ayacucho, Puno). Un gráfico de barras muestra la cantidad de estudiantes clasificados por cada región (ver imagen con los valores exactos). ¿Cuál de las siguientes tablas corresponde a la información mostrada en el gráfico?",
+      "alternatives": ["Junín: 8, Huancavelica: 6, Ayacucho: 5, Puno: 4", "Junín: 4, Huancavelica: 5, Ayacucho: 6, Puno: 8", "Junín: 6, Huancavelica: 5, Ayacucho: 8, Puno: 4", "Junín: 4, Huancavelica: 8, Ayacucho: 5, Puno: 6"], "correctAnswer": "0",
+      "imagePath": "escolar-matematica-primaria-figures/mat-29-23.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-5.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 5to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Fracciones", "gradeLevel": "primaria_6", "difficulty": "medium",
+      "bodyTypst": "En la bandeja hay 12 frutas. Algunas son naranjas y otras son manzanas (ver imagen). ¿Qué parte del total de frutas de la bandeja son naranjas?",
+      "alternatives": ["$5/7$", "$5/12$", "$1/12$", "$7/12$"], "correctAnswer": "3",
+      "imagePath": "escolar-matematica-primaria-figures/mat-30-final.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 6to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Números decimales y porcentajes", "gradeLevel": "primaria_6", "difficulty": "medium",
+      "bodyTypst": "Las siguientes imágenes muestran la cantidad de dinero que tienen cuatro estudiantes: Ana, Beto, Ceci y Daniel, en monedas de distintas denominaciones (ver imagen). ¿A cuál de estos estudiantes le alcanza el dinero para comprar un lapicero que cuesta S/1,9?",
+      "alternatives": ["Ana.", "Beto.", "Ceci.", "Daniel."], "correctAnswer": "3",
+      "imagePath": "escolar-matematica-primaria-figures/mat-31-07.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 6to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Perímetro, área y volumen", "gradeLevel": "primaria_6", "difficulty": "medium",
+      "bodyTypst": "El siguiente gráfico representa el terreno que utilizará Corina para construir un restaurante: una figura en forma de L de 15 m de alto por 12 m de ancho (ver imagen). Corina colocará un cerco en el contorno de todo el terreno. ¿Cuál es la longitud del cerco que colocará Corina?",
+      "alternatives": ["24 m", "27 m", "72 m", "180 m"], "correctAnswer": "2",
+      "imagePath": "escolar-matematica-primaria-figures/mat-32-final.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 6to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Perímetro, área y volumen", "gradeLevel": "primaria_6", "difficulty": "hard",
+      "bodyTypst": "Andrés observa la parte superior de una caja que está en el suelo (ver imagen, vista en perspectiva desde arriba y de costado). ¿Cuál de las siguientes es la forma de la cara de la caja que ve Andrés?",
+      "alternatives": ["Paralelogramo (visto de canto, forma alargada)", "Rectángulo", "Trapecio", "Romboide"], "correctAnswer": "0",
+      "imagePath": "escolar-matematica-primaria-figures/mat-33b-17.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 6to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Gráficos, tablas, estadística y probabilidad", "gradeLevel": "primaria_6", "difficulty": "medium",
+      "bodyTypst": "En un juego, Luisa gana si saca, sin mirar, una pelota negra de una de tres cajas (Caja A, Caja B, Caja C), cada una con distinta cantidad de pelotas negras y blancas (ver imagen). Para tener la mayor posibilidad de ganar el juego, ¿qué caja debería escoger Luisa?",
+      "alternatives": ["La caja A, porque tiene exactamente una pelota negra.", "La caja B, porque es la que tiene más pelotas negras.", "La caja C, porque tiene más pelotas negras que blancas.", "Cualquiera, porque en todas hay pelotas negras y blancas."], "correctAnswer": "2",
+      "imagePath": "escolar-matematica-primaria-figures/mat-35-20.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 6to primaria 2021"
+    },
+    {
+      "courseName": "Matemática", "topicName": "Gráficos, tablas, estadística y probabilidad", "gradeLevel": "primaria_6", "difficulty": "medium",
+      "bodyTypst": "La familia Mendoza tiene un negocio de comida típica del Perú. En dos gráficos de barras se muestra la cantidad de porciones vendidas de cada tipo de comida (Pachamanca, Tacacho, Patasca, Carapulca) durante el sábado y el domingo (ver imagen). En total, ¿de qué tipo de comida se vendió mayor cantidad de porciones durante el fin de semana?",
+      "alternatives": ["Pachamanca.", "Tacacho.", "Patasca.", "Carapulca."], "correctAnswer": "3",
+      "imagePath": "escolar-matematica-primaria-figures/mat-36-23.png", "sourceUrl": "https://repositorio.perueduca.pe/recursos/c-herramientas-curriculares/primaria/transversal/prueba-diagnostica-2021-6.pdf", "sourceName": "MINEDU - Prueba diagnóstica Matemática 6to primaria 2021"
+    }
+  ]
+}

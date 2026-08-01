@@ -189,6 +189,71 @@ describe("renderExamTypst — structured questions", () => {
     expect(source).toContain('#image("/fixtures/complement-chart.png"');
   });
 
+  it("renders an alternative with an image path as #image(...) instead of its (empty) text", () => {
+    const input: ExamPdfDocumentInput = {
+      title: "Simulacro San Marcos",
+      versionLabel: "Version A",
+      questions: [
+        {
+          id: "sq1",
+          type: "structured",
+          bodyTypst: "¿Cuál gráfico corresponde?",
+          alternatives: ["", "", ""],
+          alternativeImagePaths: ["/fixtures/alt-a.png", "/fixtures/alt-b.png", "/fixtures/alt-c.png"],
+        },
+      ],
+    };
+
+    const source = renderExamTypst(input);
+
+    expect(source).toContain('A) #image("/fixtures/alt-a.png", width: 35%)');
+    expect(source).toContain('B) #image("/fixtures/alt-b.png", width: 35%)');
+    expect(source).toContain('C) #image("/fixtures/alt-c.png", width: 35%)');
+  });
+
+  it("mixed: renders text alternatives normally and only the ones with an image path as #image(...)", () => {
+    const input: ExamPdfDocumentInput = {
+      title: "Simulacro San Marcos",
+      versionLabel: "Version A",
+      questions: [
+        {
+          id: "sq1",
+          type: "structured",
+          bodyTypst: "Observa las opciones",
+          alternatives: ["texto plano", "", "otro texto"],
+          alternativeImagePaths: [undefined, "/fixtures/alt-b.png", undefined],
+        },
+      ],
+    };
+
+    const source = renderExamTypst(input);
+
+    expect(source).toContain("A) texto plano");
+    expect(source).toContain('B) #image("/fixtures/alt-b.png", width: 35%)');
+    expect(source).toContain("C) otro texto");
+  });
+
+  it("omits #image(...) for alternatives when alternativeImagePaths is not provided at all", () => {
+    const input: ExamPdfDocumentInput = {
+      title: "Simulacro San Marcos",
+      versionLabel: "Version A",
+      questions: [
+        {
+          id: "sq1",
+          type: "structured",
+          bodyTypst: "Sin imágenes de alternativas",
+          alternatives: ["a", "b"],
+        },
+      ],
+    };
+
+    const source = renderExamTypst(input);
+
+    expect(source).toContain("A) a");
+    expect(source).toContain("B) b");
+    expect(source).not.toContain("#image(");
+  });
+
   it("renders both figureCode and imageAbsolutePath when a structured question has both", () => {
     const input: ExamPdfDocumentInput = {
       title: "Simulacro San Marcos",

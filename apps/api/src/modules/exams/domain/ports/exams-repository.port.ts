@@ -157,6 +157,15 @@ export interface SelectedQuestionForGeneration {
   readonly bodyTypst: string | null;
   readonly alternatives: readonly string[] | null;
   readonly figureCode: string | null;
+  /**
+   * Per-alternative images (`question_alternative_images`), index-aligned
+   * with `alternatives` — `alternativeImages[i]` is the image for
+   * `alternatives[i]`, or `null` for an alternative with no attached image
+   * (shouldn't happen given `BankService.setAlternativeImages`'s
+   * all-or-nothing constraint, but keeps the type honest). `null`/absent
+   * entirely when this question has no per-alternative images at all.
+   */
+  readonly alternativeImages?: readonly ({ storageKey: string; mime: string } | null)[] | null;
 }
 
 export interface ExamForGenerationRecord {

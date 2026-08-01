@@ -30,6 +30,15 @@ export interface SelectedStructuredQuestion {
   readonly questionId: string;
   readonly alternatives: readonly string[];
   readonly correctAnswer: string;
+  /**
+   * Per-alternative images, index-aligned with `alternatives` — see
+   * `SelectedQuestionForGeneration` in `exams-repository.port.ts`. Absent/null
+   * for a question with no per-alternative images at all. Permuted by the
+   * EXACT SAME index permutation as `alternatives` (never re-shuffled
+   * independently), so image N always stays attached to whichever
+   * alternative it was originally paired with.
+   */
+  readonly alternativeImages?: readonly ({ storageKey: string; mime: string } | null)[] | null;
 }
 
 export type SelectedQuestion = SelectedImageQuestion | SelectedStructuredQuestion;
@@ -51,12 +60,21 @@ export type SelectedQuestion = SelectedImageQuestion | SelectedStructuredQuestio
  * order they should be printed (so `answerKey[i]`'s letter is a direct
  * index into this array). `type='image'` questions are absent from this
  * map — their alternatives are baked into the image and never shuffled.
+ *
+ * `shuffledAlternativeImages` mirrors `shuffledAlternatives` for per-
+ * alternative images: same keys (only structured questions that HAD
+ * `alternativeImages`), same permutation, same index alignment — entry `i`
+ * here is always the image for `shuffledAlternatives[questionId][i]`.
  */
 export interface Version {
   readonly code: string;
   readonly questionOrder: string[];
   readonly answerKey: Record<number, string>;
   readonly shuffledAlternatives: Record<string, readonly string[]>;
+  readonly shuffledAlternativeImages: Record<
+    string,
+    readonly ({ storageKey: string; mime: string } | null)[]
+  >;
 }
 
 const MAX_DISTINCTNESS_RETRIES = 50;
@@ -107,16 +125,23 @@ export function buildVersions(
 
     const answerKey: Record<number, string> = {};
     const shuffledAlternatives: Record<string, readonly string[]> = {};
+    const shuffledAlternativeImages: Record<
+      string,
+      readonly ({ storageKey: string; mime: string } | null)[]
+    > = {};
 
     questionOrder.forEach((questionId, position) => {
       const question = questionById.get(questionId)!;
       if (question.type === "structured") {
-        const { alternatives, answerLetter } = shuffleStructuredAlternatives(
+        const { alternatives, answerLetter, alternativeImages } = shuffleStructuredAlternatives(
           question,
           rng,
         );
         shuffledAlternatives[questionId] = alternatives;
         answerKey[position] = answerLetter;
+        if (alternativeImages) {
+          shuffledAlternativeImages[questionId] = alternativeImages;
+        }
       } else {
         answerKey[position] = question.correctAnswer;
       }
@@ -127,6 +152,7 @@ export function buildVersions(
       questionOrder,
       answerKey,
       shuffledAlternatives,
+      shuffledAlternativeImages,
     });
   }
 
@@ -141,18 +167,31 @@ export function buildVersions(
  * Tracks the correct alternative by its ORIGINAL INDEX (not by string
  * equality) so duplicate alternative texts can never point the answer key
  * at the wrong option.
+ *
+ * `alternativeImages`, when present, is permuted by the EXACT SAME
+ * `shuffledIndices` array used for `alternatives` — a single shuffle, reused
+ * for both parallel arrays — so image N stays attached to whichever
+ * text/position it was originally paired with, never re-shuffled
+ * independently.
  */
 function shuffleStructuredAlternatives(
   question: SelectedStructuredQuestion,
   rng: Rng,
-): { alternatives: string[]; answerLetter: string } {
+): {
+  alternatives: string[];
+  answerLetter: string;
+  alternativeImages?: readonly ({ storageKey: string; mime: string } | null)[];
+} {
   const originalIndex = Number(question.correctAnswer);
   const indices = question.alternatives.map((_, index) => index);
   const shuffledIndices = shuffleArray(indices, rng);
   const alternatives = shuffledIndices.map((index) => question.alternatives[index]);
   const newPosition = shuffledIndices.indexOf(originalIndex);
+  const alternativeImages = question.alternativeImages
+    ? shuffledIndices.map((index) => question.alternativeImages![index] ?? null)
+    : undefined;
 
-  return { alternatives, answerLetter: alternativeLetterFor(newPosition) };
+  return { alternatives, answerLetter: alternativeLetterFor(newPosition), alternativeImages };
 }
 
 /**

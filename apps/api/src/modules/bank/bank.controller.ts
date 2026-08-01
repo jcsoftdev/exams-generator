@@ -12,10 +12,11 @@ import {
   Query,
   Res,
   UploadedFile,
+  UploadedFiles,
   UseGuards,
   UseInterceptors,
 } from "@nestjs/common";
-import { FileInterceptor } from "@nestjs/platform-express";
+import { FileInterceptor, FilesInterceptor } from "@nestjs/platform-express";
 import { Response } from "express";
 import { QuestionStatus } from "../../db/schema/enums";
 import { CurrentUser } from "../auth/current-user.decorator";
@@ -251,6 +252,26 @@ export class BankController {
     @UploadedFile() file: Express.Multer.File,
   ): Promise<{ id: string }> {
     return this.service.replaceImage(user, id, file);
+  }
+
+  /**
+   * Attaches one image per alternative slot of a `type='structured'`
+   * question — `images[i]` becomes the image for `alternatives[i]`, so
+   * `files.length` must exactly match the question's `alternatives.length`
+   * (validated in `BankService.setAlternativeImages`, 400 otherwise). Same
+   * 404/403/409 gate as `POST :id/image`. `8` = `ALTERNATIVE_LETTERS.length`
+   * (the printable-letter ceiling, `typst-template.ts`) — the max alternatives
+   * a structured question can realistically have.
+   */
+  @Post(":id/alternative-images")
+  @HttpCode(HttpStatus.CREATED)
+  @UseInterceptors(FilesInterceptor("images", 8, { limits: { fileSize: MAX_IMAGE_UPLOAD_BYTES } }))
+  async setAlternativeImages(
+    @CurrentUser() user: AuthTokenPayload,
+    @Param("id") id: string,
+    @UploadedFiles() files: Express.Multer.File[] | undefined,
+  ): Promise<{ id: string }> {
+    return this.service.setAlternativeImages(user, id, files ?? []);
   }
 
   /** Lane D4 (S4): soft-removes an `approved` question — never a draft. */

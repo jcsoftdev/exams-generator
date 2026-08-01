@@ -130,6 +130,58 @@ describe("buildVersions", () => {
     expect(shuffled[newIndex]).toBe("opt-two");
   });
 
+  it("structured questions with alternativeImages: images permute IDENTICALLY to their alternatives (same index permutation), staying attached to whichever text they were originally paired with", () => {
+    const structuredQuestion: SelectedStructuredQuestion = {
+      type: "structured",
+      questionId: "q1",
+      alternatives: ["opt-zero", "opt-one", "opt-two", "opt-three"],
+      correctAnswer: "2",
+      alternativeImages: [
+        { storageKey: "img-zero", mime: "image/png" },
+        null,
+        { storageKey: "img-two", mime: "image/png" },
+        { storageKey: "img-three", mime: "image/jpeg" },
+      ],
+    };
+    const selected: SelectedQuestion[] = [structuredQuestion];
+
+    const versions = buildVersions(selected, 1, createSeededRng(99));
+    const [version] = versions;
+
+    const shuffledAlternatives = version.shuffledAlternatives["q1"]!;
+    const shuffledImages = version.shuffledAlternativeImages["q1"];
+    expect(shuffledImages).toBeDefined();
+    expect(shuffledImages).toHaveLength(structuredQuestion.alternatives.length);
+
+    // Rebuild the original-index -> alternative map and assert every
+    // shuffled position's image still matches the SAME original index's
+    // image, not a re-shuffled independent one.
+    const originalIndexByAlternative = new Map(
+      structuredQuestion.alternatives.map((alternative, index) => [alternative, index]),
+    );
+    shuffledAlternatives.forEach((alternative, newPosition) => {
+      const originalIndex = originalIndexByAlternative.get(alternative)!;
+      expect(shuffledImages![newPosition]).toEqual(
+        structuredQuestion.alternativeImages![originalIndex],
+      );
+    });
+  });
+
+  it("structured questions with NO alternativeImages: shuffledAlternativeImages has no entry for that question", () => {
+    const structuredQuestion: SelectedStructuredQuestion = {
+      type: "structured",
+      questionId: "q1",
+      alternatives: ["a", "b", "c"],
+      correctAnswer: "0",
+    };
+
+    const versions = buildVersions([structuredQuestion], 2, createSeededRng(3));
+
+    for (const version of versions) {
+      expect(version.shuffledAlternativeImages["q1"]).toBeUndefined();
+    }
+  });
+
   it("image questions: never shuffled — answerKey passes correctAnswer through untouched, no shuffledAlternatives entry", () => {
     const selected: SelectedQuestion[] = [
       { type: "image", questionId: "q1", correctAnswer: "C" },

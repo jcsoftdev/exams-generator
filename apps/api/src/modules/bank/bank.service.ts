@@ -567,6 +567,48 @@ export class BankService {
   }
 
   /**
+   * Attaches one image per alternative slot of a structured question
+   * (index-aligned with `questions.alternatives`) — every alternative must
+   * get exactly one image, all-or-nothing (400 on a count mismatch). Reuses
+   * `requireManageableQuestion` — the SAME 404/403/409 gate `replaceImage`
+   * uses — then `assertStructuredQuestion` (the same structured-only gate
+   * `previewQuestion` uses) since alternative images only make sense for
+   * `type='structured'` questions. Uploads every file to storage BEFORE
+   * writing to the DB (same ordering as `createImageQuestion`/`replaceImage`)
+   * — a rejected/failed DB write can leave orphaned MinIO objects, same
+   * accepted tradeoff as those two paths.
+   */
+  async setAlternativeImages(
+    user: AuthTokenPayload,
+    id: string,
+    files: readonly Express.Multer.File[],
+  ): Promise<{ id: string }> {
+    const question = await this.requireManageableQuestion(user, id);
+    assertStructuredQuestion(question, "Alternative images");
+
+    const alternatives = (question.alternatives ?? []) as readonly string[];
+    if (files.length !== alternatives.length) {
+      throw new BadRequestException(
+        `Expected exactly ${alternatives.length} image(s) (one per alternative), got ${files.length}`,
+      );
+    }
+
+    const images: { storageKey: string; mime: string }[] = [];
+    for (const file of files) {
+      const storageKey = `bank/questions/${randomUUID()}`;
+      await this.storage.put(storageKey, file.buffer, file.mimetype);
+      images.push({ storageKey, mime: file.mimetype });
+    }
+
+    const updatedId = await this.repository.setAlternativeImages(id, user.tenantId, images);
+    if (!updatedId) {
+      throw new NotFoundException(`Question not found: ${id}`);
+    }
+
+    return { id: updatedId };
+  }
+
+  /**
    * Lane D4 (S4): soft-removes an `approved` question from the bank —
    * `archived` questions are excluded from `getQuestionPool`
    * (`ExamsRepository`, `status = 'approved'` filter) but never deleted, so

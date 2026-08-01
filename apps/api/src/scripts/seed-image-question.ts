@@ -11,42 +11,42 @@ const BANK_SAMPLE_ADMIN_EMAIL = "bank-sample-seeder@exams-generator.internal";
 const API_BASE_URL = process.env.API_BASE_URL ?? "http://localhost:3012";
 
 /**
- * Seeds a handful of one-off `type: 'structured'` questions that each carry
- * a complement image (a chart/diagram that couldn't be authored in Typst) —
- * created via `POST /bank/questions/structured` then attached via
- * `POST /bank/questions/:id/image`, exactly like a real client using the
- * bank-new "Escribir pregunta" tab's optional image picker would.
+ * Seeds `type: 'image'` questions — the whole statement + alternatives are
+ * baked into a single raster image (e.g. a cropped scanned exam page), and
+ * only the answer key (a letter, matching the printed alternatives) is
+ * stored separately. Created via `POST /bank/questions/image` exactly like
+ * a real client using the bank-new "Foto de pregunta" tab would.
  *
  * Data file shape: `{ entries: [{ courseName, topicName, gradeLevel,
- * bodyTypst, alternatives, correctAnswer, difficulty, imagePath, sourceUrl,
- * sourceName }] }`. `imagePath` is resolved relative to the data file's
- * own directory.
+ * difficulty, correctAnswer, imagePath, sourceUrl, sourceName }] }`.
+ * `imagePath` is resolved relative to the data file's own directory.
+ * `correctAnswer` is a lowercase letter (a-e) matching the image's own
+ * lettered alternatives — NOT a 0-based index (that convention is only for
+ * `type: 'structured'`).
  */
-interface GapEntry {
+interface ImageEntry {
   readonly courseName: string;
   readonly topicName: string;
   readonly gradeLevel: string;
-  readonly bodyTypst: string;
-  readonly alternatives: readonly string[];
-  readonly correctAnswer: string;
   readonly difficulty: string;
+  readonly correctAnswer: string;
   readonly imagePath: string;
   readonly sourceUrl: string;
   readonly sourceName: string;
 }
 
-interface GapData {
-  readonly entries: readonly GapEntry[];
+interface ImageData {
+  readonly entries: readonly ImageEntry[];
 }
 
 async function main(): Promise<void> {
   const dataFileArg = process.argv[2];
   if (!dataFileArg) {
-    throw new Error("Usage: seed-gap-topic-with-image.ts <path-to-gap-json>");
+    throw new Error("Usage: seed-image-question.ts <path-to-image-entries-json>");
   }
   const dataPath = resolve(process.cwd(), dataFileArg);
   const dataDir = resolve(dataPath, "..");
-  const data = JSON.parse(readFileSync(dataPath, "utf8")) as GapData;
+  const data = JSON.parse(readFileSync(dataPath, "utf8")) as ImageData;
 
   const [adminRow] = await db.select({ id: users.id }).from(users).where(eq(users.email, BANK_SAMPLE_ADMIN_EMAIL));
   if (!adminRow) {
@@ -55,15 +55,14 @@ async function main(): Promise<void> {
   const token = new TokenService().sign({ sub: adminRow.id, tenantId: null, role: Role.PlatformAdmin });
 
   let failures = 0;
-  let skipped = 0;
 
   for (const entry of data.entries) {
     const label = `${entry.courseName} / ${entry.topicName} — ${entry.sourceName}`;
     try {
       // A course name can exist once per stage (escuela/colegio/preuniversitario);
-      // topics for primaria_* live under the 'escuela' row and secundaria_*/pre
-      // under 'colegio'/'preuniversitario', so the topic lookup must span every
-      // same-named course row (see seed-preuni-course.ts for the same fix).
+      // topics for primaria_* live under 'escuela', secundaria_*/pre under
+      // 'colegio'/'preuniversitario' — the topic lookup must span every
+      // same-named course row (same fix as seed-preuni-course.ts).
       const courseRows = await db.select({ id: courses.id }).from(courses).where(eq(courses.name, entry.courseName));
       if (courseRows.length === 0) {
         throw new Error(`Course '${entry.courseName}' not found`);
@@ -77,42 +76,25 @@ async function main(): Promise<void> {
         throw new Error(`Topic '${entry.topicName}' not found in course '${entry.courseName}'`);
       }
 
-      const createResponse = await fetch(`${API_BASE_URL}/bank/questions/structured`, {
-        method: "POST",
-        headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
-        body: JSON.stringify({
-          courseId: topicRow.courseId,
-          topicId: topicRow.id,
-          difficulty: entry.difficulty,
-          gradeLevel: entry.gradeLevel,
-          bodyTypst: entry.bodyTypst,
-          alternatives: entry.alternatives,
-          correctAnswer: entry.correctAnswer,
-        }),
-      });
-      if (createResponse.status === 409) {
-        skipped++;
-        console.log(`SKIP ${label} (already exists)`);
-        continue;
-      }
-      if (!createResponse.ok) {
-        throw new Error(`create HTTP ${createResponse.status}: ${await createResponse.text()}`);
-      }
-      const { id } = (await createResponse.json()) as { id: string };
-
       const imageBytes = readFileSync(resolve(dataDir, entry.imagePath));
       const form = new FormData();
-      form.set("file", new Blob([imageBytes], { type: "image/png" }), "complement.png");
+      form.set("courseId", topicRow.courseId);
+      form.set("topicId", topicRow.id);
+      form.set("difficulty", entry.difficulty);
+      form.set("gradeLevel", entry.gradeLevel);
+      form.set("correctAnswer", entry.correctAnswer);
+      form.set("image", new Blob([imageBytes], { type: "image/png" }), "question.png");
 
-      const imageResponse = await fetch(`${API_BASE_URL}/bank/questions/${id}/image`, {
+      const response = await fetch(`${API_BASE_URL}/bank/questions/image`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: form,
       });
-      if (!imageResponse.ok) {
-        throw new Error(`image-attach HTTP ${imageResponse.status}: ${await imageResponse.text()} (question ${id} was created without its image)`);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${await response.text()}`);
       }
 
+      const { id } = (await response.json()) as { id: string };
       console.log(`OK   ${label} (question ${id})`);
     } catch (error) {
       failures++;
@@ -120,11 +102,7 @@ async function main(): Promise<void> {
     }
   }
 
-  console.log(
-    `\n${data.entries.length - failures - skipped}/${data.entries.length} gap questions seeded successfully` +
-      (skipped > 0 ? ` (${skipped} already existed, skipped)` : "") +
-      `.`,
-  );
+  console.log(`\n${data.entries.length - failures}/${data.entries.length} image questions seeded successfully.`);
   await pool.end();
   process.exitCode = failures > 0 ? 1 : 0;
 }

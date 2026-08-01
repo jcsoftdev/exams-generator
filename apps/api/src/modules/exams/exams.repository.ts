@@ -13,6 +13,7 @@ import {
   exams,
   examTypes,
   examVersions,
+  questionAlternativeImages,
   questions,
   syllabusWeekMaps,
   tenants,
@@ -480,6 +481,10 @@ export class ExamsRepository implements ExamsRepositoryPort {
       .where(eq(examQuestions.examId, examId))
       .orderBy(asc(examQuestions.position));
 
+    const alternativeImagesByQuestionId = await this.getAlternativeImagesByQuestionId(
+      selectedRows.map((row) => row.questionId),
+    );
+
     return {
       id: examRow.id,
       tenantId: examRow.tenantId,
@@ -496,8 +501,61 @@ export class ExamsRepository implements ExamsRepositoryPort {
         bodyTypst: row.bodyTypst,
         alternatives: (row.alternatives as readonly string[] | null) ?? null,
         figureCode: row.figureCode,
+        alternativeImages: alternativeImagesByQuestionId.get(row.questionId) ?? null,
       })),
     };
+  }
+
+  /**
+   * Batched, parallel query (design doc: alternative images) — a SECOND
+   * roundtrip keyed by the same question ids from `getExamForGeneration`'s
+   * main select, rather than a `leftJoin` there, since a per-alternative-image
+   * join would fan out one row per image and break that query's
+   * one-row-per-selected-question shape. Returns `undefined` (not an
+   * all-null array) for a question with zero `question_alternative_images`
+   * rows — `SelectedQuestionForGeneration.alternativeImages` stays
+   * `null`/absent for those (see its doc comment).
+   */
+  private async getAlternativeImagesByQuestionId(
+    questionIds: readonly string[],
+  ): Promise<Map<string, readonly ({ storageKey: string; mime: string } | null)[]>> {
+    const result = new Map<string, readonly ({ storageKey: string; mime: string } | null)[]>();
+    if (questionIds.length === 0) {
+      return result;
+    }
+
+    const rows = await this.db
+      .select({
+        questionId: questionAlternativeImages.questionId,
+        alternativeIndex: questionAlternativeImages.alternativeIndex,
+        storageKey: assets.storageKey,
+        mime: assets.mime,
+      })
+      .from(questionAlternativeImages)
+      .innerJoin(assets, eq(questionAlternativeImages.assetId, assets.id))
+      .where(inArray(questionAlternativeImages.questionId, questionIds as string[]))
+      .orderBy(asc(questionAlternativeImages.alternativeIndex));
+
+    const rowsByQuestionId = new Map<string, { alternativeIndex: number; storageKey: string; mime: string }[]>();
+    for (const row of rows) {
+      const bucket = rowsByQuestionId.get(row.questionId) ?? [];
+      bucket.push(row);
+      rowsByQuestionId.set(row.questionId, bucket);
+    }
+
+    for (const [questionId, bucket] of rowsByQuestionId) {
+      const maxIndex = Math.max(...bucket.map((row) => row.alternativeIndex));
+      const images: ({ storageKey: string; mime: string } | null)[] = Array.from(
+        { length: maxIndex + 1 },
+        () => null,
+      );
+      for (const row of bucket) {
+        images[row.alternativeIndex] = { storageKey: row.storageKey, mime: row.mime };
+      }
+      result.set(questionId, images);
+    }
+
+    return result;
   }
 
   /**

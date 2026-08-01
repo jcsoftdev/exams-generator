@@ -59,7 +59,15 @@ function renderStructuredQuestionBlock(
     ? `\n\n#image("${question.imageAbsolutePath}", width: 100%)`
     : "";
   const alternativesBlock = question.alternatives
-    .map((alternative, index) => `${ALTERNATIVE_LETTERS[index] ?? index + 1}) ${alternative}`)
+    .map((alternative, index) => {
+      const letter = ALTERNATIVE_LETTERS[index] ?? index + 1;
+      const alternativeImagePath = question.alternativeImagePaths?.[index];
+      // An alternative with its own image carries no text (`alternative` is
+      // `""` for this variant) — render the image instead of an empty line.
+      return alternativeImagePath
+        ? `${letter}) #image("${alternativeImagePath}", width: 35%)`
+        : `${letter}) ${alternative}`;
+    })
     .join(" \\ \n");
 
   return `// q:${question.id}

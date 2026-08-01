@@ -187,6 +187,7 @@ export class ExamVersionGenerationService {
             questionId: q.questionId,
             alternatives: q.alternatives ?? [],
             correctAnswer: q.correctAnswer,
+            alternativeImages: q.alternativeImages,
           }
         : {
             questionId: q.questionId,
@@ -208,14 +209,25 @@ export class ExamVersionGenerationService {
       const imageQuestions = exam.selectedQuestions.filter((q) => q.imageStorageKey != null);
       const imagePathByQuestionId = await this.materializeQuestionImages(workDir, imageQuestions);
       const logoPath = await this.materializeLogo(workDir, exam);
+      // Shared across every version's materialization below so the SAME
+      // physical asset (an alternative's image never changes across
+      // versions, only its printed position does) is only downloaded once,
+      // not once per version.
+      const alternativeImageBytesCache = new Map<string, Buffer>();
 
       const results: GeneratedVersionResult[] = [];
       for (const version of versions) {
+        const altImagePathsByQuestionId = await this.materializeAlternativeImages(
+          workDir,
+          version,
+          alternativeImageBytesCache,
+        );
         const result = await this.generateOneVersion(
           exam,
           version,
           questionById,
           imagePathByQuestionId,
+          altImagePathsByQuestionId,
           logoPath,
         );
         results.push(result);
@@ -292,6 +304,7 @@ export class ExamVersionGenerationService {
     version: Version,
     questionById: ReadonlyMap<string, SelectedQuestionForGeneration>,
     imagePathByQuestionId: ReadonlyMap<string, string>,
+    altImagePathsByQuestionId: ReadonlyMap<string, readonly (string | undefined)[]>,
     logoPath: string | undefined,
   ): Promise<GeneratedVersionResult> {
     const versionLabel = `Forma ${version.code}`;
@@ -301,7 +314,7 @@ export class ExamVersionGenerationService {
       versionLabel,
       tenantLogoAbsolutePath: logoPath,
       questions: version.questionOrder.map((questionId) =>
-        this.buildPdfQuestion(questionId, questionById, imagePathByQuestionId, version),
+        this.buildPdfQuestion(questionId, questionById, imagePathByQuestionId, altImagePathsByQuestionId, version),
       ),
     };
 
@@ -369,6 +382,7 @@ export class ExamVersionGenerationService {
     questionId: string,
     questionById: ReadonlyMap<string, SelectedQuestionForGeneration>,
     imagePathByQuestionId: ReadonlyMap<string, string>,
+    altImagePathsByQuestionId: ReadonlyMap<string, readonly (string | undefined)[]>,
     version: Version,
   ): ExamPdfQuestion {
     const question = questionById.get(questionId);
@@ -384,6 +398,7 @@ export class ExamVersionGenerationService {
         alternatives: version.shuffledAlternatives[questionId] ?? question.alternatives ?? [],
         figureCode: question.figureCode ?? undefined,
         imageAbsolutePath: imagePathByQuestionId.get(questionId),
+        alternativeImagePaths: altImagePathsByQuestionId.get(questionId),
       };
     }
 
@@ -406,6 +421,45 @@ export class ExamVersionGenerationService {
       const filePath = path.join(workDir, `q-${question.questionId}.${extensionForMime(question.imageMime)}`);
       await fs.writeFile(filePath, bytes);
       map.set(question.questionId, filePath);
+    }
+    return map;
+  }
+
+  /**
+   * Sibling to `materializeQuestionImages`, but keyed off THIS version's
+   * already-shuffled `shuffledAlternativeImages` (see `version-shuffler.ts`)
+   * instead of the original selection order — the resulting array is
+   * therefore already index-aligned with `version.shuffledAlternatives[id]`,
+   * so `buildPdfQuestion` can thread it straight through as
+   * `alternativeImagePaths` with no further reordering. `byteCache` is
+   * shared across every version in the same `generateVersions()` call (the
+   * same physical asset can appear in every version, just at a different
+   * printed position) so it's only ever downloaded once.
+   */
+  private async materializeAlternativeImages(
+    workDir: string,
+    version: Version,
+    byteCache: Map<string, Buffer>,
+  ): Promise<Map<string, readonly (string | undefined)[]>> {
+    const map = new Map<string, readonly (string | undefined)[]>();
+    for (const [questionId, images] of Object.entries(version.shuffledAlternativeImages)) {
+      const paths: (string | undefined)[] = [];
+      for (let index = 0; index < images.length; index++) {
+        const image = images[index];
+        if (!image) {
+          paths.push(undefined);
+          continue;
+        }
+        let bytes = byteCache.get(image.storageKey);
+        if (!bytes) {
+          bytes = await this.storage.get(image.storageKey);
+          byteCache.set(image.storageKey, bytes);
+        }
+        const filePath = path.join(workDir, `q-${questionId}-alt-${index}.${extensionForMime(image.mime)}`);
+        await fs.writeFile(filePath, bytes);
+        paths.push(filePath);
+      }
+      map.set(questionId, paths);
     }
     return map;
   }

@@ -2,7 +2,7 @@ import { Inject, Injectable } from "@nestjs/common";
 import { Difficulty } from "@exams-generator/shared";
 import { and, count, eq, isNull, or, SQL } from "drizzle-orm";
 import { Database, DRIZZLE_DB } from "../../db/client";
-import { assets, courses, questions, subtopics, topics } from "../../db/schema";
+import { assets, courses, questionAlternativeImages, questions, subtopics, topics } from "../../db/schema";
 import { QuestionStatus } from "../../db/schema/enums";
 import { hashBodyTypst } from "./domain/hash-body-typst";
 import {
@@ -609,6 +609,60 @@ export class BankRepository implements BankRepositoryPort {
         .returning({ id: questions.id });
 
       return row?.id;
+    });
+  }
+
+  /**
+   * All-or-nothing re-attachment of a structured question's per-alternative
+   * images: re-checks tenant visibility (belt-and-suspenders, same as
+   * `replaceImageAsset`), wipes any existing `question_alternative_images`
+   * rows for this question, then inserts one fresh `assets` row + one
+   * `question_alternative_images` row per entry in `images`, at its array
+   * index — all inside a single transaction, so a failure partway never
+   * leaves a mix of old and new images attached. The caller (service) has
+   * already asserted `type='structured'` and `images.length ===
+   * alternatives.length` before reaching here.
+   */
+  async setAlternativeImages(
+    id: string,
+    currentTenantId: string | null,
+    images: readonly { readonly storageKey: string; readonly mime: string }[],
+  ): Promise<string | undefined> {
+    return this.db.transaction(async (tx) => {
+      const visibility: SQL = currentTenantId
+        ? (or(isNull(questions.tenantId), eq(questions.tenantId, currentTenantId)) as SQL)
+        : (isNull(questions.tenantId) as SQL);
+
+      const [question] = await tx
+        .select({ id: questions.id })
+        .from(questions)
+        .where(and(eq(questions.id, id), visibility));
+
+      if (!question) {
+        return undefined;
+      }
+
+      await tx.delete(questionAlternativeImages).where(eq(questionAlternativeImages.questionId, id));
+
+      for (let index = 0; index < images.length; index++) {
+        const image = images[index]!;
+        const [asset] = await tx
+          .insert(assets)
+          .values({ tenantId: currentTenantId, storageKey: image.storageKey, mime: image.mime })
+          .returning({ id: assets.id });
+
+        if (!asset) {
+          throw new Error("Insert invariant violated: asset row missing after insert");
+        }
+
+        await tx.insert(questionAlternativeImages).values({
+          questionId: id,
+          alternativeIndex: index,
+          assetId: asset.id,
+        });
+      }
+
+      return question.id;
     });
   }
 

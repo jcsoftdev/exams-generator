@@ -23,6 +23,14 @@ export interface ExamPdfStructuredQuestion {
   readonly alternatives: readonly string[];
   readonly figureCode?: string;
   readonly imageAbsolutePath?: string;
+  /**
+   * Per-alternative image paths, index-aligned with `alternatives` for THIS
+   * version (i.e. already permuted the same way `alternatives` was — see
+   * `version-shuffler.ts`). When `alternativeImagePaths[i]` is present, the
+   * template renders alternative `i` as that image instead of its (empty)
+   * text — see `renderStructuredQuestionBlock` in `typst-template.ts`.
+   */
+  readonly alternativeImagePaths?: readonly (string | undefined)[];
 }
 
 export type ExamPdfQuestion = ExamPdfImageQuestion | ExamPdfStructuredQuestion;
