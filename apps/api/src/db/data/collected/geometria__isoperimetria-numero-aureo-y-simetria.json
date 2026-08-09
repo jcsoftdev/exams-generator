@@ -1,0 +1,582 @@
+{
+  "entries": [
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un trapecio isósceles tiene tres lados iguales. ¿Cuántos ejes de simetría posee dicha figura?",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://psu-matematicas.blogspot.com/2012/07/desafio-ejes-de-simetria.html",
+      "sourceName": "Blog PSU-Matemáticas, Desafío – Ejes de Simetría (julio 2012), respuesta publicada: alternativa B"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones es FALSA?\n\nI. Un diámetro de una circunferencia es un eje de simetría de ella.\nII. El punto de intersección de las diagonales de un rombo es su centro de simetría.\nIII. Las diagonales del trapecio isósceles son ejes de simetría de él.\nIV. El punto medio de un segmento es su centro de simetría.\nV. La bisectriz de un ángulo es un eje de simetría del ángulo.",
+      "alternatives": [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "http://psu-matematicas.blogspot.com/2013/09/desafio-eje-de-simetria-propuesto.html",
+      "sourceName": "Blog PSU-Matemáticas, Desafío – Eje de Simetría (Resuelto, septiembre 2013), clave: C (las diagonales del trapecio isósceles NO son ejes de simetría)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un polígono regular de n lados tiene exactamente n ejes de simetría. ¿Cuántos ejes de simetría tiene un hexágono regular?",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://recursos.edu.xunta.gal/sites/default/files/recurso/1445431121/ud3/23_ejes_de_simetra_de_un_polgono_regular.html",
+      "sourceName": "Xunta de Galicia – Geometría de 1.º ESO con GeoGebra 3: Polígonos, sección 2.3 Ejes de simetría de un polígono regular"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un triángulo equilátero tiene lados iguales y todos sus ángulos iguales. ¿Cuántos ejes de simetría posee un triángulo equilátero?",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://es.calcuworld.com/cuantos/cuantos-ejes-de-simetria-tiene-un-triangulo-equilatero/",
+      "sourceName": "CalcuWorld – ¿Cuántos ejes de simetría tiene un triángulo equilátero?, respuesta: 3"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuadrado tiene un área de 144 m². Se construye un hexágono regular que tiene el mismo perímetro que dicho cuadrado. ¿Cuál es el área del hexágono regular (en m²)?",
+      "alternatives": [
+        "96",
+        "144",
+        "96√3",
+        "48√3",
+        "192"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/geometria/basica/problemas-de-areas-2.html",
+      "sourceName": "Superprof – Problemas de áreas III, Ejercicio 10: cuadrado de área 144 y hexágono isoperimétrico, respuesta: 96√3 m²"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un cuadrado y un triángulo equilátero tienen igual perímetro. Si el lado del cuadrado mide 6 cm, ¿cuánto mide el lado del triángulo equilátero?",
+      "alternatives": [
+        "6 cm",
+        "7 cm",
+        "8 cm",
+        "9 cm",
+        "4,5 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/geometria/basica/problemas-de-areas-2.html",
+      "sourceName": "Superprof – Problemas de áreas III, Ejercicio 1: triángulo equilátero isoperimétrico con cuadrado de lado 6 cm, solución: lado = 8 cm"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Entre todas las figuras planas con el mismo perímetro, la que encierra mayor área es:",
+      "alternatives": [
+        "El cuadrado",
+        "El triángulo equilátero",
+        "El hexágono regular",
+        "La circunferencia (círculo)",
+        "El rectángulo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Isoperimetr%C3%ADa",
+      "sourceName": "Wikipedia – Isoperimetría: el círculo es la figura de máxima área para un perímetro dado (teorema isoperimétrico clásico)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Entre todos los polígonos de n lados con el mismo perímetro, el que tiene mayor área es:",
+      "alternatives": [
+        "El polígono irregular de mayor diagonal",
+        "El polígono regular de n lados",
+        "El polígono cóncavo de n lados",
+        "El polígono con mayor número de ángulos obtusos",
+        "Depende del valor de n"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Isoperimetr%C3%ADa",
+      "sourceName": "Wikipedia – Isoperimetría: de entre todos los polígonos a n lados de perímetro fijo, es el regular el que tiene mayor área"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Dos figuras planas se denominan isoperímetricas si y solo si:",
+      "alternatives": [
+        "Tienen la misma área",
+        "Tienen el mismo número de lados",
+        "Tienen el mismo perímetro",
+        "Son congruentes",
+        "Son semejantes"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://es.wikipedia.org/wiki/Isoperimetr%C3%ADa",
+      "sourceName": "Wikipedia – Isoperimetría: definición de figuras isoperímetricas (mismo perímetro)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El número áureo φ (phi) es la solución positiva de la ecuación:",
+      "alternatives": [
+        "x^2 + x - 1 = 0",
+        "x^2 - x - 1 = 0",
+        "x^2 + x + 1 = 0",
+        "x^2 - x + 1 = 0",
+        "x^2 - 2x - 1 = 0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://es.wikipedia.org/wiki/N%C3%BAmero_%C3%A1ureo",
+      "sourceName": "Wikipedia – Número áureo: φ es la solución positiva de x² − x − 1 = 0, con valor φ = (1 + √5)/2 ≈ 1,618"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El número áureo φ es aproximadamente igual a:",
+      "alternatives": [
+        "1,414",
+        "1,618",
+        "2,718",
+        "3,141",
+        "1,732"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://es.wikipedia.org/wiki/N%C3%BAmero_%C3%A1ureo",
+      "sourceName": "Wikipedia – Número áureo: valor φ = (1 + √5)/2 ≈ 1,6180339887"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fórmula exacta del número áureo φ es:",
+      "alternatives": [
+        "φ = (1 + √3) / 2",
+        "φ = (1 + √5) / 2",
+        "φ = (√5 - 1) / 2",
+        "φ = (1 + √2) / 2",
+        "φ = √5 / 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://es.wikipedia.org/wiki/N%C3%BAmero_%C3%A1ureo",
+      "sourceName": "Wikipedia – Número áureo: φ = (1 + √5)/2"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una propiedad única del número áureo φ es que satisface φ² = φ + 1. Si φ ≈ 1,618, ¿cuánto vale φ²?",
+      "alternatives": [
+        "2,236",
+        "2,618",
+        "3,236",
+        "2,414",
+        "1,902"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://es.wikipedia.org/wiki/N%C3%BAmero_%C3%A1ureo",
+      "sourceName": "Wikipedia – Número áureo: propiedad φ² = φ + 1, luego φ² = 1,618 + 1 = 2,618"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un pentágono regular, la razón entre la longitud de una diagonal y la longitud de un lado es igual a:",
+      "alternatives": [
+        "√2",
+        "√3",
+        "φ (número áureo ≈ 1,618)",
+        "π",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "http://www.matematicasvisuales.com/html/geometria/goldenratio/pentagondiagonal.html",
+      "sourceName": "Matemáticas Visuales – La diagonal de un pentágono regular y la razón áurea: diagonal/lado = φ"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un rectángulo áureo es aquel en el que la razón entre su lado mayor y su lado menor es igual al número áureo φ ≈ 1,618. Si el lado menor de un rectángulo áureo mide 10 cm, ¿cuánto mide (aproximadamente) su lado mayor?",
+      "alternatives": [
+        "12,0 cm",
+        "14,1 cm",
+        "16,2 cm",
+        "17,3 cm",
+        "20,0 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.aulafacil.com/cursos/matematicas/areas-geometricas/rectangulo-aureo-l10828",
+      "sourceName": "AulaFácil – Rectángulo Áureo: lado mayor = φ × lado menor = 1,618 × 10 cm ≈ 16,2 cm"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si a un rectángulo áureo se le sustrae un cuadrado cuyo lado es igual al lado menor del rectángulo, el rectángulo resultante es:",
+      "alternatives": [
+        "Un cuadrado",
+        "Un rectángulo áureo",
+        "Un rectángulo de lados en razón 2:1",
+        "Un rectángulo de lados en razón √2:1",
+        "Un trapecio isósceles"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://geometriaparajulia.blogspot.com/2016/10/proporcionalidad-iii-rectangulo-aureo.html",
+      "sourceName": "Geometría para Julia – Proporcionalidad III: Rectángulo Áureo, propiedad de subdivisión infinita en rectángulos áureos"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La sucesión de Fibonacci comienza: 1, 1, 2, 3, 5, 8, 13, 21, ... Al dividir un término de Fibonacci entre el anterior (a medida que los términos son más grandes), el cociente se aproxima a:",
+      "alternatives": [
+        "π ≈ 3,14159",
+        "√2 ≈ 1,414",
+        "e ≈ 2,718",
+        "φ ≈ 1,618",
+        "√3 ≈ 1,732"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://santanderexperiences.es/santander-explica/la-proporcion-aurea",
+      "sourceName": "Santander Experiences – La proporción áurea: cociente de términos consecutivos de Fibonacci converge a φ ≈ 1,618"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un segmento AB de longitud a + b está dividido en media y extrema razón por el punto C, de modo que AC = a y CB = b (con a > b). La condición que define la sección áurea es:",
+      "alternatives": [
+        "(a + b) / a = b / a",
+        "(a + b) / a = a / b",
+        "a / b = b / (a - b)",
+        "(a + b) / b = b / a",
+        "a / b = (a + b) / (a - b)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://dibujotecni.com/geometria-plana/operaciones-con-segmentos-seccion-aurea/",
+      "sourceName": "DibujTecni – Sección Áurea: definición (a+b)/a = a/b = φ (división en media y extrema razón)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una figura geométrica tiene simetría axial si:",
+      "alternatives": [
+        "Se puede rotar un ángulo menor de 360° sobre un punto central y se ve igual",
+        "Existe una recta (eje) tal que al doblar la figura por ella, ambas mitades coinciden exactamente",
+        "Se puede trasladar sin modificar su forma",
+        "Tiene el mismo área que su figura especular",
+        "Posee más de un centro de masa"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.smartick.es/blog/matematicas/geometria/simetria/",
+      "sourceName": "Smartick – Simetría: definición de simetría axial, existe un eje tal que al doblar la figura las dos partes coinciden"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuántos ejes de simetría tiene un cuadrado?",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.aulafacil.com/cursos/matematicas/geometria/figuras-simetricas-l11152",
+      "sourceName": "AulaFácil – Figuras Simétricas: el cuadrado tiene 4 ejes de simetría (2 diagonales + 2 mediatrices de los lados)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una figura plana tiene simetría central respecto a un punto O si:",
+      "alternatives": [
+        "Cualquier recta que pase por O la divide en dos partes iguales",
+        "Para cada punto P de la figura, el punto P' simétrico respecto a O también pertenece a la figura",
+        "La figura puede girarse 90° alrededor de O y coincidir con ella misma",
+        "O es el baricentro de la figura",
+        "La figura tiene igual número de ejes de simetría axial y central"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://calculo.cc/temas/temas_geometria/movimiento_plano/problemas/prob_simetria.html",
+      "sourceName": "Calculo.cc – Simetría central y axial: para cada punto P de la figura, su simétrico P' respecto al centro O también pertenece a la figura"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes figuras NO tiene centro de simetría?",
+      "alternatives": [
+        "Segmento rectilíneo",
+        "Rombo",
+        "Circunferencia",
+        "Triángulo equilátero",
+        "Paralelogramo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://psu-matematicas.blogspot.com/2013/09/desafio-eje-de-simetria-propuesto.html",
+      "sourceName": "Blog PSU-Matemáticas – Desafío Eje de Simetría: el punto de intersección de las diagonales del rombo es su centro de simetría; el triángulo equilátero NO tiene centro de simetría"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tienen dos figuras isoperímetricas: un cuadrado de lado l y un triángulo equilátero de lado L. Si ambas tienen el mismo perímetro, ¿cuál tiene mayor área?",
+      "alternatives": [
+        "El triángulo equilátero, porque sus ángulos son todos iguales",
+        "El cuadrado, porque tiene más lados que el triángulo",
+        "El cuadrado, porque entre figuras isoperímetricas el polígono regular de más lados tiene mayor área",
+        "Ambas tienen igual área por tener igual perímetro",
+        "Depende del valor del perímetro común"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/geometria/basica/problemas-de-areas-2.html",
+      "sourceName": "Superprof – Problemas de áreas III, Ejercicio 1: cuadrado de lado 6 cm tiene área 36 cm² vs triángulo equilátero isoperimétrico de área ≈ 27,71 cm², el cuadrado tiene mayor área"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El punto simétrico del punto A(5, 2) respecto al eje de las ordenadas (eje Y) es:",
+      "alternatives": [
+        "A'(5, -2)",
+        "A'(-5, 2)",
+        "A'(-5, -2)",
+        "A'(2, 5)",
+        "A'(-2, -5)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://calculo.cc/temas/temas_geometria/movimiento_plano/problemas/prob_simetria.html",
+      "sourceName": "Calculo.cc – Problemas de simetría, Problema 1a: simétrico de A(5,2) respecto al eje de ordenadas es A'(−5, 2)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El punto simétrico del punto A(5, 2) respecto al origen de coordenadas O(0, 0) es:",
+      "alternatives": [
+        "A'(5, -2)",
+        "A'(-5, 2)",
+        "A'(-5, -2)",
+        "A'(2, 5)",
+        "A'(-2, 5)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://calculo.cc/temas/temas_geometria/movimiento_plano/problemas/prob_simetria.html",
+      "sourceName": "Calculo.cc – Problemas de simetría, Problema 1c: simétrico de A(5,2) respecto al origen es A'(−5, −2)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El punto simétrico del punto A(5, 2) respecto al eje de las abscisas (eje X) es:",
+      "alternatives": [
+        "A'(5, -2)",
+        "A'(-5, 2)",
+        "A'(-5, -2)",
+        "A'(-2, 5)",
+        "A'(2, -5)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://calculo.cc/temas/temas_geometria/movimiento_plano/problemas/prob_simetria.html",
+      "sourceName": "Calculo.cc – Problemas de simetría, Problema 1b: simétrico de A(5,2) respecto al eje de abscisas es A'(5, −2)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un cuadrilátero ABCD tiene vértices A(−3, −1), B(−4, −3), C(−1, −4) y D(−1, −2). Las coordenadas de su simétrico respecto al origen de coordenadas son:",
+      "alternatives": [
+        "A'(3,1), B'(4,3), C'(1,4), D'(1,2)",
+        "A'(−3,1), B'(−4,3), C'(−1,4), D'(−1,2)",
+        "A'(3,−1), B'(4,−3), C'(1,−4), D'(1,−2)",
+        "A'(1,3), B'(3,4), C'(4,1), D'(2,1)",
+        "A'(−1,−3), B'(−3,−4), C'(−4,−1), D'(−2,−1)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://calculo.cc/temas/temas_geometria/movimiento_plano/problemas/prob_simetria.html",
+      "sourceName": "Calculo.cc – Problemas de simetría, Problema 3: simétrico del cuadrilátero ABCD respecto al origen: A'(3,1), B'(4,3), C'(1,4), D'(1,2)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuántos ejes de simetría posee un pentágono regular?",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "10"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematix.org/ejes-de-simetria-del-pentagono/",
+      "sourceName": "Matematix – Ejes de simetría del pentágono: un pentágono regular tiene 5 ejes de simetría"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se divide un segmento AB de longitud (a + b) en el punto C, de manera que satisface la condición áurea: (a + b)/a = a/b = φ. Si b = 10 cm y φ ≈ 1,618, ¿cuánto mide a (en cm, aproximadamente)?",
+      "alternatives": [
+        "10,0 cm",
+        "12,2 cm",
+        "16,2 cm",
+        "18,0 cm",
+        "26,2 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://dibujotecni.com/geometria-plana/operaciones-con-segmentos-seccion-aurea/",
+      "sourceName": "DibujTecni – Sección Áurea: a/b = φ ≈ 1,618, luego a = φ × b = 1,618 × 10 cm ≈ 16,2 cm"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el triángulo isósceles con vértices A(−1, 3), B(2, −1) y C(4, 1), se halla su simétrico respecto al eje X. Las coordenadas del vértice A' son:",
+      "alternatives": [
+        "A'(1, 3)",
+        "A'(−1, −3)",
+        "A'(1, −3)",
+        "A'(−1, 3)",
+        "A'(3, −1)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://calculo.cc/temas/temas_geometria/movimiento_plano/problemas/prob_simetria.html",
+      "sourceName": "Calculo.cc – Problemas de simetría, Problema 2a: simétrico del triángulo ABC respecto al eje X da A'(−1, −3)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos ejes de simetría posee un rombo que NO es cuadrado?",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "4",
+        "Infinitos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.aulafacil.com/cursos/matematicas/geometria/figuras-simetricas-l11152",
+      "sourceName": "AulaFácil – Figuras Simétricas: el rombo (no cuadrado) tiene 2 ejes de simetría (sus dos diagonales)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuántos ejes de simetría posee una circunferencia?",
+      "alternatives": [
+        "0",
+        "2",
+        "4",
+        "8",
+        "Infinitos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://www.aulafacil.com/cursos/matematicas/geometria/figuras-simetricas-l11152",
+      "sourceName": "AulaFácil – Figuras Simétricas: la circunferencia tiene infinitos ejes de simetría (cualquier diámetro es eje de simetría)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un triángulo isósceles (que no es equilátero) tiene exactamente:",
+      "alternatives": [
+        "0 ejes de simetría",
+        "1 eje de simetría",
+        "2 ejes de simetría",
+        "3 ejes de simetría",
+        "Infinitos ejes de simetría"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.aulafacil.com/cursos/matematicas/geometria/figuras-simetricas-l11152",
+      "sourceName": "AulaFácil – Figuras Simétricas: el triángulo isósceles (no equilátero) tiene 1 eje de simetría (la mediatriz de la base)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Isoperimetría, Número Áureo y Simetría",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un rectángulo áureo tiene lado menor b = 6 cm. Usando φ ≈ 1,618, ¿cuánto vale el perímetro del rectángulo áureo (en cm, aproximadamente)?",
+      "alternatives": [
+        "24,0 cm",
+        "27,4 cm",
+        "31,4 cm",
+        "36,0 cm",
+        "38,2 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.aulafacil.com/cursos/matematicas/areas-geometricas/rectangulo-aureo-l10828",
+      "sourceName": "AulaFácil – Rectángulo Áureo: lado mayor = φ × b = 1,618 × 6 = 9,708 cm; perímetro = 2(6 + 9,708) = 2 × 15,708 ≈ 31,4 cm"
+    }
+  ]
+}

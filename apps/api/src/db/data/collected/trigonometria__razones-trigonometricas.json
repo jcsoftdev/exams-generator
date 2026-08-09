@@ -1,0 +1,169 @@
+{
+  "entries": [
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC con ángulo recto en C, simplifique: E = a·ctgA − c·senB",
+      "alternatives": ["0", "1/3", "a", "b", "1/2"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://recursosdidacticos.org/razones-trigonometricas-de-angulos-agudos-para-quinto-de-secundaria/",
+      "sourceName": "Recursos Didácticos - Razones Trigonométricas de Ángulos Agudos - Problema 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo ABC con ángulo recto en B, reduzca: E = (secA − senC)·ctgA − cosC",
+      "alternatives": ["1", "2", "0", "3", "-1"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://recursosdidacticos.org/razones-trigonometricas-de-angulos-agudos-para-quinto-de-secundaria/",
+      "sourceName": "Recursos Didácticos - Razones Trigonométricas de Ángulos Agudos - Problema 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC con ángulo recto en A, se tiene tgB = 0,75 y a − b = 6 m. Halle el perímetro.",
+      "alternatives": ["12 m", "24 m", "36 m", "42 m", "45 m"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://recursosdidacticos.org/razones-trigonometricas-de-angulos-agudos-para-quinto-de-secundaria/",
+      "sourceName": "Recursos Didácticos - Razones Trigonométricas de Ángulos Agudos - Problema 4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo ABC, recto en C, se cumple que tgA + tgB = 2. Halle cscA·secA + cosB·cscA.",
+      "alternatives": ["2", "3", "4", "5", "6"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
+      "sourceName": "Matemáticas N - Razones Trigonométricas Problemas Resueltos Preuniversitarios - Pregunta 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las medidas de los lados de un triángulo rectángulo T son a metros, b metros y c metros, siendo a, b, c números pares consecutivos. Calcular ctg(θ/2), si θ es el mayor ángulo agudo de T.",
+      "alternatives": ["3/2", "2", "5/4", "25", "4/3"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
+      "sourceName": "Matemáticas N - Razones Trigonométricas Problemas Resueltos Preuniversitarios - Pregunta 7"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo de perímetro 60 m, calcular su área, si el coseno de uno de los ángulos agudos es 0,8.",
+      "alternatives": ["120 m²", "130 m²", "140 m²", "150 m²", "160 m²"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/01/razones-trigonometricas-de-angulos.html",
+      "sourceName": "Trigonometría PDF - Razones Trigonométricas de Ángulos Agudos - Problema 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo ABC, recto en C, se cumple que senA·senB = 2/5. Hallar 2(tgA + tgB).",
+      "alternatives": ["1", "2", "3", "4", "5"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
+      "sourceName": "Matemáticas N - Razones Trigonométricas Problemas Resueltos Preuniversitarios - Pregunta 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo ABC, recto en C, se cumple que cosA·cosB = 2/5. Halle 2(ctgA + ctgB).",
+      "alternatives": ["4", "3", "5", "2/5", "2"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
+      "sourceName": "Matemáticas N - Razones Trigonométricas Problemas Resueltos Preuniversitarios - Pregunta 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo ABC, recto en B, se cumple que tgC = √2·cosA. Calcule csc²A + 3·ctgC.",
+      "alternatives": ["1", "2", "3", "4", "5"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
+      "sourceName": "Matemáticas N - Razones Trigonométricas Problemas Resueltos Preuniversitarios - Pregunta 4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo ABC, recto en B, se cumple que senA·senC = 8/13. Halle 8(tgA + tgC).",
+      "alternatives": ["13", "14", "15", "16", "17"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/las-razones-trigonometricas-en.html",
+      "sourceName": "Matemáticas N - Razones Trigonométricas Problemas Resueltos Preuniversitarios - Pregunta 5"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En un triángulo rectángulo ABC con ángulo recto en A, simplifique: E = b·tgC + c·tgB − c",
+      "alternatives": ["a", "b", "c", "2a", "2c"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://recursosdidacticos.org/razones-trigonometricas-de-angulos-agudos-para-quinto-de-secundaria/",
+      "sourceName": "Recursos Didácticos - Razones Trigonométricas de Ángulos Agudos - Problema 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El perímetro de un triángulo rectángulo es 180 m. Si la tangente de uno de sus ángulos agudos es 2,4, calcule la hipotenusa.",
+      "alternatives": ["13 m", "26 m", "39 m", "78 m", "82 m"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/11/razones-trigonometricas-nivel-basico.html",
+      "sourceName": "Trigonometría PDF - Razones Trigonométricas Nivel Básico - Problema 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En un triángulo rectángulo, los lados de mayor longitud miden 4 cm y 3 cm. Calcule la tangente del menor ángulo agudo.",
+      "alternatives": ["2/3", "3/4", "3/√7", "√7/3", "√7/4"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/11/razones-trigonometricas-angulos-agudos.html",
+      "sourceName": "Trigonometría PDF - Razones Trigonométricas de Ángulos Agudos - Problema 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En un triángulo rectángulo, los dos lados mayores miden 13 cm y 12 cm. Calcule el coseno del mayor ángulo agudo.",
+      "alternatives": ["5/12", "12/23", "5/13", "5/8", "7/15"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/11/razones-trigonometricas-angulos-agudos.html",
+      "sourceName": "Trigonometría PDF - Razones Trigonométricas de Ángulos Agudos - Problema 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Razones Trigonométricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el perímetro de un triángulo rectángulo cuya área es 7,5 cm², si la tangente de uno de sus ángulos agudos es 5/12.",
+      "alternatives": ["12 cm", "13 cm", "15 cm", "24 cm", "30 cm"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://trigonometriapdf.blogspot.com/2018/01/razones-trigonometricas-de-angulos.html",
+      "sourceName": "Trigonometría PDF - Razones Trigonométricas de Ángulos Agudos - Problema 2"
+    }
+  ]
+}

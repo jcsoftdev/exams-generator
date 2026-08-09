@@ -1,0 +1,290 @@
+{
+  "entries": [
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC, de lados a, b y c, respectivamente, se cumple que 2b = 3c y m∡A = 74°. Calcule tan B.",
+      "alternatives": ["24/29", "15/29", "29/15", "29/72", "72/29"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un triángulo ABC tienen por medida AB = 7 u, BC = 5 u y AC = 6 u. Calcule 13·cos A + 12·cos B + 11·cos C.",
+      "alternatives": ["18", "20", "24", "16", "36"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un triángulo ABC la bisectriz exterior relativa al lado a mide 48 cm. Calcule el valor de la bisectriz interior relativa al mismo lado, si además B − C = 32°.",
+      "alternatives": ["10 cm", "12 cm", "14 cm", "15 cm", "16 cm"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a un terreno de forma triangular, se sabe que las longitudes de dos de sus lados menores difieren en 20 m, mientras que la longitud del lado mayor es de 80 m. Calcule el área del terreno, sabiendo que el ángulo formado por los lados de mayor y menor longitud es 60°.",
+      "alternatives": ["500√3 m²", "1200√3 m²", "1000 m²", "1000√3 m²"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En un triángulo ABC, si A = 60°, b = 4√7 y c = 6√7, halle el lado a.",
+      "alternatives": ["7", "10", "13", "14", "20"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 5"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un triángulo son proporcionales a los números 3; 5 y 7. Siendo θ la medida de su menor ángulo interno, halle sec θ.",
+      "alternatives": ["7/13", "13/6", "13/7", "14/13", "14/11"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo ABC, se conoce que B = 45°, b = 2 y c = √6. Indicar la medida del ángulo C.",
+      "alternatives": ["sólo 30°", "sólo 45°", "sólo 60°", "30° ó 150°", "60° ó 120°"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 7"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo uno de sus lados mide 20 cm y los ángulos internos adyacentes a él miden 16° y 37°. Halle su perímetro.",
+      "alternatives": ["22 cm", "24 cm", "42 cm", "44 cm", "50 cm"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos, problema 9"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En un triángulo ABC se tiene AB = 3 m, m∡A = 45° y m∡B = 105°. Calcule BC.",
+      "alternatives": ["2√2 m", "3√2 m", "3 m", "√6 m", "2√6 m"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el mayor ángulo de un triángulo cuyos lados son proporcionales a los números 7, 8 y 13.",
+      "alternatives": ["30°", "60°", "90°", "120°", "150°"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un triángulo ABC se cumple que a² = b² + c² + bc y además b² = a² + c² − √2·ac. Calcule el ángulo C.",
+      "alternatives": ["15°", "45°", "75°", "60°", "30°"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el triángulo ABC se cumple que a² − b² − c² = 2bc/3. Halle tan(A/2).",
+      "alternatives": ["1", "√2", "3", "2", "√2/2"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 5"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el triángulo ABC se cumple que 3(a + c)(a − c) = b(2c + 3b). Calcule cos A.",
+      "alternatives": ["1", "−1/3", "1/3", "1/2", "−1/2"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un triángulo son números enteros consecutivos y el coseno de su mayor ángulo es 1/5. Calcule el perímetro de dicho triángulo.",
+      "alternatives": ["12", "14", "16", "18", "20"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 8"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Resuelva el triángulo ABC sabiendo que a = √3, b² + c² = 5 y A = 60°. Indique los ángulos B y C, y los valores de b y c.",
+      "alternatives": ["B=45°, C=75°, b=1, c=2", "B=30°, C=90°, b=1, c=2", "B=15°, C=105°, b=2, c=3", "B=45°, C=75°, b=2, c=√6", "B=30°, C=90°, b=3, c=2"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 9"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el triángulo ABC se cumple que a² = b² + c² − (2/3)bc. Calcule tan A.",
+      "alternatives": ["1/3", "3", "2√2", "2/3", "3/2"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 11"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el triángulo ABC reduzca la expresión: E = abc · sen A · (cot B + cot C).",
+      "alternatives": ["a³", "b³", "c³", "abc", "3abc"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 12"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene el triángulo rectángulo ABC con ángulo recto en B, AB = 3 y BC = √7. Al rotar 60° alrededor de BC, la hipotenusa AC pasa a la posición A'C. Halle el coseno del ángulo entre AC y A'C.",
+      "alternatives": ["21/25", "23/32", "25/32", "27/32", "18/25"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 13"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el triángulo ABC, siendo p el semiperímetro, reduzca: E = (b + c)cos A + (a + c)cos B + (a + b)cos C.",
+      "alternatives": ["p", "2p", "2", "p/2", "1"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 14"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El perímetro de un triángulo ABC es 24 cm y el radio de la circunferencia circunscrita es 5 cm. Calcule sen A + sen B + sen C.",
+      "alternatives": ["1,2", "2,4", "2,8", "2,6", "1,8"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/resolucion-de-triangulos-oblicuangulos.html",
+      "sourceName": "matematicasn - Resolución de triángulos oblicuángulos (ejercicios), problema 15"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un triángulo tiene tres lados que son números impares consecutivos y uno de sus ángulos mide 120°. Calcule el perímetro del triángulo.",
+      "alternatives": ["9 m", "12 m", "15 m", "18 m", "21 m"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn - Ley de cosenos ejercicios resueltos, ejercicio 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el triángulo ABC el ángulo del medio mide 60°. Los dos lados menores difieren en 2 unidades y los dos lados mayores difieren en 1 unidad. Determine los tres lados del triángulo.",
+      "alternatives": ["3, 5, 6", "4, 6, 7", "5, 7, 8", "6, 8, 9", "7, 9, 10"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn - Ley de cosenos ejercicios resueltos, ejercicio 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un móvil parte de un punto O, recorre 40 km en dirección S60°W y luego 20 km en dirección N60°W. Calcule la distancia entre la posición inicial y la posición final del móvil.",
+      "alternatives": ["20√7 km", "20√5 km", "25√7 km", "29√5 km", "23√7 km"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn - Ley de cosenos ejercicios resueltos, ejercicio 8"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un estudiante observa la parte superior de una estatua con líneas visuales de 8 m y 7 m que forman entre sí un ángulo de 60°. Calcule la altura de la estatua (distancia entre los dos extremos observados).",
+      "alternatives": ["√57 m", "√59 m", "√47 m", "√37 m", "√67 m"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-cosenos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn - Ley de cosenos ejercicios resueltos, ejercicio 11"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El triángulo isósceles ABC tiene ángulos internos de medidas 2ψ, 5ψ y 5ψ. Si los dos lados iguales miden x y el lado diferente mide y, calcule x/y.",
+      "alternatives": ["(√6 − √2)/2", "(√6 + √2)/2", "√6 − √2", "√6 + √2", "(√6 + √2)/3"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-senos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn - Ley de senos ejercicios resueltos, problema 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Resolución de Triángulos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El triángulo isósceles ABC tiene base AC = 10 m y AB = BC. La bisectriz interior del ángulo A intersecta a BC en el punto D, de modo que AD = 12 m. Calcule la longitud de AB.",
+      "alternatives": ["20 m", "25 m", "30 m", "35 m", "40 m"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ley-de-senos-ejercicios-resueltos-y.html",
+      "sourceName": "matematicasn - Ley de senos ejercicios resueltos, problema propuesto 3"
+    }
+  ]
+}

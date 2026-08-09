@@ -1,0 +1,290 @@
+{
+  "entries": [
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular la suma de los catetos de un triángulo rectángulo con la altura relativa a la hipotenusa, sabiendo que las proyecciones de los catetos sobre dicha hipotenusa miden 9 y 16.",
+      "alternatives": ["46", "52", "38", "39", "47"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/relaciones-metricas-en-triangulos_30.html",
+      "sourceName": "matematicasn - Relaciones métricas en triángulos rectángulos ejercicios resueltos, Pregunta 4 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un triángulo ABC, las cevianas interiores AP y BQ se cortan en el punto R. Si BC = 24 cm, QC = 3·AQ y BR = 2·RQ, halle la longitud BP.",
+      "alternatives": ["6 cm", "12 cm", "9 cm", "8 cm", "4 cm"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/thales-menelao-ceva-teoremas-de-la.html",
+      "sourceName": "matematicasn - Thales, Menelao, Ceva y teoremas de la bisectriz, Problema (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las medidas de los lados de un triángulo son tres números pares consecutivos; además, el mayor ángulo interno mide el doble de la medida del menor ángulo interno. Calcule la medida del menor lado.",
+      "alternatives": ["4", "5", "6", "7", "8"],
+      "correctAnswer": "4",
+      "sourceUrl": "http://matematica-a1.blogspot.com/2013/03/proporcionalidad-y-semejanza-ejercicios.html",
+      "sourceName": "matematica-a1 - Proporcionalidad y semejanza ejercicios desarrollados, Pregunta 18 (clave E)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un triángulo miden 9, 16 y 18. ¿Qué valor x debe restarse a cada lado para que el triángulo resultante sea rectángulo?",
+      "alternatives": ["3", "2", "1", "4", "5"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/relaciones-metricas-en-triangulos_30.html",
+      "sourceName": "matematicasn - Relaciones métricas en triángulos rectángulos ejercicios resueltos, Problema 2 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En un triángulo rectángulo, los catetos miden 6 y 8. Calcule la longitud de la altura relativa a la hipotenusa.",
+      "alternatives": ["3.6", "4.8", "5.2", "7.6", "3.8"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/relaciones-metricas-en-triangulos_30.html",
+      "sourceName": "matematicasn - Relaciones métricas en triángulos rectángulos ejercicios resueltos, Problema 8 (clave b)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La hipotenusa y un cateto de un triángulo rectángulo miden 29 y 21 cm respectivamente. Calcule el otro cateto.",
+      "alternatives": ["18 cm", "16 cm", "20 cm", "22 cm", "23 cm"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/relaciones-metricas-en-triangulos_30.html",
+      "sourceName": "matematicasn - Relaciones métricas en triángulos rectángulos ejercicios resueltos, Problema 9 (clave c)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un triángulo rectángulo forman una progresión aritmética de razón 3. Halle el cateto mayor.",
+      "alternatives": ["9", "12", "15", "18", "21"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/relaciones-metricas-en-triangulos_30.html",
+      "sourceName": "matematicasn - Relaciones métricas en triángulos rectángulos ejercicios resueltos, Problema 10 (clave b)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el triángulo rectángulo ABC (recto en B), la altura relativa a la hipotenusa mide √24 y divide a la hipotenusa en dos segmentos en razón 2:3. Calcule el cateto BC.",
+      "alternatives": ["4√2", "2√15", "7√5", "9√3", "3√10"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/relaciones-metricas-en-triangulos_30.html",
+      "sourceName": "matematicasn - Relaciones métricas en triángulos rectángulos ejercicios resueltos, Problema resuelto 5 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el triángulo rectángulo ABC, M es el punto medio de AB y N es un punto en BC tal que MN es paralela a AC. Si AN = 22 y MC = 19, calcule AC.",
+      "alternatives": ["21", "24", "25", "26", "28"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/relaciones-metricas-en-triangulos_30.html",
+      "sourceName": "matematicasn - Relaciones métricas en triángulos rectángulos ejercicios resueltos, Problema resuelto 10 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el triángulo ABC, AB = 9, BC = 12 y AC = 7. Calcule la longitud AH, siendo H el pie de la altura desde A.",
+      "alternatives": ["2", "3", "1", "4", "5"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/relaciones-metricas-en-los-triangulos_5.html",
+      "sourceName": "matematicasn - Métricas en triángulos rectángulos y oblicuángulos problemas resueltos, Problema 1 (clave b)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el triángulo ABC, AB = 5, BC = 7 y AC = 6. Calcule la longitud de la altura BH.",
+      "alternatives": ["4", "3", "2", "1", "2√6"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/relaciones-metricas-en-los-triangulos_5.html",
+      "sourceName": "matematicasn - Métricas en triángulos rectángulos y oblicuángulos problemas resueltos, Problema 2 (clave b)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el triángulo ABC, AB = 4, BC = 5 y AC = 6. Se traza la mediana BM. Calcule BM.",
+      "alternatives": ["1", "2", "3", "4", "√23/2"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/relaciones-metricas-en-los-triangulos_5.html",
+      "sourceName": "matematicasn - Métricas en triángulos rectángulos y oblicuángulos problemas resueltos, Problema 4 (clave e)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el triángulo ABC, AB = 4, BC = 6 y AC = 8. Calcule la longitud de la mediana relativa al lado mayor (AC).",
+      "alternatives": ["√11", "√10", "√19", "√14", "√13"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/07/relaciones-metricas-en-el-triangulo-oblicuangulo-ejemplos-problemas-preguntas-resueltas-geometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn - Relaciones métricas en triángulos oblicuángulos ejercicios resueltos, Pregunta 2 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La suma de los cuadrados de dos lados de un triángulo es 125 cm² y las medianas relativas a dichos lados son perpendiculares entre sí. Calcule el tercer lado.",
+      "alternatives": ["3 cm", "4 cm", "5 cm", "6 cm", "2 cm"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/07/relaciones-metricas-en-el-triangulo-oblicuangulo-ejemplos-problemas-preguntas-resueltas-geometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn - Relaciones métricas en triángulos oblicuángulos ejercicios resueltos, Pregunta 4 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un triángulo miden 5, √41 y 8. Calcule la menor de sus alturas.",
+      "alternatives": ["5", "4", "3", "12", "1"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/07/relaciones-metricas-en-el-triangulo-oblicuangulo-ejemplos-problemas-preguntas-resueltas-geometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn - Relaciones métricas en triángulos oblicuángulos ejercicios resueltos, Pregunta 5 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los cuadrados de los lados de un triángulo es 28. Halle la suma de los cuadrados de sus medianas.",
+      "alternatives": ["20", "21", "19", "18", "17"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/07/relaciones-metricas-en-el-triangulo-oblicuangulo-ejemplos-problemas-preguntas-resueltas-geometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn - Relaciones métricas en triángulos oblicuángulos ejercicios resueltos, Pregunta 6 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Tres circunferencias son mutuamente tangentes exteriormente. Sus centros son A, B y C, donde AB = 5, AC = 7 y BC = 8. Sea M el punto de tangencia de las circunferencias con centros B y C. Determine AM.",
+      "alternatives": ["√16", "√17", "√18", "√19", "√20"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/07/relaciones-metricas-en-el-triangulo-oblicuangulo-ejemplos-problemas-preguntas-resueltas-geometria-matematica-examen-admision-universidad-word-pdf.html",
+      "sourceName": "matematicasn - Relaciones métricas en triángulos oblicuángulos ejercicios resueltos, Pregunta 9 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los lados de un triángulo miden 3, 5 y 7. Calcule la medida del mayor ángulo interior.",
+      "alternatives": ["75°", "45°", "53°", "120°", "150°"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/06/formulas-de-relaciones-metricas-en_27.html",
+      "sourceName": "geometriapdf - Fórmulas de relaciones métricas en triángulos oblicuángulos, Ejercicio 1 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos lados de un triángulo miden 6 y 8, y forman un ángulo agudo. Halle el máximo valor entero que puede tener el tercer lado.",
+      "alternatives": ["10", "11", "9", "8", "7"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/06/formulas-de-relaciones-metricas-en_27.html",
+      "sourceName": "geometriapdf - Fórmulas de relaciones métricas en triángulos oblicuángulos, Ejercicio 2 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el triángulo de lados 13, 14 y 15, calcule la distancia del baricentro al lado de longitud intermedia.",
+      "alternatives": ["4", "5", "6", "7", "8"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/06/formulas-de-relaciones-metricas-en_27.html",
+      "sourceName": "geometriapdf - Fórmulas de relaciones métricas en triángulos oblicuángulos, Ejercicio 3 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el triángulo ABC, la base AC mide 30 cm y la altura BH mide 15 cm. Calcule la longitud del lado del cuadrado inscrito en el triángulo con un lado sobre AC.",
+      "alternatives": ["15 cm", "12 cm", "10 cm", "8 cm", "13 cm"],
+      "correctAnswer": "2",
+      "sourceUrl": "http://matematica-a1.blogspot.com/2013/03/proporcionalidad-y-semejanza-ejercicios.html",
+      "sourceName": "matematica-a1 - Proporcionalidad y semejanza ejercicios desarrollados, Pregunta 8 (clave C)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el triángulo ABC, MN es paralela a BC, con AB = 18 cm, AC = 27 cm y BC = 36 cm. Calcule AM de modo que el perímetro del triángulo AMN sea igual al perímetro del trapecio MNCB.",
+      "alternatives": ["14.5 cm", "16.2 cm", "12.5 cm", "18.2 cm", "19.2 cm"],
+      "correctAnswer": "1",
+      "sourceUrl": "http://matematica-a1.blogspot.com/2013/03/proporcionalidad-y-semejanza-ejercicios.html",
+      "sourceName": "matematica-a1 - Proporcionalidad y semejanza ejercicios desarrollados, Pregunta 9 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el triángulo ABC se inscribe un rombo BFDE, con F en AB, D en AC y E en BC. Calcule la longitud del lado del rombo si AB = 6 y BC = 12.",
+      "alternatives": ["3", "4", "8", "9", "10"],
+      "correctAnswer": "1",
+      "sourceUrl": "http://matematica-a1.blogspot.com/2013/03/proporcionalidad-y-semejanza-ejercicios.html",
+      "sourceName": "matematica-a1 - Proporcionalidad y semejanza ejercicios desarrollados, Pregunta 17 (clave B)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el triángulo rectángulo ABC (recto en B), la prolongación de la altura BH intersecta a la bisectriz exterior del ángulo C en el punto P. Si AB = 4, BC = 3 y AC = 5, calcule BP.",
+      "alternatives": ["3", "4", "5", "6", "8"],
+      "correctAnswer": "3",
+      "sourceUrl": "http://matematica-a1.blogspot.com/2013/03/proporcionalidad-y-semejanza-ejercicios.html",
+      "sourceName": "matematica-a1 - Proporcionalidad y semejanza ejercicios desarrollados, Pregunta 20 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el trapecio isósceles ABCD, AB = CD = 4 m, BC = 2√5 m y AD = 4√5 m. Calcule AC.",
+      "alternatives": ["4 m", "8 m", "√65 m", "6 m", "5 m"],
+      "correctAnswer": "3",
+      "sourceUrl": "http://matematica-a1.blogspot.com/2013/03/relaciones-metricas-en-la.html",
+      "sourceName": "matematica-a1 - Relaciones métricas en la circunferencia ejercicios desarrollados, Problema 4 (clave D)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Proporcionalidad y Relaciones Métricas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcule la distancia entre el incentro y el circuncentro de un triángulo, sabiendo que el inradio mide 2 m y el circunradio mide 6 m.",
+      "alternatives": ["2 m", "4√2 m", "2√7 m", "4 m", "3 m"],
+      "correctAnswer": "1",
+      "sourceUrl": "http://matematica-a1.blogspot.com/2013/03/relaciones-metricas-en-la.html",
+      "sourceName": "matematica-a1 - Relaciones métricas en la circunferencia ejercicios desarrollados, Problema 20 (clave B)"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "entries": [
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La naftalina con el transcurrir del tiempo disminuye su tamaño, debido a que experimenta una:",
+      "alternatives": ["Fusión", "Evaporación", "Condensación", "Sublimación", "Solidificación"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "Materia y Energía - Ejercicios resueltos preuniversitario, Pregunta 9 (Clave: D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si una sustancia pasa del estado sólido al estado gaseoso sin pasar por el estado líquido, se dice que dicha sustancia ha experimentado una:",
+      "alternatives": ["Fusión", "Vaporización", "Licuación", "Sublimación", "Deposición"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "Materia y Energía - Ejercicios resueltos preuniversitario, Pregunta 12 (Clave: D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Cuando se produce la lluvia está ocurriendo una:",
+      "alternatives": ["Fusión", "Vaporización", "Solidificación", "Sublimación", "Condensación"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "Materia y Energía - Ejercicios resueltos preuniversitario, Pregunta 15 (Clave: E)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "No es un cambio de estado:",
+      "alternatives": ["Fusión", "Sublimación", "Licuación", "Decantación", "Vaporización"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/materia-y-energia-preguntas-resueltas.html",
+      "sourceName": "Materia y Energía - Ejercicios resueltos preuniversitario, Pregunta 19 (Clave: D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los estados de la materia más comunes en la tierra son el sólido, líquido y gaseoso, los cuales se diferencian en sus propiedades físicas como el volumen y la densidad. Con respecto a los estados de la materia, determine la secuencia correcta de verdadero (V) y falso (F).\n\nI. En el estado gaseoso, predominan las fuerzas de atracción.\nII. Los líquidos tienen forma definida y volumen variable.\nIII. Para que un sólido se funda debe absorber calor.",
+      "alternatives": ["VVV", "FVF", "FFV", "FVV", "VVF"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/materia-energia-y-cambios-ejercicios-resueltos-de-quimica-basica-pre-universidad-pdf.html",
+      "sourceName": "Materia, Energía y Cambios - Ejercicios resueltos química pre universidad, Pregunta 1 (Clave: C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la relación correcta entre cambio de estado de agregación y proceso.\n\nI. Sublimación\nII. Fusión\nIII. Licuación\n\n( ) Formación del magma\n( ) Desaparición de una esfera de naftalina\n( ) Envasado de gas doméstico",
+      "alternatives": ["abc", "acb", "bac", "bca"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/materia-energia-y-cambios-ejercicios-resueltos-de-quimica-basica-pre-universidad-pdf.html",
+      "sourceName": "Materia, Energía y Cambios - Ejercicios resueltos química pre universidad, Pregunta 2 (Clave: D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estados de la materia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los cambios en el estado de agregación de la materia ocurren debido a una variación en la temperatura. Determine la secuencia correcta de verdadero (V) y falso (F).\n\nI. La formación de nubes se debe a un proceso de condensación.\nII. El hielo seco (CO2(s)) se obtiene por solidificación del CO2(g).\nIII. El magma se origina por la fusión de las rocas en el interior del planeta.",
+      "alternatives": ["VVV", "FVF", "VVF", "VFV", "VFF"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/materia-energia-y-cambios-ejercicios-resueltos-de-quimica-basica-pre-universidad-pdf.html",
+      "sourceName": "Materia, Energía y Cambios - Ejercicios resueltos química pre universidad, Pregunta 3 (Clave: A)"
+    }
+  ]
+}

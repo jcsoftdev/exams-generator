@@ -1,0 +1,48 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a la ley de gravitación universal, indique si la proposición es verdadera (V) o falsa (F).\n\nI. La fuerza que la Luna ejerce sobre una masa de 1 kg en un punto más cercano a la Luna y en un punto más alejado de esta son iguales.\nII. Las mareas que se producen en el mar se asocian con la presencia del Sol.\nIII. Las mareas que se producen en el mar se asocian con la presencia de la Luna.",
+      "alternatives": ["FFV", "FVF", "VVF", "VVV"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/gravitacion-universal-problemas.html",
+      "sourceName": "matematicasn - Gravitación Universal Problemas Resueltos, Pregunta 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Considera un planeta X que tiene la misma masa de la Tierra, pero la mitad del radio. El valor de la aceleración de la gravedad en la superficie del planeta X es:",
+      "alternatives": ["g/4", "g/2", "g", "2g", "4g"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/gravitacion-universal-problemas.html",
+      "sourceName": "matematicasn - Gravitación Universal Problemas Resueltos, Pregunta 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos cuerpos se atraen con una fuerza de 36 kN. ¿Con qué fuerza (en kN) se atraerán si la distancia se triplica y las masas se duplican?",
+      "alternatives": ["16", "18", "32", "6", "8"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/gravitacion-universal-problemas.html",
+      "sourceName": "matematicasn - Gravitación Universal Problemas Resueltos, Ejercicio 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Gravitación universal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos masas se atraen con una fuerza de 64 N. Si se cuadruplica la masa de uno de ellos y la del otro se triplica, además la distancia entre ellos se duplica, ¿cuál es la nueva fuerza (en N)?",
+      "alternatives": ["48", "96", "192", "384", "174"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/03/gravitacion-universal-problemas.html",
+      "sourceName": "matematicasn - Gravitación Universal Problemas Resueltos, Ejercicio 2"
+    }
+  ]
+}

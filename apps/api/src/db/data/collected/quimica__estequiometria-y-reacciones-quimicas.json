@@ -1,0 +1,83 @@
+{
+  "entries": [
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El cianuro de hidrógeno es un gas venenoso. La dosis letal es aproximadamente 300 mg por kg de aire inhalado y se produce por la reacción química\n\n2NaCN(s) + H2SO4(ac) -> Na2SO4(ac) + 2HCN(g)\n\n¿A qué tipo corresponde la reacción anterior?",
+      "alternatives": [
+        "doble sustitución",
+        "descomposición",
+        "desplazamiento simple",
+        "síntesis o adición",
+        "óxido - reducción"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/quimica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "Simulacro DECO San Marcos (UNMSM) - Química, pregunta 4"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las reacciones de combustión son utilizadas por la industria para obtener energía en forma de calor. Los hidrocarburos, como el metano, son utilizados según lo muestra la ecuación química:\n\nCH4(g) + O2(g) -> CO2(g) + H2O(v)   ΔH = -890 kJ/mol\n\nIndique el valor de verdad (V o F) de las siguientes proposiciones:\nI. Se producen 20 mol de agua con 50% de rendimiento a partir de 3,2x10^2 gramos iniciales de metano.\nII. Al 100% de rendimiento, al reaccionar 0,32 gramos de oxígeno se liberan 4,45 kJ de energía.\nIII. Si 0,8 mol de metano reacciona con 12,8 gramos de oxígeno, el metano es el reactivo en exceso.",
+      "alternatives": [
+        "FVF",
+        "VVF",
+        "VVV",
+        "VFV",
+        "FVV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-quimica-problemas-resueltos.html",
+      "sourceName": "San Marcos (UNMSM) Química problemas resueltos de admisión - pregunta 13"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál de las siguientes reacciones es una reacción de neutralización?",
+      "alternatives": [
+        "La reacción del ácido clorhídrico y el hidróxido de magnesio",
+        "La reacción del metano con el oxígeno",
+        "La reacción del calcio con el ácido clorhídrico"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.todamateria.com/ejercicios-de-reacciones-quimicas/",
+      "sourceName": "Toda Materia - Ejercicios de reacciones químicas, ejercicio 2"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Los productos de la reacción entre el oxígeno del aire y la parafina de una vela son:",
+      "alternatives": [
+        "Hidrógeno y agua",
+        "Dióxido de carbono y agua",
+        "Una sal y agua"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.todamateria.com/ejercicios-de-reacciones-quimicas/",
+      "sourceName": "Toda Materia - Ejercicios de reacciones químicas, ejercicio 3"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estequiometría y reacciones químicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál de las siguientes reacciones es del tipo de oxidación-reducción?",
+      "alternatives": [
+        "La reacción de nitrato de plata con ácido clorhídrico",
+        "La reacción del óxido de plomo con monóxido de carbono",
+        "La reacción del azúcar con el agua"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.todamateria.com/ejercicios-de-reacciones-quimicas/",
+      "sourceName": "Toda Materia - Ejercicios de reacciones químicas, ejercicio 8"
+    }
+  ]
+}

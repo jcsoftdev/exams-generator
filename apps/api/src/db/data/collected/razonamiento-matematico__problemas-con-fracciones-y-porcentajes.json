@@ -1,0 +1,1318 @@
+{
+  "entries": [
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una empresa consume el 40% de su materia prima disponible; lo que le queda excede en 57 kg a lo gastado. ¿Cuántos kilogramos de materia prima disponible tenía la empresa?",
+      "alternatives": [
+        "228",
+        "342",
+        "570",
+        "285",
+        "171"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Tanto por ciento ejercicios resueltos, Pregunta 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Del total de conferencistas, el 60% son mujeres. De ellas, el 30% disertan por primera vez; mientras que de los varones, el 50% lo hace por primera vez. El porcentaje de los conferencistas que disertan por primera vez es:",
+      "alternatives": [
+        "38%",
+        "42%",
+        "30%",
+        "45%",
+        "35%"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Tanto por ciento ejercicios resueltos, Pregunta 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una sala de emergencia se registra el 40% de personas enfermas por afección bronquial y el 60% de personas enfermas por accidente. De los que padecen afección bronquial el 10% están graves y de los accidentados el 5% están graves. ¿Qué porcentaje de personas están en la condición de graves?",
+      "alternatives": [
+        "15%",
+        "12%",
+        "17%",
+        "7%",
+        "10%"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Tanto por ciento ejercicios resueltos, Pregunta 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si el 80% del 50% de M es el 30% de N, ¿qué porcentaje de (2M + 7N) es (M + N)?",
+      "alternatives": [
+        "14.5%",
+        "20.5%",
+        "19.5%",
+        "20%",
+        "18%"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Tanto por ciento ejercicios resueltos, Pregunta 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una compañía trabajan 250 personas, donde el 80% son hombres. ¿Cuántas mujeres deben contratarse para que el 60% del personal sean mujeres?",
+      "alternatives": [
+        "200",
+        "250",
+        "120",
+        "240",
+        "350"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Tanto por ciento ejercicios resueltos, Pregunta 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "He jugado 450 partidas de solitario con una tasa de éxito del 80%. ¿Cuál es el mínimo número de partidas adicionales que debo jugar (ganándolas todas) para elevar mi tasa de éxito al 90%?",
+      "alternatives": [
+        "10",
+        "45",
+        "50",
+        "250",
+        "450"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Tanto por ciento ejercicios resueltos, Pregunta 6"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si gastara el 30% del dinero que tengo y ganara el 28% de lo que me quedaría, perdería 156 soles. ¿Cuánto tengo?",
+      "alternatives": [
+        "S/.1450",
+        "S/.1400",
+        "S/.1750",
+        "S/.1500",
+        "S/.1550"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Tanto por ciento ejercicios resueltos, Pregunta 10"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un boxeador debe retirarse cuando tenga un 90% de triunfos. Si hasta el momento ha peleado 100 veces y ha obtenido 85 victorias, ¿cuántas peleas como mínimo debe realizar (ganándolas todas) para poder retirarse?",
+      "alternatives": [
+        "50",
+        "35",
+        "48",
+        "52",
+        "30"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Tanto por ciento ejercicios resueltos, Pregunta 11"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una reunión se sabe que el 30% del número de hombres es igual al 40% del número de mujeres. ¿Qué porcentaje del total son hombres?",
+      "alternatives": [
+        "62%",
+        "53.5%",
+        "57.1%",
+        "82.5%",
+        "42%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Tanto por ciento ejercicios resueltos, Pregunta 12"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una ciudad, el 45% de la población fuma y el 40% bebe. Si el 20% de los que fuman también beben, ¿qué porcentaje de la población no fuma ni bebe?",
+      "alternatives": [
+        "5%",
+        "15%",
+        "30%",
+        "35%",
+        "24%"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Tanto por ciento ejercicios resueltos, Pregunta 14"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un colegio, el 40% de los alumnos son varones. A una excursión han ido el 20% de los varones y el 30% de las mujeres. ¿Qué porcentaje del total de alumnos salió de excursión?",
+      "alternatives": [
+        "30%",
+        "26%",
+        "38%",
+        "45%"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Tanto por ciento ejercicios resueltos, Pregunta 15"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un micro tiene 70 pasajeros, de los cuales el 70% están sentados. De las mujeres, el 80% está sentada y únicamente el 10% de los hombres. ¿Cuántos hombres viajan en el micro?",
+      "alternatives": [
+        "10",
+        "15",
+        "12",
+        "22"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Tanto por ciento ejercicios resueltos, Pregunta 17"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la UNMSM el 30% de los alumnos son mujeres. Si el 20% de las mujeres y el 30% de los hombres salen de paseo, ¿qué porcentaje de los alumnos de la UNMSM fue al paseo?",
+      "alternatives": [
+        "25%",
+        "27%",
+        "29%",
+        "31%",
+        "33%"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Tanto por ciento ejercicios resueltos, Pregunta 26"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "A una reunión, donde asisten hombres y mujeres, el 20% de las mujeres es igual al 30% de los hombres. ¿Qué porcentaje son hombres?",
+      "alternatives": [
+        "50%",
+        "30%",
+        "25%",
+        "40%",
+        "48%"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes problemas resueltos tipo examen de admisión, Problema 10"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tengo un vaso lleno de alcohol; bebo la sexta parte; luego bebo 1/4 de lo que queda. ¿Qué fracción de lo que queda debo volver a beber para que aún sobren los 3/8 del vaso?",
+      "alternatives": [
+        "2/3",
+        "2/5",
+        "1/6",
+        "1/3",
+        "1/5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/fracciones-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf - Fracciones problemas resueltos, Problema 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un comerciante gastó 3/7 de su capital y le quedan S/.360. ¿Cuánto era su capital?",
+      "alternatives": [
+        "S/.430",
+        "S/.530",
+        "S/.630",
+        "S/.480",
+        "S/.690"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/fracciones-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Fracciones ejercicios resueltos, Pregunta 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juan gasta 1/4 de su dinero, luego 1/5 de lo que queda y después 1/6 de lo que resta, quedándole S/.90. ¿Cuánto tenía al principio?",
+      "alternatives": [
+        "S/.80",
+        "S/.90",
+        "S/.100",
+        "S/.120",
+        "S/.160"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/fracciones-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Fracciones ejercicios resueltos, Pregunta 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un comerciante gasta 4/5 de su dinero y constata que si hubiera gastado 3/8, tendría 272 soles más. ¿Cuánto tenía?",
+      "alternatives": [
+        "S/.650",
+        "S/.600",
+        "S/.640",
+        "S/.630",
+        "S/.620"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/fracciones-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Fracciones ejercicios resueltos, Pregunta 14"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una pelota cae al suelo y se eleva cada vez a 1/3 de su altura anterior. Si cae desde 108 cm, ¿a qué altura llega tras el tercer rebote?",
+      "alternatives": [
+        "5 cm",
+        "4 cm",
+        "3 cm",
+        "9 cm",
+        "12 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/fracciones-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Fracciones ejercicios resueltos, Pregunta 11"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Paolo gasta 3/7 de su dinero, luego gana 1/4 de lo que le queda y finalmente pierde 1/3 de lo que tiene en ese momento, terminando con S/.120. ¿Cuánto tenía inicialmente?",
+      "alternatives": [
+        "S/.320",
+        "S/.240",
+        "S/.336",
+        "S/.252",
+        "S/.273"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/fracciones-12-preguntas-resueltos.html",
+      "sourceName": "matematicasn - Fracciones 12 preguntas resueltos, Problema 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Perdí 3/4 de mi dinero. Si hubiera perdido sólo 2/3 de lo que perdí, tendría S/.100 más. ¿Cuánto tengo actualmente?",
+      "alternatives": [
+        "S/.100",
+        "S/.500",
+        "S/.150",
+        "S/.250",
+        "S/.370"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/fracciones-12-preguntas-resueltos.html",
+      "sourceName": "matematicasn - Fracciones 12 preguntas resueltos, Problema 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En unas elecciones, un candidato obtuvo el 65% de los votos y ganó por 1500 votos de diferencia al otro candidato. ¿Cuántos votos se emitieron en total?",
+      "alternatives": [
+        "4000",
+        "4500",
+        "5000",
+        "5500"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes tipo examen de admisión, Problema 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula el 3/4% del 20% del 80% del 4/5% de 250 000.",
+      "alternatives": [
+        "2.4",
+        "3.6",
+        "3.5",
+        "3.2",
+        "1"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes tipo examen de admisión, Problema 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el descuento único equivalente a tres descuentos sucesivos del 20%.",
+      "alternatives": [
+        "51.2%",
+        "49.8%",
+        "48.8%",
+        "48.2%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes tipo examen de admisión, Problema 6"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La edad promedio del 40% de los asistentes a una reunión es de 40 años; la del 25% del resto es de 28 años. ¿Cuál es la edad promedio del resto, si la edad promedio total es de 31 años?",
+      "alternatives": [
+        "28 años",
+        "25 años",
+        "26 años",
+        "24 años",
+        "22 años"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes tipo examen de admisión, Problema 8"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De un tanque, extraigo el 30% de lo que no extraigo. De lo extraído, devuelvo al tanque el 50% de lo que no devuelvo. Si el tanque queda con 990 litros, ¿cuántos litros contenía inicialmente?",
+      "alternatives": [
+        "900",
+        "1260",
+        "1170",
+        "1100",
+        "1800"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes tipo examen de admisión, Problema 9"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un afiche rectangular tiene su ancho reducido en un 10% y su largo en un 30%. ¿Qué porcentaje del área original representa el área del afiche resultante?",
+      "alternatives": [
+        "45%",
+        "77%",
+        "63%",
+        "70%",
+        "56%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes tipo examen de admisión, Problema 12"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si gastara el 40% del dinero que tengo y ganara el 38% de lo que quedaría, perdería S/.5160. ¿Cuánto tengo?",
+      "alternatives": [
+        "S/.25 000",
+        "S/.32 000",
+        "S/.31 000",
+        "S/.30 000",
+        "S/.28 000"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes tipo examen de admisión, Problema 15"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una empresa trabajan 3600 personas. Si el 25% son mujeres, ¿cuántos hombres deben retirarse para que el porcentaje de mujeres aumente al 40%?",
+      "alternatives": [
+        "1530",
+        "900",
+        "1800",
+        "1350",
+        "1250"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes tipo examen de admisión, Problema 17"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un estanque se sembraron dos especies de peces A y B. Al año, la población de A aumentó un 20% y la de B disminuyó un 10%, resultando iguales. La razón entre la población inicial de A y la de B es:",
+      "alternatives": [
+        "1/2",
+        "3/4",
+        "5/6",
+        "8/9"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes tipo examen de admisión, Problema 18"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A una obra le falta el 40% de su ejecución. El tiempo de trabajo invertido supera en 26 días al tiempo cuando llevaba el 40% ejecutado. Manteniendo las mismas condiciones, ¿cuántos días dura en total la ejecución de la obra?",
+      "alternatives": [
+        "65",
+        "104",
+        "130",
+        "156"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes tipo examen de admisión, Problema 19"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un comerciante tiene 50 camisas. Vende cierta cantidad ganando el 30% y el resto perdiéndolo el 20%. Al final no ganó ni perdió. ¿Cuántas camisas vendió obteniendo ganancia?",
+      "alternatives": [
+        "30",
+        "15",
+        "35",
+        "20",
+        "25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes tipo examen de admisión, Problema 20"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si 2/3 de los miembros de un comité votaron sobre una medida, aprobada por 26 votos a favor y 24 en contra, ¿qué porcentaje del comité total votó a favor de la medida (a la unidad más próxima)?",
+      "alternatives": [
+        "35%",
+        "48%",
+        "52%",
+        "67%"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes tipo examen de admisión, Problema 23"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sean las cantidades positivas A, B y C. El producto de A y B es igual a C/4. Si A aumenta en un 60% y B disminuye en un 25%, ¿en qué porcentaje debe aumentar C para que se mantenga la igualdad?",
+      "alternatives": [
+        "En un 25%",
+        "En un 20%",
+        "En un 30%",
+        "En un 15%",
+        "En un 22%"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/porcentajes-problemas-resueltos-examen-admision.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes tipo examen de admisión, Problema 26 (UNMSM 2016-I)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De cierto número de problemas, Roberto resuelve el primer día 3/10 del total y en el segundo día resuelve 5/7 de lo que le faltaba resolver, lo que equivale a 50 problemas. ¿Cuántos problemas le faltan resolver?",
+      "alternatives": [
+        "20",
+        "30",
+        "50",
+        "10",
+        "15"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2016/02/examen-admision-san-marcos-2016-i.html",
+      "sourceName": "Blog del Profe Alex - Examen Admisión San Marcos 2016-I, Problema 12"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un club, 4/5 de los miembros son mujeres. De los hombres, 3/4 son casados. Si hay 10 hombres solteros, ¿cuántas mujeres hay en el club?",
+      "alternatives": [
+        "100",
+        "140",
+        "120",
+        "160",
+        "150"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://pdfcoffee.com/libro-preparate-beca-18-razonamiento-matematico-5-pdf-free.html",
+      "sourceName": "Libro Prepárate Beca 18 - Razonamiento Matemático (PRONABEC), Sesión 2 Problema 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Belisario gastó 2/3 de su presupuesto en comprar 20 pizarras y 1/3 de lo que le quedaba en marcadores. Si le quedan S/.1000, ¿cuánto costó cada pizarra?",
+      "alternatives": [
+        "S/.100",
+        "S/.120",
+        "S/.150",
+        "S/.200",
+        "S/.180"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://pdfcoffee.com/libro-preparate-beca-18-razonamiento-matematico-5-pdf-free.html",
+      "sourceName": "Libro Prepárate Beca 18 - Razonamiento Matemático (PRONABEC), Sesión 2 Reto 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un recipiente tenía chicles. Sara tomó la mitad; Ana tomó la mitad de lo que quedaba; Antonia tomó la mitad de lo que había. Quedaron 99 chicles. ¿Cuántos chicles había inicialmente?",
+      "alternatives": [
+        "396",
+        "1188",
+        "495",
+        "792",
+        "369"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://pdfcoffee.com/libro-preparate-beca-18-razonamiento-matematico-5-pdf-free.html",
+      "sourceName": "Libro Prepárate Beca 18 - Razonamiento Matemático (PRONABEC), Sesión 2 Reto 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Juan gastó sucesivamente 2/3, 3/5, 1/2 y 3/10 de lo que tenía en cada momento. Al final le quedaron S/.35. ¿Cuánto tenía inicialmente?",
+      "alternatives": [
+        "S/.1500",
+        "S/.150",
+        "S/.750",
+        "S/.350",
+        "S/.1050"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://pdfcoffee.com/libro-preparate-beca-18-razonamiento-matematico-5-pdf-free.html",
+      "sourceName": "Libro Prepárate Beca 18 - Razonamiento Matemático (PRONABEC), Sesión 2 Reto 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos barriles contienen 810 litros en total. Se extrae 2/9 del primero y 1/3 del segundo, quedando 176 litros más en el segundo. ¿Cuántos litros contenía el segundo barril?",
+      "alternatives": [
+        "261 L",
+        "342 L",
+        "459 L",
+        "558 L",
+        "324 L"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://pdfcoffee.com/libro-preparate-beca-18-razonamiento-matematico-5-pdf-free.html",
+      "sourceName": "Libro Prepárate Beca 18 - Razonamiento Matemático (PRONABEC), Sesión 2 Reto 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una cooperativa, 1/3 de los socios votó por el partido A, 1/6 por el B y 5/12 por el C; 60 votaron en blanco. ¿Cuántos socios votaron en total?",
+      "alternatives": [
+        "500",
+        "590",
+        "620",
+        "720",
+        "520"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://pdfcoffee.com/libro-preparate-beca-18-razonamiento-matematico-5-pdf-free.html",
+      "sourceName": "Libro Prepárate Beca 18 - Razonamiento Matemático (PRONABEC), Sesión 2 Reto 6"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lucas gasta 2/3 de su dinero, luego 3/5 de lo que queda, y finalmente 3/4 de lo que resta. ¿Qué fracción del total gastó?",
+      "alternatives": [
+        "1/30",
+        "3/10",
+        "29/30",
+        "7/10",
+        "30/29"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://pdfcoffee.com/libro-preparate-beca-18-razonamiento-matematico-5-pdf-free.html",
+      "sourceName": "Libro Prepárate Beca 18 - Razonamiento Matemático (PRONABEC), Sesión 2 Problema 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un comerciante compra 15 piezas de tela de 30 m cada una a S/.257,6 el metro y quiere obtener un beneficio total del 25% del precio de compra. Ha vendido ya 270 m a S/.230 el metro. ¿A cuánto debe vender el metro de la tela que le queda para obtener el beneficio propuesto?",
+      "alternatives": [
+        "S/.350",
+        "S/.380",
+        "S/.400",
+        "S/.460"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "razonamientopdf - Tanto por ciento ejercicios resueltos, Problema aplicado 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Dos amigos pagaron una cena, uno cubriendo el 40% y el otro el 60% del gasto. En agradecimiento, Pirulo los premió con una fuente de cebiche para los dos. ¿Qué tanto por ciento de la fuente le correspondió al primero?",
+      "alternatives": [
+        "40%",
+        "50%",
+        "20%",
+        "60%",
+        "10%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "razonamientopdf - Tanto por ciento ejercicios resueltos, Problema aplicado 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A Mágaly, al comprar una blusa, debían hacerle un descuento del 20%; a Carmen, al comprar un pantalón, del 10%. El vendedor los aplicó al revés: Mágaly pagó S/.2 más y Carmen pagó S/.5 menos. ¿Cuál es la diferencia entre lo que pagaron Carmen y Mágaly?",
+      "alternatives": [
+        "S/.20",
+        "S/.22",
+        "S/.25",
+        "S/.29",
+        "S/.30"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "razonamientopdf - Tanto por ciento ejercicios resueltos, Problema aplicado 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si gastara el 30% de lo que tengo, me quedaría con $63. ¿Cuánto tengo?",
+      "alternatives": [
+        "67",
+        "90",
+        "63",
+        "80",
+        "60"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://razonamiento-matematico-problemas.blogspot.com/2013/01/porcentajes-ejercicios-con-solucion.html",
+      "sourceName": "razonamiento-matematico-problemas blog - Porcentajes ejercicios con solución, Problema 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tres aumentos sucesivos del 20%, 10% y 100%, ¿a qué aumento único equivalen?",
+      "alternatives": [
+        "150%",
+        "130%",
+        "164%",
+        "133%",
+        "159%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "http://razonamiento-matematico-problemas.blogspot.com/2013/01/porcentajes-ejercicios-con-solucion.html",
+      "sourceName": "razonamiento-matematico-problemas blog - Porcentajes ejercicios con solución, Problema 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si vendiera el 36% de los televisores que tengo, me quedarían 2640. ¿Cuántos televisores tengo en total?",
+      "alternatives": [
+        "5280",
+        "1320",
+        "5670",
+        "4125",
+        "4690"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://razonamiento-matematico-problemas.blogspot.com/2013/01/porcentajes-ejercicios-con-solucion.html",
+      "sourceName": "razonamiento-matematico-problemas blog - Porcentajes ejercicios con solución, Problema 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la base de un triángulo aumenta en 40% y su altura disminuye en 20%, ¿en qué porcentaje aumenta su área?",
+      "alternatives": [
+        "8%",
+        "10%",
+        "9%",
+        "12%",
+        "11%"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://razonamiento-matematico-problemas.blogspot.com/2013/01/porcentajes-ejercicios-con-solucion.html",
+      "sourceName": "razonamiento-matematico-problemas blog - Porcentajes ejercicios con solución, Problema 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Julián vende un artefacto eléctrico en $792, perdiendo el 12% del costo. ¿En cuánto debería haberlo vendido para ganar el 8% del costo?",
+      "alternatives": [
+        "$900",
+        "$960",
+        "$982",
+        "$972",
+        "$890"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://razonamiento-matematico-problemas.blogspot.com/2013/01/porcentajes-ejercicios-con-solucion.html",
+      "sourceName": "razonamiento-matematico-problemas blog - Porcentajes ejercicios con solución, Problema 6"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un salón de clases, el número de varones es el 60% del total de las mujeres. Si el 75% de los varones se van de paseo con el 40% de las mujeres, ¿qué porcentaje de los varones que se quedaron constituyen el 10% de las mujeres que no fueron al paseo?",
+      "alternatives": [
+        "35%",
+        "25%",
+        "30%",
+        "45%",
+        "40%"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "http://razonamiento-matematico-problemas.blogspot.com/2013/01/porcentajes-ejercicios-con-solucion.html",
+      "sourceName": "razonamiento-matematico-problemas blog - Porcentajes ejercicios con solución, Problema 7"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿El 20% de qué número es 22?",
+      "alternatives": [
+        "100",
+        "105",
+        "110",
+        "115",
+        "120"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "razonamientopdf - Tanto por ciento ejercicios resueltos, Ejercicio 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuánto es el 20% más del 20% menos de 50?",
+      "alternatives": [
+        "50",
+        "48",
+        "52",
+        "46"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "razonamientopdf - Tanto por ciento ejercicios resueltos, Ejercicio 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la base de un rectángulo disminuye en un 20% y la altura en un 10%, ¿en qué porcentaje disminuye su área?",
+      "alternatives": [
+        "30%",
+        "15%",
+        "28%",
+        "14%",
+        "24%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/tanto-por-ciento-ejercicios-resueltos.html",
+      "sourceName": "razonamientopdf - Tanto por ciento ejercicios resueltos, Ejercicio 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Elías compra la mitad de un rollo de alambre menos 12 metros; Edu compra un tercio del mismo rollo más 4 metros, con lo cual recibe 8 metros menos que Elías. ¿Cuántos metros compra Elías?",
+      "alternatives": [
+        "52",
+        "60",
+        "72",
+        "44",
+        "50"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/fracciones-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj - Fracciones ejercicios resueltos, Problema 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un jugador, después de perder consecutivamente los 4/5 de su dinero, 2/7 del resto y 4/11 del nuevo resto, gana $429 y de esa manera la pérdida queda reducida a 1/5 del dinero original. ¿Cuál es su fortuna inicial?",
+      "alternatives": [
+        "$700",
+        "$600",
+        "$605",
+        "$701",
+        "$729"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/fracciones-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj - Fracciones ejercicios resueltos, Problema 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un jugador tiene S/.432 y en tres juegos sucesivos apuesta en cada uno 1/2 de lo que tiene y pierde 1/3 de lo que apostó. ¿Cuánto perdió en total?",
+      "alternatives": [
+        "S/.181",
+        "S/.186",
+        "S/.182",
+        "S/.1000",
+        "S/.196"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/fracciones-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj - Fracciones ejercicios resueltos, Problema 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cilindro se encuentra lleno hasta sus 5/6 partes. Se consumen 3/8 del líquido que contiene. ¿Qué fracción de la capacidad total representa la parte vacía del cilindro?",
+      "alternatives": [
+        "23/48",
+        "25/48",
+        "5/16",
+        "11/24",
+        "13/48"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/fracciones-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicaj - Fracciones ejercicios resueltos, Problema 6"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El 20% de 40% de 700 es:",
+      "alternatives": [
+        "72",
+        "56",
+        "13",
+        "80",
+        "24"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/porcentajes-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Porcentajes ejercicios resueltos secundaria, Pregunta 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En IBM Perú trabajan 420 personas y el 80% son varones. ¿Cuántas mujeres deben contratarse para que el 30% del total sea femenino?",
+      "alternatives": [
+        "50",
+        "52",
+        "58",
+        "60",
+        "75"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/porcentajes-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Porcentajes ejercicios resueltos secundaria, Pregunta 13"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un artículo cuesta S/.480. Se vende con una ganancia del 20% sobre el costo. ¿Cuál es el precio de venta?",
+      "alternatives": [
+        "S/.570",
+        "S/.580",
+        "S/.560",
+        "S/.576",
+        "S/.592"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/porcentajes-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Porcentajes ejercicios resueltos secundaria, Pregunta 15"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos artículos se venden en $720 cada uno. Uno con una ganancia del 20% sobre su costo y el otro con una pérdida del 20% sobre su costo. ¿Hubo ganancia o pérdida global?",
+      "alternatives": [
+        "Ganó $60",
+        "Perdió $60",
+        "Ganó $80",
+        "Perdió $80",
+        "Ni ganó ni perdió"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/porcentajes-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Porcentajes ejercicios resueltos secundaria, Pregunta 18"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿A qué precio de lista debe fijarse un artículo de costo S/.50 para que, tras un descuento del 20%, se obtenga una ganancia del 30%?",
+      "alternatives": [
+        "S/.55",
+        "S/.78",
+        "S/.81.25",
+        "S/.85.50",
+        "S/.80.20"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/porcentajes-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Porcentajes ejercicios resueltos secundaria, Pregunta 19"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El 72% de un número es 126. ¿Cuánto es ese número?",
+      "alternatives": [
+        "160",
+        "165",
+        "170",
+        "175",
+        "180"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/09/tanto-por-ciento-ejemplos-resueltos-de-razonamiento-matematico-de-secundaria-en-pdf.html",
+      "sourceName": "algebraenpdf - Tanto por ciento ejemplos resueltos, Problema 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcular el 20% del 30% del 10% de 2000.",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/09/tanto-por-ciento-ejemplos-resueltos-de-razonamiento-matematico-de-secundaria-en-pdf.html",
+      "sourceName": "algebraenpdf - Tanto por ciento ejemplos resueltos, Problema 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tirador, para ganar una medalla, tiene que acertar el 80% de los disparos. Hasta el momento acertó 12 tiros y falló 8; si le quedan x disparos y finalmente obtuvo la medalla acertando en total el porcentaje requerido, calcular x.",
+      "alternatives": [
+        "7",
+        "20",
+        "16",
+        "13",
+        "9"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/09/tanto-por-ciento-ejemplos-resueltos-de-razonamiento-matematico-de-secundaria-en-pdf.html",
+      "sourceName": "algebraenpdf - Tanto por ciento ejemplos resueltos, Problema 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El 20% menos de A es igual al 2% más de B. Si A + B = 546, halla A – B.",
+      "alternatives": [
+        "21",
+        "132",
+        "72",
+        "66",
+        "54"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/09/tanto-por-ciento-ejemplos-resueltos-de-razonamiento-matematico-de-secundaria-en-pdf.html",
+      "sourceName": "algebraenpdf - Tanto por ciento ejemplos resueltos, Problema 6"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juan ha gastado el 40% de sus ahorros para comprarse bombones y ha dado a su hermana el 30% de lo que le queda. ¿Qué porcentaje de sus ahorros conserva?",
+      "alternatives": [
+        "30%",
+        "18%",
+        "35%",
+        "50%",
+        "42%"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/05/razonamiento-matematico-problemas_24.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes nivel 2, Problema 7"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Tres personas se reparten una herencia: el primero hereda el 45%, el segundo el 60% de lo del primero y el tercero 1/3 de lo del segundo. Si quedó un saldo de S/.38 000, ¿cuánto es la herencia total?",
+      "alternatives": [
+        "S/.243 000",
+        "S/.81 000",
+        "S/.120 000",
+        "S/.200 000",
+        "S/.240 000"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/05/razonamiento-matematico-problemas_24.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes nivel 2, Problema 6"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si 20 litros de agua contienen 15% de sal, ¿qué cantidad de agua se debe evaporar para que la nueva solución contenga 20% de sal?",
+      "alternatives": [
+        "6 L",
+        "4 L",
+        "5 L",
+        "3 L"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/05/razonamiento-matematico-problemas_24.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes nivel 1, Problema 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un depósito contiene 20 litros que equivalen al 25% de su capacidad. ¿Cuántos litros se deben agregar para que el depósito llegue al 30% de su capacidad?",
+      "alternatives": [
+        "4 litros",
+        "24 litros",
+        "40 litros",
+        "60 litros"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/05/razonamiento-matematico-problemas_24.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes nivel 1, Problema 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué tanto por ciento de 1/3 es 1/4?",
+      "alternatives": [
+        "24%",
+        "60%",
+        "75%",
+        "120%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/05/razonamiento-matematico-problemas_24.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes nivel 1, Problema 6"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si gastara el 40% del dinero que tengo y ganara el 18% de lo que me quedaría, perdería 292 soles. ¿Cuánto tengo?",
+      "alternatives": [
+        "1910",
+        "9120",
+        "1920",
+        "1000",
+        "2920"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/05/razonamiento-matematico-problemas_24.html",
+      "sourceName": "Blog del Profe Alex - Porcentajes nivel 2, Problema 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una librería vende primero las 3/5 partes de sus libros y luego le hacen un pedido de los 7/8 de lo que le queda. Si finalmente le quedan 30 libros, ¿cuántos libros vendió en total?",
+      "alternatives": [
+        "2000",
+        "3000",
+        "1760",
+        "3520",
+        "2240"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/fracciones-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf - Fracciones problemas resueltos, Problema 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una piscina llena hasta sus 3/4 partes pesa 3000 kg, pero llena hasta su quinta parte pesa 1900 kg. ¿Cuánto pesa el recipiente completamente lleno?",
+      "alternatives": [
+        "3600 kg",
+        "3400 kg",
+        "3300 kg",
+        "3200 kg",
+        "3500 kg"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2009/09/problemas-resueltos-fracciones.html",
+      "sourceName": "Blog del Profe Alex - Problemas resueltos fracciones, Problema intermedio 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una piscina está llena hasta sus 3/4 partes. Si se sacaran 3000 litros, quedaría llena hasta la mitad. ¿Cuántos litros le faltan a la piscina para llenarse?",
+      "alternatives": [
+        "6000",
+        "5000",
+        "7000",
+        "8000",
+        "2000"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2009/09/problemas-resueltos-fracciones.html",
+      "sourceName": "Blog del Profe Alex - Problemas resueltos fracciones, Problema 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si una persona gasta las 3/5 partes de su sueldo mensual cuando han transcurrido las 2/3 partes del mes, ¿con qué fracción de su sueldo se quedará al final del mes (manteniendo el mismo ritmo de gasto)?",
+      "alternatives": [
+        "1/20",
+        "1/10",
+        "1/5",
+        "9/10",
+        "11/12"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2009/09/problemas-resueltos-fracciones.html",
+      "sourceName": "Blog del Profe Alex - Problemas resueltos fracciones, Examen admisión Pregunta 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Problemas con Fracciones y Porcentajes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De un tonel que contiene 80 litros de vino se sacan 20 litros y se reemplazan por agua. Se repite la misma operación por segunda y tercera vez. ¿Qué cantidad de vino queda en el tonel después de la tercera operación?",
+      "alternatives": [
+        "37.12 L",
+        "35.78 L",
+        "23.12 L",
+        "32.69 L",
+        "33.75 L"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2009/09/problemas-resueltos-fracciones.html",
+      "sourceName": "Blog del Profe Alex - Problemas resueltos fracciones, Examen admisión Pregunta 2"
+    }
+  ]
+}

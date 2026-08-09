@@ -1,0 +1,820 @@
+{
+  "entries": [
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Dos números se diferencian en 5 unidades y su producto es 150. Halle la suma de cifras del mayor de dichos números.",
+      "alternatives": [
+        "1",
+        "3",
+        "4",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Ejercicios Resueltos (Multiplicación, Práctica N.º 1)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El producto de dos números es 80 y su suma es 21. Calcule la diferencia de dichos números.",
+      "alternatives": [
+        "9",
+        "11",
+        "13",
+        "15",
+        "17"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Ejercicios Resueltos (Multiplicación, Práctica N.º 2)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El producto de tres números enteros consecutivos es 720. Halle la suma de dichos números.",
+      "alternatives": [
+        "15",
+        "18",
+        "27",
+        "24",
+        "21"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Ejercicios Resueltos (Multiplicación, Práctica N.º 3)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una multiplicación, el multiplicador es 25. Si el multiplicando disminuye en 8 unidades y el multiplicador aumenta en 5 unidades, el producto no varía. Halle la suma de cifras del multiplicando.",
+      "alternatives": [
+        "6",
+        "9",
+        "12",
+        "15",
+        "18"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Ejercicios Resueltos (Multiplicación, Práctica N.º 4)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una multiplicación, si el multiplicando aumenta en 15 unidades, el producto aumenta en 420. Halle el multiplicador inicial.",
+      "alternatives": [
+        "24",
+        "49",
+        "21",
+        "28",
+        "32"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Ejercicios Resueltos (Multiplicación, Práctica N.º 5)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un producto de dos factores, uno de ellos disminuye en 30 unidades y el producto disminuye en 10 830. Halle la suma de cifras del otro factor.",
+      "alternatives": [
+        "9",
+        "10",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Ejercicios Resueltos (Multiplicación, Práctica N.º 6)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Al dividir un número N entre 18 se obtiene como cociente 13 y el máximo residuo posible. Halle N.",
+      "alternatives": [
+        "234",
+        "253",
+        "196",
+        "324",
+        "251"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Ejercicios Resueltos (División, Práctica N.º 1)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos números es 310. Al dividir el mayor entre el menor se obtiene cociente 3 y residuo 30. Halle la diferencia de dichos números.",
+      "alternatives": [
+        "170",
+        "160",
+        "150",
+        "140",
+        "130"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Ejercicios Resueltos (División, Práctica N.º 2)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos números es 94. Al dividir uno entre el otro se obtiene cociente 9 y residuo 4. Halle el número mayor.",
+      "alternatives": [
+        "85",
+        "94",
+        "84",
+        "68",
+        "86"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Ejercicios Resueltos (División, Práctica N.º 3)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división, el dividendo N cumple que 70 ≤ N ≤ 120, el cociente es la quinta parte del residuo y el divisor es 20. Halle N.",
+      "alternatives": [
+        "100",
+        "110",
+        "112",
+        "118",
+        "75"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Ejercicios Resueltos (División, Práctica N.º 4)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división inexacta, la suma de los cuatro términos es 544. El cociente es 12 y el residuo es la mitad del divisor. Halle el residuo.",
+      "alternatives": [
+        "8",
+        "19",
+        "12",
+        "16",
+        "23"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Ejercicios Resueltos (División, Práctica N.º 6)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El producto de dos números impares es 925. Al dividir el mayor entre el menor se obtiene cociente 1 y residuo 12. Indique dichos números.",
+      "alternatives": [
+        "25 y 35",
+        "35 y 39",
+        "35 y 41",
+        "25 y 37",
+        "27 y 37"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Ejercicios Resueltos (División, Práctica N.º 7)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división, el cociente es 43 y el residuo es 27. Al agregar 108 al dividendo, el cociente aumenta en 3 y el residuo disminuye en 12. Halle la suma de cifras del dividendo original.",
+      "alternatives": [
+        "23",
+        "22",
+        "21",
+        "20",
+        "19"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Ejercicios Resueltos (División, Práctica N.º 13)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se han multiplicado dos números pares consecutivos resultando 360. La suma de los números es:",
+      "alternatives": [
+        "36",
+        "34",
+        "38",
+        "32",
+        "30"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "Multiplicación Aritmética - Ejercicios Resueltos (Práctica I, Ejercicio 1)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se han multiplicado dos números impares consecutivos resultando 399. La suma de los números es:",
+      "alternatives": [
+        "40",
+        "42",
+        "38",
+        "44",
+        "36"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "Multiplicación Aritmética - Ejercicios Resueltos (Práctica I, Ejercicio 2)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se dan para multiplicar 13 y 20. Si se aumenta el multiplicando en 5, el producto aumenta en:",
+      "alternatives": [
+        "5",
+        "20",
+        "100",
+        "140",
+        "25"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "Multiplicación Aritmética - Ejercicios Resueltos (Práctica I, Ejercicio 3)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se dan para multiplicar 31 y 27. Si se disminuye el multiplicador en 6, el producto disminuye en:",
+      "alternatives": [
+        "180",
+        "186",
+        "192",
+        "174",
+        "198"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "Multiplicación Aritmética - Ejercicios Resueltos (Práctica I, Ejercicio 4)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El multiplicador de una multiplicación es igual a 57 y el producto es 1026. Halla el multiplicando.",
+      "alternatives": [
+        "10",
+        "15",
+        "18",
+        "20",
+        "25"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "Multiplicación Aritmética - Ejercicios Resueltos (Práctica Básica, Ejercicio 1)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El multiplicando de una multiplicación es igual a 8 y el producto es igual a 120. Halla el multiplicador.",
+      "alternatives": [
+        "5",
+        "10",
+        "15",
+        "20",
+        "25"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "Multiplicación Aritmética - Ejercicios Resueltos (Práctica Básica, Ejercicio 2)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de los términos de una multiplicación es igual a 349. Si el multiplicando y el multiplicador aumentan en uno, el producto aumentará en 38. Halle la diferencia entre el multiplicando y el multiplicador.",
+      "alternatives": [
+        "14",
+        "12",
+        "10",
+        "5",
+        "11"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "Multiplicación Aritmética - Ejercicios Resueltos (Práctica Propuesta, Problema 1)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El multiplicador de una multiplicación es 1/12 del multiplicando. Cuando ambos se aumentan en 4, el producto aumenta en 1212. ¿Cuál es el multiplicando?",
+      "alternatives": [
+        "276",
+        "101",
+        "240",
+        "296",
+        "202"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/multiplicacion-aritmetica-problemas.html",
+      "sourceName": "Multiplicación Aritmética - Ejercicios Resueltos (Práctica Propuesta, Problema 12)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La suma de los términos de una sustracción es 1000 y el sustraendo es la quinta parte del minuendo. Hallar el complemento aritmético de la diferencia.",
+      "alternatives": [
+        "400",
+        "600",
+        "500",
+        "150",
+        "450"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sustraccion-aritmetica-problemas-con.html",
+      "sourceName": "Sustracción Aritmética - Problemas Resueltos Preuniversitarios (Problema 1)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Hallar la suma del minuendo y la diferencia de una sustracción, cuya suma de términos es 800 y el minuendo es el óctuplo del sustraendo.",
+      "alternatives": [
+        "700",
+        "850",
+        "650",
+        "750",
+        "450"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sustraccion-aritmetica-problemas-con.html",
+      "sourceName": "Sustracción Aritmética - Problemas Resueltos Preuniversitarios (Problema 2)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un número de cuatro cifras es tal que al restarle su complemento aritmético resulta 5256. Hallar la suma de sus cifras.",
+      "alternatives": [
+        "20",
+        "22",
+        "14",
+        "23",
+        "25"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sustraccion-aritmetica-problemas-con.html",
+      "sourceName": "Sustracción Aritmética - Problemas Resueltos Preuniversitarios (Problema 4)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar 2 números de 3 cifras cada una, sabiendo que suman 1019 y que el complemento aritmético de uno de ellos es el doble del complemento aritmético del otro. Dar la suma de cifras del mayor.",
+      "alternatives": [
+        "15",
+        "16",
+        "17",
+        "18",
+        "19"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sustraccion-aritmetica-problemas-con.html",
+      "sourceName": "Sustracción Aritmética - Problemas Resueltos Preuniversitarios (Problema 5)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si sumamos el complemento aritmético de un número de dos cifras con el complemento aritmético de su duplo y el complemento aritmético de su triple, se obtiene 1650. Calcular la suma de las cifras de dicho número.",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "15"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sustraccion-aritmetica-problemas-con.html",
+      "sourceName": "Sustracción Aritmética - Problemas Resueltos Preuniversitarios (Problema 7)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El minuendo y sustraendo de una sustracción suman 3527. La diferencia es un número de 3 cifras que suman 11 y el sustraendo es el menor posible. ¿Cuánto suman las cifras del minuendo?",
+      "alternatives": [
+        "10",
+        "11",
+        "14",
+        "17",
+        "19"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sustraccion-aritmetica-problemas-con.html",
+      "sourceName": "Sustracción Aritmética - Problemas Resueltos Preuniversitarios (Problema 9)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La suma de los números de dos cifras diferentes que se pueden formar con tres cifras consecutivas es igual a 396. Hallar el mayor de los números.",
+      "alternatives": [
+        "86",
+        "65",
+        "87",
+        "98",
+        "76"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/adicion-y-sustraccion-aritmetica.html",
+      "sourceName": "Adición y Sustracción Aritmética - Ejercicios Resueltos (Problema 1)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La suma de los 3 términos de una resta es 6 veces el sustraendo. Si la diferencia es 42, hallar el minuendo.",
+      "alternatives": [
+        "57",
+        "48",
+        "72",
+        "60",
+        "63"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/adicion-y-sustraccion-aritmetica.html",
+      "sourceName": "Adición y Sustracción Aritmética - Ejercicios Resueltos (Problema 2)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si la suma de los elementos de una sustracción es igual a 840, en donde el minuendo es el triple del sustraendo. Hallar la suma de cifras de la diferencia.",
+      "alternatives": [
+        "9",
+        "8",
+        "6",
+        "10",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/adicion-y-sustraccion-aritmetica.html",
+      "sourceName": "Adición y Sustracción Aritmética - Ejercicios Resueltos (Problema 3)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La suma de los tres términos de una resta es 1200 y el sustraendo es la cuarta parte del minuendo. Hallar el complemento aritmético de la diferencia.",
+      "alternatives": [
+        "450",
+        "500",
+        "550",
+        "650",
+        "850"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/adicion-y-sustraccion-aritmetica.html",
+      "sourceName": "Adición y Sustracción Aritmética - Problemas Resueltos PDF (Problema 1)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La suma de los tres términos de una resta es 6 veces el sustraendo. Si la diferencia es 34, hallar el minuendo.",
+      "alternatives": [
+        "63",
+        "42",
+        "48",
+        "51",
+        "57"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/adicion-y-sustraccion-aritmetica.html",
+      "sourceName": "Adición y Sustracción Aritmética - Problemas Resueltos PDF (Problema 2)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La diferencia de dos números es 158. Si el minuendo disminuye en 33 unidades, entonces la diferencia aumenta en 17. ¿Cómo varió el sustraendo?",
+      "alternatives": [
+        "aumentó 41",
+        "disminuyó 50",
+        "aumentó 39",
+        "disminuyó 40",
+        "no varió"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/adicion-y-sustraccion-aritmetica.html",
+      "sourceName": "Adición y Sustracción Aritmética - Problemas Resueltos PDF (Problema 5)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de dos números excede a la diferencia de los mismos en 256. Si los números están en relación de 45 a 20, hallar el mayor.",
+      "alternatives": [
+        "270",
+        "260",
+        "273",
+        "288",
+        "279"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/adicion-y-sustraccion-aritmetica.html",
+      "sourceName": "Adición y Sustracción Aritmética - Problemas Resueltos PDF (Problema 8)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La suma de términos de una sustracción es 700. Hallar el sustraendo si es la quinta parte del minuendo.",
+      "alternatives": [
+        "60",
+        "70",
+        "81",
+        "72",
+        "69"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/sustraccion-aritmetica-problemas.html",
+      "sourceName": "Sustracción Aritmética - Ejercicios Resueltos PDF (Ejercicio 5)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si la suma del minuendo, sustraendo y diferencia es igual a 18, halla el valor del minuendo.",
+      "alternatives": [
+        "5",
+        "7",
+        "9",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/sustraccion-aritmetica-problemas.html",
+      "sourceName": "Sustracción Aritmética - Ejercicios Resueltos PDF (Ejercicio 1)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si la suma del minuendo, sustraendo y diferencia es igual a 84, halla el valor del minuendo.",
+      "alternatives": [
+        "20",
+        "24",
+        "42",
+        "21",
+        "19"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/sustraccion-aritmetica-problemas.html",
+      "sourceName": "Sustracción Aritmética - Ejercicios Resueltos PDF (Ejercicio 2)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La suma de dos números es 43. Al dividir el mayor entre el menor se obtiene cociente 2 y residuo 7. Hallar el número mayor.",
+      "alternatives": [
+        "31",
+        "30",
+        "32",
+        "33",
+        "29"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "División Aritmética - Ejercicios Resueltos PDF (Práctica Básica, Problema 7)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En una división exacta, la suma de los términos es 39 y el dividendo es nueve veces el divisor. Calcular el dividendo.",
+      "alternatives": [
+        "12",
+        "27",
+        "24",
+        "26",
+        "36"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "División Aritmética - Ejercicios Resueltos PDF (Práctica Básica, Problema 8)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En una división, el divisor es 31, el cociente es 12 y el residuo es 7. Hallar el dividendo.",
+      "alternatives": [
+        "379",
+        "362",
+        "327",
+        "351",
+        "328"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "División Aritmética - Ejercicios Resueltos PDF (Práctica Propuesta, Problema 1)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división, el residuo por defecto es 7 y el residuo por exceso es 13. El cociente es igual a la mitad del divisor. Calcular el dividendo.",
+      "alternatives": [
+        "200",
+        "207",
+        "213",
+        "193",
+        "187"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "División Aritmética - Ejercicios Resueltos PDF (Práctica Básica, Problema 3)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división, el cociente es 37 y el residuo es 19. Al agregar 157 al dividendo, el cociente aumenta en 8 y el residuo disminuye en 11. Hallar la suma de cifras del dividendo original.",
+      "alternatives": [
+        "22",
+        "13",
+        "18",
+        "17",
+        "9"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "División Aritmética - Ejercicios Resueltos PDF (Práctica Propuesta, Problema 16)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división, el divisor es 47, el cociente es 9 y el residuo es el máximo posible. Hallar el dividendo.",
+      "alternatives": [
+        "401",
+        "412",
+        "469",
+        "471",
+        "482"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "División Aritmética - Ejercicios Resueltos PDF (Práctica Propuesta, Problema 2)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división, el residuo máximo es 56 y el cociente es un tercio del divisor. Hallar el dividendo.",
+      "alternatives": [
+        "1402",
+        "1139",
+        "1024",
+        "1351",
+        "1301"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "División Aritmética - Ejercicios Resueltos PDF (Práctica Propuesta, Problema 5)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una división el cociente es 4 y el residuo es 3. Al agregar 4 al dividendo, el cociente aumenta en 1 y el residuo se hace cero. Hallar el dividendo.",
+      "alternatives": [
+        "24",
+        "32",
+        "31",
+        "43",
+        "57"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/10/division-aritmetica-problemas-resueltos.html",
+      "sourceName": "División Aritmética - Ejercicios Resueltos PDF (Práctica Propuesta, Problema 6)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La diferencia de dos números es 192. Si el cociente es 4 y el residuo es 24, hallar la suma de los números e indicar el dígito de mayor orden de dicho resultado.",
+      "alternatives": [
+        "4",
+        "5",
+        "3",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamiento-matematico-problemas.blogspot.com/2021/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Problemas Resueltos (Problema 01, segunda serie)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si al dividendo de una división se le agregan 72 unidades, el cociente y el residuo aumentan en 6 unidades. Hallar el divisor.",
+      "alternatives": [
+        "12",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamiento-matematico-problemas.blogspot.com/2021/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Problemas Resueltos (Problema 02, segunda serie)"
+    },
+    {
+      "courseName": "Aritmética",
+      "topicName": "Operaciones Fundamentales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El producto de dos números es 3500. Si al multiplicador se le agregan 15 unidades, el nuevo producto resulta 4250. Calcular la suma de dichos números.",
+      "alternatives": [
+        "110",
+        "120",
+        "130",
+        "140",
+        "160"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamiento-matematico-problemas.blogspot.com/2021/01/cuatro-operaciones-problemas-resueltos.html",
+      "sourceName": "Cuatro Operaciones - Problemas Resueltos (Problema 03, segunda serie)"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "entries": [
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Determina el número de triángulos en el que queda dividido un dodecágono regular, al trazar sus diagonales desde un solo vértice.",
+      "alternatives": ["10", "14", "15", "12", "16"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/conteo-de-figuras-formulas-y-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com - Conteo de Figuras: Fórmulas y Ejemplos, Pregunta 12 (clave A)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un paralelogramo ABCD se trazan internamente 4 segmentos paralelos al lado AB y 4 segmentos paralelos al lado BC. ¿Cuál es el número total de paralelogramos que se pueden contar en la figura?",
+      "alternatives": ["100", "144", "169", "225", "230"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/conteo-de-figuras-formulas-y-ejemplos.html",
+      "sourceName": "matematicasn.blogspot.com - Conteo de Figuras: Fórmulas y Ejemplos, Problema 10 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Hallar el número máximo de puntos de corte de 6 rectas secantes.",
+      "alternatives": ["12", "13", "15", "17", "6"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/02/intersecciones-cortes-ejercicios.html",
+      "sourceName": "geometriapdf.blogspot.com - Intersección de Figuras y Número de Puntos de Corte, Problema 1 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Hallar el número máximo de puntos de corte de 7 rectas secantes.",
+      "alternatives": ["19", "21", "23", "25", "17"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/02/intersecciones-cortes-ejercicios.html",
+      "sourceName": "geometriapdf.blogspot.com - Intersección de Figuras y Número de Puntos de Corte, Problema 2 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿En cuántos puntos cortará una recta secante a 10 rectas paralelas?",
+      "alternatives": ["8", "10", "11", "12", "13"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/02/intersecciones-cortes-ejercicios.html",
+      "sourceName": "geometriapdf.blogspot.com - Intersección de Figuras y Número de Puntos de Corte, Problema 7 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el mínimo número de puntos de corte entre seis rectas secantes.",
+      "alternatives": ["6", "5", "3", "2", "1"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/02/intersecciones-cortes-ejercicios.html",
+      "sourceName": "geometriapdf.blogspot.com - Intersección de Figuras y Número de Puntos de Corte, Problema 8 (clave E)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Hallar el número máximo de puntos de corte de 4 rectas secantes.",
+      "alternatives": ["2", "4", "6", "8", "3"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/02/intersecciones-cortes-ejercicios.html",
+      "sourceName": "geometriapdf.blogspot.com - Intersección de Figuras y Número de Puntos de Corte, Problema 10 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Hallar el número máximo de puntos de corte de 5 rectas secantes.",
+      "alternatives": ["4", "6", "8", "10", "12"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/02/intersecciones-cortes-ejercicios.html",
+      "sourceName": "geometriapdf.blogspot.com - Intersección de Figuras y Número de Puntos de Corte, Problema 11 (clave D)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el número máximo de puntos de corte de 20 rectas secantes.",
+      "alternatives": ["170", "19", "190", "17", "180"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/02/intersecciones-cortes-ejercicios.html",
+      "sourceName": "geometriapdf.blogspot.com - Intersección de Figuras y Número de Puntos de Corte, Problema 12 (clave C)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el máximo número de puntos de corte entre 3 rectas secantes y 3 rectas paralelas.",
+      "alternatives": ["10", "12", "9", "15", "18"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/02/intersecciones-cortes-ejercicios.html",
+      "sourceName": "geometriapdf.blogspot.com - Intersección de Figuras y Número de Puntos de Corte, Problema 6 (clave B)"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Conteo de Figuras",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el máximo número de puntos de corte entre 3 rectas secantes y 2 rectas paralelas.",
+      "alternatives": ["6", "7", "8", "9", "10"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2019/02/intersecciones-cortes-ejercicios.html",
+      "sourceName": "geometriapdf.blogspot.com - Intersección de Figuras y Número de Puntos de Corte, Problema 5 (clave D)"
+    }
+  ]
+}

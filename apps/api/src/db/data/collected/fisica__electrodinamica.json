@@ -1,0 +1,114 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si por un alambre conductor circula una corriente de intensidad 16 mA, determine el número de electrones que atraviesan la sección transversal del conductor en 0,1 s.",
+      "alternatives": ["10^14", "10^15", "10^16", "10^17", "10^18"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://fisica-s.blogspot.com/2013/02/electrodinamica-problemas-resueltos.html",
+      "sourceName": "Física Problemas Resueltos - Electrodinámica tipo examen de ingreso a la universidad, Problema 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un alambre de 100 m, de sección transversal 5 mm², tiene una resistencia eléctrica de 0,34 Ω. Determine de qué material está hecho el alambre (según tabla de resistividades: plata 1,6×10⁻⁸; cobre 1,7×10⁻⁸; aluminio 2,8×10⁻⁸; hierro 10×10⁻⁸; plomo 22×10⁻⁸ Ω·m).",
+      "alternatives": ["plata", "cobre", "aluminio", "hierro", "plomo"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://fisica-s.blogspot.com/2013/02/electrodinamica-problemas-resueltos.html",
+      "sourceName": "Física Problemas Resueltos - Electrodinámica tipo examen de ingreso a la universidad, Problema 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un alambre de 1000 m de longitud y resistividad 5×10⁻⁶ Ω·m está conectado a un voltaje de 100 V. ¿Cuál debe ser el área de su sección recta transversal si queremos que circule una corriente de 2 A por el alambre?",
+      "alternatives": ["0,2 cm²", "0,5 cm²", "1 cm²", "2 cm²", "5 cm²"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://fisica-s.blogspot.com/2013/02/electrodinamica-problemas-resueltos.html",
+      "sourceName": "Física Problemas Resueltos - Electrodinámica tipo examen de ingreso a la universidad, Problema 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un hervidor eléctrico cuya resistencia es 800 Ω se conecta a una fuente de 200 V. Determine el tiempo que se necesita para que 0,5 litros de agua eleven su temperatura en 24 ºC.",
+      "alternatives": ["10 s", "50 s", "100 s", "200 s", "1 000 s"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://fisica-s.blogspot.com/2013/02/electrodinamica-problemas-resueltos.html",
+      "sourceName": "Física Problemas Resueltos - Electrodinámica tipo examen de ingreso a la universidad, Problema 18"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una bombilla eléctrica presenta la siguiente especificación técnica: 50 W – 100 V. Determine la potencia eléctrica que disipará la bombilla cuando la conectemos a una fuente de 20 V.",
+      "alternatives": ["1 W", "2 W", "3 W", "4 W", "5 W"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://fisica-s.blogspot.com/2013/02/electrodinamica-problemas-resueltos.html",
+      "sourceName": "Física Problemas Resueltos - Electrodinámica tipo examen de ingreso a la universidad, Problema 19"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el costo mensual de energía que origina un televisor a color de 150 W al tenerlo encendido durante 5 h diarias? (cada kW·h cuesta S/. 0,30)",
+      "alternatives": ["S/. 7,25", "S/. 5,75", "S/. 4,75", "S/. 6,75", "S/. 7,50"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://fisica-s.blogspot.com/2013/02/electrodinamica-problemas-resueltos.html",
+      "sourceName": "Física Problemas Resueltos - Electrodinámica tipo examen de ingreso a la universidad, Problema 20"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Determine la intensidad de corriente eléctrica en un alambre de oro si en 30 s atraviesa una sección recta una cantidad de carga de 210 C.",
+      "alternatives": ["1 A", "7 A", "10 A", "21 A", "3 A"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/intensidad-de-corriente-electrica-formula-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Intensidad de corriente eléctrica problemas resueltos, Problema 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Determine la cantidad de carga que pasa en 2 min a través de una sección recta si se sabe que la intensidad de corriente en el conductor es 1,5 A.",
+      "alternatives": ["1,5 C", "15 C", "3 C", "120 C", "180 C"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/intensidad-de-corriente-electrica-formula-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Intensidad de corriente eléctrica problemas resueltos, Problema 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una carga de 2 C pasa a través de un conductor en un tiempo de 40 s. Determine la intensidad de corriente que atraviesa dicho conductor.",
+      "alternatives": ["5 A", "0,2 A", "0,5 A", "0,02 A", "0,05 A"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/intensidad-de-corriente-electrica-formula-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Intensidad de corriente eléctrica problemas resueltos, Problema 9"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un generador de corriente proporciona 680 J a una carga de 40 C. ¿Cuál es su fuerza electromotriz (f.e.m.)?",
+      "alternatives": ["17 V", "14 V", "34 V", "68 V", "8,5 V"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/la-ley-de-ohm-formula-ejemplos-problemas-resueltos-de-electrodinamica-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Ley de Ohm problemas resueltos, Problema 5"
+    }
+  ]
+}

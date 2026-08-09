@@ -1,0 +1,81 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Después de frotar suficientemente dos cuerpos inicialmente neutros en un ambiente seco ocurre que:\nI) Ambos cuerpos quedan cargados eléctricamente.\nII) Uno de los cuerpos queda con exceso de carga negativa.\nIII) Ambos cuerpos quedan electrizados con cargas iguales.\nIndique la secuencia correcta de verdad (V) o falsedad (F).",
+      "alternatives": ["VVV", "VVF", "FVV", "FFV", "VFF"],
+      "correctAnswer": "1",
+      "sourceUrl": "http://fisica-s.blogspot.com/2013/02/electrostatica-problemas-resueltos-tipo.html",
+      "sourceName": "Electrostática problemas resueltos tipo examen de ingreso a la universidad — Pregunta 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuatro esferas idénticas con cargas q1 = 10 µC, q2 = -15 µC, q3 = 17 µC y q4 = 20 µC se ponen simultáneamente en contacto físico. Inmediatamente después del contacto, la carga de cada esfera será:",
+      "alternatives": ["8 µC", "-8 µC", "4 µC", "-4 µC", "-2 µC"],
+      "correctAnswer": "0",
+      "sourceUrl": "http://fisica-s.blogspot.com/2013/02/electrostatica-problemas-resueltos-tipo.html",
+      "sourceName": "Electrostática problemas resueltos tipo examen de ingreso a la universidad — Pregunta 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una partícula con carga q1 = -4 µC se encuentra en una región donde existe un campo eléctrico uniforme, el cual ejerce una fuerza eléctrica de magnitud 12 µN. Indicar la verdad (V) o falsedad (F):\nI. La magnitud de la intensidad de campo eléctrico es 12 µN/C.\nII. La dirección de la intensidad de campo eléctrico es opuesta a la dirección de la fuerza eléctrica sobre la carga.\nIII. La intensidad de campo eléctrico es negativa.",
+      "alternatives": ["VVV", "VVF", "FVF", "FFV", "VFF"],
+      "correctAnswer": "2",
+      "sourceUrl": "http://fisica-s.blogspot.com/2013/02/electrostatica-problemas-resueltos-tipo.html",
+      "sourceName": "Electrostática problemas resueltos tipo examen de ingreso a la universidad — Pregunta 11"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En relación al concepto de carga eléctrica, indique la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI. Todo cuerpo eléctricamente neutro tiene igual número de protones y electrones.\nII. Un electrón y un protón tienen cargas eléctricas de igual magnitud.\nIII. La magnitud de la carga eléctrica es un múltiplo entero de la carga fundamental de un electrón.",
+      "alternatives": ["VVV", "VVF", "FFV", "FFF"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-11-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "CEPRE San Marcos (CEPUSM) Física Semana 11 — Pregunta 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una esfera metálica está eléctricamente neutra. Mediante un proceso de irradiación de Rayos X, la esfera adquiere una carga positiva de 32×10^-6 C. Determine el número de electrones que perdió la esfera. (Considerar: e- = 1,6×10^-19 C)",
+      "alternatives": ["2×10^14", "64×10^26", "40×10^15", "16×10^14"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-11-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "CEPRE San Marcos (CEPUSM) Física Semana 11 — Pregunta 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar la verdad (V) o falsedad (F) de las siguientes proposiciones:\nI. En el proceso de electrización de un metal, son los electrones libres los que se transfieren.\nII. En el proceso de electrización por contacto, se transfieren protones.\nIII. Cuando se frota una barra de vidrio con un paño de seda, el vidrio queda cargado positivamente.",
+      "alternatives": ["VFV", "VVV", "FVF", "FFV"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-11-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "CEPRE San Marcos (CEPUSM) Física Semana 11 — Pregunta 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Electrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Teniendo en cuenta la definición de campo eléctrico creado por una partícula cargada eléctricamente, indicar la verdad (V) o falsedad (F):\nI. Es directamente proporcional a la carga eléctrica de la partícula.\nII. Es un campo vectorial y sus unidades son Newton/Coulomb.\nIII. Con respecto a la partícula, a mayor distancia mayor campo eléctrico.",
+      "alternatives": ["VFV", "VVV", "VVF", "FFV"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/fisica-semana-11-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "CEPRE San Marcos (CEPUSM) Física Semana 11 — Pregunta 4"
+    }
+  ]
+}

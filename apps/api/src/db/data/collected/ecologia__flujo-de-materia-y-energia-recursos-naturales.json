@@ -1,0 +1,106 @@
+{
+  "entries": [
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es la posible cadena alimenticia?",
+      "alternatives": [
+        "grillo - saltamontes - mantis",
+        "plancton - ballenas - salmón",
+        "plantas - ratones - garza",
+        "plancton - almejas - ibis",
+        "ichu - gansos - vaca"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+      "sourceName": "Ecología - Banco de preguntas resueltas admisión (Primera Práctica, pregunta 4)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un ecosistema marino, el primer nivel trófico le corresponde a:",
+      "alternatives": [
+        "los consumidores primarios",
+        "los crustáceos",
+        "todo el zooplancton",
+        "las diatomeas",
+        "las bacterias"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+      "sourceName": "Ecología - Banco de preguntas resueltas admisión (Primera Práctica, pregunta 5)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es una forma de describir la circulación de energía en la biocenosis y la composición de ésta:",
+      "alternatives": [
+        "la ecósfera",
+        "el hábitat",
+        "el ecotono",
+        "el estuario",
+        "la pirámide trófica"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+      "sourceName": "Ecología - Banco de preguntas resueltas admisión (Primera Práctica, pregunta 6)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Sobre los siguientes recursos naturales que a continuación se indican, determine el que corresponde a un recurso no renovable:",
+      "alternatives": [
+        "Agua",
+        "Gas carbónico",
+        "Aire",
+        "Suelo",
+        "Gas natural"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+      "sourceName": "Ecología - Banco de preguntas resueltas admisión (Examen Principal, pregunta 21)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la cadena trófica: Fitoplancton → crustáceo krill → pingüino emperador → leopardo marino → orca. Indique el consumidor secundario y el que recibe la menor cantidad de energía, respectivamente.",
+      "alternatives": [
+        "Crustáceo krill - leopardo marino",
+        "Fitoplancton - orca",
+        "Pingüino emperador - fitoplancton",
+        "Leopardo marino - orca",
+        "Pingüino emperador - orca"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+      "sourceName": "Ecología - Banco de preguntas resueltas admisión (Examen Principal, pregunta 35)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Flujo de materia y energía / recursos naturales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El conjunto de cadenas alimentarias que están interconectadas, mostrando una relación más compleja de movimiento de la energía y materia, recibe el nombre de:",
+      "alternatives": [
+        "cadenas alimentarias",
+        "sucesión ecológica",
+        "cadenas tróficas",
+        "redes tróficas",
+        "equilibrio ecológico"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+      "sourceName": "Ecología - Banco de preguntas resueltas admisión (Examen Principal, pregunta 36)"
+    }
+  ]
+}

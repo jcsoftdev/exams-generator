@@ -1,0 +1,55 @@
+{
+  "entries": [
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Reconociendo el ordenamiento jurídico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son los Decretos que emite el Poder Ejecutivo con la finalidad de reglamentar las Leyes dadas por el Congreso y los Decretos Legislativos.",
+      "alternatives": [
+        "Decreto Directoral",
+        "Decreto Jefatural",
+        "Decreto Gerencial",
+        "Decreto Regional",
+        "Decreto Supremo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "http://preguntasdecivica.blogspot.com/2011/07/banco-de-preguntas-de-civica.html",
+      "sourceName": "Banco de preguntas de Cívica (postulantes universidades/FF.AA/PNP), pregunta 36"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Reconociendo el ordenamiento jurídico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En casos especiales, el Poder Ejecutivo por delegación del Congreso puede dictar:",
+      "alternatives": [
+        "Decretos legislativos",
+        "Decretos provisorios",
+        "Decretos leyes",
+        "Resoluciones Supremas",
+        "Decretos Ejecutivos"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "http://preguntasdecivica.blogspot.com/2011/07/banco-de-preguntas-de-civica.html",
+      "sourceName": "Banco de preguntas de Cívica (postulantes universidades/FF.AA/PNP), pregunta 66"
+    },
+    {
+      "courseName": "Educación Cívica",
+      "topicName": "Reconociendo el ordenamiento jurídico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De las normas jurídicas mencionadas, constitucionalmente tiene rango de Ley:",
+      "alternatives": [
+        "Decreto Legislativo",
+        "Resolución Suprema",
+        "Decreto Supremo",
+        "Resolución Ministerial",
+        "Decreto Regional"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://carpetapedagogica.com/bancodepreguntasconstitucionpoliticadelperu",
+      "sourceName": "Carpetapedagogica.com - Banco de Preguntas: Constitución Política del Perú, pregunta 19"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un ladrillo de plomo de dimensiones 5 cm, 10 cm y 20 cm descansa en un piso horizontal sobre su cara más pequeña. ¿Cuál es la magnitud de la presión que ejerce el ladrillo sobre el piso? (densidad = 2,7 g/cm³; g = 10 m/s²)",
+      "alternatives": ["1,5 kPa", "2,3 kPa", "5,4 kPa", "3,5 kPa", "4,2 kPa"],
+      "correctAnswer": "2",
+      "sourceUrl": "http://fisica-s.blogspot.com/2013/02/hidrostatica-ejercicios-desarrollados.html",
+      "sourceName": "Física Problemas Resueltos - Hidrostática ejercicios desarrollados, problema 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un buzo que se encuentra sumergido en un lago soporta una presión total de 3,5 atm. Determine la profundidad a la que se encuentra dicho buzo. (P_atm = 10⁵ Pa; densidad del agua = 1000 kg/m³; g = 10 m/s²)",
+      "alternatives": ["15 m", "20 m", "25 m", "30 m", "35 m"],
+      "correctAnswer": "2",
+      "sourceUrl": "http://fisica-s.blogspot.com/2013/02/hidrostatica-ejercicios-desarrollados.html",
+      "sourceName": "Física Problemas Resueltos - Hidrostática ejercicios desarrollados, problema del buzo"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo de masa 8 kg pesa 60 N en el agua y 50 N en un líquido desconocido, cuando está sumergido completamente. Determine la densidad (en g/cm³) del líquido desconocido. (densidad del agua = 1000 kg/m³; g = 10 m/s²)",
+      "alternatives": ["1,7", "1,8", "1,3", "1,5", "1,6"],
+      "correctAnswer": "3",
+      "sourceUrl": "http://fisica-s.blogspot.com/2013/02/hidrostatica-ejercicios-desarrollados.html",
+      "sourceName": "Física Problemas Resueltos - Hidrostática ejercicios desarrollados, problema de empuje en líquido desconocido"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué porcentaje de un cubo de madera flotará (sobresaldrá) en un recipiente que contiene aceite, sabiendo que la densidad de la madera es de 0,6 g/cm³ y la densidad del aceite 0,8 g/cm³?",
+      "alternatives": ["10%", "25%", "50%", "75%", "80%"],
+      "correctAnswer": "1",
+      "sourceUrl": "http://fisica-s.blogspot.com/2013/02/hidrostatica-ejercicios-desarrollados.html",
+      "sourceName": "Física Problemas Resueltos - Hidrostática ejercicios desarrollados, problema cubo de madera en aceite"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un ascensor que sube con una aceleración de magnitud 2 m/s². Dentro del ascensor hay un recipiente que contiene agua hasta una altura h = 30 cm. Determine la presión hidrostática en el fondo del recipiente. (densidad del agua = 1000 kg/m³; g = 10 m/s²)",
+      "alternatives": ["450 Pa", "900 Pa", "1800 Pa", "3600 Pa", "7200 Pa"],
+      "correctAnswer": "3",
+      "sourceUrl": "http://fisica-s.blogspot.com/2013/02/hidrostatica-ejercicios-desarrollados.html",
+      "sourceName": "Física Problemas Resueltos - Hidrostática ejercicios desarrollados, problema del ascensor"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cubo flota en un líquido de tal modo que sobresale las 2/5 partes de su volumen. Encuentre la relación D_S/D_L entre la densidad del sólido y la densidad del líquido.",
+      "alternatives": ["5/2", "2/5", "5/3", "3/5", "2/3"],
+      "correctAnswer": "3",
+      "sourceUrl": "http://fisica-s.blogspot.com/2013/02/hidrostatica-ejercicios-desarrollados.html",
+      "sourceName": "Física Problemas Resueltos - Hidrostática ejercicios desarrollados, problema del cubo flotante"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Hidrostática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sobre un cubo de madera que se encuentra flotando en agua se coloca un bloque de 2 N de peso. Al retirar lentamente el bloque, el cubo asciende 2 cm hasta lograr nuevamente el equilibrio. Calcule la arista del cubo (en cm). (densidad del agua = 1000 kg/m³; g = 10 m/s²)",
+      "alternatives": ["40", "30", "10", "80", "60"],
+      "correctAnswer": "2",
+      "sourceUrl": "http://fisica-s.blogspot.com/2013/02/hidrostatica-ejercicios-desarrollados.html",
+      "sourceName": "Física Problemas Resueltos - Hidrostática ejercicios desarrollados, problema del cubo y bloque de 2 N"
+    }
+  ]
+}

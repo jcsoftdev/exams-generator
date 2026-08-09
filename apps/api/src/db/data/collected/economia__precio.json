@@ -1,0 +1,170 @@
+{
+  "entries": [
+    {
+      "courseName": "Economía",
+      "topicName": "Precio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Supongamos que el gobierno regula los precios de la carne de vacuno y la del pollo, fijándolos en niveles inferiores a su precio de equilibrio del mercado. ¿Qué ocurriría en esta situación?",
+      "alternatives": [
+        "El precio se equilibra",
+        "Aumento de la oferta",
+        "Exceso de oferta",
+        "Exceso de demanda",
+        "Sobreproducción"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-economia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicasn - Prueba de Economía tipo Examen de Admisión (Solucionario), Primera Prueba, Pregunta 30"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Precio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el análisis del equilibrio entre la oferta y la demanda de un bien, cuando el precio de dicho bien es mayor que el precio de equilibrio, entonces existe:",
+      "alternatives": [
+        "una escasez.",
+        "un déficit de oferta.",
+        "un exceso de demanda.",
+        "un exceso de oferta.",
+        "un equilibrio en el mercado."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/caracteristicas-del-equilibrio-de-mercado-ejemplos-preguntas-resueltas-de-economia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn - Equilibrio de Mercado (Ejercicios Resueltos), Pregunta 1"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Precio",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si la demanda es constante, ¿qué sucederá con el precio del limón si la oferta se contrae?",
+      "alternatives": [
+        "Aumentará",
+        "Disminuirá",
+        "Variará",
+        "Se equilibrará",
+        "Se desequilibrará"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/caracteristicas-del-equilibrio-de-mercado-ejemplos-preguntas-resueltas-de-economia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn - Equilibrio de Mercado (Ejercicios Resueltos), Pregunta 3"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Precio",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si el precio de la oferta es igual al precio de la demanda, entonces se produce:",
+      "alternatives": [
+        "el precio del mercado.",
+        "el precio de lista.",
+        "el precio de equilibrio.",
+        "el precio mínimo.",
+        "el precio máximo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/caracteristicas-del-equilibrio-de-mercado-ejemplos-preguntas-resueltas-de-economia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn - Equilibrio de Mercado (Ejercicios Resueltos), Práctica Pregunta 1"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Precio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el Estado establece un precio por encima del precio de equilibrio, se generaría en el mercado:",
+      "alternatives": [
+        "escasez de productos.",
+        "exceso de demanda.",
+        "abundancia de productos.",
+        "mercados negros.",
+        "competencia perfecta."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/caracteristicas-del-equilibrio-de-mercado-ejemplos-preguntas-resueltas-de-economia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn - Equilibrio de Mercado (Ejercicios Resueltos), Práctica Pregunta 9"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Precio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el precio del arroz se ubica por debajo del equilibrio, esto indica la existencia de:",
+      "alternatives": [
+        "exceso de demanda.",
+        "exceso de oferta.",
+        "precios mínimos.",
+        "precios máximos.",
+        "precios de mercado."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/07/caracteristicas-del-equilibrio-de-mercado-ejemplos-preguntas-resueltas-de-economia-preuniversitaria-y-de-secundaria-prueba-con-respuestas-word-pdf.html",
+      "sourceName": "matematicasn - Equilibrio de Mercado (Ejercicios Resueltos), Práctica Pregunta 11"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Precio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los agricultores de papa y arroz están descontentos por la caída del precio de estos productos, debido a la sobreproducción nacional y las excesivas importaciones, provenientes principalmente de Asia. El gobierno, con la intención de beneficiarlos, determina un precio ________ que es ________ al del mercado.",
+      "alternatives": [
+        "mínimo – menor",
+        "máximo - mayor",
+        "oficial – menor",
+        "mínimo - mayor"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/economia-preguntas-resueltas-semana-9-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn - CEPRE San Marcos Semana 9 (Solucionario), Pregunta 1"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Precio",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el año 2015 una empresa norteamericana farmacéutica adquirió los derechos de venta del Daraprim, un fármaco utilizado por los enfermos de sida para combatir infecciones causadas por parásitos. La empresa elevó el precio de 13.5 dólares la píldora a 750 dólares, un aumento del 5555 %. El dueño de esta empresa, Martin Shkreli, se convirtió en la persona más odiada en EE. UU. Por lo descrito se puede afirmar que el factor que más influye en la determinación del precio es el (la):",
+      "alternatives": [
+        "margen de ganancia",
+        "costos de producción",
+        "demanda",
+        "teoría de la utilidad"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/economia-preguntas-resueltas-semana-9-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn - CEPRE San Marcos Semana 9 (Solucionario), Pregunta 6"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Precio",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Durante los fines de semana largos, por ejemplo Semana Santa y Fiestas Patrias, los precios del servicio de transporte interprovincial aumentan; esto se debe a que los consumidores aumentan el consumo de dicho servicio, aprovechando los días libres y, en el caso de Fiestas Patrias, mayores ingresos por la bonificación adicional. El factor que influye en el alza del precio es el (la):",
+      "alternatives": [
+        "demanda",
+        "teoría de la utilidad",
+        "margen de ganancia",
+        "costo de producción"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/economia-preguntas-resueltas-semana-9-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn - CEPRE San Marcos Semana 9 (Solucionario), Pregunta 8"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Precio",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En épocas de crisis (coronavirus, fenómeno El Niño costero, financiera, etc.), los gobiernos tratan de ayudar a las familias. Para que su consumo no se vea perjudicado establecen ________________ pero esto muchas veces puede generar escasez porque desincentiva la producción. Otra alternativa es otorgar __________; en este caso el consumidor pagará también un precio menor, pero la diferencia la pone el Estado.",
+      "alternatives": [
+        "un precio mínimo - un subsidio",
+        "una subvención - una subvención",
+        "un precio máximo - un subsidio",
+        "una transferencia - una subvención"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/economia-preguntas-resueltas-semana-9-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "matematicasn - CEPRE San Marcos Semana 9 (Solucionario), Pregunta 9"
+    }
+  ]
+}

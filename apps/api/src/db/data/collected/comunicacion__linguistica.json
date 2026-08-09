@@ -1,0 +1,997 @@
+{
+  "entries": [
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los fonemas y los grafemas de la lengua española:",
+      "alternatives": [
+        "no crean problemas en la escritura.",
+        "tienen este orden primigenio: primero los grafemas, luego los fonemas.",
+        "se correlacionan uno a uno exactamente.",
+        "no guardan correspondencia biunívoca o perfecta.",
+        "presentan proporcionalidad numérica."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-lenguaje-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "Prueba de Lenguaje tipo examen de admisión (solucionario), pregunta 1"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los términos mar y par son vocablos de significación diferente debido a la oposición de m y p, que son:",
+      "alternatives": [
+        "sonidos nasales.",
+        "grafemas sonoros.",
+        "signos acústicos.",
+        "fonemas diferentes.",
+        "grafías opuestas."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-lenguaje-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "Prueba de Lenguaje tipo examen de admisión (solucionario), pregunta 33"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un grupo de estudiantes piuranos llega a Lima en viaje de promoción y escucha el uso de ciertos vocablos en las conversaciones de los lugareños, distintos a los que ellos emplean en su región. Esta diferencia en el uso de una misma lengua según el territorio geográfico corresponde a:",
+      "alternatives": [
+        "registro",
+        "idiolecto",
+        "dialecto",
+        "habla"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://pdfz.blogspot.com/2019/08/Lenguaje-deco-A-B-D-examen-admision-universidad-san-marcos-resuelto-unmsm-pdf.html",
+      "sourceName": "Lenguaje DECO San Marcos resuelto (UNMSM), pregunta 1"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿A qué tipo de variación lingüística pertenece el siguiente ejemplo? — «Ya pé, empréstame dinero.»",
+      "alternatives": [
+        "Léxica",
+        "Sintáctica",
+        "Semántica",
+        "Morfológica",
+        "Fonética"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/lenguaje-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "Lenguaje preguntas resueltas de examen de admisión a la universidad, pregunta 6"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se contrasta el habla de un comerciante limeño («La casa de mi tía María es grande») con la de un pescador amazónico («De mi tía su casa es grande»). ¿A qué tipo de variación lingüística corresponde este contraste?",
+      "alternatives": [
+        "Estándar",
+        "Dialecto",
+        "Superestándar",
+        "Sociolecto",
+        "Idiolecto"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/lenguaje-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "Lenguaje preguntas resueltas de examen de admisión a la universidad, pregunta 7"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la consideración del fenómeno lingüístico, el lenguaje se caracteriza por ser ___; la lengua, ___ y el habla, ___, respectivamente.",
+      "alternatives": [
+        "producto histórico, universal y social",
+        "universal, innato y uso del código",
+        "innato, universal e individual",
+        "innato, social y concreta"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-semana-9-manual-pre-san.html",
+      "sourceName": "Solucionario semana 9 Manual Pre San Marcos, pregunta 5"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El lenguaje humano se manifiesta en la lengua y en el habla. De acuerdo con lo mencionado, elija la alternativa que contiene información conceptualmente correcta.\nI. Las lenguas ágrafas no tienen gramática.\nII. El habla es el uso individual de una lengua natural.\nIII. Las lenguas naturales presentan cambios lingüísticos.\nIV. La facultad del lenguaje es aprendida por el ser humano.",
+      "alternatives": [
+        "I y IV",
+        "II y III",
+        "I y III",
+        "II y IV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-semana-9-manual-pre-san.html",
+      "sourceName": "Solucionario semana 9 Manual Pre San Marcos, pregunta 9"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La variante sociorregional de una lengua natural es reconocida como:",
+      "alternatives": [
+        "habla",
+        "lengua",
+        "lenguaje",
+        "idioma",
+        "dialecto"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://preguntasdelenguaunmsm.blogspot.com/2012/07/?m=1",
+      "sourceName": "Preguntas de Lengua en la UNMSM, admisión 2012-II (domingo)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señale la palabra que presenta dos grafemas distintos que representan a un mismo fonema.",
+      "alternatives": [
+        "cocido",
+        "éxito",
+        "herbívoro",
+        "gigante"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/fonologia-y-fonetica-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "Fonología y Fonética preguntas resueltas de Lenguaje, admisión universidad, pregunta 5"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de fonemas que corresponden, respectivamente, a las palabras «hervir», «taxi» y «hola».",
+      "alternatives": [
+        "cinco, seis y tres",
+        "cuatro, siete y cuatro",
+        "seis, seis y cuatro",
+        "cinco, cinco y tres"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/fonologia-y-fonetica-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "Fonología y Fonética preguntas resueltas de Lenguaje, admisión universidad, pregunta 3"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de fonemas que corresponden, respectivamente, a las palabras «excepto» y «exhibe».",
+      "alternatives": [
+        "siete y seis",
+        "seis y seis",
+        "ocho y seis",
+        "siete y siete"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/fonologia-y-fonetica-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "Fonología y Fonética preguntas resueltas de Lenguaje, admisión universidad, pregunta 4"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elija la opción en la que los fonemas oclusivos cumplen función distintiva.",
+      "alternatives": [
+        "gira - pira",
+        "niño - nicho",
+        "quero - cero",
+        "corro - gorro"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/fonologia-y-fonetica-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "Fonología y Fonética preguntas resueltas de Lenguaje, admisión universidad, pregunta 4 (fonética)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elija la opción que presenta función distintiva de consonantes vibrantes.",
+      "alternatives": [
+        "perro - peso",
+        "carta - casta",
+        "para - parra",
+        "yeso - yerro"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/fonologia-y-fonetica-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "Fonología y Fonética preguntas resueltas de Lenguaje, admisión universidad, pregunta 8 (fonética)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elija la serie de palabras cuyos sonidos iniciales son sonoros.",
+      "alternatives": [
+        "voto, golero, risa",
+        "carpeta, regla, libro",
+        "reloj, malla, salón",
+        "cambio, doce, humo"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/fonologia-y-fonetica-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "Fonología y Fonética preguntas resueltas de Lenguaje, admisión universidad, pregunta 1 (fonética)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Marque la alternativa en la que los fonemas vocálicos son todos anteriores.",
+      "alternatives": [
+        "doce liebres",
+        "dedo gordo",
+        "feliz viernes",
+        "pie izquierdo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/fonologia-y-fonetica-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "Fonología y Fonética preguntas resueltas de Lenguaje, admisión universidad, pregunta 2 (fonética)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El signo lingüístico difiere de otros signos por su naturaleza:",
+      "alternatives": [
+        "arbitraria",
+        "convencional",
+        "psíquica",
+        "articulatoria",
+        "biplanar"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/el-signo-linguistico-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Signo lingüístico ejercicios resueltos de semiótica, pregunta 1"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El carácter lineal del significante se verifica en:",
+      "alternatives": [
+        "la articulación",
+        "la existencia de varias lenguas",
+        "la mutabilidad",
+        "la amplitud del sistema lingüístico",
+        "su aspecto psíquico"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/el-signo-linguistico-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Signo lingüístico ejercicios resueltos de semiótica, pregunta 3"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las unidades mínimas significativas de la emisión lingüística se denominan:",
+      "alternatives": [
+        "grafemas",
+        "sintagmas",
+        "semas",
+        "morfemas",
+        "fonemas"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/el-signo-linguistico-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Signo lingüístico ejercicios resueltos de semiótica, pregunta 5"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La mutabilidad del significado ocasiona principalmente:",
+      "alternatives": [
+        "la antonimia",
+        "la ambigüedad",
+        "la polisemia",
+        "la homonimia"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/el-signo-linguistico-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Signo lingüístico ejercicios resueltos de semiótica, pregunta 9"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La palabra «combatiente» con significante /kombatiente/ caracteriza al signo como:",
+      "alternatives": [
+        "arbitrario",
+        "mutable",
+        "articulado",
+        "biplanar",
+        "inmutable"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/el-signo-linguistico-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Signo lingüístico ejercicios resueltos de semiótica, pregunta 13"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relacione correctamente las características del signo lingüístico.\nA. Arbitrariedad — B. Biplanaridad — C. Mutabilidad\n1. «Ningún significante requiere necesariamente un significado determinado»\n2. «Posee significado y significante»\n3. «Puede sufrir alteraciones»",
+      "alternatives": [
+        "A-2; B-1; C-3",
+        "A-1; B-3; C-2",
+        "A-3; B-2; C-1",
+        "A-1; B-2; C-3",
+        "A-2; B-1; C-3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/el-signo-linguistico-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "El signo lingüístico preguntas resueltas de Lenguaje, pregunta 3"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«El signo lingüístico es una secuencia de sonidos en una unidad de espacio y tiempo.» Este concepto explica la ______ del signo lingüístico.",
+      "alternatives": [
+        "arbitrariedad",
+        "mutabilidad",
+        "linealidad",
+        "inmutabilidad",
+        "articulación"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/el-signo-linguistico-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "El signo lingüístico preguntas resueltas de Lenguaje, pregunta 4"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La relación entre los planos del signo lingüístico es de:",
+      "alternatives": [
+        "linealidad",
+        "interdependencia",
+        "obligatoriedad",
+        "espontaneidad",
+        "inestabilidad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/el-signo-linguistico-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "El signo lingüístico preguntas resueltas de Lenguaje, pregunta 2"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La variedad _____ distingue los sociolectos por estratos sociales; mientras que la variedad _____ se refiere a las variaciones funcionales o registros. Complete correctamente:",
+      "alternatives": [
+        "diacrónica - diastrática",
+        "diastrática - diafásica",
+        "diatópica - diastrática",
+        "diafásica - diastrática",
+        "diacrónica - diatópica"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, pregunta 6"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Identifique la oración expresada en dialecto estándar del español:",
+      "alternatives": [
+        "Me comentó de que pronto obtendrá su pasaporte",
+        "Mariela trajo una caja conteniendo útiles escolares",
+        "Al beber tanta agua, Liz satisfació la sed que sentía",
+        "Me alegra que haya concretado todos sus objetivos",
+        "Carlos le emprestó dos lapiceros a su compañero"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, pregunta 8"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De acuerdo con los estándares normativos del español, marque la oración que NO pertenece al dialecto estándar:",
+      "alternatives": [
+        "Habían llegado temprano a clases ayer",
+        "Bebimos jugo de fresas medio maduras",
+        "Liz, por favor, échale agua a las plantas",
+        "Nuestro proyecto tiene veintiuna páginas",
+        "Les proveyó los víveres a los damnificados"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, pregunta 12"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El JERGA se entiende como:",
+      "alternatives": [
+        "variación regional de una lengua",
+        "vocabulario que caracteriza el habla nacional",
+        "sistema de signos de doble articulación",
+        "vocabulario que grupos particulares desarrollan dentro de las comunidades",
+        "modo individual de usar la lengua colectiva"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q2"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El castellano hablado en Iquitos constituye lingüísticamente un dialecto:",
+      "alternatives": [
+        "social de la lengua quechua",
+        "regional de la lengua española",
+        "social sin gramática y de poco prestigio",
+        "que goza de prestigio en el Perú"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q19"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marque la alternativa que presenta la oración expresada en dialecto estándar del español:",
+      "alternatives": [
+        "Habían muchos audios de la corrupción",
+        "El domingo, entregué una entrada a la Isabel",
+        "Los compendios son muy sencillísimos",
+        "La ministra de Salud será interpelada"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q21"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para los peruanos, «ahorita» significa «en este momento»; para los dominicanos, «más tarde, cuando tenga ganas». Esto ejemplifica:",
+      "alternatives": [
+        "sociolecto",
+        "dialecto",
+        "idioma",
+        "lenguaje"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q17"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Igor, hispanohablante, se casa con una moscovita y tiene un hijo nacido en Ayacucho (zona de habla quechua), criado allí sin sus padres. La lengua que adquirirá el niño será:",
+      "alternatives": [
+        "castellano",
+        "quechua",
+        "ruso",
+        "moscovita"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q26"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es la mejor definición de DIALECTO?",
+      "alternatives": [
+        "Variación fonética",
+        "Modo de hablar de un grupo profesional",
+        "Variación regional de la lengua general",
+        "Modo arcaico de hablar",
+        "Lengua indígena sin escritura"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q11"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Ustedes, vengan conmigo», «Vos, vení conmigo», «Vosotros, venid conmigo» constituyen ejemplos de:",
+      "alternatives": [
+        "Dialectos",
+        "Interlectos",
+        "Idiolectos",
+        "Lenguas distintas",
+        "Idiomas distintos"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q10"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El vocabulario desarrollado por sectores laborales como necesidad del trabajo se denomina:",
+      "alternatives": [
+        "dialecto",
+        "lengua",
+        "idioma",
+        "jerga profesional",
+        "replana"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q13"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Las palabras que caracterizan el habla peruana frente a otras manifestaciones del español en el mundo se denominan:",
+      "alternatives": [
+        "jergas",
+        "replana",
+        "peruanismos",
+        "indigenismos",
+        "quechuismos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q14"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Siguiendo los estándares normativos del español, marque la oración en dialecto estándar:",
+      "alternatives": [
+        "Todos estamos convencidos que Miguel es sincero",
+        "El hermano de Ricardo condujo bien el automóvil",
+        "Ella sabe de que participaste en el torneo de ajedrez",
+        "Me dijeron que ganastes un premio en la última rifa"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q25"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lenguaje, lengua y habla presentan características diversas. Marque la alternativa correcta:",
+      "alternatives": [
+        "Universal, individual, social",
+        "Aprendido, psíquico, concreto",
+        "Universal, social, individual",
+        "Aprendido, momentáneo, social",
+        "Universal, psicofísico, social"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/planos-de-la-comunicacion-la-lengua-el-habla-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-secundaria-prueba-respuestas-word-pdf.html",
+      "sourceName": "Planos del lenguaje ejercicios resueltos, pregunta 5"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El habla, como componente del fenómeno lingüístico, es:",
+      "alternatives": [
+        "abstracta",
+        "social",
+        "artificial",
+        "concreta",
+        "casi concreta"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/planos-de-la-comunicacion-la-lengua-el-habla-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-secundaria-prueba-respuestas-word-pdf.html",
+      "sourceName": "Planos del lenguaje ejercicios resueltos, pregunta 4"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la alternativa que NO corresponde a la lengua como sistema:",
+      "alternatives": [
+        "Social – psíquica",
+        "Abstracta – sistema",
+        "Sistema – patrimonio",
+        "Efímera – individual",
+        "Código – social"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/planos-de-la-comunicacion-la-lengua-el-habla-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-secundaria-prueba-respuestas-word-pdf.html",
+      "sourceName": "Planos del lenguaje ejercicios resueltos, pregunta 3"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marque el enunciado correcto acerca de las lenguas naturales:",
+      "alternatives": [
+        "Son siempre sistemas lingüísticos homogéneos",
+        "Siempre constituyen idiomas",
+        "Sus dialectos no se convierten en nuevas lenguas",
+        "Son sistemas de signos audibles y visibles",
+        "Son evidencia de la facultad del lenguaje"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/planos-de-la-comunicacion-la-lengua-el-habla-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-secundaria-prueba-respuestas-word-pdf.html",
+      "sourceName": "Planos del lenguaje ejercicios resueltos, pregunta 5 (segunda)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La fonología estudia los sonidos _____ y la fonética estudia los sonidos _____.",
+      "alternatives": [
+        "mentales / concretos",
+        "materiales / mentales",
+        "articulados / inarticulados",
+        "reales / abstractos",
+        "vocálicos / consonánticos"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+      "sourceName": "Banco de preguntas resueltas de lenguaje, admisión universidades, pregunta 2"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los componentes de la gramática de la lengua son estudiados por las disciplinas denominadas fonología, sintaxis, morfología y semántica, las cuales identifican, respectivamente, las unidades lingüísticas denominadas fonema, oración, morfema y significado. Según esta aseveración, la disciplina que estudia cuál es la estructura interna y cuáles son los procedimientos de formación de las palabras es la:",
+      "alternatives": [
+        "fonología",
+        "sintaxis",
+        "morfología",
+        "semántica"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/lenguaje-preguntas-resueltas-semana-7-cepre-san-marcos-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "Lenguaje pre San Marcos semana 7 solucionario CEPRE, pregunta 5"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El sistema o código de comunicación usado por una comunidad lingüística se llama:",
+      "alternatives": [
+        "dialecto",
+        "lenguaje",
+        "habla",
+        "lengua",
+        "norma"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/lenguaje-resuelto-admision-universidades.html",
+      "sourceName": "Banco de preguntas resueltas de lenguaje, admisión universidades, pregunta 3"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de fonemas que corresponden, respectivamente, a las palabras «ahora» y «axioma».",
+      "alternatives": [
+        "cuatro y siete",
+        "cinco y seis",
+        "cinco y siete",
+        "cuatro y ocho"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/fonologia-y-fonetica-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "Fonología y Fonética preguntas resueltas de Lenguaje, admisión universidad, pregunta 1"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de fonemas que corresponden, respectivamente, a las palabras «fénix», «flecha» y «hecho».",
+      "alternatives": [
+        "cinco, seis y cinco",
+        "seis, cinco y cuatro",
+        "seis, cuatro y cinco",
+        "seis, cinco y tres"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/fonologia-y-fonetica-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "Fonología y Fonética preguntas resueltas de Lenguaje, admisión universidad, pregunta 7"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los enunciados «¿Fui a la marcha contra el Congreso?», «¿Quiénes son los dueños del Perú?» y «¿Sienten mucho frío?» concluyen, respectivamente, con inflexión tonal:",
+      "alternatives": [
+        "ascendente, ascendente y ascendente",
+        "descendente, descendente y ascendente",
+        "ascendente, descendente y ascendente",
+        "ascendente, descendente y descendente"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/fonologia-y-fonetica-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "Fonología y Fonética preguntas resueltas de Lenguaje, admisión universidad, pregunta 2"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los enunciados «¿Los jóvenes votaron por el pescadito?», «¿Cuánto cuesta el gas en el Perú?» y «¿Sabes el tema central de la obra 'Odisea'?» concluyen, respectivamente, con inflexión tonal:",
+      "alternatives": [
+        "ascendente, ascendente y ascendente",
+        "ascendente, descendente y ascendente",
+        "ascendente, descendente y descendente",
+        "ascendente, ascendente y descendente"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/fonologia-y-fonetica-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "Fonología y Fonética preguntas resueltas de Lenguaje, admisión universidad, pregunta 6"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Según el lugar de articulación, los fonos de la palabra «regido» son, respectivamente:",
+      "alternatives": [
+        "vibrante, oclusivo, y oclusivo",
+        "vibrante, fricativo, y oclusivo",
+        "alveolar, oclusivo y dental",
+        "alveolar, velar y dental"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/fonologia-y-fonetica-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "Fonología y Fonética preguntas resueltas de Lenguaje, admisión universidad, pregunta 3 (fonética)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marque la opción donde aparecen, respectivamente, consonantes oclusiva, fricativa y nasal.",
+      "alternatives": [
+        "colegio",
+        "bajan",
+        "pájaro",
+        "desear"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/fonologia-y-fonetica-ejercicios-de-lenguaje-admision-a-la-universidad-academia-preuniversitaria.html",
+      "sourceName": "Fonología y Fonética preguntas resueltas de Lenguaje, admisión universidad, pregunta 7 (fonética)"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La expresión «Ñori voy al ñoba» es un ejemplo de:",
+      "alternatives": [
+        "Dialecto",
+        "Interlecto",
+        "Jerga",
+        "Replana",
+        "Tecnolecto"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, pregunta 1"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un amigo español pregunta por «la matrícula del coche» refiriéndose a «la placa del carro». Estas expresiones resaltadas pueden explicarse con el concepto de:",
+      "alternatives": [
+        "sociolecto",
+        "habla",
+        "dialecto",
+        "lengua",
+        "idiolecto"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, pregunta 10"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Identifique la alternativa que presenta un PERUANISMO:",
+      "alternatives": [
+        "Chaval",
+        "Quilombo",
+        "Calato",
+        "Ratico",
+        "Chamo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q8"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El castellano y el Machiguenga se relacionan como:",
+      "alternatives": [
+        "Lengua frente a lengua",
+        "Lengua frente a dialecto",
+        "Lengua frente a jerga",
+        "Lengua frente a argot",
+        "Dialecto frente a dialecto"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q7"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relacione correctamente las nociones lingüísticas:\nI. Sistema de una nación o estado\nII. Variedad culta de la lengua\nIII. Uso individual del código lingüístico\nIV. Sistema con gramática propia\nV. Variedad geográfico-social de la lengua\n\nCon: a) dialecto estándar, b) idioma, c) habla, d) dialecto, e) lengua",
+      "alternatives": [
+        "Ib, IIa, IIIc, IVe, Vd",
+        "Ie, IIb, IIIc, IVd, Va",
+        "Ib, IIa, IIIe, IVc, Vd",
+        "Ia, IIb, IIIc, IVd, Ve"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q23"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un diálogo entre un hispanohablante andino y uno amazónico muestra diferencias que no impiden la comunicación. Esto caracteriza a:",
+      "alternatives": [
+        "las variedades sociales de una misma lengua",
+        "las variedades cuyo prestigio social es conocido",
+        "las variedades regionales de una misma lengua",
+        "los dialectos con distintas jerarquías de prestigio"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q24"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifique la alternativa donde se evidencia el dialecto regional:",
+      "alternatives": [
+        "El pequeño tiritaba de frío",
+        "A nadie saludaste en la fiesta",
+        "Sírvanse el cóctel que les preparé",
+        "Ese chavo no deja de chillar"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q15"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifique las alternativas que presentan ejemplos de dialecto:\nI. Che, ¿tenés hora?\nII. Pana, esa chama es catira\nIII. El móvil está en el ordenador\nIV. Carnal, la película está padre",
+      "alternatives": [
+        "I, II, III y IV",
+        "I, II y III",
+        "II, III y IV",
+        "II y IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q16"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál afirmación es correcta en relación con las lenguas en el Perú?",
+      "alternatives": [
+        "El quechua y el aimara son lenguas romances",
+        "El huitoto y el aguaruna son dialectos amazónicos",
+        "El dialecto ocurre exclusivamente en el plano fonético",
+        "El castellano y el aimara son lenguas oficiales del Perú",
+        "El aimara no es una lengua en el Perú"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q9"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el español peruano, «Ta que toy asao» es un ejemplo de:",
+      "alternatives": [
+        "Dialecto",
+        "Norma estándar",
+        "Jerga juvenil",
+        "Arcaísmo",
+        "Neologismo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/variacion-linguistica-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-y-de-secundaria-prueba-desarrollada-claves-respuestas-word-ppt-doc-pdf.html",
+      "sourceName": "Variación lingüística ejercicios resueltos, práctica Q6"
+    },
+    {
+      "courseName": "Comunicación",
+      "topicName": "Lingüística",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "_____ es la capacidad exclusivamente humana que permite aprender una _____ que se realiza a través del _____. Complete correctamente:",
+      "alternatives": [
+        "El idioma, la lengua, habla",
+        "El lenguaje, la lengua, idioma",
+        "El lenguaje, el habla, idioma",
+        "El lenguaje, la lengua, habla",
+        "El idioma, la lengua, lenguaje"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/planos-de-la-comunicacion-la-lengua-el-habla-ejemplos-preguntas-resueltas-de-lenguaje-preuniversitario-secundaria-prueba-respuestas-word-pdf.html",
+      "sourceName": "Planos del lenguaje ejercicios resueltos, pregunta 12"
+    }
+  ]
+}

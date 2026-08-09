@@ -1,0 +1,951 @@
+{
+  "entries": [
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Los precios, en dólares, cotizados de una libra de café son: 2.80; 3.10; 3.50; 2.80; 3.50; 3.10; 2.75; 3.20; 2.80. Halle la mediana de los precios.",
+      "alternatives": [
+        "$3.10",
+        "$3.50",
+        "$2.80",
+        "$3.20"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/moda-y-mediana-ejercicios-resueltos-pdf.html",
+      "sourceName": "MatematicasN - Moda y mediana, ejercicios resueltos de estadística preuniversitaria, problema de precios del café (mediana)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Los precios, en dólares, cotizados de una libra de café son: 2.80; 3.10; 3.50; 2.80; 3.50; 3.10; 2.75; 3.20; 2.80. Halle la moda de los precios.",
+      "alternatives": [
+        "$3.50",
+        "$2.80",
+        "$2.80 y $3.50",
+        "$3.10 y $3.50"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/moda-y-mediana-ejercicios-resueltos-pdf.html",
+      "sourceName": "MatematicasN - Moda y mediana, ejercicios resueltos de estadística preuniversitaria, problema de precios del café (moda)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados los datos: 8; 5; 3; 5; 6; 4; 6; 7; 5; 6; 6; 4; 8; 7; 3; 5; 6; 6; 7; 4. Indique verdadero (V) o falso (F) según corresponda:\nI) El rango es igual a 5.\nII) La mediana es 7.\nIII) La moda más la mediana suman más de 15.",
+      "alternatives": [
+        "VFF",
+        "VFV",
+        "VVV",
+        "VVF",
+        "FVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/medidas-de-tendencia-central-pdf.html",
+      "sourceName": "MatematicasN - Medidas de tendencia central, ejercicios resueltos preuniversitaria, ejercicio de verdadero/falso sobre rango, mediana y moda"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En cierta microempresa los sueldos son: Gerente S/.10 000; Secretaria S/.650; 3 empleados S/.500 c/u; 2 ayudantes S/.400 c/u; 1 conserje S/.300. ¿Cuál es la medida de tendencia central más representativa de los sueldos?",
+      "alternatives": [
+        "La mediana",
+        "La moda",
+        "La media aritmética",
+        "La mediana o la moda",
+        "Cualquiera de las tres"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/medidas-de-tendencia-central-pdf.html",
+      "sourceName": "MatematicasN - Medidas de tendencia central, ejercicios resueltos preuniversitaria, ejercicio de sueldos empresa"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el valor de verdad de las siguientes proposiciones:\nI) La mediana depende del número de datos ordenados y no de los valores de estos datos.\nII) La moda señala el valor más común de una serie de datos.\nIII) La mediana es el valor que ocupa la posición central de la distribución.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FFV",
+        "VVF",
+        "FVV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/medidas-de-tendencia-central-pdf.html",
+      "sourceName": "MatematicasN - Medidas de tendencia central, ejercicios resueltos preuniversitaria, ejercicio de valor de verdad proposiciones"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántas de las siguientes proposiciones son verdaderas?\n1) Una muestra es parte de la población seleccionada para obtener información.\n2) El histograma es gráfica de barras rectangulares verticales juntas.\n3) La mediana separa datos ordenados en dos partes iguales.\n4) La moda no siempre existe y si existe, no siempre es única.\n5) La media utiliza toda la información muestral.\n6) La media se ve afectada por valores extremos.\n7) La mediana se ve afectada por valores extremos.",
+      "alternatives": [
+        "8",
+        "1",
+        "6",
+        "7",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/medidas-de-tendencia-central-pdf.html",
+      "sourceName": "MatematicasN - Medidas de tendencia central, ejercicios resueltos preuniversitaria, cuántas proposiciones son verdaderas"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el valor de verdad:\nI) Si una tabla de datos agrupados es simétrica y unimodal, entonces Mo = Me = Media.\nII) Siempre se cumple Mo < Me < Media para datos no agrupados.\nIII) En un conjunto donde todos los datos son iguales, Mo = Me = Media.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FVV",
+        "FFV",
+        "VFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/medidas-de-tendencia-central-pdf.html",
+      "sourceName": "MatematicasN - Medidas de tendencia central, ejercicios resueltos preuniversitaria, valor de verdad simetría unimodal"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Dado el conjunto A = {1; 2; 1; 3; 2; 1; 7; 6; 3}, calcule la mediana.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/medidas-de-tendencia-central-pdf.html",
+      "sourceName": "MatematicasN - Medidas de tendencia central, ejercicios resueltos preuniversitaria, mediana del conjunto A"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado A = {1; 2; 1; 3; 1; 4; 5; 1; 2; 5}, calcule la suma de la moda y la mediana.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "2,5",
+        "3,5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/medidas-de-tendencia-central-pdf.html",
+      "sourceName": "MatematicasN - Medidas de tendencia central, ejercicios resueltos preuniversitaria, suma moda y mediana"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tienen 4 cantidades cuya moda es 3, mediana es 5 y media es 6. Calcule el producto de las dos cantidades mayores.",
+      "alternatives": [
+        "64",
+        "68",
+        "75",
+        "77",
+        "80"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/medidas-de-tendencia-central-pdf.html",
+      "sourceName": "MatematicasN - Medidas de tendencia central, ejercicios resueltos preuniversitaria, producto de los dos valores mayores"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ángela tomó seis exámenes calificados de 0 a 20. A partir de sus notas se sabe que: la media aritmética es 16, la mediana es 15 y la moda es 14. Calcule su mayor nota, obtenida una sola vez.",
+      "alternatives": [
+        "18",
+        "19",
+        "20",
+        "17",
+        "16"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/estadistica-resuelta-ingreso-universidad.html",
+      "sourceName": "MatematicasN - Banco de preguntas estadística admisión universidad, media mediana moda notas de Ángela"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En Cálculo I, once estudiantes obtuvieron las notas: 04, 05, 06, 07, 08, 09, 10, 11, 12, 13 y 14. El profesor aprueba a quienes obtengan una nota mayor que la mediana más 3. ¿Cuántos estudiantes aprobaron?",
+      "alternatives": [
+        "3",
+        "5",
+        "6",
+        "4",
+        "2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/estadistica-resuelta-ingreso-universidad.html",
+      "sourceName": "MatematicasN - Banco de preguntas estadística admisión universidad, aprobados según mediana"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El registro del número de tazas de café consumidas por un empleado durante 20 días es: 4; 0; 1; 3; 2; 4; 3; 0; 4; 5; 2; 1; 4; 3; 2; 1; 4; 2; 1; 4. La mediana y la moda son, respectivamente:",
+      "alternatives": [
+        "2 y 4",
+        "3 y 3",
+        "3,5 y 3",
+        "2,5 y 4",
+        "3,5 y 4,5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/estadistica-ejercicios-quinto-de.html",
+      "sourceName": "MatematicasN - Estadística ejercicios quinto de secundaria, tazas de café mediana y moda"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se tienen las notas de 11 alumnos en un examen de matemática: 10, 12, 09, 12, 08, 14, 12, 10, 11, 12, 08. ¿Cuál es la moda?",
+      "alternatives": [
+        "8",
+        "10",
+        "11",
+        "12",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://estadisticabasicautch.blogspot.com/p/ejercicios-resueltos.html",
+      "sourceName": "Estadística Básica UTCh - Ejercicios resueltos medidas de tendencia central, moda de notas de 11 alumnos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se tienen las notas de 11 alumnos en un examen de matemática: 10, 12, 09, 12, 08, 14, 12, 10, 11, 12, 08. ¿Cuál es la mediana?",
+      "alternatives": [
+        "9",
+        "10,5",
+        "10",
+        "11",
+        "12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://estadisticabasicautch.blogspot.com/p/ejercicios-resueltos.html",
+      "sourceName": "Estadística Básica UTCh - Ejercicios resueltos medidas de tendencia central, mediana de notas de 11 alumnos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se tienen las edades de 20 alumnos: 16, 18, 20, 21, 19, 19, 20, 18, 17, 18, 21, 16, 21, 19, 16, 16, 17, 18, 16, 18. La distribución de las edades es:",
+      "alternatives": [
+        "Unimodal",
+        "Bimodal",
+        "Amodal",
+        "Trimodal",
+        "Multimodal"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://estadisticabasicautch.blogspot.com/p/ejercicios-resueltos.html",
+      "sourceName": "Estadística Básica UTCh - Ejercicios resueltos medidas de tendencia central, tipo de distribución por moda"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Halle la mediana de los siguientes datos: 7, 7, 5, 4, 6, 2, 9, 10, 15.",
+      "alternatives": [
+        "6",
+        "7",
+        "5",
+        "9",
+        "2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/la-mediana-en-datos-tabulados-y-no-clasificados-en-intervalos-de-clase-formula-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-pre-universitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - La mediana en datos tabulados y no agrupados, ejercicios resueltos preuniversitaria, mediana datos sin ordenar"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Halle la mediana de los siguientes datos: 12, 9, 5, 9, 9, 3, 2, 3, 2, 1, 7, 16.",
+      "alternatives": [
+        "5",
+        "7",
+        "8",
+        "6",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/la-mediana-en-datos-tabulados-y-no-clasificados-en-intervalos-de-clase-formula-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-pre-universitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - La mediana en datos tabulados y no agrupados, ejercicios resueltos preuniversitaria, mediana de 12 datos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Halle la mediana de los siguientes datos: 6, 2, 1, 1, 7, 1, 10, 1, 9, 10.",
+      "alternatives": [
+        "2",
+        "6",
+        "4",
+        "5",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/la-mediana-en-datos-tabulados-y-no-clasificados-en-intervalos-de-clase-formula-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-pre-universitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - La mediana en datos tabulados y no agrupados, ejercicios resueltos preuniversitaria, mediana con datos repetidos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Halle la mediana de los siguientes datos: 8, 1, 7, 1, 6, 7, 5, 2, 2, 4.",
+      "alternatives": [
+        "4",
+        "5",
+        "4,5",
+        "5,5",
+        "6,5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/la-mediana-en-datos-tabulados-y-no-clasificados-en-intervalos-de-clase-formula-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-pre-universitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - La mediana en datos tabulados y no agrupados, ejercicios resueltos preuniversitaria, mediana número par de datos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El número de horas que Camilo vio televisión cada día de la semana pasada fue: 3, 2, 3, 3, 2, 6, 3. ¿Cuál es la moda?",
+      "alternatives": [
+        "4",
+        "5",
+        "2",
+        "6",
+        "3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://www.thatquiz.org/es/preview?c=oc6hgozo&s=nl5yye",
+      "sourceName": "ThatQuiz - Quiz Moda, Mediana y Media Aritmética, pregunta sobre moda de horas de televisión"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Las horas dedicadas a un proyecto de geometría por 23 estudiantes fueron: 10, 20, 15, 15, 12, 12, 17, 20, 10, 5, 18, 15, 13, 14, 20, 15, 15, 11, 18, 15, 12, 23, 15. ¿Cuál es la moda?",
+      "alternatives": [
+        "7",
+        "23",
+        "15",
+        "10",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.thatquiz.org/es/preview?c=oc6hgozo&s=nl5yye",
+      "sourceName": "ThatQuiz - Quiz Moda, Mediana y Media Aritmética, moda horas proyecto geometría"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las estaturas en centímetros de 16 amigos son: 150, 160, 164, 157, 183, 163, 182, 170, 159, 157, 151, 161, 163, 178, 173, 172. ¿Cuál es la mediana?",
+      "alternatives": [
+        "170",
+        "163",
+        "162",
+        "165",
+        "180"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.thatquiz.org/es/preview?c=oc6hgozo&s=nl5yye",
+      "sourceName": "ThatQuiz - Quiz Moda, Mediana y Media Aritmética, mediana estaturas 16 amigos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las horas para el proyecto de geometría por 23 estudiantes ordenadas son: 5, 10, 10, 11, 12, 12, 12, 13, 14, 14, 14, 15, 15, 15, 15, 15, 17, 18, 18, 20, 20, 23. ¿Cuál es la mediana?",
+      "alternatives": [
+        "13,5",
+        "15",
+        "14,4",
+        "14",
+        "15,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.thatquiz.org/es/preview?c=oc6hgozo&s=nl5yye",
+      "sourceName": "ThatQuiz - Quiz Moda, Mediana y Media Aritmética, mediana horas proyecto geometría"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Las estaturas de cinco amigos son: 150, 160, 164, 158 y 183 cm. ¿Cuál es la media aritmética de sus estaturas?",
+      "alternatives": [
+        "157",
+        "163",
+        "160",
+        "155",
+        "170"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.thatquiz.org/es/preview?c=oc6hgozo&s=nl5yye",
+      "sourceName": "ThatQuiz - Quiz Moda, Mediana y Media Aritmética, media aritmética estaturas cinco amigos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El promedio de las 6 calificaciones de matemáticas de Juanito es 75. El profesor eliminó la peor nota y el promedio subió a 85. ¿Cuál era la peor nota de Juanito?",
+      "alternatives": [
+        "20",
+        "25",
+        "30",
+        "40",
+        "50"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/01/14-ejercicios-resueltos-sobre-promedios.html",
+      "sourceName": "Blog del Profe Alex - 14 ejercicios resueltos sobre promedios, problema 01 peor nota de Juanito"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el promedio de 6, 6, 12, 16 y m es igual a m, ¿cuál es el valor de m?",
+      "alternatives": [
+        "6",
+        "8",
+        "9",
+        "10",
+        "N.A."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/01/14-ejercicios-resueltos-sobre-promedios.html",
+      "sourceName": "Blog del Profe Alex - 14 ejercicios resueltos sobre promedios, problema 02 valor de m en media aritmética"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El 40% de los asistentes a una reunión tiene un promedio de edad de 40 años. El 25% del resto tiene un promedio de 28 años. Si todos los asistentes promedian 31 años, ¿cuál es el promedio de edad del resto?",
+      "alternatives": [
+        "28",
+        "25",
+        "26",
+        "24",
+        "22"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/01/14-ejercicios-resueltos-sobre-promedios.html",
+      "sourceName": "Blog del Profe Alex - 14 ejercicios resueltos sobre promedios, problema 03 promedio ponderado por grupos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De 500 estudiantes, la estatura promedio es 1,67 m. Por cada 3 mujeres hay 7 hombres. Si las mujeres promedian 1,60 m, ¿cuál es el promedio de los hombres?",
+      "alternatives": [
+        "1,68 m",
+        "1,70 m",
+        "1,72 m",
+        "1,71 m",
+        "1,60 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/01/14-ejercicios-resueltos-sobre-promedios.html",
+      "sourceName": "Blog del Profe Alex - 14 ejercicios resueltos sobre promedios, problema 04 promedio estaturas por género"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La media aritmética de un conjunto de datos supera al dato menor en 14 unidades y es 10 menor que el dato mayor. La mediana es 25. Halle la suma del mayor y el menor.",
+      "alternatives": [
+        "60",
+        "64",
+        "66",
+        "61",
+        "63"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/01/14-ejercicios-resueltos-sobre-promedios.html",
+      "sourceName": "Blog del Profe Alex - 14 ejercicios resueltos sobre promedios, problema 05 relación media con mayor y menor"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El promedio de edades de un grupo de 30 industriales es 15 años, de otro grupo de 30 es 16 años y de un tercer grupo de 30 es 11 años. ¿Cuál es el promedio de los 90?",
+      "alternatives": [
+        "13",
+        "12",
+        "14",
+        "11",
+        "15"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/01/14-ejercicios-resueltos-sobre-promedios.html",
+      "sourceName": "Blog del Profe Alex - 14 ejercicios resueltos sobre promedios, problema 06 promedio combinado tres grupos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El promedio de edad de 4 hombres es 65 años y ninguno de ellos es mayor de 70 años. ¿Cuál es la mínima edad posible de uno de ellos?",
+      "alternatives": [
+        "67",
+        "65",
+        "54",
+        "50",
+        "45"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/01/14-ejercicios-resueltos-sobre-promedios.html",
+      "sourceName": "Blog del Profe Alex - 14 ejercicios resueltos sobre promedios, problema 07 mínima edad dado promedio y máximo"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El promedio de 6 números es 12. Si el promedio de 4 de ellos es 11, ¿cuál es el promedio de los otros dos?",
+      "alternatives": [
+        "14",
+        "15",
+        "13",
+        "12",
+        "16"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/01/14-ejercicios-resueltos-sobre-promedios.html",
+      "sourceName": "Blog del Profe Alex - 14 ejercicios resueltos sobre promedios, problema 09 promedio de dos subconjuntos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El promedio de 6 números pares consecutivos es 13. ¿Cuál es el promedio de los dos mayores?",
+      "alternatives": [
+        "15",
+        "14",
+        "16",
+        "18",
+        "17"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/01/14-ejercicios-resueltos-sobre-promedios.html",
+      "sourceName": "Blog del Profe Alex - 14 ejercicios resueltos sobre promedios, problema 10 promedio de los dos mayores números pares consecutivos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El promedio de las edades de 4 personas es 30 años. Si ninguna de ellas es mayor de 35 años, ¿cuál es la mínima edad que uno de ellos puede tener?",
+      "alternatives": [
+        "25 años",
+        "20 años",
+        "18 años",
+        "15 años"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/01/14-ejercicios-resueltos-sobre-promedios.html",
+      "sourceName": "Blog del Profe Alex - 14 ejercicios resueltos sobre promedios, problema 11 mínima edad con restricción de máximo"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El promedio aritmético de las edades de 3 hermanos es 20 años. Sus edades están en la relación 5 : 3 : 2. Calcule la edad del menor.",
+      "alternatives": [
+        "30 años",
+        "18 años",
+        "15 años",
+        "12 años"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/01/14-ejercicios-resueltos-sobre-promedios.html",
+      "sourceName": "Blog del Profe Alex - 14 ejercicios resueltos sobre promedios, problema 12 edad del menor con edades en proporción"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El promedio de 20 números es 25. Si se agrega un número más y el promedio sigue siendo el mismo, ¿cuál es el nuevo número?",
+      "alternatives": [
+        "20",
+        "25",
+        "45",
+        "50"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/01/14-ejercicios-resueltos-sobre-promedios.html",
+      "sourceName": "Blog del Profe Alex - 14 ejercicios resueltos sobre promedios, problema 13 número que mantiene el promedio"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El promedio de 50 números es 62,1. Se retiran cinco números cuyo promedio es 18. ¿En cuánto varía el nuevo promedio respecto al original?",
+      "alternatives": [
+        "5,0",
+        "4,9",
+        "4,1",
+        "3,9",
+        "5,5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/01/14-ejercicios-resueltos-sobre-promedios.html",
+      "sourceName": "Blog del Profe Alex - 14 ejercicios resueltos sobre promedios, problema 14 variación del promedio al retirar datos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Los alumnos del tercer grado registraron sus edades: 13, 15, 12, 14, 13, 16, 12, 15, 14. ¿Cuál es la mediana de las edades?",
+      "alternatives": [
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://mundoaprendiz.com/aprendizajes/ejercicios-de-media-y-moda/",
+      "sourceName": "Mundo Aprendiz - 20 ejercicios de media, moda y mediana, ejercicio 1 mediana edades tercer grado"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En una tienda se vendieron las siguientes cantidades de productos en 8 días: 22, 18, 30, 25, 20, 27, 15, 24. ¿Cuál es la mediana de ventas diarias?",
+      "alternatives": [
+        "22",
+        "23",
+        "24",
+        "25",
+        "20"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://mundoaprendiz.com/aprendizajes/ejercicios-de-media-y-moda/",
+      "sourceName": "Mundo Aprendiz - 20 ejercicios de media, moda y mediana, ejercicio 2 mediana ventas diarias"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Los puntajes de 7 jugadores en un videojuego fueron: 450, 320, 580, 410, 390, 620, 470. ¿Cuál es la mediana?",
+      "alternatives": [
+        "390",
+        "410",
+        "450",
+        "470",
+        "580"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://mundoaprendiz.com/aprendizajes/ejercicios-de-media-y-moda/",
+      "sourceName": "Mundo Aprendiz - 20 ejercicios de media, moda y mediana, ejercicio 3 mediana puntajes videojuego"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Los tiempos (en minutos) de 10 estudiantes para resolver un problema fueron: 8, 12, 5, 9, 15, 7, 10, 6, 11, 13. ¿Cuál es la mediana?",
+      "alternatives": [
+        "8,5",
+        "9",
+        "9,5",
+        "10",
+        "10,5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://mundoaprendiz.com/aprendizajes/ejercicios-de-media-y-moda/",
+      "sourceName": "Mundo Aprendiz - 20 ejercicios de media, moda y mediana, ejercicio 4 mediana tiempos 10 estudiantes"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un estudiante obtuvo las siguientes notas en 5 materias: Matemáticas 16, Comunicación 14, Ciencias 18, Historia 13 e Inglés 15. ¿Cuál es su promedio?",
+      "alternatives": [
+        "14,5",
+        "15",
+        "15,2",
+        "15,5",
+        "16"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://mundoaprendiz.com/aprendizajes/ejercicios-de-media-y-moda/",
+      "sourceName": "Mundo Aprendiz - 20 ejercicios de media, moda y mediana, ejercicio 6 promedio notas 5 materias"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Las puntuaciones obtenidas en un concurso de ortografía son: 8, 7, 9, 8, 6, 10, 8, 7, 9, 8, 7. ¿Cuál es la moda?",
+      "alternatives": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://mundoaprendiz.com/aprendizajes/ejercicios-de-media-y-moda/",
+      "sourceName": "Mundo Aprendiz - 20 ejercicios de media, moda y mediana, ejercicio 12 moda puntajes concurso ortografía"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Las temperaturas registradas (°C) durante 10 días son: 22, 24, 23, 22, 25, 24, 22, 23, 24, 22. ¿Cuál es la temperatura modal?",
+      "alternatives": [
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://mundoaprendiz.com/aprendizajes/ejercicios-de-media-y-moda/",
+      "sourceName": "Mundo Aprendiz - 20 ejercicios de media, moda y mediana, ejercicio 14 temperatura modal 10 días"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cantidad de goles marcados por un equipo en 9 partidos: 1, 3, 2, 1, 4, 2, 1, 3, 2. Calcula la moda de los goles.",
+      "alternatives": [
+        "1 y 2",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://mundoaprendiz.com/aprendizajes/ejercicios-de-media-y-moda/",
+      "sourceName": "Mundo Aprendiz - 20 ejercicios de media, moda y mediana, ejercicio 16 moda goles 9 partidos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Número de libros leídos por 11 estudiantes: 3, 5, 2, 4, 5, 3, 6, 5, 4, 3, 5. Determine la moda.",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "3 y 5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://mundoaprendiz.com/aprendizajes/ejercicios-de-media-y-moda/",
+      "sourceName": "Mundo Aprendiz - 20 ejercicios de media, moda y mediana, ejercicio 19 moda libros leídos 11 estudiantes"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calificaciones de 10 estudiantes en un examen de historia: 12, 15, 18, 14, 15, 11, 16, 15, 13, 12. Halla la moda.",
+      "alternatives": [
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://mundoaprendiz.com/aprendizajes/ejercicios-de-media-y-moda/",
+      "sourceName": "Mundo Aprendiz - 20 ejercicios de media, moda y mediana, ejercicio 20 moda calificaciones 10 estudiantes historia"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En el conjunto de datos: 12, 15, 12, 18, 20, 18, 18, 21, 22, 22, ¿cuál es la moda?",
+      "alternatives": [
+        "12",
+        "15",
+        "18",
+        "20",
+        "22"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematix.org/ejercicios-de-media-mediana-y-moda/",
+      "sourceName": "Matematix - Ejercicios de media, mediana y moda, moda del conjunto de datos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcule la media aritmética del siguiente conjunto: 5, 15, 10, 20, 30.",
+      "alternatives": [
+        "12",
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematix.org/ejercicios-de-media-mediana-y-moda/",
+      "sourceName": "Matematix - Ejercicios de media, mediana y moda, media aritmética de cinco datos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Para el conjunto de datos: 3, 1, 4, 5, 9, 2, ¿cuál sería la mediana?",
+      "alternatives": [
+        "3",
+        "3,5",
+        "4",
+        "4,5",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematix.org/ejercicios-de-media-mediana-y-moda/",
+      "sourceName": "Matematix - Ejercicios de media, mediana y moda, mediana de seis datos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las notas de un estudiante en matemáticas son 85 (con peso 1), inglés 90 (con peso 2) y ciencias 95 (con peso 3). ¿Cuál es la media ponderada?",
+      "alternatives": [
+        "90,00",
+        "91,00",
+        "91,67",
+        "92,00",
+        "92,50"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematix.org/ejercicios-de-media-mediana-y-moda/",
+      "sourceName": "Matematix - Ejercicios de media, mediana y moda, media ponderada notas con pesos distintos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una heladería registró ventas durante una semana: lunes 45, martes 60, miércoles 38, jueves 52, viernes 75, sábado 90 y domingo 80. ¿Cuál fue la venta promedio diaria (en helados)?",
+      "alternatives": [
+        "60",
+        "62",
+        "63",
+        "65",
+        "68"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://mundoaprendiz.com/aprendizajes/ejercicios-de-media-y-moda/",
+      "sourceName": "Mundo Aprendiz - 20 ejercicios de media, moda y mediana, ejercicio 7 venta promedio diaria heladería"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un agricultor cosechó kilogramos de frutas en 4 meses: enero 120, febrero 95, marzo 140 y abril 105. ¿Cuál es la cosecha promedio mensual?",
+      "alternatives": [
+        "110 kg",
+        "112 kg",
+        "115 kg",
+        "118 kg",
+        "120 kg"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://mundoaprendiz.com/aprendizajes/ejercicios-de-media-y-moda/",
+      "sourceName": "Mundo Aprendiz - 20 ejercicios de media, moda y mediana, ejercicio 10 cosecha promedio mensual agricultor"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se midió la altura (en cm) de 40 estudiantes agrupados en los siguientes intervalos:\n[155, 160): 3 alumnos\n[160, 165): 7 alumnos\n[165, 170): 14 alumnos\n[170, 175): 10 alumnos\n[175, 180): 6 alumnos\nCalcule la media aritmética de las alturas.",
+      "alternatives": [
+        "167,50 cm",
+        "168,00 cm",
+        "168,63 cm",
+        "169,00 cm",
+        "169,50 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matepasoapaso.com/media-mediana-y-moda-datos-agrupados/",
+      "sourceName": "Mate Paso a Paso - Media, mediana y moda para datos agrupados, media de alturas 40 estudiantes"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Medidas de Tendencia Central",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se midió la altura (en cm) de 40 estudiantes agrupados en los siguientes intervalos:\n[155, 160): 3 alumnos\n[160, 165): 7 alumnos\n[165, 170): 14 alumnos\n[170, 175): 10 alumnos\n[175, 180): 6 alumnos\nCalcule la mediana de las alturas.",
+      "alternatives": [
+        "167,50 cm",
+        "168,00 cm",
+        "168,57 cm",
+        "169,00 cm",
+        "170,00 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matepasoapaso.com/media-mediana-y-moda-datos-agrupados/",
+      "sourceName": "Mate Paso a Paso - Media, mediana y moda para datos agrupados, mediana de alturas 40 estudiantes"
+    }
+  ]
+}

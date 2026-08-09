@@ -1,0 +1,92 @@
+{
+  "entries": [
+    {
+      "courseName": "Economía",
+      "topicName": "Circulación y mercado",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Los mercados se forman a partir de la interacción de los ofertantes y demandantes. María Luisa acude al centro de abastos donde la venta es directa al consumidor. ¿Qué clase de mercado es?",
+      "alternatives": ["minorista", "cerrado", "mercado de valores", "cadena", "mayorista"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-economia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicasn - Economía preguntas resueltas modo examen admisión universidad, Q sobre clases de mercado"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Circulación y mercado",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la oferta laboral es mayor que la demanda laboral, ¿qué sucede?",
+      "alternatives": ["El empleo es mayor", "Los salarios son altos", "Los salarios son bajos", "Mayor producción", "La formación de sindicatos"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-economia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicasn - Economía preguntas resueltas modo examen admisión universidad, Q sobre mercado laboral"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Circulación y mercado",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Los mercados itinerantes incrementarán los ingresos para pequeños productores agropecuarios, lo que generará que aumente...",
+      "alternatives": ["la circulación", "la demanda", "el comercio", "los servicios"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-economia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "matematicasn - Economía preguntas resueltas modo examen admisión universidad, Q sobre mercados itinerantes y circulación"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Circulación y mercado",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La demanda expresa el comportamiento de los ________ en el mercado.",
+      "alternatives": ["oferentes", "productores", "consumidores", "inversionistas", "intermedios"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/economia-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn - Economía ejercicios resueltos examen admisión, Q sobre la demanda en el mercado"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Circulación y mercado",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El modelo de flujo circular simple asume una economía:",
+      "alternatives": ["de autarquía", "con tres polos económicos", "con sector público", "de trueque", "con comercio exterior"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/economia-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn - Economía ejercicios resueltos examen admisión, Q sobre modelo de flujo circular simple"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Circulación y mercado",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La interacción de la oferta y de la demanda en el mercado cambiario, determina los niveles de:",
+      "alternatives": ["ingreso y trabajo", "empleo y trabajo", "el tipo de cambio", "la tasa de interés e inversión", "salario e inversión"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/economia-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn - Economía ejercicios resueltos examen admisión, Q sobre mercado cambiario"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Circulación y mercado",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una empresa comercial paga a la SUNAT cada mes el impuesto a la renta, producto de los ingresos que obtiene por la venta de mercancías en el mercado. Estos desembolsos corresponden a la fase del proceso económico llamada:",
+      "alternatives": ["Distribución", "Producción", "Consumo", "Redistribución", "Circulación"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/economia-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn - Economía preguntas resueltas examen admisión, Q19 sobre fases del proceso económico"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Circulación y mercado",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto al modelo de flujo circular de la economía, identifique los enunciados correctos.\nI) El gasto de las empresas en el mercado de factores productivos es igual al gasto de los hogares en el mercado de bienes y servicios.\nII) El valor de la producción es igual a la cantidad de dinero en circulación.\nIII) Los hogares asumen el papel de compradores en el mercado de factores productivos.\nIV) Los hogares pueden reducir su consumo para generar ahorro.",
+      "alternatives": ["III y IV", "Solo I", "I y II", "I y III", "Solo II"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/economia-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn - Economía preguntas resueltas examen admisión, Q40 sobre modelo de flujo circular"
+    }
+  ]
+}

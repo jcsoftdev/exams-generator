@@ -1,0 +1,158 @@
+{
+  "entries": [
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la carta de una juguería, se ofrecen dos tipos de jugos naturales. Para un litro del primer tipo se requiere medio kilo de papaya y tres plátanos, por lo que su precio es de nueve soles. Un litro del segundo tipo tiene un precio de siete soles y su preparación requiere medio kilo de papaya y dos plátanos. Si solo se dispone de seis kilos de papaya y treinta plátanos, ¿cuál será el ingreso máximo que se obtendrá por la venta de los jugos naturales?",
+      "alternatives": ["96 soles", "93 soles", "98 soles", "100 soles", "90 soles"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+      "sourceName": "San Marcos (UNMSM) - Álgebra, problemas resueltos de admisión, Pregunta 11 (Rpta.: A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La región factible de un problema de programación lineal es un polígono convexo cuyos vértices son (0; 0), (0; 6), (7; 6) y (3; 0). Hallar el valor máximo de la función objetivo f(x; y) = 2x − 2y.",
+      "alternatives": ["2", "4", "6", "10", "12"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/programacion-lineal-ejercicios.html",
+      "sourceName": "Matemáticas N - Programación Lineal ejercicios resueltos preuniversitario, Pregunta 1 (Rpta.: C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una fábrica produce dos modelos de cocinas: el tipo A requiere 2 horas de trabajo en máquina y 2 horas de trabajo manual, generando una ganancia de S/ 40 por unidad; el tipo B requiere 4 horas de trabajo en máquina y 1 hora de trabajo manual, generando una ganancia de S/ 70 por unidad. Si diariamente se dispone de 200 horas de trabajo en máquina y 140 horas de trabajo manual, ¿cuál es la máxima ganancia diaria?",
+      "alternatives": ["S/ 2500", "S/ 3850", "S/ 3800", "S/ 4000", "S/ 2980"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/programacion-lineal-ejercicios.html",
+      "sourceName": "Matemáticas N - Programación Lineal ejercicios resueltos preuniversitario, Pregunta 2 (Rpta.: C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Maximizar f(x; y) = 2x + 3y sujeto a las restricciones: 2y ≤ x + 2, y − x ≥ −1, 0 ≤ x ≤ 4, y ≥ 0. El valor máximo de f es:",
+      "alternatives": ["13", "14", "15", "16", "17"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/programacion-lineal-ejercicios.html",
+      "sourceName": "Matemáticas N - Programación Lineal ejercicios resueltos preuniversitario, Pregunta 3 (Rpta.: E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un comerciante compra refrigeradoras a S/ 500 cada una y lavadoras a S/ 400 cada una. Su almacén tiene capacidad para 50 unidades y su presupuesto es de S/ 22 000. Si cada refrigeradora le genera una ganancia de S/ 120 y cada lavadora S/ 100, ¿cuántas unidades de cada artículo debe comprar para maximizar su ganancia? Indicar: (número de refrigeradoras; número de lavadoras).",
+      "alternatives": ["30 y 20", "10 y 20", "20 y 30", "44 y 1", "10 y 30"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/programacion-lineal-ejercicios.html",
+      "sourceName": "Matemáticas N - Programación Lineal ejercicios resueltos preuniversitario, Pregunta 6 (Rpta.: C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un restaurante dispone de 26 kg de arroz cocido y 10 kg de carne de cabrito seco. El plato sencillo usa 400 g de arroz y 100 g de carne, y se vende a S/ 14. El plato a la carta usa 300 g de arroz y 250 g de carne, y se vende a S/ 21. ¿Cuál es el ingreso máximo que puede obtener el restaurante?",
+      "alternatives": ["S/ 1500", "S/ 1150", "S/ 1450", "S/ 1050", "S/ 1120"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/programacion-lineal-ejercicios.html",
+      "sourceName": "Matemáticas N - Programación Lineal ejercicios resueltos preuniversitario, Pregunta 7 (Rpta.: E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un taller de pirotecnia produce cajas de fuegos artificiales de tipo M y tipo N, que se venden a S/ 35 y S/ 40 respectivamente. Las restricciones semanales son: máximo 65 cajas de tipo M, máximo 50 cajas de tipo N, y en total no más de 100 cajas. ¿Cuál es el ingreso máximo semanal?",
+      "alternatives": ["S/ 3675", "S/ 3250", "S/ 3950", "S/ 3500", "S/ 3750"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/programacion-lineal-ejercicios.html",
+      "sourceName": "Matemáticas N - Programación Lineal ejercicios resueltos preuniversitario, Pregunta 8 (Rpta.: E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Con respecto a la programación lineal, señale cuál de las siguientes proposiciones es verdadera: I) Las restricciones son inecuaciones de primer y segundo grado. II) El punto óptimo se encuentra en la región factible. III) La región factible contiene puntos con coordenadas negativas.",
+      "alternatives": ["Solo I", "Solo III", "Solo II", "I y II", "II y III"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/programacion-lineal-ejercicios.html",
+      "sourceName": "Matemáticas N - Programación Lineal ejercicios resueltos preuniversitario, Pregunta 13 (Rpta.: C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Erika dispone de 80 m² de algodón y 120 m² de lana. Para confeccionar un traje requiere 1 m² de algodón y 3 m² de lana; para un vestido necesita 2 m² de cada tela. Ambas prendas se venden al mismo precio. ¿Cuántas unidades de cada prenda debe confeccionar para maximizar sus ingresos?",
+      "alternatives": ["20 trajes y 30 vestidos", "20 trajes y 18 vestidos", "35 trajes y 26 vestidos", "15 trajes y 30 vestidos", "27 trajes y 40 vestidos"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/programacion-lineal-ejercicios.html",
+      "sourceName": "Matemáticas N - Programación Lineal ejercicios resueltos preuniversitario, Pregunta 16 (Rpta.: A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una aerolínea opera aviones tipo A y tipo B en una ruta. El número de vuelos del tipo A debe ser mayor o igual al del tipo B y no mayor de 120. El total combinado de vuelos debe ser mayor a 60 pero no mayor a 200. La ganancia por viaje del tipo A es S/ 300 000 y del tipo B es S/ 200 000. ¿Cuántos viajes de cada tipo maximizan la ganancia? Indicar: (viajes A; viajes B).",
+      "alternatives": ["120; 80", "140; 60", "90; 11", "50; 150", "100; 100"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/programacion-lineal-ejercicios.html",
+      "sourceName": "Matemáticas N - Programación Lineal ejercicios resueltos preuniversitario, Pregunta 17 (Rpta.: A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una empresa metal-mecánica produce bridas roscadas (ganancia $ 5, requiere 1 h de fresado y 2 h de torneado) y bridas sin rosca (ganancia $ 4, requiere 1 h de fresado y 1 h de torneado). Se dispone de 220 h de fresado y 240 h de torneado. ¿Cuál es la ganancia máxima y cuántas unidades de cada tipo se producen?",
+      "alternatives": ["$ 880; 0 roscadas; 220 sin rosca", "$ 600; 120 roscadas; 0 sin rosca", "$ 960; 40 roscadas; 190 sin rosca", "$ 1090; 210 roscadas; 10 sin rosca", "$ 900; 20 roscadas; 200 sin rosca"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/programacion-lineal-ejercicios.html",
+      "sourceName": "Matemáticas N - Programación Lineal ejercicios resueltos preuniversitario, Pregunta 18 (Rpta.: E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una empresa automotriz dispone de S/ 1 800 000 para comercializar dos tipos de autos económicos: el tipo A cuesta S/ 30 000 y genera S/ 4 000 de ganancia; el tipo B cuesta S/ 20 000 y genera S/ 3 000 de ganancia. El total de unidades no debe superar 80. ¿Cuántos autos de cada tipo maximizan la ganancia? Indicar: (tipo A; tipo B).",
+      "alternatives": ["20; 60", "20; 50", "30; 50", "50; 40", "40; 45"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/programacion-lineal-ejercicios.html",
+      "sourceName": "Matemáticas N - Programación Lineal ejercicios resueltos preuniversitario, Pregunta 19 (Rpta.: A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una empresa fabrica productos A y B. El producto A requiere 20 min de fabricación y 20 min de máquina, con una ganancia de S/ 150. El producto B requiere 30 min de fabricación y 10 min de máquina, con una ganancia de S/ 100. Se dispone de 100 horas de fabricación y 80 horas de máquina. ¿Cuántas unidades de cada producto maximizan la ganancia?",
+      "alternatives": ["230 A y 50 B", "200 A y 70 B", "210 A y 50 B", "220 A y 60 B", "210 A y 60 B"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/programacion-lineal-ejercicios.html",
+      "sourceName": "Matemáticas N - Programación Lineal ejercicios resueltos preuniversitario, Pregunta 20 (Rpta.: E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Programación Lineal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un taller de confección produce chaquetas y pantalones para niños. Para las chaquetas se necesita 1 m de tela, 2 botones y se obtiene una ganancia de S/ 20. Para los pantalones se necesita 2 m de tela, 1 botón, 1 cremallera y se obtiene una ganancia de S/ 30. Se dispone de 500 m de tela, 400 botones y 225 cremalleras. ¿Cuántas unidades de cada prenda maximizan la ganancia?",
+      "alternatives": ["200 chaquetas y 150 pantalones", "300 chaquetas y 100 pantalones", "50 chaquetas y 225 pantalones", "100 chaquetas y 200 pantalones", "150 chaquetas y 175 pantalones"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/12/programacion-lineal-metodo-grafico.html?m=1",
+      "sourceName": "Blog del Profe Alex - Programación Lineal Método Gráfico (Ejercicio 7, solución óptima 100 chaquetas y 200 pantalones)"
+    }
+  ]
+}

@@ -1,0 +1,792 @@
+{
+  "entries": [
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de fonemas que corresponden, respectivamente, a las palabras \"ahora\" y \"axioma\".",
+      "alternatives": [
+        "cuatro y siete",
+        "cinco y seis",
+        "cinco y siete",
+        "cuatro y ocho"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - Fonología, Práctica pregunta 1"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el número de fonemas que corresponden, respectivamente, a las palabras \"hervir\", \"taxi\" y \"hola\".",
+      "alternatives": [
+        "cinco, seis y tres",
+        "cuatro, siete y cuatro",
+        "seis, seis y cuatro",
+        "cinco, cinco y tres"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - Fonología, Práctica pregunta 3"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de fonemas que corresponden, respectivamente, a las palabras \"excepto\" y \"exhibe\".",
+      "alternatives": [
+        "siete y seis",
+        "seis y seis",
+        "ocho y seis",
+        "siete y siete"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - Fonología, Práctica pregunta 4"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la palabra que presenta dos grafemas distintos que representan a un mismo fonema.",
+      "alternatives": [
+        "cocido",
+        "éxito",
+        "herbívoro",
+        "gigante"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - Fonología, Práctica pregunta 5"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el número de fonemas que corresponden, respectivamente, a las palabras \"fénix\", \"flecha\" y \"hecho\".",
+      "alternatives": [
+        "cinco, seis y cinco",
+        "seis, cinco y cuatro",
+        "seis, cuatro y cinco",
+        "seis, cinco y tres"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - Fonología, Práctica pregunta 7"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elija la serie de palabras cuyos sonidos iniciales son sonoros.",
+      "alternatives": [
+        "voto, golero, risa",
+        "carpeta, regla, libro",
+        "reloj, malla, salón",
+        "cambio, doce, humo"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - Fonética, Práctica pregunta 1"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marque la alternativa en la que los fonemas vocálicos son todos anteriores.",
+      "alternatives": [
+        "doce liebres",
+        "dedo gordo",
+        "feliz viernes",
+        "pie izquierdo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - Fonética, Práctica pregunta 2"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Según el lugar de articulación, los fonos de la palabra \"regido\" son, respectivamente,",
+      "alternatives": [
+        "vibrante, oclusivo y oclusivo",
+        "vibrante, fricativo y oclusivo",
+        "alveolar, oclusivo y dental",
+        "alveolar, velar y dental"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - Fonética, Práctica pregunta 3"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elija la opción en la que los fonemas oclusivos cumplen función distintiva.",
+      "alternatives": [
+        "gira - pira",
+        "niño - nicho",
+        "quero - cero",
+        "corro - gorro"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - Fonética, Práctica pregunta 4"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Marque la opción donde aparecen, respectivamente, consonantes oclusiva, fricativa y nasal.",
+      "alternatives": [
+        "colegio",
+        "bajan",
+        "pájaro",
+        "desear"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - Fonética, Práctica pregunta 7"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elija la opción que presenta función distintiva de consonantes vibrantes.",
+      "alternatives": [
+        "perro - peso",
+        "carta - casta",
+        "para - parra",
+        "yeso - yerro"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - Fonética, Práctica pregunta 8"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La fonología estudia los sonidos ________ y la fonética, los sonidos ________ de la lengua.",
+      "alternatives": [
+        "mentales - concretos",
+        "materiales - mentales",
+        "articulados - inarticulados",
+        "reales - abstractos",
+        "vocálicos - consonánticos"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 1"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala la afirmación incorrecta:",
+      "alternatives": [
+        "El castellano posee más grafemas que fonemas",
+        "El fonema tiene como función diferenciar significados",
+        "El fonema se representa mediante dos barritas paralelas",
+        "En el español hablado en el Perú, tenemos 23 fonemas",
+        "El \"yeísmo\" consiste en la pronunciación de \"H\" por \"y\""
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 2"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala la palabra en la que aparezca el fonema /r/ (vibrante múltiple):",
+      "alternatives": [
+        "Carolina",
+        "Honrado",
+        "Mentiroso",
+        "Veremos",
+        "Pera"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 3"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala las palabras que contengan el fonema /x/:",
+      "alternatives": [
+        "Xilófono - auxilio",
+        "Exceso - sexo",
+        "Jarra - genio",
+        "Gato - antiguo",
+        "Guisante - guerrero"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 4"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala la palabra que presenta un mismo fonema representado por dos grafemas diferentes:",
+      "alternatives": [
+        "Jolgorio",
+        "Concilio",
+        "Ramiro",
+        "Guerrear",
+        "Bravísimo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 5"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un grafema es:",
+      "alternatives": [
+        "La representación gráfica de un sonido",
+        "La segmentación que se ha materializado a través del aparato fonador",
+        "El sonido que se ha materializado a través del aparato fonador",
+        "La variante que sufre el sonido al ser pronunciado",
+        "Cualquier unidad sonora"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 7"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántos grafemas tienen las palabras \"el pollito\"? (no tome en cuenta las reiteraciones)",
+      "alternatives": [
+        "5",
+        "9",
+        "8",
+        "7",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 9"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elija la palabra en que dos grafemas distintos representan el mismo fonema:",
+      "alternatives": [
+        "Exitoso",
+        "Kilométrico",
+        "Agujero",
+        "Jilguero",
+        "Arrastra"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 10"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos fonemas distintos hay en la palabra \"chiquitita\"?",
+      "alternatives": [
+        "Uno",
+        "Dos",
+        "Tres",
+        "Cuatro",
+        "Cinco"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 12"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un grafema es:\nI. La mínima unidad de la cadena escrita.\nII. Representación gráfica del fonema.\nIII. Equivalente a un fonema siempre.",
+      "alternatives": [
+        "I",
+        "II",
+        "III",
+        "I y II",
+        "II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 14"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "\"gato\", \"pato\", la diferencia se da por causas:",
+      "alternatives": [
+        "gramaticales",
+        "morfológicas",
+        "sintácticas",
+        "fonológicas",
+        "acentuales"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 15"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Los fonemas suprasegmentales son:",
+      "alternatives": [
+        "24",
+        "vocales",
+        "consonantes",
+        "acento y entonación",
+        "acento y sílaba"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 16"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La diferencia entre las palabras \"libero\" - \"liberó\" se debe a fonemas:",
+      "alternatives": [
+        "Vocálicos",
+        "Consonánticos",
+        "Segmentales",
+        "Suprasegmentales",
+        "Monemas"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 18"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿En cuál de las siguientes palabras encontramos el mismo fonema representado por dos grafemas diferentes?",
+      "alternatives": [
+        "cigarrillo",
+        "quietecito",
+        "folklórico",
+        "juguetear",
+        "bikini"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 19"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Por qué hay más grafemas que fonemas en el español?",
+      "alternatives": [
+        "Por si acaso",
+        "Porque existen casos de duplicidad en la representación",
+        "Porque con las vocales son cinco más",
+        "Algunos grafemas no representan fonema alguno",
+        "Algunos fonemas no pueden ser graficados"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 20"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántos grafemas hay en la palabra \"GUIJARRO\"?",
+      "alternatives": [
+        "9",
+        "10",
+        "11",
+        "8",
+        "13"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 21"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala la palabra que contenga el fonema /x/:",
+      "alternatives": [
+        "saxo",
+        "excepto",
+        "mono",
+        "gota",
+        "magia"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 23"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala la alternativa en la que aparece un dígrafo:",
+      "alternatives": [
+        "Ella está en la playa",
+        "Iremos al cine",
+        "Cómprale los guantes",
+        "Trajo un chalequito",
+        "Presentó otra obra"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 24"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señala la palabra con fonema palatal:",
+      "alternatives": [
+        "Calcio",
+        "Perro",
+        "Mono",
+        "Yauyos",
+        "Mamá"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 28"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señale el enunciado correcto con respecto a la escritura del español:",
+      "alternatives": [
+        "Es mucho más natural que la lengua",
+        "No tiene ninguna relación con la lengua",
+        "Es un sistema gráfico-visual",
+        "En total, consta de cuarenta grafemas",
+        "La mínima unidad es el fono"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 30"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala la palabra en la que aparezca el fonema /r/ (vibrante simple):",
+      "alternatives": [
+        "Ratón",
+        "Enrique",
+        "Honrado",
+        "Vereda",
+        "Perro"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 31"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala la palabra que contenga el fonema /s/:",
+      "alternatives": [
+        "Coco",
+        "Cancerígeno",
+        "Agricultor",
+        "Académico",
+        "Cómico"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 32"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala la alternativa en la que aparece dígrafo:",
+      "alternatives": [
+        "Pienso más en ella",
+        "Viajaremos a Chimbote",
+        "Es un sinvergüenza",
+        "Trajo un tecito",
+        "Reventaron cinco"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 35"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marque la alternativa en la que el acento cumpla función distintiva, por acento enfático:",
+      "alternatives": [
+        "Dijo que regresaría pronto",
+        "La fe mueve montañas",
+        "Es un muchacho muy cortés",
+        "Lava todos tus pantalones",
+        "El perro es blanco"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 39"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señale la oración que contenga dos palabras diferenciadas por el fonema acento:",
+      "alternatives": [
+        "Estas limas son de Lima",
+        "Por favor, hierva esta hierba a fuego lento",
+        "Juan Mata llegó a la meta antes que tú",
+        "Lanzó la olla a una profunda hoya",
+        "Dile a tu \"amigo\" que tú y yo somos novios"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 41"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La función básica de un fonema es:",
+      "alternatives": [
+        "Normar los sonidos de una lengua",
+        "Diferenciar significados de palabras",
+        "Normar la escritura de una palabra",
+        "Indicar accidente gramatical",
+        "Diferenciar una lengua de otra"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 45"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "No forma parte del aparato fonador:",
+      "alternatives": [
+        "Lengua",
+        "Dientes",
+        "Alveolos",
+        "Esófago",
+        "Pared faríngea"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 46"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Por el punto de articulación /r/ es:",
+      "alternatives": [
+        "Palatal",
+        "Alveolar",
+        "Velar",
+        "Oclusivo",
+        "Fricativo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 48"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El fonema /g/ es:",
+      "alternatives": [
+        "Velar, oclusiva y sonora",
+        "Velar, fricativa y sonora",
+        "Velar, oclusiva y sorda",
+        "Velar, fricativa y sorda",
+        "Palatal, fricativa y sorda"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 49"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El fonema /n/ es:",
+      "alternatives": [
+        "Dental, oclusiva y sonora",
+        "Alveolar, fricativa y sonora",
+        "Alveolar, nasal y sonora",
+        "Velar, nasal y sorda",
+        "Palatal, oclusiva y sorda"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 50"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Vocal alta y posterior:",
+      "alternatives": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "u"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 51"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Vocales medias:",
+      "alternatives": [
+        "i, u",
+        "e, o",
+        "a, o",
+        "e, a",
+        "u, o"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 52"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Representan fonemas oclusivos y sonoros:",
+      "alternatives": [
+        "j, k",
+        "f, d",
+        "b, g",
+        "z, s",
+        "r, g"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 55"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los fonemas /p/ y /b/ son, respectivamente:",
+      "alternatives": [
+        "Alveolar y sonora",
+        "Dental y oclusiva",
+        "Interdental y fricativa",
+        "Palatal y nasal",
+        "Sorda y sonora"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 56"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Son vocales posteriores:",
+      "alternatives": [
+        "e, i",
+        "o, u",
+        "i, u",
+        "a, e",
+        "o, e"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 57"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Fonética y fonología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se puede afirmar que los fonos son:",
+      "alternatives": [
+        "Abstractos",
+        "Infinitos",
+        "Suprasegmentales",
+        "Finitos",
+        "Mentales"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://preguntas-lenguaje.blogspot.com/2013/11/fonologia-y-fonetica.html",
+      "sourceName": "Banco de preguntas de Lenguaje (admisión) - pregunta 58"
+    }
+  ]
+}

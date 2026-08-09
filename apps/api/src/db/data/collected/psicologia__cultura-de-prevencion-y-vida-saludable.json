@@ -1,0 +1,21 @@
+{
+  "entries": [
+    {
+      "courseName": "Psicología",
+      "topicName": "Cultura de prevención y vida saludable",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para la Organización Mundial de la Salud, la salud es el bienestar físico, psicológico y social. En relación con esta afirmación, ¿cuál o cuáles son las afirmaciones correctas?\n\nI. El exceso de juegos virtuales que realiza Bruce hasta altas horas de la noche no afecta el tiempo que le debe dedicar a sus clases y a sus repasos en el día.\nII. El cuidado que tiene Tita de no comer mucha grasa y carbohidratos por las noches le ocasionará problemas de salud.\nIII. La disciplina de Jaime de dormir ocho horas diarias le permite desenvolverse con mayor vigor y agilidad al otro día.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y III",
+        "II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/psicologia-deco-admision-san-marcos-simulacro-de-ingreso-a-la-universidad-desarrollado.html",
+      "sourceName": "Simulacro DECO Psicología admisión San Marcos (resuelto) - Pregunta 7"
+    }
+  ]
+}

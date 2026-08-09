@@ -1,0 +1,1124 @@
+{
+  "entries": [
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Factorice el polinomio p(x, y) = 6x^2 + xy - y^2 - 8x + 6y - 8 en ℤ[x, y], y proporcione la suma de los coeficientes de uno de los factores primos.",
+      "alternatives": [
+        "3",
+        "5",
+        "-1",
+        "-2",
+        "-3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/11/factorizacion-por-aspa-doble-ejercicios.html",
+      "sourceName": "Blog del Profe Alex - Factorización por Aspa Doble (Ejercicios Resueltos), Problema 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál es el volumen del equipo electrónico que tiene la forma de un paralelepípedo rectangular de aristas a, b y c unidades?, sabiendo que (ax + by + c) es un factor primo en ℤ[x, y] de p(x, y) = 10x^2 + xy - 3y^2 + 4x - 24y - 48.",
+      "alternatives": [
+        "150 u^3",
+        "124 u^3",
+        "120 u^3",
+        "164 u^3",
+        "180 u^3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/11/factorizacion-por-aspa-doble-ejercicios.html",
+      "sourceName": "Blog del Profe Alex - Factorización por Aspa Doble (Ejercicios Resueltos), Problema 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al factorizar el polinomio P(x, y, z) = 18x^2 + 6xy - 12y^2 - 15xz + 25yz - 12z^2, uno de los factores es:",
+      "alternatives": [
+        "x + y - z",
+        "2x + y - 2z",
+        "x + 3y - z",
+        "6x - 4y + 3z",
+        "2x + 2y + z"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/11/factorizacion-por-aspa-doble-ejercicios.html",
+      "sourceName": "Blog del Profe Alex - Factorización por Aspa Doble (Ejercicios Resueltos), Problema 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de factores primos de (x^2 + 2x - 3)(x^2 + x - 2)(x^2 + 5x + 6).",
+      "alternatives": [
+        "5",
+        "4",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn - Factorización de Polinomios (Ejercicios Resueltos), Problema 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Determine el factor primo común de los polinomios: P(x) = x^2 + x - 2 y Q(x) = x^2 + 7x + 10.",
+      "alternatives": [
+        "x",
+        "(x + 2)",
+        "(x + 5)",
+        "(x - 1)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn - Factorización de Polinomios (Ejercicios Resueltos), Problema 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorice el polinomio: P(x) = nx^2 - (mn + 2)xy + 2my^2, con mn ≠ 0.",
+      "alternatives": [
+        "(nx + 2)(x - my)",
+        "(nx - 2)(x + my)",
+        "(nx - 2y)(x - my)",
+        "(x - y)(x + y)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn - Factorización de Polinomios (Ejercicios Resueltos), Problema 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Del polinomio P(a, b) = (a + b)^2 + 2a + 2b - 3, determine la suma de los términos independientes de sus factores primos.",
+      "alternatives": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn - Factorización de Polinomios (Ejercicios Resueltos), Problema 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la mayor suma de coeficientes de los factores primos de P(x) = 3x^3 - 2x^2 + 3x - 2.",
+      "alternatives": [
+        "3",
+        "1",
+        "2",
+        "-1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn - Factorización de Polinomios (Ejercicios Resueltos), Problema 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si -1 y 2 son raíces de f(x) = 2x^3 + nx^2 + nx + m, determine m + n.",
+      "alternatives": [
+        "13",
+        "-1",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn - Factorización de Polinomios (Ejercicios Resueltos), Problema 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorice: P(x) = x^3 + 6x^2 - 9x - 14.",
+      "alternatives": [
+        "P(x) = x(x - 3)(x - 7)",
+        "P(x) = (x + 2)x(x + 3)",
+        "P(x) = (x + 2)(x - 3)(x - 2)",
+        "P(x) = (x - 2)(x + 1)(x + 7)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn - Factorización de Polinomios (Ejercicios Resueltos), Problema 7"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Iguale a cero cada factor primo de f(x) = x^3 - 9x^2 + 20x - 12 e indique los valores de x obtenidos.",
+      "alternatives": [
+        "{1; 4; 6}",
+        "{-1; 4; 6}",
+        "{-1; -2; 6}",
+        "{1; 2; 6}"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "matematicasn - Factorización de Polinomios (Ejercicios Resueltos), Problema 8"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine el número de factores primos de la expresión M(a, b, c) = (a^2 + b^2 - c^2)^2 - (2ab)^2.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/factorizacion-ejercicios-resueltos-pdf.html",
+      "sourceName": "razonamientopdf - Factorización (Álgebra) Problemas Resueltos, Problema 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un factor del siguiente polinomio: (x + y)^2 (x^2 + 3xy + y^2) - 6xy(x^2 + xy + y^2) es:",
+      "alternatives": [
+        "x + y",
+        "x - y",
+        "x^2 + xy + y^2",
+        "x^2 - xy + y^2",
+        "x + xy + y"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/factorizacion-ejercicios-resueltos-pdf.html",
+      "sourceName": "razonamientopdf - Factorización (Álgebra) Problemas Resueltos, Problema 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de factores primos de T(x) = 3x^3 - 4x^2 + 4x - 1.",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/factorizacion-ejercicios-resueltos-pdf.html",
+      "sourceName": "razonamientopdf - Factorización (Álgebra) Problemas Resueltos, Problema 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al factorizar el polinomio P(x) = x^3 - 2x - 1, se obtiene un factor primo cuadrático f(x). Determine f(3).",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/factorizacion-ejercicios-resueltos-pdf.html",
+      "sourceName": "razonamientopdf - Factorización (Álgebra) Problemas Resueltos, Problema 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorice M(m, n) = m^3 n - n^3 m. Indique la factorización completa.",
+      "alternatives": [
+        "mn(m + n + 1)",
+        "m(m + n)(m - n)",
+        "mn(m + n)(m - n)",
+        "(m + n)(m - n)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "algebraenpdf - Factorización de Polinomios Problemas Resueltos, Problema 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la suma de factores primos de f(a, b) = a^2 - 2a + 1 - b^2.",
+      "alternatives": [
+        "2b + 2",
+        "2a + a",
+        "2a - 2",
+        "a - 2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "algebraenpdf - Factorización de Polinomios Problemas Resueltos, Problema 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de factores primos de la expresión polinomial P(a, b) = (a + b)^3(a - b) - (a - b)^3(a + b).",
+      "alternatives": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/factorizacion-de-polinomios-ejercicios.html",
+      "sourceName": "algebraenpdf - Factorización de Polinomios Problemas Resueltos, Problema 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el factor cuadrático primo del polinomio P(x) = 2x^3 - 16.",
+      "alternatives": [
+        "x^2 + 2x + 4",
+        "x^2 - 2x + 4",
+        "x^2 + 4",
+        "x^2 - 4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/factorizacion-ejercicios-resueltos-pdf.html",
+      "sourceName": "razonamientopdf - Factorización (Álgebra) Problemas Resueltos, Problema 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el número de factores primos de P(x; y) = x^5 y^3 - x^2 y^7.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://es.slideshare.net/xxrangelxx/2014-iii-08-factorizacin",
+      "sourceName": "SlideShare - 2014 III 08 Factorización (ejercicios propuestos), Problema 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifique un factor primo al factorizar F(x; y) = x^3 y - x^2 y^2 - x^2 - xy.",
+      "alternatives": [
+        "y",
+        "xy - 1",
+        "x^2",
+        "x - y",
+        "xy"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://es.slideshare.net/xxrangelxx/2014-iii-08-factorizacin",
+      "sourceName": "SlideShare - 2014 III 08 Factorización (ejercicios propuestos), Problema 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El factor primo de primer grado de F(x; y) = x^3 y - 2x^2 y^2 - xy^3 - x^2 - 2xy - y^2 es:",
+      "alternatives": [
+        "xy + 1",
+        "xy - 1",
+        "(x - y)^2",
+        "x + y",
+        "x - y"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://es.slideshare.net/xxrangelxx/2014-iii-08-factorizacin",
+      "sourceName": "SlideShare - 2014 III 08 Factorización (ejercicios propuestos), Problema 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Factor primo de F(x; y) = (x^2 - y^2)^2 - (y^2 - 1)^2.",
+      "alternatives": [
+        "x + y",
+        "x - y",
+        "x + 1",
+        "x^2 - y",
+        "y - 1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://es.slideshare.net/xxrangelxx/2014-iii-08-factorizacin",
+      "sourceName": "SlideShare - 2014 III 08 Factorización (ejercicios propuestos), Problema 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifique un factor primo de: F(x; y) = (1 - xy)^2 - (x - y)^2 - 4xy.",
+      "alternatives": [
+        "x + y",
+        "x - y",
+        "2x + y",
+        "x - 2y",
+        "1 - x"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://es.slideshare.net/xxrangelxx/2014-iii-08-factorizacin",
+      "sourceName": "SlideShare - 2014 III 08 Factorización (ejercicios propuestos), Problema 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Suma de los factores lineales primos de: F(x) = x^2(x^2 - 3)^2 - (3x^2 - 1)^2.",
+      "alternatives": [
+        "4x + 1",
+        "4x + 3",
+        "2x",
+        "2x + 3",
+        "2x - 1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://es.slideshare.net/xxrangelxx/2014-iii-08-factorizacin",
+      "sourceName": "SlideShare - 2014 III 08 Factorización (ejercicios propuestos), Problema 7"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Suma de factores primos de F(x; y) = x^2(x - y)^2 - 8xy^2(x - y) - 12y^4.",
+      "alternatives": [
+        "2x + y",
+        "3x + y",
+        "3x + 3y",
+        "4x + 2y",
+        "2x + 3y"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://es.slideshare.net/xxrangelxx/2014-iii-08-factorizacin",
+      "sourceName": "SlideShare - 2014 III 08 Factorización (ejercicios propuestos), Problema 9"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Término independiente de uno de los factores primos de F(x) = x^3 - 2x^2 - 5x - 6.",
+      "alternatives": [
+        "-1",
+        "-3",
+        "6",
+        "-6",
+        "-2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://es.slideshare.net/xxrangelxx/2014-iii-08-factorizacin",
+      "sourceName": "SlideShare - 2014 III 08 Factorización (ejercicios propuestos), Problema 10"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Suma de coeficientes de uno de los factores primos de F(x) = x^3 - 2x^2 - 5x - 6.",
+      "alternatives": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://es.slideshare.net/xxrangelxx/2014-iii-08-factorizacin",
+      "sourceName": "SlideShare - 2014 III 08 Factorización (ejercicios propuestos), Problema 11"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Suma de los factores primos de F(x) = 6x^3 - 19x^2 - 15x - 2.",
+      "alternatives": [
+        "6x - 4",
+        "8x - 4",
+        "3x + 2",
+        "3x + 7",
+        "4x - 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://es.slideshare.net/xxrangelxx/2014-iii-08-factorizacin",
+      "sourceName": "SlideShare - 2014 III 08 Factorización (ejercicios propuestos), Problema 12"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar el factor primo que se repite en: a^3 - 5a^2 + 3a + 9.",
+      "alternatives": [
+        "a + 1",
+        "a - 1",
+        "a + 3",
+        "a - 3",
+        "a + 9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/metodos-de-factorizacion-pdf-ejercicios.html",
+      "sourceName": "matematicasn - Factorización Problemas Resueltos Preuniversitarios, Problema 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si el factor primo cuadrático del polinomio x^3 - 3x^2 + 4x - 2 adopta la forma x^2 + mx + n, marcar la alternativa correcta.",
+      "alternatives": [
+        "m = n",
+        "m + n = 0",
+        "m · n = 4",
+        "mn = -4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/metodos-de-factorizacion-pdf-ejercicios.html",
+      "sourceName": "matematicasn - Factorización Problemas Resueltos Preuniversitarios, Problema 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcular el valor numérico de un factor primo de 6x^2 - 25y^2 + 20z^2 - 5xy - 5yz - 23xz para x = 0; y = 1; z = 2.",
+      "alternatives": [
+        "-1",
+        "5",
+        "-15",
+        "3",
+        "0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/metodos-de-factorizacion-pdf-ejercicios.html",
+      "sourceName": "matematicasn - Factorización Problemas Resueltos Preuniversitarios, Problema 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Mencionar el término cuadrático de uno de los factores primos de: 6x^6 - 5x^5 - 6x^4 - 13x^2 - 6.",
+      "alternatives": [
+        "2x^2",
+        "-2x^2",
+        "3x^2",
+        "-x^2",
+        "x^2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/metodos-de-factorizacion-pdf-ejercicios.html",
+      "sourceName": "matematicasn - Factorización Problemas Resueltos Preuniversitarios, Problema 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Factorizar 2x^4 + x^3 - 16x^2 + 8x - 1. Dar como respuesta la factorización de la suma de sus factores primos.",
+      "alternatives": [
+        "x(2x - 1)",
+        "2x(x - 3)",
+        "x(2x - 3)",
+        "2x(3x - 1)",
+        "x(3x - 2)"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/metodos-de-factorizacion-pdf-ejercicios.html",
+      "sourceName": "matematicasn - Factorización Problemas Resueltos Preuniversitarios, Problema 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señalar el término lineal de uno de los factores primos de m^4 + 6m^2 + 25.",
+      "alternatives": [
+        "2m",
+        "m",
+        "-m",
+        "3m",
+        "Más de una es correcta"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/metodos-de-factorizacion-pdf-ejercicios.html",
+      "sourceName": "matematicasn - Factorización Problemas Resueltos Preuniversitarios, Problema 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Transformar: 4n^5 - 29n^3 - 24n^2 + 7n + 6 en una multiplicación de factores primos.",
+      "alternatives": [
+        "(n - 1)(n + 2)(n + 3)(2n + 1)(2n - 1)",
+        "(n + 1)(n + 2)(n - 3)(2n + 1)(2n - 1)",
+        "(n - 1)(n + 2)(n + 3)(2n + 1)^2",
+        "(n + 1)(n - 2)(n + 3)(2n - 1)^2",
+        "(n + 1)(n + 2)(n - 3)(2n + 1)^2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/metodos-de-factorizacion-pdf-ejercicios.html",
+      "sourceName": "matematicasn - Factorización Problemas Resueltos Preuniversitarios, Problema 9"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Según el teorema del factor, indique la secuencia correcta (V o F):\nI) Si 10 es raíz de P(x), entonces (x - 10) es factor de P(x).\nII) Si 1 y -4 son raíces de P(x), entonces (x - 1) y (x + 4) son factores de P(x).\nIII) Si (x - 100) es factor de P(x), entonces 100 es raíz de P(x).",
+      "alternatives": [
+        "VVF",
+        "VVV",
+        "FVV",
+        "VFF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/metodos-de-factorizacion-pdf-ejercicios.html",
+      "sourceName": "matematicasn - Factorización Problemas Resueltos Preuniversitarios, Problema 10"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Luego de factorizar: x^2 y^3(x^2 + xy) - x^2 y^3(xy + yz), dar como respuesta la suma de sus factores primos.",
+      "alternatives": [
+        "3x + 2y + z",
+        "3x + 2y - z",
+        "2x + y - z",
+        "2x + y + z",
+        "x + y + z"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/factorizacion-pdf-teoria-y-ejemplos.html",
+      "sourceName": "matematicasn - Factorización Teoría y Ejemplos Resueltos, Problema 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Factorizar: a^2 - b^2 - c^2 + 2(a + b - c + bc). Dar como respuesta la suma de sus factores primos.",
+      "alternatives": [
+        "2a",
+        "2b + c",
+        "2a + 2",
+        "3a + c",
+        "2a + b + 1"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/factorizacion-pdf-teoria-y-ejemplos.html",
+      "sourceName": "matematicasn - Factorización Teoría y Ejemplos Resueltos, Problema 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuántos factores lineales admite: x^7 - x^3 y^4 + x^4 y^3 - y^7?",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/factorizacion-pdf-teoria-y-ejemplos.html",
+      "sourceName": "matematicasn - Factorización Teoría y Ejemplos Resueltos, Problema 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un factor primo de: [(x - y + z)(x - y - z) + 1]^2 - 4(x - y)^2.",
+      "alternatives": [
+        "x + y + z + 1",
+        "x - y + z + 1",
+        "x - y + z",
+        "x - y + z + 2",
+        "z + y - x + 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/factorizacion-pdf-teoria-y-ejemplos.html",
+      "sourceName": "matematicasn - Factorización Teoría y Ejemplos Resueltos, Problema 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que x^2 + 2x + 3 es factor de x^4 + x^3 + 6x^2 + mx + n, entonces es verdad que:",
+      "alternatives": [
+        "m + n = 21",
+        "mn < 0",
+        "m < 0",
+        "n es par",
+        "n - 2m = 1"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/factorizacion-pdf-teoria-y-ejemplos.html",
+      "sourceName": "matematicasn - Factorización Teoría y Ejemplos Resueltos, Problema 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcule el número de factores cuadráticos de: P(x) = 4x^4 - 37x^2 + 9.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/factorizacion-pdf-teoria-y-ejemplos.html",
+      "sourceName": "matematicasn - Factorización Teoría y Ejemplos Resueltos, Problema 7"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el factor común de: A(x) = x^4 - 8x^2 + 16, B(x) = (x + 1)(x^2 - 3) - x - 1, C(x) = 2x^4 + 16x?",
+      "alternatives": [
+        "x - 2",
+        "x + 2",
+        "x + 1",
+        "x - 1",
+        "x - 3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/factorizacion-pdf-teoria-y-ejemplos.html",
+      "sourceName": "matematicasn - Factorización Teoría y Ejemplos Resueltos, Problema 10"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señalar un factor primo al factorizar: x^2 + 10x + 21.",
+      "alternatives": [
+        "x + 10",
+        "x + 7",
+        "x + 21",
+        "x - 3",
+        "x - 7"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-simple-problemas.html",
+      "sourceName": "matematicasn - Factorización por Aspa Simple (Ejercicios Resueltos), Ejercicio 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indicar un factor primo luego de factorizar: x^2 + 7x + 12.",
+      "alternatives": [
+        "x + 12",
+        "x^2 + 7",
+        "x^2 + 3",
+        "x + 3",
+        "x - 4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-simple-problemas.html",
+      "sourceName": "matematicasn - Factorización por Aspa Simple (Ejercicios Resueltos), Ejercicio 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Factorizar x^2 + 6x + 5. Dar como respuesta la suma de sus factores.",
+      "alternatives": [
+        "2x + 5",
+        "2x + 1",
+        "2x + 6",
+        "2x - 6",
+        "x^2 + 6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-simple-problemas.html",
+      "sourceName": "matematicasn - Factorización por Aspa Simple (Ejercicios Resueltos), Ejercicio 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Factorizar: 3x^2 + 10x + 3.",
+      "alternatives": [
+        "(3x + 3)(x + 1)",
+        "(x - 1)(x + 3)",
+        "(3x - 1)(x - 3)",
+        "(x + 3)(3x - 1)",
+        "(3x + 1)(x + 3)"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-simple-problemas.html",
+      "sourceName": "matematicasn - Factorización por Aspa Simple (Ejercicios Resueltos), Ejercicio 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Factorizar: 3x^2 - x - 2.",
+      "alternatives": [
+        "(3x + 2)(x - 1)",
+        "(3x + 2)(x + 1)",
+        "(3x - 2)(x + 1)",
+        "(3x - 1)(x + 2)",
+        "(3x + 1)(x - 2)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-simple-problemas.html",
+      "sourceName": "matematicasn - Factorización por Aspa Simple (Ejercicios Resueltos), Ejercicio 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Al factorizar x^2 - 7x - 8, indicar la suma de factores.",
+      "alternatives": [
+        "2x - 7",
+        "x - 8",
+        "x + 1",
+        "x - 7",
+        "2x + 7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-simple-problemas.html",
+      "sourceName": "matematicasn - Factorización por Aspa Simple (Ejercicios Resueltos), Ejercicio 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Factorizar: 6x^2 - 11x + 4.",
+      "alternatives": [
+        "(3x + 4)(2x - 1)",
+        "(3x - 4)(2x + 1)",
+        "(3x - 1)(2x - 4)",
+        "(3x + 4)(2x + 1)",
+        "(3x - 4)(2x - 1)"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-simple-problemas.html",
+      "sourceName": "matematicasn - Factorización por Aspa Simple (Ejercicios Resueltos), Ejercicio 7"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar x^2 - 4xy - 5y^2. Indicar la suma de sus factores primos.",
+      "alternatives": [
+        "2x - 4y",
+        "2x + 4y",
+        "2y - 4x",
+        "x - 4y",
+        "2x - y"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-simple-problemas.html",
+      "sourceName": "matematicasn - Factorización por Aspa Simple (Ejercicios Resueltos), Ejercicio 8"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar: (x + y)^2 - (x + y) - 2.",
+      "alternatives": [
+        "(x + y)(x + y - 1)",
+        "(x + y - 2)(x + y + 1)",
+        "(x + y + 2)(x + y - 1)",
+        "(x + y + 1)(x + y + 2)",
+        "(x + y)(x + y + 3)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-simple-problemas.html",
+      "sourceName": "matematicasn - Factorización por Aspa Simple (Ejercicios Resueltos), Ejercicio 9"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar: ax^2 - 5ax + 6a.",
+      "alternatives": [
+        "a(x + 3)(x + 2)",
+        "x(a + 3)(a + 2)",
+        "a(x - 3)(x - 2)",
+        "x(a - 3)(a - 2)",
+        "a(2x + 1)(2x - 1)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-aspa-simple-problemas.html",
+      "sourceName": "matematicasn - Factorización por Aspa Simple (Ejercicios Resueltos), Ejercicio 10"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar: ax - bx + ay - by.",
+      "alternatives": [
+        "(a + x)(b + y)",
+        "(a + b)(x - y)",
+        "(a + b)(x + y)",
+        "(a - b)(x + y)",
+        "(a - b)(x - y)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-factor-comun.html",
+      "sourceName": "matematicasn - Factorización por Factor Común Polinomio (Ejercicios Resueltos), Problema 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar: x^2 + xy + zx + zy.",
+      "alternatives": [
+        "(x + y)(x + z)",
+        "(x + z)(x + y + 1)",
+        "(x + 1)(y + z)",
+        "(x + y)(x + z + 1)",
+        "(x + y + 1)(x - z)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-factor-comun.html",
+      "sourceName": "matematicasn - Factorización por Factor Común Polinomio (Ejercicios Resueltos), Problema 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar: abc + ab + c + 1.",
+      "alternatives": [
+        "(c + 1)(a + b + 1)",
+        "(c + 1)(ab + 1)",
+        "(c + b)(ab + 1)",
+        "(c + 1)(a + b)",
+        "(c + a)(b + a + 1)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-factor-comun.html",
+      "sourceName": "matematicasn - Factorización por Factor Común Polinomio (Ejercicios Resueltos), Problema 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar: x^2 y^2 + xy + zx + z.",
+      "alternatives": [
+        "(x + 1)(x + y)",
+        "(x + 1)(x + z)",
+        "(x + 1)(xy + z)",
+        "(x + 1)(x - y + z)",
+        "(x + 1)(x + y + z)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-factor-comun.html",
+      "sourceName": "matematicasn - Factorización por Factor Común Polinomio (Ejercicios Resueltos), Problema 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar: x^5 + ax^3 + 2x^2 + 2a.",
+      "alternatives": [
+        "(x^2 + a)(x^3 + 2)",
+        "(x^2 + 2)(x^3 + a)",
+        "(x^2 + 2)(x^3 + a + 1)",
+        "(x^2 + a + 1)(x^3 + 2)",
+        "(x^3 + 2)(x + a^2)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-factor-comun.html",
+      "sourceName": "matematicasn - Factorización por Factor Común Polinomio (Ejercicios Resueltos), Problema 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Factorizar: 35x^6 y^9 - 25x^7 y^5. Identificar el resultado correcto.",
+      "alternatives": [
+        "5x^6 y^5(7x + 5y)",
+        "5x^6 y^5(7x^4 + 5y)",
+        "5x^6 y^5(7x^4 - 5y)",
+        "5x^6 y^5(7y^4 + 5x)",
+        "5x^6 y^5(7y^4 - 5x)"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-el-metodo-del-factor.html",
+      "sourceName": "matematicasn - Factorización por Factor Común Monomio (Ejercicios Resueltos), Ejercicio 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Factorizar: 12x^8 y^2 - 24x^7 y^5.",
+      "alternatives": [
+        "12x^7 y^2(x - 2y^3)",
+        "12x^7 y^2(y - 2x^3)",
+        "12xy(x^7 - y)",
+        "12x^7 y^2(y + 2x^3)",
+        "12x^7 y^2(x - y^3)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-el-metodo-del-factor.html",
+      "sourceName": "matematicasn - Factorización por Factor Común Monomio (Ejercicios Resueltos), Ejercicio 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Identificar un factor primo luego de factorizar: 5x^8 y^7 - 10x^7 y^8.",
+      "alternatives": [
+        "10x^8 y^8",
+        "x - 2y",
+        "5x^8",
+        "2x - y",
+        "10y^8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-el-metodo-del-factor.html",
+      "sourceName": "matematicasn - Factorización por Factor Común Monomio (Ejercicios Resueltos), Ejercicio 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar: (x + 4)a - (x + 4)b.",
+      "alternatives": [
+        "(a + b)(x - 4)",
+        "(x + 4)(a + b)",
+        "(x + 4)(a - b)",
+        "x + 4",
+        "a - b"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-ejercicios-resueltos_28.html",
+      "sourceName": "matematicasn - Factorización de Secundaria (Ejercicios Resueltos), Ejercicio 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Relacione cada polinomio con su factorización correcta:\nI. x^2 - 6x + 5\nII. 3x^2 - 13x + 14\nIII. 12x^2 - 17xy + 6y^2\na) (4x - 3y)(3x - 2y)\nb) (3x - 7)(x - 2)\nc) (x - 1)(x - 5)",
+      "alternatives": [
+        "Ib, IIa, IIIc",
+        "Ib, IIc, IIIa",
+        "Ia, IIc, IIIb",
+        "Ic, IIb, IIIa"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-ejercicios-resueltos_70.html",
+      "sourceName": "matematicasn - Factorización (Preguntas Resueltas de Secundaria), Ejercicio 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si P(x) = x^3 - 3x^2 + 2x - k tiene como factor al polinomio f(x) = x - 3, halle el valor de k.",
+      "alternatives": [
+        "3",
+        "2",
+        "-3",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-ejercicios-resueltos_70.html",
+      "sourceName": "matematicasn - Factorización (Preguntas Resueltas de Secundaria), Ejercicio 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Factorizar ab^2 - a^3 + a + b + a^2 b - b^3. ¿Cuál de los siguientes NO es un factor?",
+      "alternatives": [
+        "1 - a - b",
+        "a + b",
+        "1 - a + b",
+        "1 + a - b",
+        "b - a + 1"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-agrupacion-de.html",
+      "sourceName": "matematicasn - Factorización por Agrupación de Términos (Ejercicios Resueltos), Problema 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Factorización",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el número de factores primos de P(x; y) = x^5 y^3 - x^2 y^7 al factorizar completamente.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/factorizacion-por-divisores-binomios.html",
+      "sourceName": "matematicasn - Factorización por Divisores Binomios (Ejercicios Resueltos), Ejercicio 1"
+    }
+  ]
+}

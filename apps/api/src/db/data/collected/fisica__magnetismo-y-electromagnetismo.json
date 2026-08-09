@@ -1,0 +1,75 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En relación a las propiedades magnéticas de un material, indique la verdad (V) o falsedad (F) según corresponda en cada enunciado.\nI. Todo metal genera un campo magnético.\nII. Los polos opuestos de los imanes se atraen.\nIII. El hierro, cobalto y níquel son los principales materiales ferromagnéticos.",
+      "alternatives": ["VVF", "VFF", "FVV", "FVF", "VVV"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/magnetismo-campo-fuerza-magnetica-formulas-ejemplos-ejercicios-resueltos-fisica-pdf.html",
+      "sourceName": "Magnetismo - Ejercicios resueltos preuniversitarios (matematicaj), ejercicio propuesto 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el experimento de Oersted, al aplicar la regla de la mano derecha a la corriente, indique la verdad (V) o falsedad (F) de las siguientes proposiciones.\nI. El pulgar debe señalar en el sentido de la corriente real.\nII. El pulgar debe señalar en el sentido de la corriente convencional.\nIII. El campo magnético tiene el sentido en el cual se curvan los cuatro dedos.\nIV. La regla de la mano derecha, usada para hallar la dirección del campo magnético, se cumple sin excepción.",
+      "alternatives": ["FVFV", "FVVV", "VVFV", "FFVF", "VVVF"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/09/campo-magnetico-ejemplos-problemas-resueltos-formulas-biot-savar-oersted-induccion-magnetica-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "Campo magnético - Biot-Savart / Oersted, problemas resueltos preuniversitarios (matematicasn), ejercicio 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto al campo magnético, indique la verdad (V) o falsedad (F) de las siguientes proposiciones.\nI. Si dividimos un imán por la mitad, cada parte tiene un solo polo magnético.\nII. Las brújulas se orientan en la dirección de las líneas de inducción magnética.\nIII. En la proximidad de los polos geográficos, es menos intenso que en otras regiones.",
+      "alternatives": ["VFF", "FFV", "VVV", "FVV", "FVF"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/09/campo-magnetico-ejemplos-problemas-resueltos-formulas-biot-savar-oersted-induccion-magnetica-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "Campo magnético - Biot-Savart / Oersted, problemas resueltos preuniversitarios (matematicasn), ejercicio 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de los siguientes enunciados describe el fenómeno de la inducción electromagnética?",
+      "alternatives": [
+        "Una barra de hierro se imanta en un campo magnético.",
+        "Una variación de la intensidad de un campo eléctrico genera un campo magnético.",
+        "Un cambio de flujo magnético a través de una espira de un alambre genera una corriente eléctrica en ella.",
+        "Las cargas eléctricas de un cuerpo se redistribuyen si este cuerpo es introducido en un campo eléctrico."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/10/induccion-electromagnetica-flujo-magnetico-ejemplos-problemas-resueltos-formulas-ley-de-lenz-ley-de-faraday-regla-de-la-mano-derecha-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "Inducción electromagnética - Flujo magnético, problemas resueltos preuniversitarios (matematicasn), ejercicio 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El campo magnético que atraviesa una espira de área 2 m² varía de 0,5 T a cero en un tiempo de 0,25 segundos. ¿Cuál es la fuerza electromotriz inducida en dicha espira (en V)?",
+      "alternatives": ["4", "12", "16", "8", "120"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/10/induccion-electromagnetica-flujo-magnetico-ejemplos-problemas-resueltos-formulas-ley-de-lenz-ley-de-faraday-regla-de-la-mano-derecha-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "Inducción electromagnética - Flujo magnético, problemas resueltos preuniversitarios (matematicasn), ejercicio 11"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Magnetismo y electromagnetismo",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El flujo magnético a través del área de una espira circular varía de acuerdo a la ley φ = 1 + 8t, donde φ se expresa en mWb y t en segundos. ¿Cuál sería la magnitud de la fem inducida (en 10⁻³ V) en el intervalo de tiempo de 0 a 2 s?",
+      "alternatives": ["2", "8", "6", "5", "4"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2025/10/induccion-electromagnetica-flujo-magnetico-ejemplos-problemas-resueltos-formulas-ley-de-lenz-ley-de-faraday-regla-de-la-mano-derecha-electromagnetismo-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "Inducción electromagnética - Flujo magnético, problemas resueltos preuniversitarios (matematicasn), ejercicio 12"
+    }
+  ]
+}

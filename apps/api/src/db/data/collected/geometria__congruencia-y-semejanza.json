@@ -1,0 +1,429 @@
+{
+  "entries": [
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El triángulo ABC tiene lados de 4 cm, 8 cm y 10 cm. Si la razón de proporcionalidad con un triángulo semejante es k = 3, ¿cuánto mide el lado mayor del triángulo semejante?",
+      "alternatives": [
+        "24 cm",
+        "30 cm",
+        "12 cm",
+        "20 cm",
+        "36 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/geometria/basica/ejercicios-interactivos-de-semejanza-de-triangulos.html",
+      "sourceName": "Superprof – Ejercicios interactivos de semejanza de triángulos (Problema 1)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Los catetos de un triángulo rectángulo miden 3 cm y 4 cm. Si se construye un triángulo rectángulo semejante cuya hipotenusa mide 15 cm, ¿cuánto miden sus catetos?",
+      "alternatives": [
+        "6 cm y 8 cm",
+        "9 cm y 12 cm",
+        "7.5 cm y 10 cm",
+        "5 cm y 6 cm",
+        "4.5 cm y 9 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/geometria/basica/ejercicios-interactivos-de-semejanza-de-triangulos.html",
+      "sourceName": "Superprof – Ejercicios interactivos de semejanza de triángulos (Problema 2)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo, las proyecciones de los catetos sobre la hipotenusa miden 3,6 cm y 6,4 cm respectivamente. Calcule la longitud de la altura relativa a la hipotenusa.",
+      "alternatives": [
+        "4,2 cm",
+        "4,6 cm",
+        "4,8 cm",
+        "5,0 cm",
+        "5,2 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/geometria/basica/teorema-del-cateto-de-la-altura-y-de-pitagoras.html",
+      "sourceName": "Superprof – Aplicaciones del teorema de la altura y del cateto (Problema 1)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La hipotenusa de un triángulo rectángulo mide 10 cm y la proyección de uno de sus catetos sobre la hipotenusa es 3,6 cm. Halle la longitud del otro cateto.",
+      "alternatives": [
+        "6 cm",
+        "7 cm",
+        "8 cm",
+        "9 cm",
+        "10 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/geometria/basica/teorema-del-cateto-de-la-altura-y-de-pitagoras.html",
+      "sourceName": "Superprof – Aplicaciones del teorema de la altura y del cateto (Problema 2)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un triángulo rectángulo tiene hipotenusa de 17 cm y catetos de 8 cm y 15 cm. Calcule la proyección del cateto menor sobre la hipotenusa.",
+      "alternatives": [
+        "2,76 cm",
+        "3,29 cm",
+        "3,76 cm",
+        "4,00 cm",
+        "4,47 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://recursos.edu.xunta.gal/sites/default/files/recurso/1491480036/ud9_teorema_Thales_y_semejanza/36_teoremas_del_cateto_y_de_la_altura.html",
+      "sourceName": "Xunta – Teoremas del cateto y de la altura (Actividad 1)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En un triángulo rectángulo, las proyecciones de los dos catetos sobre la hipotenusa miden 3,5 cm y 14 cm. Halle la altura relativa a la hipotenusa.",
+      "alternatives": [
+        "5 cm",
+        "6 cm",
+        "7 cm",
+        "8 cm",
+        "9 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://recursos.edu.xunta.gal/sites/default/files/recurso/1491480036/ud9_teorema_Thales_y_semejanza/36_teoremas_del_cateto_y_de_la_altura.html",
+      "sourceName": "Xunta – Teoremas del cateto y de la altura (Actividad 2)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El terreno triangular ABC es dividido por la recta PQ (con P en AB y Q en AC, PQ paralelo a BC) en una región de maíz (triángulo APQ) y una región de papa (trapecio BPQC). Si 5PQ = 4BC y el área de la región de maíz es 900 m², halle el área de la región de papa.",
+      "alternatives": [
+        "1700 m²",
+        "1500 m²",
+        "1800 m²",
+        "1600 m²",
+        "1400 m²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-geometria-problemas.html",
+      "sourceName": "Matemáticas N – San Marcos Geometría Problemas Resueltos de Admisión (Problema 4)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el triángulo ABC, las cevianas interiores AP y BQ se cortan en el punto R. Si BC = 24 cm, QC = 3AQ y BR = 2RQ, halle la longitud de BP.",
+      "alternatives": [
+        "6 cm",
+        "12 cm",
+        "9 cm",
+        "8 cm",
+        "4 cm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2018/06/thales-menelao-ceva-teoremas-de-la.html",
+      "sourceName": "Matemáticas N – Thales, Menelao, Ceva y Bisectriz (Ejercicio resuelto)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un edificio proyecta una sombra de 6,5 m al mismo tiempo que un poste de 4,5 m de altura proyecta una sombra de 0,90 m. Calcule la altura del edificio.",
+      "alternatives": [
+        "28,5 m",
+        "30,0 m",
+        "32,5 m",
+        "35,0 m",
+        "36,0 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/geometria/basica/semejanza-de-triangulos.html",
+      "sourceName": "Superprof – Semejanza de triángulos (Problema 1: altura de edificio)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los catetos de un triángulo rectángulo miden 24 m y 10 m. Halle los catetos del triángulo rectángulo semejante cuya hipotenusa mide 52 m.",
+      "alternatives": [
+        "36 m y 15 m",
+        "40 m y 16 m",
+        "48 m y 20 m",
+        "44 m y 18 m",
+        "50 m y 22 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/geometria/basica/semejanza-de-triangulos.html",
+      "sourceName": "Superprof – Semejanza de triángulos (Problema 2: catetos del triángulo semejante)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos trapecios semejantes tienen razón de semejanza 3/4. Si el área del trapecio menor es 81 cm², ¿cuál es el área del trapecio mayor?",
+      "alternatives": [
+        "108 cm²",
+        "120 cm²",
+        "128 cm²",
+        "144 cm²",
+        "162 cm²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://espanol.libretexts.org/Bookshelves/Educacion_Basica/Geometria/05%3A_Cuadril%C3%A1teros_y_Pol%C3%ADgonos/5.22%3A_%C3%81rea_y_Per%C3%ADmetro_de_Pol%C3%ADgonos_Similares",
+      "sourceName": "LibreTexts Español – Área y Perímetro de Polígonos Similares (Ejemplo 4)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos triángulos semejantes tienen una razón de áreas igual a 25/64. Determine la razón de semejanza (lado del triángulo menor entre lado homólogo del triángulo mayor).",
+      "alternatives": [
+        "4/7",
+        "5/7",
+        "5/8",
+        "4/8",
+        "6/8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://espanol.libretexts.org/Bookshelves/Educacion_Basica/Geometria/05%3A_Cuadril%C3%A1teros_y_Pol%C3%ADgonos/5.22%3A_%C3%81rea_y_Per%C3%ADmetro_de_Pol%C3%ADgonos_Similares",
+      "sourceName": "LibreTexts Español – Área y Perímetro de Polígonos Similares (Ejemplo 5)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos triángulos semejantes tienen razón de semejanza 5/8. Si la base del triángulo mayor mide 24 unidades, ¿cuánto mide la base del triángulo menor?",
+      "alternatives": [
+        "10 unidades",
+        "12 unidades",
+        "15 unidades",
+        "18 unidades",
+        "20 unidades"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://espanol.libretexts.org/Bookshelves/Educacion_Basica/Geometria/05%3A_Cuadril%C3%A1teros_y_Pol%C3%ADgonos/5.22%3A_%C3%81rea_y_Per%C3%ADmetro_de_Pol%C3%ADgonos_Similares",
+      "sourceName": "LibreTexts Español – Área y Perímetro de Polígonos Similares (Ejemplo 6)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál de las siguientes afirmaciones NO es un criterio de congruencia de triángulos?",
+      "alternatives": [
+        "Lado-Lado-Lado (LLL)",
+        "Lado-Ángulo-Lado (LAL)",
+        "Ángulo-Ángulo-Ángulo (AAA)",
+        "Ángulo-Lado-Ángulo (ALA)",
+        "Lado-Lado-Ángulo (LLA)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.topworksheets.com/es/matematicas/geometria/examen-final-geometria-semejanza-congruencia-teorema-de-tales-teorema-de-pitagoras-64e40a747ec7f",
+      "sourceName": "TopWorksheets – Examen Final Geometría: Semejanza, Congruencia, Thales, Pitágoras (Pregunta 2)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Dos figuras son semejantes cuando tienen la misma forma pero no necesariamente el mismo tamaño. ¿Cuál de las siguientes propiedades es FALSA para dos triángulos semejantes?",
+      "alternatives": [
+        "Los ángulos correspondientes son congruentes",
+        "Los lados correspondientes son proporcionales",
+        "Los ángulos correspondientes son proporcionales",
+        "La razón de sus perímetros es igual a la razón de semejanza",
+        "La razón de sus áreas es el cuadrado de la razón de semejanza"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.topworksheets.com/es/matematicas/geometria/examen-final-geometria-semejanza-congruencia-teorema-de-tales-teorema-de-pitagoras-64e40a747ec7f",
+      "sourceName": "TopWorksheets – Examen Final Geometría: Semejanza, Congruencia, Thales, Pitágoras (Pregunta 3)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos triángulos semejantes tienen sus lados en relación 3:5. Si el área del triángulo menor es 108 cm², ¿cuál es el área del triángulo mayor?",
+      "alternatives": [
+        "180 cm²",
+        "270 cm²",
+        "300 cm²",
+        "324 cm²",
+        "360 cm²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://espanol.libretexts.org/Bookshelves/Educacion_Basica/Geometria/05%3A_Cuadril%C3%A1teros_y_Pol%C3%ADgonos/5.22%3A_%C3%81rea_y_Per%C3%ADmetro_de_Pol%C3%ADgonos_Similares",
+      "sourceName": "LibreTexts Español – Área y Perímetro de Polígonos Similares (aplicación de razón de áreas)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Dos rombos semejantes tienen sus lados en relación 3:5. Halle la razón de sus áreas.",
+      "alternatives": [
+        "3/5",
+        "6/10",
+        "9/25",
+        "9/15",
+        "3/25"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://espanol.libretexts.org/Bookshelves/Educacion_Basica/Geometria/05%3A_Cuadril%C3%A1teros_y_Pol%C3%ADgonos/5.22%3A_%C3%81rea_y_Per%C3%ADmetro_de_Pol%C3%ADgonos_Similares",
+      "sourceName": "LibreTexts Español – Área y Perímetro de Polígonos Similares (Ejemplo 3)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos triángulos semejantes △ABC y △DEF verifican que AB = 7,6 cm, BC = 4,18 cm, CA = 6,65 cm y DE = 4 cm, EF = 2,2 cm, FD = 3,5 cm. ¿Cuál es la razón de semejanza del triángulo mayor al menor?",
+      "alternatives": [
+        "1,5",
+        "1,7",
+        "1,9",
+        "2,1",
+        "2,3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.universoformulas.com/matematicas/geometria/semejanza-triangulos/",
+      "sourceName": "UniversoFórmulas – Semejanza de triángulos (Problema resuelto 1)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los ángulos agudos de un triángulo rectángulo están en razón 3:2. ¿Cuánto mide el ángulo agudo mayor?",
+      "alternatives": [
+        "36°",
+        "48°",
+        "54°",
+        "60°",
+        "72°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://laedu.digital/2022/03/04/problemas-de-semejanza-de-triangulos-y-teorema-de-pitagoras/",
+      "sourceName": "LaEdu Digital – Problemas de semejanza de triángulos y teorema de Pitágoras (Ejemplo 2)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una estaca de 1 m de altura proyecta una sombra de 0,6 m. Al mismo tiempo, un árbol proyecta una sombra de 3 m. ¿Cuál es la altura del árbol?",
+      "alternatives": [
+        "3 m",
+        "4 m",
+        "5 m",
+        "6 m",
+        "7 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://calculo.cc/temas/temas_trigonometria/trian_semejante/problemas/p_tales_semejanza.html",
+      "sourceName": "Cálculo.cc – Ejercicios resueltos de semejanza y Thales (Problema 14)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una torre proyecta una sombra de 60 m. Un poste vertical de 3 m proyecta una sombra de 4 m al mismo tiempo. Halle la altura de la torre.",
+      "alternatives": [
+        "40 m",
+        "45 m",
+        "50 m",
+        "55 m",
+        "60 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://calculo.cc/temas/temas_trigonometria/trian_semejante/problemas/p_tales_semejanza.html",
+      "sourceName": "Cálculo.cc – Ejercicios resueltos de semejanza y Thales (Problema 15)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una escalera de 10 m apoya en una pared vertical. La base de la escalera está a 6 m de la pared. ¿A qué altura de la pared llega la escalera?",
+      "alternatives": [
+        "6 m",
+        "7 m",
+        "8 m",
+        "9 m",
+        "10 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://laedu.digital/2022/03/04/problemas-de-semejanza-de-triangulos-y-teorema-de-pitagoras/",
+      "sourceName": "LaEdu Digital – Problemas de semejanza y Pitágoras (Ejemplo 6, adaptado: h² = 10² − 6² = 64 → h = 8 m)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos triángulos semejantes tienen lados en razón 2:3. Si el perímetro del triángulo menor es 24 cm, ¿cuál es el perímetro del triángulo mayor?",
+      "alternatives": [
+        "30 cm",
+        "32 cm",
+        "36 cm",
+        "40 cm",
+        "48 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/geometria/basica/ejercicios-interactivos-de-semejanza-de-triangulos.html",
+      "sourceName": "Superprof – Ejercicios interactivos de semejanza de triángulos (Problema 3, razón de perímetros)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En el triángulo ABC se traza la altura CH (H en AB). Si AH = 9 cm y BH = 16 cm, halle la longitud de la altura CH.",
+      "alternatives": [
+        "10 cm",
+        "11 cm",
+        "12 cm",
+        "13 cm",
+        "14 cm"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/geometria/basica/teorema-del-cateto-de-la-altura-y-de-pitagoras.html",
+      "sourceName": "Superprof – Aplicaciones del teorema de la altura (CH² = AH × BH = 9 × 16 = 144 → CH = 12)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Congruencia y Semejanza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el triángulo rectángulo ABC (ángulo recto en C), se traza la altura CD sobre la hipotenusa AB. Si AD = 4 cm y DB = 9 cm, ¿cuánto mide la altura CD?",
+      "alternatives": [
+        "4 cm",
+        "6 cm",
+        "9 cm",
+        "12 cm",
+        "18 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://calculo.cc/temas/temas_trigonometria/trian_semejante/teoria/cateto_altura.html",
+      "sourceName": "Cálculo.cc – Teorema de la altura y del cateto (CD² = AD × DB = 4 × 9 = 36 → CD = 6 cm)"
+    }
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "entries": [
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el valor de $k$ para que la suma de las raíces de la ecuación $2k x^2 = (12x + 1)x + 12$ sea igual a $7$.",
+      "alternatives": ["1/3", "1/2", "2/3", "3/2", "2/5"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_6.html",
+      "sourceName": "matematicasn — Ecuaciones de segundo grado, ejercicios resueltos (preuniversitario), problema 1 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si las edades de los gemelos BA y BE están dadas por las soluciones de la ecuación $x^2 - (3m + 3)x + 2m + 7 = 0$, con $m > 0$, determine la suma de sus edades.",
+      "alternatives": ["4 años", "6 años", "8 años", "10 años", "12 años"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_6.html",
+      "sourceName": "matematicasn — Ecuaciones de segundo grado, ejercicios resueltos (preuniversitario), problema 2 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Fedhy compra cierto número de cuadernos del mismo precio, por los que paga 120 soles. Si cada cuaderno costara S/ 2 menos, hubiese comprado 2 cuadernos más (gastando la misma cantidad de dinero). ¿Cuánto le costó a Fedhy cada cuaderno?",
+      "alternatives": ["S/ 12", "S/ 14", "S/ 16", "S/ 20", "S/ 24"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_6.html",
+      "sourceName": "matematicasn — Ecuaciones de segundo grado, ejercicios resueltos (preuniversitario), problema 3 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un deportista apuesta a tirar al blanco con la condición de que por cada tiro que acierta recibirá 18 dólares y por cada tiro que falla pagará 12 dólares. Si después de 25 tiros obtuvo de ganancia tantos dólares como el producto de los tiros que acertó y falló, ¿cuántos tiros dio en el blanco?",
+      "alternatives": ["11", "12", "15", "17", "20"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_6.html",
+      "sourceName": "matematicasn — Ecuaciones de segundo grado, ejercicios resueltos (preuniversitario), problema 4 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Thiago es delegado del equipo de fulbito del hijo menor y se requieren $2(a+b)(a-b)$ soles con aportes iguales por cada padre. Cuando $(a-b)$ padres no asisten, los padres restantes deben pagar $(a+b)$ soles más cada uno. ¿Cuántos padres al inicio iban a aportar para los gastos del partido? (siendo $a > b > 0$).",
+      "alternatives": ["(a+b)", "(a-b)", "2(a+b)", "2(a-b)", "(2a+b)"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejercicios_6.html",
+      "sourceName": "matematicasn — Ecuaciones de segundo grado, ejercicios resueltos (preuniversitario), problema 5 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la clase de Álgebra, el profesor escribe en la pizarra la ecuación $x^2 + 5x - 3 = 0$ y pide a sus alumnos que hallen una ecuación cuadrática que tenga como raíces a los cuadrados de las raíces de la ecuación indicada.",
+      "alternatives": ["x² – 9x + 31 = 0", "x² – 31x + 9 = 0", "x² + 31x + 9 = 0", "x² – 31x – 9 = 0", "x² + 9x – 31 = 0"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+      "sourceName": "matematicasn — San Marcos Álgebra, problemas resueltos de admisión, pregunta 5 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El valor numérico que representa el precio de una mascarilla KN95 satisface la ecuación $x^4 = 74x^2 - 1225$. Determine la suma del mayor y del menor valor en soles que podría costar una mascarilla KN95.",
+      "alternatives": ["10", "14", "11", "12", "15"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+      "sourceName": "matematicasn — San Marcos Álgebra, problemas resueltos de admisión, pregunta 10 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si $\\beta$ es solución de la ecuación $x^2 + 2x - 1 = 0$, halle el valor de $N = \\beta^2 + \\dfrac{1}{\\beta^2}$.",
+      "alternatives": ["2", "4", "5", "6", "8"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://pdfcoffee.com/01-algebra-aduni-2020-2-pdf-free.html",
+      "sourceName": "ADUNI Álgebra 2020 — Semana 13, práctica dirigida, problema 1 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si $m$ es solución de $x^2 - 3x + 1 = 0$, determine $m^2 + \\dfrac{1}{m^2}$.",
+      "alternatives": ["7", "5", "9", "11", "3"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://pdfcoffee.com/01-algebra-aduni-2020-2-pdf-free.html",
+      "sourceName": "ADUNI Álgebra 2020 — Semana 14, práctica domiciliaria, problema 1 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea la ecuación $3x^2 - 5x - 7 = 0$ con conjunto solución $\\{\\alpha,\\, \\beta\\}$. Determine $\\dfrac{\\alpha}{\\beta} + \\dfrac{\\beta}{\\alpha}$.",
+      "alternatives": ["-4/21", "-3/7", "1/7", "-12/21", "-67/21"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://es.slideshare.net/slideshow/aduni-repaso-algebra-1/52361142",
+      "sourceName": "ADUNI Repaso Álgebra 1 — Semana 2, problema 4 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luego de resolver $x^4 + 3x^3 - x^2 - 3x = 0$, indique la suma de soluciones no positivas.",
+      "alternatives": ["-1", "-2", "-3", "-4", "-5"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://es.slideshare.net/slideshow/aduni-repaso-algebra-1/52361142",
+      "sourceName": "ADUNI Repaso Álgebra 1 — Semana 2, problema 5 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la ecuación $x^2 - 2(n+1)x + 5n = 0$, con $n \\in \\mathbb{R}$, determine la suma de los valores de $n$ para los cuales la ecuación tiene raíces reales iguales.",
+      "alternatives": ["2", "-1", "-2", "1", "3"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://es.slideshare.net/slideshow/aduni-repaso-algebra-1/52361142",
+      "sourceName": "ADUNI Repaso Álgebra 1 — Semana 2, problema 9 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la ecuación $x^2 - 3x + 5 = 0$ de raíces $a$ y $b$, construya la ecuación cuadrática cuyas raíces son $(3a - 1)$ y $(3b - 1)$.",
+      "alternatives": ["x² – 3x + 1 = 0", "x² – 7x + 1 = 0", "x² – 33x + 7 = 0", "x² – 7x + 37 = 0", "x² – 5x + 1 = 0"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://es.slideshare.net/slideshow/aduni-repaso-algebra-1/52361142",
+      "sourceName": "ADUNI Repaso Álgebra 1 — Semana 2, problema 10 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las ecuaciones $x^2 - 5x + a = 0$ y $x^2 - ax + 8 = 0$, con $a \\in \\mathbb{Z}^+$, tienen una raíz común $b$ donde $1 < b < 3$. Determine $a$.",
+      "alternatives": ["2", "4", "6", "8", "16"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://es.slideshare.net/slideshow/aduni-repaso-algebra-1/52361142",
+      "sourceName": "ADUNI Repaso Álgebra 1 — Semana 2, problema 12 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las ecuaciones $3x^2 - 7x + 2 = 0$ y $3x^2 - 4x + 1 = 0$, determine la suma de las raíces no comunes.",
+      "alternatives": ["2", "5", "3", "4", "1"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://pdfcoffee.com/01-algebra-aduni-2020-2-pdf-free.html",
+      "sourceName": "ADUNI Álgebra 2020 — Semana 14, práctica domiciliaria, problema 8 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar el valor de $k$ si una de las raíces de la ecuación $x^2 - 7x + k = 0$ es igual a $3$.",
+      "alternatives": ["9", "10", "11", "12", "13"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
+      "sourceName": "UNFV CEPREVI — Álgebra, Unidad 12: Ecuaciones de segundo grado, problema 3 (claves: 03d)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar $k$ para que las raíces de la ecuación $x^2 + kx + 8 = k$ sean iguales, siendo $k > 0$.",
+      "alternatives": ["-8", "4", "-6", "10", "13"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
+      "sourceName": "UNFV CEPREVI — Álgebra, Unidad 12: Ecuaciones de segundo grado, problema 7 (claves: 07b)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar $n$ en la ecuación $9x^2 - 18(n-1)x - 8n + 24 = 0$, si una raíz es el doble de la otra.",
+      "alternatives": ["2", "-2", "0", "1", "3"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
+      "sourceName": "UNFV CEPREVI — Álgebra, Unidad 12: Ecuaciones de segundo grado, problema 11 (claves: 11a)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el valor de $m$ en la ecuación $(m-1)x^2 + (3m+12)x - (3m+6) = 0$, si sus raíces son opuestas.",
+      "alternatives": ["2", "-2", "4", "-4", "3"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
+      "sourceName": "UNFV CEPREVI — Álgebra, Unidad 12: Ecuaciones de segundo grado, problema 16 (claves: 16d)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si $x_1$ y $x_2$ son las raíces de $x^2 + 5x + 1 = 0$, calcular $E = (x_1 + x_2)^2 - 2x_1 x_2$.",
+      "alternatives": ["20", "21", "23", "24", "25"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.slideshare.net/slideshow/naturaleza-de-las-ecuaciones-de-2do-grado/13399357",
+      "sourceName": "SlideShare — Naturaleza de las Ecuaciones de 2do Grado, problema 3 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar $m$ si la suma de raíces de la ecuación $(m-2)x^2 - (m+5)x + 8 = 0$ es igual a $10$.",
+      "alternatives": ["25", "25/9", "9/25", "1/4", "N.A."],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.slideshare.net/slideshow/naturaleza-de-las-ecuaciones-de-2do-grado/13399357",
+      "sourceName": "SlideShare — Naturaleza de las Ecuaciones de 2do Grado, problema 4 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la ecuación $3x^2 + 2ax + a^2 - 6 = 0$, ¿para qué valor de $a$ las raíces serán iguales?",
+      "alternatives": ["±1", "±2", "±3", "±4", "N.A."],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.slideshare.net/slideshow/naturaleza-de-las-ecuaciones-de-2do-grado/13399357",
+      "sourceName": "SlideShare — Naturaleza de las Ecuaciones de 2do Grado, problema 6 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el conjunto solución de la ecuación cuadrática $x^2 - (a+3)x + 12 = 0$ es $\\{a,\\, b\\}$, indique la ecuación cuadrática de raíces $2a$ y $2b$.",
+      "alternatives": ["x² + 4x + 1 = 0", "2x² – 14x + 1 = 0", "x² – 10x + 1 = 0", "x² – 14x + 48 = 0", "x² + 14x – 48 = 0"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-cuadraticas-elementales.html",
+      "sourceName": "matematicasn — Práctica de ecuación cuadrática test con claves, problema 3 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si la ecuación $2x^2 - 6x + (n+1) = 0$ presenta raíces reales, calcule el mayor valor entero de $n$.",
+      "alternatives": ["1", "4", "2", "3", "0"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-cuadraticas-elementales.html",
+      "sourceName": "matematicasn — Práctica de ecuación cuadrática test con claves, problema 4 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Porty va a comprar dos libros: uno de álgebra a $(m-5)$ soles y otro de geometría a $(n-3)$ soles, donde $m$ es la suma de los cuadrados de las soluciones de $(x-3)(x-4) - 16 = 0$ y $n$ es el cuadrado de la diferencia de dichas soluciones. Si paga con $(n - m + 4)$ billetes de $10$ soles, ¿cuánto recibió de vuelto?",
+      "alternatives": ["S/ 3", "S/ 4", "S/ 6", "S/ 8", "S/ 10"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-cuadraticas-elementales.html",
+      "sourceName": "matematicasn — Práctica de ecuación cuadrática test con claves, problema 2 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las edades de mi abuelo Euclides y las de su nieto están dadas por las soluciones de la ecuación $8^3 = (72 - x)(16 - x)$. El valor de cada boleto en dólares era la semisuma de dichos números. ¿Cuánto costó cada boleto?",
+      "alternatives": ["$ 44", "$ 55", "$ 66", "$ 77", "$ 88"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ecuaciones-cuadraticas-elementales.html",
+      "sourceName": "matematicasn — Práctica de ecuación cuadrática test con claves, problema 5 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la suma de los valores de $n$ que hacen que la ecuación $2ax(ax + nc) + (n^2 - 2)c^2 = 0$ (con $a \\cdot c \\neq 0$) tenga soluciones iguales.",
+      "alternatives": ["2", "4", "0", "1", "3"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn — Ecuación cuadrática ejercicios resueltos, problema 8 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Resuelva $nx^2 - 5x + 1 = 0$ sabiendo que su discriminante es igual a $1$. Indique el conjunto solución.",
+      "alternatives": ["{ 2 ; 1/3 }", "{ 1/2 ; 1/3 }", "{ 2 ; 6 }", "{ 1 ; 5 }", "{ 3 ; 1/6 }"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn — Ecuación cuadrática ejercicios resueltos, problema 2 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Ecuaciones",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Por la venta de $x$ departamentos se genera un ingreso $I(x) = 2x^2$ (miles de soles). Si los costos están modelados por $C(x) = 3x^2 - 26x + 120$ (miles de soles), determine la utilidad máxima.",
+      "alternatives": ["S/ 35 000", "S/ 45 000", "S/ 49 000", "S/ 13 000", "S/ 30 000"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-de-segundo-grado-ejemplos.html",
+      "sourceName": "matematicasn — Ecuación cuadrática ejercicios resueltos, problema 11 (clave C)"
+    }
+  ]
+}

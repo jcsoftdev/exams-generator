@@ -1,0 +1,224 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un bloque se encuentra sostenido de un resorte, cuya constante elástica es K = 20 N/m y realiza un M.A.S. Además, la masa del bloque es 200 g. Calcula el período.",
+      "alternatives": ["π/5 s", "π/2 s", "1 s", "π s", "10π s"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Según la ecuación del M.A.S. x(t) = 4 sen(2πt + 0,5π) m, calcula la posición del móvil para t = 0 s.",
+      "alternatives": ["0 m", "2 m", "4 m", "-4 m", "-2 m"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un bloque de 20 kg cuelga de un resorte de k = 2000 N/m. Si el sistema se encuentra en equilibrio, calcula la deformación que experimenta el resorte.",
+      "alternatives": ["10 m", "1 m", "10 cm", "0,1 cm", "0,01 m"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para un bloque de 0,2 kg que realiza un M.A.S. sujeto a un resorte de constante K = 20 N/m, si su amplitud es 2 m, calcula su velocidad máxima.",
+      "alternatives": ["20 m/s", "10 m/s", "15 m/s", "2 m/s", "5 m/s"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con los datos del ejercicio anterior (bloque de 0,2 kg, resorte K = 20 N/m, amplitud 2 m), calcula su aceleración máxima.",
+      "alternatives": ["20 m/s²", "100 m/s²", "150 m/s²", "200 m/s²", "40 m/s²"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 7"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula el período de un bloque que realiza un M.A.S. si se sabe que realiza 80 oscilaciones simples en 160 s.",
+      "alternatives": ["2 s", "4 s", "3 s", "1 s", "5 s"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 8"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un bloque realiza un M.A.S., calcula su energía potencial elástica máxima si se sabe que cuando su aceleración es máxima su deformación es 2 m. (k = 25 N/m)",
+      "alternatives": ["10 J", "20 J", "50 J", "100 J", "200 J"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 9"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si una partícula atada a una cuerda de longitud L realiza un M.A.S. de período T y la misma partícula es llevada a otro planeta donde la gravedad es 3 veces la gravedad de la Tierra, ¿en cuánto se debe aumentar o disminuir la longitud de la cuerda L para que el período no cambie?",
+      "alternatives": ["Disminuir en L/2", "Aumentar en 2L", "Aumentar en 3L", "Disminuir en 2L", "Aumentar en L"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 10"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el período de un M.A.S. si se sabe que la relación entre la máxima aceleración y su máxima velocidad es 4π.",
+      "alternatives": ["0,5 s", "0,2 s", "0,4 s", "0,1 s", "0,8 s"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 11"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo de 2 kg está suspendido de un resorte. Si se aplica una fuerza adicional de 10 newton el resorte se alarga 5 cm. ¿Cuál es el período de oscilación si se le suelta?",
+      "alternatives": ["π/2", "π/3", "π/10", "π/4", "π/5"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 12"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una masa de 5 kg está animada de un M.A.S. en el que realiza 3 oscilaciones por segundo. Calcula el valor de la fuerza recuperadora para una elongación de 5 cm.",
+      "alternatives": ["56,4 N", "48,2 N", "88,7 N", "62,8 N", "74,5 N"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 13"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un sistema oscila armónicamente con una frecuencia de 10 Hz y una amplitud de 4 m. Determina la ecuación del movimiento respecto a su posición en cualquier instante t segundos. Considera una constante de fase de 30°.",
+      "alternatives": ["x = 4 sen(20πt + π/6)", "x = 4 sen(10πt + π/6)", "x = 4 sen(20πt + π/3)", "x = 2 sen(10πt + π/6)", "x = 2 sen(20πt + π/3)"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 14"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si la ecuación x = 0,40 cos(2t + 0,25π) m representa la elongación de un oscilador armónico de 5 kg de masa, halla la energía total del sistema en cualquier instante (en J).",
+      "alternatives": ["1,2", "1,6", "1,8", "1,5", "2,2"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 17"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo de masa m cuelga del extremo de un resorte realizando un movimiento armónico simple de período T. Determina el valor de la masa que se debe colocar en el extremo de este resorte (en lugar de la masa anterior) para que el período del movimiento sea 3T.",
+      "alternatives": ["9m", "6m", "3m", "m/3", "m/9"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 18"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El período de oscilación de un péndulo simple es √10 s. Si su longitud disminuye en un 10%, determina su nuevo período.",
+      "alternatives": ["1 s", "2 s", "3 s", "4 s", "6 s"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 19"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla el período de oscilación de un péndulo simple, el cual se encuentra a una altura sobre la superficie terrestre igual a la mitad del radio de la Tierra. (longitud = 1 m y π² = 9,8)",
+      "alternatives": ["1 s", "3 s", "2 s", "4 s", "5 s"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 20"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un sistema masa-resorte ejecuta un M.A.S. con un período de 4 s. Halla la aceleración máxima si la velocidad máxima es de 2 m/s (en m/s²).",
+      "alternatives": ["2", "π", "π/2", "2/π", "2π"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Primera Práctica, Ejercicio 21"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una partícula de masa m = 200 g oscila sobre una superficie horizontal lisa, unida a un resorte, con una amplitud de 80 cm. Cuando su estiramiento es 62,1 cm en la dirección +x, su velocidad es 5 m/s. ¿Cuál es el valor de la constante del resorte (en N/m)?",
+      "alternatives": ["5", "20", "2", "10", "25"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Segunda Práctica, Problema 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un cuerpo realiza un movimiento armónico simple sujeto al extremo de un resorte. Indica en cuál de los siguientes casos la frecuencia del movimiento aumenta:",
+      "alternatives": ["El cuerpo es sustituido por otro de menor masa.", "El cuerpo oscila con mayor amplitud.", "El cuerpo oscila con menor amplitud.", "El cuerpo es sustituido por otro de mayor peso.", "El resorte es sustituido por otro con constante de resorte menor."],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Segunda Práctica, Problema 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Oscilaciones y ondas mecánicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo cuelga del extremo de un resorte y oscila verticalmente con período de 2 s. Al aumentar la masa del cuerpo en 1 kg, el nuevo período es de 4 s. ¿Cuál es el valor de la masa inicial?",
+      "alternatives": ["1/2 kg", "1/3 kg", "1/4 kg", "1/6 kg", "1 kg"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/11/movimiento-armonico-simple-MAS-formulas-ejemplos-problemas-resueltos-de-oscilaciones-movimiento-oscilatorio-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - M.A.S. Problemas Resueltos, Segunda Práctica, Problema 10"
+    }
+  ]
+}

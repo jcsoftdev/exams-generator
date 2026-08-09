@@ -1,0 +1,72 @@
+{
+  "entries": [
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La luz del sol va variando su espectro (su composición en colores) a lo largo del día. La radiación que inhibe la producción de melatonina es el componente:",
+      "alternatives": [
+        "rojo",
+        "azul",
+        "verde",
+        "amarillo",
+        "anaranjado"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/ecologia-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "Examen de admisión Universidad Nacional de Cajamarca (UNC) - Ecología resuelto, pregunta 10"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Generalmente las plantas toleran la luz directa, por lo cual son llamadas:",
+      "alternatives": [
+        "Heliófilas",
+        "Anádromas",
+        "Glucófitas",
+        "Halófitas",
+        "Tropófitas"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+      "sourceName": "Rubiños - Ecología banco de preguntas resueltas de examen de admisión (pregunta sobre plantas heliófilas)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las plantas adaptadas a vivir con escasa iluminación y que ocupan los estratos inferiores se denominan:",
+      "alternatives": [
+        "Homeotermos",
+        "Poiquilotermos",
+        "Euritermos",
+        "Heliófilas",
+        "Esciófilas"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+      "sourceName": "Rubiños - Ecología banco de preguntas resueltas de examen de admisión (pregunta 44, plantas esciófilas)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Luz y calor",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las plantas que florecen en estaciones con día largo se denominan:",
+      "alternatives": [
+        "Homeohidras",
+        "Macrohémeras",
+        "Esciófilas",
+        "Xerófilas",
+        "Heterotermas"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/ecologia-resuelta-admision-universidades.html",
+      "sourceName": "Rubiños - Ecología banco de preguntas resueltas de examen de admisión (segunda práctica, pregunta 7, fotoperiodo)"
+    }
+  ]
+}

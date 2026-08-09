@@ -1,0 +1,309 @@
+{
+  "entries": [
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el sistema nervioso, las neuronas se hallan conectadas entre sí por sinapsis y con transmisión unidireccional del impulso nervioso. El camino que sigue el impulso nervioso constituye un arco reflejo y sigue la siguiente secuencia:",
+      "alternatives": [
+        "efector – receptor – vía aferente – centro – vía eferente",
+        "centro – receptor – vía aferente – vía eferente – efector",
+        "receptor – vía aferente – centro – vía eferente – efector",
+        "efector – vía aferente – centro – vía eferente – receptor",
+        "receptor – vía eferente – centro – vía aferente – efector"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
+      "sourceName": "Admisión UNMSM - Biología (preguntas resueltas), pregunta 51"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El SNC está compuesto por el ________ y ________, todo protegido y envuelto por las meninges.",
+      "alternatives": [
+        "Cerebro – la médula espinal",
+        "Cerebro – el tronco encefálico",
+        "Mesencéfalo – el bulbo raquídeo",
+        "Encéfalo – la médula espinal"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 1"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Las funciones cerebrales como olfacción, visión, audición y habla se encuentran en:",
+      "alternatives": [
+        "El tálamo",
+        "El diencéfalo",
+        "La corteza cerebral",
+        "El cuerpo calloso",
+        "Los ventrículos encefálicos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 2"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El centro del vómito y la regulación de la temperatura corporal se localizan a nivel del ________ y ________ respectivamente.",
+      "alternatives": [
+        "Hipotálamo – el bulbo raquídeo",
+        "Mesencéfalo – la protuberancia anular",
+        "Bulbo raquídeo – el hipotálamo",
+        "Cerebro – el cerebro",
+        "Tronco encefálico – el telencéfalo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 3"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La estructura que forma parte del diencéfalo donde se localiza el centro del hambre, saciedad y sed es:",
+      "alternatives": [
+        "El tálamo",
+        "El lóbulo frontal",
+        "El hipotálamo",
+        "La protuberancia anular",
+        "La corteza cerebral"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 5"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El órgano encargado de la coordinación de los movimientos, así como del equilibrio y el tono muscular, es:",
+      "alternatives": [
+        "El oído medio",
+        "El cerebro",
+        "El bulbo raquídeo",
+        "El cerebelo",
+        "La médula espinal"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 6"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El II par craneal se origina en ________, de ahí forma la vía ________ que termina en el centro de dicho sentido a nivel del lóbulo ________.",
+      "alternatives": [
+        "la retina – visual – occipital",
+        "el tronco – olfatoria – temporal",
+        "el cerebro – auditiva – temporal",
+        "el cerebro – del equilibrio – parietal",
+        "el ojo – del gusto – frontal"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 7"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ante situaciones de emergencia, peligro, lucha o huida se activa el sistema ________ como principal mecanismo de defensa, presentándose taquicardia y taquipnea.",
+      "alternatives": [
+        "Nervioso central",
+        "Parasimpático",
+        "Nervioso periférico",
+        "Nervioso autónomo",
+        "Simpático"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 8"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Produce vasoconstricción y a la vez un efecto broncodilatador:",
+      "alternatives": [
+        "Sistema Nervioso Central",
+        "Sistema Nervioso Simpático",
+        "Parasimpático",
+        "Las meninges",
+        "Médula espinal"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 9"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El desprendimiento de retina es un problema del:",
+      "alternatives": [
+        "I par craneal",
+        "II par craneal",
+        "III par craneal",
+        "IV par craneal",
+        "VI par craneal"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 10"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son nervios del parasimpático, excepto:",
+      "alternatives": [
+        "Neumogástrico",
+        "Glosofaríngeo",
+        "Motor ocular externo",
+        "Facial",
+        "Trigémino"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 12"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La lesión del área 44 de Broca produce:",
+      "alternatives": [
+        "Apraxia",
+        "Agnosia",
+        "Afasia",
+        "Dislexia",
+        "Ataxia"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 13"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si faltara ________, provocaría trastornos del sistema parasimpático:",
+      "alternatives": [
+        "Serotonina",
+        "Adrenalina",
+        "Acetilcolina",
+        "Glicina",
+        "Ácido alfa amino butírico"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 14"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El primer y segundo ventrículo se encuentran en:",
+      "alternatives": [
+        "Puente de Varolio",
+        "Hipotálamo",
+        "Cerebro límbico",
+        "Hemisferios cerebrales",
+        "Hemisferios cerebelosos"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 16"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "NO forma parte del encéfalo:",
+      "alternatives": [
+        "Cerebro",
+        "Bulbo raquídeo",
+        "Médula espinal",
+        "Cerebelo",
+        "Diencéfalo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 17"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Estructura del encéfalo conocida como el PUENTE DE VAROLIO:",
+      "alternatives": [
+        "Protuberancia anular",
+        "Pedúnculos cerebrales",
+        "Tubérculos cuadrigéminos",
+        "Bulbo raquídeo",
+        "Cerebelo"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 18"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el cerebro, la sustancia gris es ________ y la sustancia blanca es ________:",
+      "alternatives": [
+        "Central – Periférica",
+        "Periférica – Central",
+        "Interna – Periférica",
+        "Periférica – Lateral",
+        "Central – Lateral"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 19"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Coordinación nerviosa",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La masa encefálica está irrigada por la arteria:",
+      "alternatives": [
+        "Occipital",
+        "Subclavia derecha",
+        "Subclavia izquierda",
+        "Carótida interna",
+        "Carótida externa"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://biologia-pre.blogspot.com/2013/02/coordinacion-nerviosa-problemas.html",
+      "sourceName": "Coordinación nerviosa - Preguntas resueltas tipo examen de ingreso a la universidad, pregunta 20"
+    }
+  ]
+}

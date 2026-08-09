@@ -1,0 +1,53 @@
+{
+  "entries": [
+    {
+      "courseName": "Química",
+      "topicName": "Ácidos, bases y sales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El 19 de junio de 1964, en USA, un gran número de activistas de los derechos civiles protestó ingresando a nadar a la piscina de un hotel que se declaraba abiertamente segregacionista. El propietario del hotel, con el propósito de expulsar a la turba, agregó 2 garrafas (de un galón cada una) de ácido clorhídrico concentrado 12,1 M en la piscina (de 20000 galones de capacidad y totalmente llena de agua). ¿Cuál fue el pH final en la piscina?",
+      "alternatives": [
+        "Entre 0 y 1",
+        "Entre 1 y 2",
+        "Entre 2 y 3",
+        "Entre 3 y 4",
+        "Entre 4 y 5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20172.pdf",
+      "sourceName": "UNI Examen de Admisión 2017-2, Química, pregunta 26 (RESPUESTA: C, pH = 2,9)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Ácidos, bases y sales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las sales tienen variadas aplicaciones industriales, por ejemplo, el Fe(NO3)3 que es utilizado en la tintura de textiles y en el curtido de pieles, o el CuI como catalizador en la industria galvánica. El nombre sistemático de la sal de hierro y el tradicional de la sal de cobre, es:",
+      "alternatives": [
+        "trinitrato de hierro – yoduro cúprico",
+        "nitrato de hierro (III) – yoduro cuproso",
+        "nitrato férrico – yoduro de cobre (I)",
+        "trinitrato de hierro – yoduro cuproso"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2018/11/presanmarcos-quimica-semana6-2019ii-pdf.html",
+      "sourceName": "Pre San Marcos (CEPUSM) DECO UNMSM 2019-II, Química Semana 6 (Funciones químicas inorgánicas), pregunta 1 (Clave: B)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Ácidos, bases y sales",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El estado de oxidación (o número de oxidación) de un átomo está relacionado con el número de electrones implicados en la formación de un enlace, permite nombrar y formular compuestos. Con relación al estado de oxidación, indique la proposición correcta.",
+      "alternatives": [
+        "Es positivo en los metales, excepto cuando actúan con el hidrógeno",
+        "En los hidrácidos el flúor es positivo",
+        "El hidrógeno en sus compuestos solo es positivo",
+        "Los no metales pueden presentar valores positivos y negativos"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://quimicapdf.blogspot.com/2018/11/presanmarcos-quimica-semana6-2019ii-pdf.html",
+      "sourceName": "Pre San Marcos (CEPUSM) DECO UNMSM 2019-II, Química Semana 6 (Funciones químicas inorgánicas), pregunta 3 (Clave: D)"
+    }
+  ]
+}

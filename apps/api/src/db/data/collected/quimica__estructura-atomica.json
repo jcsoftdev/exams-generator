@@ -1,0 +1,125 @@
+{
+  "entries": [
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La relación de las masas de dos isótopos es 8/5 y la diferencia de sus neutrones es 6. ¿Cuál es la suma de sus masas (números másicos)?",
+      "alternatives": ["22", "20", "24", "28", "26"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/estructura-del-atomo-numeros-cuanticos-configuracion-electronica-ejercicios-resueltos-pre-universidad-pdf.html",
+      "sourceName": "matematicaj - Estructura del átomo, números cuánticos y configuración electrónica (ejercicios resueltos preuniversitario), problema de isótopos"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los átomos de un mismo elemento que poseen distintos números másicos se denominan isótopos. Si la masa atómica relativa del galio es 69,7 y el galio está compuesto por dos isótopos, galio-69 y galio-71, calcule el porcentaje de abundancia del galio-69.",
+      "alternatives": ["65%", "72%", "56%", "86%", "68%"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/estructura-del-atomo-numeros-cuanticos-configuracion-electronica-ejercicios-resueltos-pre-universidad-pdf.html",
+      "sourceName": "matematicaj - Estructura del átomo, números cuánticos y configuración electrónica (ejercicios resueltos preuniversitario), abundancia isotópica del galio"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indique el valor de verdad (V o F) de las siguientes proposiciones referentes a la estructura atómica:\nI. La estructura del átomo consta de un núcleo pequeño y una envoltura electrónica grande.\nII. El protón y el neutrón (nucleones) tienen masas similares.\nIII. Todos los isótopos de un elemento poseen el mismo número de protones.",
+      "alternatives": ["VVV", "VFV", "FVF", "FFF", "VVF"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/estructura-del-atomo-numeros-cuanticos-configuracion-electronica-ejercicios-resueltos-pre-universidad-pdf.html",
+      "sourceName": "matematicaj - Estructura del átomo, números cuánticos y configuración electrónica (ejercicios resueltos preuniversitario), proposiciones V/F sobre el átomo"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Las propiedades físicas y químicas de la materia, así como los cambios que esta sufre, pueden ser entendidos a partir de la estructura y el comportamiento de los átomos. Determine el valor de verdad (V o F):\nI. Los protones y neutrones son las partículas más pesadas del átomo.\nII. La envoltura electrónica determina el tamaño del átomo.\nIII. Las cargas del protón y del electrón son iguales.",
+      "alternatives": ["VVF", "FVF", "VVV", "VFV"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-examen-de-admision-unac.html",
+      "sourceName": "matematicasn - Química Pre San Marcos, solucionario problemas resueltos (estructura atómica), proposiciones V/F sobre partículas"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a los números cuánticos (n, ℓ, mℓ, ms), determine el valor de verdad (V o F):\nI. \"n\" indica el nivel de energía y toma valores enteros positivos.\nII. \"ℓ\" indica la energía del subnivel y la forma del orbital.\nIII. \"mℓ\" determina el número de orbitales en un subnivel.\nIV. \"ms\" indica el spin del electrón y tiene solo dos valores.",
+      "alternatives": ["VVVV", "VFVF", "VVFF", "FVFV"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-examen-de-admision-unac.html",
+      "sourceName": "matematicasn - Química Pre San Marcos, solucionario problemas resueltos (estructura atómica), proposiciones V/F sobre números cuánticos"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Según el principio de Aufbau (regla de construcción), identifique el subnivel con mayor energía relativa.",
+      "alternatives": ["5d", "4f", "6s", "6p"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-examen-de-admision-unac.html",
+      "sourceName": "matematicasn - Química Pre San Marcos, solucionario problemas resueltos (estructura atómica), subnivel de mayor energía"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El vanadio (Z = 23) se emplea en la producción de acero inoxidable. Determine los números cuánticos (n, ℓ, mℓ, ms) del penúltimo electrón de su configuración electrónica.",
+      "alternatives": ["(4, 0, 0, +½)", "(3, 2, −1, +½)", "(3, 2, +1, +½)", "(3, 2, 0, +½)"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-examen-de-admision-unac.html",
+      "sourceName": "matematicasn - Química Pre San Marcos, solucionario problemas resueltos (estructura atómica), números cuánticos del vanadio"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El penúltimo electrón de un átomo neutro tiene los números cuánticos (3, 0, 0, −½) y el átomo contiene 14 neutrones. Determine su número de masa (A).",
+      "alternatives": ["28", "27", "26", "25"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-examen-de-admision-unac.html",
+      "sourceName": "matematicasn - Química Pre San Marcos, solucionario problemas resueltos (estructura atómica), número de masa a partir de números cuánticos"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El escandio (₂₁Sc) se usa en iluminación de alta intensidad. Seleccione el enunciado correcto respecto a un átomo neutro de escandio.",
+      "alternatives": ["Posee cuatro niveles de energía llenos y un electrón desapareado.", "Contiene siete subniveles llenos y ocho electrones en el subnivel \"s\".", "Posee diez orbitales llenos y su nivel de valencia es el tercero.", "Tiene el mismo número de electrones que el ₂₃V²⁺."],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-examen-de-admision-unac.html",
+      "sourceName": "matematicasn - Química Pre San Marcos, solucionario problemas resueltos (estructura atómica), configuración electrónica del escandio"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El itrio (Z = 39) se emplea en aleaciones y como catalizador en la polimerización del etileno. Determine los números cuánticos (n, ℓ, mℓ, ms) de su último electrón.",
+      "alternatives": ["(4, 2, −2, −½)", "(5, 0, 0, −½)", "(5, 0, 0, +½)", "(4, 2, −2, +½)"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-examen-de-admision-unac.html",
+      "sourceName": "matematicasn - Química Pre San Marcos, solucionario problemas resueltos (estructura atómica), números cuánticos del itrio"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Estructura atómica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la producción de tetracloruro de titanio (TiCℓ₄) intervienen el Ti (Z = 22) y el Cℓ (Z = 17). Seleccione la comparación correcta.",
+      "alternatives": ["El Ti tiene tres subniveles llenos más que el Cℓ.", "El Ti y el Cℓ poseen igual número de electrones en el tercer nivel de energía.", "El catión tetravalente del Ti posee el mismo número de electrones que el anión monovalente del Cℓ.", "El Cℓ presenta un electrón desapareado y siete orbitales llenos."],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-examen-de-admision-unac.html",
+      "sourceName": "matematicasn - Química Pre San Marcos, solucionario problemas resueltos (estructura atómica), comparación Ti y Cl"
+    }
+  ]
+}

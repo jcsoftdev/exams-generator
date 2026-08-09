@@ -1,0 +1,191 @@
+{
+  "entries": [
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indique verdadero (V) o falso (F) a las proposiciones siguientes:\nI. En los peróxidos el número de oxidación del oxígeno es -1.\nII. En los compuestos el número de oxidación de los metales alcalinos es +2.\nIII. El número de oxidación y la valencia son iguales.",
+      "alternatives": ["FFV", "VFF", "VFV", "VVV", "VVF"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 1"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En los compuestos siguientes el carbono tiene valencia 4. Indique en cuál de ellos tiene número de oxidación cero.",
+      "alternatives": ["CH4", "CH3Cl", "CH2Cl2", "CHCl3", "CCl4"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 2"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Identifique cuál de los siguientes compuestos químicos es un peróxido.",
+      "alternatives": ["NO2", "PbO2", "MnO2", "Fe3O4", "ZnO2"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 6"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique verdadero (V) o falso (F) a las proposiciones siguientes:\nI. Los óxidos, peróxidos, hidruros y sales haloideas neutras son compuestos binarios.\nII. Los hidróxidos y ácidos oxácidos son compuestos ternarios.\nIII. Los metales alcalinos al reaccionar con el agua forman hidróxidos.",
+      "alternatives": ["FVF", "VVF", "VVV", "FFV", "VFF"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 7"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique la proposición incorrecta en relación a los siguientes compuestos:\nI. CaO   II. NaOH   III. H2O2   IV. HNO2   V. N2O3   VI. CrO",
+      "alternatives": ["Sólo I es un óxido básico.", "Sólo III es un peróxido.", "Sólo II es un hidróxido.", "IV es un compuesto ternario.", "V y VI son óxidos ácidos."],
+      "correctAnswer": "4",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 9"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique la relación incorrecta entre la fórmula y la función química respectiva.",
+      "alternatives": ["MgH2: hidruro metálico", "SO2: óxido ácido", "MnO3: óxido básico", "K2O2: peróxido", "NaNO3: sal oxisal neutra"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 10"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la nomenclatura sistemática del compuesto: Br2O5",
+      "alternatives": ["Anhídrido brómico", "Óxido brómico", "Óxido de bromo(V)", "Pentabromuro de dióxido(V)", "Pentóxido de dibromo"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 11"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la nomenclatura de Stock del compuesto: CrO3",
+      "alternatives": ["Óxido crómico", "Anhídrido crómico", "Trióxido de cromo", "Óxido de cromo(VI)", "Óxido crómico(VI)"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 12"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la relación incorrecta entre la fórmula y el nombre respectivo.",
+      "alternatives": ["SO3: trióxido de azufre", "N2O3: trióxido de dinitrógeno", "CuO: óxido de cobre(II)", "Fe2O3: óxido de hierro(III)", "Na2O2: óxido de sodio(II)"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 13"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la fórmula del tetraóxido de dinitrógeno y del hidróxido de cobalto(II).",
+      "alternatives": ["N2O4 ; Co(OH)2", "NO2 ; Co(OH)2", "N2O4 ; Co2OH", "NO4 ; Co(OH)2", "N4O2 ; Co(OH)2"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 17"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Identifique al posible elemento X y la fórmula de su óxido, sabiendo que la fórmula de su hidróxido es: X(OH)2",
+      "alternatives": ["K ; K2O", "Pb ; PbO2", "Zn ; ZnO2", "Ca ; CaO", "Fe ; Fe2O3"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 18"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique la proposición incorrecta acerca de los siguientes óxidos:\nI. MnO3   II. CuO   III. CaO   IV. SO3   V. NO2   VI. N2O3",
+      "alternatives": ["I, IV y VI son óxidos ácidos.", "II y III son óxidos básicos.", "V no forma ácidos ni bases.", "Con II y agua se obtiene Cu(OH)2.", "Con VI y agua se obtiene HNO3."],
+      "correctAnswer": "4",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 19"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En relación a los compuestos I y II, indique la proposición incorrecta.\nCompuesto I: NH3 (g)\nCompuesto II: HBr (l)",
+      "alternatives": ["Ambos compuestos son hidruros no metálicos.", "El nombre de I es azano.", "Ambos compuestos son binarios.", "I en medio acuoso se llama hidróxido de amonio.", "El nombre de II es ácido bromhídrico."],
+      "correctAnswer": "4",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 20"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes fórmulas está escrita con error?",
+      "alternatives": ["FeSO4", "KBr", "NaCO3", "PbS", "CuSO4"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 24"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación al compuesto CuSO4·5H2O, indique verdadero (V) o falso (F) a las proposiciones siguientes:\nI. Es una oxisal hidratada.\nII. Es de color blanco.\nIII. Su nombre tradicional es sulfato cúprico pentahidratado.\nIV. Es una sal más estable que la sal anhidra.",
+      "alternatives": ["VVFF", "FFVV", "VFFV", "VVVF", "VFVV"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://quimica-a1.blogspot.com/2013/02/nomenclatura-inorganica-problemas.html?m=1",
+      "sourceName": "Química A1 - Nomenclatura Inorgánica Problemas Resueltos Tipo Examen de Ingreso, Problema 22"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿En cuántos de los siguientes óxidos NO se forman hidróxidos?\nFe2O3, P2O5, CrO3, K2O, MgO, SO2, CuO",
+      "alternatives": ["1", "5", "3", "2", "4"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html?m=1",
+      "sourceName": "Matematicasn - Nomenclatura Inorgánica Ejercicios Resueltos PDF, Problema 1"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Nomenclatura inorgánica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la proposición verdadera respecto al compuesto Br2O.",
+      "alternatives": ["Se nombra dióxido de bromo.", "El número de oxidación del Br es -1.", "Se nombra monóxido de dibromo.", "Es un óxido básico.", "Se nombra óxido brómico."],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/07/nomenclatura-inorganica-ejercicios.html?m=1",
+      "sourceName": "Matematicasn - Nomenclatura Inorgánica Ejercicios Resueltos PDF, Problema 11"
+    }
+  ]
+}

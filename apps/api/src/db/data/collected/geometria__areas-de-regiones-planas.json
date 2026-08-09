@@ -1,0 +1,746 @@
+{
+  "entries": [
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una olimpiada escolar se presentaron pancartas circulares de 3 m de diámetro hechas con papelotes, y para reforzar por la parte posterior se utilizó papelote en forma triangular inscrito en la pancarta, cuyo producto de las longitudes de sus lados es 7,8 m³. Halle el área que ocupa el papelote de refuerzo.",
+      "alternatives": [
+        "1,5 m²",
+        "1,4 m²",
+        "1,6 m²",
+        "1,3 m²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/geometria-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "CEPRE San Marcos (UNMSM) - Geometría Semana 10, Áreas de Regiones Planas - Rpta. D"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcule el área de una región triangular cuyos lados miden 4; 4 y 6.",
+      "alternatives": [
+        "3√7",
+        "2√7",
+        "4√7",
+        "5√7",
+        "7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/areas-de-regiones-triangulares.html",
+      "sourceName": "Áreas de Regiones Triangulares - Ejercicios Resueltos de Admisión, Problema 8 - Clave A"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un trapecio ABCD circunscrito a una circunferencia de radio 3 u, los lados no paralelos AB y CD miden 7 u cada uno. Calcule el área de la región trapecial ABCD.",
+      "alternatives": [
+        "35 u²",
+        "25 u²",
+        "45 u²",
+        "32 u²",
+        "26 u²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-de-regiones-cuadrangulares.html",
+      "sourceName": "Áreas de Regiones Cuadrangulares - Ejercicios Resueltos PDF, Problema 1 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En un rombo cuyo lado mide 5 m y uno de los ángulos agudos es igual a 53°. Calcule el área de la región rombal.",
+      "alternatives": [
+        "24 m²",
+        "18 m²",
+        "20 m²",
+        "32 m²",
+        "30 m²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-de-regiones-cuadrangulares.html",
+      "sourceName": "Áreas de Regiones Cuadrangulares - Ejercicios Resueltos PDF, Problema 2 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una región triangular y una región trapecial tienen áreas y alturas iguales. Si la base de la región triangular mide 18 m, calcule la longitud de la base media del trapecio.",
+      "alternatives": [
+        "10 m",
+        "12 m",
+        "9 m",
+        "8 m",
+        "16 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-de-regiones-cuadrangulares.html",
+      "sourceName": "Áreas de Regiones Cuadrangulares - Ejercicios Resueltos PDF, Problema 4 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una región rombal ABCD, m∠A = 74° y su perímetro es 20. Calcule el área de dicha región.",
+      "alternatives": [
+        "42 u²",
+        "24 u²",
+        "35 u²",
+        "36 u²",
+        "18 u²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-de-regiones-cuadrangulares.html",
+      "sourceName": "Áreas de Regiones Cuadrangulares - Ejercicios Resueltos PDF, Problema 5 - Clave B"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcule el área de una región triangular cuyos lados miden 4; 8 y 6.",
+      "alternatives": [
+        "4√19",
+        "4√17",
+        "3√15",
+        "5√3",
+        "3√11"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/areas-de-regiones-sombreadas-ejercicios.html",
+      "sourceName": "Áreas Sombreadas - Ejercicios Resueltos PDF, Problema 1 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las diagonales de una región cuadrangular convexa miden 7 y 8, y determinan un ángulo de 30°. Calcule el área de dicha región.",
+      "alternatives": [
+        "12 u²",
+        "14 u²",
+        "15 u²",
+        "16 u²",
+        "18 u²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/areas-de-regiones-sombreadas-ejercicios.html",
+      "sourceName": "Áreas Sombreadas - Ejercicios Resueltos PDF, Problema 2 - Clave B"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcule el área de una región triangular cuyos lados miden 5; 6 y 7.",
+      "alternatives": [
+        "6√6 u²",
+        "2√5 u²",
+        "4√6 u²",
+        "3√2 u²",
+        "2√6 u²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/areas-de-regiones-sombreadas-ejercicios.html",
+      "sourceName": "Áreas Sombreadas - Ejercicios Resueltos PDF, Problema 5 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se tiene un triángulo equilátero de área 3√3 u². Determine el área de la región circular circunscrita a dicho triángulo.",
+      "alternatives": [
+        "2π",
+        "3π",
+        "6π",
+        "4π"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-de-regiones-circulares-ejercicios.html",
+      "sourceName": "Áreas de Regiones Circulares - Ejercicios Resueltos PDF, Problema 2 - Clave D"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un hexágono regular inscrito en una circunferencia de radio 6 u, calcula el área de uno de los segmentos circulares determinados por un lado del hexágono regular y la circunferencia.",
+      "alternatives": [
+        "7π – 6√3",
+        "6π – 9√3",
+        "8π – 9√3",
+        "9π – 6√3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-de-regiones-circulares-ejercicios.html",
+      "sourceName": "Áreas de Regiones Circulares - Ejercicios Resueltos PDF, Problema 4 - Clave B"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Los catetos de un triángulo rectángulo son entre sí como 3 es a 4. Si el área de su región es 54 u², ¿cuánto mide su hipotenusa?",
+      "alternatives": [
+        "5 u",
+        "10 u",
+        "13 u",
+        "15 u",
+        "20 u"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-ejercicios-resueltos-tercero-de.html",
+      "sourceName": "Áreas de Figuras - Problemas Resueltos, Ejercicio 1 - Clave D"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcular el perímetro de un cuadrado, si el área de su región mide 256 u².",
+      "alternatives": [
+        "56 u",
+        "60 u",
+        "64 u",
+        "72 u",
+        "80 u"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-ejercicios-resueltos-tercero-de.html",
+      "sourceName": "Áreas de Figuras - Problemas Resueltos, Ejercicio 2 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La base de un rectángulo mide el doble de su altura y su área es 18 u². Calcular la longitud de su base.",
+      "alternatives": [
+        "3 u",
+        "4 u",
+        "6 u",
+        "8 u",
+        "10 u"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-ejercicios-resueltos-tercero-de.html",
+      "sourceName": "Áreas de Figuras - Problemas Resueltos, Ejercicio 3 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Las bases de un trapecio miden 9 u y 14 u. Si su altura mide 12 u, calcular el área de su región.",
+      "alternatives": [
+        "62 u²",
+        "69 u²",
+        "124 u²",
+        "138 u²",
+        "150 u²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-ejercicios-resueltos-tercero-de.html",
+      "sourceName": "Áreas de Figuras - Problemas Resueltos, Ejercicio 4 - Clave D"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las diagonales de un rombo son entre sí como 2 es a 3 y el área de su región es 108 u². Calcular la suma de sus diagonales.",
+      "alternatives": [
+        "25 u",
+        "30 u",
+        "35 u",
+        "40 u",
+        "45 u"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-ejercicios-resueltos-tercero-de.html",
+      "sourceName": "Áreas de Figuras - Problemas Resueltos, Ejercicio 5 - Clave B"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Las bases de un trapecio miden 4 u y 10 u y el área de dicho trapecio mide 63 u². Calcular su altura.",
+      "alternatives": [
+        "6 u",
+        "7 u",
+        "8 u",
+        "9 u",
+        "10 u"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-ejercicios-resueltos-tercero-de.html",
+      "sourceName": "Áreas de Figuras - Problemas Resueltos, Ejercicio 6 - Clave D"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El largo de un rectángulo excede al ancho en 2 u. Si el perímetro es 16 u, hallar el área del rectángulo.",
+      "alternatives": [
+        "15 u²",
+        "12 u²",
+        "18 u²",
+        "20 u²",
+        "24 u²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-ejercicios-resueltos-tercero-de.html",
+      "sourceName": "Áreas de Figuras - Problemas Resueltos, Ejercicio 8 - Clave A"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Hallar el área de un círculo, sabiendo que el diámetro de dicho círculo mide 12 m.",
+      "alternatives": [
+        "144π m²",
+        "72π m²",
+        "36π m²",
+        "48π m²",
+        "24π m²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-ejercicios-resueltos-tercero-de.html",
+      "sourceName": "Áreas de Figuras - Problemas Resueltos, Ejercicio 9 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcular el radio de un círculo, si el área de su región mide 196π u².",
+      "alternatives": [
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-ejercicios-resueltos-tercero-de.html",
+      "sourceName": "Áreas de Figuras - Problemas Resueltos, Ejercicio 10 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcular el área de un sector circular de 60° de ángulo central y 12 u de radio.",
+      "alternatives": [
+        "12π u²",
+        "24π u²",
+        "16π u²",
+        "32π u²",
+        "18π u²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/areas-ejercicios-resueltos-tercero-de.html",
+      "sourceName": "Áreas de Figuras - Problemas Resueltos, Ejercicio 11 - Clave B"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de un sector circular de radio R es 4π u². ¿Cuál será el área de otro sector circular cuyo radio es 2R y cuyo ángulo central es la mitad del anterior?",
+      "alternatives": [
+        "2π u²",
+        "π u²",
+        "4π u²",
+        "8π u²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/sector-circular-problemas-resueltos-de-trigonometria-pdf.html",
+      "sourceName": "Sector Circular - Problemas Resueltos de Trigonometría PDF, Problema 1 - Clave E"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El ángulo central de un sector circular mide 36° y su radio es R. Si se disminuye en 11° el ángulo central, ¿cuánto hay que aumentar el radio para que el área no varíe?",
+      "alternatives": [
+        "R/5",
+        "2R/5",
+        "3R/5",
+        "4R/5",
+        "R"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/sector-circular-problemas-resueltos-de-trigonometria-pdf.html",
+      "sourceName": "Sector Circular - Problemas Resueltos de Trigonometría PDF, Problema 2 - Clave A"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una torta de manzana de 32 cm de diámetro se corta en 8 trozos iguales. ¿Cuál es el área de cada trozo?",
+      "alternatives": [
+        "16π cm²",
+        "18π cm²",
+        "32π cm²",
+        "20π cm²",
+        "14,8π cm²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sector-circular-problemas-resueltos-de.html",
+      "sourceName": "Sector Circular - Ejercicios Resueltos PDF, Problema 4 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En un sector circular el ángulo central mide 45° y el radio 8 m. ¿Cuál es su área?",
+      "alternatives": [
+        "π m²",
+        "4π m²",
+        "8π m²",
+        "6π m²",
+        "2π m²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sector-circular-problemas-resueltos-de.html",
+      "sourceName": "Sector Circular - Ejercicios Resueltos PDF, Problema 1 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un sector circular el arco mide 2π cm y su radio 13 cm. ¿Cuál es su área?",
+      "alternatives": [
+        "11π cm²",
+        "12π cm²",
+        "13π cm²",
+        "10π cm²",
+        "14π cm²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/sector-circular-problemas-resueltos-de.html",
+      "sourceName": "Sector Circular - Ejercicios Resueltos PDF, Problema 2 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los catetos de un triángulo rectángulo son entre sí como 1 es a 2. Calcular la longitud del cateto mayor si el área del triángulo es 16 u².",
+      "alternatives": [
+        "10 u",
+        "15 u",
+        "6 u",
+        "8 u",
+        "√8 u"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/areas-de-regiones-triangulares.html",
+      "sourceName": "Áreas de Regiones Triangulares - Propiedades, Ejemplos y Ejercicios, Problema 2 - Clave D"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el área de un triángulo cuyas alturas miden 12; 15 y 20 cm.",
+      "alternatives": [
+        "130 cm²",
+        "180 cm²",
+        "150 cm²",
+        "120 cm²",
+        "160 cm²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/areas-de-regiones-triangulares.html",
+      "sourceName": "Áreas de Regiones Triangulares - Propiedades, Ejemplos y Ejercicios, Problema 3 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos triángulos semejantes tienen bases de 8 y 3 m. ¿En qué relación se encuentran sus áreas?",
+      "alternatives": [
+        "8/3",
+        "16/9",
+        "64/3",
+        "8/9",
+        "64/9"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/07/areas-de-regiones-triangulares.html",
+      "sourceName": "Áreas de Regiones Triangulares - Propiedades, Ejemplos y Ejercicios, Problema 4 - Clave E"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un trapecio rectangular ABCD, recto en B y C, la mediana del trapecio mide 10 u y BC = 6 u. Calcule el área de la región trapecial ABCD.",
+      "alternatives": [
+        "40 u²",
+        "50 u²",
+        "60 u²",
+        "70 u²",
+        "80 u²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/geometria-unsa-examen-admision-san.html",
+      "sourceName": "Geometría UNSA - Prueba Resuelta San Agustín Ingreso Universidad, Problema 1 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcular el área de un segmento circular de 90° de amplitud en un círculo de 10 cm de radio. (Considerar π = 3,1416)",
+      "alternatives": [
+        "28,54 cm²",
+        "26,24 cm²",
+        "40,04 cm²",
+        "24,44 cm²",
+        "20,54 cm²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/geometria-unsa-examen-admision-san.html",
+      "sourceName": "Geometría UNSA - Prueba Resuelta San Agustín Ingreso Universidad, Problema 2 - Clave A"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Uno de los catetos de un triángulo rectángulo mide 40 cm y el radio del círculo inscrito es 4 cm. Calcular el área del triángulo en dm².",
+      "alternatives": [
+        "2,90",
+        "1,00",
+        "1,80",
+        "3,05",
+        "3,50"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/geometria-unsa-examen-admision-san.html",
+      "sourceName": "Geometría UNSA - Prueba Resuelta San Agustín Ingreso Universidad, Problema 3 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene un terreno de forma triangular ABC de 30 m² de área, AB = 3 m y AC = 7 m; se traza la bisectriz interior AP. Halla el área de la región triangular APC.",
+      "alternatives": [
+        "16 m²",
+        "18 m²",
+        "19 m²",
+        "21 m²",
+        "17 m²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/05/matematicas-uncp-examen-admision-pdf.html",
+      "sourceName": "UNCP Área II - Examen de Admisión Resuelto, Problema 12 - Clave D"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pedro dispone de una hoja de papel de forma triangular. Ha dividido en tres partes iguales cada uno de los lados de la hoja, trazando segmentos. Luego, ha sombreado una región triangular y una región cuadrangular de la hoja. Si el área de la región triangular sombreada es 10 cm², ¿cuál es el área de la región cuadrangular sombreada?",
+      "alternatives": [
+        "30 cm²",
+        "25 cm²",
+        "70 cm²",
+        "40 cm²",
+        "50 cm²"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/geometria-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "Geometría San Marcos DECO - Simulacro Admisión UNMSM, Problema 2 - Clave E"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule el área de un triángulo ABC si AB = 21 m, BC = 17 m y AC = 10 m.",
+      "alternatives": [
+        "72 m²",
+        "78 m²",
+        "84 m²",
+        "90 m²",
+        "96 m²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.slideshare.net/slideshow/taller-15-areas/42006140",
+      "sourceName": "Taller 15 Áreas - SlideShare (Geometría nivel preuniversitario), Problema 3 - Rpta. 84 m²"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un triángulo rectángulo de 726 m² de área, la hipotenusa mide 55 m. La suma de las longitudes de los catetos es:",
+      "alternatives": [
+        "70",
+        "72",
+        "77",
+        "80",
+        "84"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.slideshare.net/slideshow/taller-15-areas/42006140",
+      "sourceName": "Taller 15 Áreas - SlideShare (Geometría nivel preuniversitario), Problema 4 - Rpta. 77"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcular el área de un hexágono regular sabiendo que su apotema mide 3 cm.",
+      "alternatives": [
+        "9√3 cm²",
+        "12√3 cm²",
+        "18√3 cm²",
+        "24√3 cm²",
+        "27√3 cm²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.slideshare.net/slideshow/taller-15-areas/42006140",
+      "sourceName": "Taller 15 Áreas - SlideShare (Geometría nivel preuniversitario), Problema 8 - Rpta. 18√3 cm²"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcular el área de un cuadrado inscrito en un círculo de 6 m de radio.",
+      "alternatives": [
+        "36 m²",
+        "48 m²",
+        "60 m²",
+        "72 m²",
+        "80 m²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.slideshare.net/slideshow/taller-15-areas/42006140",
+      "sourceName": "Taller 15 Áreas - SlideShare (Geometría nivel preuniversitario), Problema 10 - Rpta. 72 m²"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcular el área de una corona circular limitada por dos circunferencias concéntricas de radios 2 y 8 metros respectivamente.",
+      "alternatives": [
+        "55π m²",
+        "57π m²",
+        "60π m²",
+        "64π m²",
+        "68π m²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.slideshare.net/slideshow/taller-15-areas/42006140",
+      "sourceName": "Taller 15 Áreas - SlideShare (Geometría nivel preuniversitario), Problema 12 - Rpta. 60π m²"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La apotema de un triángulo equilátero de 9√3 cm² de área mide:",
+      "alternatives": [
+        "1 m",
+        "2 m",
+        "3 m",
+        "4 m",
+        "5 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.slideshare.net/slideshow/taller-15-areas/42006140",
+      "sourceName": "Taller 15 Áreas - SlideShare (Geometría nivel preuniversitario), Problema 9 - Rpta. 3 m"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un terreno tiene la forma de un rectángulo cuyo perímetro es 98 m y su diagonal mide 35 m. ¿Cuánto será el área del terreno?",
+      "alternatives": [
+        "544 m²",
+        "588 m²",
+        "600 m²",
+        "625 m²",
+        "635 m²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría Rubiños PDF - Ejercicios Resueltos, Problema 9 - Clave B"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Renato tiene una placa metálica de forma semicircular cuyo diámetro es 50 cm, y desea cortar la mayor porción cuadrada, de tal manera que uno de los lados de dicha porción se encuentre sobre el diámetro de la placa metálica. Calcule el área que tendrá la porción cuadrada.",
+      "alternatives": [
+        "350 cm²",
+        "600 cm²",
+        "450 cm²",
+        "500 cm²",
+        "625 cm²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría Rubiños PDF - Ejercicios Resueltos, Problema 12 - Clave D"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En clase de manualidades, María decide elaborar una estrella de cuatro puntas. Para ello traza sobre una cartulina dúplex un cuadrado inscrito en una circunferencia de 20 cm de diámetro. Sobre los lados del cuadrado se dibujan triángulos equiláteros exteriores al cuadrado. Halle el área de la estrella determinada.",
+      "alternatives": [
+        "201(√2 + 1) cm²",
+        "210(√3 + 1) cm²",
+        "200(√3 + 1) cm²",
+        "200(√3 + 3) cm²"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/06/pre-san-marcos-geometria-semana-11-2020.html",
+      "sourceName": "Geometría UNMSM Prueba Desarrollada - Semana 11, Problema 36 - Clave C"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Áreas de Regiones Planas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una fábrica elabora láminas metálicas de forma triangular cuyos lados miden 2 dm, 3 dm y 4 dm. Halle el área de una lámina metálica.",
+      "alternatives": [
+        "3√15/4 dm²",
+        "3√15/2 dm²",
+        "2√15/4 dm²",
+        "5√15/4 dm²"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/05/geometria-semana-10-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "CEPRE San Marcos (UNMSM) - Geometría Semana 10, Áreas de Regiones Planas, Problema 3 - Clave A"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "entries": [
+    {
+      "courseName": "Psicología",
+      "topicName": "Estados de conciencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La hipnosis es una técnica en la Teoría:",
+      "alternatives": [
+        "Conductual",
+        "Psicoanalítica",
+        "Gestalt",
+        "Humanista",
+        "Sistémica"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/psicologia-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "Examen de admisión UNC Cajamarca - Psicología, Pregunta 10"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Estados de conciencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señalar la alternativa con dos características de la actividad inconsciente.",
+      "alternatives": [
+        "Abstracción de la realidad interna y lenguaje formal.",
+        "Temporalidad y predominio del principio del placer.",
+        "Sustitución de la realidad interior y atemporalidad.",
+        "Lenguaje simbólico y ausencia de contradicción.",
+        "Presencia de contradicciones y atemporalidad."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/05/psicologia-unc-examen-resuelto-cajamarca.html",
+      "sourceName": "Examen de admisión UNC Cajamarca - Psicología, Pregunta 11"
+    }
+  ]
+}

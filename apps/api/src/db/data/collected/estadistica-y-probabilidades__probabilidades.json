@@ -1,0 +1,781 @@
+{
+  "entries": [
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos tetraedros regulares idénticos, con los números del 1 al 4 pintados en cada cara. Determine la probabilidad de que al lanzar los tetraedros, la suma de los números en sus bases resulte un número par mayor a 5.",
+      "alternatives": [
+        "1/4",
+        "5/16",
+        "7/16",
+        "1/2",
+        "5/8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20172.pdf",
+      "sourceName": "Examen de Admisión UNI 2017-II, Matemática, Pregunta 27 (CLAVE A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ada, Ana y Eva intervienen en una prueba de natación. Ada y Ana tienen la misma probabilidad de ganar y cada una tiene el doble de la de Eva. Determine la probabilidad de que gane Ana o Eva, sabiendo que no ganan simultáneamente.",
+      "alternatives": [
+        "1/5",
+        "1/3",
+        "2/5",
+        "3/5",
+        "2/3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20152.pdf",
+      "sourceName": "Examen de Admisión UNI 2015-II, Matemática, Pregunta 21 (RESPUESTA D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Considere un dado \"trucado\", de tal forma que la probabilidad de que salga cierto número es inversamente proporcional al mismo. ¿Cuál es la probabilidad de que al lanzar 2 dados trucados idénticos, la suma de los números obtenidos sea 5?",
+      "alternatives": [
+        "0,14",
+        "0,24",
+        "0,28",
+        "0,34",
+        "0,39"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2011.pdf",
+      "sourceName": "Examen de Admisión UNI 2011-I, Matemática, Pregunta 15 (RESPUESTA A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la sala de pediatría de un hospital el 70% de los pacientes son varones, de estos el 42% son menores de 3 años, y el 30% de las niñas son menores de 3 años. Una pediatra que ingresa a la sala selecciona un infante al azar. ¿Cuál es la probabilidad de que este tenga 3 o más años?",
+      "alternatives": [
+        "0,484",
+        "0,616",
+        "0,294",
+        "0,285",
+        "0,304"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/estadistica-resuelta-ingreso-universidad.html",
+      "sourceName": "matematicasn - Estadística y Probabilidades (Banco de Preguntas Resueltas), Pregunta 10 (Rpta B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Tres jugadores A, B y C extraen (en ese orden) una carta con reposición de una baraja de 52 cartas. El primero que obtiene corazón gana. Calcule la probabilidad que gane A.",
+      "alternatives": [
+        "9/74",
+        "18/37",
+        "16/37",
+        "2/37",
+        "8/37"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/estadistica-resuelta-ingreso-universidad.html",
+      "sourceName": "matematicasn - Estadística y Probabilidades (Banco de Preguntas Resueltas), Pregunta 11 (Rpta C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se lanza una moneda 3 veces consecutivas. ¿Cuál es la probabilidad de obtener tres sellos?",
+      "alternatives": [
+        "1/2",
+        "1/4",
+        "1/8",
+        "1/32",
+        "1/5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Pregunta 2 (Respuesta C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Al lanzar 2 dados simultáneamente, ¿cuál es la probabilidad de que la suma de los resultados sea 7?",
+      "alternatives": [
+        "7/36",
+        "1/6",
+        "3/5",
+        "4/5",
+        "9/17"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Pregunta 5 (Respuesta B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se lanzan 2 dados. ¿Cuál es la probabilidad de que el primer dado muestre un número mayor que el segundo?",
+      "alternatives": [
+        "1/6",
+        "1/2",
+        "1/3",
+        "1/30",
+        "5/12"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Pregunta 7 (Respuesta E)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De una baraja de 52 cartas se extraen 2 cartas sin reposición. ¿Cuál es la probabilidad de que ambas sean corazones?",
+      "alternatives": [
+        "1/13",
+        "1/2",
+        "1/17",
+        "3/28",
+        "4/27"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Pregunta 8 (Respuesta C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se selecciona un comité de 5 personas de un grupo de 7 mujeres y 6 hombres. ¿Cuál es la probabilidad de que el comité tenga exactamente 2 mujeres?",
+      "alternatives": [
+        "1/7",
+        "37/91",
+        "141/429",
+        "140/429",
+        "3/38"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Pregunta 10 (Respuesta D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se seleccionan 5 hombres de un grupo de 8 americanos, 5 ingleses y 3 franceses. ¿Cuál es la probabilidad de elegir 2 americanos, 2 ingleses y 1 francés?",
+      "alternatives": [
+        "3/5",
+        "7/13",
+        "5/26",
+        "1/9",
+        "31/63"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Pregunta 11 (Respuesta C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se lanza un dado 5 veces. ¿Cuál es la probabilidad de que en los 5 lanzamientos salgan 5 caras distintas?",
+      "alternatives": [
+        "7/23",
+        "31/32",
+        "1/32",
+        "1/3",
+        "5/54"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Pregunta 12 (Respuesta E)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las probabilidades de que A, B y C resuelvan un problema son 1/2, 3/5 y 1/6 respectivamente. Si los tres intentan resolverlo de forma independiente, ¿cuál es la probabilidad de que el problema sea resuelto?",
+      "alternatives": [
+        "1/3",
+        "5/6",
+        "1/2",
+        "1/6",
+        "1/5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Pregunta 16 (Respuesta B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se lanzan 5 monedas al mismo tiempo. ¿Cuál es la probabilidad de obtener 3 sellos y 2 caras?",
+      "alternatives": [
+        "0,5",
+        "0,32",
+        "0,3275",
+        "0,1",
+        "0,3125"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Pregunta 17 (Respuesta E)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De 100 pacientes examinados, 20 tienen asma, 32 tienen neumonía y 8 tienen ambas enfermedades. Si se selecciona un paciente al azar, ¿cuál es la probabilidad de que no tenga ninguna de las dos enfermedades?",
+      "alternatives": [
+        "0,56",
+        "0,44",
+        "0,62",
+        "0,54",
+        "0,55"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Problemas Propuestos Pregunta 1 (Respuesta A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las probabilidades de aprobar Comunicación, Matemática e Inglés son 0,80, 0,75 y 0,70 respectivamente. ¿Cuál es la probabilidad de desaprobar exactamente un curso?",
+      "alternatives": [
+        "0,422",
+        "0,427",
+        "0,430",
+        "0,425",
+        "0,448"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Problemas Propuestos Pregunta 3 (Respuesta D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El pronóstico del tiempo indica: P(lluvia) = 0,40, P(nieve) = 0,35, P(niebla) = 0,25. Las probabilidades de accidente dado cada condición son 0,30, 0,20 y 0,10 respectivamente. ¿Cuál es la probabilidad de accidente durante el fin de semana largo?",
+      "alternatives": [
+        "0,60",
+        "0,625",
+        "0,215",
+        "0,720",
+        "0,845"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Problemas Propuestos Pregunta 5 (Respuesta C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se selecciona un comité de 5 personas de 6 hombres y 4 mujeres. ¿Cuál es la probabilidad de que haya al menos 2 mujeres en el comité?",
+      "alternatives": [
+        "31/42",
+        "37/43",
+        "33/41",
+        "31/47",
+        "32/43"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Problemas Propuestos Pregunta 6 (Respuesta A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La bolsa 1 tiene 2 monedas de 5 soles y 3 de 1 sol. La bolsa 2 tiene 4 monedas de 5 soles y 3 de 1 sol. Se elige una bolsa al azar y se extrae una moneda. ¿Cuál es la probabilidad de que sea de 5 soles?",
+      "alternatives": [
+        "15/37",
+        "12/35",
+        "17/35",
+        "17/37",
+        "14/37"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Problemas Propuestos Pregunta 10 (Respuesta D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un lote tiene 12 objetos: 8 buenos y 4 defectuosos. Se eligen 4 uno por uno sin reposición. ¿Cuál es la probabilidad de obtener 3 buenos y 1 defectuoso?",
+      "alternatives": [
+        "224/495",
+        "124/595",
+        "54/125",
+        "334/595",
+        "72/125"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Problemas Propuestos Pregunta 15 (Respuesta A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La máquina A produce 100 pernos (5% defectuosos) y la máquina B produce 200 pernos (6% defectuosos). Se selecciona al azar un perno defectuoso. ¿Cuál es la probabilidad de que provenga de la máquina A?",
+      "alternatives": [
+        "3/29",
+        "5/17",
+        "15/83",
+        "13/95",
+        "217/300"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Problemas Propuestos Pregunta 16 (Respuesta B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un examen tiene 14 temas y un alumno estudió 5. Se eligen 2 temas al azar y el alumno debe elegir uno. ¿Cuál es la probabilidad de que conozca al menos uno de los dos temas elegidos?",
+      "alternatives": [
+        "13/81",
+        "60/91",
+        "11/91",
+        "50/81",
+        "6/13"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Problemas Propuestos Pregunta 19 (Respuesta B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La prevalencia de diabetes es 4%. Una prueba de glucosa diagnostica correctamente al 95% de los diabéticos pero da 2% de falsos positivos. Si alguien es diagnosticado positivo, ¿cuál es la probabilidad de tener diabetes realmente?",
+      "alternatives": [
+        "16/25",
+        "19/286",
+        "64/125",
+        "32/125",
+        "1/25"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Problemas Propuestos Pregunta 20 (Respuesta B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se lanzan 2 dados. Se sabe que la suma es mayor que 6. ¿Cuál es la probabilidad de que la suma sea igual a 7?",
+      "alternatives": [
+        "2/7",
+        "1/8",
+        "5/12",
+        "3/8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/probabilidades-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Teoría de Probabilidad Ejercicios Resueltos PDF (2015), Problemas Propuestos Pregunta 8 (Respuesta A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Martín tiene 2/5 de probabilidad de anotar en cada disparo y José tiene 3/7. Si ambos disparan una vez de forma independiente, ¿cuál es la probabilidad de que al menos uno anote?",
+      "alternatives": [
+        "23/35",
+        "6/35",
+        "5/12",
+        "5/7"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/probabilidades-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Teoría de Probabilidad Ejercicios Resueltos PDF (2015), Problemas Propuestos Pregunta 11 (Respuesta A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A y B son eventos independientes. Se sabe que P(A ∪ B) = 0,6 y P(A) = 0,4. ¿Cuál es P(B)?",
+      "alternatives": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "1/5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/probabilidades-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Teoría de Probabilidad Ejercicios Resueltos PDF (2015), Problemas Propuestos Pregunta 12 (Respuesta B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Arturo resuelve un problema con probabilidad 1/3 y Brenda con probabilidad 2/5, de forma independiente. ¿Cuál es la probabilidad de que el problema sea resuelto?",
+      "alternatives": [
+        "1/5",
+        "1/4",
+        "2/5",
+        "3/5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/probabilidades-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Teoría de Probabilidad Ejercicios Resueltos PDF (2015), Problemas Propuestos Pregunta 14 (Respuesta D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un aeropuerto, el 60% de los pasajeros son vuelos comerciales (50% viajan en clase ejecutiva) y el 40% son vuelos privados (60% viajan en clase ejecutiva). Un pasajero elegido al azar, ¿cuál es la probabilidad de que viaje en clase ejecutiva?",
+      "alternatives": [
+        "0,24",
+        "0,54",
+        "0,30",
+        "0,11",
+        "0,44"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/probabilidades-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Teoría de Probabilidad Ejercicios Resueltos PDF (2015), Segunda Guía Pregunta 11 (Respuesta B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Lucho escucha la alarma con probabilidad 0,80 y llega puntual con probabilidad 0,90. Si no escucha la alarma, llega puntual con probabilidad 0,50. Dado que llegó puntual, ¿cuál es la probabilidad de que haya escuchado la alarma?",
+      "alternatives": [
+        "8/9",
+        "36/41",
+        "41/50",
+        "50/81",
+        "25/36"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/probabilidades-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Teoría de Probabilidad Ejercicios Resueltos PDF (2015), Segunda Guía Pregunta 14 (Respuesta B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un club deportivo tiene el 30% de socios que juegan fútbol, 40% que juegan básquet y 10% que juegan ambos. Se elige un socio al azar. ¿Cuáles de las siguientes proposiciones son verdaderas? I) P(ningún deporte) = 0,4; II) P(básquet|fútbol) = 1/3; III) Los deportes no son eventos independientes.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "FVF",
+        "VFV",
+        "FVV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Problemas Propuestos Pregunta 11 (Respuesta A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sean A y B dos sucesos en el mismo espacio muestral Ω con P(A) = 0,65 y P(B) = 0,30. Determine el valor de verdad de las proposiciones:\nI. P(A ∪ B) ≤ 0,95\nII. P(A ∩ B) ≥ 0\nIII. P(A' ∩ B') ≥ 0,05",
+      "alternatives": [
+        "VFV",
+        "VVF",
+        "VFF",
+        "FVF",
+        "FFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/probabilidades-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf - Probabilidades Problemas Resueltos Preuniversitario PDF (2018), Pregunta 1 (Respuesta A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El temario del curso tiene 18 temas, de los cuales 3 son de Estadística. Si cada postulante elige al azar 2 temas del temario, ¿cuál es la probabilidad de que al menos uno sea de Estadística?",
+      "alternatives": [
+        "5/17",
+        "16/51",
+        "1/51",
+        "15/17",
+        "1/6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/probabilidades-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf - Probabilidades Problemas Resueltos Preuniversitario PDF (2018), Pregunta 3 (Respuesta B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se han preseleccionado 10 estudiantes mujeres y 5 varones. El comité decide enviar solo 3 representantes. ¿Cuál es la probabilidad de que los 3 representantes sean del mismo género (todos mujeres o todos varones)?",
+      "alternatives": [
+        "24/91",
+        "2/91",
+        "7/13",
+        "13/45",
+        "2/7"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/probabilidades-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf - Probabilidades Problemas Resueltos Preuniversitario PDF (2018), Pregunta 4 (Respuesta E)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se lee un número de tres cifras múltiplo de 10 elegido al azar. ¿Cuál es la probabilidad de que también sea múltiplo de 13?",
+      "alternatives": [
+        "7/90",
+        "9/910",
+        "4/45",
+        "1/15",
+        "7/50"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/probabilidades-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf - Probabilidades Problemas Resueltos Preuniversitario PDF (2018), Pregunta 11 (Respuesta A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Edgar tiene 13 llaves y solo una abre la puerta. Las prueba una por una sin repetir. ¿Cuál es la probabilidad de que abra la puerta con la sexta llave?",
+      "alternatives": [
+        "1/143",
+        "5/1008",
+        "1/13",
+        "15/901",
+        "1/42"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/probabilidades-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf - Probabilidades Problemas Resueltos Preuniversitario PDF (2018), Pregunta 13 (Respuesta C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene 3 urnas: la primera contiene 4 bolas blancas y 2 negras, la segunda 3 blancas y 3 negras, y la tercera 3 blancas y 6 negras. Se elige una urna al azar y se extrae una bola. ¿Cuál es la probabilidad de que la bola extraída sea negra?",
+      "alternatives": [
+        "1/2",
+        "5/9",
+        "11/18",
+        "2/3",
+        "13/18"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf",
+      "sourceName": "Examen de Admisión UNI 2016-II, Segunda Prueba Matemática, Pregunta 26 (RESPUESTA A)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una urna hay bolas numeradas del 1 al 9 y se extrae una bola al azar. ¿Cuál es la probabilidad de que el número sea mayor que 6, dado que la bola extraída es impar?",
+      "alternatives": [
+        "1/5",
+        "2/5",
+        "3/5",
+        "4/5",
+        "1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf",
+      "sourceName": "Examen de Admisión UNI 2016-II, Segunda Prueba Matemática, Pregunta 20 (RESPUESTA B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De una baraja normal de 52 cartas se extraen al azar 5 cartas. ¿Cuál es la probabilidad de que las 5 cartas sean del mismo palo?",
+      "alternatives": [
+        "33/16659",
+        "33/16660",
+        "33/16661",
+        "33/16662",
+        "33/16663"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20162.pdf",
+      "sourceName": "Examen de Admisión UNI 2016-II, Segunda Prueba Matemática, Pregunta 18 (RESPUESTA B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un total de 15 personas, 10 son hombres y 5 son mujeres. Van a ser divididos al azar en cinco grupos con 3 personas cada uno. ¿Cuál es la probabilidad de que en cada uno de los cinco grupos haya siempre al menos una mujer?",
+      "alternatives": [
+        "0,05",
+        "0,06",
+        "0,07",
+        "0,08",
+        "0,09"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20182.pdf",
+      "sourceName": "Examen de Admisión UNI 2018-II, Segunda Prueba Matemática, Pregunta 2 (RESPUESTA D)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene un grupo de 7 hombres y 4 mujeres. Se va a elegir una comisión de 3 personas. ¿Cuál es la probabilidad de que la comisión esté integrada por al menos 1 hombre?",
+      "alternatives": [
+        "62/165",
+        "120/165",
+        "160/165",
+        "3/165",
+        "130/165"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario2018.pdf",
+      "sourceName": "Examen de Admisión UNI 2018-I, Segunda Prueba Matemática, Pregunta 4 (RESPUESTA C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se elige aleatoriamente un número entero de cinco cifras. ¿Cuál es la probabilidad de que dicho número sea par y la suma de sus cifras sea 42?",
+      "alternatives": [
+        "(7/9) × 10^(-4)",
+        "(11/9) × 10^(-4)",
+        "(13/9) × 10^(-4)",
+        "(15/9) × 10^(-4)",
+        "(17/9) × 10^(-4)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://admision.uni.edu.pe/wp-content/uploads/2022/11/solucionario20171.pdf",
+      "sourceName": "Examen de Admisión UNI 2017-I, Segunda Prueba Matemática, Pregunta 2 (RESPUESTA B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una urna tiene 12 fichas pares y 8 fichas impares. Se seleccionan 3 fichas al azar. ¿Cuál es la probabilidad de que las 3 sean impares?",
+      "alternatives": [
+        "7/95",
+        "14/285",
+        "28/57",
+        "13/315",
+        "11/284"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/probabilidades-ejercicios-resueltos-de.html",
+      "sourceName": "matematicasn - Probabilidades Ejemplos y Ejercicios Resueltos PDF (2016), Problemas Propuestos Pregunta 2 (Respuesta B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Rafael le gana a José Luis en cada partido con probabilidad 3/5. ¿Cuál es la probabilidad de que Rafael gane al menos uno de tres partidos?",
+      "alternatives": [
+        "111/125",
+        "4/125",
+        "117/125",
+        "1/125",
+        "97/125"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/probabilidades-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Teoría de Probabilidad Ejercicios Resueltos PDF (2015), Segunda Guía Pregunta 6 (Respuesta C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos pilotos de huelga: P(huelga pilotos) = 0,75; P(huelga choferes) = 0,65; P(huelga choferes dado huelga pilotos) = 0,90. Si hay huelga de pilotos, ¿cuál es la probabilidad de que también haya huelga de choferes?",
+      "alternatives": [
+        "13/15",
+        "56/75",
+        "39/50",
+        "34/53",
+        "72/95"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/probabilidades-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Teoría de Probabilidad Ejercicios Resueltos PDF (2015), Segunda Guía Pregunta 7 (Respuesta C)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un club deportivo el 52% son hombres, de los cuales el 35% nada; del total de mujeres el 60% nada. Si se elige un miembro al azar, ¿cuál es la probabilidad de que nade?",
+      "alternatives": [
+        "0,48",
+        "0,47",
+        "0,95",
+        "0,182"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/probabilidades-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Teoría de Probabilidad Ejercicios Resueltos PDF (2015), Problemas Propuestos Pregunta 18 (Respuesta B)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Probabilidades",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una caja tiene 10 baterías, de las cuales 4 están en buen estado. Se extraen 3 baterías una por una sin reemplazo. ¿Cuál es la probabilidad de que exactamente la primera y la tercera estén en buen estado pero la segunda no?",
+      "alternatives": [
+        "2/15",
+        "1/30",
+        "1/12",
+        "1/10",
+        "1/6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/probabilidades-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf - Probabilidades Problemas Resueltos Preuniversitario PDF (2018), Pregunta 2 (Respuesta B)"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "entries": [
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los tiempos de vida útil (en días) de un tipo de batería se tabuló en una distribución de frecuencias de 5 intervalos de igual amplitud con frecuencias relativas acumuladas: 0,10; 0,25; 0,55; 0,80 y 1,00. Determine la distribución de frecuencias absolutas si la tercera frecuencia absoluta acumulada es 11, si la segunda marca de clase es 6, y si el límite inferior del cuarto intervalo es 12.",
+      "alternatives": [
+        "1, 4, 6, 4, 5",
+        "2, 4, 5, 6, 3",
+        "2, 3, 6, 5, 4",
+        "4, 2, 5, 6, 3",
+        "3, 4, 4, 5, 4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/tablas-de-distribucion-de-frecuencias-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - Tablas de distribución de frecuencias, problemas resueltos preuniversitaria (2022), problema de vida útil de baterías"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indicar verdadero (V) o falso (F) según corresponda:\n( ) Cada uno de los elementos de una muestra se llama unidad estadística.\n( ) Un dato muestral sólo puede pertenecer a uno de los intervalos de clase.\n( ) Marca de clase es el punto medio de un intervalo de clase.\n( ) La ojiva es un polígono de frecuencias construido a partir del histograma.",
+      "alternatives": [
+        "VVVV",
+        "VFVF",
+        "FVFV",
+        "VVFF",
+        "FFVV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/tablas-de-distribucion-de-frecuencias-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - Tablas de distribución de frecuencias, problemas resueltos preuniversitaria (2022), ejercicio de verdadero/falso sobre conceptos estadísticos"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los ingresos mensuales de una muestra de pequeños comerciantes se tabularon en una distribución de frecuencias simétricas de 5 intervalos de clase de igual amplitud resultando como ingreso mínimo $125, marca de clase del cuarto intervalo de clase: $300. Si el 8% de los ingresos son menores que $165 y el 70% de los ingresos son menores que $275. El porcentaje de ingresos que son superiores a $285 es:",
+      "alternatives": [
+        "0,22",
+        "0,24",
+        "0,26",
+        "0,28",
+        "0,32"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/estadistica-ejercicios-quinto-de.html",
+      "sourceName": "MatematicasN - Estadística ejercicios resueltos (2015), problema de ingresos mensuales de comerciantes"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las inversiones de las compañías mineras se clasificó en una tabla de distribución de frecuencias con amplitud de intervalos de 8 millones de soles. Si las frecuencias absolutas correspondientes a los intervalos son: 1; 16; 11; 9; 8; 3 y 2; siendo la máxima inversión 56 millones de soles. ¿Qué porcentaje de compañías intervienen entre 16 y 40 millones de nuevos soles?",
+      "alternatives": [
+        "44",
+        "56",
+        "62",
+        "64",
+        "68"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/estadistica-ejercicios-quinto-de.html",
+      "sourceName": "MatematicasN - Estadística ejercicios resueltos (2015), problema de inversiones de compañías mineras"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La inversión anual, en miles de dólares, de una muestra de 40 pequeñas empresas fueron: 36; 19; 29; 37; 33; 27; 27; 24; 26; 31; 15; 41; 30; 18; 39; 46; 26; 12; 23; 18; 33; 25; 28; 23; 28; 22; 29; 31; 21; 35; 27; 17; 31; 10; 28; 20; 4; 25; 34; 24. Se elabora una distribución de frecuencias con 7 intervalos de clase de igual amplitud. El porcentaje de empresas con una inversión entre 14 mil y 20 mil dólares es:",
+      "alternatives": [
+        "8,5%",
+        "11,5%",
+        "12,5%",
+        "15%",
+        "17,5%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/tablas-de-distribucion-de-frecuencias-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - Tablas de distribución de frecuencias, problemas resueltos preuniversitaria (2022), Problema 4 de inversión anual de 40 empresas"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En los resultados de un examen cuya nota máxima es 20 se observó lo siguiente: el 72% de los evaluados tienen a lo más nota 15; el 47% de los evaluados tienen una nota menor que 11; la nota mínima aprobatoria es 11. ¿Qué porcentaje de los aprobados tiene a lo más el 75% de la nota máxima?",
+      "alternatives": [
+        "48%",
+        "47,17%",
+        "46%",
+        "42%",
+        "41,3%"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/tablas-de-distribucion-de-frecuencias-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - Tablas de distribución de frecuencias, problemas resueltos preuniversitaria (2022), Problema 5 de porcentaje de aprobados"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al clasificar las notas de 0 a 100 de un examen, se obtuvo una distribución simétrica con 5 intervalos de clase de igual ancho. Si el 10% de alumnos desaprobó con menos de 20, mientras que los 2/5 del total obtuvieron notas comprendidas entre 40 y 60, ¿qué porcentaje de alumnos obtuvieron una nota menor de 60?",
+      "alternatives": [
+        "65%",
+        "70%",
+        "72%",
+        "75%",
+        "80%"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/tablas-de-distribucion-de-frecuencias-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - Tablas de distribución de frecuencias, problemas resueltos preuniversitaria (2022), Problema 7 de distribución simétrica de notas"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Estadística Descriptiva: Distribución de Frecuencias",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una tabla de distribución de frecuencias se tomaron 5 intervalos de clase con ancho común. En el segundo intervalo [60; 80), había 8 datos. El 20% del total de los datos se encuentra en el tercer intervalo. Las frecuencias relativas del cuarto y quinto intervalo son iguales. Si 16 datos son mayores a 80 y se ha estudiado un total de 40 datos, ¿cuántos datos son menores a 120?",
+      "alternatives": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/tablas-de-distribucion-de-frecuencias-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - Tablas de distribución de frecuencias, problemas resueltos preuniversitaria (2022), Problema 8 de datos menores a 120"
+    }
+  ]
+}

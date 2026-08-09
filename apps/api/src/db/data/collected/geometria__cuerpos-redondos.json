@@ -1,0 +1,894 @@
+{
+  "entries": [
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Son cuerpos redondos:\nI) Cilindro\nII) Cono\nIII) Cubo\nIV) Esfera",
+      "alternatives": [
+        "I y II",
+        "I, II, IV",
+        "I, II, III, IV",
+        "I, IV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://www.guiasdeapoyo.net/guias/psu/TEST%2045-.SUPERFICIE%20DE%20CUERPOS%20REDONDOS..pdf",
+      "sourceName": "Test PSU Matemáticas - Cuerpos Redondos (Test 45), Pregunta 1"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La razón entre los volúmenes de un cilindro de radio basal r y altura h, un cono de radio r y altura h, y una esfera de radio r, es:",
+      "alternatives": [
+        "3h : h : 4r",
+        "3h : h : r",
+        "3 : 3h : 4",
+        "h : h : 4r"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "http://www.guiasdeapoyo.net/guias/psu/TEST%2045-.SUPERFICIE%20DE%20CUERPOS%20REDONDOS..pdf",
+      "sourceName": "Test PSU Matemáticas - Cuerpos Redondos (Test 45), Pregunta 2"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El radio de la base de un cono circular recto mide 6 m y su generatriz 10 m. Determina su área total (en m²).",
+      "alternatives": [
+        "224,08",
+        "301,44",
+        "303,85",
+        "22,6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://www.guiasdeapoyo.net/guias/psu/TEST%2045-.SUPERFICIE%20DE%20CUERPOS%20REDONDOS..pdf",
+      "sourceName": "Test PSU Matemáticas - Cuerpos Redondos (Test 45), Pregunta 3"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina el área total de un cono circular de 5 m de radio de la base y 12 m de generatriz (en m²).",
+      "alternatives": [
+        "21,9",
+        "28,9",
+        "236,9",
+        "218,7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "http://www.guiasdeapoyo.net/guias/psu/TEST%2045-.SUPERFICIE%20DE%20CUERPOS%20REDONDOS..pdf",
+      "sourceName": "Test PSU Matemáticas - Cuerpos Redondos (Test 45), Pregunta 4"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se puede determinar el volumen de un cilindro si se conoce que:\n(1) El área lateral del cilindro es 36π cm².\n(2) En el cilindro se puede inscribir una esfera de volumen 36π cm³.\n¿Cuál(es) de las afirmaciones permite(n) determinar el volumen del cilindro?",
+      "alternatives": [
+        "(1) por sí sola.",
+        "(2) por sí sola.",
+        "Ambas juntas, (1) y (2).",
+        "Cada una por sí sola, (1) ó (2)."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://www.guiasdeapoyo.net/guias/psu/TEST%2045-.SUPERFICIE%20DE%20CUERPOS%20REDONDOS..pdf",
+      "sourceName": "Test PSU Matemáticas - Cuerpos Redondos (Test 45), Pregunta 6"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se puede determinar el volumen de un cono recto, sabiendo que:\n(1) El área del círculo basal es 81π cm².\n(2) Se genera al hacer girar un triángulo rectángulo de hipotenusa 15 cm en torno a su cateto mayor.\n¿Cuál(es) de las afirmaciones permite(n) determinar el volumen del cono?",
+      "alternatives": [
+        "(1) por sí sola.",
+        "(2) por sí sola.",
+        "Ambas juntas, (1) y (2).",
+        "Cada una por sí sola, (1) ó (2)."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "http://www.guiasdeapoyo.net/guias/psu/TEST%2045-.SUPERFICIE%20DE%20CUERPOS%20REDONDOS..pdf",
+      "sourceName": "Test PSU Matemáticas - Cuerpos Redondos (Test 45), Pregunta 7"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un triángulo rectángulo de catetos 6 y 8 cm se hace girar en torno al cateto mayor. ¿Cuál es el volumen del cuerpo generado (en cm³)?",
+      "alternatives": [
+        "48π",
+        "96π",
+        "128π",
+        "144π"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://www.guiasdeapoyo.net/guias/psu/TEST%2045-.SUPERFICIE%20DE%20CUERPOS%20REDONDOS..pdf",
+      "sourceName": "Test PSU Matemáticas - Cuerpos Redondos (Test 45), Pregunta 8"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Determina el área lateral de un cono circular de 3 cm de radio de la base y 9 cm de generatriz (en cm²).",
+      "alternatives": [
+        "28,96",
+        "9,42",
+        "42,39",
+        "84,78"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://www.guiasdeapoyo.net/guias/psu/TEST%2045-.SUPERFICIE%20DE%20CUERPOS%20REDONDOS..pdf",
+      "sourceName": "Test PSU Matemáticas - Cuerpos Redondos (Test 45), Pregunta 9"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina el área total de un cilindro cuya base tiene 14 cm de diámetro y su generatriz mide 10 cm (en cm²).",
+      "alternatives": [
+        "307,72",
+        "527,52",
+        "219,72",
+        "219,8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "http://www.guiasdeapoyo.net/guias/psu/TEST%2045-.SUPERFICIE%20DE%20CUERPOS%20REDONDOS..pdf",
+      "sourceName": "Test PSU Matemáticas - Cuerpos Redondos (Test 45), Pregunta 10"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El área de la superficie lateral de un cilindro de revolución es igual al área de su base. Si el radio de la base mide 6 u, hallar la altura del cilindro.",
+      "alternatives": [
+        "1 u",
+        "2 u",
+        "3 u",
+        "4 u",
+        "0,5 u"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cilindro Ejercicios Resueltos (matematicasn.blogspot), Propuesto 1"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área de la superficie lateral de un cilindro equilátero es 36π u². Halle el volumen de dicho cilindro.",
+      "alternatives": [
+        "48π u³",
+        "52π u³",
+        "54π u³",
+        "56π u³",
+        "72π u³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cilindro Ejercicios Resueltos (matematicasn.blogspot), Propuesto 3"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la razón entre los volúmenes de un hexaedro regular (cubo) y el cilindro inscrito en él, cuyas bases se encuentran inscritas en caras opuestas del cubo.",
+      "alternatives": [
+        "4/π",
+        "π",
+        "π/3",
+        "6/π",
+        "9/π"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cilindro Ejercicios Resueltos (matematicasn.blogspot), Propuesto 4"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un paralelepípedo de aristas 6 m, 3 m y 6π m tiene el mismo volumen que un cilindro recto de radio de la base 3 m. Hallar la altura del cilindro.",
+      "alternatives": [
+        "8 m",
+        "10 m",
+        "12 m",
+        "14 m",
+        "9 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cilindro Ejercicios Resueltos (matematicasn.blogspot), Propuesto 5"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "AB es una generatriz de un cilindro recto y C es un punto de la generatriz diametralmente opuesta. Si el área del triángulo ABC mide 10 u², calcular la superficie lateral del cilindro.",
+      "alternatives": [
+        "40π u²",
+        "20π u²",
+        "60π u²",
+        "30π u²",
+        "50π u²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cilindro Ejercicios Resueltos (matematicasn.blogspot), Propuesto 6"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un prisma cuadrangular regular, se inscribe un cilindro de revolución cuya base está inscrita en la base del prisma. Calcule la razón entre el volumen del cilindro y el volumen del prisma.",
+      "alternatives": [
+        "π/8",
+        "π/2",
+        "π/3",
+        "π/4",
+        "π/6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cilindro Ejercicios Resueltos (matematicasn.blogspot), Propuesto 7"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un cilindro recto, el número que expresa el volumen es numéricamente igual al número que expresa el área total. Calcular la suma de las inversas del radio y de la generatriz.",
+      "alternatives": [
+        "0,8",
+        "0,6",
+        "0,5",
+        "1",
+        "1,2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cilindro-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cilindro Ejercicios Resueltos (matematicasn.blogspot), Propuesto 8"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La altura de un cono de revolución mide 12 m y el diámetro de su base mide 10 m. Encontrar el área de su superficie lateral (en unidades de π).",
+      "alternatives": [
+        "60π m²",
+        "64π m²",
+        "62π m²",
+        "65π m²",
+        "70π m²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cono Ejercicios Resueltos (matematicasn.blogspot), Propuesto 1"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cuerda trazada en la base de un cono circular recto de 4 m de altura mide 8 m, y la distancia de la cuerda al centro del círculo base es 2 m. ¿Cuánto mide la generatriz del cono?",
+      "alternatives": [
+        "4 m",
+        "6 m",
+        "8 m",
+        "10 m",
+        "9 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cono Ejercicios Resueltos (matematicasn.blogspot), Propuesto 2"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un triángulo rectángulo cuya hipotenusa mide 16 cm forma con el cateto menor un ángulo de 60°. ¿Cuál será el área total del cono de revolución que se genera al girar 360° alrededor del cateto mayor?",
+      "alternatives": [
+        "180π cm²",
+        "20π cm²",
+        "184π cm²",
+        "192π cm²",
+        "184π cm²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cono Ejercicios Resueltos (matematicasn.blogspot), Propuesto 3"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La generatriz de un cono recto mide 5 m y la superficie lateral desarrollada forma un sector circular de 216°. Calcular el volumen del cono en m³.",
+      "alternatives": [
+        "12π m³",
+        "16π m³",
+        "18π m³",
+        "20π m³",
+        "70π m³"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cono Ejercicios Resueltos (matematicasn.blogspot), Propuesto 4"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al desarrollar la superficie lateral de un cono de revolución, se obtiene un semicírculo. Hallar la medida del ángulo que forman dos generatrices diametralmente opuestas.",
+      "alternatives": [
+        "30°",
+        "45°",
+        "60°",
+        "90°",
+        "120°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cono Ejercicios Resueltos (matematicasn.blogspot), Propuesto 5"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El área de la superficie total de un cono es 200π m² y el producto de las longitudes de su generatriz y el radio mide 136π m². Calcular el volumen del cono.",
+      "alternatives": [
+        "154π m³",
+        "180π m³",
+        "230π m³",
+        "285π m³",
+        "320π m³"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cono Ejercicios Resueltos (matematicasn.blogspot), Propuesto 6"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un tronco de cono de altura 12 m tiene por base un círculo de radio R = 10 m. Si el volumen del tronco es 700π m³, hallar el volumen del cono original.",
+      "alternatives": [
+        "812π m³",
+        "800π m³",
+        "750π m³",
+        "815π m³",
+        "900π m³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cono Ejercicios Resueltos (matematicasn.blogspot), Propuesto 7"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un círculo de metal de área 64π cm² se corta por un diámetro en dos partes iguales. Con una mitad se forma un cono uniendo los radios extremos. El ángulo que forman las generatrices del cono con su base mide:",
+      "alternatives": [
+        "15°",
+        "30°",
+        "60°",
+        "45°",
+        "75°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cono Ejercicios Resueltos (matematicasn.blogspot), Propuesto 8"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se dan dos esferas tangentes exteriormente cuyos radios miden 1 dm y 3 dm. Calcular el volumen del cono recto que circunscribe a las dos esferas.",
+      "alternatives": [
+        "81 dm³",
+        "18π dm³",
+        "18 dm³",
+        "81π dm³"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cono Ejercicios Resueltos (matematicasn.blogspot), Propuesto 10"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un cono equilátero, la altura mide 3√3 u. Hallar su volumen.",
+      "alternatives": [
+        "3√3 π u³",
+        "6√3 π u³",
+        "9√3 π u³",
+        "12√3 π u³",
+        "18√3 π u³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cono Ejercicios Resueltos (matematicasn.blogspot), Propuesto 15"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se traza un plano paralelo a la base de un cono por el punto medio de su altura. Hallar la razón entre el volumen del cono total y el volumen del tronco de cono resultante.",
+      "alternatives": [
+        "8/3",
+        "8/5",
+        "9/7",
+        "8/7",
+        "7/6"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/cono-geometria-del-espacio-ejercicios.html",
+      "sourceName": "GeometríaPDF Blog - Cono Geometría del Espacio Ejercicios Resueltos, Pregunta 2"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si la generatriz de un cono circular y el diámetro de su base son iguales entre sí, la razón entre el área lateral del cono y la superficie de la esfera inscrita en el cono es:",
+      "alternatives": [
+        "5/4",
+        "4/3",
+        "3/2",
+        "6/5",
+        "5/3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/cono-geometria-del-espacio-ejercicios.html",
+      "sourceName": "GeometríaPDF Blog - Cono Geometría del Espacio Ejercicios Resueltos, Pregunta 3"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado un cono, se trazan dos planos paralelos a la base que determinan en una generatriz tres segmentos congruentes. El volumen de la porción central es igual a 7 m³. Calcular el volumen total del cono.",
+      "alternatives": [
+        "20 m³",
+        "27 m³",
+        "34 m³",
+        "41 m³",
+        "49 m³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/cono-geometria-del-espacio-ejercicios.html",
+      "sourceName": "GeometríaPDF Blog - Cono Geometría del Espacio Ejercicios Resueltos, Pregunta 5"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el área de la superficie de un hemisferio es 108π u², calcule el volumen de la esfera inscrita en dicho hemisferio.",
+      "alternatives": [
+        "18π u³",
+        "24π u³",
+        "36π u³",
+        "48π u³",
+        "60π u³"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/esfera-geometria-del-espacio-ejercicios.html",
+      "sourceName": "GeometríaPDF Blog - Esfera Geometría del Espacio Ejercicios Resueltos, Pregunta 1"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cono circular recto de altura 8 u y radio de la base 4 u está inscrito en una esfera. Calcule el área de la superficie esférica.",
+      "alternatives": [
+        "80π u²",
+        "100π u²",
+        "120π u²",
+        "90π u²",
+        "144π u²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/esfera-geometria-del-espacio-ejercicios.html",
+      "sourceName": "GeometríaPDF Blog - Esfera Geometría del Espacio Ejercicios Resueltos, Pregunta 3"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Hallar el radio de una esfera cuyo área de superficie es numéricamente igual a su volumen.",
+      "alternatives": [
+        "1 u",
+        "2 u",
+        "3 u",
+        "4 u",
+        "6 u"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Esfera Ejercicios Resueltos (matematicasn.blogspot), Propuesto 1"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una superficie esférica tiene área 144π u². Hallar la longitud de la circunferencia máxima.",
+      "alternatives": [
+        "18π u",
+        "16π u",
+        "15π u",
+        "12π u",
+        "20π u"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Esfera Ejercicios Resueltos (matematicasn.blogspot), Propuesto 2"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Hallar el área de la superficie de la esfera circunscrita a un cubo de arista 2 u.",
+      "alternatives": [
+        "8π u²",
+        "16π u²",
+        "32π u²",
+        "12π u²",
+        "64π u²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Esfera Ejercicios Resueltos (matematicasn.blogspot), Propuesto 3"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El volumen de una esfera es numéricamente igual a su área de superficie. Calcular el área del círculo máximo.",
+      "alternatives": [
+        "16π u²",
+        "32π u²",
+        "18π u²",
+        "25π u²",
+        "9π u²"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Esfera Ejercicios Resueltos (matematicasn.blogspot), Propuesto 4"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una esfera inscrita en un cilindro recto tiene área total 54π u². Calcular el volumen de la esfera.",
+      "alternatives": [
+        "12π u³",
+        "36π u³",
+        "72π u³",
+        "48π u³",
+        "52π u³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Esfera Ejercicios Resueltos (matematicasn.blogspot), Propuesto 7"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una superficie esférica tiene área 24π u². Dos planos paralelos perpendiculares al diámetro trisectan el radio de la esfera. Hallar el área de la zona esférica determinada por dichos planos.",
+      "alternatives": [
+        "3π u²",
+        "4π u²",
+        "6π u²",
+        "8π u²",
+        "12π u²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Esfera Ejercicios Resueltos (matematicasn.blogspot), Propuesto 12"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La razón entre la altura de un cono y el radio de la esfera circunscrita es 8/5. Hallar el ángulo que forman dos generatrices diametralmente opuestas.",
+      "alternatives": [
+        "45°",
+        "75°",
+        "53°",
+        "60°",
+        "37°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Esfera Ejercicios Resueltos (matematicasn.blogspot), Propuesto 16"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar el ángulo que forman la generatriz de un cono con su base, sabiendo que el área de la superficie de la esfera inscrita es igual al área de la base del cono.",
+      "alternatives": [
+        "53°",
+        "37°",
+        "45°",
+        "60°",
+        "75°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Esfera Ejercicios Resueltos (matematicasn.blogspot), Propuesto 20"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una esfera tiene radio 5 cm y es seccionada por un plano a 4 cm del centro. Calcular el volumen del sólido remanente (la esfera con la porción menor removida).",
+      "alternatives": [
+        "165π cm³",
+        "162π cm³",
+        "166π cm³",
+        "168π cm³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-esfera-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Esfera Ejercicios Resueltos (matematicasn.blogspot), Resuelto 6"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las áreas de las bases elípticas de un tronco de cono oblicuo son 32π dm² y 72π dm². Determinar el valor de la altura de dicho tronco, sabiendo que su volumen es 304π dm³.",
+      "alternatives": [
+        "12 dm",
+        "9 dm",
+        "10 dm",
+        "6 dm",
+        "8 dm"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/cono-ejercicios-de-geometria-del.html",
+      "sourceName": "GeometríaPDF Blog - Cono Ejercicios Propuestos, Pregunta 1"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las bases de un tronco de cono circular son círculos de radios 3 u y 6 u. Si la generatriz mide 6 u, ¿cuál es la longitud del radio de la esfera circunscrita al tronco de cono?",
+      "alternatives": [
+        "6 u",
+        "5 u",
+        "8 u",
+        "9 u",
+        "10 u"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/cono-ejercicios-de-geometria-del.html",
+      "sourceName": "GeometríaPDF Blog - Cono Ejercicios Propuestos, Pregunta 2"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el diámetro de un cilindro de revolución cuya generatriz mide 10 u y su volumen es igual a 40π u³.",
+      "alternatives": [
+        "3 u",
+        "2 u",
+        "6 u",
+        "4 u",
+        "8 u"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/cilindro-geometria-del-espacio_11.html",
+      "sourceName": "GeometríaPDF Blog - Cilindro Geometría del Espacio Ejercicios Resueltos, Pregunta 1"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un vaso cilíndrico de diámetro d y altura h está lleno de agua. Si se vierte el contenido en otro vaso cilíndrico de diámetro 2d, ¿hasta qué altura subirá el agua en el nuevo vaso?",
+      "alternatives": [
+        "h/4",
+        "h/2",
+        "h/3",
+        "3h/8",
+        "h/8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/cilindro-geometria-del-espacio_11.html",
+      "sourceName": "GeometríaPDF Blog - Cilindro Geometría del Espacio Ejercicios Resueltos, Pregunta 4"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El área del huso esférico de radio 6 cm y ángulo α es 12π cm². Calcule el volumen de la cuña esférica del mismo radio y ángulo α.",
+      "alternatives": [
+        "36π cm³",
+        "32π cm³",
+        "30π cm³",
+        "28π cm³",
+        "24π cm³"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-del-espacio-de-pre-universidad.html",
+      "sourceName": "Geometría del Espacio Preuniversitaria (matematicasn.blogspot) - Pregunta 3 (Esfera)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Jando está cortando una porción de cartulina con forma de semicírculo para construir un gorro en forma de cono circular recto. Si la capacidad del gorro es 243√3 π cm³, ¿cuál es el área de la porción de cartulina que está cortando?",
+      "alternatives": [
+        "170π cm²",
+        "154π cm²",
+        "185π cm²",
+        "162π cm²",
+        "120π cm²"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-del-espacio-de-pre-universidad.html",
+      "sourceName": "Geometría del Espacio Preuniversitaria (matematicasn.blogspot) - Pregunta 11 (Cono)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un tronco de cono de revolución tiene como radios de sus bases 1 u y 2 u, y las generatrices forman con la base mayor ángulos de 60°. Calcule el volumen del tronco de cono.",
+      "alternatives": [
+        "2√3 π u³",
+        "7√3 π/3 u³",
+        "7√2 π u³",
+        "6√3 π u³",
+        "4√3 π/3 u³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-del-espacio-de-pre-universidad.html",
+      "sourceName": "Geometría del Espacio Preuniversitaria (matematicasn.blogspot) - Pregunta 12 (Cono)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para una fiesta infantil, se quieren construir 30 gorros de forma cónica con dimensiones: radio 8 cm y altura 6 cm. Hallar la cantidad de cartón que se empleará.",
+      "alternatives": [
+        "2200π cm²",
+        "2400π cm²",
+        "2600π cm²",
+        "2800π cm²",
+        "2500π cm²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/geometria-del-espacio-de-pre-universidad.html",
+      "sourceName": "Geometría del Espacio Preuniversitaria (matematicasn.blogspot) - Pregunta 15 (Cono)"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se tiene un cono circunscrito a dos esferas cuyos radios miden 1 u y 3 u (tangentes entre sí y a la superficie lateral del cono, la mayor tangente a la base). ¿Cuál es el volumen del cono?",
+      "alternatives": [
+        "27π u³",
+        "81π u³",
+        "36π u³",
+        "45π u³",
+        "90π u³"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://geometriapdf.blogspot.com/2018/07/cono-geometria-del-espacio-ejercicios.html",
+      "sourceName": "GeometríaPDF Blog - Cono Geometría del Espacio Ejercicios Resueltos, Pregunta 1"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un cilindro es inscrito en un cono circular recto. El área total del cilindro es igual al área lateral del cono, cuya generatriz mide 8 μ. Calcular la distancia del vértice del cono a la base superior del cilindro.",
+      "alternatives": [
+        "2 μ",
+        "4 μ",
+        "3 μ",
+        "5 μ",
+        "3,5 μ"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/el-cono-ejercicios-resueltos-pdf.html",
+      "sourceName": "Geometría del Espacio - Cono Ejercicios Resueltos (matematicasn.blogspot), Propuesto 14"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las bases de un tronco de cono circular son círculos de radios 3 m y 6 m. Si la generatriz mide 6 m, hallar el radio de la esfera circunscrita al tronco de cono.",
+      "alternatives": [
+        "3 m",
+        "4 m",
+        "5 m",
+        "6 m",
+        "8 m"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/01/la-esfera-ejercicios-resueltos-de.html",
+      "sourceName": "MatemáticaJ Blog - La Esfera Problemas Resueltos Preuniversitaria, Problema 5"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una zona esférica tiene área igual a la de una cuña esférica (ambas en la misma esfera de radio R) y la altura de la zona es R/4. Calcular el ángulo de la cuña esférica.",
+      "alternatives": [
+        "30°",
+        "37°",
+        "45°",
+        "53°",
+        "60°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/01/la-esfera-ejercicios-resueltos-de.html",
+      "sourceName": "MatemáticaJ Blog - La Esfera Problemas Resueltos Preuniversitaria, Problema 6"
+    },
+    {
+      "courseName": "Geometría",
+      "topicName": "Cuerpos Redondos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una esfera tiene un área de superficie de 60 m². Un plano secante se traza a una distancia del centro igual a la mitad del radio. Calcular el área del casquete esférico menor.",
+      "alternatives": [
+        "12 m²",
+        "15 m²",
+        "10 m²",
+        "7,5 m²",
+        "20 m²"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2016/01/la-esfera-ejercicios-resueltos-de.html",
+      "sourceName": "MatemáticaJ Blog - La Esfera Problemas Resueltos Preuniversitaria, Problema 7"
+    }
+  ]
+}

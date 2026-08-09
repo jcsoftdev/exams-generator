@@ -1,0 +1,1396 @@
+{
+  "entries": [
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número que sigue en la siguiente sucesión: 491; 521; 553; 587; ...",
+      "alternatives": [
+        "623",
+        "630",
+        "640",
+        "602",
+        "660"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/psicotecnico-preguntas-desarrolladas.html",
+      "sourceName": "Psicotécnico preguntas desarrolladas (matematicasn) - Pregunta 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determinar el valor de 'x' en: 4; 4; 6; 18; 22; 110; 116; x",
+      "alternatives": [
+        "812",
+        "820",
+        "905",
+        "870",
+        "825"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/psicotecnico-preguntas-desarrolladas.html",
+      "sourceName": "Psicotécnico preguntas desarrolladas (matematicasn) - Pregunta 11"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué número sigue en la sucesión? 5; 6; 7; 9; 15; ...",
+      "alternatives": [
+        "22",
+        "36",
+        "39",
+        "25",
+        "28"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/psicotecnico-preguntas-desarrolladas.html",
+      "sourceName": "Psicotécnico preguntas desarrolladas (matematicasn) - Pregunta 13"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina la letra que continúa en la sucesión: O; M; K; H; F; ...",
+      "alternatives": [
+        "C",
+        "B",
+        "D",
+        "G",
+        "A"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/psicotecnico-preguntas-desarrolladas.html",
+      "sourceName": "Psicotécnico preguntas desarrolladas (matematicasn) - Pregunta 15"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la incógnita: 23; 32; 45; 54; 67; 76; 89; ?",
+      "alternatives": [
+        "95",
+        "96",
+        "98",
+        "85",
+        "101"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/psicotecnico-preguntas-desarrolladas.html",
+      "sourceName": "Psicotécnico preguntas desarrolladas (matematicasn) - Pregunta 16"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar el número que sigue en: 3; 4; 8; 17; ...",
+      "alternatives": [
+        "30",
+        "33",
+        "36",
+        "39",
+        "42"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/psicotecnico-preguntas-desarrolladas.html",
+      "sourceName": "Psicotécnico preguntas desarrolladas (matematicasn) - Pregunta 18"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar el número que sigue en: 1; 1; 2; 4; 7; 11; ...",
+      "alternatives": [
+        "16",
+        "18",
+        "20",
+        "12",
+        "24"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/psicotecnico-preguntas-desarrolladas.html",
+      "sourceName": "Psicotécnico preguntas desarrolladas (matematicasn) - Pregunta 19"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué número continúa? 3; 7; 14; 24; ...",
+      "alternatives": [
+        "38",
+        "16",
+        "34",
+        "37",
+        "26"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/psicotecnico-preguntas-desarrolladas.html",
+      "sourceName": "Psicotécnico preguntas desarrolladas (matematicasn) - Pregunta 20"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Halla la letra que continúa: C; F; I; L; ...",
+      "alternatives": [
+        "G",
+        "R",
+        "S",
+        "T",
+        "Ñ"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/psicotecnico-preguntas-desarrolladas.html",
+      "sourceName": "Psicotécnico preguntas desarrolladas (matematicasn) - Pregunta 22"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En la siguiente sucesión establezca el elemento que debe ir en la posición X: 2; 6; 12; X; 30; 42; 56",
+      "alternatives": [
+        "18",
+        "20",
+        "22",
+        "24",
+        "26"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2013/04/sucesiones-numericas-resueltas.html",
+      "sourceName": "Blog del Profe Alex - Sucesiones Numéricas Ejercicios Psicotécnico - Ejercicio 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el número que continúa en la siguiente sucesión: 114; 57; 54; 27; 24; 12; ...",
+      "alternatives": [
+        "8",
+        "7",
+        "9",
+        "10"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2013/04/sucesiones-numericas-resueltas.html",
+      "sourceName": "Blog del Profe Alex - Sucesiones Numéricas Ejercicios Psicotécnico - Ejercicio 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué número sigue en la secuencia? 2; 3; 4; 6; 9; 14; ...",
+      "alternatives": [
+        "23",
+        "24",
+        "20",
+        "22",
+        "21"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2013/04/sucesiones-numericas-resueltas.html",
+      "sourceName": "Blog del Profe Alex - Sucesiones Numéricas Ejercicios Psicotécnico - Ejercicio 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el término que continúa: 2; 5; 11; 23; ...",
+      "alternatives": [
+        "28",
+        "23",
+        "34",
+        "47",
+        "54"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/10/series-numericas-razonamiento.html",
+      "sourceName": "Blog del Profe Alex - Sucesiones Numéricas Ejercicios Resueltos Psicotécnico - Ejercicio 11"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar el término que continúa: 1; 2; 9; 64; ...",
+      "alternatives": [
+        "3125",
+        "512",
+        "108",
+        "370",
+        "625"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/10/series-numericas-razonamiento.html",
+      "sourceName": "Blog del Profe Alex - Sucesiones Numéricas Ejercicios Resueltos Psicotécnico - Ejercicio 12"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar el término que continúa: 5; 20; 60; 120; ...",
+      "alternatives": [
+        "150",
+        "120",
+        "500",
+        "200",
+        "250"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/10/series-numericas-razonamiento.html",
+      "sourceName": "Blog del Profe Alex - Sucesiones Numéricas Ejercicios Resueltos Psicotécnico - Ejercicio 13"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número que sigue en la sucesión: 12; 13; 15; 16; 18; ...",
+      "alternatives": [
+        "23",
+        "21",
+        "20",
+        "19",
+        "16"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/psicotecnico-numerico-literales-graficos.html",
+      "sourceName": "Psicotécnico Prueba Resuelta 2026 (matematicasn) - Pregunta 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número que sigue en la sucesión: 46; 58; 72; 88; ...",
+      "alternatives": [
+        "90",
+        "100",
+        "110",
+        "106",
+        "112"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/psicotecnico-numerico-literales-graficos.html",
+      "sourceName": "Psicotécnico Prueba Resuelta 2026 (matematicasn) - Pregunta 8"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Halla la letra que continúa en la sucesión alfabética: C; E; G; I; K; ...",
+      "alternatives": [
+        "R",
+        "B",
+        "H",
+        "M",
+        "N"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/psicotecnico-numerico-literales-graficos.html",
+      "sourceName": "Psicotécnico Prueba Resuelta 2026 (matematicasn) - Pregunta 10"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la sucesión 2; 7; 14; 23; 34; ... halle el producto de los dígitos del número que sigue.",
+      "alternatives": [
+        "36",
+        "28",
+        "12",
+        "20",
+        "30"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-numericas-literales-graficas.html",
+      "sourceName": "Secuencias Numéricas Literales Gráficas (matematicasn) - Pregunta 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De acuerdo a la sucesión alfanumérica F2; X; D8; C16; B32; A64, marque la opción que reemplace a X.",
+      "alternatives": [
+        "F4",
+        "E4",
+        "E6",
+        "F6",
+        "F5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-numericas-literales-graficas.html",
+      "sourceName": "Secuencias Numéricas Literales Gráficas (matematicasn) - Pregunta 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique el término que falta en la sucesión alfanumérica: 19B; 33E; 51I; _____; 99S",
+      "alternatives": [
+        "73M",
+        "73N",
+        "78L",
+        "81N",
+        "75M"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-numericas-literales-graficas.html",
+      "sourceName": "Secuencias Numéricas Literales Gráficas (matematicasn) - Pregunta 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle el término que continúa en la sucesión alfanumérica: 2B; 3C; 8E; 63I; _______",
+      "alternatives": [
+        "3969 O",
+        "3970 P",
+        "3968 P",
+        "3968 Q",
+        "3969 Q"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-numericas-literales-graficas.html",
+      "sourceName": "Secuencias Numéricas Literales Gráficas (matematicasn) - Pregunta 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar la letra que continúa en la siguiente sucesión: A; A; B; C; E; H; ...",
+      "alternatives": [
+        "M",
+        "P",
+        "O",
+        "Ñ",
+        "G"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Ejercicio 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar qué letra continúa en la siguiente serie: B; Q; P; C; S; R; D; U; ...",
+      "alternatives": [
+        "O",
+        "P",
+        "T",
+        "R",
+        "M"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Ejercicio 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar la letra que sigue en la serie: W; U; R; Ñ; ...",
+      "alternatives": [
+        "L",
+        "R",
+        "I",
+        "J",
+        "O"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Ejercicio 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué combinación de letras continúa: AB; BD; DG; GK; ...?",
+      "alternatives": [
+        "KO",
+        "PQ",
+        "RS",
+        "ST",
+        "PO"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Ejercicio 6"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar la letra que continúa en la secuencia: P; N; K; I; F; D; ...",
+      "alternatives": [
+        "C",
+        "B",
+        "A",
+        "D",
+        "E"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Ejercicio 7"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Qué letras completan la serie? HBC; LFG; PJK; ...; XRS",
+      "alternatives": [
+        "SLM",
+        "WNM",
+        "VON",
+        "UMO",
+        "TNO"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Ejercicio 8"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar el término que continúa la serie: BO; DA; FE; HI; ...",
+      "alternatives": [
+        "JE",
+        "JO",
+        "JU",
+        "MO",
+        "LE"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Ejercicio 10"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señala la letra que continúa: B; C; E; H; ...",
+      "alternatives": [
+        "L",
+        "I",
+        "H",
+        "K",
+        "N"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Práctica 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señala el término que continúa: C; D; G; M; ...",
+      "alternatives": [
+        "N",
+        "M",
+        "Q",
+        "T",
+        "O"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Práctica 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señala la letra que continúa: A; B; E; J; P; ...",
+      "alternatives": [
+        "X",
+        "W",
+        "Z",
+        "F",
+        "Y"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Práctica 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué letra continúa? E; G; I; K; M; ...",
+      "alternatives": [
+        "Ñ",
+        "P",
+        "Q",
+        "N",
+        "R"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Práctica 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué letra sigue? D; R; M; F; S; ...",
+      "alternatives": [
+        "A",
+        "L",
+        "N",
+        "V",
+        "Z"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Práctica 7"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala las letras que continúan en: C; D; F; I; ...; ...",
+      "alternatives": [
+        "N; P",
+        "Ñ; O",
+        "M; Q",
+        "C; D",
+        "M; N"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Práctica 8"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala la letra que continúa: A; E; J; O; ...",
+      "alternatives": [
+        "O",
+        "V",
+        "Z",
+        "S",
+        "Y"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Práctica 11"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indica la letra que sigue en cada caso: a; c; f; j; ñ; ...",
+      "alternatives": [
+        "t",
+        "u",
+        "z",
+        "a",
+        "b"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Práctica 15"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indica la letra que continúa: b; e; h; k; n; ...",
+      "alternatives": [
+        "p",
+        "o",
+        "m",
+        "q",
+        "y"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Práctica 18"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Establezca las dos letras que continúan en la serie: B; A; F; C; J; E; ...; ...",
+      "alternatives": [
+        "F - G",
+        "G - N",
+        "M - F",
+        "N - G",
+        "N - H"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/09/series-alfabeticas-ejercicios-resueltos.html",
+      "sourceName": "Blog del Profe Alex - Series Alfabéticas Ejercicios Resueltos Psicotécnico - Ejercicio 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Establezca el elemento que continúa la sucesión (considere el alfabeto inglés): AFI; EJM; INQ; ...",
+      "alternatives": [
+        "OQT",
+        "OTW",
+        "ORS",
+        "UZA",
+        "UYC"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/09/series-alfabeticas-ejercicios-resueltos.html",
+      "sourceName": "Blog del Profe Alex - Series Alfabéticas Ejercicios Resueltos Psicotécnico - Ejercicio 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la letra que continúa en la sucesión: B; C; E; G; K; M; P; ...",
+      "alternatives": [
+        "Q",
+        "R",
+        "S",
+        "V",
+        "W"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/09/series-alfabeticas-ejercicios-resueltos.html",
+      "sourceName": "Blog del Profe Alex - Series Alfabéticas Ejercicios Resueltos Psicotécnico - Ejercicio 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué letra sigue en la sucesión? A; E; I; M; P; ...",
+      "alternatives": [
+        "T",
+        "S",
+        "U",
+        "R",
+        "P"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/09/series-alfabeticas-ejercicios-resueltos.html",
+      "sourceName": "Blog del Profe Alex - Series Alfabéticas Ejercicios Resueltos Psicotécnico - Ejercicio 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Considerando la letra Ñ, ¿qué grupo de letras continúa?: A; AC; ACE; ACEH; ACEHL; ...",
+      "alternatives": [
+        "ACEHLO",
+        "ACEHLP",
+        "ACEHLQ",
+        "ACEHLR",
+        "ACEHLS"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/05/suceciones-alfanumericas-10-problemas.html",
+      "sourceName": "Blog del Profe Alex - Sucesiones Alfanuméricas 10 Problemas Resueltos - Ejercicio 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Complete la siguiente sucesión: AZBY; CXDW; EVFU; ...",
+      "alternatives": [
+        "GSHR",
+        "GTHS",
+        "GSHT",
+        "HSIQ",
+        "HTIS"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/secuencias-literales-y-alfanumericas.html",
+      "sourceName": "Sucesiones Literales Resueltas (matematicasn) - Ejercicio 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla los términos que continúan: K; -8; N; -1; O; 9; R; 24; T; 46; ...",
+      "alternatives": [
+        "W; 80",
+        "W; 77",
+        "W; 78",
+        "V; 78",
+        "V; 77"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Ejercicio 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el término que continúa? A/B; C/D; F/H; J/N; ...",
+      "alternatives": [
+        "X/Y",
+        "D/T",
+        "U/Ñ",
+        "E/H",
+        "J/L"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/secuencias-literales-ejercicios.html",
+      "sourceName": "Secuencias Literales Ejercicios Resueltos (matematicasn) - Práctica 17"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué letra continúa? U; T; C; S; N; ...",
+      "alternatives": [
+        "T",
+        "O",
+        "D",
+        "C",
+        "Q"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/psicotecnico-secuencias-literales.html",
+      "sourceName": "Psicotécnico Secuencias Literales Ejercicios Resueltos PDF (razonamientopdf) - Ejercicio 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué letra continúa en: C; E; H; L; ...",
+      "alternatives": [
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/psicotecnico-secuencias-literales.html",
+      "sourceName": "Psicotécnico Secuencias Literales Ejercicios Resueltos PDF (razonamientopdf) - Ejercicio 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué letra sigue? A; B; D; H; ...",
+      "alternatives": [
+        "P",
+        "R",
+        "Ñ",
+        "O",
+        "Q"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-psicotecnico-problemas-con.html",
+      "sourceName": "Sucesiones Psicotécnico Problemas con Claves (matematicasn) - Pregunta 12"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcular la letra que continúa en la siguiente secuencia: A; A; B; C; E; H; ...",
+      "alternatives": [
+        "K",
+        "M",
+        "O",
+        "P",
+        "X"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-psicotecnico-problemas-con.html",
+      "sourceName": "Sucesiones Psicotécnico Problemas con Claves (matematicasn) - Pregunta 30"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la suma de los 3 términos siguientes en la sucesión: 5; 7; 10; 15; 22; ...",
+      "alternatives": [
+        "140",
+        "142",
+        "137",
+        "139",
+        "143"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-numericas-ejercicios.html",
+      "sourceName": "Sucesiones Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En la sucesión 30; 32; 27; 16; 0; ... hallar el segundo término negativo.",
+      "alternatives": [
+        "-20",
+        "-16",
+        "-43",
+        "-68",
+        "-7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-numericas-ejercicios.html",
+      "sourceName": "Sucesiones Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar en la siguiente sucesión el primer término mayor que 100: 0; 4; 9; 17; 31; 55; ...",
+      "alternatives": [
+        "152",
+        "118",
+        "154",
+        "112",
+        "123"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-numericas-ejercicios.html",
+      "sourceName": "Sucesiones Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado: 3; 12; 48; x. ¿Cuál es el valor de x?",
+      "alternatives": [
+        "192",
+        "244",
+        "144",
+        "84",
+        "68"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/01/psicotecnico-grafico-y-numerico.html",
+      "sourceName": "Psicotécnico Gráfico y Numérico Ejercicios Resueltos (razonamientopdf) - Pregunta 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine x en la analogía numérica: 36 (14) 22; 18 (x) 7",
+      "alternatives": [
+        "5",
+        "11",
+        "12",
+        "4",
+        "15"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2013/10/analogias-numericas-ejercicios.html",
+      "sourceName": "Blog del Profe Alex - Analogías Numéricas Ejercicios Resueltos Psicotécnico - Ejercicio 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determine n en la analogía numérica: 27 (6) 9; 64 (12) 64; 8 (n) 100; 125 (17) 144",
+      "alternatives": [
+        "11",
+        "13",
+        "12",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2013/10/analogias-numericas-ejercicios.html",
+      "sourceName": "Blog del Profe Alex - Analogías Numéricas Ejercicios Resueltos Psicotécnico - Ejercicio 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar x en la analogía numérica: 60 (10) 30 | 180 (30) 90 | 12 (x) 3",
+      "alternatives": [
+        "0",
+        "5",
+        "3",
+        "4",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar x en la analogía numérica: 2 (25) 3 | 7 (81) 2 | 5 (x) 3",
+      "alternatives": [
+        "64",
+        "61",
+        "70",
+        "36",
+        "69"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar x en la analogía numérica: 21 (9) 42 | 102 (8) 302 | 203 (x) 10113",
+      "alternatives": [
+        "17",
+        "11",
+        "21",
+        "15",
+        "18"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar x en la analogía numérica: 10 (29) 18 | 15 (36) 12 | 13 (x) 4",
+      "alternatives": [
+        "28",
+        "42",
+        "150",
+        "36",
+        "31"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar x en la analogía numérica: 7 (42) 3 | 6 (24) 2 | 9 (x) 3",
+      "alternatives": [
+        "54",
+        "72",
+        "96",
+        "36",
+        "12"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 6"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar x en la analogía numérica: 5 (16) 2 | 2 (22) 6 | 3 (x) 4",
+      "alternatives": [
+        "16",
+        "18",
+        "12",
+        "20",
+        "10"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 7"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar x en la analogía numérica: 32 (17) 8 | 43 (34) 15 | 18 (65) x",
+      "alternatives": [
+        "23",
+        "16",
+        "31",
+        "21",
+        "14"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 8"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar x en la analogía numérica: 13 (95) 46 | 22 (35) 31 | 43 (x) 16",
+      "alternatives": [
+        "37",
+        "76",
+        "95",
+        "72",
+        "78"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 9"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar x en la analogía numérica: 18 (7) 24 | 45 (8) 27 | 33 (x) 88",
+      "alternatives": [
+        "11",
+        "17",
+        "21",
+        "14",
+        "18"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 10"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar x en la analogía numérica: 2034 (36) 12 | 50031 (35) 20 | 6022 (x) 18",
+      "alternatives": [
+        "36",
+        "42",
+        "82",
+        "23",
+        "52"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 11"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar m en la analogía numérica: 48 (43) 14 | 75 (25) 23 | 94 (m) 51",
+      "alternatives": [
+        "45",
+        "50",
+        "82",
+        "43",
+        "64"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 12"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar x en la analogía numérica: 23 (13) 16 | 31 (14) 11 | 11 (x) 16",
+      "alternatives": [
+        "5",
+        "7",
+        "9",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 13"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar x en la analogía numérica: 3 (4) 3 | 12 (9) 5 | 36 (x) 1",
+      "alternatives": [
+        "11",
+        "13",
+        "20",
+        "12",
+        "19"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 14"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar x en la analogía numérica: 11 (24) 4 | 8 (21) 10 | 15 (x) 2",
+      "alternatives": [
+        "30",
+        "36",
+        "31",
+        "27",
+        "24"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 15"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar x en la analogía numérica: 5 (100) 2 | 4 (144) 3 | 2 (x) 10",
+      "alternatives": [
+        "43",
+        "300",
+        "5",
+        "13",
+        "400"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 16"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar x en la analogía numérica: 10 (11) 12 | 18 (14) 10 | 13 ( ) 1",
+      "alternatives": [
+        "7",
+        "3",
+        "5",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 18"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar x en la analogía numérica: 7 (23) 3 | 8 (18) 2 | 4 ( ) 5",
+      "alternatives": [
+        "20",
+        "23",
+        "22",
+        "21",
+        "24"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 19"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar x en la analogía numérica: 14 (33) 8 | 10 (9) 8 | 18 ( ) 16",
+      "alternatives": [
+        "17",
+        "44",
+        "37",
+        "21",
+        "23"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 20"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar x en la analogía numérica: 4 (6) 4 | 10 (13) 6 | 31 (x) 10",
+      "alternatives": [
+        "81",
+        "36",
+        "23",
+        "14",
+        "32"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 21"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar x en la analogía numérica: 6 (35) 16 | 10 (29) 12 | 8 ( ) 18",
+      "alternatives": [
+        "39",
+        "40",
+        "24",
+        "43",
+        "53"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 22"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar x en la analogía numérica: 7 (24) 5 | 9 (60) 2 | 13 (x) 3",
+      "alternatives": [
+        "172",
+        "160",
+        "153",
+        "93",
+        "100"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 23"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar x en la analogía numérica: 23 (40) 44 | 42 (54) 36 | 37 (x) 21 | 71 (88) 65",
+      "alternatives": [
+        "24",
+        "27",
+        "30",
+        "42",
+        "72"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 24"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar x en la analogía numérica: 7 (5) 8 | 5 (9) 6 | 9 (9) 2 | 5 ( ) 5",
+      "alternatives": [
+        "10",
+        "7",
+        "11",
+        "9",
+        "12"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/analogias-numericas-ejercicios.html",
+      "sourceName": "Analogías Numéricas Ejercicios Resueltos (matematicasn) - Pregunta 25"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué número sigue? 4; 2; 2; 4; ...",
+      "alternatives": [
+        "1",
+        "4",
+        "2",
+        "16",
+        "0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-psicotecnico-problemas-con.html",
+      "sourceName": "Sucesiones Psicotécnico Problemas con Claves (matematicasn) - Pregunta 16"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcular: 1; 6; 30; 168; ...",
+      "alternatives": [
+        "460",
+        "630",
+        "810",
+        "990",
+        "1325"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-psicotecnico-problemas-con.html",
+      "sourceName": "Sucesiones Psicotécnico Problemas con Claves (matematicasn) - Pregunta 26"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Psicotécnico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Qué número continúa? -1; 0; 0; 2; 9; ...",
+      "alternatives": [
+        "16",
+        "21",
+        "22",
+        "25",
+        "24"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/sucesiones-psicotecnico-problemas-con.html",
+      "sourceName": "Sucesiones Psicotécnico Problemas con Claves (matematicasn) - Pregunta 39"
+    }
+  ]
+}

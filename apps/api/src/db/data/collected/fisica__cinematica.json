@@ -1,0 +1,136 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un móvil tiene una rapidez de 12 m/s y se desplaza durante 5 s. ¿Qué distancia logra recorrer?",
+      "alternatives": ["50 m", "40 m", "70 m", "60 m", "80 m"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/movimiento-rectilineo-uniforme-mru.html",
+      "sourceName": "Matematicasn - MRU ejercicios resueltos (Problema 1, nivel básico)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si un móvil recorre 24 m en 4 s, ¿cuál sería su rapidez?",
+      "alternatives": ["8 m/s", "7 m/s", "6 m/s", "9 m/s", "5 m/s"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/movimiento-rectilineo-uniforme-mru.html",
+      "sourceName": "Matematicasn - MRU ejercicios resueltos (Problema 4, nivel básico)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un móvil se desplaza a razón de 18 km/h durante 4 minutos. ¿Qué distancia logra recorrer este móvil?",
+      "alternatives": ["1000 m", "1100 m", "1400 m", "1200 m", "1600 m"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/movimiento-rectilineo-uniforme-mru.html",
+      "sourceName": "Matematicasn - MRU ejercicios resueltos (Práctica Nivel I, Pregunta 1)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si un tren se mueve a razón de 90 km/h, ¿en cuánto tiempo logrará recorrer 200 m?",
+      "alternatives": ["12 s", "10 s", "8 s", "6 s", "4 s"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/movimiento-rectilineo-uniforme-mru.html",
+      "sourceName": "Matematicasn - MRU ejercicios resueltos (Práctica Nivel I, Pregunta 3)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Muchos accidentes suceden en las calzadas porque el chofer no consigue frenar su vehículo antes de chocar con el que está frente al suyo. Analizando la información proporcionada por una revista especializada, se sabe que un automóvil consigue disminuir su velocidad, en promedio, 5,0 m/s en cada segundo. Entonces, si la velocidad inicial de un vehículo es de 90,0 km/h, ¿cuál es la distancia necesaria para que el vehículo consiga detenerse sin colisionar con otro vehículo?",
+      "alternatives": ["25,0 m", "31,5 m", "45,0 m", "62,5 m", "42,5 m"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-fisica-problemas-resueltos.html",
+      "sourceName": "Matematicasn - Simulacro Física Admisión San Marcos (Pregunta 2)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El legendario tren macho es el ferrocarril que recorre una distancia ferroviaria aproximada de 128 km. Si este tren realiza el trayecto completo de Huancayo a Huancavelica en dos partes: 5 horas durante el día y 4,5 horas en la noche, ¿cuál es la rapidez media del tren en dicho trayecto?",
+      "alternatives": ["13,5 km/h", "20,6 km/h", "25,6 km/h", "14,0 km/h", "11,5 km/h"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-fisica-problemas-resueltos.html",
+      "sourceName": "Matematicasn - Simulacro Física Admisión San Marcos (Pregunta 19)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un cuerpo se lanza en forma vertical hacia arriba con una rapidez de 800 m/s. Calcula el tiempo que demora en subir. (g = 10 m/s²)",
+      "alternatives": ["12 s", "16 s", "10 s", "80 s", "9 s"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/movimiento-de-caida-libre-mvcl.html",
+      "sourceName": "Matematicasn - Caída libre ejercicios resueltos (Problema 1)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un cuerpo es lanzado verticalmente hacia arriba con una rapidez de 30 m/s. Calcula el tiempo de subida. (g = 10 m/s²)",
+      "alternatives": ["2 s", "4 s", "5 s", "3 s", "6 s"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/movimiento-de-caida-libre-mvcl.html",
+      "sourceName": "Matematicasn - Caída libre ejercicios resueltos (Problema 2)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una piedra se lanza desde el piso con una rapidez de 45 m/s. Determina el tiempo que demora en regresar a tierra. (g = 10 m/s²)",
+      "alternatives": ["4 s", "9 s", "8 s", "4,5 s", "7 s"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/movimiento-de-caida-libre-mvcl.html",
+      "sourceName": "Matematicasn - Caída libre ejercicios resueltos (Problema 3)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo alcanza una altura máxima de 320 m. Determina con qué rapidez fue lanzado el cuerpo desde tierra. (g = 10 m/s²)",
+      "alternatives": ["60 m/s", "80 m/s", "90 m/s", "40 m/s", "70 m/s"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/movimiento-de-caida-libre-mvcl.html",
+      "sourceName": "Matematicasn - Caída libre ejercicios resueltos (Problema 4)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se suelta una piedra desde una altura de 320 m. Si g = 10 m/s², la distancia que recorre en el último segundo es:",
+      "alternatives": ["77 m", "79 m", "73 m", "75 m", "71 m"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/movimiento-de-caida-libre-mvcl.html",
+      "sourceName": "Matematicasn - Caída libre ejercicios resueltos (Problema 5)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Cinemática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En el MRUV (movimiento rectilíneo uniformemente variado), la magnitud que permanece constante es:",
+      "alternatives": ["Aceleración", "Velocidad", "Fuerza", "Distancia"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.goconqr.com/en/quiz/3443552/test-sobre-cinematica-mru-mruv",
+      "sourceName": "GoConqr - Test sobre cinemática MRU MRUV (Pregunta 1)"
+    }
+  ]
+}

@@ -1,0 +1,650 @@
+{
+  "entries": [
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcule: $E = i^1 + i^2 + i^3 + i^4 + dots + i^(2009)$",
+      "alternatives": [
+        "$1$",
+        "$-1$",
+        "$i$",
+        "$-i$",
+        "$0$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos, Ejercicio 01"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Dado $Z = (1 + i)^2 + i^6 - i^(32)$, halle $\"Re\"(Z) + \"Im\"(Z)$.",
+      "alternatives": [
+        "$2i$",
+        "$1$",
+        "$i$",
+        "$3i$",
+        "$0$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos, Ejercicio 02"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule: $G = (1 + i)^8 + (1 - i)^8$",
+      "alternatives": [
+        "$32$",
+        "$-i$",
+        "$i$",
+        "$16$",
+        "$0$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos, Ejercicio 03"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si $a + b i = (1 + i)^4 + (1 - i)^3$, calcule $a + b$.",
+      "alternatives": [
+        "$8$",
+        "$16$",
+        "$32$",
+        "$-8$",
+        "$0$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos, Ejercicio 04"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule: $Z = lr(frac(1+i, 1-i))^(13) dot lr(frac(1-i, 1+i))^(21) dot lr(frac(1-i, 1+i))^(2008)$",
+      "alternatives": [
+        "$1$",
+        "$-1$",
+        "$i$",
+        "$-i$",
+        "$0$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos, Ejercicio 05"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el módulo de: $Z = frac(2(2 + i), 2 - i)$",
+      "alternatives": [
+        "$1$",
+        "$2$",
+        "$sqrt(5)$",
+        "$0$",
+        "$4$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos, Ejercicio 12"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el módulo de: $Z = frac((1 + 2i)(3 + 4i), (2 - i)(5i))$",
+      "alternatives": [
+        "$1$",
+        "$2$",
+        "$5$",
+        "$sqrt(5)$",
+        "$0$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos (módulo de cociente)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule $n$ real si $Z = frac(4 + (n+1)i, 2 + 5i)$ es un complejo real.",
+      "alternatives": [
+        "$9$",
+        "$8$",
+        "$7$",
+        "$6$",
+        "$5$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos, Ejercicio 17"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle $b$ de modo que $Z = frac(6 + 2i, 1 + b i)$ sea imaginario puro.",
+      "alternatives": [
+        "$1$",
+        "$-1$",
+        "$2$",
+        "$-2$",
+        "$-3$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos, Ejercicio 18"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Consideremos el complejo $z = i^1 + i^2 + i^3 + dots + i^(2012)$. Si $z = a + b i$ con $a, b in RR$, determine $b - a$.",
+      "alternatives": [
+        "$3$",
+        "$0$",
+        "$2$",
+        "$1$",
+        "$sqrt(2)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.slideshare.net/slideshow/algebra02cepreuni20192pdnivel-pref/264760454",
+      "sourceName": "ÁLGEBRA 02 CEPREUNI 2019-2 (SlideShare) – Problema 01 (adaptado)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea $a$ un número real y $b$ un imaginario puro. Si $frac(a + b i, 1 + b + 2i) = 1 - 3i$, halle $|b| + |b + a|$.",
+      "alternatives": [
+        "$10$",
+        "$17$",
+        "$8$",
+        "$15$",
+        "$5$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.slideshare.net/slideshow/algebra02cepreuni20192pdnivel-pref/264760454",
+      "sourceName": "ÁLGEBRA 02 CEPREUNI 2019-2 (SlideShare) – Problema 04"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es el resultado de $i^(100)$?",
+      "alternatives": [
+        "$1$",
+        "$-1$",
+        "$i$",
+        "$-i$",
+        "$0$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos, potencias de i (derivado de la metodología de la fuente)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si $z = 3 - 4i$, ¿cuál es el módulo $|z|$?",
+      "alternatives": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$7$",
+        "$25$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos (ejercicio de módulo)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si $z = 5 + 12i$, halle el módulo de $z$.",
+      "alternatives": [
+        "$7$",
+        "$13$",
+        "$17$",
+        "$60$",
+        "$119$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos (ejercicio de módulo)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si $z = -2 + 2i$, ¿cuál es el conjugado $bar(z)$?",
+      "alternatives": [
+        "$2 + 2i$",
+        "$-2 - 2i$",
+        "$2 - 2i$",
+        "$-2 + 2i$",
+        "$0$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos (conjugado)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcule $(2 + 3i)(2 - 3i)$.",
+      "alternatives": [
+        "$4 - 9i$",
+        "$4 + 9i$",
+        "$13$",
+        "$-5$",
+        "$0$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos (producto de conjugados)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique: $frac(1 + i, 1 - i)$",
+      "alternatives": [
+        "$1$",
+        "$-1$",
+        "$i$",
+        "$-i$",
+        "$0$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos (simplificación)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si $z = 1 + i$, calcule $z^8$.",
+      "alternatives": [
+        "$1$",
+        "$16$",
+        "$-16$",
+        "$16i$",
+        "$-16i$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos (potencias)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Determine si el número $z = 7 + 0i$ es: ",
+      "alternatives": [
+        "Imaginario puro",
+        "Real",
+        "Complejo no real con parte imaginaria positiva",
+        "Complejo no real con parte imaginaria negativa",
+        "Nulo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos (clasificación)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Determine si $z = 0 + 5i$ es:",
+      "alternatives": [
+        "Número real",
+        "Número complejo nulo",
+        "Imaginario puro",
+        "Complejo no real con parte real positiva",
+        "Complejo con módulo cero"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos (clasificación de imaginario puro)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si $z_1 = 3 + 2i$ y $z_2 = 1 - i$, calcule $z_1 dot z_2$.",
+      "alternatives": [
+        "$1 + i$",
+        "$5 + i$",
+        "$5 - i$",
+        "$3 - 2i$",
+        "$5 - 3i$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos (multiplicación)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule $frac(3 + 4i, 2 - i)$.",
+      "alternatives": [
+        "$1 + i$",
+        "$frac(2 + 11i, 5)$",
+        "$frac(2 + 11i, 3)$",
+        "$frac(10 + 11i, 5)$",
+        "$2 - i$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos (división)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle $z$ tal que $z^2 = -5 + 12i$.",
+      "alternatives": [
+        "$2 + 3i$",
+        "$3 - 2i$",
+        "$2 - 3i$ o $-2 + 3i$",
+        "$-3 + 2i$",
+        "$2 + 3i$ o $-2 - 3i$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos (raíz cuadrada de complejo)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado $z = 2 + 3i$, ¿cuánto vale $z + bar(z)$?",
+      "alternatives": [
+        "$4 + 6i$",
+        "$0$",
+        "$4$",
+        "$6i$",
+        "$2$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos (suma con conjugado)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado $z = 2 + 3i$, ¿cuánto vale $z dot bar(z)$?",
+      "alternatives": [
+        "$4 - 9$",
+        "$13$",
+        "$-5$",
+        "$4 + 9i$",
+        "$6i$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos (producto con conjugado)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál de los siguientes pares $(a, b)$ satisface $a + b i = 4 - 7i$?",
+      "alternatives": [
+        "$(4, 7)$",
+        "$(-4, 7)$",
+        "$(4, -7)$",
+        "$(-4, -7)$",
+        "$(7, 4)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos (identificación de parte real e imaginaria)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si $(x + 2) + (y - 3)i = 5 + 0i$, halle $x + y$.",
+      "alternatives": [
+        "$5$",
+        "$3$",
+        "$6$",
+        "$8$",
+        "$2$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos (igualdad de complejos)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si $(a - 1) + (b + 2)i = 3 - 5i$, halle $a cdot b$.",
+      "alternatives": [
+        "$-28$",
+        "$28$",
+        "$-21$",
+        "$21$",
+        "$0$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos (igualdad de complejos)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcule $\"Re\"(z) + \"Im\"(z)$ si $z = frac((2 + i)^2, 1 - 2i)$.",
+      "alternatives": [
+        "$1$",
+        "$0$",
+        "$3$",
+        "$-3$",
+        "$-1$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos (parte real + parte imaginaria)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado que $|z_1| = 3$ y $|z_2| = 4$, ¿cuánto vale $|z_1 dot z_2|$?",
+      "alternatives": [
+        "$7$",
+        "$1$",
+        "$12$",
+        "$25$",
+        "$5$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos (propiedad del módulo del producto)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es el resultado de $i^(33)$?",
+      "alternatives": [
+        "$1$",
+        "$-1$",
+        "$i$",
+        "$-i$",
+        "$33i$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos (potencias de i)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es el resultado de $i^(50)$?",
+      "alternatives": [
+        "$1$",
+        "$-1$",
+        "$i$",
+        "$-i$",
+        "$50$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos (potencias de i)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es el resultado de $i^(75)$?",
+      "alternatives": [
+        "$1$",
+        "$-1$",
+        "$i$",
+        "$-i$",
+        "$0$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos (potencias de i)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifique: $i + i^2 + i^3 + i^4$.",
+      "alternatives": [
+        "$0$",
+        "$1$",
+        "$4$",
+        "$4i$",
+        "$-1$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos (suma de potencias consecutivas de i)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcule: $1 + i + i^2 + i^3 + dots + i^(1999)$",
+      "alternatives": [
+        "$0$",
+        "$1$",
+        "$i$",
+        "$-1$",
+        "$-i$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Matematicasn Blog – Números Complejos Problemas Resueltos de Álgebra Preuniversitaria"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si $z = frac(1 + i, 1 - i)$, halle $z^(2023)$.",
+      "alternatives": [
+        "$1$",
+        "$-1$",
+        "$i$",
+        "$-i$",
+        "$2$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2019/01/numeros-complejos-problemas-resueltos.html",
+      "sourceName": "Algebraenpdf Blog – Números Complejos Problemas Resueltos (potencia de cociente)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $z_1 cdot z_2 = 1 + 3i$ y $frac(z_1, z_2) = frac(1)(2)(3 - i)$ con $\"Re\"(z_2) < 0$, halle $\"Re\"(i z_2)$.",
+      "alternatives": [
+        "$-1$",
+        "$1$",
+        "$-2$",
+        "$2$",
+        "$3$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.slideshare.net/slideshow/algebra02cepreuni20192pdnivel-pref/264760454",
+      "sourceName": "ÁLGEBRA 02 CEPREUNI 2019-2 (SlideShare) – Problema 07"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Números Complejos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si $z_1$ y $z_2$ son complejos no nulos tales que $|z_1 - z_2| = |z_1| + |z_2|$, determine $T = frac(\"Im\"(z_1 z_2), \"Im\"(z_1) cdot \"Re\"(z_2))$.",
+      "alternatives": [
+        "$4$",
+        "$1$",
+        "$0.25$",
+        "$0.5$",
+        "$2$"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://www.slideshare.net/slideshow/algebra02cepreuni20192pdnivel-pref/264760454",
+      "sourceName": "ÁLGEBRA 02 CEPREUNI 2019-2 (SlideShare) – Problema 08"
+    }
+  ]
+}

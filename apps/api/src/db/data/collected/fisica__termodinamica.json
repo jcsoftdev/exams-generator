@@ -1,0 +1,87 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo se llama también a la Primera Ley de la Termodinámica?",
+      "alternatives": [
+        "Calor y Trabajo",
+        "Principio de Conservación de la Energía",
+        "Transferencia de Energía Térmica",
+        "Proceso Adiabático"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.goconqr.com/es/cuestionario/889449/termodinamica",
+      "sourceName": "GoConqr - Cuestionario Termodinámica (889449), pregunta 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El calor se define como:",
+      "alternatives": [
+        "La forma de energía que se transfiere entre dos sistemas debido a una diferencia de temperatura",
+        "La forma de temperaturas que fluyen entre dos sistemas",
+        "Energía térmica",
+        "La manifestación de la energía que poseen los cuerpos"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.goconqr.com/es/cuestionario/889449/termodinamica",
+      "sourceName": "GoConqr - Cuestionario Termodinámica (889449), pregunta 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Cuando dos cuerpos se ponen en contacto hay transferencia de calor entre ellos hasta que alcanzan el equilibrio térmico. Esto ocurre cuando ellos:",
+      "alternatives": [
+        "Están a temperaturas diferentes",
+        "Tienen calor específico diferentes",
+        "Tienen la misma capacidad térmica",
+        "Tienen la misma masa",
+        "Están a la misma temperatura"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://www.goconqr.com/en/quiz/11054501/test-calorimetria",
+      "sourceName": "GoConqr - Test Calorimetría (11054501), pregunta 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo tiene capacidad térmica igual a 18 cal/°C y el calor específico del material que lo compone es igual a 0,12 cal/g·°C. La masa de ese cuerpo vale:",
+      "alternatives": [
+        "150 g",
+        "180 g",
+        "220 g",
+        "280 g",
+        "330 g"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.goconqr.com/en/quiz/11054501/test-calorimetria",
+      "sourceName": "GoConqr - Test Calorimetría (11054501), pregunta 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Termodinámica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cuerpo de 500 g liberó 2 500 cal cuando su temperatura varió de 80 °C a 30 °C. La capacidad térmica de ese cuerpo es:",
+      "alternatives": [
+        "5 cal/°C",
+        "25 cal/°C",
+        "50 cal/°C",
+        "80 cal/°C",
+        "250 cal/°C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.goconqr.com/en/quiz/11054501/test-calorimetria",
+      "sourceName": "GoConqr - Test Calorimetría (11054501), pregunta 3"
+    }
+  ]
+}

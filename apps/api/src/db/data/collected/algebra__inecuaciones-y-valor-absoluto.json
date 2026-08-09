@@ -1,0 +1,279 @@
+{
+  "entries": [
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Moshy resuelve (m - 9) ejercicios de álgebra por día durante (m - 9) días. Si el total de ejercicios resueltos, disminuido en cinco, no excede al cuádruple de la diferencia positiva entre m y nueve, ¿cuál es la máxima cantidad total de ejercicios que Moshy habrá resuelto?",
+      "alternatives": ["25", "36", "16", "9"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — Inecuaciones con valor absoluto, Problema 1 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una editorial determina su ingreso mediante I = |50L - 4000|, donde L representa la cantidad de libros vendidos. Si el ingreso diario no debe exceder S/ 3000, calcule la cantidad de libros que la editorial debe vender diariamente.",
+      "alternatives": ["De 20 a 140", "De 18 a 120", "De 20 a 120", "De 18 a 140"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — Inecuaciones con valor absoluto, Problema 2 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el número de elementos enteros del complemento del conjunto solución de 3|x + 1| >= x + 5 representa la edad actual (en años) de Jesús, ¿cuántos años tendrá dentro de 25 años?",
+      "alternatives": ["31", "29", "35", "27"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — Inecuaciones con valor absoluto, Problema 3 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle el conjunto solución de la inecuación |x| + x^3 > 0.",
+      "alternatives": ["<-1; 0> U <1; +inf>", "<-1; 1> U <1; +inf>", "<-1; 0> U <0; +inf>", "<-1; 1> U <2; +inf>"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — Inecuaciones con valor absoluto, Problema 4 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle el complemento del conjunto solución de la inecuación |x^2 - 4| >= -2x + 4.",
+      "alternatives": ["]-4; 9[", "]-4; 2[", "]-4; -2[", "]-4; 0["],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — Inecuaciones con valor absoluto, Problema 5 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para todo x del conjunto solución de |2 - x| < 3, indique el intervalo que contiene a 6 - x.",
+      "alternatives": ["<1; 9>", "<3; 9>", "<1; 3>", "<-3; 3>"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — Inecuaciones con valor absoluto, Problema 6 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Omaku resuelve la inecuación |x^4 - 20| >= |x^2|^2 + 6x^2. El profesor otorga puntos iguales a la cantidad de elementos enteros del complemento del conjunto solución. Si se necesitan 2 puntos para aprobar, ¿aprobó Omaku y cuántos puntos otorgó el profesor?",
+      "alternatives": ["Aprobó, 4 puntos", "Desaprobó, 1 punto", "Aprobó, 3 puntos", "Aprobó, 2 puntos"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — Inecuaciones con valor absoluto, Problema 7 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las longitudes de los intervalos solución de las inecuaciones 3x^2 - 6x - 9 <= 0 y 2x^2 - 28x + 66 <= 0 están dadas en metros. La hormiga A se desplaza en línea recta desde el extremo inferior del conjunto solución de la primera inecuación a una velocidad constante de 2 m/min al encuentro de la hormiga B, y esta última se desplaza en línea recta simultáneamente desde el extremo superior del conjunto solución de la segunda inecuación a una velocidad constante de 4 m/min al encuentro de la hormiga A. Si al cabo de un minuto la hormiga B se detiene por fracturarse dos patitas, desde ese instante, ¿cuánto tiempo demorará la hormiga A en encontrarse con la hormiga B?",
+      "alternatives": ["3,5 min", "2 min", "3 min", "2,5 min", "4 min"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/algebra-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn.blogspot.com — Álgebra San Marcos DECO, Pregunta 8 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la inecuación |2x - 6| <= x + 3 se obtiene CS = [a; b]. Halle a + b.",
+      "alternatives": ["10", "7", "8", "9"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto_14.html",
+      "sourceName": "matematicasn.blogspot.com — Inecuación con Valor Absoluto (secundaria y pre-universidad), Ejercicio 2 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine A ∩ B si se tienen los conjuntos A = {x ∈ R / |x - 3| < 5} y B = {x ∈ R / |x + 2| >= 4}.",
+      "alternatives": ["<1; 6>", "<1; 8]", "[2; 8>", "[3; 9]"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/inecuaciones-con-valor-absoluto_14.html",
+      "sourceName": "matematicasn.blogspot.com — Inecuación con Valor Absoluto (secundaria y pre-universidad), Ejercicio 4 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle la suma de los divisores positivos del mayor elemento entero del conjunto solución de la inecuación |1 + |x - 2| + x| <= 4.",
+      "alternatives": ["3", "6", "7", "2"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/valor-absoluto-ejercicios-resueltos-pdf.html",
+      "sourceName": "algebraenpdf.blogspot.com — Valor Absoluto Ejercicios Resueltos PDF, Problema 1 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La longitud del radio de un círculo C es numéricamente igual a tres unidades menos que la suma de los valores de x que verifican la ecuación |2x^2 - 4| = 8x - 6. Calcule el área de la región determinada por el círculo C.",
+      "alternatives": ["4pi u^2", "3pi u^2", "2pi u^2", "pi u^2"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://algebraenpdf.blogspot.com/2018/11/valor-absoluto-ejercicios-resueltos-pdf.html",
+      "sourceName": "algebraenpdf.blogspot.com — Valor Absoluto Ejercicios Resueltos PDF, Problema 2 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una fábrica de control de calidad establece que el ancho de un cuaderno debe ser de 21 cm. Un cuaderno pasa el control si el error es de máximo 0,04 cm. Si la expresión |x - 21| <= 0,04 describe el control de calidad, ¿qué ancho x pueden tener los cuadernos que pasan el control?",
+      "alternatives": ["Pasa si el ancho está entre 20,96 y 20,98 cm", "No pasa el control de calidad", "Pasa si el ancho está entre 20,96 y 21,04 cm", "No se puede fabricar el cuaderno"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/inecuaciones-con-valor-absoluto-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — Inecuaciones con valor absoluto problemas resueltos, Problema 1 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si x_0 es la menor solución al resolver ||x| - 5| = 2x - 3, calcule el valor de 8 / x_0.",
+      "alternatives": ["3", "4", "5", "6"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/09/inecuaciones-con-valor-absoluto-problemas-resueltos-pdf.html",
+      "sourceName": "razonamientopdf.blogspot.com — Inecuaciones con valor absoluto problemas resueltos, Problema 2 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al resolver la inecuación |x + 1 - 1| <= |x - 1| - 1, el conjunto solución es:",
+      "alternatives": ["[0; +inf>", "[0; 1> U <1; +inf>", "<-inf; -1> U <1; +inf>", "<-1; 1>"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — Valor Absoluto Full Problemas Resueltos, Problema 3 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Determine el complemento del conjunto solución de la inecuación |3x + 5| > x - 2.",
+      "alternatives": ["<1; 3>", "<-1; 1>", "Ø", "R"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — Valor Absoluto Full Problemas Resueltos, Problema 4 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Al resolver ||x^2 + 2x + 1| + 7| = |x^2 + x + 30|, el resultado representa mi edad en años. Mi hermana tiene el doble de mi edad. ¿Cuánto es la suma de los dígitos de la edad de mi hermana?",
+      "alternatives": ["12", "8", "10", "11"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — Valor Absoluto Full Problemas Resueltos, Problema 6 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Adelo estudió el frío en Puno, Cusco y Huancavelica, determinando que Puno es la ciudad más fría a las 7 a. m. Las temperaturas (°C) a las 7 a. m. de las tres ciudades están representadas por las soluciones de la expresión x - 3 + |x^2 + 3x - 18|. ¿Cuál es la temperatura de Puno?",
+      "alternatives": ["-7°C", "-9°C", "-5°C", "-6°C"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — Ecuaciones con Valor Absoluto, Problema 1 (clave A)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un jardín cuadrado tiene un perímetro que no excede 20 metros. Calcule el perímetro de un jardín rectangular cuyos lados miden |x - 10| y |x + 6| metros.",
+      "alternatives": ["18", "20", "32", "30"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — Ecuaciones con Valor Absoluto, Problema 2 (clave C)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Resuelva la ecuación x^2 - 4x - |x - 2| = 16. Determine el valor absoluto de la diferencia entre las soluciones.",
+      "alternatives": ["4", "6", "8", "10"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — Ecuaciones con Valor Absoluto, Problema 4 (clave D)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Tres conos colocados en línea: la distancia entre los conos 1 y 2 es 3 m, y entre los conos 2 y 3 es 5 m. Si la distancia entre los conos 3 y 1 está dada por (x - 5)^2 + |10 - 4x|, calcule el producto de los valores de x.",
+      "alternatives": ["12", "21", "10", "17"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — Ecuaciones con Valor Absoluto, Problema 5 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle el producto de las soluciones de la ecuación |x + 3| - |3x + 9| = (x + 3)^2 + x^2 + 6x + 5.",
+      "alternatives": ["6", "8", "10", "12"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-con-valor-absoluto.html",
+      "sourceName": "matematicasn.blogspot.com — Ecuaciones con Valor Absoluto, Problema 6 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si E = <-inf; 2] es el conjunto solución de la inecuación |x - a| <= |x - b|, con 0 < a < b, halle el mínimo valor de (a + b)^2.",
+      "alternatives": ["8", "10", "12", "14", "16"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razonamiento-matematico-solucionario.html",
+      "sourceName": "matematicasn.blogspot.com — UNI 2021-II Segunda Prueba Admisión, Pregunta 15 (clave E)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para hornear buen pan, el horno debe calentarse bien. El mejor pan se obtiene a 200 °C con una variación que no excede 5 grados. ¿Cuál de las siguientes inecuaciones describe correctamente este proceso si x es la temperatura del horno?",
+      "alternatives": ["|x - 230| <= 2", "|x - 200| <= 5", "|x - 2| <= 5", "|2x - 1| <= 2"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — Valor Absoluto Full Problemas Resueltos, Problema 1 (clave B)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Inecuaciones y Valor Absoluto",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La relación |t - 230| <= 2 indica la temperatura ideal (en °C) para la cocción de panes en un horno industrial. Determine el rango de temperaturas permitido y la temperatura máxima para el control de calidad.",
+      "alternatives": ["[200°; 300°]; 300°C", "[228°; 232°]; 232°C", "[228°; 230°]; 230°C", "[216°; 230°]; 230°C"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/valor-absoluto-problemas-resueltos.html",
+      "sourceName": "matematicasn.blogspot.com — Valor Absoluto Full Problemas Resueltos, Problema 2 (clave B)"
+    }
+  ]
+}

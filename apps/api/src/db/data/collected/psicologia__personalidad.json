@@ -1,0 +1,69 @@
+{
+  "entries": [
+    {
+      "courseName": "Psicología",
+      "topicName": "Personalidad",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "José Luis es un músico profesional que se destaca por dedicar su vida a la música. Es compositor, dicta clases y quienes asisten a sus presentaciones disfrutan de su talento y esfuerzo. De acuerdo con la teoría de Gordon Allport, estas características de José Luis constituyen un rasgo:",
+      "alternatives": [
+        "cardinal",
+        "central",
+        "secundario",
+        "introvertido"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/psicologia-resuelta-admision-universidad.html",
+      "sourceName": "Banco de preguntas resueltas de Psicología - Admisión (matematicasn), pregunta rasgos de Allport"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Personalidad",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando Piero se mudó a la capital para vivir con sus tíos paternos al terminar la secundaria, observó a diario cómo ellos eran puntuales y organizados en sus actividades. Ahora él ha adoptado esas características. El enfoque que explica las características de personalidad adquiridas por Piero se denomina:",
+      "alternatives": [
+        "sociocognitivo",
+        "conductista",
+        "psicodinámico",
+        "humanista"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/psicologia-resuelta-admision-universidad.html",
+      "sourceName": "Banco de preguntas resueltas de Psicología - Admisión (matematicasn), pregunta enfoque sociocognitivo"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Personalidad",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Desde la infancia, los padres de Hugo le inculcaron el respeto hacia los demás y la solidaridad con sus compañeros. Es correcto afirmar que:\nI. Los padres contribuyen a formar el carácter de su hijo.\nII. Hugo heredó el temperamento de sus padres.\nIII. El temperamento es un componente adquirido de la personalidad.",
+      "alternatives": [
+        "I y II",
+        "II y III",
+        "Solo I",
+        "Solo III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/psicologia-resuelta-admision-universidad.html",
+      "sourceName": "Banco de preguntas resueltas de Psicología - Admisión (matematicasn), pregunta formación del carácter"
+    },
+    {
+      "courseName": "Psicología",
+      "topicName": "Personalidad",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Juan Carlos es una persona racional, apática, tranquila, perseverante y rutinaria. Según la tipología de Galeno, tendría un tipo de personalidad:",
+      "alternatives": [
+        "melancólico",
+        "leptosómico",
+        "flemático",
+        "introvertido",
+        "sanguíneo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-psicologia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "Prueba de Psicología tipo examen de admisión resuelta (matematicasn), pregunta 28 - tipología de Galeno"
+    }
+  ]
+}

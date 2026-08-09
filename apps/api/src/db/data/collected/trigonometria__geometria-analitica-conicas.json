@@ -1,0 +1,1252 @@
+{
+  "entries": [
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuáles son las secciones cónicas que se pueden obtener en función de la relación existente entre el ángulo de conicidad y la inclinación del plano, respecto del eje del cono?",
+      "alternatives": [
+        "Elipse, hipérbola y triángulo",
+        "Hipérbola, elipse, parábola y circunferencia",
+        "Triángulo, elipse, circunferencia e hipérbola"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.goconqr.com/es/cuestionario/15529655/conicas-test",
+      "sourceName": "GoConqr - Cónicas Test, pregunta 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La siguiente ecuación canónica (x + 5)^2/7 + (y - 3)^2/24 = 1 tiene como ecuación general:",
+      "alternatives": [
+        "24x^2 + 7y^2 + 240x - 42y + 495 = 0",
+        "(x + 6)^2 + (y - 7)^2 = 9",
+        "(x + 2)^2 + (y - 5)^2 = 25"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.goconqr.com/es/cuestionario/15529655/conicas-test",
+      "sourceName": "GoConqr - Cónicas Test, pregunta 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La ecuación (x - 8)^2/6 + (y - 6)^2/7 = 1 corresponde a:",
+      "alternatives": [
+        "una hipérbola",
+        "una circunferencia",
+        "una elipse"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.goconqr.com/es/cuestionario/15529655/conicas-test",
+      "sourceName": "GoConqr - Cónicas Test, pregunta 8"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una parábola tiene su foco en F(3; 2) y su recta directriz es x = -4. Halla su ecuación.",
+      "alternatives": [
+        "y^2 - 2y - 14x + 3 = 0",
+        "y^2 - 2y - 6x + 7 = 0",
+        "y^2 - 4y - 8x - 6 = 0",
+        "y^2 - 4y - 6x + 7 = 0",
+        "y^2 - 4y - 14x - 3 = 0"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conicas-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Secciones Cónicas Ejercicios Resueltos, Problema 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la ecuación de la recta tangente a la parábola x^2 = 8y en el punto de tangencia M(4; 2).",
+      "alternatives": [
+        "x + y - 2 = 0",
+        "x - y + 2 = 0",
+        "x - y - 2 = 0",
+        "x + y + 2 = 0",
+        "-x + y - 1 = 0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conicas-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Secciones Cónicas Ejercicios Resueltos, Problema 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la ecuación de la parábola con vértice (2; 1) y foco (2; 4). Determina la longitud del lado recto.",
+      "alternatives": [
+        "12",
+        "20",
+        "32",
+        "4",
+        "52"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - La Parábola Ejercicios Resueltos, Pregunta 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Halla la ecuación de la parábola con vértice en el origen y directriz y - 5 = 0.",
+      "alternatives": [
+        "x^2 = -5y",
+        "x^2 = -10y",
+        "x^2 = -20y",
+        "x^2 = -3y",
+        "x^2 = -9y"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - La Parábola Ejercicios Resueltos, Pregunta 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la ecuación de la directriz de la parábola y^2 + 8x - 4y - 28 = 0.",
+      "alternatives": [
+        "x = -6",
+        "x = 4",
+        "x = -8",
+        "x = 8",
+        "x = 2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - La Parábola Ejercicios Resueltos, Pregunta 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "medium",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la ecuación de la parábola con vértice V(6; -2) y foco F(1; -2).",
+      "alternatives": [
+        "(y + 2)^2 = 16(x - 6)",
+        "(y - 2)^2 = 12(x - 6)",
+        "(y + 2)^2 = -20(x - 6)",
+        "(y - 2)^2 = 20(x + 4)",
+        "(y + 2)^2 = 12(x - 6)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - La Parábola Ejercicios Resueltos, Pregunta 4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la parábola y^2 = 20x calcula el radio focal del punto M cuya abscisa es igual a 7.",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - La Parábola Ejercicios Resueltos, Pregunta 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la ecuación de la parábola con foco en (12; 0) y cuya directriz es perpendicular al eje X y pasa por el punto (8; 0).",
+      "alternatives": [
+        "y^2 = 18(x - 10)",
+        "y^2 = 20(x - 10)",
+        "y^2 = 6(x + 10)",
+        "y^2 = 8(x - 10)",
+        "y^2 = 10(x - 8)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - La Parábola Ejercicios Resueltos, Pregunta 8"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para la parábola y^2 - 4y - 8x + 44 = 0, ¿cuál es la suma de las coordenadas del foco?",
+      "alternatives": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - La Parábola Ejercicios Resueltos, Pregunta 10"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la ecuación de la parábola con vértice (2; 1) y foco (5; 1).",
+      "alternatives": [
+        "12x + y^2 + 2y = 0",
+        "12x - y^2 + 2y - 25 = 0",
+        "12x + x^2 + 2y + 61 = 0",
+        "12x - y^2 + 2y - 61 = 0",
+        "12x + 2y^2 + 2y - 61 = 0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - La Parábola Ejercicios Resueltos, Pregunta 13"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La parábola y^2 - 6y - 8x + 17 = 0 tiene como suma de las coordenadas de su foco:",
+      "alternatives": [
+        "2",
+        "4",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - La Parábola Ejercicios Resueltos, Guía P1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el lugar geométrico de los puntos equidistantes del punto P(2; 6) y de la recta y = 2.",
+      "alternatives": [
+        "(x - 2)^2 = -8(y - 4)",
+        "(x - 2)^2 = 8(y - 4)",
+        "(x + 2)^2 = 8(y + 4)",
+        "(x + 2)^2 = -8(y + 4)",
+        "(x - 2)^2 = 8(y - 2)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - La Parábola Ejercicios Resueltos, Guía P4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La recta tangente a la parábola y^2 = 12x paralela a 3x - 2y + 30 = 0 tiene la ecuación:",
+      "alternatives": [
+        "3x - 2y + 5 = 0",
+        "2x - 3y - 10 = 0",
+        "3x - 2y + 4 = 0",
+        "2y - 3x + 30 = 0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/la-parabola-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - La Parábola Ejercicios Resueltos, Guía P26"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la ecuación de la hipérbola equilátera con centro en el origen que pasa por (5; -3).",
+      "alternatives": [
+        "x^2 - y^2 = 8",
+        "x^2 - y^2 = 10",
+        "x^2 - y^2 = 12",
+        "x^2 - y^2 = 1",
+        "x^2 - y^2 = 16"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Problema 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla las ecuaciones de las asíntotas de la hipérbola 144x^2 - 25y^2 = 3600.",
+      "alternatives": [
+        "2x ± 15y = 0",
+        "5x ± 12y = 0",
+        "12x ± 5y = 0",
+        "12x ± y = 0",
+        "15x ± 7y = 0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Problema 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula la distancia de un foco de la hipérbola 16x^2 - 9y^2 = 144 a cualquiera de sus asíntotas.",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Problema 4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el lugar geométrico de un punto cuya diferencia de distancias a los puntos (-3; 0) y (3; 0) es siempre igual a 4.",
+      "alternatives": [
+        "5x^2 - 4y^2 = 20",
+        "5y^2 - 4x^2 = 20",
+        "4y^2 - 5x^2 = 20",
+        "4x^2 - 5y^2 = 20",
+        "4x^2 - y^2 = 4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Problema 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una hipérbola tiene su centro en el origen, vértice en (-4; 0) y foco en (6; 0). Halla la longitud del lado recto.",
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "12",
+        "16"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Problema 8"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el centro de la hipérbola dada por la ecuación 4y^2 - 16x^2 - 48x - 4y + 1 = 0.",
+      "alternatives": [
+        "(-3/2; 1)",
+        "(-3/2; 1/2)",
+        "(-1/2; 3/2)",
+        "(3/2; 1/2)",
+        "(-3/2; 3/2)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Problema 9"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la hipérbola con focos F1(0; -2) y F2(0; 2), siendo cada lado recto igual a 6.",
+      "alternatives": [
+        "x^2 - y^2 = 1",
+        "x^2 - 3y^2 = 3",
+        "2y^2 - x^2 = 2",
+        "3y^2 - x^2 = 3",
+        "3x^2 - 4y^2 = 12"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Problema 10"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una hipérbola equilátera con centro en el origen pasa por (4; -1). Halla su ecuación canónica.",
+      "alternatives": [
+        "x^2 - 2y^2 = 14",
+        "x^2 - y^2 = 15",
+        "2y^2 - x^2 = 14",
+        "x^2 - y^2 = 14",
+        "x^2 - 2y^2 = 15"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Problema 11"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la medida del eje transversal de la hipérbola 2x^2 - y^2 = 3?",
+      "alternatives": [
+        "8",
+        "3",
+        "sqrt(6)",
+        "sqrt(5)",
+        "sqrt(3)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Problema 13"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la ecuación de la hipérbola con centro C(1; 1), foco (7; 1) y vértice correspondiente (5; 1).",
+      "alternatives": [
+        "20(x - 1)^2 - 16(y - 1)^2 = 640",
+        "16(y - 1)^2 - 20(x + 1)^2 = 320",
+        "5(x - 1)^2 - 4(y - 1)^2 = 80",
+        "16(y - 1)^2 - 20(x - 1)^2 = 640",
+        "20(x - 1)^2 - 16(y - 1)^2 = 80"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Problema 14"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Escribe la ecuación canónica de la hipérbola con distancia focal 10 que pasa por el punto (3; 0).",
+      "alternatives": [
+        "16x^2 - 9y^2 = 144",
+        "9x^2 - 16y^2 = 144",
+        "3x^2 - 4y^2 = 30",
+        "4x^2 - 5y^2 = 100",
+        "16y^2 - 4x^2 = 35"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Problema 15"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para la hipérbola x^2 - 4y^2 - 2x - 16y - 19 = 0, calcula la distancia entre sus focos.",
+      "alternatives": [
+        "5",
+        "2sqrt(5)",
+        "2",
+        "4sqrt(5)",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Problema 16"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Para la hipérbola 9x^2 - y^2 - 36x - 6y + 18 = 0, halla una ecuación de sus asíntotas.",
+      "alternatives": [
+        "y = 3x - 3",
+        "y = 3x - 6",
+        "y = 3x - 9",
+        "y = 3x - 8",
+        "y = 3x - 12"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Problema 18"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula el área del triángulo formado por los ejes coordenados y cualquier recta tangente a la hipérbola xy = n (n > 0).",
+      "alternatives": [
+        "4n",
+        "n/2",
+        "n/4",
+        "2n",
+        "n"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Problema 20"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la ecuación de la hipérbola con centro en el origen, focos en el eje Y, lado recto 16/3 y pendiente de asíntota 3/4.",
+      "alternatives": [
+        "4y^2 - x^2 = 36",
+        "4x^2 - y^2 = 36",
+        "16y^2 - 9x^2 = 36",
+        "16y^2 - x^2 = 18",
+        "8y^2 - x^2 = 36"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Propuesto 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina la ecuación de la hipérbola con centro en el origen, eje focal en el eje X, distancia focal 6 y distancia a la directriz 4.",
+      "alternatives": [
+        "x^2 - 2y^2 = 4",
+        "x^2 - 3y^2 = 2",
+        "x^2 - 4y^2 = 3",
+        "x^2 - 2y^2 = 6",
+        "x^2 - 9y^2 = 1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Propuesto 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la ecuación de la hipérbola que pasa por P(2; 3), con centro en el origen, eje transversal en el eje Y y asíntota 2y - 7x = 0.",
+      "alternatives": [
+        "4y^2 - 7x^2 = 6",
+        "4y^2 - 7x^2 = 3",
+        "4y^2 - 7x^2 = 2",
+        "4y^2 - 7x^2 = 8",
+        "4y^2 - 7x^2 = 10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Propuesto 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los focos de la elipse 9y^2 + 25x^2 - 225 = 0 coinciden con los focos de una hipérbola de excentricidad 4/3. Halla la ecuación de dicha hipérbola.",
+      "alternatives": [
+        "9x^2 - 7y^2 = 1",
+        "3y^2 - 5x^2 = 45",
+        "7y^2 - 9x^2 = 1",
+        "7y^2 - 9x^2 = 63",
+        "9y^2 - 25x^2 = 225"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Propuesto 7"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la cuerda de la hipérbola 4x^2 - 3y^2 = 36 cuyo punto medio es P(4; 2).",
+      "alternatives": [
+        "8x - 2y - 21 = 0",
+        "8x - 3y - 26 = 0",
+        "7x - 3y - 22 = 0",
+        "6x - 5y - 14 = 0",
+        "4x - y - 14 = 0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Propuesto 11"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula el producto de las longitudes de los radios focales del punto P(6; 5) sobre la hipérbola 5x^2 - 4y^2 = 80.",
+      "alternatives": [
+        "60",
+        "56",
+        "65",
+        "36",
+        "75"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Propuesto 10"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la elipse 9x^2 + 16y^2 = 576 se inscribe un cuadrado. Halla la suma de coordenadas del vértice en el tercer cuadrante.",
+      "alternatives": [
+        "-15",
+        "-12.5",
+        "-9.6",
+        "-8.4",
+        "-4.5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un arco semielíptico tiene una luz de 80 m y una altura de 30 m. Calcula la altura del arco en un punto a 15 m del centro.",
+      "alternatives": [
+        "15sqrt(55)/4",
+        "12sqrt(55)",
+        "9sqrt(55)/5",
+        "sqrt(55)",
+        "sqrt(37)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un arco semielíptico de 40 pies de luz y 16 pies de altura en el centro. ¿Cuál es la altura a 10 pies del extremo derecho?",
+      "alternatives": [
+        "8sqrt(3)",
+        "2sqrt(5)",
+        "3sqrt(3)",
+        "7sqrt(3)",
+        "4sqrt(3)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la elipse 4x^2 + 9y^2 = 36, halla el área del cuadrilátero formado por las intersecciones con el eje Y y los focos.",
+      "alternatives": [
+        "8sqrt(5)",
+        "2sqrt(5)",
+        "3sqrt(3)",
+        "7sqrt(3)",
+        "4sqrt(5)"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 5"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dada la elipse 4x^2 + 9y^2 - 48x + 72y + 144 = 0, halla la suma de las longitudes de sus ejes.",
+      "alternatives": [
+        "16",
+        "20",
+        "40",
+        "36",
+        "18"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los vértices principales de una elipse son V1(3; 5) y V2(3; -1), y su excentricidad es 1/3. Halla la longitud del lado recto.",
+      "alternatives": [
+        "4",
+        "2",
+        "3",
+        "8/3",
+        "8/5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 7"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una elipse tiene su centro en (0; 0), el eje mayor 2a en el eje X, y el eje menor subtiende un ángulo de 90° desde un foco. Halla su ecuación.",
+      "alternatives": [
+        "x^2 + 2y^2 = a^2",
+        "2y^2 + x^2 = a^2",
+        "4y^2 + x^2 = a^2",
+        "x^2 + 2y^2 = 2a^2",
+        "4y^2 + x^2 = 2a^2"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 8"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El extremo del eje menor de una elipse es el punto (3; -1); los focos están sobre la recta y + 6 = 0 y su excentricidad es sqrt(2)/2. Halla la ecuación de la elipse.",
+      "alternatives": [
+        "x^2 + 2y^2 - 6x + 24y + 31 = 0",
+        "x^2 - 2y^2 - 6x + 24y - 30 = 0",
+        "x^2 - y^2 + 6x - y = 0",
+        "x^2 + y^2 - 5x - 12y - 15 = 0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 9"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la ecuación de la elipse cuyo eje mayor mide 26u y cuyos focos son F1(-10; 0) y F2(14; 0).",
+      "alternatives": [
+        "25x^2 + 169y^2 - 100x - 4125 = 0",
+        "9x^2 + 169y^2 + 100x - 4225 = 0",
+        "16x^2 + 169y^2 + 100x - 4125 = 0",
+        "16x^2 + 169y^2 + 100x - 4225 = 0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 10"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula la distancia de la recta 4x + 3y - 12 = 0 al foco más cercano de la elipse 9y^2 + 13x^2 = 13.",
+      "alternatives": [
+        "4",
+        "2",
+        "3",
+        "8/3",
+        "8/5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 13"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La elipse nx^2 + 4y^2 + 6x - 8y = 5 tiene eje mayor de longitud 4. Halla n.",
+      "alternatives": [
+        "1",
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 15"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la longitud del lado recto de la elipse 9x^2 + 4y^2 - 18x + 16y - 11 = 0.",
+      "alternatives": [
+        "4/3",
+        "10/3",
+        "5/3",
+        "5/2",
+        "8/3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 16"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un túnel semielíptico tiene una base de 48 m de ancho y 20 m de altura en el centro. Halla el ancho del túnel a la mitad de la altura.",
+      "alternatives": [
+        "8sqrt(3)",
+        "10sqrt(3)",
+        "20sqrt(3)",
+        "24sqrt(3)",
+        "18sqrt(3)"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 17"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El punto medio de una cuerda de la elipse x^2 + 4y^2 - 6x - 8y = 3 es el punto (5; 2). Halla la pendiente de la cuerda.",
+      "alternatives": [
+        "1/2",
+        "1/3",
+        "-1/2",
+        "-1/3",
+        "-1/4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 19"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la ecuación de la elipse con centro (2; 1), distancia focal 4u, distancia a la directriz 16u y eje focal horizontal.",
+      "alternatives": [
+        "3x^2 - 12x + 4y^2 - 8y - 16 = 0",
+        "2x^2 - 4x + 6y^2 + 12y - 18 = 0",
+        "4x^2 - 8x + 3y^2 - 12y - 16 = 0",
+        "3x^2 - 12x + 4y^2 - 8y - 32 = 0",
+        "4x^2 - 8x + 3y^2 - 12y - 32 = 0"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 20"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los focos de una elipse son F1(3; 8) y F2(3; 2), y la longitud del eje menor es 8. Halla la excentricidad.",
+      "alternatives": [
+        "4/5",
+        "1/2",
+        "3/5",
+        "3/4",
+        "1/4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/elipse-ejercicios-resueltos-pdf.html",
+      "sourceName": "MathN Blog - Elipse Ejercicios Resueltos, Pregunta 21"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Los extremos de un diámetro de una circunferencia son P(2; 3) y Q(-4; 5). Halla su ecuación ordinaria.",
+      "alternatives": [
+        "(x - 1)^2 + (y + 4)^2 = 10",
+        "(x + 1)^2 + (y - 4)^2 = 10",
+        "(x + 1)^2 + (y + 4)^2 = 10",
+        "(x + 2)^2 + (y - 4)^2 = 10",
+        "(x - 2)^2 + (y - 4)^2 = 10"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conicas-circunferencia-y-parabola.html",
+      "sourceName": "MathN Blog - Circunferencia y Parábola Problemas Resueltos, Pregunta 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una circunferencia tiene centro C(2; -4) y es tangente al eje Y. Calcula su área.",
+      "alternatives": [
+        "2pi",
+        "3pi",
+        "4pi",
+        "5pi",
+        "6pi"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conicas-circunferencia-y-parabola.html",
+      "sourceName": "MathN Blog - Circunferencia y Parábola Problemas Resueltos, Pregunta 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la ecuación de la circunferencia con centro C(0; -2) y tangente a la recta 5x - 12y + 2 = 20.",
+      "alternatives": [
+        "x^2 + (y + 2)^2 = 4",
+        "(x - 1)^2 + (y + 2)^2 = 4",
+        "(x + 1)^2 + y^2 = 4",
+        "(x + 2)^2 + (y + 2)^2 = 4",
+        "(x - 2)^2 + (y + 2)^2 = 4"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conicas-circunferencia-y-parabola.html",
+      "sourceName": "MathN Blog - Circunferencia y Parábola Problemas Resueltos, Pregunta 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la ecuación de la circunferencia con centro (-2; 5) y tangente a la recta x = 7.",
+      "alternatives": [
+        "(x - 2)^2 + (y - 5)^2 = 81",
+        "(x - 2)^2 + (y + 5)^2 = 81",
+        "(x + 2)^2 + (y + 5)^2 = 81",
+        "(x + 2)^2 + (y - 5)^2 = 49",
+        "(x + 2)^2 + (y - 5)^2 = 81"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conicas-circunferencia-y-parabola.html",
+      "sourceName": "MathN Blog - Circunferencia y Parábola Problemas Resueltos, Pregunta 4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la ecuación de la circunferencia con centro sobre el eje X que pasa por A(1; 3) y F(4; 6).",
+      "alternatives": [
+        "(x - 5)^2 + y^2 = 45",
+        "(x - 3)^2 + (y - 2)^2 = 32",
+        "(x - 2)^2 + (y + 2)^2 = 30",
+        "(x - 6)^2 + (y - 2)^2 = 34",
+        "(x - 7)^2 + y^2 = 45"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conicas-circunferencia-y-parabola.html",
+      "sourceName": "MathN Blog - Circunferencia y Parábola Problemas Resueltos, Pregunta 15"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El punto A de la circunferencia x^2 + 4x + y^2 - 6y + 8 = 0 tiene ordenada igual a 1. Las coordenadas de A son:",
+      "alternatives": [
+        "(-2; 1) y (-1; 1)",
+        "(-3; 1) y (2; 1)",
+        "(-3; 1) y (-1; 1)",
+        "(2; 1) y (-1; 1)",
+        "(3; 1) y (-1; 1)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conicas-circunferencia-y-parabola.html",
+      "sourceName": "MathN Blog - Circunferencia y Parábola Problemas Resueltos, Pregunta 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La ecuación x^2 + y^2 + 4x + 6y = 23 tiene como forma ordinaria:",
+      "alternatives": [
+        "(x - 2)^2 + (y + 3)^2 = 36",
+        "(x + 2)^2 + (y + 3)^2 = 28",
+        "(x + 2)^2 + (y + 3)^2 = 36",
+        "(x - 2)^2 + (y + 3)^2 = 28",
+        "(x + 2)^2 + (y - 3)^2 = 36"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "MathN Blog - Ecuación de la Circunferencia Ejercicios Resueltos, Ejercicio 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Halla la ecuación general de la circunferencia de radio 5 y centro C(-1; -3).",
+      "alternatives": [
+        "x^2 + y^2 + 2x + 6y - 15 = 0",
+        "x^2 + y^2 - 2x + 6y + 15 = 0",
+        "x^2 + y^2 + 2x - 6y + 15 = 0",
+        "x^2 + y^2 + 2x + 6y + 15 = 0",
+        "x^2 + y^2 + 2x + 6y - 10 = 0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "MathN Blog - Ecuación de la Circunferencia Ejercicios Resueltos, Ejercicio 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ecuación de la circunferencia es x^2 + y^2 - 3x + 5y - 14 = 0. Su radio es:",
+      "alternatives": [
+        "sqrt(11)",
+        "5",
+        "15",
+        "3sqrt(10)/2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "MathN Blog - Ecuación de la Circunferencia Ejercicios Resueltos, Pregunta 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el valor de k para que x^2 + y^2 - 8x + 10y + k = 0 represente una circunferencia de radio 7.",
+      "alternatives": [
+        "8",
+        "-6",
+        "-12",
+        "10",
+        "-8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuacion-de-la-circunferencia.html",
+      "sourceName": "MathN Blog - Ecuación de la Circunferencia Ejercicios Resueltos, Pregunta 10"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifica la cónica: x^2 + y^2 - 2x - 2y = 0.",
+      "alternatives": [
+        "Elipse con centro (1, 1)",
+        "Circunferencia con centro (1, 1) y radio sqrt(2)",
+        "Parábola con vértice (1, 1)",
+        "Hipérbola con centro (1, 1)",
+        "No representa ninguna cónica real"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://exponty.com/ejercicios-conicas",
+      "sourceName": "Exponty.com - Ejercicios de Cónicas Resueltos, Identificación 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifica la cónica: 5x^2 - 2y^2 - 10x + 8y - 13 = 0.",
+      "alternatives": [
+        "Elipse con centro (1, 2)",
+        "Circunferencia con centro (1, 2)",
+        "Hipérbola con centro (1, 2)",
+        "Parábola con vértice (1, 2)",
+        "No representa ninguna cónica real"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://exponty.com/ejercicios-conicas",
+      "sourceName": "Exponty.com - Ejercicios de Cónicas Resueltos, Identificación 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Identifica la cónica: y^2 + 9x + 9 = 0.",
+      "alternatives": [
+        "Elipse que abre hacia la izquierda",
+        "Hipérbola con vértice (-1, 0)",
+        "Parábola que abre hacia la izquierda con vértice (-1, 0)",
+        "Circunferencia con centro (-1, 0)",
+        "No representa ninguna cónica real"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://exponty.com/ejercicios-conicas",
+      "sourceName": "Exponty.com - Ejercicios de Cónicas Resueltos, Identificación 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifica la cónica: 16x^2 + 9y^2 - 64x - 54y + 1 = 0.",
+      "alternatives": [
+        "Hipérbola con centro (2, 3)",
+        "Parábola con vértice (2, 3)",
+        "Circunferencia con centro (2, 3)",
+        "Elipse con centro (2, 3)",
+        "No representa ninguna cónica real"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://exponty.com/ejercicios-conicas",
+      "sourceName": "Exponty.com - Ejercicios de Cónicas Resueltos, Identificación 5"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Identifica la cónica: x^2 + 6x - 8y + 41 = 0.",
+      "alternatives": [
+        "Elipse que abre hacia arriba, vértice (-3, 4)",
+        "Hipérbola con centro (-3, 4)",
+        "Parábola que abre hacia arriba, vértice (-3, 4)",
+        "Circunferencia con centro (-3, 4)",
+        "No representa ninguna cónica real"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://exponty.com/ejercicios-conicas",
+      "sourceName": "Exponty.com - Ejercicios de Cónicas Resueltos, Identificación 8"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla la ecuación de la hipérbola equilátera con asíntota x - y + 1 = 0, que pasa por (-1; 4) y tiene vértice (4; 2).",
+      "alternatives": [
+        "x^2 - y^2 - 2x + 4y - 12 = 0",
+        "y^2 - x^2 - 4y + 2x + 12 = 0",
+        "x^2 - y^2 - 2x + 4y - 16 = 0",
+        "y^2 - x^2 - 4y + 2x + 16 = 0",
+        "x^2 - y^2 + 2x - 2y - 4 = 0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Propuesto 12"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula el área de la región triangular limitada por las asíntotas de 9x^2 - 4y^2 = 36 y la recta 9x + 2y - 24 = 0.",
+      "alternatives": [
+        "9 u^2",
+        "12 u^2",
+        "14 u^2",
+        "16 u^2",
+        "18 u^2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Propuesto 9"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla el ángulo obtuso formado por las asíntotas de la hipérbola con excentricidad 2 y eje focal horizontal.",
+      "alternatives": [
+        "120°",
+        "150°",
+        "135°",
+        "127°",
+        "143°"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Propuesto 5"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la excentricidad de la hipérbola cuyos extremos del eje transversal son (1; 6) y (1; 0), y cuyo foco es (1; 3 - 3sqrt(2)).",
+      "alternatives": [
+        "2",
+        "3",
+        "sqrt(2)",
+        "sqrt(5)",
+        "sqrt(3)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2012/09/hiperbolas-pdf-ejercicios-resueltos.html",
+      "sourceName": "MathN Blog - Hipérbola Ejercicios Resueltos, Propuesto 4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La recta L: x - 2y + 4 = 0 intersecta a la parábola P: y^2 = 4px en el punto (a; 4). Calcula la distancia del foco de P a la recta L.",
+      "alternatives": [
+        "3 u",
+        "sqrt(5) u",
+        "2 u",
+        "2sqrt(5) u",
+        "2sqrt(7) u"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/geometria-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "MathN Blog - Geometría Simulacro San Marcos (UNMSM DECO), Pregunta 7"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un arco parabólico tiene 20 pies de altura y 36 pies de ancho en la base. ¿A qué altura se encuentra el arco cuando el ancho es de 18 pies?",
+      "alternatives": [
+        "9 pies",
+        "20 pies",
+        "14 pies",
+        "12 pies",
+        "15 pies"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conicas-circunferencia-y-parabola.html",
+      "sourceName": "MathN Blog - Circunferencia y Parábola Problemas Resueltos, Pregunta 7"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Geometría Analítica: Cónicas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La parábola y^2 + ax + by + c = 0 tiene foco (4; 3) y directriz en el eje Y. Halla a + b + c.",
+      "alternatives": [
+        "-10",
+        "-11",
+        "10",
+        "11",
+        "12"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conicas-circunferencia-y-parabola.html",
+      "sourceName": "MathN Blog - Circunferencia y Parábola Problemas Resueltos, Pregunta 10"
+    }
+  ]
+}

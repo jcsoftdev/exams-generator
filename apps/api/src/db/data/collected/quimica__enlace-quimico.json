@@ -1,0 +1,104 @@
+{
+  "entries": [
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Cuando la diferencia de electronegatividades entre los átomos que forman un enlace es mayor a 1,7, generalmente se trata de un enlace:",
+      "alternatives": [
+        "Iónico",
+        "Metálico",
+        "Covalente",
+        "Covalente polar",
+        "Covalente no polar"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/enlace-quimico-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Enlace químico - ejercicios resueltos de examen de admisión (matematicasn), ejercicio 3"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen las siguientes sustancias: SO2(g), CaO(s) y Au(s). Considerando las electronegatividades Ca=1,0; O=3,5; S=2,6; Au=2,5; seleccione la alternativa que contenga, respectivamente, el tipo de enlace presente en cada una: (a) SO2(g) (b) CaO(s) (c) Au(s).",
+      "alternatives": [
+        "Metálico - iónico - covalente",
+        "Iónico - covalente - covalente",
+        "Covalente - metálico - iónico",
+        "Covalente - iónico - metálico"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/enlace-quimico-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Enlace químico - ejercicios resueltos de examen de admisión (matematicasn), ejercicio 5"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a los compuestos iónicos, la proposición incorrecta es:",
+      "alternatives": [
+        "Son sólidos a temperatura ambiente.",
+        "Fundidos son buenos conductores eléctricos.",
+        "Son solubles en agua.",
+        "Presentan bajos puntos de fusión comparados con los compuestos covalentes.",
+        "En soluciones acuosas son buenos conductores eléctricos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/enlace-quimico-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Enlace químico - ejercicios resueltos de examen de admisión (matematicasn), ejercicio 12"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto de los metales, seleccione la alternativa que contenga a la(s) proposición(es) correcta(s).\nI. A condiciones ambientales son sólidos a excepción del mercurio.\nII. Su enlace se presenta entre los cationes y los electrones deslocalizados.\nIII. La mayoría son dúctiles, maleables y presentan brillo metálico.",
+      "alternatives": [
+        "Solo II",
+        "Solo II y III",
+        "Solo III",
+        "I, II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/enlace-quimico-ejemplos-problemas-resueltos-de-examen-admision-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Enlace químico - ejercicios resueltos de examen de admisión (matematicasn), ejercicio 9"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El enunciado que corresponde a un enlace iónico es:",
+      "alternatives": [
+        "Con este enlace se forman compuestos moleculares.",
+        "Las sustancias que lo presentan son sólidos cristalinos.",
+        "La transferencia de electrones se produce desde el no metal al metal.",
+        "La diferencia de electronegatividad suele ser menor de 1,9.",
+        "El elemento de mayor electronegatividad pierde electrones."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://es.slideshare.net/slideshow/prctica-n-5-enlace-quimico/16243595",
+      "sourceName": "CEPRE UNMSM - Práctica N° 5: Enlace Químico, pregunta 5"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Enlace químico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto al enlace químico, marque la alternativa correcta según la secuencia verdadero (V) o falso (F):\nI. Es la unión entre los átomos y se debe a los electrones de valencia.\nII. En su formación los átomos ganan, pierden o comparten sus electrones de valencia.\nIII. Puede ser interatómico e intermolecular.",
+      "alternatives": [
+        "VFV",
+        "VVF",
+        "FVF",
+        "VFF",
+        "VVV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://es.slideshare.net/slideshow/prctica-n-5-enlace-quimico/16243595",
+      "sourceName": "CEPRE UNMSM - Práctica N° 5: Enlace Químico, práctica domiciliaria pregunta 1"
+    }
+  ]
+}

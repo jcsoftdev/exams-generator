@@ -1,0 +1,158 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un bloque de 1 kg se mueve con rapidez constante V. Si su energía cinética es 32 J, determine el valor de \"V\".",
+      "alternatives": ["4 m/s", "6 m/s", "7 m/s", "8 m/s", "4√2 m/s"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 1 (Clave: D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un móvil es lanzado. Calcule su energía cinética cuando su rapidez es igual a 2 m/s, sabiendo que su masa es 2 kg.",
+      "alternatives": ["2 J", "3 J", "4 J", "8 J", "1 J"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 5 (Clave: C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una pelota es lanzada hacia abajo con una rapidez inicial de 5 m/s; su masa es 2 kg. Determine su energía cinética en ese instante.",
+      "alternatives": ["20 J", "50 J", "25 J", "100 J", "75 J"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 7 (Clave: C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una pelota se encuentra a 5 m de altura y tiene una masa de 2 kg. Calcule su energía potencial gravitatoria respecto al piso. (g = 10 m/s²)",
+      "alternatives": ["50 J", "75 J", "100 J", "125 J", "150 J"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 9 (Clave: C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una piedra de 1 kg es lanzada verticalmente hacia arriba y alcanza una altura de 5 m. Calcule su energía potencial gravitatoria respecto al piso en ese punto. (g = 10 m/s²)",
+      "alternatives": ["25 J", "30 J", "40 J", "50 J", "60 J"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 10 (Clave: D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una caja de cereal de 250 g es lanzada verticalmente hacia arriba con una rapidez de 10 m/s. Calcule su energía cinética en ese instante.",
+      "alternatives": ["25 J", "12,5 J", "15 J", "20 J", "30 J"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 11 (Clave: B)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Dos pelotas de 1 kg son lanzadas hacia arriba; una asciende 10 m y la otra 9 m. Calcule la energía potencial gravitatoria de la más alta respecto a su punto de lanzamiento. (g = 10 m/s²)",
+      "alternatives": ["10 J", "90 J", "100 J", "50 J", "190 J"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 12 (Clave: C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una naranja está a punto de caer de la rama de un árbol ubicada a 10 cm del piso; su masa es 100 g. Calcule su energía potencial gravitatoria respecto al piso. (g = 10 m/s²)",
+      "alternatives": ["100 J", "50 J", "1 J", "5 J", "0,1 J"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 13 (Clave: E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una piedra es soltada desde cierta altura. Luego de caer, su rapidez es 4 m/s; su masa es 2 kg. Calcule su energía cinética en ese instante.",
+      "alternatives": ["8 J", "10 J", "12 J", "18 J", "16 J"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 14 (Clave: E)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una piedra de 1 kg es soltada desde una torre de 80 m. Calcule su energía potencial gravitatoria a la mitad de su recorrido (40 m de altura), respecto al piso. (g = 10 m/s²)",
+      "alternatives": ["800 J", "600 J", "500 J", "400 J", "700 J"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 15 (Clave: D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una mosca de 10 g se encuentra a 40 m de altura. Calcule su energía potencial gravitatoria respecto al piso. (g = 10 m/s²)",
+      "alternatives": ["20 J", "10 J", "5 J", "4 J", "3 J"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 17 (Clave: D)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una maceta ubicada a 10 m de altura tiene una masa de 2 kg. Calcule su energía potencial gravitatoria respecto al piso. (g = 10 m/s²)",
+      "alternatives": ["100 J", "150 J", "200 J", "125 J", "250 J"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 19 (Clave: C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Desde un malecón de 40 m de altura se lanza una piedra con una velocidad de 50 m/s. Despreciando la fricción del aire, determine con qué velocidad impacta en el agua. (g = 10 m/s²)",
+      "alternatives": ["52 m/s", "53,41 m/s", "57,44 m/s", "62,82 m/s", "60 m/s"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/energia-mecanica-ejemplos-problemas-resueltos-de-cinetica-potencial-elastica-fisica-secundaria-y-preuniversitaria-pdf.html",
+      "sourceName": "matematicasn - Energía mecánica, práctica preuniversitaria, problema 20 (Clave: C)"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Trabajo, energía y potencia",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un objeto se desliza sobre una superficie horizontal con una rapidez inicial de 8 m/s. Si el coeficiente de rozamiento cinético con la superficie es μ = 0,2, ¿qué distancia recorre hasta detenerse? (g = 10 m/s²)",
+      "alternatives": ["12 m", "16 m", "24 m", "8 m", "32 m"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/teorema-del-trabajo-y-la-energia-cinetica-ejemplos-problemas-resueltos-de-fisica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn - Teorema del trabajo y la energía cinética, problema 6 (Clave: B)"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la temperatura a la cual la lectura de un termómetro Fahrenheit es exactamente el doble de la lectura Celsius.",
+      "alternatives": ["300 °F", "320 °F", "320 °C", "400 °C", "160 °F"],
+      "correctAnswer": "1",
+      "sourceUrl": "http://fisica-s.blogspot.com/2013/02/temperatura-dilatacion-y-calorimetria.html",
+      "sourceName": "fisica-s.blogspot.com - Temperatura, Dilatación y Calorimetría, Problema 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "300 g de vapor de agua a 100 °C se enfrían hasta convertirse en hielo a 0 °C. ¿Qué cantidad de calor (en kcal) se le debe extraer?",
+      "alternatives": ["180", "196", "216", "226", "230"],
+      "correctAnswer": "2",
+      "sourceUrl": "http://fisica-s.blogspot.com/2013/02/temperatura-dilatacion-y-calorimetria.html",
+      "sourceName": "fisica-s.blogspot.com - Temperatura, Dilatación y Calorimetría, Problema 11"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen 40 g de hielo a -20 °C. ¿Cuántos gramos de agua a 100 °C se necesitan para obtener finalmente un equilibrio térmico a 0 °C?",
+      "alternatives": ["18 g", "20 g", "30 g", "36 g", "42 g"],
+      "correctAnswer": "3",
+      "sourceUrl": "http://fisica-s.blogspot.com/2013/02/temperatura-dilatacion-y-calorimetria.html",
+      "sourceName": "fisica-s.blogspot.com - Temperatura, Dilatación y Calorimetría, Problema 12"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un proyectil penetra en una pared a 200 m/s. Si el 20% de su energía cinética se transforma en calor y su calor específico es 400 J/(kg·°C), determine el aumento de temperatura del proyectil.",
+      "alternatives": ["5 °C", "6 °C", "9 °C", "10 °C", "11 °C"],
+      "correctAnswer": "3",
+      "sourceUrl": "http://fisica-s.blogspot.com/2013/02/temperatura-dilatacion-y-calorimetria.html",
+      "sourceName": "fisica-s.blogspot.com - Temperatura, Dilatación y Calorimetría, Problema 19"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se tiene 500 g de un metal cuyo calor específico es 0,4 cal/(g·°C), que se encuentra a 20 °C. Si se le calienta hasta 220 °C, determine el calor ganado por dicho metal (en kcal).",
+      "alternatives": ["80", "20", "40", "60", "30"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "400 g de agua son calentados desde 35 °C hasta 85 °C. Determine la cantidad de calor ganado por el agua (en kcal).",
+      "alternatives": ["10", "25", "20", "15", "30"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un cuerpo tiene una capacidad calorífica de 200 cal/°C. Si se le entrega 4000 cal en forma de calor, determine en cuánto variará su temperatura.",
+      "alternatives": ["30 °C", "25 °C", "20 °C", "40 °C", "45 °C"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un cuerpo posee capacidad calorífica de 4 cal/°C. Calcule la cantidad de calor absorbido (en cal) cuando su temperatura aumenta en 25 °C.",
+      "alternatives": ["20", "200", "180", "100", "160"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Halle la capacidad calorífica (en cal/°C) del plomo, si su calor específico es 0,03 cal/(g·°C) y su masa es 0,5 kg.",
+      "alternatives": ["10", "20", "25", "15", "30"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se tienen 200 g de agua a 40 °C inicialmente, a los cuales se les entregan 6 kcal de calor. Determine la temperatura final del agua.",
+      "alternatives": ["50 °C", "70 °C", "80 °C", "40 °C", "90 °C"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 7"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué cantidad de calor (en kcal) debe perder un litro de agua a 90 °C para disminuir su temperatura hasta la tercera parte?",
+      "alternatives": ["60", "20", "25", "120", "30"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 9"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una sustancia y un depósito, en conjunto, tienen una capacidad calorífica de 4000 cal/°C y se encuentran inicialmente a 10 °C. Si se les entregan 80 kcal, ¿cuál será la temperatura final del conjunto?",
+      "alternatives": ["40 °C", "25 °C", "20 °C", "30 °C", "15 °C"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 10"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué cantidad de calor (en kcal) debe perder 500 g de un líquido (Ce = 0,8 cal/(g·°C)) a 80 °C para disminuir su temperatura hasta la mitad?",
+      "alternatives": ["18", "48", "32", "16", "24"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 11"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un litro de agua a 20 °C gana 30 kcal de calor, ¿cuál es su temperatura final?",
+      "alternatives": ["50 °C", "25 °C", "20 °C", "40 °C", "45 °C"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 13"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cierto metal de capacidad calorífica 200 cal/°C está a 20 °C, si el metal gana 10 kcal de calor, ¿cuál es su temperatura final?",
+      "alternatives": ["70 °C", "35 °C", "80 °C", "55 °C", "90 °C"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 17"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un litro de agua a 90 °C pierde 50 kcal de calor, ¿cuál es su temperatura final?",
+      "alternatives": ["40 °C", "25 °C", "20 °C", "60 °C", "45 °C"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 19"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cierto metal de capacidad calorífica 300 cal/°C está a 90 °C, si pierde 15 kcal de calor, ¿cuál es su temperatura final?",
+      "alternatives": ["30 °C", "25 °C", "20 °C", "40 °C", "45 °C"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 20"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando un litro de agua pierde 80 kcal de calor termina a una temperatura de 10 °C, ¿cuál fue su temperatura inicial?",
+      "alternatives": ["80 °C", "75 °C", "85 °C", "70 °C", "90 °C"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 23"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un clavo de 50 g se encuentra a 15 °C y es raspado con una lija durante cierto tiempo. Si se observa que dicho clavo alcanzó una temperatura de 75 °C, determine cuánto calor (en cal) ganó por el raspado. (Ce_clavo = 0,10 cal/(g·°C))",
+      "alternatives": ["120", "150", "180", "300", "600"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 29"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una cadena de oro tiene una masa de 100 g y se encuentra a 25 °C. Determine la cantidad de calor (en kcal) que debe absorber para calentarse hasta 1025 °C. (Ce_Au = 0,03 cal/(g·°C))",
+      "alternatives": ["4", "5", "6", "2", "3"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 36"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos litros de agua son sometidos a un proceso de calentamiento, recibiendo 120 kcal, si su temperatura inicial era de 20 °C. ¿Cuál será su temperatura final?",
+      "alternatives": ["80 °C", "75 °C", "85 °C", "70 °C", "90 °C"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 38"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Temperatura, calorimetría y fenómenos térmicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si se disipara 1 kW de energía mecánica para agitar el agua contenida en un recipiente, ¿qué cantidad de calor (en kcal) se le habrá proporcionado al cabo de 1 minuto?",
+      "alternatives": ["10,1", "12,2", "14,4", "18,6", "21,2"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2026/02/calor-sensible-especifico-capacidad-calorifica-ejemplos-problemas-resueltos-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "matematicasn.blogspot.com - Calor: calor específico y capacidad calorífica, Ejercicio 41"
+    }
+  ]
+}

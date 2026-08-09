@@ -1,0 +1,1396 @@
+{
+  "entries": [
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Dada la siguiente proposición: \"Si haces ejercicios, entonces mejorarás\". Indique el tipo a la que pertenece.",
+      "alternatives": [
+        "predicativas",
+        "relacionales",
+        "atómicas",
+        "moleculares",
+        "simples"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/logica-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn - Lógica: preguntas resueltas de examen de admisión a la universidad, Pregunta 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cómo se denomina en lógica formal a la proposición que es verdadera si por lo menos una de las dos variables es verdadera?",
+      "alternatives": [
+        "Conjuntiva",
+        "Bicondicional",
+        "Disyuntiva exclusiva",
+        "Condicional",
+        "Disyuntiva inclusiva"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/logica-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn - Lógica: preguntas resueltas de examen de admisión a la universidad, Pregunta 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la lógica proposicional, un ejemplo de proposición conjuntiva es:",
+      "alternatives": [
+        "La región Chavín no limita con Loreto.",
+        "El Perú, o exporta trigo o exporta arroz.",
+        "El agua se congela si la temperatura está bajo cero.",
+        "Si el sol brilla, el viento silba.",
+        "El cielo está nublado, sin embargo hace calor."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/logica-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn - Lógica: preguntas resueltas de examen de admisión a la universidad, Pregunta 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es una función de verificación de los conectores lógicos que señala que la función es \"verdadera\" cuando por lo menos uno de sus componentes es verdadero y \"falsa\" solo si los dos son falsos.",
+      "alternatives": [
+        "Conjunción",
+        "Disyuntiva débil o inclusiva",
+        "Disyuntiva fuerte o exclusiva",
+        "Condicional",
+        "Negación"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/logica-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn - Lógica: preguntas resueltas de examen de admisión a la universidad, Pregunta 8"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la proposición molecular.",
+      "alternatives": [
+        "La Lógica es distinta a las Matemáticas.",
+        "Deberías ser más prudente.",
+        "El número 124 468 es par.",
+        "Juan, María y Susy son hermanos.",
+        "Si dos ángulos adyacentes forman un par lineal, entonces son suplementarios."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn - Lógica Proposicional ejercicios resueltos, Pregunta 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una tautología es la proposición cuya negación es:",
+      "alternatives": [
+        "posible",
+        "relativamente falsa",
+        "necesariamente falsa",
+        "válida",
+        "verdadera"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn - Lógica Proposicional ejercicios resueltos, Pregunta 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La forma lógica [(H → I) ∧ I] → H corresponde a un razonamiento que es:",
+      "alternatives": [
+        "deductivo, por permitir una matriz tautológica.",
+        "falaz, por dar lugar a una matriz contingente.",
+        "retórico, por derivar en una matriz contradictoria.",
+        "sofístico, por corresponderse con el modus ponens.",
+        "válido, por corresponderse con una tautología."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn - Lógica Proposicional ejercicios resueltos, Pregunta 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son ejemplos de proposiciones lógicas:\n1. Fue emocionante la final de \"Bailando por un sueño\"\n2. Las glándulas endocrinas segregan las hormonas\n3. El chimpancé es un primate placentario\n4. Pronto estaré en el pueblo en que nací\n5. El acero es una aleación de hierro y carbono\nNo son ciertas:",
+      "alternatives": [
+        "1, 2 y 3",
+        "1, 4 y 5",
+        "2, 3 y 5",
+        "solo 1 y 4",
+        "solo 2 y 5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn - Lógica Proposicional problemas resueltos preuniversitarios, Pregunta 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si la proposición (p ∧ q) → (q ∆ ~r) es falsa, halle el valor de verdad de p, q y r.",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "VVF",
+        "VFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn - Lógica Proposicional problemas resueltos preuniversitarios, Pregunta 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Piero le dice a su hermana Camila \"es falso que no aprobé el examen de matemática\", entonces se concluye que:",
+      "alternatives": [
+        "Piero desaprobó el examen de matemáticas",
+        "Piero no dio el examen",
+        "Piero aprobó el examen de matemática",
+        "El examen era muy difícil"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn - Lógica Proposicional problemas resueltos preuniversitarios, Pregunta 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En relación al concepto de lógica, se presentan las siguientes proposiciones:\nI. Es el estudio formal de la inferencia\nII. Es la ciencia de la validez formal\nIII. Es el estudio del conocimiento científico\nIndique la alternativa verdadera:",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "I y II",
+        "II y III",
+        "I, II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn - Lógica Proposicional problemas resueltos preuniversitarios, Pregunta 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Expresa por extensión el conjunto: A = { x² + 1 / x ∈ ℤ ∧ 4 ≤ x < 9 }",
+      "alternatives": [
+        "{16, 25, 36, 49, 64}",
+        "{15, 24, 35, 48, 63}",
+        "{4, 5, 6, 7, 8}",
+        "{27, 36, 47, 60, 68}",
+        "{17, 26, 37, 50, 65}"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/teoria-de-conjuntos-ejercicios.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos ejercicios resueltos, Pregunta 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina por extensión el siguiente conjunto: A = { x² + 1 / x ∈ ℤ ∧ –3 < x ≤ 4 }. Dar como respuesta la suma de sus elementos.",
+      "alternatives": [
+        "43",
+        "18",
+        "35",
+        "38",
+        "42"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/teoria-de-conjuntos-ejercicios.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos ejercicios resueltos, Pregunta 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si el siguiente conjunto es unitario: H = { a+15 ; b² –4 ; 45 }, calcula (a + b).",
+      "alternatives": [
+        "33",
+        "24",
+        "25",
+        "50",
+        "37"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/teoria-de-conjuntos-ejercicios.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos ejercicios resueltos, Pregunta 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados los conjuntos unitarios: A = {3a + 1; 7}, B = {3; b+c}, C = {2; bc}, donde b > c, calcula: a – 2b + 3c",
+      "alternatives": [
+        "2",
+        "1",
+        "3",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/teoria-de-conjuntos-ejercicios.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos ejercicios resueltos, Pregunta 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados los conjuntos unitarios: P = {x+y ; 8}, Q = {y+z ; 10}, S = {x+z ; 12}, calcula: (x + y + z)",
+      "alternatives": [
+        "10",
+        "15",
+        "20",
+        "25",
+        "30"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/teoria-de-conjuntos-ejercicios.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos ejercicios resueltos, Pregunta 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si los conjuntos A y B son iguales: A = {n²+1 ; –6}, B = {2–m ; 10}, halla \"m + n\".",
+      "alternatives": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/teoria-de-conjuntos-ejercicios.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos ejercicios resueltos, Pregunta 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un aula hay 60 alumnos: a 7 no les gusta ni geometría ni aritmética, a 35 les gusta solo aritmética, y los que les gusta ambos cursos son 10. ¿A cuántos les gusta solo geometría?",
+      "alternatives": [
+        "18",
+        "12",
+        "9",
+        "10",
+        "8"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/teoria-de-conjuntos-ejercicios.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos ejercicios resueltos, Pregunta 7"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De los 31 días del mes de Julio, José salió con María 18 días y con Rosa salió 20 días. ¿Cuántos días salió con las dos?",
+      "alternatives": [
+        "1",
+        "7",
+        "9",
+        "5",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/teoria-de-conjuntos-ejercicios.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos ejercicios resueltos, Pregunta 8"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un salón se encuentran 52 alumnos, de los cuales 30 son hombres. 12 mujeres no tienen 18 años. Si 30 personas tienen 18 años, ¿cuántos hombres tienen 18 años?",
+      "alternatives": [
+        "10",
+        "12",
+        "22",
+        "20",
+        "30"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conjuntos-problemas-con-respuestas-de.html",
+      "sourceName": "matematicasn - Conjuntos problemas con respuestas preuniversitarios, Problema 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De 150 personas encuestadas: 70 son mujeres, 85 personas beben café, 18 mujeres no beben café. ¿Cuántos hombres no beben café?",
+      "alternatives": [
+        "35",
+        "33",
+        "47",
+        "51",
+        "29"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conjuntos-problemas-con-respuestas-de.html",
+      "sourceName": "matematicasn - Conjuntos problemas con respuestas preuniversitarios, Problema 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La proposición \"Raúl y César son hermanos\" es:",
+      "alternatives": [
+        "atómica y predicativa",
+        "molecular y conjuntiva",
+        "atómica y relacional",
+        "molecular y afirmativa",
+        "molecular y predicativa"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/logica-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn - Lógica: preguntas resueltas de examen de admisión a la universidad, Pregunta 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El objeto de estudio de la lógica formal es:",
+      "alternatives": [
+        "El lenguaje cotidiano",
+        "El proceso cognoscitivo",
+        "La inferencia",
+        "El propósito último del universo",
+        "El pensamiento en niveles subjetivos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/logica-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "matematicasn - Lógica: preguntas resueltas de examen de admisión a la universidad, Pregunta 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición (p ∨ q) → (∼p ∧ q) es equivalente a:",
+      "alternatives": [
+        "p",
+        "∼p",
+        "q",
+        "∼q",
+        "p ∧ q"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/05/logica-proposicional.html",
+      "sourceName": "Blog del Profe Alex - Lógica Proposicional, Ejercicio 07"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "\"Si viene en tren, llegará antes de las seis. Si viene en auto, llegará antes de las seis. Por lo tanto, ya sea que venga en tren o en auto, llegará antes de las seis.\" Formalice este argumento:",
+      "alternatives": [
+        "[p ∧ (r → q)] → [(p ∨ r) → q]",
+        "[(p → q) → (r → q)] → (p ∨ r → q)",
+        "(p → q) ∧ (r → q) → (p ∨ r) ∧ q",
+        "[(p ∧ q) ∧ (r → q)] → [(p ∨ r) → p]",
+        "[(p → q) ∧ (r → q)] → [(p ∨ r) → q]"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/05/logica-proposicional.html",
+      "sourceName": "Blog del Profe Alex - Lógica Proposicional, Ejercicio 02"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina cuáles de las siguientes proposiciones son lógicamente equivalentes (V=verdadero, F=falso):\nI. (p ∧ ∼q) es equivalente a ∼(∼p ∨ q)\nII. (∼p ∧ r) → q es equivalente a p ∨ ∼r ∨ q\nIII. p → q es equivalente a ∼p ∧ q",
+      "alternatives": [
+        "VVF",
+        "VVV",
+        "FFV",
+        "FVF",
+        "VFV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/05/logica-proposicional.html",
+      "sourceName": "Blog del Profe Alex - Lógica Proposicional, Ejercicio 09"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál o cuáles de las siguientes proposiciones es siempre falsa?\nA. [∼(p ∧ q) → p] ∧ ∼p\nB. (∼p → q) ↔ ∼(p → q)\nC. ∼[∼(p → q) → (p ∨ ∼q)]",
+      "alternatives": [
+        "Solo A",
+        "Solo B",
+        "Solo C",
+        "A y B",
+        "A y C"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/05/logica-proposicional.html",
+      "sourceName": "Blog del Profe Alex - Lógica Proposicional, Ejercicio 11"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Ningún científico es ingeniero. Muchos católicos son científicos.\" ¿Qué conclusión se obtiene?",
+      "alternatives": [
+        "Todo católico no es ingeniero",
+        "Ningún ingeniero es católico",
+        "Muchos católicos son teólogos",
+        "Todo ingeniero no es católico",
+        "Algunos católicos no son ingenieros"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Pregunta 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Si ningún animal furioso ataca al hombre y todos los perros son animales furiosos.\" ¿Qué concluye?",
+      "alternatives": [
+        "Algunos perros no son furiosos",
+        "Algunos perros no atacan al hombre",
+        "Ningún perro ataca al hombre",
+        "Ningún perro deja de atacar al hombre",
+        "Todos los perros atacan al hombre"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Pregunta 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La negación de \"Todas estas preguntas son difíciles\" es:",
+      "alternatives": [
+        "Todas estas preguntas son fáciles",
+        "Ninguna de estas preguntas es difícil",
+        "Algunas de estas preguntas no son fáciles",
+        "Algunas de estas preguntas son difíciles",
+        "Algunas de estas preguntas no son difíciles"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Pregunta 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Ninguna persona que toma mate toma café y algunas personas que toman té toman café.\" ¿Qué se concluye?",
+      "alternatives": [
+        "Ninguna persona que toma té toma mate",
+        "Todas las personas que toman mate toman té",
+        "Algunas personas que toman mate toman café",
+        "Algunas personas que toman té no toman mate",
+        "Todas las personas que toman café toman té"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Pregunta 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La proposición equivalente a \"Todas las películas de ciencia ficción son irreales\" es:",
+      "alternatives": [
+        "Ninguna película de ciencia ficción es real",
+        "Algunas películas de ciencia ficción son reales",
+        "Algunas películas de ciencia ficción son irreales",
+        "No todas las películas de ciencia ficción son reales",
+        "Todas las películas de ciencia ficción no son reales"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Pregunta 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Los jóvenes son preuniversitarios. Cada adolescente es un joven.\" Indique la(s) proposición(es) verdadera(s):\nI) Ningún adolescente es preuniversitario\nII) No existe preuniversitario que sea adolescente\nIII) Todos los adolescentes son preuniversitarios",
+      "alternatives": [
+        "solo I",
+        "solo II",
+        "solo III",
+        "I y II",
+        "II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Pregunta 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Ningún científico admite la clonación de seres humanos, pero algunos aficionados a la ciencia ficción la admiten.\" ¿Qué se concluye?",
+      "alternatives": [
+        "Todos los aficionados a la ciencia ficción son científicos",
+        "Ningún científico es aficionado a la ciencia ficción",
+        "Algunos aficionados a la ciencia ficción no son científicos",
+        "Todos los científicos son aficionados a la ciencia ficción",
+        "Ningún aficionado a la ciencia ficción es científico"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Pregunta 7"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La negación de \"Algunos científicos no son románticos\" es:",
+      "alternatives": [
+        "Algunos científicos son románticos",
+        "Ningún científico es romántico",
+        "Todos los científicos son románticos",
+        "Todos los científicos no son románticos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Pregunta 8"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La negación de \"Ningún matemático es distraído\" es:",
+      "alternatives": [
+        "Al menos un matemático no es distraído",
+        "Al menos un matemático es distraído",
+        "Todos los matemáticos son distraídos",
+        "Todos los matemáticos no son distraídos"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Pregunta 9"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Algunas personas son corruptas. Todo corrupto es ruin. Todo ruin es mediocre.\" ¿Qué se concluye?",
+      "alternatives": [
+        "Algunas personas son mediocres",
+        "Algunas personas son no mediocres",
+        "Algunos no corruptos son mediocres",
+        "Alguien que no es ruin es mediocre",
+        "Algunas personas no son corruptas"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Pregunta 11"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Todos los futbolistas son ricos. Todos los artistas son personas alegres. Si Oscar es futbolista y todas las personas alegres no son ricas\", ¿qué se concluye?",
+      "alternatives": [
+        "Algunos artistas son ricos",
+        "Algunos futbolistas son alegres",
+        "Oscar es alegre",
+        "Oscar no es artista",
+        "Oscar es artista"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Pregunta 12"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La negación de \"Algún poeta es bohemio\" es:",
+      "alternatives": [
+        "Todo poeta es bohemio",
+        "Todo bohemio es poeta",
+        "Algún poeta no es bohemio",
+        "Todo poeta es no bohemio"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Práctica Pregunta 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Algunos peruanos son deportistas. Todo deportista es un buen orador.\" ¿Qué concluimos?",
+      "alternatives": [
+        "Algunos buenos oradores no son peruanos",
+        "Ningún peruano es orador",
+        "Algunos peruanos son buenos oradores",
+        "Todos los buenos oradores son deportistas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Práctica Pregunta 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Todos los libros son grandes tesoros. Todos los grandes tesoros son invaluables.\" Se concluye:",
+      "alternatives": [
+        "Algunos libros no son grandes tesoros",
+        "Todos los libros son invaluables",
+        "Los libros invaluables no son grandes",
+        "Los grandes tesoros no son buenos libros"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Práctica Pregunta 10"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Todos los alumnos son autodidactas. Todos los autodidactas son creativos.\" (\"Algunos alumnos son autodidactas. Todos los autodidactas son creativos.\") ¿Qué se concluye?",
+      "alternatives": [
+        "Todo alumno es creativo",
+        "Ningún alumno es creativo",
+        "Algunos alumnos son creativos",
+        "Los alumnos no son creativos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Práctica Pregunta 16"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "\"Si todos los A son B, y algunos C no son B\", ¿qué se concluye necesariamente?",
+      "alternatives": [
+        "Algunos A son C",
+        "Algunos B son C",
+        "Algunos C no son A",
+        "Algunos A no son C",
+        "Todos los A son C"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Práctica Pregunta 19"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "\"Si todos los aviadores son intrépidos, y ningún intrépido es fatalista\", ¿qué se concluye?",
+      "alternatives": [
+        "Algún fatalista es aviador",
+        "Ningún fatalista es aviador",
+        "Algún fatalista no es aviador",
+        "Algún aviador no es fatalista",
+        "Todos los fatalistas son aviadores"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Práctica Pregunta 20"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la negación de: ∃x ∈ ℝ / x² – x = 0",
+      "alternatives": [
+        "∀x ∈ ℝ: x² – x = 0",
+        "∃x ∈ ℝ: x² – x < 0",
+        "∀x ∈ ℝ: x² – x ≠ 0",
+        "∀x ∈ ℝ: x² – x < 0"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/leyes-algebra-proposicional-ejercicios.html",
+      "sourceName": "matematicaj - Leyes Álgebra Proposicional Ejercicios, Pregunta 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla la negación de: ∀x ∈ ℝ: x + 4 > 0",
+      "alternatives": [
+        "∀x ∈ ℝ: x + 4 = 0",
+        "∃x ∈ ℝ / x + 4 > 0",
+        "∃x ∈ ℝ / x + 4 < 0",
+        "∀x ∈ ℝ: x + 4 ≤ 0",
+        "∃x ∈ ℝ / x + 4 ≤ 0"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/leyes-algebra-proposicional-ejercicios.html",
+      "sourceName": "matematicaj - Leyes Álgebra Proposicional Ejercicios, Pregunta 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Niega la proposición: \"Para todo x real, existe y real tal que: x·y ≥ 0\"",
+      "alternatives": [
+        "∃x ∈ ℝ; ∃y ∈ ℝ: x·y < 0",
+        "∃x ∈ ℝ; ∀y ∈ ℝ: x·y = 0",
+        "∀x ∈ ℝ; ∃y ∈ ℝ: x·y < 0",
+        "∀x ∈ ℝ, ∀y ∈ ℝ: x·y < 0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2018/11/leyes-algebra-proposicional-ejercicios.html",
+      "sourceName": "matematicaj - Leyes Álgebra Proposicional Ejercicios, Pregunta 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Formaliza la proposición: \"Si te esfuerzas por ser profesional, entonces triunfas; sin embargo no te esfuerzas por ser profesional.\"",
+      "alternatives": [
+        "(p → q) ∧ ∼p",
+        "p → (q ∧ ∼r)",
+        "(p → q) ∧ (p ∨ q)",
+        "(p → q) ∧ ∼r",
+        "(p → q) ∧ p"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn - Lógica Proposicional problemas resueltos examen admisión, Problema 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: [(¬p ∧ q) → (r ∧ ¬s)] ∧ ¬q",
+      "alternatives": [
+        "¬p",
+        "¬q",
+        "p",
+        "q",
+        "p ∧ q"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn - Lógica Proposicional problemas resueltos examen admisión, Problema 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La proposición: \"Mi padre es cirujano, pero mi hermano no es abogado; entonces mi hermano es abogado o yo no soy matemático\" es falsa. Determine los valores de verdad de cada proposición componente en el orden indicado.",
+      "alternatives": [
+        "VFVF",
+        "VFFF",
+        "VVFF",
+        "VVVF",
+        "VVFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/logica-proposicional-ejercicios.html",
+      "sourceName": "matematicasn - Lógica Proposicional problemas resueltos examen admisión, Problema 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si los conjuntos P y Q son unitarios: P = {a²+2a ; b³–b}, Q = {15 ; 2a}. Halla a·b (a, b naturales).",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/teoria-de-conjuntos-problemas-resueltos.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos problemas resueltos, Pregunta 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determina por extensión: R = {x³ – x / x ∈ ℕ ; x < 4}. Halla la suma de sus elementos.",
+      "alternatives": [
+        "10",
+        "20",
+        "30",
+        "40",
+        "50"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/teoria-de-conjuntos-problemas-resueltos.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos problemas resueltos, Pregunta 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuántos subconjuntos tiene C = {x²+1 / x ∈ ℕ ; –3 < x ≤ 4}?",
+      "alternatives": [
+        "20",
+        "30",
+        "32",
+        "64",
+        "16"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/teoria-de-conjuntos-problemas-resueltos.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos problemas resueltos, Pregunta 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado n(S) – n(T) = 3 y que S ∪ T tiene 2304 subconjuntos. Halla n(S) + n(T).",
+      "alternatives": [
+        "13",
+        "15",
+        "17",
+        "19",
+        "21"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/teoria-de-conjuntos-problemas-resueltos.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos problemas resueltos, Pregunta 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si n(A ∪ B) = 30, n(A – B) = 12, n(B – A) = 8, halla 5[n(A)] – 4[n(B)].",
+      "alternatives": [
+        "38",
+        "60",
+        "48",
+        "70",
+        "100"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/teoria-de-conjuntos-problemas-resueltos.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos problemas resueltos, Pregunta 9"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados A = {1, 2, 3, 4}, B = {2, 4, 6}, C = {2, 3, 4}. Halla el número de elementos de E = [(A–B) ∪ (A–C)] ∪ [(B–C) ∪ (B–A)].",
+      "alternatives": [
+        "5",
+        "3",
+        "4",
+        "2",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/teoria-de-conjuntos-problemas-resueltos.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos problemas resueltos, Pregunta 10"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un salón de 50 alumnos, 30 apoyan a la \"U\", 25 apoyan a CNI, 22 apoyan a ambos. ¿Cuántos no apoyan a ninguno?",
+      "alternatives": [
+        "15",
+        "17",
+        "17",
+        "18",
+        "19"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/teoria-de-conjuntos-problemas-resueltos.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos problemas resueltos, Pregunta 11"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una encuesta de idiomas: 46 hablan francés, 36 hablan alemán, 27 hablan español; 19 hablan francés y alemán; 8 hablan francés y español; 10 hablan español y alemán; 3 hablan los tres idiomas. ¿Cuántos fueron encuestados en total?",
+      "alternatives": [
+        "100",
+        "84",
+        "86",
+        "74",
+        "75"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/teoria-de-conjuntos-problemas-resueltos.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos problemas resueltos, Pregunta 13"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, B = {3, 6, 9}, C = {5, 10}. Halla el complemento de B ∪ C.",
+      "alternatives": [
+        "{1, 2, 3, 4, 8}",
+        "{1, 2, 4, 7, 8}",
+        "{2, 4, 5, 7, 8}",
+        "{4, 8}",
+        "{1, 2, 7}"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/operaciones-con-conjuntos-ejercicios.html",
+      "sourceName": "matematicasn - Operaciones con Conjuntos ejercicios resueltos, Problema 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De dos conjuntos A y B se sabe que n(A ∪ B) = 16, n(A – B) = 5, n(B – A) = 8. Halla n(A) + n(B).",
+      "alternatives": [
+        "19",
+        "18",
+        "16",
+        "14",
+        "8"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/operaciones-con-conjuntos-ejercicios.html",
+      "sourceName": "matematicasn - Operaciones con Conjuntos ejercicios resueltos, Problema 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si A = {(2x+3) ∈ ℤ* / 2 < x ≤ 5} y B = {4; 1; 9; 13; 17; 5}, ¿cuál es correcta?",
+      "alternatives": [
+        "n(A ∪ B) = 12",
+        "A ∩ B = ∅",
+        "n(A – B) = 0",
+        "n(B – A) = 4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/operaciones-con-conjuntos-ejercicios.html",
+      "sourceName": "matematicasn - Operaciones con Conjuntos ejercicios resueltos, Problema 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dados A = {5x–4 / x ∈ ℕ ∧ 1 ≤ x ≤ 4} y B = {2x+1 / x ∈ ℕ ∧ 3 < x < 6}. Halla A ∪ B.",
+      "alternatives": [
+        "{1, 6, 9, 16}",
+        "{1, 6, 9, 11, 16}",
+        "{6, 9, 11, 16}",
+        "{6, 11}",
+        "{9, 11}"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/operaciones-con-conjuntos-ejercicios.html",
+      "sourceName": "matematicasn - Operaciones con Conjuntos ejercicios resueltos, Problema 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si A y B son dos conjuntos incluidos en U, tales que n(A) = 12, n(B) = 16 y n(A ∩ B') = 7. Calcule n(A △ B).",
+      "alternatives": [
+        "18",
+        "20",
+        "17",
+        "16"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/operaciones-con-conjuntos-ejercicios.html",
+      "sourceName": "matematicasn - Operaciones con Conjuntos ejercicios resueltos, Problema 8"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sean A y B incluidos en U: n(A △ B) = 12, n(B') = 10, n(A – B) – n(B) = 1, n(U) = 17. Halla n(A ∩ B).",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/operaciones-con-conjuntos-ejercicios.html",
+      "sourceName": "matematicasn - Operaciones con Conjuntos ejercicios resueltos, Problema 9"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los conjuntos A y B que tienen 3 elementos comunes se inscriben en U. n(A ∪ B) + n(A ∩ B) = 33, n(A) – n(B) = 17, n(B–A) = n[(A ∪ B)^c]. Entonces n(U) es:",
+      "alternatives": [
+        "33",
+        "35",
+        "37",
+        "39",
+        "40"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/teoria-de-conjuntos-problemas-resueltos.html",
+      "sourceName": "matematicasn - Teoría de Conjuntos problemas resueltos, Pregunta 12 (variante)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuáles de los siguientes enunciados son proposiciones lógicas?\nI) El número ciento diecinueve es primo.\nII) Los números 2n, 2n+2 y 2n+4 son pares consecutivos.\nIII) Si log 10 = 1, entonces log 100 = 3.\nIV) ¿El número ciento veintiuno es cuadrado perfecto?",
+      "alternatives": [
+        "I y II",
+        "II y III",
+        "I, II y III",
+        "I y III",
+        "I y IV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn - Aritmética Pre San Marcos Semana 1 Solucionario, Pregunta 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el valor de verdad de las siguientes proposiciones, en el orden indicado:\nI) No es verdad que (5+5=10) o (6+8=12).\nII) Es falso que, si (6+6=12) entonces (7+7=13) o (4+10=14).\nIII) Si (6+8=14) entonces no es cierto que [(6+5=11) y (8+8=16)].\nIV) Si (7+3≠10) entonces [(3+3=8) ya que (6+6=12)].",
+      "alternatives": [
+        "FFFV",
+        "FFFF",
+        "FVFV",
+        "VVVV",
+        "VFFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn - Aritmética Pre San Marcos Semana 1 Solucionario, Pregunta 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La proposición \"O compro una laptop, o compro un celular. Además es falso que, si compro una laptop entonces compro una tableta gráfica\" es verdadera. Determina el valor de verdad de:\nI. Compro una laptop.\nII. Compro un celular.\nIII. Compro una tableta gráfica.",
+      "alternatives": [
+        "VVV",
+        "VVF",
+        "VFF",
+        "VFV",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn - Aritmética Pre San Marcos Semana 1 Solucionario, Pregunta 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado que el esquema molecular [(p ∨ q) → p] ∧ [(p ∧ q) → ∼p] es una contradicción, simplifica la proposición compuesta (p ∧ q) → ∼p.",
+      "alternatives": [
+        "p ∨ ∼p",
+        "p ∧ ∼p",
+        "∼p",
+        "p",
+        "p ∨ q"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn - Aritmética Pre San Marcos Semana 1 Solucionario, Pregunta 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "¿Cuál de las siguientes proposiciones es una contingencia?\nI) Juegas o no eres joven, pero eres joven; en consecuencia, juegas.\nII) Si no te gusta la fresa, entonces, te gusta la mandarina; además no te gusta la mandarina.\nIII) Joaquín estudia en la UNMSM o no trabaja, pero no vive en Jesús María. Sin embargo, trabaja y no estudia en la UNMSM.",
+      "alternatives": [
+        "Solo I",
+        "III y II",
+        "I y III",
+        "Solo II",
+        "II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn - Aritmética Pre San Marcos Semana 1 Solucionario, Pregunta 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un profesor bonificará a quien encuentre las proposiciones equivalentes entre sí:\nI) Dante recibe medalla si obtiene nota superior a 16.\nII) Es falso que Dante no recibe medalla, pero obtiene nota superior a 16.\nIII) Dante no recibe medalla, puesto que no obtiene nota superior a 16.\nIV) Dante no obtiene nota superior a 16 y recibe medalla.",
+      "alternatives": [
+        "I y II",
+        "II y III",
+        "I y III",
+        "III y IV",
+        "I, II y IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn - Aritmética Pre San Marcos Semana 1 Solucionario, Pregunta 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La proposición \"Si María viaja a Cusco o no sale de vacaciones, entonces María no viaja a Cusco ni sale de vacaciones\" es equivalente a:",
+      "alternatives": [
+        "María viaja a Cusco o sale de vacaciones",
+        "María no viaja a Cusco y no sale de vacaciones",
+        "María sale de vacaciones",
+        "María no viaja a Cusco",
+        "María no viaja a Cusco o sale de vacaciones"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn - Aritmética Pre San Marcos Semana 1 Solucionario, Pregunta 7"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En una clase de aritmética tres alumnos escribieron proposiciones:\nMiguel: \"Julia acude al dentista porque tiene dolor de muelas, pero no tiene dolor de muelas\".\nPedro: \"Si Julia tiene dolor de muelas o no acude al dentista, entonces no tiene dolor de muelas. Sin embargo, tiene dolor de muelas\".\nDiana: \"Si Julia tiene dolor de muelas entonces acude al dentista, pero no acude al dentista; si y solo si, no tiene dolor de muelas ni acude al dentista\".\n¿Quién o quiénes escribieron una tautología?",
+      "alternatives": [
+        "Pedro y Diana",
+        "Miguel y Pedro",
+        "Solo Diana",
+        "Miguel y Diana",
+        "Solo Miguel"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn - Aritmética Pre San Marcos Semana 1 Solucionario, Pregunta 8"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Karen obtuvo que \"No es cierto que, Julia estudia pero no aprueba el examen; si y solo si, no estudia. Por lo tanto, o Julia estudia o no trabaja\" es una contradicción. ¿En cuántos valores de la matriz principal se equivocó Karen (la respuesta correcta es que no es contradicción)?",
+      "alternatives": [
+        "2",
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/solucionario-manual-7-ciclo-especial.html",
+      "sourceName": "matematicasn - Aritmética Pre San Marcos Semana 1 Solucionario, Pregunta 9"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuáles de los siguientes enunciados son proposiciones lógicas?\nI. El número 1991 es primo.\nII. Una fracción propia es menor que uno.\nIII. ¡Aprobé el examen de admisión a la UNMSM!\nIV. 1! = 1 si y solo si 2! = 2",
+      "alternatives": [
+        "I y II",
+        "II y III",
+        "III y IV",
+        "I, II y III",
+        "I, II y IV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2019/01/logica-proposicional-preuniversitaria.html",
+      "sourceName": "razonamientopdf - Lógica Proposicional Preuniversitaria, Pregunta 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De un grupo de 44 alumnos se sabe que: Todos los que prefieren matemáticas prefieren también lenguaje. Los que prefieren historia no prefieren matemáticas. 8 prefieren dos cursos. ¿Cuántos prefieren un solo curso si estos son el doble de los que no prefieren ninguno de estos cursos?",
+      "alternatives": [
+        "18",
+        "24",
+        "25",
+        "36",
+        "28"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conjuntos-problemas-con-respuestas-de.html",
+      "sourceName": "matematicasn - Conjuntos problemas con respuestas preuniversitarios, Problema 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se realizó una encuesta a 150 alumnos sobre preferencia a cuatro cursos A, X, G y T obteniéndose: 20 solo A, 20 solo G, 20 solo X, 20 A y G pero no X, 6 solo G y X, 4 solo A y T, 24 T y X, 28 solo T. ¿Cuántos prefieren X, si 6 no prefieren ninguno de estos cursos?",
+      "alternatives": [
+        "48",
+        "50",
+        "52",
+        "54",
+        "58"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/conjuntos-problemas-con-respuestas-de.html",
+      "sourceName": "matematicasn - Conjuntos problemas con respuestas preuniversitarios, Problema 7"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La negación de \"Todo arquitecto es ingenioso\" es:",
+      "alternatives": [
+        "Todo ingenioso es arquitecto",
+        "Todo ingenioso no es arquitecto",
+        "Algún arquitecto no es ingenioso",
+        "Algún arquitecto es ingenioso"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Práctica Pregunta 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Ningún carnívoro muerde a su dueño. Algunos perros muerden a sus dueños.\" ¿Qué se concluye?",
+      "alternatives": [
+        "Algunos carnívoros no son perros",
+        "Ningún perro es carnívoro",
+        "Todo carnívoro es perro",
+        "Algunos perros no son carnívoro"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Práctica Pregunta 8"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Ningún educado es limeño. Todos los limeños son puntuales.\" ¿Qué se concluye?",
+      "alternatives": [
+        "Los limeños son no puntuales",
+        "Todo puntual es limeño",
+        "Algún puntual es educado",
+        "Algún puntual no es educado"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Práctica Pregunta 12"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Todo perro es mamífero. Algunos perros no son salvajes.\" ¿Qué se concluye?",
+      "alternatives": [
+        "Ningún salvaje es mamífero",
+        "Todo mamífero es salvaje",
+        "Algún no salvaje es mamífero",
+        "Ningún mamífero es no salvaje"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Práctica Pregunta 13"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "\"Algunos artistas son sensibles. Todos los sensibles son poetas. Todos los artistas son humildes.\" ¿Qué se concluye?",
+      "alternatives": [
+        "Todos los poetas son humildes",
+        "Todos los humildes son poetas",
+        "Algunos humildes son poetas",
+        "Algunos humildes no son poetas"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Práctica Pregunta 15"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Lógica Proposicional y Teoría de Conjuntos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Algunas personas son mayores de edad. Todos los mayores de edad son no infantes.\" ¿Qué se concluye?",
+      "alternatives": [
+        "Algunas personas no son infantes",
+        "Algunas personas son infantes",
+        "Algunos infantes no son personas",
+        "Los mayores de edad no son personas"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "matematicasn - Lógica de Clases ejercicios resueltos, Práctica Pregunta 17"
+    }
+  ]
+}

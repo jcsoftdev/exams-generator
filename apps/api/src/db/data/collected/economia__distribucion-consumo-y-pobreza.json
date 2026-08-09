@@ -1,0 +1,106 @@
+{
+  "entries": [
+    {
+      "courseName": "Economía",
+      "topicName": "Distribución, consumo y pobreza",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si no todo el ingreso total percibido en una economía familiar se destina al consumo, entonces se está generando un(a) __________ de recursos.",
+      "alternatives": [
+        "faltante",
+        "gasto",
+        "ahorro",
+        "dispendio",
+        "depósito"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://ecopolisperu.blogspot.com/2009/10/examen-de-admision-unmsm-solucionario.html",
+      "sourceName": "ECOPOLISPERÚ - Examen de Admisión UNMSM 2010-I, Solucionario de Economía, Pregunta 1"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Distribución, consumo y pobreza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el Perú, el consumo de los hogares ha sido una clave determinante del crecimiento económico. Según la teoría del consumo de Keynes, supongamos que el ingreso de una familia aumenta en 2000 soles y tiene una propensión marginal a consumir de 0,75; entonces se puede señalar que el incremento de consumo de esta familia será _____ soles y el del ahorro _____ soles.",
+      "alternatives": [
+        "750 – 1250",
+        "1500 – 500",
+        "1250 – 750",
+        "1000 – 1000",
+        "600 – 1400"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/economia-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn - Economía San Marcos DECO (Solucionario de Admisión), Pregunta 9"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Distribución, consumo y pobreza",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Respecto a la distribución funcional de la riqueza, es INCORRECTO afirmar que:",
+      "alternatives": [
+        "Se realiza según la productividad.",
+        "Es determinada por el mercado.",
+        "Se asigna según la propiedad del factor productivo.",
+        "Diferencia entre pobres y no pobres.",
+        "Los capitalistas reciben intereses."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://docs.google.com/presentation/d/14pt_tGb3pnW5oYwF-0rN3rblVeoj6ZaeYo4OBYm7QPg/htmlpresent",
+      "sourceName": "Repaso UNMSM Economía - Práctica 01, Pregunta 08"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Distribución, consumo y pobreza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El gobierno peruano ha lanzado un programa para reducir la pobreza extrema en zonas rurales mediante subsidios directos y financiamiento de proyectos productivos. ¿Qué función del Estado está priorizando esta medida?",
+      "alternatives": [
+        "Estabilización de los precios en los mercados.",
+        "Promoción exclusiva de la inversión privada.",
+        "Reducción del gasto público en las regiones.",
+        "Redistribución del ingreso y equidad social.",
+        "Desregular el mercado financiero y de bienes."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/economia-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn - Economía San Marcos DECO (Solucionario de Admisión), Pregunta 4"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Distribución, consumo y pobreza",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Tres economistas discuten sobre las causas de la pobreza. Raúl sostiene que ello se debe a la baja tasa de crecimiento económico; Pedro postula que la causa está en que las políticas fiscales son ineficientes; finalmente, José señala que el factor explicativo está en la baja productividad media de las personas que son pobres. ¿Quién o quiénes están utilizando el nivel microeconómico en su análisis?",
+      "alternatives": [
+        "Solo Raúl",
+        "José y Raúl",
+        "Raúl y Pedro",
+        "Solo José",
+        "José y Pedro"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/economia-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn - Economía San Marcos DECO (Solucionario de Admisión), Pregunta 3"
+    },
+    {
+      "courseName": "Economía",
+      "topicName": "Distribución, consumo y pobreza",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De acuerdo al I.P.C. (índice de precios al consumidor), durante el 2024 los precios de las frutas y verduras dentro de la canasta de consumo subieron 2,5% con respecto al periodo 2023. Si el salario nominal permaneció constante y sin variaciones, podemos afirmar que:\nI. El consumo familiar aumentó.\nII. El costo de vida personal y familiar ha aumentado.\nIII. Existe una reducción de la capacidad de compra del salario real.\nIV. Existe un aumento del salario mínimo vital.\nV. La capacidad de compra del salario nominal ha disminuido.",
+      "alternatives": [
+        "II, III",
+        "II, III, V",
+        "I, III, V",
+        "II, V",
+        "I, II, III"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/economia-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn - Economía San Marcos (Segunda Práctica, Solucionario), Pregunta 17"
+    }
+  ]
+}

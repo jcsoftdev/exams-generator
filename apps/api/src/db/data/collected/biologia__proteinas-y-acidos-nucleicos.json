@@ -1,0 +1,106 @@
+{
+  "entries": [
+    {
+      "courseName": "Biología",
+      "topicName": "Proteínas y ácidos nucleicos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Son proteínas hormonales; excepto:",
+      "alternatives": [
+        "Glucagón",
+        "Insulina",
+        "Paratohormona",
+        "Mioglobina",
+        "Miosina"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://generalbiology2012.blogspot.com/2014/08/banco-de-20-preguntas-y-respuestas-de.html",
+      "sourceName": "Banco de 20 preguntas y respuestas de las proteínas — pregunta 1"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Proteínas y ácidos nucleicos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Enlace químico que se encarga de unir los aminoácidos para formar un péptido:",
+      "alternatives": [
+        "Glucosídico",
+        "Esteárico",
+        "Puente Hidrógeno",
+        "Peptídico",
+        "Fosfodiéster"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://generalbiology2012.blogspot.com/2014/08/banco-de-20-preguntas-y-respuestas-de.html",
+      "sourceName": "Banco de 20 preguntas y respuestas de las proteínas — pregunta 11"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Proteínas y ácidos nucleicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para la formación del enlace peptídico, deben reaccionar dos aminoácidos a través de sus radicales. El radical amino (NH2) de un aminoácido, reacciona con el radical … del otro aminoácido.",
+      "alternatives": [
+        "Oxidrilo",
+        "Hidroxilo",
+        "Carboxilo",
+        "Metilo",
+        "Vinilo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://generalbiology2012.blogspot.com/2014/08/banco-de-20-preguntas-y-respuestas-de.html",
+      "sourceName": "Banco de 20 preguntas y respuestas de las proteínas — pregunta 12"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Proteínas y ácidos nucleicos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "No es una proteína de tipo fibrosa:",
+      "alternatives": [
+        "Colágeno",
+        "Queratina",
+        "Fibroína",
+        "Elastina",
+        "Histonas"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://generalbiology2012.blogspot.com/2014/08/banco-de-20-preguntas-y-respuestas-de.html",
+      "sourceName": "Banco de 20 preguntas y respuestas de las proteínas — pregunta 14"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Proteínas y ácidos nucleicos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Proteína más abundante del organismo humano:",
+      "alternatives": [
+        "Colágeno",
+        "Queratina",
+        "Fibroína",
+        "Elastina",
+        "Histonas"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://generalbiology2012.blogspot.com/2014/08/banco-de-20-preguntas-y-respuestas-de.html",
+      "sourceName": "Banco de 20 preguntas y respuestas de las proteínas — pregunta 15"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Proteínas y ácidos nucleicos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Es una proteína de transporte en los vertebrados:",
+      "alternatives": [
+        "Queratina",
+        "Colágeno",
+        "Histona",
+        "Hemoglobina",
+        "Miocina"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://generalbiology2012.blogspot.com/2014/08/banco-de-20-preguntas-y-respuestas-de.html",
+      "sourceName": "Banco de 20 preguntas y respuestas de las proteínas — pregunta 17"
+    }
+  ]
+}

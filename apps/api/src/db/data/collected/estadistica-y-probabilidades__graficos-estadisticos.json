@@ -1,0 +1,514 @@
+{
+  "entries": [
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una institución educativa realizó una encuesta a sus 300 estudiantes sobre su deporte favorito: 120 estudiantes prefieren solo fútbol, 96 estudiantes eligieron solo ajedrez, y el resto prefiere vóley. Ningún estudiante prefiere dos o más deportes. Se construye un diagrama de barras donde la longitud de cada barra es proporcional a la cantidad de estudiantes que prefieren ese deporte. Si la longitud de la barra que corresponde a ajedrez mide 8 cm, halle la diferencia positiva de las longitudes de las barras de fútbol y vóley.",
+      "alternatives": [
+        "2,7 cm",
+        "3 cm",
+        "1,5 cm",
+        "2 cm",
+        "3,5 cm"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-de-graficas-estadisticas.html",
+      "sourceName": "MatematicasN - Interpretación de Gráficos Estadísticos, Ejercicios Resueltos (2015), Problema 3"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El gráfico circular de los gastos mensuales de una familia muestra que el sector de «Otros gastos» representa el 40% del total, y el resto se distribuye entre vivienda y alimentos en la relación 2:3. Si el gasto familiar mensual es S/2400, ¿cuánto más se gasta en alimentos que en vivienda?",
+      "alternatives": [
+        "S/240",
+        "S/288",
+        "S/144",
+        "S/256",
+        "S/320"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/analisis-de-graficas-estadisticas.html",
+      "sourceName": "MatematicasN - Interpretación de Gráficos Estadísticos, Ejercicios Resueltos (2015), Problema 7"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se tienen los siguientes 24 datos de una muestra estadística:\n3 4 0 2 5 3\n2 7 4 3 1 1\n8 6 6 4 5 4\n7 5 4 6 0 2\n¿Cuál es el tamaño de la muestra?",
+      "alternatives": [
+        "9",
+        "20",
+        "18",
+        "24",
+        "36"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/tablas-de-distribucion-de-frecuencias-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - Tablas de distribución de frecuencias, problemas resueltos preuniversitaria (2022), Problema 1"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Hallar la suma del tamaño de la muestra más la amplitud (rango) de la siguiente distribución de datos:\n2 5 0 5 7 0 4\n5 4 1 6 8 5 3\n3 2 2 3 9 3 4\n8 3 0 2 8 2 3\n4 6 4 5 7 1 5",
+      "alternatives": [
+        "35",
+        "9",
+        "44",
+        "56",
+        "39"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/tablas-de-distribucion-de-frecuencias-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - Tablas de distribución de frecuencias, problemas resueltos preuniversitaria (2022), Problema 2"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la suma de las frecuencias absolutas del 5, del 7 y del 9 en la siguiente distribución de datos?\n1 3 9 2 9 2 7 5 3\n2 5 1 2 3 7 5 2 3\n7 3 5 3 7 2 2 7 2\n7 7 4 4 9 1 5 8 9\n6 4 7 5 5 9 9 7 5",
+      "alternatives": [
+        "43",
+        "31",
+        "27",
+        "20",
+        "23"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/tablas-de-distribucion-de-frecuencias-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - Tablas de distribución de frecuencias, problemas resueltos preuniversitaria (2022), Problema 3"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un estudio sobre las inversiones anuales (en miles de dólares) de 40 pequeñas empresas arrojó los siguientes datos:\n36, 19, 29, 37, 33, 27, 27, 24, 26, 31, 15, 41, 30, 18, 39, 46, 26, 12, 23, 18, 33, 25, 28, 23, 28, 22, 29, 31, 21, 35, 27, 17, 31, 10, 28, 20, 4, 25, 34, 24.\nSe elabora una distribución de frecuencias con 7 intervalos de clase de igual amplitud. ¿Qué porcentaje de empresas tienen inversiones en el intervalo [14, 20) miles de dólares?",
+      "alternatives": [
+        "8,5%",
+        "11,5%",
+        "12,5%",
+        "15%",
+        "17,5%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/tablas-de-distribucion-de-frecuencias-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-preuniversitaria-word-doc-pdf.html",
+      "sourceName": "MatematicasN - Tablas de distribución de frecuencias, problemas resueltos preuniversitaria (2022), Problema 4"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se analizan las siguientes variables de un grupo de personas: profesión, número de hijos, nivel de instrucción, comida favorita, estatura. ¿Cuál de ellas es una variable cualitativa ordinal?",
+      "alternatives": [
+        "Número de hijos",
+        "Estatura",
+        "Nivel de instrucción",
+        "Profesión",
+        "Comida favorita"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/05/solucionario-examen-admision-uncp-pdf.html",
+      "sourceName": "MatematicasN - Solucionario Examen Admisión UNCP (2019), Pregunta 8 Estadística"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un diagrama de barras muestra las notas de un examen de 30 alumnos con las siguientes frecuencias: nota 3 → 2 alumnos, nota 4 → 3 alumnos, nota 5 → 7 alumnos, nota 6 → 8 alumnos, nota 7 → 7 alumnos, nota 8 → 4 alumnos, nota 9 → 1 alumno. ¿Cuántos alumnos desaprobaron el examen si la nota mínima aprobatoria es 5?",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "7",
+        "10"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://trasteandoenlaescuela.com/graficos-estadisticos-barras-lineas-sectores/",
+      "sourceName": "Trasteando en la Escuela - Gráficos estadísticos: barras, líneas y sectores, Ejercicio 2"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una clase de 20 alumnos, los deportes favoritos son: Fútbol: 10, Baloncesto: 5, Tenis: 3, Natación: 2. Se construye un diagrama de sectores (gráfico circular). ¿Cuántos grados corresponden al sector de Baloncesto?",
+      "alternatives": [
+        "72°",
+        "90°",
+        "108°",
+        "54°",
+        "60°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://trasteandoenlaescuela.com/graficos-estadisticos-barras-lineas-sectores/",
+      "sourceName": "Trasteando en la Escuela - Gráficos estadísticos: barras, líneas y sectores, Ejercicio 3"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un histograma muestra las edades de los asistentes a un concierto: intervalo [10, 20) con 8 personas, [20, 30) con 15 personas, [30, 40) con 12 personas, [40, 50) con 5 personas. ¿Cuántas personas asistieron en total al concierto?",
+      "alternatives": [
+        "35",
+        "38",
+        "40",
+        "42",
+        "45"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://trasteandoenlaescuela.com/graficos-estadisticos-barras-lineas-sectores/",
+      "sourceName": "Trasteando en la Escuela - Gráficos estadísticos: barras, líneas y sectores, Ejercicio 4"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un histograma muestra las edades de los asistentes a un concierto: intervalo [10, 20) con 8 personas, [20, 30) con 15 personas, [30, 40) con 12 personas, [40, 50) con 5 personas. ¿En qué grupo de edad se concentra el mayor número de asistentes?",
+      "alternatives": [
+        "[10, 20)",
+        "[20, 30)",
+        "[30, 40)",
+        "[40, 50)",
+        "Todos tienen la misma cantidad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://trasteandoenlaescuela.com/graficos-estadisticos-barras-lineas-sectores/",
+      "sourceName": "Trasteando en la Escuela - Gráficos estadísticos: barras, líneas y sectores, Ejercicio 4 (parte b)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En una encuesta sobre deportes favoritos realizada a 100 aficionados se obtuvieron los siguientes resultados: Fútbol: 40, Vóley: 25, Natación: 20, Tenis: 15. Si se construye un diagrama circular (de sectores), ¿cuántos grados corresponden al sector de Natación?",
+      "alternatives": [
+        "54°",
+        "63°",
+        "72°",
+        "90°",
+        "108°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://calculo.cc/temas/temas_estadistica/estadistica/problemas/prob_graficos.html",
+      "sourceName": "Calculo.cc - Ejercicios resueltos de gráficos estadísticos, Problema 7 (diagrama de sectores, deportes)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene la siguiente distribución de frecuencias de las puntuaciones de 20 jugadores de baloncesto:\nIntervalo [0, 5): 3 jugadores\nIntervalo [5, 10): 9 jugadores\nIntervalo [10, 15): 5 jugadores\nIntervalo [15, 20): 3 jugadores\nSi se representa mediante un histograma, ¿qué porcentaje de jugadores se ubican en los dos intervalos centrales [5, 10) y [10, 15)?",
+      "alternatives": [
+        "45%",
+        "55%",
+        "60%",
+        "70%",
+        "75%"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://calculo.cc/temas/temas_estadistica/estadistica/problemas/prob_graficos.html",
+      "sourceName": "Calculo.cc - Ejercicios resueltos de gráficos estadísticos, Problema 2 (histograma baloncesto)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se encuestaron 50 hogares sobre el número de televisores que poseen y se obtuvieron los siguientes datos:\n0 televisores: 3 hogares\n1 televisor: 17 hogares\n2 televisores: 17 hogares\n3 televisores: 6 hogares\n4 televisores: 7 hogares\nSi se construye un diagrama de barras, ¿qué porcentaje de hogares tienen más de 2 televisores?",
+      "alternatives": [
+        "20%",
+        "22%",
+        "24%",
+        "26%",
+        "28%"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://calculo.cc/temas/temas_estadistica/estadistica/problemas/prob_graficos.html",
+      "sourceName": "Calculo.cc - Ejercicios resueltos de gráficos estadísticos, Problema 1 (televisores por hogar)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una distribución de frecuencias de 60 alumnos agrupa las calificaciones de matemática en los siguientes intervalos:\n[1, 5): 15 alumnos\n[5, 6): 17 alumnos\n[6, 7): 16 alumnos\n[7, 9): 8 alumnos\n[9, 10): 4 alumnos\nSi se construye un polígono de frecuencias acumuladas (ojiva), ¿cuántos alumnos tienen calificaciones menores que 7?",
+      "alternatives": [
+        "32",
+        "40",
+        "44",
+        "48",
+        "56"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://calculo.cc/temas/temas_estadistica/estadistica/problemas/prob_graficos.html",
+      "sourceName": "Calculo.cc - Ejercicios resueltos de gráficos estadísticos, Problema 5 (ojiva de calificaciones)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un grupo de 30 estudiantes registró las siguientes horas de estudio diarias:\n0 horas: 3 estudiantes\n1 hora: 5 estudiantes\n2 horas: 9 estudiantes\n3 horas: 7 estudiantes\n4 horas: 4 estudiantes\n5 horas: 2 estudiantes\nSi se construye un diagrama de barras, ¿qué porcentaje de estudiantes estudian 2 o más horas al día?",
+      "alternatives": [
+        "63,3%",
+        "66,7%",
+        "70%",
+        "73,3%",
+        "76,7%"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://calculo.cc/temas/temas_estadistica/estadistica/problemas/prob_graficos.html",
+      "sourceName": "Calculo.cc - Ejercicios resueltos de gráficos estadísticos, Problema 6 (horas de estudio)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una familia distribuye sus gastos anuales en tres categorías: vivienda, alimentación y transporte en la relación 9:6:5. ¿Cuántos grados le corresponden al sector de transporte en el diagrama circular que representa este reparto?",
+      "alternatives": [
+        "54°",
+        "90°",
+        "72°",
+        "108°",
+        "60°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://calculo.cc/temas/temas_estadistica/estadistica/problemas/prob_graficos.html",
+      "sourceName": "Calculo.cc - Ejercicios resueltos de gráficos estadísticos, Problema 7 (diagrama circular gastos familia)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se examinaron 100 niños para detectar caries dental y se obtuvo:\n0 caries: 25 niños\n1 carie: 20 niños\n2 caries: 35 niños\n3 caries: 15 niños\n4 caries: 5 niños\nEn el diagrama circular que representa estos datos, ¿cuántos grados tiene el sector correspondiente a los niños con exactamente 2 caries, y qué porcentaje del total representan los niños con menos de 2 caries?",
+      "alternatives": [
+        "126° y 40%",
+        "126° y 45%",
+        "108° y 45%",
+        "126° y 55%",
+        "108° y 40%"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://calculo.cc/temas/temas_estadistica/estadistica/problemas/prob_graficos.html",
+      "sourceName": "Calculo.cc - Ejercicios resueltos de gráficos estadísticos, Problema 11 (caries dental)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se encuestaron 50 estudiantes-atletas sobre cuántos deportes practican y se obtuvo:\n1 deporte: 20 estudiantes\n2 deportes: 22 estudiantes\n3 deportes: 8 estudiantes\nEn el histograma que representa estos datos con intervalos de ancho 1, ¿en qué intervalo se sitúa el mayor número de atletas?",
+      "alternatives": [
+        "Los que practican 1 deporte",
+        "Los que practican 2 deportes",
+        "Los que practican 3 deportes",
+        "Todos tienen la misma frecuencia",
+        "Los que practican 1 y 3 deportes son igual de frecuentes"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://openstax.org/books/introducci%C3%B3n-estad%C3%ADstica/pages/2-2-histogramas-poligonos-de-frecuencia-y-graficos-de-series-temporales",
+      "sourceName": "OpenStax Introducción a la Estadística, Sección 2.2 - Histogramas, Inténtelo 2.8 (deportes practicados)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las edades de inauguración de 44 presidentes de EE.UU. se agrupan en la siguiente distribución de frecuencias:\n[41,5 – 46,5): 4 presidentes\n[46,5 – 51,5): 11 presidentes\n[51,5 – 56,5): 14 presidentes\n[56,5 – 61,5): 9 presidentes\n[61,5 – 66,5): 4 presidentes\n[66,5 – 71,5): 2 presidentes\nSi se construye un polígono de frecuencias, ¿qué porcentaje de presidentes tenían entre 46,5 y 56,5 años al asumir el cargo?",
+      "alternatives": [
+        "45%",
+        "50%",
+        "56,8%",
+        "60%",
+        "62,5%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://openstax.org/books/introducci%C3%B3n-estad%C3%ADstica/pages/2-2-histogramas-poligonos-de-frecuencia-y-graficos-de-series-temporales",
+      "sourceName": "OpenStax Introducción a la Estadística, Sección 2.2 - Polígono de frecuencias (Inténtelo 2.10, edades de presidentes)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué tipo de gráfico estadístico es el más apropiado para representar la evolución del precio de un producto a lo largo de 12 meses consecutivos?",
+      "alternatives": [
+        "Diagrama de sectores circulares",
+        "Diagrama de barras simples",
+        "Gráfico de líneas (polígono de frecuencias temporales)",
+        "Pictograma",
+        "Histograma"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://trasteandoenlaescuela.com/graficos-estadisticos-barras-lineas-sectores/",
+      "sourceName": "Trasteando en la Escuela - Gráficos estadísticos: barras, líneas y sectores, Ejercicio 1"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué tipo de gráfico estadístico es el más apropiado para representar la distribución de estaturas de los jugadores de un equipo de baloncesto, cuando los datos están agrupados en intervalos?",
+      "alternatives": [
+        "Gráfico de líneas",
+        "Diagrama de sectores",
+        "Pictograma",
+        "Histograma",
+        "Diagrama de barras simples"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://trasteandoenlaescuela.com/graficos-estadisticos-barras-lineas-sectores/",
+      "sourceName": "Trasteando en la Escuela - Gráficos estadísticos: barras, líneas y sectores, Ejercicio 1 (parte c)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué tipo de gráfico estadístico es el más adecuado para representar el porcentaje de votos que obtuvo cada partido político en unas elecciones, si se desea mostrar la proporción de cada uno respecto al total?",
+      "alternatives": [
+        "Histograma",
+        "Polígono de frecuencias",
+        "Gráfico de líneas",
+        "Diagrama de sectores circulares",
+        "Ojiva"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://trasteandoenlaescuela.com/graficos-estadisticos-barras-lineas-sectores/",
+      "sourceName": "Trasteando en la Escuela - Gráficos estadísticos: barras, líneas y sectores, Ejercicio 1 (parte d)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una distribución de frecuencias de 100 estudiantes, las alturas (en cm) se agrupan así:\n(140, 150]: 3 estudiantes\n(150, 160]: 11 estudiantes\n(160, 170]: 25 estudiantes\n(170, 180]: 30 estudiantes\n(180, 190]: 16 estudiantes\n(190, 200]: 12 estudiantes\n(200, 210]: 3 estudiantes\nSi se construye un histograma, ¿qué porcentaje de estudiantes tienen altura en el rango (160, 180]?",
+      "alternatives": [
+        "45%",
+        "50%",
+        "55%",
+        "60%",
+        "65%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://calculo.cc/temas/temas_estadistica/estadistica/problemas/prob_graficos.html",
+      "sourceName": "Calculo.cc - Ejercicios resueltos de gráficos estadísticos, Problema 13 (alturas de estudiantes)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una distribución de frecuencias tiene marcas de clase: x₁ = 5, x₂ = 10, x₃ = 15, x₄ = 20, x₅ = 25. Si la amplitud de cada intervalo de clase es 5, ¿cuál es el límite inferior del primer intervalo de clase?",
+      "alternatives": [
+        "1",
+        "2,5",
+        "3",
+        "5",
+        "0"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://calculo.cc/temas/temas_estadistica/estadistica/teoria/graficos_estadisticos.html",
+      "sourceName": "Calculo.cc - Histograma, Diagrama de barras, Diagrama de sectores, Polígono de frecuencias - concepto de marca de clase"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La ojiva (polígono de frecuencias acumuladas relativas) de las calificaciones de un grupo de 80 alumnos pasa por los puntos:\n(5, 0,25), (10, 0,50), (15, 0,75), (20, 1,00).\n¿Cuántos alumnos obtuvieron calificaciones en el intervalo (5, 15]?",
+      "alternatives": [
+        "20",
+        "30",
+        "40",
+        "50",
+        "60"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://calculo.cc/temas/temas_estadistica/estadistica/problemas/prob_graficos.html",
+      "sourceName": "Calculo.cc - Ejercicios resueltos de gráficos estadísticos, Problema 5 variante (ojiva / frecuencias acumuladas)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una encuesta de preferencia de bebidas realizada a 20 consumidores, se obtuvieron las siguientes respuestas (N=Negro, B=Blanco, R=Rojo, S=Sin preferencia):\nN, B, B, N, R, B, B, N, N, B, N, B, B, R, N, B, N, R, N, S.\nSe construye un diagrama de barras. ¿Cuántos consumidores prefieren la bebida de color Blanco?",
+      "alternatives": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/12/diagramas-de-sectores-circulares-o-de-pastel-formula-ejemplos-problemas-resueltos-de-estadistica-de-secundaria-y-pre-universidad-word-doc-pdf.html",
+      "sourceName": "MatematicasN - Diagramas de sectores circulares, Problemas Resueltos (2022), Problema 3 (bebidas)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se tienen los datos sobre las áreas boscosas afectadas por incendios en España (en miles de hectáreas):\n2005: 177,56 / 2006: 210,06 / 2007: 78,54 / 2008: 114,35 / 2009: 180,02 / 2010: 99,61 / 2011: 134,77 / 2012: 189,58 / 2013: 201,46 / 2014: 235,22.\nRepresentados en un polígono de frecuencias temporales, ¿en qué año se registró la menor área afectada?",
+      "alternatives": [
+        "2008",
+        "2010",
+        "2007",
+        "2011",
+        "2009"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://calculo.cc/temas/temas_estadistica/estadistica/problemas/prob_graficos.html",
+      "sourceName": "Calculo.cc - Ejercicios resueltos de gráficos estadísticos, Problema 3 (polígono de frecuencias, incendios España)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen los datos sobre las áreas boscosas afectadas por incendios en España (en miles de hectáreas):\n2005: 177,56 / 2006: 210,06 / 2007: 78,54 / 2008: 114,35 / 2009: 180,02 / 2010: 99,61 / 2011: 134,77 / 2012: 189,58 / 2013: 201,46 / 2014: 235,22.\n¿Cuántos años del período registraron un área afectada superior a 150 mil hectáreas?",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://calculo.cc/temas/temas_estadistica/estadistica/problemas/prob_graficos.html",
+      "sourceName": "Calculo.cc - Ejercicios resueltos de gráficos estadísticos, Problema 3 parte b (incendios España)"
+    },
+    {
+      "courseName": "Estadística y Probabilidades",
+      "topicName": "Gráficos Estadísticos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los datos de precipitación mensual promedio (en mm) de una ciudad son:\nEnero: 81 / Febrero: 55 / Marzo: 49 / Abril: 41 / Mayo: 25 / Junio: 12 / Julio: 2 / Agosto: 6 / Septiembre: 16 / Octubre: 56 / Noviembre: 95 / Diciembre: 88.\nSi se representa en un gráfico de barras, ¿en qué trimestre (tres meses consecutivos) se concentra la mayor precipitación total?",
+      "alternatives": [
+        "Enero-Febrero-Marzo",
+        "Octubre-Noviembre-Diciembre",
+        "Julio-Agosto-Septiembre",
+        "Abril-Mayo-Junio",
+        "Febrero-Marzo-Abril"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://calculo.cc/temas/temas_estadistica/estadistica/problemas/prob_graficos.html",
+      "sourceName": "Calculo.cc - Ejercicios resueltos de gráficos estadísticos, Problema 12 (climatograma de Málaga)"
+    }
+  ]
+}

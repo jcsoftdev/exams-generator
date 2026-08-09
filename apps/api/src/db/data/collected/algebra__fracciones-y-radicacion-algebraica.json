@@ -1,0 +1,1028 @@
+{
+  "entries": [
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Simplifica la fracción algebraica: $(x^2 - 1)/(x + 1)$",
+      "alternatives": [
+        "$(x - 1)$",
+        "$(x + 1)$",
+        "$(x^2 - 1)$",
+        "$1/(x-1)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematix.org/fracciones-algebraicas-ejercicios/",
+      "sourceName": "Matematix.org — Fracciones Algebraicas: Ejercicios y Simplificación Efectiva, Ej. 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Simplifica la fracción algebraica: $(2x^2 + 4x)/(2x)$",
+      "alternatives": [
+        "$(x + 1)$",
+        "$(x + 2)$",
+        "$(2x + 4)$",
+        "$x/2$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematix.org/fracciones-algebraicas-ejercicios/",
+      "sourceName": "Matematix.org — Fracciones Algebraicas: Ejercicios y Simplificación Efectiva, Ej. 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica la fracción algebraica: $(x^2 + 5x + 6)/(x^2 + 3x + 2)$",
+      "alternatives": [
+        "$(x + 3)/(x + 1)$",
+        "$(x + 2)/(x + 1)$",
+        "$(x + 3)/(x + 2)$",
+        "$(x + 1)/(x + 3)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematix.org/fracciones-algebraicas-ejercicios/",
+      "sourceName": "Matematix.org — Fracciones Algebraicas: Ejercicios y Simplificación Efectiva, Ej. 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica: $(x^3 - 8)/(x - 2)$",
+      "alternatives": [
+        "$(x^2 - 2x + 4)$",
+        "$(x^2 + 2x - 4)$",
+        "$(x^2 + 2x + 4)$",
+        "$(x^2 - 4)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematix.org/fracciones-algebraicas-ejercicios/",
+      "sourceName": "Matematix.org — Fracciones Algebraicas: Ejercicios y Simplificación Efectiva, Ej. 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica: $(x^4 - 16)/(x^2 - 4)$",
+      "alternatives": [
+        "$(x^2 + 4)(x - 2)$",
+        "$(x^2 - 4)(x + 2)$",
+        "$(x^2 + 4)(x + 2)$",
+        "$(x^2 + 4)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematix.org/fracciones-algebraicas-ejercicios/",
+      "sourceName": "Matematix.org — Fracciones Algebraicas: Ejercicios y Simplificación Efectiva, Ej. 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica: $(3x^2 - 3)/(2x^2 + 4x)$",
+      "alternatives": [
+        "$3/(2x)$",
+        "$3(x+1)/(2x)$",
+        "$3/[2(x+2)]$",
+        "$(3x-3)/(2x+4)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematix.org/fracciones-algebraicas-ejercicios/",
+      "sourceName": "Matematix.org — Fracciones Algebraicas: Ejercicios y Simplificación Efectiva, Ej. 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Multiplica y simplifica: $((x^2 - x - 6)/(x^2 - 3x - 10)) dot ((x^2 - 25)/(2x - 6))$",
+      "alternatives": [
+        "$2x$",
+        "$1/(2x)$",
+        "$(x-3)/(2x)$",
+        "$(x+5)/2$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.yumpu.com/es/document/view/14168326/operaciones-con-fracciones-algebraicas-y-radicales-",
+      "sourceName": "Yumpu — Operaciones con fracciones algebraicas y radicales, Problema 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula: $2/(x - 3) - 1/(x + 2)$",
+      "alternatives": [
+        "$1/(x-1)$",
+        "$1/[(x-3)(x+2)]$",
+        "$(x-1)/[(x-3)(x+2)]$",
+        "$(x+7)/[(x-3)(x+2)]$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.yumpu.com/es/document/view/14168326/operaciones-con-fracciones-algebraicas-y-radicales-",
+      "sourceName": "Yumpu — Operaciones con fracciones algebraicas y radicales, Problema 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Simplifica: $sqrt(12) + sqrt(75) - sqrt(3)$",
+      "alternatives": [
+        "$84$",
+        "$10$",
+        "$6 sqrt(3)$",
+        "$2 sqrt(3) + 5$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.yumpu.com/es/document/view/14168326/operaciones-con-fracciones-algebraicas-y-radicales-",
+      "sourceName": "Yumpu — Operaciones con fracciones algebraicas y radicales, Problema 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Simplifica la expresión: $sqrt(72)$",
+      "alternatives": [
+        "$6 sqrt(3)$",
+        "$8 sqrt(2)$",
+        "$6 sqrt(2)$",
+        "$9 sqrt(2)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.neurochispas.com/wiki/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Neurochispas — Simplificar Radicales: Ejercicios Resueltos, Ej. 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Encuentra la versión más simplificada de $root(3, 54)$",
+      "alternatives": [
+        "$2 root(3, 7)$",
+        "$3 root(3, 2)$",
+        "$3 root(3, 6)$",
+        "$6 root(3, 1)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.neurochispas.com/wiki/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Neurochispas — Simplificar Radicales: Ejercicios Resueltos, Ej. 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Usa factores primos para simplificar $sqrt(200)$",
+      "alternatives": [
+        "$10 sqrt(3)$",
+        "$10 sqrt(2)$",
+        "$20 sqrt(5)$",
+        "$5 sqrt(8)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.neurochispas.com/wiki/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Neurochispas — Simplificar Radicales: Ejercicios Resueltos, Ej. 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Simplifica la expresión $sqrt(98)$",
+      "alternatives": [
+        "$9 sqrt(2)$",
+        "$14 sqrt(7)$",
+        "$7 sqrt(2)$",
+        "$7 sqrt(7)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.neurochispas.com/wiki/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Neurochispas — Simplificar Radicales: Ejercicios Resueltos, Ej. 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tenemos la expresión $root(4, 162)$, ¿cuál es su forma simplificada?",
+      "alternatives": [
+        "$2 root(4, 3)$",
+        "$9 root(4, 2)$",
+        "$3 root(4, 2)$",
+        "$6 root(4, 2)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.neurochispas.com/wiki/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Neurochispas — Simplificar Radicales: Ejercicios Resueltos, Ej. 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica: $root(3, 500)$",
+      "alternatives": [
+        "$5 root(3, 2)$",
+        "$10 root(3, 5)$",
+        "$5 root(3, 4)$",
+        "$5 root(3, 100)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.neurochispas.com/wiki/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Neurochispas — Simplificar Radicales: Ejercicios Resueltos, Ej. 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Encuentra la forma simplificada de $sqrt(18) + sqrt(72)$",
+      "alternatives": [
+        "$8 sqrt(2)$",
+        "$9 sqrt(2)$",
+        "$12 sqrt(2)$",
+        "$6 sqrt(3)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.neurochispas.com/wiki/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Neurochispas — Simplificar Radicales: Ejercicios Resueltos, Ej. 7"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica la expresión: $3 sqrt(50) + 5 sqrt(200)$",
+      "alternatives": [
+        "$55 sqrt(2)$",
+        "$65 sqrt(2)$",
+        "$105 sqrt(2)$",
+        "$115 sqrt(2)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.neurochispas.com/wiki/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Neurochispas — Simplificar Radicales: Ejercicios Resueltos, Ej. 8"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si tenemos la expresión $sqrt(45) + 2 sqrt(20)$, ¿cuál es su forma simplificada?",
+      "alternatives": [
+        "$5 sqrt(5)$",
+        "$3 sqrt(5) + 4 sqrt(5)$",
+        "$7 sqrt(5)$",
+        "$9 sqrt(5)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.neurochispas.com/wiki/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Neurochispas — Simplificar Radicales: Ejercicios Resueltos, Ej. 9"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Encuentra la forma simplificada de $4 sqrt(32) + 3 sqrt(8)$",
+      "alternatives": [
+        "$22 sqrt(2)$",
+        "$20 sqrt(2)$",
+        "$18 sqrt(2)$",
+        "$14 sqrt(8)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.neurochispas.com/wiki/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Neurochispas — Simplificar Radicales: Ejercicios Resueltos, Ej. 10"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula el producto: $(3 + sqrt(a))(3 - sqrt(a))$",
+      "alternatives": [
+        "$9 + a$",
+        "$9 - a$",
+        "$6 sqrt(a)$",
+        "$9 - sqrt(a)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula: $(a + b + sqrt(a^2 + b^2))(a + b - sqrt(a^2 + b^2))$",
+      "alternatives": [
+        "$(a+b)^2$",
+        "$a^2 - b^2$",
+        "$2ab$",
+        "$2a^2 + 2b^2$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Racionaliza: $3/(1 - sqrt(3))$",
+      "alternatives": [
+        "$(-3(1 + sqrt(3)))/2$",
+        "$(3(1 + sqrt(3)))/2$",
+        "$(3(sqrt(3) - 1))/2$",
+        "$(3 + 3 sqrt(3))/4$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Racionaliza: $1/(5 + sqrt(3))$",
+      "alternatives": [
+        "$(5 + sqrt(3))/22$",
+        "$(5 - sqrt(3))/22$",
+        "$(5 - sqrt(3))/28$",
+        "$(5 + sqrt(3))/28$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Suma y racionaliza: $sqrt(a)/(sqrt(a) + sqrt(b)) + sqrt(b)/(sqrt(a) - sqrt(b))$",
+      "alternatives": [
+        "$(a + b)/(a - b)$",
+        "$(a - b)/(a + b)$",
+        "$1$",
+        "$(a + b)/(a + b)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 7"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica: $sqrt(a b^4 c^3 div (2 a b^3 c^3)/(9 a^5 b^8 c^6))$",
+      "alternatives": [
+        "$3a^2 b^3 c^2 sqrt(3a)$",
+        "$3a^3 b^4 c^3 sqrt(3b)$",
+        "$9a^3 b^4 c^3$",
+        "$3a^2 b^5 c^3 sqrt(3c)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 17"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: $sqrt((a^2)/(m n^2) + (a^2)/(m^2 n))$",
+      "alternatives": [
+        "$(a sqrt(m n))/(m n)$",
+        "$(a sqrt(m + n))/(m n)$",
+        "$(a sqrt(m + n))/(sqrt(m n))$",
+        "$a/(sqrt(m n))$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 13"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: $sqrt(4a^2 c d + 8a b c d + 4b^2 c d)$",
+      "alternatives": [
+        "$2(a - b) sqrt(c d)$",
+        "$4(a + b) sqrt(c d)$",
+        "$2(a + b) sqrt(c d)$",
+        "$(a + b)^2 sqrt(d)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 14"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: $sqrt(a b) dot root(3, a^2 b^2) dot root(4, a b^3)$",
+      "alternatives": [
+        "$a b root(12, a^5 b^{11})$",
+        "$a^2 b^2 root(12, a b)$",
+        "$a b root(6, a^3 b^5)$",
+        "$root(12, a^{11} b^{17})$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 15"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: $(2a + 3b) sqrt(8a) + (a + 2b - c) sqrt(18a) - (4a - b - 3c) sqrt(2a)$",
+      "alternatives": [
+        "$(3a + 13b) sqrt(2a)$",
+        "$(5a + 11b) sqrt(2a)$",
+        "$(a + 13b + 6c) sqrt(2a)$",
+        "$(3a + 13b - 6c) sqrt(2a)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 16"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: $(x sqrt(x) - a sqrt(a))/(sqrt(x) - sqrt(a))$",
+      "alternatives": [
+        "$x + a - sqrt(a x)$",
+        "$x - a + sqrt(a x)$",
+        "$x + a + sqrt(a x)$",
+        "$(x + a)/(sqrt(x) + sqrt(a))$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 32"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica: $5 root(6, 64 a^2) - 5 root(3, 27 a) + 6 root(9, a^3)$",
+      "alternatives": [
+        "$a$",
+        "$root(3, a)$",
+        "$a root(3, a)$",
+        "$0$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 20"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: $2 root(3, a^6 b) - 3a^2 root(3, 64 b) + 5a root(3, a^3 b) + a^2 root(3, 125 b)$",
+      "alternatives": [
+        "$2a^2 root(3, b)$",
+        "$a^3 root(3, b)$",
+        "$0$",
+        "$a^2 root(3, 8b)$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 21"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica: $1/(a) dot sqrt((a b^2)/4) + 3b dot sqrt(1/(4a)) - 1/a dot sqrt(a b^2)$",
+      "alternatives": [
+        "$b sqrt(a)/a$",
+        "$b / sqrt(a)$",
+        "$2b/sqrt(a)$",
+        "$b sqrt(a)/(2a)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 26"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Racionaliza: $1 / sqrt(3)$",
+      "alternatives": [
+        "$sqrt(3)/9$",
+        "$sqrt(3)/3$",
+        "$3/sqrt(3)$",
+        "$1/3$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematix.org/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Matematix.org — Simplificar Radicales: Ejercicios Resueltos, Ej. 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Racionaliza: $1/(sqrt(5) + 2)$",
+      "alternatives": [
+        "$sqrt(5) + 2$",
+        "$sqrt(5) - 2$",
+        "$(sqrt(5) + 2)/9$",
+        "$(sqrt(5) - 2)/3$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematix.org/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Matematix.org — Simplificar Radicales: Ejercicios Resueltos, Ej. 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica: $1/(sqrt(5) + sqrt(2)) + 1/(sqrt(5) - sqrt(2))$",
+      "alternatives": [
+        "$(2 sqrt(5))/3$",
+        "$2 sqrt(5)$",
+        "$(2 sqrt(5) - 2 sqrt(2))/3$",
+        "$(sqrt(5) - sqrt(2))/3 + (sqrt(5) + sqrt(2))/3$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematix.org/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Matematix.org — Simplificar Radicales: Ejercicios Resueltos, Ej. 8"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Multiplica las fracciones algebraicas: $((x^2 + 5x + 4)/7) dot ((x - 1)/(x^2 - 1))$",
+      "alternatives": [
+        "$(x + 1)/7$",
+        "$(x + 4)/7$",
+        "$(x + 4)(x - 1)/7$",
+        "$(x^2 + 5x + 4)/(7(x + 1))$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.polinomios.org/fracciones-algebraicas-simplificar-operaciones-suma-resta-multiplicacion-division-ejercicios-resueltos/",
+      "sourceName": "Polinomios.org — Fracciones Algebraicas: Simplificación, Operaciones y Ejercicios Resueltos, Ej. 4A"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Multiplica y simplifica: $((3x^2 + 15x + 18)/(3x)) dot ((x^2 + x - 2)/(x^3 + 3x^2 - x - 3))$",
+      "alternatives": [
+        "$(x + 2)^2 / (x(x+1))$",
+        "$(x + 3)(x + 2)/(3x)$",
+        "$(x + 2)/(x(x-1))$",
+        "$(x^2 + 4x + 4) / (x^2 + x)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.polinomios.org/fracciones-algebraicas-simplificar-operaciones-suma-resta-multiplicacion-division-ejercicios-resueltos/",
+      "sourceName": "Polinomios.org — Fracciones Algebraicas: Simplificación, Operaciones y Ejercicios Resueltos, Ej. 4B"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Divide: $(3x)/(x^2 + 10x + 25) : (2x)/(x^2 - 25)$",
+      "alternatives": [
+        "$3(x - 5)/(2(x + 5))$",
+        "$3(x + 5)/(2(x - 5))$",
+        "$3x(x - 25)/(2x)$",
+        "$3/(2(x + 5))$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.polinomios.org/fracciones-algebraicas-simplificar-operaciones-suma-resta-multiplicacion-division-ejercicios-resueltos/",
+      "sourceName": "Polinomios.org — Fracciones Algebraicas: Simplificación, Operaciones y Ejercicios Resueltos, Ej. 4C"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Divide: $(x^2 + 8x + 15)/(4x) : (x^2 + 4x - 5)/(2x^2)$",
+      "alternatives": [
+        "$x(x + 5)/(2(x + 1))$",
+        "$x(x + 3)/(2(x - 1))$",
+        "$2x^2(x + 3)/(4x(x + 5))$",
+        "$(x + 3)(x + 5)/(2x(x - 1))$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.polinomios.org/fracciones-algebraicas-simplificar-operaciones-suma-resta-multiplicacion-division-ejercicios-resueltos/",
+      "sourceName": "Polinomios.org — Fracciones Algebraicas: Simplificación, Operaciones y Ejercicios Resueltos, Ej. 4D"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula: $(5x^2 + 10x)/(11x)$ en su mínima expresión.",
+      "alternatives": [
+        "$5(x + 1)/11$",
+        "$(5x + 10)/11$",
+        "$5(x + 2)/11$",
+        "$5x/11$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.polinomios.org/fracciones-algebraicas-simplificar-operaciones-suma-resta-multiplicacion-division-ejercicios-resueltos/",
+      "sourceName": "Polinomios.org — Fracciones Algebraicas: Simplificación, Operaciones y Ejercicios Resueltos, Ej. 2A"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica: $(x^2 - 4)/(x^2 + 2x - 8)$",
+      "alternatives": [
+        "$(x - 2)/(x - 4)$",
+        "$(x + 2)/(x + 4)$",
+        "$(x - 2)/(x + 4)$",
+        "$(x + 2)/(x - 4)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.polinomios.org/fracciones-algebraicas-simplificar-operaciones-suma-resta-multiplicacion-division-ejercicios-resueltos/",
+      "sourceName": "Polinomios.org — Fracciones Algebraicas: Simplificación, Operaciones y Ejercicios Resueltos, Ej. 2B"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica: $(x^3 - 2x^2 - 3x)/(x^2 - 3x)$",
+      "alternatives": [
+        "$x - 1$",
+        "$x + 3$",
+        "$x - 3$",
+        "$x + 1$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.polinomios.org/fracciones-algebraicas-simplificar-operaciones-suma-resta-multiplicacion-division-ejercicios-resueltos/",
+      "sourceName": "Polinomios.org — Fracciones Algebraicas: Simplificación, Operaciones y Ejercicios Resueltos, Ej. 2C"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: $(x^3 - 3x + 2)/(x^3 + 4x^2 + x - 6)$",
+      "alternatives": [
+        "$(x - 1)/(x + 3)$",
+        "$(x + 1)/(x - 3)$",
+        "$(x - 2)/(x + 3)$",
+        "$(x - 1)/(x + 2)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.polinomios.org/fracciones-algebraicas-simplificar-operaciones-suma-resta-multiplicacion-division-ejercicios-resueltos/",
+      "sourceName": "Polinomios.org — Fracciones Algebraicas: Simplificación, Operaciones y Ejercicios Resueltos, Ej. 2D"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula: $x/(x + 1) + 2/(x + 1)$",
+      "alternatives": [
+        "$(x + 2)/(x + 1)$",
+        "$(x + 2)/(2(x + 1))$",
+        "$3x/(x + 1)$",
+        "$1$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematix.org/fracciones-algebraicas-operaciones/",
+      "sourceName": "Matematix.org — Fracciones Algebraicas: Operaciones, Ej. 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula: $2x/(x - 1) - 3/(x - 1)$",
+      "alternatives": [
+        "$(2x - 3)/(x - 1)$",
+        "$(2x + 3)/(x - 1)$",
+        "$(2x - 3)/(x + 1)$",
+        "$2x - 3$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematix.org/fracciones-algebraicas-operaciones/",
+      "sourceName": "Matematix.org — Fracciones Algebraicas: Operaciones, Ej. 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Divide: $(3x)/(x + 1) : 2/(x - 1)$",
+      "alternatives": [
+        "$(3x)/(2(x + 1)(x - 1))$",
+        "$(3x(x + 1))/(2(x - 1))$",
+        "$(3x(x - 1))/(2(x + 1))$",
+        "$6x/((x+1)(x-1))$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematix.org/fracciones-algebraicas-operaciones/",
+      "sourceName": "Matematix.org — Fracciones Algebraicas: Operaciones, Ej. 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica: $root(21, x^7)$",
+      "alternatives": [
+        "$root(7, x^3)$",
+        "$root(3, x)$",
+        "$root(3, x^7)$",
+        "$x^(7/21)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.aulafacil.com/cursos/matematicas/operaciones-fracciones-algebraicas/simplificacion-de-radicales-raiz-de-raiz-l10709",
+      "sourceName": "AulaFácil — Simplificación de Radicales: Raíz de Raíz, Ej. 10.52"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula $root(4, root(3, 16))$",
+      "alternatives": [
+        "$root(4, 2)$",
+        "$root(6, 2)$",
+        "$root(12, 2)$",
+        "$2$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.aulafacil.com/cursos/matematicas/operaciones-fracciones-algebraicas/simplificacion-de-radicales-raiz-de-raiz-l10709",
+      "sourceName": "AulaFácil — Simplificación de Radicales: Raíz de Raíz, Ej. 10.63"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Racionaliza: $2 / root(3, 5)$",
+      "alternatives": [
+        "$(2 root(3, 25))/5$",
+        "$(2 root(3, 5))/5$",
+        "$2/(5)$",
+        "$(2 root(3, 5^2))/5$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 8"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: $root(m-1, (a b) / root(m, a b))$",
+      "alternatives": [
+        "$(a b)^(1/m)$",
+        "$root(m, a b)$",
+        "$root(m+1, a b)$",
+        "$root(m-1, a b)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 29"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: $(root(8, root(7, root(2, a^2 b^3))))^8$",
+      "alternatives": [
+        "$root(7, a^2 b^3)$",
+        "$root(14, a^2 b^3)$",
+        "$root(28, a^2 b^3)$",
+        "$root(56, a^2 b^3)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 31"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Racionaliza: $2/(sqrt(2) + 1)$",
+      "alternatives": [
+        "$2 sqrt(2) - 2$",
+        "$2 sqrt(2) + 2$",
+        "$sqrt(2) - 1$",
+        "$2(sqrt(2) + 1)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematix.org/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Matematix.org — Simplificar Radicales: Ejercicios Resueltos, Ej. 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica: $1/sqrt(2) + 1/sqrt(3)$",
+      "alternatives": [
+        "$(sqrt(3) + sqrt(2)) / sqrt(6)$",
+        "$(sqrt(2) + sqrt(3)) / 6$",
+        "$(sqrt(6)) / (sqrt(2) + sqrt(3))$",
+        "$(sqrt(3) - sqrt(2)) / sqrt(6)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematix.org/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Matematix.org — Simplificar Radicales: Ejercicios Resueltos, Ej. 7"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Determina el valor de: $sqrt(16) + sqrt(81)$",
+      "alternatives": [
+        "$10$",
+        "$12$",
+        "$13$",
+        "$15$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.neurochispas.com/wiki/simplificar-radicales-ejercicios-resueltos/",
+      "sourceName": "Neurochispas — Simplificar Radicales: Ejercicios Resueltos, Ej. interactivo"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica la fracción: $(x^3 - 8) / (x^2 - 4)$",
+      "alternatives": [
+        "$(x^2 + 2x + 4)/(x + 2)$",
+        "$(x^2 - 2x + 4)/(x + 2)$",
+        "$(x^2 + 2x + 4)/(x - 2)$",
+        "$(x^2 + 4)/(x + 2)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematix.org/fracciones-algebraicas-ejercicios/",
+      "sourceName": "Matematix.org — Fracciones Algebraicas: Ejercicios y Simplificación Efectiva, Ej. avanzado"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el resultado de: $32^(2/5)$",
+      "alternatives": [
+        "$2$",
+        "$8$",
+        "$4$",
+        "$16$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/aritmetica/reales/radicales-2.html",
+      "sourceName": "Superprof.es — Ejercicios Resueltos sobre Radicales, Ej. 1-1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el resultado de: $8^(4/3)$",
+      "alternatives": [
+        "$4$",
+        "$8$",
+        "$16$",
+        "$32$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/aritmetica/reales/radicales-2.html",
+      "sourceName": "Superprof.es — Ejercicios Resueltos sobre Radicales, Ej. 1-2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula el resultado de: $16^(0.75)$",
+      "alternatives": [
+        "$4$",
+        "$6$",
+        "$8$",
+        "$12$"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/aritmetica/reales/radicales-2.html",
+      "sourceName": "Superprof.es — Ejercicios Resueltos sobre Radicales, Ej. 1-3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: $sqrt(a^2 m - a^2 n) + root(4, (m-n)^2 b^4) + root(6, (m-n)^3 c^6)$",
+      "alternatives": [
+        "$(a + b + c) sqrt(m - n)$",
+        "$(a + b^2 + c^2) sqrt(m-n)$",
+        "$(a - b + c) sqrt(m-n)$",
+        "$(a + b + c)(m - n)$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 27"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: $3 sqrt(a b) + sqrt(4a^3 b) - 2 sqrt(0.25 a b) - a sqrt(a b) - 4 sqrt((a b)/4)$",
+      "alternatives": [
+        "$a sqrt(a b)$",
+        "$2a sqrt(a b)$",
+        "$(a+3) sqrt(ab)$",
+        "$0$"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 19"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: $sqrt(98 a^2 b^4 c^2) + root(3, 250 a^6 b^9 c^3) - root(4, 32 a^8 b^12 c^4) + sqrt(128 a^6 b^2 c^4)$",
+      "alternatives": [
+        "$(7 b^2 c + 5a^2 b^3 c - 2a^2 b^3 c + 8 a^3 b c^2) sqrt(2)$",
+        "$(7 a b^2 c + 5 a^2 b^3 c) root(3,2) + (8 a^3 b c^2 - 2 a^2 b^3 c) sqrt(2)$",
+        "$(7 a b^2 c + 5 a^2 b^3 c - 2 a^2 b^3 c + 8 a^3 b c^2)$",
+        "$(7ab^2c) sqrt(2) + 5a^2 b^3 c root(3,2) - 2a^2 b^3 c root(4,2) + 8a^3 b c^2 sqrt(2)$"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 23"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: $sqrt((a^3 m n)/(a b^2 n^2)) + sqrt((a b^7 m^2)/(a^3 b^5 m n))$",
+      "alternatives": [
+        "$(a + b)/(a b) sqrt(m/n)$",
+        "$(a^2 + b^2)/(a b) sqrt(m/n)$",
+        "$(a - b)/(a b) sqrt(m/n)$",
+        "$(a^2 - b^2)/(a b) sqrt(m/n)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 24"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Fracciones y Radicación Algebraica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Simplifica: $b sqrt(a^2 c) + root(4, 16 a^6 b^4 c^2) - a root(6, b^6 c^3)$",
+      "alternatives": [
+        "$2a b sqrt(c a^3)$",
+        "$2b sqrt(c a^3)$",
+        "$a b^2 sqrt(c a)$",
+        "$2 b sqrt(a^2 c)$"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.matesfacil.com/BAC/resueltos-radicales.html",
+      "sourceName": "Matesfacil.com — Simplificar y Racionalizar Radicales: Ejercicios Resueltos, Ej. 22"
+    }
+  ]
+}

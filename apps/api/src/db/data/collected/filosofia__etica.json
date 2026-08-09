@@ -1,0 +1,72 @@
+{
+  "entries": [
+    {
+      "courseName": "Filosofía",
+      "topicName": "Ética",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale cómo se denomina el tipo de Ética que postula un principio demostrativo, en lugar de un listado de normas morales:",
+      "alternatives": [
+        "Formal",
+        "Material",
+        "Eudemonista",
+        "Moderna",
+        "Tradicionalista"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-filosofia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "Prueba de Filosofía tipo examen de admisión - Solucionario (matematicasn), Segunda Prueba pregunta 15"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Ética",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un postulado ético fundamental señala que por ningún motivo o circunstancia se justifica ir contra la condición de persona de un individuo humano utilizándole como un medio para algún fin externo a este y ajeno a su voluntad. De acuerdo a la clasificación de los valores éticos fundamentales, dicho postulado alude directamente al valor de la:",
+      "alternatives": [
+        "Justicia",
+        "Solidaridad",
+        "Igualdad",
+        "Libertad",
+        "Dignidad"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2021/01/prueba-de-filosofia-desarrollada-tipo-examen-de-admision-a-la-universidad-solucionario.html",
+      "sourceName": "Prueba de Filosofía tipo examen de admisión - Solucionario (matematicasn), Segunda Prueba pregunta 11"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Ética",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Según Platón, el alma racional posee por virtud la:",
+      "alternatives": [
+        "Sabiduría",
+        "Valentía",
+        "Fuerza",
+        "Fortaleza",
+        "Templanza"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html",
+      "sourceName": "Filosofía - Banco de preguntas resueltas de examen de admisión (matematicasn), pregunta sobre alma racional según Platón"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Ética",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Son ejemplos de personas morales:\n1) un estudiante de 15 años de edad\n2) un anciano de 80 años\n3) un sordomudo\n4) un sujeto que sufre depresión\n5) un soldado en acciones de guerra",
+      "alternatives": [
+        "Solo 2 y 3",
+        "Solo 3, 4 y 5",
+        "Solo 1, 3 y 5",
+        "1, 2, 3, 4 y 5",
+        "Solo 2, 3 y 4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/filosofia-resuelta-ingreso-universidades.html",
+      "sourceName": "Filosofía - Banco de preguntas resueltas de examen de admisión (matematicasn), pregunta sobre ejemplos de personas morales"
+    }
+  ]
+}

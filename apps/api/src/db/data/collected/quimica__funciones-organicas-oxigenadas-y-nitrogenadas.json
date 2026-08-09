@@ -1,0 +1,37 @@
+{
+  "entries": [
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los aldehídos y las cetonas contienen en su estructura al grupo carbonilo y a menudo se les denomina compuestos carbonílicos, este grupo funcional es el que determina en gran medida las propiedades químicas de estos compuestos. Con respecto al grupo carbonilo, seleccione la secuencia correcta de verdad (V o F) de las siguientes proposiciones.\n\nI. Su carbono presenta hibridación sp.\nII. Presenta una geometría trigonal plana.\nIII. Si su carbono es secundario corresponde a un aldehído.",
+      "alternatives": ["FVF", "VVF", "FVV", "VFV"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/quimica-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "CEPRE San Marcos (UNMSM) - Química Semana 16, Pregunta sobre grupo carbonilo (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La hexosa es un carbohidrato y está formada por una cadena de seis átomos de carbono siendo su principal función producir energía. Con respecto al siguiente compuesto, seleccione la secuencia correcta de verdad (V o F), para las siguientes proposiciones.\n\nCH₂OH – CO – CHOH – CHOH – CHOH – CH₂OH\n\nI. Es un monosacárido o glúcido.\nII. Se clasifica como una aldohexosa.\nIII. Su nombre es 1, 3, 4, 5, 6 – pentahidroxihexan – 2 – ona",
+      "alternatives": ["VFV", "FVF", "VFF", "FFV"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/quimica-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "CEPRE San Marcos (UNMSM) - Química Semana 16, Pregunta sobre hexosa/cetona (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Funciones orgánicas oxigenadas y nitrogenadas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El ácido butírico es una sustancia que da el hedor a la mantequilla rancia y se aísla a partir de la grasa formada en la leche de vaca. Con respecto a este compuesto, seleccione la secuencia correcta de verdad (V o F) de las siguientes proposiciones.\n\nI. Por esterificación, al reaccionar con fenol forma el benzoato de butilo.\nII. Posee puentes de hidrógeno entre sus moléculas.\nIII. Al reaccionar con KOH forma el butanoato de potasio, una sal orgánica.",
+      "alternatives": ["FVF", "VFV", "FVV", "FFV"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/quimica-semana-16-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "CEPRE San Marcos (UNMSM) - Química Semana 16, Pregunta sobre ácido butírico (clave C)"
+    }
+  ]
+}

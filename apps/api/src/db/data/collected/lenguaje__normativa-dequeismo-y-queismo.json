@@ -1,0 +1,89 @@
+{
+  "entries": [
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Normativa (dequeísmo y queísmo)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Seleccione la opción donde hay dequeísmo.",
+      "alternatives": [
+        "A ella le parece de que has actuado bien.",
+        "El hecho de que su mujer trabaje es bueno.",
+        "Ellos están seguros de que obtendrán la beca.",
+        "Estoy convencido de que redactas correctamente.",
+        "Me convencí de que has hecho un buen trabajo."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "http://preguntasdelenguaportemaunmsm.blogspot.com/",
+      "sourceName": "UNMSM Admisión 2009 - Preguntas de Lengua por tema (UNMSM) - Pregunta 15, clave A"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Normativa (dequeísmo y queísmo)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la alternativa donde la secuencia «de que» está usada incorrectamente.",
+      "alternatives": [
+        "Tuvo miedo de que le hicieran daño.",
+        "Juan estaba muy contento de que su hijo estudiara medicina.",
+        "Nosotros dudamos de que los métodos no fueran correctos.",
+        "El Director manifestó de que no había problemas.",
+        "Te ayudé con la finalidad de que te ayudaras tú también."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "http://preguntasdelenguaportemaunmsm.blogspot.com/",
+      "sourceName": "UNMSM Admisión 2008 - Preguntas de Lengua por tema (UNMSM) - Pregunta 9, clave D"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Normativa (dequeísmo y queísmo)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿En cuál de las opciones la secuencia «de que» es incorrecta?",
+      "alternatives": [
+        "Me alegro, realmente, de que te vaya bien.",
+        "Ella presume de que es muy adinerada.",
+        "No estoy seguro de que digas la verdad.",
+        "Esa es la causa de que haya tantos accidentes.",
+        "A mí me parece de que todo saldrá bien."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "http://preguntasdelenguaportemaunmsm.blogspot.com/",
+      "sourceName": "UNMSM Admisión 2009 - Preguntas de Lengua por tema (UNMSM) - Pregunta 10, clave E"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Normativa (dequeísmo y queísmo)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique la alternativa que presenta dequeísmo.",
+      "alternatives": [
+        "Dudaron de que haya sido verdad.",
+        "Lo convenciste de que te acepte.",
+        "Está feliz de que seas el campeón.",
+        "Recuerdo de que fuimos a la playa.",
+        "Me aseguré de que nadie me mire."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/vicios-del-lenguaje-solecismo-redundancia-anfibologia-barbarismo-cacofonia-ejemplos-preguntas-resueltas-preuniversitarias-secundaria-word-pdf.html",
+      "sourceName": "Vicios del lenguaje - Preguntas resueltas preuniversitarias (matematicasn) - Pregunta 9, Rpta. D"
+    },
+    {
+      "courseName": "Lenguaje",
+      "topicName": "Normativa (dequeísmo y queísmo)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué alternativa presenta dequeísmo?",
+      "alternatives": [
+        "Se puede tener confianza de que todo saldrá bien.",
+        "Me agradaría de que todo salga bien.",
+        "Me alegro de que todo lo que planificaste se logró en el tiempo propuesto.",
+        "El abogado los convenció de que es necesario cumplir con las obligaciones.",
+        "Está convencido de que su propuesta es idónea."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/03/vicios-del-lenguaje-solecismo-redundancia-anfibologia-barbarismo-cacofonia-ejemplos-preguntas-resueltas-preuniversitarias-secundaria-word-pdf.html",
+      "sourceName": "Vicios del lenguaje - Preguntas resueltas preuniversitarias (matematicasn) - Primera Práctica Pregunta 9, Rpta. B"
+    }
+  ]
+}

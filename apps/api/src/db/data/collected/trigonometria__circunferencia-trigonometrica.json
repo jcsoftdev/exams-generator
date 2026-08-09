@@ -1,0 +1,1190 @@
+{
+  "entries": [
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Considerando la circunferencia trigonométrica (C.T.), indique la expresión de mayor valor.",
+      "alternatives": [
+        "Sen20°",
+        "Sen120°",
+        "Sen220°",
+        "Sen240°",
+        "Sen320°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Considerando la circunferencia trigonométrica (C.T.), indique la expresión de menor valor.",
+      "alternatives": [
+        "Sen50°",
+        "Sen70°",
+        "Sen140°",
+        "Sen210°",
+        "Sen290°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señala la expresión de menor valor entre las siguientes.",
+      "alternatives": [
+        "Cos10°",
+        "Cos50°",
+        "Cos140°",
+        "Cos240°",
+        "Cos300°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señala la expresión de mayor valor entre las siguientes.",
+      "alternatives": [
+        "cos70°",
+        "cos130°",
+        "cos160°",
+        "cos220°",
+        "cos310°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar verdadero (V) o falso (F).\nI) Sen100° < Sen160°\nII) Cos290° > Cos340°\nIII) Sen200° > Cos200°",
+      "alternatives": [
+        "VVV",
+        "VFF",
+        "VFV",
+        "FFF",
+        "FFV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 5"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la expresión de mayor valor (ángulos en radianes).",
+      "alternatives": [
+        "Sen1",
+        "Sen2",
+        "Sen3",
+        "Sen4",
+        "Sen5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale verdadero (V) o falso (F), según corresponda.\nI) Si 0° < x < 45° ⇒ senx > cosx\nII) Si 45° < x < 90° ⇒ senx > cosx\nIII) Si 90° < x < 135° ⇒ senx + cosx > 0",
+      "alternatives": [
+        "FFV",
+        "VFV",
+        "VVF",
+        "FFF",
+        "FVV"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 7"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señale verdadero (V) o falso (F) según corresponda.\nI) tan50° > tan70°\nII) tan100° > tan160°\nIII) |tan300°| > |tan320°|",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FVV",
+        "FFV",
+        "FVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 8"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señale la variación de: A = 2senx + 3",
+      "alternatives": [
+        "[1; 5]",
+        "[2; 6]",
+        "[1; 6>",
+        "<1; 5>",
+        "<1; 5]"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 9"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señale la variación de: B = 5cosθ – 1",
+      "alternatives": [
+        "[–6; –4]",
+        "[3; 2>",
+        "[–3; 4>",
+        "<6; 4]",
+        "[–6; 4]"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 10"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señale la extensión de: M = 3 – 2senθ",
+      "alternatives": [
+        "<1; 6]",
+        "<1; 5]",
+        "[1; 5]",
+        "<1; 5>",
+        "[3; 5>"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 11"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señale la extensión de: N = 4 – 3cosβ",
+      "alternatives": [
+        "[1; 8]",
+        "<1; 7]",
+        "[1; 5]",
+        "[1; 7]",
+        "<0; 6]"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 12"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halle la variación de la siguiente expresión: P = sen²x + 4 ; x∈ℝ",
+      "alternatives": [
+        "[4; 5]",
+        "[3; 4]",
+        "[1; 4]",
+        "[0; 5]"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 13"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Sume el máximo y el mínimo valor de: P = 3senx – 2 ; x∈ℝ",
+      "alternatives": [
+        "–2",
+        "–3",
+        "2",
+        "3",
+        "–4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 14"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle la variación de la siguiente expresión: P = 6 – 2cosx ; si x∈[π/3; 2π/3]",
+      "alternatives": [
+        "[4; 7]",
+        "[5; 7]",
+        "[5; 8]",
+        "[–4; 7]"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 15"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Sume el máximo y el mínimo valor de: W = 7 – 4cosx ; x∈ℝ",
+      "alternatives": [
+        "11",
+        "8",
+        "13",
+        "6",
+        "14"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 16"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que θ∈IIC, señale la variación de: H = 3senθ – 1",
+      "alternatives": [
+        "<0; 3>",
+        "<–1; 3>",
+        "<–1; 2>",
+        "<–1; 3]",
+        "<–2; 1>"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 17"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle la variación de la siguiente expresión: M = cos²Φ + 2cosΦ + 1 ; Φ∈ℝ",
+      "alternatives": [
+        "[–1; 4]",
+        "[0; 2]",
+        "[–1; 2]",
+        "[0; 4]"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 18"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que θ∈IIIC, señale la variación de: M = 2 – 3cosθ",
+      "alternatives": [
+        "<2; 5>",
+        "<2; 3>",
+        "<1; 2>",
+        "<1; 3>",
+        "<–1; 1>"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 19"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halle la suma de todos los valores enteros que tiene n si se cumple que senΦ = (3n–5)/8 ; Φ∈ℝ",
+      "alternatives": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 20"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sume el máximo y el mínimo valor de: T = sen²x + senx + 1 ; x∈ℝ",
+      "alternatives": [
+        "9/4",
+        "7/4",
+        "2",
+        "7",
+        "15/4"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 21"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sume el máximo y el mínimo valor de: A = 3senα + 2cosβ – senθ ; si \"α\", \"β\" y \"θ\" son independientes.",
+      "alternatives": [
+        "2",
+        "12",
+        "6",
+        "–1",
+        "0"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Practica Pregunta 23"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica verdadero (V) o falso (F) según corresponda:\nI. En el IIIC cuadrante el seno crece.\nII. El máximo valor del coseno es 1.\nIII. En el IIC el coseno varía de 0 a –1.",
+      "alternatives": [
+        "VFV",
+        "FVF",
+        "FVV",
+        "VVF",
+        "FFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señala lo incorrecto (ángulos en radianes).",
+      "alternatives": [
+        "Sen1 < Sen2",
+        "Sen4 > Sen5",
+        "Sen2 > Sen3",
+        "Sen5 < Sen6",
+        "Sen1 < Sen3"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula \"A·B\" donde A y B representan los valores máximo y mínimo de la expresión: k = 5 – 3Cosx",
+      "alternatives": [
+        "–15",
+        "–6",
+        "8",
+        "15",
+        "16"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si π < α < θ < 3π/2, señala verdaderos:\nI. Senα < Senθ\nII. Cosα > Cosθ\nIII. Senα + Cosθ > 0",
+      "alternatives": [
+        "VVV",
+        "FVF",
+        "FFV",
+        "FVV",
+        "FFF"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Halla la suma de los valores máximo y mínimo de: f(x) = 5 + Sen(5x+1)",
+      "alternatives": [
+        "10",
+        "5",
+        "4",
+        "9",
+        "0"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 5"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si π/2 < x < y < π, son verdaderos:\nI. Senx > Seny\nII. Cosx < Cosy\nIII. Senx < Cosy",
+      "alternatives": [
+        "Sólo I",
+        "Sólo II",
+        "Sólo III",
+        "I y II",
+        "I y III"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Halla el máximo valor de: E = (2 – Senx)² + (3 + Cosy)²",
+      "alternatives": [
+        "13",
+        "15",
+        "18",
+        "27",
+        "25"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 7"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indica el mayor valor.",
+      "alternatives": [
+        "Sen40°",
+        "Sen80°",
+        "Sen110°",
+        "Sen150°",
+        "Sen170°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 8"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica el mayor valor (ángulos en radianes).",
+      "alternatives": [
+        "Cos1",
+        "Cos2",
+        "Cos3",
+        "Cos4",
+        "Cos5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 11"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica el orden creciente de: Sen1; Sen2; Sen3 (ángulos en radianes).",
+      "alternatives": [
+        "Sen1; Sen2; Sen3",
+        "Sen1; Sen3; Sen2",
+        "Sen2; Sen3; Sen1",
+        "Sen2; Sen1; Sen3",
+        "Sen3; Sen1; Sen2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 12"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indica el orden creciente de: Cos1; Cos2; Cos3 (ángulos en radianes).",
+      "alternatives": [
+        "Cos1; Cos2; Cos3",
+        "Cos1; Cos3; Cos2",
+        "Cos2; Cos3; Cos1",
+        "Cos3; Cos2; Cos1",
+        "Cos3; Cos1; Cos2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 13"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Afirma si es (V) o (F):\nI. La Tangente en el IIIC es creciente.\nII. El coseno en el IIC es creciente.\nIII. El seno en el IVC es creciente.",
+      "alternatives": [
+        "VFF",
+        "VFV",
+        "VVF",
+        "FVF",
+        "FVV"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 14"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Afirma si es (V) o (F):\nI. Sen2 > Sen3\nII. Cos4 > Cos5\nIII. Tg5 > Tg6\n(ángulos en radianes)",
+      "alternatives": [
+        "VFV",
+        "VVV",
+        "FFF",
+        "VFF",
+        "FFV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 16"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indica si es (V) o (F) en el IV cuadrante:\nI. Senx – Cosx es positivo.\nII. Tgx – Senx es negativo.\nIII. Cosx – Ctgx es positivo.",
+      "alternatives": [
+        "FVV",
+        "VFV",
+        "VVV",
+        "FVF",
+        "VVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 17"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿En qué cuadrante(s) se cumple que mientras el seno decrece el coseno crece?",
+      "alternatives": [
+        "IC",
+        "IIC",
+        "IIIC",
+        "IVC",
+        "FD"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/circunferencia-trigonometrica.html",
+      "sourceName": "matematicasn - Circunferencia Trigonométrica ejercicios resueltos, Segunda Practica Pregunta 18"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Considerando los valores de: Sen40°, Sen130°, Sen220°, Sen310° — luego el mayor valor será:",
+      "alternatives": [
+        "Sen40°",
+        "Sen130°",
+        "Sen220°",
+        "Sen310°",
+        "Necesito calculadora"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas I, Ejercicio 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la variación de \"m\" para que sea posible la relación: Senα = 2m – 7",
+      "alternatives": [
+        "3 ≤ m ≤ 4",
+        "–1 ≤ m ≤ 1",
+        "6 ≤ m ≤ 8",
+        "–2 ≤ m ≤ 2",
+        "2 ≤ m ≤ 3"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas I, Ejercicio 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar la extensión de \"K\", si: θ∈IIIC y Senθ = (3K – 7)/4",
+      "alternatives": [
+        "K∈[–1; 1]",
+        "K∈⟨–1; 7/3⟩",
+        "K∈[–1; 7/3⟩",
+        "K∈⟨1; 7/3⟩",
+        "K∈[1; 7/3⟩"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas I, Ejercicio 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si A es el máximo valor, y B el mínimo valor de la expresión: Q = 2 – 3Senα, encontrar el valor de \"A–B\".",
+      "alternatives": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas I, Ejercicio 4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Considerando los valores de: Cos55°, Cos145°, Cos235°, Cos325° — luego el menor valor será:",
+      "alternatives": [
+        "Cos325°",
+        "Cos235°",
+        "Cos145°",
+        "Cos55°",
+        "Necesito calculadora"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas I, Ejercicio 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la variación de \"m\" si: Cosα = (m + 3)/5",
+      "alternatives": [
+        "–1 ≤ m ≤ 1",
+        "2 ≤ m ≤ 8",
+        "–8 ≤ m ≤ 8",
+        "–8 ≤ m ≤ –2",
+        "–8 ≤ m ≤ 2"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas I, Ejercicio 7"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si θ∈IVC y Cosθ = (1 – 3a)/7, ¿entre qué límites debe estar \"a\" para que el Cosθ exista?",
+      "alternatives": [
+        "⟨1/3; 2⟩",
+        "⟨–1/3; 2⟩",
+        "]–1/3; 2[",
+        "⟨–2; 1/3⟩",
+        "⟨–2; 1/3]"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas I, Ejercicio 8"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el cociente de los valores máximo y mínimo de: Q = 6Cosα – 7",
+      "alternatives": [
+        "1",
+        "13",
+        "–13",
+        "–1/13",
+        "1/13"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas I, Ejercicio 9"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si π/2 < α₁ < α₂ < π, indicar si es (V) o (F):\nI) Senα₁ < Senα₂\nII) Cosα₁ > Cosα₂\nIII) Senα₂·Cosα₁ > 0\nIV) Cosα₂·Senα₁ < 0",
+      "alternatives": [
+        "FVVF",
+        "FVFV",
+        "VFFF",
+        "VVFF",
+        "FFVF"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas I, Ejercicio 12"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar la relación posible entre las siguientes:\na) Senα = √3\nb) Cosβ = –√2\nc) Senθ = +1\nd) Cosφ = 1 – √3\ne) Senγ = √3/√2",
+      "alternatives": [
+        "Senα = √3",
+        "Cosβ = –√2",
+        "Senθ = +1",
+        "Cosφ = 1 – √3",
+        "Senγ = √3/√2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas I, Ejercicio 13"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indicar el mayor valor en las siguientes alternativas:",
+      "alternatives": [
+        "Sen20°",
+        "Sen70°",
+        "Sen100°",
+        "Sen230°",
+        "Sen300°"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas II, Ejercicio 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar verdadero (V) ó falso (F) según corresponda:\nI) Cos10° > Cos50°\nII) Cos120° > Cos160°\nIII) Cos290° > Cos340°",
+      "alternatives": [
+        "VVV",
+        "FFF",
+        "FVF",
+        "VVF",
+        "VFF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas II, Ejercicio 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar verdadero (V) ó falso (F) según corresponda:\nI) Sen20° > Cos20°\nII) Cos190° > Cos300°\nIII) Sen100° = Cos350°",
+      "alternatives": [
+        "VVV",
+        "FFF",
+        "FFV",
+        "VVF",
+        "VVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas II, Ejercicio 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hallar la variación de \"k\" para que se verifique la igualdad: Senθ = (2k – 5)/3",
+      "alternatives": [
+        "–1 ≤ k ≤ 1",
+        "0 ≤ k ≤ 3",
+        "0 ≤ k ≤ 1",
+        "1 ≤ k ≤ 4",
+        "–2 ≤ k ≤ 1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas II, Ejercicio 4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indicar la extensión de \"k\", si θ∈IIC; además: Cosθ = 2k + 3",
+      "alternatives": [
+        "[–1; 1]",
+        "⟨–2; –3/2⟩",
+        "[0; 1]",
+        "[–2; –1]",
+        "⟨–1; 2⟩"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas II, Ejercicio 5"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si α∈[π/6; 3π/5]; hallar la extensión de: E = 4Senα – 3",
+      "alternatives": [
+        "[–1; 1]",
+        "[0; 1]",
+        "[–3; 4]",
+        "[1; 2]",
+        "[–2; 0]"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas II, Ejercicio 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Siendo α y β ángulos independientes, hallar la diferencia entre el máximo y mínimo valor de: M = 2Senα + 3Cos²β",
+      "alternatives": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas II, Ejercicio 7"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indicar verdadero (V) ó falso (F):\nI) SenKπ = 0\nII) Cos(2k+1)π = –1\nIII) Sen(4k+1)·π/2 = 1\n(k es un entero cualquiera)",
+      "alternatives": [
+        "VVV",
+        "FFV",
+        "VVF",
+        "VFV",
+        "VFF"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas II, Ejercicio 11"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que √(Senx – 1) + 4^(Cosx) = Seny, calcular el valor de: M = Cosx + Cosy",
+      "alternatives": [
+        "–2",
+        "–1",
+        "0",
+        "1",
+        "2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas II, Ejercicio 12"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indicar las alternativas correctas:\nI. Sen1 > Sen2\nII. Cos3 > Cos4\nIII. Cos6 > Sen1",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "Solo I y II",
+        "Solo II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas II, Ejercicio 13"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sabiendo que α∈⟨30°; 120°⟩, hallar la extensión de: M = 2Cos2α + 1",
+      "alternatives": [
+        "[–1; 2⟩",
+        "[0; 3]",
+        "⟨–2; –1⟩",
+        "[–2; 2]",
+        "[1; 2]"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas II, Ejercicio 15"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcular el máximo valor de: E = (3 – Cosx)(1 + Cosx)",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas II, Ejercicio 17"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hallar la extensión de: Cos(π/2 · Senx)",
+      "alternatives": [
+        "[0; 1]",
+        "[0; 2]",
+        "[–2; –1]",
+        "[–2; 0]",
+        "[1; 2]"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Trigonometria.pdf",
+      "sourceName": "CEPREVI UNFV - Trigonometría 2018, Unidad 7 Circunferencia Trigonométrica, Problemas II, Ejercicio 18"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indicar en qué cuadrante(s) el seno decrece.",
+      "alternatives": [
+        "IC",
+        "IIC",
+        "IIIC",
+        "IVC",
+        "IIC y IIIC"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://recursosdidacticos.org/problemas-de-circunferencia-trigonometrica-para-quinto-de-secundaria/",
+      "sourceName": "recursosdidacticos.org - Problemas de Circunferencia Trigonométrica para Quinto de Secundaria, Ejercicio 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indicar en qué cuadrante(s) el coseno crece.",
+      "alternatives": [
+        "IC",
+        "IIC",
+        "IIIC",
+        "IVC",
+        "IIIC y IVC"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://recursosdidacticos.org/problemas-de-circunferencia-trigonometrica-para-quinto-de-secundaria/",
+      "sourceName": "recursosdidacticos.org - Problemas de Circunferencia Trigonométrica para Quinto de Secundaria, Ejercicio 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿En qué cuadrante el seno y el coseno crecen simultáneamente (en sentido antihorario)?",
+      "alternatives": [
+        "IC",
+        "IIC",
+        "IIIC",
+        "IVC",
+        "N.A."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://recursosdidacticos.org/problemas-de-circunferencia-trigonometrica-para-quinto-de-secundaria/",
+      "sourceName": "recursosdidacticos.org - Problemas de Circunferencia Trigonométrica para Quinto de Secundaria, Ejercicio 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el máximo valor que toma la expresión: E = 3Sen5a – 4|Cosb| + 2",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://recursosdidacticos.org/problemas-de-circunferencia-trigonometrica-para-quinto-de-secundaria/",
+      "sourceName": "recursosdidacticos.org - Problemas de Circunferencia Trigonométrica para Quinto de Secundaria, Ejercicio 4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indicar la variación de la expresión: E = Cos(Cosφ)",
+      "alternatives": [
+        "[Sen1; 1]",
+        "[Cos1; 1]",
+        "[–Sen1; 1]",
+        "[–Cos1; 1]",
+        "[–Cos1; Cos1]"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://recursosdidacticos.org/problemas-de-circunferencia-trigonometrica-para-quinto-de-secundaria/",
+      "sourceName": "recursosdidacticos.org - Problemas de Circunferencia Trigonométrica para Quinto de Secundaria, Ejercicio 5"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Ordene de menor a mayor: Sen40°; Sen80°; Sen170°",
+      "alternatives": [
+        "Sen170° < Sen80° < Sen40°",
+        "Sen170° < Sen40° < Sen80°",
+        "Sen40° < Sen80° < Sen170°",
+        "Sen40° < Sen170° < Sen80°",
+        "Sen80° < Sen40° < Sen170°"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://trigonometriapdf.blogspot.com/2019/01/circunferencia-trigonometrica-problemas.html",
+      "sourceName": "trigonometriapdf.blogspot.com - Seno Coseno Tangente Cotangente en la Circunferencia Trigonométrica, Ejercicio 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señale el mayor valor de las cantidades dadas.",
+      "alternatives": [
+        "cos70°",
+        "cos100°",
+        "cos200°",
+        "cos350°",
+        "cos40°"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://trigonometriapdf.blogspot.com/2019/01/circunferencia-trigonometrica-problemas.html",
+      "sourceName": "trigonometriapdf.blogspot.com - Seno Coseno Tangente Cotangente en la Circunferencia Trigonométrica, Ejercicio 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determinar la veracidad (V) o falsedad (F) de cada proposición:\nI) Sen2 > Sen1 > Sen3\nII) Sen6 > Sen4 > Sen5\nIII) Cos6 ≥ Cos1 ≥ Cos5\nIV) Cos2 ≥ Cos4 ≥ Cos3\n(ángulos en radianes)",
+      "alternatives": [
+        "FFVV",
+        "VVFF",
+        "VVFV",
+        "FVFV",
+        "VFVF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://es.slideshare.net/slideshow/semana-5-34613205/34613205",
+      "sourceName": "SlideShare - Semana 5 Circunferencia Trigonométrica, Problema resuelto 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si Senα = (1 – 2x)/3 donde α∈IIIC, hallar la variación de \"x\".",
+      "alternatives": [
+        "[–2; –1/2]",
+        "[–1/2; 2]",
+        "[–2; 1/2]",
+        "[–2; 2]",
+        "[–1; 1]"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://es.slideshare.net/slideshow/semana-5-34613205/34613205",
+      "sourceName": "SlideShare - Semana 5 Circunferencia Trigonométrica, Problema resuelto 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Circunferencia Trigonométrica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Ordenar en forma creciente: Sen1, Sen2, Sen3, Sen4, Sen5, Sen7 (ángulos en radianes).",
+      "alternatives": [
+        "Sen5, Sen4, Sen3, Sen7, Sen1, Sen2",
+        "Sen5, Sen4, Sen3, Sen1, Sen7, Sen2",
+        "Sen5, Sen4, Sen3, Sen1, Sen2, Sen7",
+        "Sen4, Sen5, Sen3, Sen1, Sen7, Sen2",
+        "Sen4, Sen5, Sen3, Sen7, Sen1, Sen2"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://es.slideshare.net/slideshow/semana-5-34613205/34613205",
+      "sourceName": "SlideShare - Semana 5 Circunferencia Trigonométrica, Problema de clase 1"
+    }
+  ]
+}

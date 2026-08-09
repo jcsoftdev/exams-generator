@@ -1,0 +1,990 @@
+{
+  "entries": [
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las columnas A y B están formadas por bloques cúbicos de igual tamaño. Si se pasara un bloque de A a B, cada columna tendría 72 cm de altura; pero si se pasaran dos bloques de B a A, el número de bloques en B sería la mitad del de A. ¿Cuánto mide la arista de cada bloque?",
+      "alternatives": [
+        "6 cm",
+        "9 cm",
+        "12 cm",
+        "4.8 cm",
+        "8 cm"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/09/unmsm-2013-i-solucionario-examen.html",
+      "sourceName": "Examen de Admisión UNMSM 2013-I, Razonamiento Matemático, Pregunta 04"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una joven debe lavar n docenas de camisas; recibirá 'a' dólares por cada camisa bien lavada y pagará 'b' dólares por cada camisa mal lavada. Si recibió 'm' dólares en total, ¿cuántas camisas fueron mal lavadas?",
+      "alternatives": [
+        "(12an - m)/(a + b)",
+        "(m + 12an)/(a + b)",
+        "(an - m)/(a + b)",
+        "(m - an)/(12a + b)",
+        "(12am - n)/(a + b)"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/examen-admision-unmsm-razonamiento.html",
+      "sourceName": "Examen de Admisión UNMSM 2011-I, Razonamiento Matemático, Pregunta 13"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las edades de Julio y su padre difieren en 24 años. Si Julio nació en el año (19ab) y en 1980 tuvo (a+b) años, ¿en qué año ambas edades sumaron 112 años?",
+      "alternatives": [
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2010"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/10/razonamiento-matematico-ejercicios.html",
+      "sourceName": "Blog del Profe Alex, Problemas de Edades, Problema 01"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La edad de Juan es numéricamente igual al cuadrado de la edad de Jesús más 36 años. Si dentro de 3 años la edad de Juan será el cuadrado de la edad de Jesús, ¿cuántos años tiene Juan actualmente?",
+      "alternatives": [
+        "56",
+        "58",
+        "46",
+        "78",
+        "61"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/10/razonamiento-matematico-ejercicios.html",
+      "sourceName": "Blog del Profe Alex, Problemas de Edades, Problema 02"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La edad actual de Pedro es igual a la mitad de la edad actual de Luis. Hace 12 años la edad de Pedro era la cuarta parte de la edad de Luis. ¿Hace cuántos años la edad de Pedro era la tercera parte de la edad de Luis?",
+      "alternatives": [
+        "6",
+        "9",
+        "10",
+        "12",
+        "14"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/10/razonamiento-matematico-ejercicios.html",
+      "sourceName": "Blog del Profe Alex, Problemas de Edades, Problema 04"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Las edades de una pareja de casados suman 83 años. Si se casaron hace 14 años y la edad de la novia era los 5/6 de la del novio, ¿cuál será la suma de las edades cuando transcurran tantos años como la diferencia de sus edades?",
+      "alternatives": [
+        "103 años",
+        "98 años",
+        "108 años",
+        "93 años",
+        "113 años"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/10/razonamiento-matematico-ejercicios.html",
+      "sourceName": "Blog del Profe Alex, Problemas de Edades, Problema 07"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Hace seis años Edu tenía seis años. ¿Dentro de cuántos años la edad de Edu será el triple de su edad actual?",
+      "alternatives": [
+        "12",
+        "18",
+        "24",
+        "22",
+        "36"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
+      "sourceName": "MatemáticasN, Problemas sobre Edades, Ejercicio 02"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Rosario es mayor que Carolina por cuatro años. Si la suma de sus edades actuales es 52 años, ¿cuál es la edad de Rosario?",
+      "alternatives": [
+        "22",
+        "24",
+        "28",
+        "30",
+        "27"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
+      "sourceName": "MatemáticasN, Problemas sobre Edades, Ejercicio 12"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Dentro de 15 años tendré el triple de la edad que tuve hace nueve años. ¿Cuántos años tengo?",
+      "alternatives": [
+        "18",
+        "19",
+        "25",
+        "24",
+        "21"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
+      "sourceName": "MatemáticasN, Problemas sobre Edades, Ejercicio 15"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Juan tiene 42 años y Pedro 18. ¿Hace cuántos años la edad de Juan fue nueve veces la edad que tuvo Pedro en ese entonces?",
+      "alternatives": [
+        "12",
+        "14",
+        "15",
+        "10",
+        "11"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
+      "sourceName": "MatemáticasN, Problemas sobre Edades, Ejercicio 17"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La edad de Arturo es el doble de la de Katty y hace 15 años la edad de Arturo fue el triple de la de Katty. ¿Cuál es la edad de Arturo?",
+      "alternatives": [
+        "30",
+        "45",
+        "50",
+        "60",
+        "55"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
+      "sourceName": "MatemáticasN, Problemas sobre Edades, Ejercicio 19"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La edad de Sara es el triple de la edad de Ángel y dentro de 5 años ambas edades sumarán 46 años. En la actualidad Ángel tiene:",
+      "alternatives": [
+        "10",
+        "7",
+        "11",
+        "9",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
+      "sourceName": "MatemáticasN, Problemas sobre Edades, Ejercicio 21"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La edad de William es el doble de la edad de María Belén y hace 12 años la suma de sus edades era 30 años. Entonces María Belén tiene actualmente:",
+      "alternatives": [
+        "20",
+        "17",
+        "19",
+        "21",
+        "18"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
+      "sourceName": "MatemáticasN, Problemas sobre Edades, Ejercicio 22"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dentro de cuatro años la edad de Pilar será el triple de la de María y hace dos años era el quíntuple. Hallar la edad de Pilar dentro de siete años.",
+      "alternatives": [
+        "42",
+        "30",
+        "36",
+        "45",
+        "39"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
+      "sourceName": "MatemáticasN, Problemas sobre Edades, Ejercicio 23"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Hace seis años Julio tenía el cuádruple de la edad de David. Hallar la suma de sus edades actuales, sabiendo que dentro de cuatro años sólo será el doble.",
+      "alternatives": [
+        "37",
+        "36",
+        "35",
+        "34",
+        "33"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
+      "sourceName": "MatemáticasN, Problemas sobre Edades, Ejercicio 25"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cuando yo tenía un año menos de la edad que tú tienes, tú tenías 5 años menos de la edad que yo tengo; pero cuando tengas la edad que yo tengo, nuestras edades sumarán 110 años. ¿Qué edad tengo?",
+      "alternatives": [
+        "52",
+        "54",
+        "55",
+        "48",
+        "50"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/problemas-sobre-edades-ejercicios_5.html",
+      "sourceName": "MatemáticasN, Problemas sobre Edades, Ejercicio 27"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se ha disuelto 100 gramos de refresco en sobre en 1000 ml de agua. ¿Cuántos gramos hay que agregar para que, por cada 7 gramos de refresco, haya 40 ml de agua?",
+      "alternatives": [
+        "7.5",
+        "75",
+        "100",
+        "175",
+        "275"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/10/11-ejercicios-resueltos-mezclas-y.html",
+      "sourceName": "Blog del Profe Alex, Mezclas y Aleaciones, Problema 01"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene 16 litros de una mezcla con alcohol al 25% contenidos en un recipiente. ¿Cuántos litros de alcohol puro debo agregar a la mezcla inicial para finalmente obtener alcohol al 50%?",
+      "alternatives": [
+        "8",
+        "9",
+        "10",
+        "12",
+        "13"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/10/11-ejercicios-resueltos-mezclas-y.html",
+      "sourceName": "Blog del Profe Alex, Mezclas y Aleaciones, Problema 02"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un recipiente se tiene X litros de agua e Y litros de vino; se extraen Z litros de la mezcla. Determina los litros de vino que quedan en el recipiente.",
+      "alternatives": [
+        "Z(X+Y-Z)/(X+Y)",
+        "Y(X+Y-Z)/(X-Y)",
+        "Y(X+Y-Z)/(X+Y)",
+        "Y(X+Y-Z)/(X-Z)",
+        "Y(X-Y+Z)/(X+Y)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/10/11-ejercicios-resueltos-mezclas-y.html",
+      "sourceName": "Blog del Profe Alex, Mezclas y Aleaciones, Problema 04"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "De un tonel que contiene 80 litros de vino se sacan 20 litros que se reemplazan por agua. Se hace lo mismo con la mezcla por segunda y tercera vez. La cantidad de vino que queda en el tonel después de la tercera operación es:",
+      "alternatives": [
+        "37.12 L",
+        "35.78 L",
+        "23.12 L",
+        "32.69 L",
+        "33.75 L"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/10/11-ejercicios-resueltos-mezclas-y.html",
+      "sourceName": "Blog del Profe Alex, Mezclas y Aleaciones, Problema 05"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un contenedor de alcohol-agua con mezcla al 60% (20 L) y otro al 40% (80 L). Al combinarlos, la nueva concentración de alcohol es:",
+      "alternatives": [
+        "48%",
+        "50%",
+        "44%",
+        "36%",
+        "25%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/regla-de-mezcla-y-aleacion-ejercicios.html",
+      "sourceName": "MatemáticasN, Regla de Mezcla y Aleación, Problema 01"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Arroz de S/.6/kg se mezcla con arroz de S/.10/kg para obtener 120 kg al precio de S/.7/kg sin pérdidas ni ganancias. ¿Cuántos kg de cada tipo se usaron?",
+      "alternatives": [
+        "100 kg y 20 kg",
+        "80 kg y 40 kg",
+        "70 kg y 50 kg",
+        "90 kg y 30 kg",
+        "60 kg y 60 kg"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/regla-de-mezcla-y-aleacion-ejercicios.html",
+      "sourceName": "MatemáticasN, Regla de Mezcla y Aleación, Problema 05"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "90 litros de vino a S/.20/L se mezclan con agua para obtener un precio promedio de S/.15/L. ¿Cuántos litros de agua se necesitan?",
+      "alternatives": [
+        "20 L",
+        "30 L",
+        "25 L",
+        "15 L",
+        "40 L"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/regla-de-mezcla-y-aleacion-ejercicios.html",
+      "sourceName": "MatemáticasN, Regla de Mezcla y Aleación, Problema 06"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A una reunión asistieron cierta cantidad de personas. Al inicio todos se distribuyeron en N mesas, sentándose 8 personas en cada mesa. Luego se habilitaron 4 mesas más y cada mesa quedó con 6 personas. ¿Cuántas personas asistieron a la reunión?",
+      "alternatives": [
+        "72",
+        "96",
+        "84",
+        "48",
+        "90"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/habilidad-logico-matematica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "DECO UNMSM Simulacro, Habilidad Lógico-Matemática, Problema 01"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La mitad de la edad de Beto equivale a la diferencia entre la edad que tendrá dentro de 10 años y la edad que tenía hace 10 años. ¿Cuántos años tiene Beto?",
+      "alternatives": [
+        "10 años",
+        "20 años",
+        "25 años",
+        "30 años",
+        "40 años"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/02/planteamiento-de-problemas-con.html",
+      "sourceName": "Blog del Profe Alex, Ecuaciones Lineales, Problema 01"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una fiesta se observa que el número de parejas que bailan es la mitad del número de hombres que no bailan y el número de mujeres que no bailan es el cuádruple del número de hombres que bailan. Si en total hay 120 personas, ¿cuántos hombres hay en la fiesta?",
+      "alternatives": [
+        "30",
+        "15",
+        "45",
+        "60",
+        "75"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/02/planteamiento-de-problemas-con.html",
+      "sourceName": "Blog del Profe Alex, Ecuaciones Lineales, Problema 02"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se aplica una evaluación a 70 alumnos entre hombres y mujeres; de las mujeres aprobaron el 80% y únicamente el 10% de los hombres. Si el número de aprobados es el 70% del total, ¿cuántas mujeres rindieron la evaluación?",
+      "alternatives": [
+        "10",
+        "30",
+        "40",
+        "50",
+        "60"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/02/planteamiento-de-problemas-con.html",
+      "sourceName": "Blog del Profe Alex, Ecuaciones Lineales, Problema 04"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ana compró una bolsa de caramelos, consumió la cuarta parte y regaló 5; después Ana comió la mitad de los que tenía y obsequió los 5 que le quedaban. ¿Cuántos caramelos compró Ana?",
+      "alternatives": [
+        "18",
+        "20",
+        "25",
+        "30",
+        "22"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/examen-admision-unmsm-razonamiento.html",
+      "sourceName": "Examen de Admisión UNMSM 2011-I, Razonamiento Matemático, Problema 02"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un depósito lleno hasta las 3/4 de su capacidad pesa 3000 kg; lleno hasta 1/5 de su capacidad pesa 1900 kg. ¿Cuánto pesa cuando está completamente lleno?",
+      "alternatives": [
+        "3600 kg",
+        "3400 kg",
+        "3300 kg",
+        "3200 kg",
+        "3500 kg"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/examen-admision-unmsm-razonamiento.html",
+      "sourceName": "Examen de Admisión UNMSM 2011-I, Razonamiento Matemático, Problema 03"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un cartel cuyo ancho disminuye 10% y cuyo largo disminuye 30% resulta con un área equivalente a qué porcentaje del área original:",
+      "alternatives": [
+        "45%",
+        "77%",
+        "63%",
+        "70%",
+        "65%"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/07/examen-admision-unmsm-razonamiento.html",
+      "sourceName": "Examen de Admisión UNMSM 2011-I, Razonamiento Matemático, Problema 08"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La suma de tres números consecutivos impares es 99. Hallar la suma de los dos mayores.",
+      "alternatives": [
+        "68",
+        "69",
+        "65",
+        "70",
+        "66"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/06/planteo-de-ecuaciones-problemas.html",
+      "sourceName": "Blog del Profe Alex, Planteo de Ecuaciones, Problema 03"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Al estadio asistieron 3400 personas. Por cada 10 mujeres había 24 hombres. ¿Cuántos hombres asistieron?",
+      "alternatives": [
+        "1000",
+        "1200",
+        "2400",
+        "1600",
+        "1400"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/06/planteo-de-ecuaciones-problemas.html",
+      "sourceName": "Blog del Profe Alex, Planteo de Ecuaciones, Problema 05"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un examen tiene 100 preguntas. Las respuestas correctas valen 4 puntos y las incorrectas restan 2 puntos. Un estudiante contestó todas y obtuvo 88 puntos. ¿Cuántas respondió correctamente?",
+      "alternatives": [
+        "45",
+        "48",
+        "54",
+        "53",
+        "46"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/06/planteo-de-ecuaciones-problemas.html",
+      "sourceName": "Blog del Profe Alex, Planteo de Ecuaciones, Problema Intermedio 01"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Yasmin viajando a 6 km/h llega 15 minutos tarde a su destino; si viaja a 12 km/h llega 15 minutos antes. ¿A qué velocidad debe viajar para llegar exactamente a la hora?",
+      "alternatives": [
+        "7 km/h",
+        "8 km/h",
+        "9 km/h",
+        "9.5 km/h",
+        "8.5 km/h"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-problemas-con-claves-pdf.html",
+      "sourceName": "MatemáticasN, Móviles, Ejercicio 04"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "A 100 km/h se llega a un destino a las 7 PM; a 150 km/h se llega a las 5 PM. ¿A qué velocidad hay que viajar para llegar a las 6 PM?",
+      "alternatives": [
+        "125 km/h",
+        "120 km/h",
+        "130 km/h",
+        "135 km/h",
+        "115 km/h"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-problemas-con-claves-pdf.html",
+      "sourceName": "MatemáticasN, Móviles, Ejercicio 05"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un tren de 220 m de largo cruza un puente de 340 m en 8 segundos. ¿Cuál es la velocidad del tren en m/s?",
+      "alternatives": [
+        "60 m/s",
+        "50 m/s",
+        "45 m/s",
+        "70 m/s",
+        "75 m/s"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-problemas-con-claves-pdf.html",
+      "sourceName": "MatemáticasN, Móviles, Ejercicio 07"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos nadadores parten simultáneamente desde orillas opuestas de un río y se encuentran por primera vez a 12 m de la orilla más cercana. Al regresar se encuentran a 6 m de la otra orilla. ¿Cuál es el ancho del río?",
+      "alternatives": [
+        "20 m",
+        "30 m",
+        "18 m",
+        "26 m",
+        "32 m"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-problemas-con-claves-pdf.html",
+      "sourceName": "MatemáticasN, Móviles, Problema Propuesto 09"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos autos parten en sentidos opuestos a 80 km/h y 70 km/h desde el mismo punto, simultáneamente. ¿En cuántas horas estarán separados 300 km?",
+      "alternatives": [
+        "1 h",
+        "2 h",
+        "3 h",
+        "4 h",
+        "5 h"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-tiempo-de-encuentro-y-de.html",
+      "sourceName": "MatemáticasN, Móviles Tiempo de Encuentro y Alcance, Ejercicio 06"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un ciclista le lleva 25 km de ventaja al perseguidor. El líder viaja a 37 km/h y el perseguidor a 42 km/h. ¿En cuántas horas lo alcanza?",
+      "alternatives": [
+        "1 h",
+        "2 h",
+        "3 h",
+        "4 h",
+        "5 h"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/moviles-problemas-con-claves-pdf.html",
+      "sourceName": "MatemáticasN, Móviles, Ejercicio 08"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Se sabe que la edad de Miguel es igual a los 3/5 de la edad de Andrés. Determina la edad del mayor si el valor de la razón aritmética de dichas edades es 8 años.",
+      "alternatives": [
+        "20 años",
+        "18 años",
+        "30 años",
+        "12 años",
+        "24 años"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-y-proporciones-problemas-con.html",
+      "sourceName": "MatemáticasN, Razones y Proporciones, Problema 01"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "A la fiesta de Daniela asistieron 360 personas entre hombres y mujeres en proporción de 5 hombres por cada 4 mujeres. Después de tres horas se retiran cierto número de parejas y quedan 3 hombres por cada 2 mujeres. ¿Cuántas parejas se retiraron?",
+      "alternatives": [
+        "40",
+        "80",
+        "160",
+        "30",
+        "60"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-y-proporciones-problemas-con.html",
+      "sourceName": "MatemáticasN, Razones y Proporciones, Problema 03"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Carlos mezcla en un recipiente vino y gaseosa en la relación de 5 a 3 respectivamente. Luego agrega 3 L de vino, por lo que la relación final es de 7 a 4. ¿Cuántos litros de vino quedan al final?",
+      "alternatives": [
+        "40 L",
+        "52 L",
+        "63 L",
+        "36 L",
+        "48 L"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-y-proporciones-problemas-con.html",
+      "sourceName": "MatemáticasN, Razones y Proporciones, Problema 05"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La edad de la madre es igual a 3 veces la de Jesús. Hace 5 años, la suma de sus edades era 40 años. ¿Cuál es la edad actual de Jesús?",
+      "alternatives": [
+        "10 años",
+        "15 años",
+        "8 años",
+        "12 años",
+        "20 años"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/700-problemas-resueltos-de-razonamiento.html",
+      "sourceName": "MatemáticasN, 700 Problemas Razonamiento Matemático Preuniversitario, Problema 06"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Hace 15 años, la edad de un abuelo era 15 veces la edad de su nieto. Actualmente, la edad del nieto equivale a 3/10 de la del abuelo. ¿Cuántos años tiene el nieto?",
+      "alternatives": [
+        "20 años",
+        "18 años",
+        "17 años",
+        "16 años",
+        "15 años"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/700-problemas-resueltos-de-razonamiento.html",
+      "sourceName": "MatemáticasN, 700 Problemas Razonamiento Matemático Preuniversitario, Problema 08"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Bruno gasta sus ahorros en 4 días: el primer día gasta la mitad del total; el segundo día un tercio más 10 soles; el tercer día dos quintos de lo gastado el segundo día; el cuarto día los 100 soles restantes. ¿Cuánto tenía al inicio?",
+      "alternatives": [
+        "570",
+        "3420",
+        "3460",
+        "3240",
+        "1710 soles"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razonamiento-matematico_24.html",
+      "sourceName": "MatemáticasN, RM Preuniversitario Problemas Resueltos, Problema 07"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Richard resuelve 5 ejercicios por hora. Después de trabajar 3 horas, un amigo se une resolviendo 7 ejercicios por hora. Si empezaron a las 2 PM y deben resolver 60 ejercicios en total, ¿a qué hora terminan?",
+      "alternatives": [
+        "9:30 PM",
+        "10:15 PM",
+        "9:15 PM",
+        "8:45 PM",
+        "8:00 PM"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/razonamiento-matematico_24.html",
+      "sourceName": "MatemáticasN, RM Preuniversitario Problemas Resueltos, Problema 16"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En un teatro, los boletos para adultos cuestan $5 y para niños $2. Asistieron 326 espectadores y se recaudó $1090. ¿Cuántos adultos asistieron?",
+      "alternatives": [
+        "146",
+        "126",
+        "156",
+        "166",
+        "136"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/02/ejercicios-resueltos-razonamiento.html",
+      "sourceName": "Blog del Profe Alex, Razonamiento Matemático Cuatro Operaciones, Problema 01"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Vidal vende su auto de S/.36 000 a José con el 10% de ganancia. José revende el auto a Vidal con el 10% de descuento. ¿Cuánto gana Vidal en total?",
+      "alternatives": [
+        "S/.3645",
+        "S/.3564",
+        "S/.3690",
+        "S/.3900",
+        "S/.3960"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/02/ejercicios-resueltos-razonamiento.html",
+      "sourceName": "Blog del Profe Alex, Razonamiento Matemático Cuatro Operaciones, Problema 05"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Tres conejos cuestan lo mismo que 8 gallinas; 16 gallinas valen lo mismo que 15 cuyes. Si 5 cuyes cuestan 20 soles, ¿cuánto cuestan 10 conejos?",
+      "alternatives": [
+        "100 soles",
+        "60 soles",
+        "70 soles",
+        "40 soles",
+        "50 soles"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/03/razonamiento-logico-matematico.html",
+      "sourceName": "Blog del Profe Alex, Razonamiento Lógico Matemático, Problema 09"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "María califica 25 exámenes por hora y Rosa 20 exámenes por hora. Cada una tiene que calificar 500 exámenes. Cuando María termina, ¿cuántos exámenes le faltan a Rosa?",
+      "alternatives": [
+        "100",
+        "60",
+        "90",
+        "120",
+        "50"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/03/razonamiento-logico-matematico.html",
+      "sourceName": "Blog del Profe Alex, Razonamiento Lógico Matemático, Problema 29"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un empresario paga por hora extra trabajada 1,5 veces lo que paga por hora normal. Un trabajador recibió $435 en una semana trabajando 52 horas en total (40 normales). ¿Cuánto gana por hora normal?",
+      "alternatives": [
+        "$12.50",
+        "$7.50",
+        "$10.00",
+        "$5.50",
+        "$8.00"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/06/planteamiento-de-ecuaciones-problemas.html",
+      "sourceName": "Blog del Profe Alex, Planteamiento de Ecuaciones, Ejercicio 01"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Tres estudiantes tienen 28 libros en total. Bety tiene 3 menos que Ana; Caty tiene 2 menos que Bety. ¿Cuántos libros tiene Caty?",
+      "alternatives": [
+        "7",
+        "8",
+        "2",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2012/06/planteamiento-de-ecuaciones-problemas.html",
+      "sourceName": "Blog del Profe Alex, Planteamiento de Ecuaciones, Ejercicio 05"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La edad de Jimena es tres veces la de su hermano Juan. En cuatro años, la suma de sus edades será igual a la mitad de la edad de su padre en ese entonces. Su padre tiene ahora 52 años. Las edades actuales de Juan y Jimena son:",
+      "alternatives": [
+        "3 y 9 años",
+        "4 y 12 años",
+        "5 y 15 años",
+        "6 y 18 años",
+        "7 y 21 años"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/03/razonamiento-matematico-problemas.html",
+      "sourceName": "Blog del Profe Alex, Problemas Sobre Edades, Problema 02"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Miguel tiene 2 años más que su hermano José y la edad del padre es el cuádruple de la edad de José. Si hace 5 años la suma de las edades de los tres era 77 años, ¿cuántos años tiene Miguel?",
+      "alternatives": [
+        "15 años",
+        "12 años",
+        "21 años",
+        "17 años",
+        "14 años"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/03/razonamiento-matematico-problemas.html",
+      "sourceName": "Blog del Profe Alex, Problemas Sobre Edades, Problema 05"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Viento tiene 32 años más que Meteoro, pero 14 menos que Flash; Rayo tiene tantos años como la suma de las edades de Viento y Meteoro. Si dentro de 25 años la suma de las cuatro edades será igual a dos siglos y medio, ¿cuántos años tiene Rayo?",
+      "alternatives": [
+        "40 años",
+        "38 años",
+        "62 años",
+        "48 años",
+        "20 años"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/03/razonamiento-matematico-problemas.html",
+      "sourceName": "Blog del Profe Alex, Problemas Sobre Edades, Problema 08"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se sabe que la suma de las edades de un conjunto de 100 postulantes es de 1856 años, y que cada uno de ellos solo tiene 17 o 21 años. ¿Cuántos tienen 21 años?",
+      "alternatives": [
+        "35",
+        "39",
+        "37",
+        "38",
+        "61"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2010/03/razonamiento-matematico-problemas.html",
+      "sourceName": "Blog del Profe Alex, Problemas Sobre Edades, Problema 14"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un inocente gasta todos los días la mitad del dinero que posee más S/.20; al cabo de tres días ha gastado todo su dinero. ¿Cuánto dinero tenía al inicio?",
+      "alternatives": [
+        "S/.550",
+        "S/.380",
+        "S/.440",
+        "S/.280",
+        "S/.480"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/razonamiento-matematico-ejercicios.html",
+      "sourceName": "MatemáticasN Rubiños, Razonamiento Matemático, Problema 03"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Razonamiento Matemático Aplicado (Álgebra)",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando Luis nació, su padre Aristeo tenía 25 años; cuando nació Ricardo (hijo de Luis), Luis tenía 20 años. Si actualmente la edad de Aristeo es a la del nieto Ricardo como 4 es a 1, ¿hace cuántos años estas edades estaban en razón de 10 a 1?",
+      "alternatives": [
+        "10 años",
+        "20 años",
+        "15 años",
+        "12 años",
+        "8 años"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/razones-y-proporciones-problemas-con.html",
+      "sourceName": "MatemáticasN, Razones y Proporciones, Problema 02"
+    }
+  ]
+}

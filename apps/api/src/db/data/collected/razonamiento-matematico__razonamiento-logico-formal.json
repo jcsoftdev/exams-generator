@@ -1,0 +1,1802 @@
+{
+  "entries": [
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuáles de los siguientes enunciados son proposiciones?\nI) Luis todos los sábados está ocupado\nII) David venció a Goliat con una honda\nIII) El inicio del ciclo de la Pre San Marcos es en el mes de abril\nIV) La ciudad x es famosa por el coliseo\nV) Habla siempre sobre la crisis económica",
+      "alternatives": [
+        "I, II y V",
+        "I, II y III",
+        "I y II",
+        "II, III y V",
+        "IV y V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional - problemas resueltos de examen de admisión (matematicasn), Pregunta 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indique ¿cuáles de los siguientes enunciados son proposiciones lógicas?\nI) Dolly fue la primera oveja clonada\nII) El átomo es una molécula\nIII) Debemos honrar a nuestros héroes\nIV) Sea en buena hora\nV) El cuadrilátero es un polígono de cuatro lados",
+      "alternatives": [
+        "I, III y V",
+        "I, II y V",
+        "I y II",
+        "II, III y V",
+        "IV y V"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional - problemas resueltos de examen de admisión (matematicasn), Pregunta 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "De los siguientes enunciados:\nI. El número 7 es primo.\nII. Los términos de una fracción son números enteros positivos.\nIII. Si factorial de cero es uno, entonces factorial de uno es dos.\nIV. ¡Vacúnate contra la covid-19!\n¿Cuál o cuáles son proposiciones lógicas?",
+      "alternatives": [
+        "I y II",
+        "II y III",
+        "III y IV",
+        "I, II y III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional - problemas resueltos de examen de admisión (matematicasn), Pregunta 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Formalizar la proposición: «Si te esfuerzas por ser profesional, entonces triunfas; sin embargo no te esfuerzas por ser profesional». (p: te esfuerzas por ser profesional; q: triunfas)",
+      "alternatives": [
+        "(p → q) ∧ ∼p",
+        "p → (q ∧ ∼r)",
+        "(p → q) ∧ (p ∨ q)",
+        "(p → q) ∧ ∼r",
+        "(p → q) ∧ p"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Problema 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El resultado de simplificar: [(¬p ∧ q) → (r ∧ ¬s)] ∧ ¬q",
+      "alternatives": [
+        "¬p",
+        "¬q",
+        "p",
+        "q",
+        "p ∧ q"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Problema 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la proposición equivalente a: «Si no es cierto que Juan es una persona creyente y doctor, entonces, Juan es docente o no es una persona creyente. Sin embargo, Juan es docente».",
+      "alternatives": [
+        "Juan es docente",
+        "Juan es creyente",
+        "Juan es doctor",
+        "Juan es doctor y docente",
+        "Juan es doctor y creyente"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Problema 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado el siguiente enunciado: «Si estudio, entonces aprenderé; o aprendo pero no enseño. Por lo tanto estudio o aprendo», el enunciado equivalente es:",
+      "alternatives": [
+        "estudio o aprendo",
+        "aprendo y enseño",
+        "aprendo o enseño",
+        "estudio y aprendo",
+        "estudio o enseño"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional - problemas resueltos de examen de admisión (matematicasn), Pregunta 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La siguiente proposición: «Si mañana hace calor entonces me pondré ropa ligera, y mañana no me pongo ropa ligera ya que hará calor», es equivalente a:",
+      "alternatives": [
+        "«Mañana me pondré ropa ligera»",
+        "«Mañana no hará calor»",
+        "«Mañana no hará calor y me pondré ropa ligera»",
+        "«Mañana hará calor y me pondré ropa ligera»",
+        "«Mañana no hará calor y no me pondré ropa ligera»"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional - problemas resueltos de examen de admisión (matematicasn), Pregunta 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las proposiciones: p: Rubén va al estadio. q: Rubén va al concierto. r: Rubén va a la playa. Simplifique la siguiente proposición compuesta y determine su equivalente: [{(∼p ∨ q) ∧ (∼q ∨ p)} → (p ↔ r)] ∨ [∼(p Δ q)]",
+      "alternatives": [
+        "O Rubén va al estadio o va a la playa",
+        "Rubén va al estadio si y solo si va al concierto",
+        "Rubén va a la playa o no va a la playa",
+        "Rubén no va al estadio, pero va al concierto"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional - problemas resueltos de examen de admisión (matematicasn), Pregunta 7"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las siguientes proposiciones verdaderas:\nI. Si Carla no estudia, entonces no ingresará a la UNMSM.\nII. Si Alberto estudia, entonces Benito estudia.\nIII. Si Carla estudia, entonces Benito no estudia.\n¿Qué consecuencia origina el hecho de que Carla ingrese a la UNMSM?",
+      "alternatives": [
+        "Alberto no estudia.",
+        "Carla no estudia.",
+        "Benito estudia.",
+        "Alberto estudia."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Pregunta 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si Pedro cometió el crimen, entonces Ricardo y Juan también participaron. Si Sebastián no cometió el crimen, entonces Pedro lo hizo. Ricardo no participó. Luego es cierto que",
+      "alternatives": [
+        "Juan cometió el crimen.",
+        "Pedro cometió el crimen.",
+        "Sebastián y Juan fueron los que cometieron el crimen.",
+        "Sebastián cometió el crimen."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Pregunta 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Supongamos que los dos enunciados siguientes son verdaderos:\n• Juan ama a Cristina o ama a Silvia.\n• Si Juan ama a Cristina, entonces ama a Silvia.\nPor lo tanto, ¿cuáles de las siguientes afirmaciones son verdaderas?\nI. Juan ama a Cristina.\nII. Juan ama a Silvia.\nIII. Juan ama a Cristina y a Silvia.\nIV. Juan no ama a Silvia.",
+      "alternatives": [
+        "I, II y III",
+        "solo I",
+        "solo II",
+        "I y IV"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Pregunta 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pedro, Ricardo, Quique, Samuel y Tomás son sospechosos de haber participado en un robo. La policía, al hacer las investigaciones, ha determinado correctamente que:\n• solo dos son los autores del robo.\n• si Pedro ha participado, entonces Ricardo o Tomás también han participado.\n• Pedro o Quique participaron.\n• si Quique participó, entonces Samuel y Tomás también participaron.\n• Tomás no ha participado del robo.\n¿Quiénes fueron los que cometieron el robo?",
+      "alternatives": [
+        "Pedro y Ricardo",
+        "Pedro y Samuel",
+        "Samuel y Quique",
+        "Ricardo y Quique"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Pregunta 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Armando, Braulio y Carlos tienen S/100, S/125 y S/250, no necesariamente en ese orden. Si las siguientes afirmaciones son verdaderas:\n• Si Braulio no es el que tiene menos dinero, entonces Armando es el que tiene menos dinero.\n• Si Carlos no es el que tiene menos dinero, entonces Armando es el que tiene más dinero.\nEntonces, ¿qué cantidad de soles les corresponde a Armando, Braulio y Carlos, respectivamente?",
+      "alternatives": [
+        "250, 125 y 100",
+        "250, 100 y 125",
+        "100, 125 y 250",
+        "100, 250 y 125"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Pregunta 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si Alberto dice: «No viajé por año nuevo porque no tuve dinero», y se sabe que lo que dijo es falso, entonces señale las proposiciones correctas:\nI. Alberto no tuvo dinero y viajó por año nuevo.\nII. Es mentira que si Alberto viajó, entonces tuvo dinero.\nIII. Alberto no tuvo dinero y no viajó por año nuevo.",
+      "alternatives": [
+        "I y II",
+        "solo III",
+        "I, II y III",
+        "solo II"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Pregunta 6"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "De los siguientes enunciados:\n1. Nacionalismo es lo mismo que chauvinismo.\n2. Neoliberal es lo mismo que inhumano.\n3. El que juegue es lo mismo que me divierta.\n4. Si no hay recesión entonces los sueldos aumentarán.\n5. 256 > 128 es equivalente a 1024 > 512.\nSon proposiciones coimplicativas:",
+      "alternatives": [
+        "1, 2 y 4",
+        "1, 2 y 5",
+        "2, 3 y 4",
+        "3 y 5",
+        "solo 3"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Problema resuelto 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La proposición: «Puesto que el arroz es un cereal y el frijol no lo es, a menos que el frijol sea una menestra, es obvio que el frijol no es cereal». Se formaliza:",
+      "alternatives": [
+        "[(p ∨ ∼q) ∧ r] → ∼q",
+        "[(p ∧ ∼q) ∨ r] ← ∼q",
+        "(p ∧ ∼q) ∨ (r → ∼q)",
+        "[(p ∧ ∼q) ∨ r] → ∼s",
+        "[(p ∧ ∼q) ∨ r] → ∼q"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Problema resuelto 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine el número de valores verdaderos de la matriz principal de (∼p → q) Δ ((∼q ∨ p) ↔ ∼p)",
+      "alternatives": [
+        "5",
+        "2",
+        "1",
+        "4"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Problema resuelto 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un joven reflexiona con su amigo recordando lo siguiente: «Si tienes gripe, te enfermas. Si te enfermas, no irás a la fiesta. Fuiste a la fiesta». Entonces, ¿qué se deduce?",
+      "alternatives": [
+        "No tienes gripe.",
+        "Fuiste enfermo.",
+        "Te enfermaste, pero no de gripe.",
+        "Tomaste la medicina."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Problema resuelto 7"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La proposición: «El que los nazcas hayan construido una red de canales es suficiente para distribuir el agua de los ríos y de los acueductos subterráneos. En tal sentido los canales estaban a más de diez metros de profundidad y medirán aproximadamente un metro de ancho». Se formaliza:",
+      "alternatives": [
+        "[p ← (q ∧ r)] → (s ∧ t)",
+        "[p → (q ∧ r)] → (s ∧ t)",
+        "[p ← (q ∨ r)] → (s ∧ t)",
+        "[p → (∼q ∧ r)] → (s ∧ t)",
+        "[p → (q ∧ r)] ← (s ∧ t)"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Problema resuelto 8"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las siguientes proposiciones son verdaderas:\n• Juan estudia RM o estudia RV, pero no ambos.\n• Si Juan estudia RM, entonces estudia RV.\n¿Cuáles de las siguientes afirmaciones son verdaderas?\nI. Juan estudia RM.\nII. Juan estudia RV.\nIII. Juan estudia RM y RV.",
+      "alternatives": [
+        "I, II y III",
+        "solo I",
+        "solo II",
+        "I y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/logica-proposicional-ejercicios.html",
+      "sourceName": "Lógica proposicional problemas resueltos preuniversitarios (matematicasn), Problema resuelto 11"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señale la proposición simple.",
+      "alternatives": [
+        "Santiago come pan y pastel.",
+        "Si hace sol, jugamos tenis.",
+        "Luis y Elsa son cónyuges.",
+        "Si Rosa estudia, progresará.",
+        "Ernesto estudia o ve televisión."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), Q1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Ejemplo de proposición conjuntiva:",
+      "alternatives": [
+        "La región de Chavín no limita con Loreto.",
+        "El Perú exporta arroz.",
+        "El agua se congela si la temperatura está bajo cero.",
+        "Si el sol brilla, el viento silba.",
+        "El cielo está nublado, sin embargo hace calor."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), Q3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Determine qué proposición NO es conjuntiva:",
+      "alternatives": [
+        "Llueve además nieva.",
+        "Tanto Jorge como Raúl son mecánicos.",
+        "Tendrás empleo cuando y sólo cuando seas puntual.",
+        "B.F. Skinner y J. Watson son conductistas.",
+        "María es infeliz sin embargo se casa."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), Q4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Tipo de matriz que señala que una inferencia es válida:",
+      "alternatives": [
+        "Contradicción",
+        "Contingencia",
+        "Consistencia",
+        "Tautológica",
+        "Indefinido"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), Q5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La definición tabular de una proposición que es falsa únicamente cuando sus dos componentes son falsos corresponde a:",
+      "alternatives": [
+        "Conjunción",
+        "Disyunción débil",
+        "Disyunción fuerte",
+        "Condicional",
+        "Bicondicional"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), Q7"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La proposición es _________, susceptible de ser calificada de _________.",
+      "alternatives": [
+        "cualquier oración – válida o inválida",
+        "una oración aseverativa – función proposicional",
+        "una frase – sensata o insensata",
+        "una oración aseverativa – verdadera o falsa",
+        "descripción definida – saturada o no saturada"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), Q8"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La ________ es el paso de un conjunto de premisas a la conclusión:",
+      "alternatives": [
+        "proposición",
+        "axioma",
+        "postulado",
+        "inferencia",
+        "preposición"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), Q9"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si en la evaluación por Tablas de Verdad un esquema condicional resulta tautológico, entonces representa:",
+      "alternatives": [
+        "una inferencia válida.",
+        "una proposición totalmente falsa.",
+        "un razonamiento falaz.",
+        "una inferencia inválida.",
+        "una proposición casi verdadera."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), Q10"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "\"Jhonson es líder u orador\" es una proposición de tipo:",
+      "alternatives": [
+        "Conjunción.",
+        "Disyunción exclusiva.",
+        "Disyunción inclusiva.",
+        "No es proposición.",
+        "Simple."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), P02"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál es una proposición compuesta?\na) Shakira y Paulina Rubio son vecinas.\nb) Jennifer, la dueña de la botica, está embarazada.\nc) Los insectos son invertebrados.\nd) Todo hombre es racional.\ne) Los eucaliptos juegan y las palmeras bailan.",
+      "alternatives": [
+        "Shakira y Paulina Rubio son vecinas.",
+        "Jennifer, la dueña de la botica, está embarazada.",
+        "Los insectos son invertebrados.",
+        "Todo hombre es racional.",
+        "Los eucaliptos juegan y las palmeras bailan."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), P05"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Señale lo que NO es disyunción exclusiva:",
+      "alternatives": [
+        "Mañana es lunes o martes.",
+        "La cría de la perra es macho o hembra.",
+        "Sara es estudiante o abogada.",
+        "España está ubicada en Asia o Europa.",
+        "O vamos a la discoteca o vamos a la biblioteca."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), P10"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "\"Martha Hildebrandt es peruana porque nació en Lima\" es una proposición:",
+      "alternatives": [
+        "Simple.",
+        "Compuesta.",
+        "Conjuntiva.",
+        "Condicional.",
+        "Condicional inversa."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), P11"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "\"Aneth está en Lima o en Chincha\" es disyunción exclusiva porque:",
+      "alternatives": [
+        "Está en los dos lugares a la vez.",
+        "Está en Chincha si y sólo si está en Lima.",
+        "Si está en Lima entonces va a Chincha.",
+        "No puede estar en los dos lugares a la vez.",
+        "Puede al mismo rato ir a los dos lugares."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), P16"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál NO es proposición conjuntiva?\nI. Marco y Dante son amigos.\nII. César es tan amable como Zoila.\nIII. A pesar que Juan es alto, no llega al techo.\nIV. Hoy cantas pues estás feliz.\nV. El niño llora si tiene hambre.",
+      "alternatives": [
+        "I - II - III",
+        "III - IV - V",
+        "Sólo IV y V",
+        "I - IV - V",
+        "I - II - V"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), P17"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "\"La Física es una ciencia; sin embargo no es complicada\" posee:",
+      "alternatives": [
+        "2 proposiciones simples.",
+        "1 proposición compuesta.",
+        "2 proposiciones negativas.",
+        "1 proposición simple y 1 proposición compuesta.",
+        "1 proposición simple y 1 proposición compuesta condicional."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), P36"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "A la proposición simple se le conoce también como:",
+      "alternatives": [
+        "Compuesta.",
+        "Atómica.",
+        "Molecular.",
+        "Universal.",
+        "Particular."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), P37"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Conector monádico, considerado también como modificador lógico:",
+      "alternatives": [
+        "Conjunción.",
+        "Disyunción.",
+        "Negación.",
+        "Condicional.",
+        "Bicondicional."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), P45"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "\"Darío vendrá hoy, solo si su hermano se queda en casa\" es una proposición:",
+      "alternatives": [
+        "Condicional.",
+        "Negativa.",
+        "Disyuntiva.",
+        "Conjuntiva.",
+        "Bicondicional."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), P51"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "\"Cuando llueve en plena tarde soleada, se produce el llamado arcoiris\" es una proposición:",
+      "alternatives": [
+        "Conjuntiva.",
+        "Simple.",
+        "Condicional.",
+        "Bicondicional.",
+        "Disyuntiva."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), P55"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "\"Estoy vivo o estoy muerto\" es una proposición de tipo:",
+      "alternatives": [
+        "Disyuntiva débil.",
+        "Conjuntiva.",
+        "Condicional.",
+        "Disyuntiva fuerte.",
+        "Bicondicional."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), P56"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál de los siguientes enunciados NO es proposicional?",
+      "alternatives": [
+        "Zeus fue una divinidad griega o romana.",
+        "Los Elfos son personajes de una obra literaria.",
+        "El ornitorrinco es un mamífero, pero pone huevos.",
+        "El presidente del Perú no ha renunciado.",
+        "La fascinante y compleja filosofía de Nietzsche."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://pdfz.blogspot.com/2021/02/logica-proposicional-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Lógica proposicional - Preguntas resueltas admisión universidad (pdfz.blogspot), P50"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las premisas: «Ningún científico es ingeniero» y «Muchos católicos son científicos». La proposición verdadera es:",
+      "alternatives": [
+        "Todo católico no es ingeniero.",
+        "Ningún ingeniero es católico.",
+        "Muchos católicos son teólogos.",
+        "Todo ingeniero no es católico.",
+        "Algunos católicos no son ingenieros."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Pregunta 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si ningún animal furioso ataca al hombre y todos los perros son animales furiosos, entonces:",
+      "alternatives": [
+        "Algunos perros no son furiosos.",
+        "Algunos perros no atacan al hombre.",
+        "Ningún perro ataca al hombre.",
+        "Ningún perro deja de atacar al hombre.",
+        "Todos los perros atacan al hombre."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Pregunta 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la negación lógica de \"Todas estas preguntas son difíciles\"?",
+      "alternatives": [
+        "Todas estas preguntas son fáciles.",
+        "Ninguna de estas preguntas es difícil.",
+        "Algunas de estas preguntas no son fáciles.",
+        "Algunas de estas preguntas son difíciles.",
+        "Algunas de estas preguntas no son difíciles."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Pregunta 3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si ninguna persona que toma mate toma café y algunas personas que toman té toman café, entonces:",
+      "alternatives": [
+        "Ninguna persona que toma té toma mate.",
+        "Todas las personas que toman mate toman té.",
+        "Algunas personas que toman mate toman café.",
+        "Algunas personas que toman té no toman mate.",
+        "Todas las personas que toman café toman té."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Pregunta 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique una alternativa equivalente a \"Todas las películas de ciencia ficción son irreales\":",
+      "alternatives": [
+        "Ninguna película de ciencia ficción es real.",
+        "Algunas películas de ciencia ficción son reales.",
+        "Algunas películas de ciencia ficción son irreales.",
+        "No todas las películas de ciencia ficción son reales.",
+        "Todas las películas de ciencia ficción no son reales."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Pregunta 5"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "\"Ningún científico admite la clonación de seres humanos, pero algunos aficionados a la ciencia ficción la admiten.\" En consecuencia:",
+      "alternatives": [
+        "Todos los aficionados a la ciencia ficción son científicos.",
+        "Ningún científico es aficionado a la ciencia ficción.",
+        "Algunos aficionados a la ciencia ficción no son científicos.",
+        "Todos los científicos son aficionados a la ciencia ficción.",
+        "Ningún aficionado a la ciencia ficción es científico."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Pregunta 7"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la negación lógica de \"Algunos científicos no son románticos\"?",
+      "alternatives": [
+        "Algunos científicos son románticos.",
+        "Ningún científico es romántico.",
+        "Todos los científicos son románticos.",
+        "Todos los científicos no son románticos."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Pregunta 8"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es la negación lógica de \"Ningún matemático es distraído\"?",
+      "alternatives": [
+        "Al menos un matemático no es distraído.",
+        "Al menos un matemático es distraído.",
+        "Todos los matemáticos son distraídos.",
+        "Todos los matemáticos no son distraídos."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Pregunta 9"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si afirmamos «Algunas personas son corruptas», «Todo corrupto es ruin» y «Todo ruin es mediocre», entonces:",
+      "alternatives": [
+        "Algunas personas son mediocres.",
+        "Algunas personas son no mediocres.",
+        "Algunos no corruptos son mediocres.",
+        "Alguien que no es ruin es mediocre.",
+        "Algunas personas no son corruptas."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Pregunta 11"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué alternativa muestra una proposición equivalente a \"Ningún diplomático es descortés\"?",
+      "alternatives": [
+        "Algún diplomático es cortés.",
+        "Algún diplomático no es descortés.",
+        "Ningún cortés es diplomático.",
+        "Todo diplomático es descortés.",
+        "Todo diplomático es cortés."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Pregunta 13"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique cuál es la negación de \"Algún poeta es bohemio\":",
+      "alternatives": [
+        "Todo poeta es bohemio.",
+        "Todo bohemio es poeta.",
+        "Algún poeta no es bohemio.",
+        "Todo poeta es no bohemio."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Práctica 1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si «Algunos peruanos son deportistas» y «Todo deportista es un buen orador», entonces se puede concluir que:",
+      "alternatives": [
+        "Algunos buenos oradores no son peruanos.",
+        "Ningún peruano es orador.",
+        "Algunos peruanos son buenos oradores.",
+        "Todos los buenos oradores son deportistas."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Práctica 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si «Ningún carnívoro muerde a su dueño» y «Algunos perros muerden a sus dueños», luego podemos concluir que:",
+      "alternatives": [
+        "Algunos carnívoros no son perros.",
+        "Ningún perro es carnívoro.",
+        "Todo carnívoro es perro.",
+        "Algunos perros no son carnívoros."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Práctica 8"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si «Todos los libros son grandes tesoros» y «Todos los grandes tesoros son invaluables», entonces se concluye que:",
+      "alternatives": [
+        "Algunos libros no son grandes tesoros.",
+        "Todos los libros son invaluables.",
+        "Los libros invaluables no son grandes.",
+        "Los grandes tesoros no son buenos libros."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Práctica 10"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si todos los A son B, y algunos C no son B, se deduce válidamente que:",
+      "alternatives": [
+        "Algunos A son C.",
+        "Algunos B son C.",
+        "Algunos C no son A.",
+        "Algunos A no son C.",
+        "Todos los A son C."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Práctica 19"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si todos los aviadores son intrépidos, y ningún intrépido es fatalista, se deduce que:",
+      "alternatives": [
+        "Algún fatalista es aviador.",
+        "Ningún fatalista es aviador.",
+        "Algún fatalista no es aviador.",
+        "Algún aviador no es fatalista.",
+        "Todos los fatalistas son aviadores."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Práctica 20"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La Lógica es una ciencia _________ que estudia la validez de _________.",
+      "alternatives": [
+        "natural - los argumentos",
+        "formal - la inferencia",
+        "social - los pensamientos",
+        "fáctica - los razonamientos",
+        "social - la deducción"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la lógica - Preguntas resueltas admisión (matematicaj.blogspot), Q1"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Las falacias son consideradas razonamientos:",
+      "alternatives": [
+        "incorrectos",
+        "erróneos",
+        "distorsionados",
+        "de apariencia verdadera",
+        "todos los anteriores"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la lógica - Preguntas resueltas admisión (matematicaj.blogspot), Q3"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La Inferencia que deriva su conclusión de manera necesaria de sus premisas, se denomina:",
+      "alternatives": [
+        "Inductiva",
+        "Mediata",
+        "Inmediata",
+        "Deductiva",
+        "Compleja"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la lógica - Preguntas resueltas admisión (matematicaj.blogspot), Q6"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La Falacia denominada Ad Baculum tiene como argumento de apelación:",
+      "alternatives": [
+        "contra el hombre",
+        "a la fuerza",
+        "a la causa falsa",
+        "a la pregunta compleja",
+        "a la ambigüedad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la lógica - Preguntas resueltas admisión (matematicaj.blogspot), Q8"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Cuando en un razonamiento no hay conexión lógica entre las premisas y la conclusión, se denomina Falacia:",
+      "alternatives": [
+        "Formal",
+        "Informal",
+        "de Atingencia",
+        "de Causa Falsa",
+        "de Pregunta Compleja"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la lógica - Preguntas resueltas admisión (matematicaj.blogspot), Q9"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La Falacia de Ambigüedad se le conoce como:",
+      "alternatives": [
+        "Falacia de Causa Falsa",
+        "Falacia de Pregunta Compleja",
+        "Falacia Atingente",
+        "Falacia de Anfibología",
+        "Falacia de Complejidad"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la lógica - Preguntas resueltas admisión (matematicaj.blogspot), Q11"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indique el criterio de verdad (V) o falsedad (F) de las siguientes expresiones:\nI. Toda Inferencia es un razonamiento.\nII. Una Falacia es un razonamiento incorrecto.\nIII. La Inferencia Mediata tiene una sola premisa.",
+      "alternatives": [
+        "V F F",
+        "F V F",
+        "V V V",
+        "V V F",
+        "F F V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la lógica - Preguntas resueltas admisión (matematicaj.blogspot), Q14"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Cuando la conclusión de una Inferencia se deriva de una sola premisa, toma el nombre de:",
+      "alternatives": [
+        "Simple",
+        "Atómica",
+        "Inmediata",
+        "Mediata",
+        "Molecular"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la lógica - Preguntas resueltas admisión (matematicaj.blogspot), Q16"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indica la inferencia deductiva creada por Aristóteles.",
+      "alternatives": [
+        "Argumentación",
+        "Inducción",
+        "Silogismo",
+        "Implicación",
+        "Equivalencia"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la lógica - Preguntas resueltas admisión (matematicaj.blogspot), Q18"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La Inferencia es una estructura de proposiciones compuesta por _________, de las cuales derivamos la _________.",
+      "alternatives": [
+        "premisas – conclusión",
+        "ideas - argumentación",
+        "pensamientos – deducción",
+        "argumentos – inducción",
+        "deducciones - conclusión"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la lógica - Preguntas resueltas admisión (matematicaj.blogspot), Q20"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la expresión equivalente a: «No se da el caso que caminas y no avances».",
+      "alternatives": [
+        "Caminas y avanzas.",
+        "No caminas o tienes que avanzar lentamente.",
+        "No caminas o no avanzas.",
+        "No caminas o avanzas.",
+        "Avanzas y caminas."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q01"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Si Basadre es tacneño, entonces es peruano» es lógicamente equivalente a:",
+      "alternatives": [
+        "Si Basadre es peruano, entonces es tacneño.",
+        "Si Basadre no es tacneño, entonces no es peruano.",
+        "No es posible que Basadre sea tacneño y no sea peruano.",
+        "Basadre es peruano si y solo si es tacneño.",
+        "Basadre no es peruano o es tacneño."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q02"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Si fumo, estaré enfermo» equivale a:",
+      "alternatives": [
+        "Si no estoy enfermo, no fumo.",
+        "No fumo o estaré enfermo.",
+        "Fumo y no estoy enfermo.",
+        "No fumo ni estoy enfermo.",
+        "A y B son correctas."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q04"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Es falso que Silver sea estadista y no sea a la vez matemático» equivale a:",
+      "alternatives": [
+        "Si Silver es matemático, es estadista.",
+        "Silver es estadista o matemático.",
+        "Silver no es estadista o no es matemático.",
+        "Si Silver es estadista, es matemático.",
+        "Silver es estadista o no es matemático."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q06"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál de las siguientes alternativas es lógicamente verdadera (principio lógico)?",
+      "alternatives": [
+        "Si Amparo ingresa a la primera, entonces se alegrará.",
+        "Si el diskette contiene información, entonces le servirá a Lalo o no le servirá.",
+        "La lógica es una ciencia formal que estudia la validez de las inferencias.",
+        "Es falso que Manuel compre el reloj o no lo compre.",
+        "Judith es abogada o no es abogada."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q07"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la expresión equivalente a: «No es cierto que viajes en taxi y no llegues temprano».",
+      "alternatives": [
+        "No viajas en taxi y llegas temprano.",
+        "Viajas en taxi y llegas temprano.",
+        "No viajas en taxi y llegas tarde.",
+        "Si no viajas en taxi, no llegas temprano.",
+        "No viajas en taxi o llegas temprano."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q08"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Es falso que Julián postule a Medicina y no lo haga» representa al principio lógico:",
+      "alternatives": [
+        "De contradicción.",
+        "Del tercio excluido.",
+        "De identidad.",
+        "De no–contradicción.",
+        "Condicional."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q10"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«No se da el caso que, trabajes y no tengas dinero» equivale a:",
+      "alternatives": [
+        "No trabajas o tienes dinero.",
+        "Trabajas y tienes dinero.",
+        "No trabajas y tienes dinero.",
+        "No trabajas o no tienes dinero.",
+        "Si no trabajas, no tienes dinero."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q12"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Es falso que si voy al campo entonces me distraiga» equivale a:",
+      "alternatives": [
+        "No voy al campo, pero me distraigo.",
+        "Voy al campo o me distraigo.",
+        "No me distraigo; sin embargo, voy al campo.",
+        "Me distraigo o no voy al campo.",
+        "Es falso que vaya al campo y no me distraiga."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q14"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Es falso que no logras ingresar y te pondrás a trabajar» equivale a:",
+      "alternatives": [
+        "Ingresas pero no trabajas.",
+        "No ingresas pero trabajas.",
+        "Ingresas pero también trabajas.",
+        "Ingresas o no trabajas.",
+        "Ni trabajas ni ingresas."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q16"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál representa al principio del Tercio Excluido?",
+      "alternatives": [
+        "Si te preparas, entonces postularás.",
+        "Si la nieve es blanca entonces deducimos que la nieve es blanca.",
+        "No ocurre que postules y no postules.",
+        "Maribel va a la playa o no va a la playa.",
+        "B y C son correctas."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q18"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Según la ley de Morgan: «Es mentira que nieva y llueva a la vez» equivale a:",
+      "alternatives": [
+        "No es el caso que nieva o llueva.",
+        "No nieva ni llueve.",
+        "No nieva o no llueve.",
+        "O nieva o llueve.",
+        "Si llueve, entonces nieva."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q21"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Si Juanito silba, Yolita enrojece» equivale a:",
+      "alternatives": [
+        "Yolita enrojece si y solo si Juanito silba.",
+        "Si Yolita enrojece, entonces Juanito silba.",
+        "Juanito silba y Yolita enrojece.",
+        "Juanito no silba o Yolita enrojece.",
+        "Es falso que Juanito silbe y Yolita no enrojezca."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q23"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Si los dinosaurios fueron reptiles, no tuvieron sangre caliente» equivale a:",
+      "alternatives": [
+        "No fueron los dinosaurios reptiles o tuvieron sangre caliente.",
+        "Fueron los dinosaurios reptiles y tuvieron sangre caliente.",
+        "No tuvieron los dinosaurios sangre caliente y fueron reptiles.",
+        "Es mentira que los dinosaurios fueron reptiles y tuvieron sangre caliente.",
+        "Los dinosaurios no fueron reptiles ni tuvieron sangre caliente."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q24"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Si no practico, no domino el curso» equivale a:",
+      "alternatives": [
+        "Si practico, domino el curso.",
+        "Si domino el curso, practico.",
+        "No practico o domino el curso.",
+        "No domino el curso o practico.",
+        "B y D son correctas."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/03/equivalencias-notables-leyes-logicasejercicios-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Equivalencias notables y leyes lógicas - Guía academia preuniversitaria (razonamientopdf.blogspot), Q25"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si «Ningún triunfalista es pesimista» y «Todo ganador es triunfalista», entonces la conclusión correcta es:",
+      "alternatives": [
+        "No todo ganador es pesimista.",
+        "Ningún ganador es pesimista.",
+        "Algunos ganadores no son pesimistas.",
+        "Todas son posibles.",
+        "Solo B es válida."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las premisas: «Todo pintor es dibujante» y «Ningún actor es dibujante», la conclusión correcta es:",
+      "alternatives": [
+        "Ningún dibujante es actor.",
+        "Todo pintor es actor.",
+        "Algún pintor es dibujante.",
+        "Ningún actor es pintor.",
+        "Algún pintor no es actor."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q14"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "«Todo cantante es artista y todo artista es bohemio.» Luego:",
+      "alternatives": [
+        "Muchos cantantes son bohemios.",
+        "Ningún artista es bohemio.",
+        "Algunos bohemios son cantantes.",
+        "Determinados bohemios no son artistas.",
+        "Algunos cantantes no son artistas."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q21"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "PM: Todo aviador es oficial.\nPm: Ningún ignorante es oficial.\nLa conclusión es:",
+      "alternatives": [
+        "Ningún ignorante es aviador.",
+        "Todo ignorante es aviador.",
+        "Algún ignorante es aviador.",
+        "Algún ignorante no es aviador.",
+        "Más de una es correcta."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q47"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "PM: Algún leopardo es lento.\nPm: Todo leopardo es animal.\nLa conclusión es:",
+      "alternatives": [
+        "Algún animal es lento.",
+        "Ningún animal es lento.",
+        "Todo animal es lento.",
+        "Algún lento no es animal.",
+        "Todo animal es leopardo."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q48"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "PM: Ningún alemán es sanguinario.\nPm: Todo alemán es hombre.\nLa conclusión es:",
+      "alternatives": [
+        "Algún hombre no es sanguinario.",
+        "Ningún hombre es sanguinario.",
+        "Ningún alemán es sanguinario.",
+        "Algún hombre es alemán.",
+        "Varios hombres son alemanes."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q50"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "PM: Ningún oso es cuidadoso.\nPm: Algún animal es oso.\nLa conclusión correcta es:",
+      "alternatives": [
+        "Algún animal no es cuidadoso.",
+        "Ningún animal es cuidadoso.",
+        "Todo animal es cuidadoso.",
+        "Algún animal es cuidadoso.",
+        "Ningún animal es cuidadoso."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q59"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "PM: Todo general es riguroso.\nPm: Algún hombre es general.\nLa conclusión correcta es:",
+      "alternatives": [
+        "Todo hombre es riguroso.",
+        "Algún hombre es riguroso.",
+        "Algún general es hombre.",
+        "Ningún hombre es riguroso.",
+        "Todo general es valiente."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q60"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "«Algún músico es intimista; pero todo romántico es intimista.» Luego:",
+      "alternatives": [
+        "Algún romántico es músico.",
+        "Algún romántico no es músico.",
+        "Algún músico no es romántico.",
+        "Algún romántico es músico.",
+        "Algún romántico no es intimista."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q35"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "«Si un individuo es filósofo, no es dogmático. Determinado filósofo es materialista.» Por tanto:",
+      "alternatives": [
+        "Algún materialista no es individualista.",
+        "Algún materialista es dogmático.",
+        "Algún materialista no es dogmático.",
+        "Ningún materialista es dogmático.",
+        "Algún dogmático no es materialista."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q55"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "«Si un sujeto es joven, es rebelde. Todo rebelde critica al sistema.» Entonces:",
+      "alternatives": [
+        "Si alguien critica al sistema, no es joven.",
+        "Todo el que critica el sistema es joven.",
+        "Si alguien es rebelde, es crítico.",
+        "Todo joven critica al sistema.",
+        "Ningún crítico del sistema es no joven."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q56"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine qué tipo de esquema molecular corresponde a: [(P→Q) ∧ (P→R)] → (Q→R)",
+      "alternatives": [
+        "Tautología",
+        "Falsedad",
+        "Consistencia",
+        "Veracidad",
+        "Contradicción"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/tablas-de-verdad-ejercicios-resueltos.html",
+      "sourceName": "Tablas de verdad y conectivos lógicos - Ejercicios resueltos (matematicasn), Ejercicio 2"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un esquema molecular es tautológico cuando su matriz principal está compuesta de:",
+      "alternatives": [
+        "valores posibles y verdaderos",
+        "valores falsos y verdaderos",
+        "solo valores falsos",
+        "valores necesarios y falsos",
+        "solo valores verdaderos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/tablas-de-verdad-ejercicios-resueltos.html",
+      "sourceName": "Tablas de verdad y conectivos lógicos - Ejercicios resueltos (matematicasn), Ejercicio 4"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dadas las premisas:\n«Los jóvenes son preuniversitarios» y «Cada adolescente es un joven»,\nmarque la alternativa correcta:\nI) Ningún adolescente es preuniversitario.\nII) No existe preuniversitario que sea adolescente.\nIII) Todos los adolescentes son preuniversitarios.",
+      "alternatives": [
+        "Solo I",
+        "Solo II",
+        "Solo III",
+        "I y II",
+        "II y III"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Pregunta 6"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Todos los futbolistas son ricos», «Todos los artistas son personas alegres». Si Oscar es futbolista y todas las personas alegres no son ricas, entonces es cierto que:",
+      "alternatives": [
+        "Algunos artistas son ricos.",
+        "Algunos futbolistas son alegres.",
+        "Oscar es alegre.",
+        "Oscar no es artista.",
+        "Oscar es artista."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Pregunta 12"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si «Algunos alumnos son autodidactas» y «Todos los autodidactas son creativos», entonces se concluye que:",
+      "alternatives": [
+        "Todo alumno es creativo.",
+        "Ningún alumno es creativo.",
+        "Algunos alumnos son creativos.",
+        "Los alumnos no son creativos."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Práctica 16"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Si algún cetáceo no es mamífero» y «algún acuático no es mamífero», siendo la primera proposición falsa (es decir, todo cetáceo es mamífero), entonces se puede concluir que:",
+      "alternatives": [
+        "Todo mamífero es acuático.",
+        "Algún acuático es cetáceo.",
+        "Algún cetáceo no es acuático.",
+        "Algún acuático no es cetáceo.",
+        "Ningún acuático es cetáceo."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q37"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Ningún reptil es vivíparo. Toda serpiente es reptil. Alguna serpiente es venenosa. Por lo tanto:",
+      "alternatives": [
+        "Ningún venenoso es vivíparo.",
+        "Todo vivíparo es venenoso.",
+        "Todo venenoso es reptil.",
+        "Alguna venenosa es vivípara.",
+        "Algún venenoso no es vivíparo."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q54"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "«No hay hombre que sea inmortal. Muchos hombres son artistas.» En consecuencia:",
+      "alternatives": [
+        "Todo artista es inmortal.",
+        "Ningún artista es mortal.",
+        "Ningún artista es inmortal.",
+        "Algún artista es inmortal.",
+        "Algún artista es mortal."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q40"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "«Todo insecto es invertebrado. Algún vertebrado es serpiente.» Por lo tanto:",
+      "alternatives": [
+        "Ningún insecto es serpiente.",
+        "Algún insecto es serpiente.",
+        "Alguna serpiente es invertebrada.",
+        "Toda serpiente es vertebrada.",
+        "Alguna serpiente no es insecto."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q39"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "«Si «Ningún irresponsable es ordenado» y «Algún ordenado no es disciplinado»», la negación de la conclusión es:",
+      "alternatives": [
+        "Todo responsable es disciplinado.",
+        "Algún responsable es disciplinado.",
+        "Algún responsable no es disciplinado.",
+        "Todo irresponsable es disciplinado."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Práctica 14"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si «Todos los artistas son sensibles», «Todos los sensibles son poetas» y «Todos los artistas son humildes», ¿qué se concluye de las tres premisas?",
+      "alternatives": [
+        "Todos los poetas son humildes.",
+        "Todos los humildes son poetas.",
+        "Algunos humildes son poetas.",
+        "Algunos humildes no son poetas."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Práctica 15"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si «Algunas personas son mayores de edad» y «Todos los mayores de edad son no infantes», se puede concluir que:",
+      "alternatives": [
+        "Algunas personas no son infantes.",
+        "Algunas personas son infantes.",
+        "Algunos infantes no son personas.",
+        "Los mayores de edad no son personas."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios resueltos (matematicasn), Práctica 17"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico Formal",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si «Algún vivíparo es ave» y «Algún plumífero no es ave», siendo ambas proposiciones falsas (es decir, ningún vivíparo es ave y todo plumífero es ave), entonces:",
+      "alternatives": [
+        "Algún plumífero es vivíparo.",
+        "Algún vivíparo no es plumífero.",
+        "Algún plumífero no es vivíparo.",
+        "Ningún plumífero es vivíparo.",
+        "Todo plumífero es vivíparo."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/03/reglas-del-silogismo-ejercicios-logica-admision-universidad-guia-de-clase-academia-preuniversitaria.html",
+      "sourceName": "Reglas del silogismo - Guía academia preuniversitaria (matematicaj.blogspot), Q38"
+    }
+  ]
+}

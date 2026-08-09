@@ -1,0 +1,86 @@
+{
+  "entries": [
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El desarrollo de la Química Orgánica ha generado muchos avances en la industria. Respecto a los compuestos orgánicos, determine la secuencia correcta de verdadero (V) o falso (F):\nI. En condiciones ambientales, se encuentran únicamente como gases y líquidos.\nII. Se forman principalmente mediante enlace covalente.\nIII. Resisten altas temperaturas (son termoestables).",
+      "alternatives": [
+        "VVV",
+        "VFV",
+        "FFV",
+        "FVF"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/quimica-semana-13-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "CEPRE San Marcos (UNMSM) - Química Semana 13, Pregunta 1 (clave D)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a las características de los compuestos orgánicos, seleccione la(s) proposición(es) correcta(s):\nI. Están constituidos principalmente por elementos organógenos: C, H, O, N.\nII. Son termolábiles y generalmente presentan puntos de fusión y ebullición altos.\nIII. La mayoría son solubles en agua y en solventes polares.",
+      "alternatives": [
+        "Solo I",
+        "I y II",
+        "II y III",
+        "Solo II"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/quimica-semana-13-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "CEPRE San Marcos (UNMSM) - Química Semana 13, Pregunta 2 (clave A)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La hibridación es un proceso que consiste en la combinación de dos o más orbitales atómicos puros. Respecto a la hibridación del átomo de carbono, seleccione la secuencia correcta de verdadero (V) o falso (F):\nI. La tetravalencia del carbono se explica mediante la hibridación de orbitales.\nII. La hibridación sp² se presenta en átomos de carbono unidos por enlace doble.\nIII. La hibridación sp resulta de combinar un orbital \"s\" y un orbital \"p\".",
+      "alternatives": [
+        "VVF",
+        "VFV",
+        "VVV",
+        "VFF"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2022/05/quimica-semana-13-cepre-san-marcos-preguntas-resueltas-solucionario-examen-admision-universidad-claves-respuestas-prueba-desarrollada-word-cepusm-pdf.html",
+      "sourceName": "CEPRE San Marcos (UNMSM) - Química Semana 13, Pregunta 3 (clave C)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con relación a los hidrocarburos y sus reacciones, establezca el valor de verdad (V o F) de las siguientes proposiciones:\nI. La combustión incompleta del gas metano emite monóxido de carbono y carbón.\nII. La hidratación del eteno produce etanol y su polimerización, polietileno.\nIII. El antraceno, benzopireno y colesterol son hidrocarburos policíclicos aromáticos.",
+      "alternatives": [
+        "FFV",
+        "VFV",
+        "FVV",
+        "VVF",
+        "VVV"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/quimica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "Simulacro DECO San Marcos (UNMSM) - Química, Pregunta 24 (clave D, VVF)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Química del carbono",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El metanol se oxida para formar metanal (formaldehído). Respecto a los compuestos involucrados, seleccione la alternativa correcta:",
+      "alternatives": [
+        "El metanol está clasificado como un alcohol primario y es soluble en agua.",
+        "El carbono del metanol es sp³, mientras que el carbono del formaldehído es sp².",
+        "El carbono del metanal es tetraédrico con un ángulo de enlace de 120°.",
+        "El metanal es el producto de la reducción del alcohol metílico.",
+        "El consumo de metanol no produce daño alguno al ser humano."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/quimica-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "Simulacro DECO San Marcos (UNMSM) - Química, Pregunta 31 (clave B)"
+    }
+  ]
+}

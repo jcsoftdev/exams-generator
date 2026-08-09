@@ -1,0 +1,424 @@
+{
+  "entries": [
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dado el siguiente sistema de ecuaciones:\n2x + 2y - 2z = 0\n2x - y + az = 0\n3x + y - z = 0\nSi este sistema de ecuaciones no tiene soluciones no nulas, entonces el valor de a pertenece al intervalo:",
+      "alternatives": [
+        "⟨-∞; -2⟩",
+        "[-2; 0⟩",
+        "[0; 2⟩",
+        "[2; 4⟩",
+        "[4; +∞⟩"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/determinantes-ejercicios-resueltos.html",
+      "sourceName": "Determinantes - Ejercicios Resueltos (Rubiños), matematicasn.blogspot.com, Ejercicio 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un campeonato de fútbol, un equipo jugó quince partidos y sumó un total de veintisiete puntos. Si por cada partido ganado obtuvo tres puntos, por partido empatado un punto y por cada partido perdido cero puntos, además se sabe que los partidos empatados no fueron más de siete. Determine de cuántas formas puede obtener el equipo dicho puntaje.",
+      "alternatives": [
+        "1",
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/determinantes-ejercicios-resueltos.html",
+      "sourceName": "Determinantes - Ejercicios Resueltos (Rubiños), matematicasn.blogspot.com, problema campeonato de fútbol"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los incrementos o decrementos de los precios en soles de tres productos M, N y P fueron tales que: la suma de las variaciones es tres soles; la variación de M más N excede en cinco soles a la de P; el doble de M más P excede en cuatro soles a N. ¿Qué producto(os) sufrieron decrementos?",
+      "alternatives": [
+        "Todos",
+        "P",
+        "N y P",
+        "M y P",
+        "N"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/determinantes-ejercicios-resueltos.html",
+      "sourceName": "Determinantes - Ejercicios Resueltos (Rubiños), matematicasn.blogspot.com, problema variación de precios"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un comerciante obtiene una ganancia de $5,00 por cada casaca de dama que vende y $8,00 por cada casaca de varón. Si el número de casacas de damas vendidas es 25% más que el número de casacas de varones que vendió y si obtuvo una ganancia total de $11400, ¿cuántas casacas de damas vendió?",
+      "alternatives": [
+        "800",
+        "1000",
+        "1200",
+        "900"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/04/metodo-de-determinantes-sistema-de.html",
+      "sourceName": "Método de Cramer - Determinantes - Sistema de Ecuaciones Ejercicios Resueltos (Rubiños), matematicasn.blogspot.com, Ejercicio 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si se permutan dos columnas de una matriz cuadrada A, su determinante vale:",
+      "alternatives": [
+        "0",
+        "det(A)",
+        "-det(A)",
+        "1/det(A)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://alcaste.com/departamentos/matematicas/test/algebra_2bach/determinantes.htm",
+      "sourceName": "Test de Determinantes - Álgebra 2º Bachillerato, alcaste.com, Pregunta 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea A una matriz cuadrada inversible tal que A^2 = A. ¿Cuánto vale el determinante de la matriz A?",
+      "alternatives": [
+        "0",
+        "1",
+        "-1",
+        "2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://alcaste.com/departamentos/matematicas/test/algebra_2bach/determinantes.htm",
+      "sourceName": "Test de Determinantes - Álgebra 2º Bachillerato, alcaste.com, Pregunta 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Sea A una matriz cuadrada cuyo determinante es distinto de cero. Entonces A es una matriz:",
+      "alternatives": [
+        "Singular",
+        "Simétrica",
+        "Diagonal",
+        "Regular"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://alcaste.com/departamentos/matematicas/test/algebra_2bach/determinantes.htm",
+      "sourceName": "Test de Determinantes - Álgebra 2º Bachillerato, alcaste.com, Pregunta 15"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sea A una matriz cuadrada tal que det(A) = 1 y det(3A) = 27. ¿Cuál es el orden de la matriz A?",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://alcaste.com/departamentos/matematicas/test/algebra_2bach/determinantes.htm",
+      "sourceName": "Test de Determinantes - Álgebra 2º Bachillerato, alcaste.com, Pregunta 17"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dadas las matrices cuadradas A y B tales que det(A) = 6 y det(B) = 2. Calcule det((A · B^{-1})^T).",
+      "alternatives": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://alcaste.com/departamentos/matematicas/test/algebra_2bach/determinantes.htm",
+      "sourceName": "Test de Determinantes - Álgebra 2º Bachillerato, alcaste.com, Pregunta 18"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tiene una matriz triangular inferior de orden 4 cuyos elementos de la diagonal principal son todos iguales a -2. ¿Cuánto vale su determinante?",
+      "alternatives": [
+        "No se puede determinar",
+        "16",
+        "2",
+        "-2"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://alcaste.com/departamentos/matematicas/test/algebra_2bach/determinantes.htm",
+      "sourceName": "Test de Determinantes - Álgebra 2º Bachillerato, alcaste.com, Pregunta 28"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál de las siguientes igualdades es falsa para matrices cuadradas A de orden n?",
+      "alternatives": [
+        "|A| = |A^T|",
+        "|2A| = 2|A|",
+        "|A · B| = |B| · |A|",
+        "|I| = 1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://alcaste.com/departamentos/matematicas/test/algebra_2bach/determinantes.htm",
+      "sourceName": "Test de Determinantes - Álgebra 2º Bachillerato, alcaste.com, Pregunta 29"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál de las siguientes igualdades es falsa para matrices cuadradas A y B del mismo orden?",
+      "alternatives": [
+        "|A| = |A^T|",
+        "|A + B| = |A| + |B|",
+        "|A · B| = |A| · |B|",
+        "|I| = 1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://alcaste.com/departamentos/matematicas/test/algebra_2bach/determinantes.htm",
+      "sourceName": "Test de Determinantes - Álgebra 2º Bachillerato, alcaste.com, Pregunta 30"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si det(A) = 5, siendo A una matriz cuadrada inversible, ¿cuánto vale det(A^{-1})?",
+      "alternatives": [
+        "No se puede determinar si A es inversible",
+        "5",
+        "-5",
+        "1/5"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://alcaste.com/departamentos/matematicas/test/algebra_2bach/determinantes.htm",
+      "sourceName": "Test de Determinantes - Álgebra 2º Bachillerato, alcaste.com, Pregunta 32"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resuelva el siguiente sistema de ecuaciones usando la regla de Cramer y halle el valor de x + y:\n2x + y = 5\nx - y = 1",
+      "alternatives": [
+        "1",
+        "3",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/algebralineal/sistemas/ejercicios-resueltos-de-sistemas-de-ecuaciones-regla-cramer.html",
+      "sourceName": "Ejercicios resueltos de sistemas de ecuaciones (Regla de Cramer), superprof.es, Ejercicio 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se resuelve por la regla de Cramer el sistema:\nx + y + z = 1\n2x - y + z = 0\nx + 2y - z = 3\nHalle el valor de x - y + z.",
+      "alternatives": [
+        "3",
+        "1",
+        "-1",
+        "5"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/algebralineal/sistemas/ejercicios-resueltos-de-sistemas-de-ecuaciones-regla-cramer.html",
+      "sourceName": "Ejercicios resueltos de sistemas de ecuaciones (Regla de Cramer), superprof.es, Ejercicio 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Usando la regla de Cramer, resuelva el sistema:\n2x + y - z = 3\nx - y + z = 1\n3x + 2y + z = 11\nHalle el valor de x + y + z.",
+      "alternatives": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/algebralineal/sistemas/ejercicios-resueltos-de-sistemas-de-ecuaciones-regla-cramer.html",
+      "sourceName": "Ejercicios resueltos de sistemas de ecuaciones (Regla de Cramer), superprof.es, Ejercicio 7"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Usando la regla de Cramer, resuelva el sistema:\nx + 2y + z = 6\n2x - y + z = 3\nx + y - z = 0\nHalle el valor de x + y + z.",
+      "alternatives": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.superprof.es/apuntes/escolar/matematicas/algebralineal/sistemas/ejercicios-resueltos-de-sistemas-de-ecuaciones-regla-cramer.html",
+      "sourceName": "Ejercicios resueltos de sistemas de ecuaciones (Regla de Cramer), superprof.es, Ejercicio 8"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Usando la regla de Cramer, resuelva el sistema:\n2x + 5y = 8\nx + 4y = 7\nHalle el valor de x + y.",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "-1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.matricesydeterminantes.com/sistemas-de-ecuaciones/regla-de-cramer-ejemplos-y-ejercicios-resueltos/",
+      "sourceName": "Regla de Cramer - Ejemplos y Ejercicios Resueltos, matricesydeterminantes.com, Ejercicio 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Usando la regla de Cramer, resuelva el sistema:\nx + 3y + 2z = 2\n-x + 5y - z = 4\n3x - y + 4z = 0\nHalle el valor de x + y + z.",
+      "alternatives": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.matricesydeterminantes.com/sistemas-de-ecuaciones/regla-de-cramer-ejemplos-y-ejercicios-resueltos/",
+      "sourceName": "Regla de Cramer - Ejemplos y Ejercicios Resueltos, matricesydeterminantes.com, Ejercicio 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Usando la regla de Cramer, resuelva el sistema:\n-2x + 5y + z = 8\n6x + 2y + 4z = 4\n3x - 2y + z = -2\nHalle el valor de x + y + z.",
+      "alternatives": [
+        "0",
+        "2",
+        "-2",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.matricesydeterminantes.com/sistemas-de-ecuaciones/regla-de-cramer-ejemplos-y-ejercicios-resueltos/",
+      "sourceName": "Regla de Cramer - Ejemplos y Ejercicios Resueltos, matricesydeterminantes.com, Ejercicio 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcule el determinante de la matriz cuadrada de orden 2 cuyos elementos son: a_{11}=2, a_{12}=0, a_{21}=-1, a_{22}=3.",
+      "alternatives": [
+        "0",
+        "6",
+        "-6",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.matesfacil.com/matrices/resueltos-matrices-determinantes.html",
+      "sourceName": "Cálculo de Determinantes de Matrices, matesfacil.com, Ejercicio 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcule el determinante de la matriz cuadrada de orden 2 cuyos elementos son: a_{11}=5, a_{12}=-2, a_{21}=4, a_{22}=1.",
+      "alternatives": [
+        "3",
+        "5",
+        "13",
+        "7"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.matesfacil.com/matrices/resueltos-matrices-determinantes.html",
+      "sourceName": "Cálculo de Determinantes de Matrices, matesfacil.com, Ejercicio 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea A una matriz de orden m_1 x m_1 con |A| = |m_2|, donde m_1 y m_2 son las raíces de la ecuación m^2 - m - 20 = 0. Calcule el determinante de la matriz adjunta de A.",
+      "alternatives": [
+        "236",
+        "252",
+        "248",
+        "250",
+        "256"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/06/determinantes-ejercicios-resueltos.html",
+      "sourceName": "Determinantes - Ejercicios Resueltos (Rubiños), matematicasn.blogspot.com, Ejercicio 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Para que la matriz cuadrada A tenga inversa (sea regular), se requiere que:",
+      "alternatives": [
+        "det(A) = 0",
+        "det(A) ≠ 0",
+        "det(A) > 0",
+        "det(A) = 1"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://alcaste.com/departamentos/matematicas/test/algebra_2bach/determinantes.htm",
+      "sourceName": "Test de Determinantes - Álgebra 2º Bachillerato, alcaste.com, Pregunta 25"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Sea A una matriz cuadrada de orden 3 que tiene una columna nula. El determinante de A vale:",
+      "alternatives": [
+        "0",
+        "1",
+        "-1",
+        "No se puede determinar"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://alcaste.com/departamentos/matematicas/test/algebra_2bach/determinantes.htm",
+      "sourceName": "Test de Determinantes - Álgebra 2º Bachillerato, alcaste.com, Pregunta 12"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Matrices y Determinantes",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El determinante de la matriz transpuesta de una matriz cuadrada A es:",
+      "alternatives": [
+        "-det(A)",
+        "0",
+        "det(A)",
+        "2·det(A)"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://alcaste.com/departamentos/matematicas/test/algebra_2bach/determinantes.htm",
+      "sourceName": "Test de Determinantes - Álgebra 2º Bachillerato, alcaste.com, Pregunta 9"
+    }
+  ]
+}

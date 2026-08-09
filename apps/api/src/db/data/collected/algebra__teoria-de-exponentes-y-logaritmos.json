@@ -1,0 +1,312 @@
+{
+  "entries": [
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular el valor de la siguiente expresión: (6^10 · 15^5 · 10^7) · (2^15 · 5^12 · 3^15)^(-1)",
+      "alternatives": ["7", "4", "1", "3"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/teoria-de-exponentes-ejercicios.html",
+      "sourceName": "matematicasn (Rubiños) - Teoría de Exponentes, ejercicios resueltos, Práctica Pregunta 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Elvira compra un libro de inglés con un billete de S/ 100 y recibe de vuelto x^8 soles, donde «x» es la solución de la ecuación: log_x(2) · log_4(x^2) · log_x(2) = 2. ¿Cuánto le costó el libro?",
+      "alternatives": ["S/ 94", "S/ 80", "S/ 70", "S/ 84", "S/ 88"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+      "sourceName": "matematicasn - San Marcos Álgebra problemas resueltos de admisión (UNMSM), Pregunta 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Pedro tiene ahorrado S/ 24 000 y desea depositarlo en diferentes bancos. En el Banco A deposita S/ 13 000 y su monto (en miles de soles) está dado por f(x) = log_4(x + 4) + c, para 0 ≤ x ≤ 12. En el Banco B deposita S/ 11 000 y su monto (en miles de soles) está dado por g(x) = log_2(x + 1) + d, para 0 ≤ x ≤ 12. Si toma ambas opciones, ¿cuántos meses deben transcurrir para que ambos montos sean iguales?",
+      "alternatives": ["5", "4", "10", "14", "22"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-algebra-problemas-resueltos.html",
+      "sourceName": "matematicasn - San Marcos Álgebra problemas resueltos de admisión (UNMSM), Pregunta 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Efectuar: M = log_5(125) - log(100) + log_2(64)",
+      "alternatives": ["3", "4", "5", "6", "7"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
+      "sourceName": "CEPREVI UNFV - Álgebra (2018), Unidad 16: Logaritmos, Problema 01"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una sustancia radiactiva decae según N(t) = 6m · e^(-0.08t) gramos, donde m es el valor de x que satisface: (log_a x)(log_b x)(log_a x + log_b x)^(-1) = log_a(b^6). ¿Aproximadamente cuánto tiempo tardará en reducirse la masa inicial a un tercio?",
+      "alternatives": ["12.5 · ln(3)", "ln(3)", "8 · ln(3)", "3 · ln(8)"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/logaritmos-problemas-resueltos-tipo.html",
+      "sourceName": "matematicasn - Logaritmos de examen admisión universidad preguntas resueltas, Problema 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dulce necesita un préstamo de x_0 millones de soles para comprar una casa, donde x_0 es la solución distinta de 1/3 de: (log_x(x^2))(log_x(16x))(log_5(3x))(log_9(25)) = 4 · log_9(9x^2). Si ya pagó la mitad del préstamo, ¿cuánto vale la casa en millones de soles?",
+      "alternatives": ["10", "20", "34", "24"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/logaritmos-problemas-resueltos-tipo.html",
+      "sourceName": "matematicasn - Logaritmos de examen admisión universidad preguntas resueltas, Problema 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El ganadero Ygor tiene 420 cabezas de ganado y acepta un pedido de m centenas de cabezas. Debe comprar el complemento a su amigo Mischa a S/ 300 cada una. Si m satisface log_2(x - 4) - log_6(x - 4) = 0, ¿cuánto pagó Ygor a Mischa?",
+      "alternatives": ["S/ 25 500", "S/ 27 000", "S/ 17 700", "S/ 24 000", "S/ 16 500"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-logaritmicas-ejemplos.html",
+      "sourceName": "matematicasn - Ecuación logarítmica: problemas resueltos de secundaria y pre universidad, Ejercicio 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver: log_4(x) · log(x) + log(x) - 6 = 0. Indicar la mayor solución.",
+      "alternatives": ["0.1", "1", "10", "0", "1000"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-logaritmicas-ejemplos.html",
+      "sourceName": "matematicasn - Ecuación logarítmica: problemas resueltos de secundaria y pre universidad, Ejercicio 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "El producto de las soluciones de la ecuación 6 + 5 · log_2(x) = (log_x 2)^2 - 2 representa la edad actual de Olena. ¿Cuántos años tenía Olena hace 10 años?",
+      "alternatives": ["18 años", "20 años", "22 años", "23 años", "25 años"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-logaritmicas-ejemplos.html",
+      "sourceName": "matematicasn - Ecuación logarítmica: problemas resueltos de secundaria y pre universidad, Ejercicio 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver: log_4(x^2) + log_x(4) = 3. Indicar el producto de las soluciones.",
+      "alternatives": ["6", "7", "8", "9", "12"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/ecuaciones-logaritmicas-ejemplos.html",
+      "sourceName": "matematicasn - Ecuación logarítmica: problemas resueltos de secundaria y pre universidad, Ejercicio 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una sustancia pierde la cuarta parte de su masa cada hora a cierta temperatura. Si se tienen 1 kg, ¿cuántas horas se necesitan para que queden 250 gramos? (Usar log_2(3) = 1.6)",
+      "alternatives": ["1 hora", "3 horas", "5 horas", "7 horas"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Logaritmos ejercicios resueltos PDF, Problema 1"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cuál es el valor de POH de una solución de ácido nítrico HNO_3 si la concentración molar de iones hidrógeno es [H^+] = 0.01 M? Usar PH = -log[H^+] y POH + PH = 14.",
+      "alternatives": ["10", "11", "15", "13", "12"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Logaritmos ejercicios resueltos PDF, Problema 2"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las bacterias E. coli se duplican cada 20 minutos. ¿Cuánto tiempo se necesita para que 2×10^3 bacterias lleguen a 256 000?",
+      "alternatives": ["2 horas 20 minutos", "1 hora 40 minutos", "2 horas 40 minutos", "1 hora 20 minutos"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Logaritmos ejercicios resueltos PDF, Problema 3"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Usando la escala de Richter R = log(A) - log(P), donde A es la amplitud en cm y P el período en segundos. Si A = 10^(-2) cm y P = 1 s, ¿cuál es la magnitud del sismo?",
+      "alternatives": ["1", "2", "3", "4", "7"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Logaritmos ejercicios resueltos PDF, Problema 4"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Resolver: log_{x-3}(2) + log_{x-3}(8) = log_{16}(x - 3), con α > β. Hallar α + 16β.",
+      "alternatives": ["20", "68", "40", "12"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Logaritmos ejercicios resueltos PDF, Problema 5"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos números reales a > b satisfacen: a^2 + b^2 = 738 y log_3(a) - log_3(b) = 2. Hallar a + b.",
+      "alternatives": ["19", "22", "30", "45", "72"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Logaritmos ejercicios resueltos PDF, Problema 6"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Resolver: log_4(x + 2) + log_2(6) = log_4(6x + 132). ¿Cuántas soluciones reales tiene?",
+      "alternatives": ["0", "1", "2", "3"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logaritmos-ejercicios-resueltos-pdf.html",
+      "sourceName": "matematicasn - Logaritmos ejercicios resueltos PDF, Problema 7"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un elemento radiactivo sigue la ley N = N_0 · e^(-λt). Si su vida media es de 9 años, ¿cuánto tiempo tarda en que 2 gramos disminuyan a 1/16 gramos?",
+      "alternatives": ["18 años", "45 años", "32 años", "50 años", "36 años"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/algebra-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn - Álgebra San Marcos preguntas resueltas DECO (simulacro admisión UNMSM), Problema 7"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El PH de una solución se calcula con PH = -log[H^+]. Una muestra tiene concentración inicial de 0.001 mol/L y luego 0.01 mol/L. Determine la variación ΔPH.",
+      "alternatives": ["1", "2", "3", "-1", "-2"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/algebra-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "matematicasn - Álgebra San Marcos preguntas resueltas DECO (simulacro admisión UNMSM), Problema 10"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Resolver: log_2(log_3(x - 2)) = 2",
+      "alternatives": ["83", "94", "72", "76", "81"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
+      "sourceName": "CEPREVI UNFV - Álgebra (2018), Unidad 16: Logaritmos, Problema 16"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Resolver: ln(ln(ln x)) = 0",
+      "alternatives": ["e^2", "e^(1/e)", "2e", "e^e", "3e"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
+      "sourceName": "CEPREVI UNFV - Álgebra (2018), Unidad 16: Logaritmos, Problema 17"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcular: M = -colog_4(antilog_2(log_2(antilog_2(4))))",
+      "alternatives": ["2", "4", "5", "8", "7"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
+      "sourceName": "CEPREVI UNFV - Álgebra (2018), Unidad 16: Logaritmos, Problema 11"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Resolver: log_3(2x + 1) + log_{1/3}(x + 8) = 0",
+      "alternatives": ["3", "4", "6", "8", "7"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
+      "sourceName": "CEPREVI UNFV - Álgebra (2018), Unidad 16: Logaritmos, Problema 13"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcular: log(1 + 1/1) + log(1 + 1/2) + log(1 + 1/3) + ... + log(1 + 1/2005) = log(x). Hallar x.",
+      "alternatives": ["32", "4", "1", "2006", "2007"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.unfv.edu.pe/ceprevi/images/servicios/ciclos/ciclo_c/2018/Libros/Algebra.pdf",
+      "sourceName": "CEPREVI UNFV - Álgebra (2018), Unidad 16: Logaritmos, Problema 20"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular: E = (2^(x+4) + 36 · 2^(x-2)) / (2^(x+5) - 2 · 2^(x+3) - 4 · 2^(x+1) - 6 · 2^(x-1))",
+      "alternatives": ["3", "4", "5", "6", "7"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://vacollege.edu.pe/uploads/libros/pdf/algebra-manual-de-preparacion-preuniversitaria.pdf",
+      "sourceName": "Lexus Editores - Álgebra Manual de Preparación Pre-Universitaria, Ejercicio Resuelto 1 (Teoría de Exponentes)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcular: E = (216 · 353 · 803) / (154 · 149 · 302). Simplificar usando factores primos y propiedades de exponentes.",
+      "alternatives": ["1", "2", "3", "4", "5"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://vacollege.edu.pe/uploads/libros/pdf/algebra-manual-de-preparacion-preuniversitaria.pdf",
+      "sourceName": "Lexus Editores - Álgebra Manual de Preparación Pre-Universitaria, Ejercicio Resuelto 4 (Teoría de Exponentes)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcular: E = ^n√((10^n + 15^n + 6^n) / (5^(-n) + 2^(-n) + 3^(-n)))",
+      "alternatives": ["10", "15", "20", "30", "45"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://vacollege.edu.pe/uploads/libros/pdf/algebra-manual-de-preparacion-preuniversitaria.pdf",
+      "sourceName": "Lexus Editores - Álgebra Manual de Preparación Pre-Universitaria, Ejercicio Resuelto 8 (Teoría de Exponentes)"
+    },
+    {
+      "courseName": "Álgebra",
+      "topicName": "Teoría de Exponentes y Logaritmos",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcular el valor de: ^(n-1)√((4^(n-1) + 1) / (4^(1-n) + 1)) + ^(n-1)√((5^(n-1) + 1) / (5^(1-n) + 1)) + ^(n-1)√((6^(n-1) + 1) / (6^(1-n) + 1)) + ^(n-1)√((7^(n-1) + 1) / (7^(1-n) + 1))",
+      "alternatives": ["13", "18", "22", "26", "30"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://vacollege.edu.pe/uploads/libros/pdf/algebra-manual-de-preparacion-preuniversitaria.pdf",
+      "sourceName": "Lexus Editores - Álgebra Manual de Preparación Pre-Universitaria, Ejercicio Resuelto 15 (Teoría de Exponentes)"
+    }
+  ]
+}

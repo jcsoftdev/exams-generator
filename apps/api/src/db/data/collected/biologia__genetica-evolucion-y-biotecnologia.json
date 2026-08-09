@@ -1,0 +1,402 @@
+{
+  "entries": [
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Unidad básica del estudio de la genética.",
+      "alternatives": ["ARN", "Cromosoma", "Gen", "Fenotipo", "ADN"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 1 (Rpta. C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El importante aporte de Gregor Johann Mendel a la genética fue",
+      "alternatives": [
+        "la clasificación más adecuada de las plantas de los guisantes.",
+        "el estudio estadístico de la descendencia en genotipo y fenotipo.",
+        "la simplificación del problema de la descendencia codominante.",
+        "el análisis de un solo carácter de los muchos encontrados alterados.",
+        "el reconocimiento total de los caracteres dominantes transformados."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 2 (Rpta. B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El fenotipo se caracteriza porque (señale las afirmaciones correctas):\n1) es el conjunto de genes.\n2) es la apariencia externa de los individuos.\n3) es el resultado de la interacción del genotipo con el ambiente.\n4) cambia con el tiempo.\n5) no varía con el tiempo.",
+      "alternatives": ["1, 2 y 3", "1, 3 y 4", "2, 3 y 4", "2, 3 y 5", "3, 4 y 5"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 3 (Rpta. C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos hermanos gemelos nacidos en Lima son separados a los dos meses. Uno termina viviendo en Cerro de Pasco y el otro se queda en su ciudad natal. Luego de 20 años se vuelven a juntar, pero presentan apariencia muy diferente. Señale la razón de este fenómeno.",
+      "alternatives": [
+        "Es un caso típico de herencia no mendeliana",
+        "Las causas son, esencialmente, las mutaciones",
+        "Se debe en parte a la influencia del ambiente",
+        "Es un caso particular de alelos múltiples",
+        "Se debe a una respuesta inmune adaptativa"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 4 (Rpta. C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se tienen dos plantas de hortensia genéticamente idénticas. Al cultivar una en suelo ácido desarrolla flores azules, y al cultivar la otra en suelo alcalino desarrolla flores rosadas. Este es un ejemplo de cómo el medio ambiente influye en la expresión del",
+      "alternatives": ["genotipo", "fenotipo", "híbrido", "locus"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 5 (Rpta. A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "De padres homocigotos de ojos azules, la probabilidad de su descendencia es",
+      "alternatives": ["17% ojos azules", "25% ojos azules", "50% ojos azules", "75% ojos azules", "100% ojos azules"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 6 (Rpta. E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "De las siguientes alternativas, ¿cuál de ellas hace referencia a un carácter recesivo?",
+      "alternatives": ["Pico de viuda", "Mentón hendido", "Pelo crespo", "Piel clara"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 7 (Rpta. D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Teniendo en cuenta que el color gris del cuerpo de la mosca Drosophila domina sobre el color negro; y que del cruzamiento de un macho de cuerpo gris homocigoto con una hembra de cuerpo también gris, la cual tuvo uno de sus padres con cuerpo negro; se obtiene una descendencia de moscas todas grises. Los genotipos de las dos moscas que se cruzan son",
+      "alternatives": ["AA y AA", "AA y Aa", "Aa y Aa", "Aa y aa", "aa y aa"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 9 (Rpta. B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La transmisión de los patrones característicos de los organismos que se reproducen sexualmente, corresponde a la",
+      "alternatives": ["Adaptación", "Irritación", "Herencia", "Intersexos", "Patrimonial"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 10 (Rpta. C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En 1991 se relacionó al síndrome de Marfan con una mutación ubicada en la sub-banda 1 de la banda 1, en la región 2 del brazo largo del cromosoma 15. Este gen se denomina FBN1 y codifica a la proteína fibrilina 1. Con base a lo mencionado sobre dicho gen, podemos afirmar que se hace referencia a su",
+      "alternatives": ["cromosoma", "loci", "genotipo", "locus", "cromatina"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 11 (Rpta. D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La tecnología del ADN recombinante o ingeniería genética se ha impuesto en la mayoría de plantas y animales domésticos. Frente a un derrame de petróleo, no está permitida la biorremediación in situ de las aguas y playas contaminadas con organismos genéticamente modificados",
+      "alternatives": [
+        "debido a que no degradan petróleo",
+        "puesto que se usan microorganismos",
+        "pues son áreas de extracción pesquera",
+        "porque es imposible controlar las mareas",
+        "pues provocan la clonación de organismos"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética/Biotecnología, preguntas resueltas ingreso a la universidad, Pregunta 12 (Rpta. B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Los organismos tienen diversas estrategias para reproducirse. En la reproducción, se asegura",
+      "alternatives": [
+        "el paso de la información genética a la descendencia",
+        "la producción de gametos con información genética",
+        "que los progenitores transmitan genes específicos",
+        "que los descendientes hereden nichos ecológicos únicos"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 13 (Rpta. A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Con respecto a los grupos sanguíneos, una de las siguientes alternativas es incorrecta.",
+      "alternatives": [
+        "Los grupos sanguíneos de los sistemas ABO y MN son ejemplos de codominancia",
+        "El grupo sanguíneo MN, al igual que el AB son ejemplos de codominancia",
+        "Los distintos alelos del sistema ABO es un ejemplo de alelos múltiples",
+        "Debido a los alelos múltiples hay hasta seis genotipos diferentes en el sistema ABO"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 14 (Rpta. A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Walter sufre un accidente y le tienen que realizar una transfusión de sangre urgentemente. Se sabe que es del grupo «O» y por lo tanto donador universal. ¿Qué fenotipo debe tener el donante?",
+      "alternatives": ["Solo A", "Solo B", "Solo AB", "Solo O", "De AB y O"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 24 (Rpta. D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué diferencia la codominancia de la herencia intermedia?",
+      "alternatives": [
+        "En la codominancia ambos alelos se expresan por igual",
+        "En la herencia intermedia ambos alelos se expresan al 50%",
+        "Solo en la codominancia habrá dos fenotipos",
+        "El híbrido de la herencia intermedia expresa el gen dominante",
+        "La herencia intermedia es consecuencia de una mutación"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 25 (Rpta. A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La ausencia de pecas es una característica autosómica recesiva. Si una pareja de pecosos tiene un hijo sin pecas, se puede concluir que",
+      "alternatives": [
+        "uno de ellos es homocigoto dominante",
+        "los dos son homocigotos recesivos",
+        "ninguno de los hijos será pecosos",
+        "que todos los demás hijos serán pecosos",
+        "que ambos progenitores son heterocigotos"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 26 (Rpta. E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Una publicación científica señala que al gen A le corresponde el código 3q4, donde 3 representa al cromosoma 3, q es su brazo largo y 4 una región de ese brazo, por lo tanto, podemos afirmar que 3q4 nos está indicando el ________ del gen A.",
+      "alternatives": ["alelo", "locus", "genotipo", "loci"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 30 (Rpta. B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la dominancia completa los individuos heterocigotos y homocigotos dominantes presentan el mismo fenotipo, mientras que en la dominancia incompleta o herencia intermedia el fenotipo de los heterocigotos es diferente. La explicación es que en la dominancia incompleta",
+      "alternatives": [
+        "la expresión de un alelo inhibe al otro",
+        "ninguno de los alelos es dominante",
+        "ambos alelos son dominantes",
+        "un alelo oculta el efecto del otro"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 31 (Rpta. B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Actualmente la genética permite la comprensión de diversos aspectos de la herencia. Ha permitido conocer el conjunto de genes que distinguen a diversas especies, además de comprender la relación que existe entre regiones específicas de los cromosomas y las características observables en un individuo. ¿Qué términos de la genética están involucrados directamente en el texto?",
+      "alternatives": [
+        "Alelos, genoma y genotipo",
+        "Fenotipo, proteoma y codominancia",
+        "Locus, cromosoma y genoma",
+        "Genoma, locus y fenotipo"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 32 (Rpta. D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "En un remoto pueblo andino, se ha presentado un desorden genético del que se ha recopilado gran cantidad de información, incluyendo muestras de sangre, de cabello y mucosas. Se han construido árboles genealógicos. Se espera predecir el riesgo de que dicha enfermedad se presente en la descendencia, sometiendo estos datos",
+      "alternatives": [
+        "al análisis del cromosoma Y",
+        "a la detección de zonas conservadas",
+        "al aislamiento de ADN mitocondrial",
+        "a la comparación de genomas",
+        "al análisis bioinformático"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética/Biotecnología, preguntas resueltas ingreso a la universidad, Pregunta 35 (Rpta. E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Considere un hipotético problema evolutivo: la coloración de camuflaje le sirve a un animal para evitar a un depredador solo si se mantiene inmóvil. Si existen animales camuflados que no dejan de saltar y animales de colores brillantes que se paralizan cuando aparece un depredador, serán cazados con seguridad. ¿Cuál sería la posible solución a este problema evolutivo?",
+      "alternatives": [
+        "Producir solo individuos con genes de camuflaje para evitar la depredación",
+        "Recombinar individuos camuflados con individuos que se quedan inmóviles",
+        "Seleccionar los gametos haploides en individuos que se quedan inmóviles",
+        "Mantener las características de los individuos en hábitats sin depredadores"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética/Evolución, preguntas resueltas ingreso a la universidad, Pregunta 38 (Rpta. B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En nuestro país se han detectado cuatro mutaciones no contiguas en la secuencia de bases nitrogenadas del genoma del SARS-CoV-2. Estas variantes producen los mismos signos y síntomas que el virus original en los pacientes infectados. ¿Cómo se denomina este tipo de mutación viral?",
+      "alternatives": ["genómica", "génica", "cromosómica", "puntual"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, preguntas resueltas ingreso a la universidad, Pregunta 39 (Rpta. A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Al segmento de ADN codificante que se encuentra en un determinado locus se le denomina",
+      "alternatives": ["loci", "cromosoma", "gen", "fenotipo"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, Tercera Práctica, Pregunta 1 (Rpta. C)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Gregorio Mendel, mediante un trabajo sobre la herencia en Pisum sativum, descubrió leyes y principios que rigen la transmisión de caracteres dominantes y recesivos. Indique cuál es una característica o rasgo fenotípico dominante en esta planta.",
+      "alternatives": ["semilla rugosa", "vaina amarilla", "flor blanca", "flor axial"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, Tercera Práctica, Pregunta 7 (Rpta. D)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En cierto tipo de conejos existen genes que determinan la coloración negra del pelaje. Sin embargo, en las partes más calientes de su cuerpo la coloración es blanca y solo en los extremos fríos se expresa el producto génico. Este es un ejemplo de que el fenotipo está influenciado por el",
+      "alternatives": ["medio", "locus", "centrómero", "telómero"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2023/01/genetica-ejemplos-preguntas-resueltas-de-biologia-prueba-de-ingreso-a-la-universidad-prueba-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "matematicasn — Genética, Tercera Práctica, Pregunta 8 (Rpta. A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El síndrome de Down es la aberración cromosómica más frecuente en la especie humana y se caracteriza por",
+      "alternatives": [
+        "ser una alteración causada por deleción cromosómica.",
+        "ser una alteración numérica de los cromosomas somáticos.",
+        "ser producto de una translocación del cromosoma 16.",
+        "ser una alteración numérica de los cromosomas sexuales.",
+        "presentar tres gonosomas en el cariotipo del individuo."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
+      "sourceName": "matematicasn — San Marcos Biología preguntas resueltas UNMSM, Síndrome de Down (Rpta. B)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Si el anticodón del ARNt que lleva el aminoácido arginina es GCA, entonces la secuencia de nucleótidos en el ADN que codifica para dicho aminoácido es",
+      "alternatives": ["GCA", "CGU", "GCU", "CGA", "CUG"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
+      "sourceName": "matematicasn — San Marcos Biología preguntas resueltas UNMSM, Anticodón arginina (Rpta. A)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La hemofilia es un carácter recesivo ligado al sexo. Los estudios revelan que la reina Victoria de Inglaterra era portadora de este gen. La princesa Irene fue nieta de la reina Victoria y solo tuvo tres hijos varones, de los cuales dos resultaron hemofílicos y uno sano. Si la princesa Irene hubiese tenido descendientes mujeres, y sabiendo que se casó con un varón no afectado, ¿cuáles serían los posibles fenotipos y genotipos de estas?",
+      "alternatives": [
+        "G: XʰXʰ, XᴴXᴴ / F: 100% enfermas",
+        "G: XᴴXʰ, XʰXʰ / F: 100% sanas",
+        "G: XᴴXʰ, XᴴXʰ / F: 100% enfermas",
+        "G: XᴴXᴴ, XᴴXᴴ / F: 100% enfermas",
+        "G: XᴴXʰ, XᴴXᴴ / F: 100% sanas"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
+      "sourceName": "matematicasn — San Marcos Biología preguntas resueltas UNMSM, Hemofilia princesa Irene (Rpta. E)"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Genética, evolución y biotecnología",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proporción fenotípica 9:3:3:1 reportada por Mendel, al cruzar plantas dihíbridas, indica que",
+      "alternatives": [
+        "la F1 siempre es uniforme genéticamente",
+        "la proporción 9 corresponde a los dihíbridos",
+        "los genes se heredan independientemente",
+        "los genes están situados en un mismo cromosoma",
+        "los factores segregan en el mismo orden"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
+      "sourceName": "matematicasn — San Marcos Biología preguntas resueltas UNMSM, Proporción 9:3:3:1 (Rpta. C)"
+    }
+  ]
+}

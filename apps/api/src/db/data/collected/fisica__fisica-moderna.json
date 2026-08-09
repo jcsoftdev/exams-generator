@@ -1,0 +1,59 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Al incidir una onda electromagnética sobre una superficie metálica cuya frecuencia es igual a 1,25×10^15 Hz, el potencial de frenado de los electrones es de 2,1 V. Calcule aproximadamente (en eV) la función trabajo del metal.",
+      "alternatives": ["4,58", "3,08", "6,58", "5,58", "2,58"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
+      "sourceName": "Física Moderna - Efecto Fotoeléctrico (matematicasn), problema 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La superficie de una placa de sodio se expone a una radiación de frecuencia 8,6×10^14 Hz. ¿Cuál es la energía máxima que tienen los fotoelectrones que escapan de ese metal?",
+      "alternatives": ["16,6×10^-20 J", "18,0×10^-20 J", "15,6×10^-20 J", "19,8×10^-20 J"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
+      "sourceName": "Física Moderna - Efecto Fotoeléctrico (matematicasn), problema 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una superficie metálica con función de trabajo igual a 3×10^-19 J, incide una onda electromagnética. Calcule aproximadamente la máxima longitud de onda (en nm) que debe tener la onda electromagnética para que se observe el efecto fotoeléctrico.",
+      "alternatives": ["321,2", "432,6", "662,6", "721,6", "932,8"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
+      "sourceName": "Física Moderna - Efecto Fotoeléctrico (matematicasn), problema 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Sobre una superficie metálica, cuyo trabajo de extracción es 1,8×10^-19 J, incide una radiación de 2,0×10^-18 J. Si m_e = 9,1×10^-31 kg, la velocidad de los electrones emitidos es",
+      "alternatives": ["2×10^6 m/s", "7×10^6 m/s", "3×10^5 m/s", "4×10^6 m/s", "5×10^6 m/s"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
+      "sourceName": "Física Moderna - Efecto Fotoeléctrico (matematicasn), problema 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Física moderna",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determine la longitud de onda de los rayos X con fotones de energía 14,2 keV. Dato: hc = 1240×10^-9 eV·m",
+      "alternatives": ["0,77×10^-10 m", "0,63×10^-10 m", "0,82×10^-10 m", "0,87×10^-10 m"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/12/fisica-moderna-formulas-y-ejercicios-resueltos-rayos-x-mecanica-cuantica-preuniversitaria-pdf.html",
+      "sourceName": "Física Moderna - Rayos X (matematicasn), problema 6"
+    }
+  ]
+}

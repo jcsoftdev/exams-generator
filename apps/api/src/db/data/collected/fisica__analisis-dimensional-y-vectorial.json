@@ -1,0 +1,114 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "En el Sistema Internacional existen ____ magnitudes fundamentales.",
+      "alternatives": ["5", "3", "7", "2", "9"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/ecuaciones-dimensionales-principio-de.html",
+      "sourceName": "Matematicasn - Ecuaciones dimensionales, ejercicios resueltos de ingreso a la universidad, Ejercicio 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Inicialmente las tres magnitudes básicas eran:",
+      "alternatives": ["masa, temperatura, tiempo", "metro, temperatura, intensidad de corriente", "masa, longitud, temperatura", "masa, longitud, tiempo", "longitud, temperatura, cantidad de sustancia"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/ecuaciones-dimensionales-principio-de.html",
+      "sourceName": "Matematicasn - Ecuaciones dimensionales, ejercicios resueltos de ingreso a la universidad, Ejercicio 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indicar cuál no es magnitud fundamental en el Sistema Internacional.",
+      "alternatives": ["masa", "longitud", "tiempo", "velocidad", "temperatura"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/ecuaciones-dimensionales-principio-de.html",
+      "sourceName": "Matematicasn - Ecuaciones dimensionales, ejercicios resueltos de ingreso a la universidad, Ejercicio 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indique la unidad que no corresponde a las magnitudes fundamentales del S.I.",
+      "alternatives": ["kilogramo", "ampere", "segundo", "watts", "metro"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/02/ecuaciones-dimensionales-principio-de.html",
+      "sourceName": "Matematicasn - Ecuaciones dimensionales, ejercicios resueltos de ingreso a la universidad, Ejercicio 7"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Una ley física es correcta si es dimensionalmente homogénea, es decir, si todos sus términos (sumandos) tienen la misma dimensión. Conforme a esta propiedad, ¿cuál o cuáles de las siguientes afirmaciones son correctas?\n\nI. La dimensión de la ecuación que expresa una ley física es igual a un monomio de las dimensiones de las magnitudes fundamentales.\nII. Esta propiedad de la homogeneidad de la ecuación de una ley física dificulta la detección de errores de cálculo.\nIII. Cada término de una ley física es un monomio de las dimensiones de las magnitudes fundamentales, por lo tanto, es una magnitud derivada.",
+      "alternatives": ["solo III", "I y III", "solo II", "I y II", "solo I"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-fisica-problemas-resueltos.html",
+      "sourceName": "Matematicasn - Física admisión San Marcos simulacro resuelto, Pregunta de homogeneidad dimensional"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La corriente de un río tiene una velocidad de 12 m/s. Si un alumno cruza perpendicularmente el río con una velocidad de 5 m/s, ¿cuál será el valor de la velocidad resultante?",
+      "alternatives": ["17 m/s", "7 m/s", "15 m/s", "13 m/s", "12 m/s"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/vectores-ejemplos-ejercicios-problemas-resueltos-de-fisica-secundaria-preuniversitaria-examen-admision-universidad-word-pdf.html",
+      "sourceName": "Matematicasn - Análisis vectorial, ejercicios resueltos de ingreso a la universidad, Ejercicio 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Un paracaidista salta y cae verticalmente por acción de su peso igual a 600 N. Al abrir el paracaídas, el aire ejerce una fuerza sobre el paracaídas de 1000 N en dirección vertical y hacia arriba. ¿Cuál es el valor de la fuerza resultante sobre el paracaidista en dicho instante?",
+      "alternatives": ["1600 N", "1400 N", "400 N", "600 N", "800 N"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/vectores-ejemplos-ejercicios-problemas-resueltos-de-fisica-secundaria-preuniversitaria-examen-admision-universidad-word-pdf.html",
+      "sourceName": "Matematicasn - Análisis vectorial, ejercicios resueltos de ingreso a la universidad, Ejercicio 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dos vectores tienen una resultante mínima que vale 4 y una resultante máxima igual a 16. ¿Cuál es la resultante de estos vectores cuando forman 60°?",
+      "alternatives": ["7", "9", "14", "5", "12"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/vectores-ejemplos-ejercicios-problemas-resueltos-de-fisica-secundaria-preuniversitaria-examen-admision-universidad-word-pdf.html",
+      "sourceName": "Matematicasn - Análisis vectorial, ejercicios resueltos de ingreso a la universidad, Ejercicio 7"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Un bote a motor se dirige hacia el este con una velocidad de 10 m/s. Si la corriente marina mantiene una velocidad de 6 m/s en la dirección N30°E, ¿cuál será el valor de la velocidad resultante del bote?",
+      "alternatives": ["16 m/s", "15 m/s", "14 m/s", "12 m/s", "11 m/s"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/09/vectores-ejemplos-ejercicios-problemas-resueltos-de-fisica-secundaria-preuniversitaria-examen-admision-universidad-word-pdf.html",
+      "sourceName": "Matematicasn - Análisis vectorial, ejercicios resueltos de ingreso a la universidad, Ejercicio 8"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Análisis dimensional y vectorial",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La resultante máxima de dos vectores es 40 N y su resultante mínima es cero. Determine el módulo del vector resultante cuando forman un ángulo de 120°.",
+      "alternatives": ["20√3 N", "20 N", "40 N", "40√3 N", "60 N"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/p/fisica-solucionario-admision-universidad.html",
+      "sourceName": "Razonamientopdf - Física de examen admisión universidad, prueba de autoevaluación con claves, Vectores resultante"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "entries": [
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Cuando una fuerza modifica la forma de un cuerpo, dicha fuerza ha producido:",
+      "alternatives": ["Traslación", "Rotación", "Deformación", "Dilatación", "Fusión"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
+      "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 1"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Según el Sistema Internacional (SI), la unidad de fuerza es el:",
+      "alternatives": ["Kilogramo", "Joule", "Newton", "Watt", "Pascal"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
+      "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 2"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Cuando una fuerza traslada un cuerpo de un lugar a otro, ha producido:",
+      "alternatives": ["Traslación", "Rotación", "Deformación", "Dilatación", "Fusión"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
+      "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 3"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Acción mutua entre dos cuerpos que ocurre por contacto o a distancia:",
+      "alternatives": ["Cohesión", "Interacción", "Movimiento", "Electricidad", "Fenómeno"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
+      "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 4"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Representación gráfica de todas las fuerzas externas que actúan sobre un cuerpo:",
+      "alternatives": ["MVCL", "MRUV", "MRU", "DCL", "MCU"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
+      "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 5"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "A la fuerza de atracción gravitatoria que ejerce la Tierra sobre un cuerpo que se encuentra en sus proximidades se le denomina:",
+      "alternatives": ["Tensión", "Reacción", "Normal", "Compresión", "Peso"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
+      "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 6"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Cuando una fuerza produce en un cuerpo un movimiento de rotación, ha producido:",
+      "alternatives": ["Traslación", "Rotación", "Deformación", "Dilatación", "Fusión"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
+      "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 7"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si un cuerpo tiene una masa de 30 kg, entonces su peso es: (g = 10 m/s²)",
+      "alternatives": ["3 N", "30 N", "300 N", "6 N", "60 N"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
+      "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 8"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si un cuerpo pesa 90 N, entonces su masa es: (g = 10 m/s²)",
+      "alternatives": ["9 kg", "90 kg", "900 kg", "3 kg", "45 kg"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
+      "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 9"
+    },
+    {
+      "courseName": "Física",
+      "topicName": "Estática",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Cuando tratamos de estirar una cuerda aparece una ____; cuando comprimimos una barra aparece una ____.",
+      "alternatives": ["Reacción - Tensión", "Tensión - Normal", "Normal - Compresión", "Tensión - Compresión", "Normal - Fricción"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/07/estatica-8-preguntas-resueltas-en.html",
+      "sourceName": "matematicasn.blogspot.com - Estática Preguntas Resueltas, Ejercicio 10"
+    }
+  ]
+}

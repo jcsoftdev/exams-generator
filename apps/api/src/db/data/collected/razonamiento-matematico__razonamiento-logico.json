@@ -1,0 +1,962 @@
+{
+  "entries": [
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Lea los siguientes enunciados:\n- Ningún congresista es luchador.\n- Todos los estudiantes son luchadores.\nLa deducción correcta es:",
+      "alternatives": [
+        "Todos los estudiantes son congresistas.",
+        "Algunos estudiantes son congresistas.",
+        "Ningún estudiante es congresista.",
+        "Algunos estudiantes no son congresistas."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2021/09/Habilidad-logico-matematica-examen-de-admision-san-marcos-resuelto-universidad-nacional-soluciones-respuestas-rm-razonamiento-unmsm-deco.html",
+      "sourceName": "Habilidad Lógico Matemática - Examen de Admisión UNMSM (DECO), Razonamiento Lógico, deducción por silogismo"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "André, Boris, Carlos, David y Evaristo han participado en una carrera de 100 metros planos. Cuando se le preguntó a cada uno por el ganador de la carrera, todos respondieron de la siguiente manera:\n- André: «Boris fue el ganador».\n- Boris: «Carlos ganó».\n- Carlos: «David ganó».\n- David: «Yo no gané la carrera».\n- Evaristo: «Yo no gané la carrera».\nSi hubo un único ganador y solo una de las afirmaciones es verdadera, mientras que las demás son falsas, ¿quién ganó la carrera?",
+      "alternatives": [
+        "André",
+        "Evaristo",
+        "Boris",
+        "David"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/verdades-y-mentiras-ejercicios.html",
+      "sourceName": "Verdades y Mentiras - Ejercicios Resueltos (matematicasn), Ejercicio 6, carrera 100 m"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un campeonato femenino de ajedrez, en el que hubo una única ganadora, se les preguntó a Vilma, Rosa, Juana y Eva quién había ganado. Ellas respondieron:\n- Rosa: «Vilma ganó».\n- Eva: «Rosa ganó».\n- Vilma: «Yo no gané».\n- Juana: «Rosa miente».\nSi solo una de las afirmaciones es falsa, ¿quién ganó el campeonato?",
+      "alternatives": [
+        "Vilma",
+        "Rosa",
+        "Juana",
+        "Eva"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/verdades-y-mentiras-ejercicios.html",
+      "sourceName": "Verdades y Mentiras - Ejercicios Resueltos (matematicasn), Ejercicio 1, campeonato de ajedrez"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Un peatón fue atropellado. Ante la policía, cuatro sospechosas declararon:\n- Ana: «Fue Beatriz».\n- Beatriz: «Fue Diana».\n- Carmen: «Yo no fui».\n- Diana: «Beatriz miente».\nSi solo una de ellas miente, ¿quién atropelló al peatón?",
+      "alternatives": [
+        "Beatriz",
+        "Diana",
+        "Carmen",
+        "Ana"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/verdades-y-mentiras-ejercicios.html",
+      "sourceName": "Verdades y Mentiras - Ejercicios Resueltos (matematicasn), Ejercicio 3, atropello"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se cometió el robo de un vehículo y hay cinco sospechosos, quienes declararon:\n- Luis: «Lalo lo robó».\n- Lalo: «Francisco lo robó».\n- Francisco: «No le crean a Lalo, él siempre miente».\n- Alberto: «Yo no lo robé».\n- Nelson: «Yo no lo robé».\nSi solo uno de ellos miente y los otros cuatro dicen la verdad, ¿quién robó el vehículo?",
+      "alternatives": [
+        "Lalo",
+        "Luis",
+        "Francisco",
+        "Alberto"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/verdades-y-mentiras-ejercicios.html",
+      "sourceName": "Verdades y Mentiras - Ejercicios Resueltos (matematicasn), Ejercicio 4, robo de vehículo"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Se robó un celular y hay tres sospechosos, quienes declararon:\n- Andrés: «Bruno lo tomó».\n- Bruno: «Eso es cierto».\n- Carlos: «Yo no lo tomé».\nSi al menos uno miente y al menos uno dice la verdad, y solo uno cometió el robo, ¿quién robó el celular?",
+      "alternatives": [
+        "Andrés o Bruno",
+        "Bruno",
+        "Andrés",
+        "Carlos"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/verdades-y-mentiras-ejercicios.html",
+      "sourceName": "Verdades y Mentiras - Ejercicios Resueltos (matematicasn), Ejercicio 8, celular robado"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cinco amigas ingresaron a un concierto, pero solo una de ellas no pagó. El personal de seguridad sabe que dos de ellas mienten y tres dicen la verdad. Ellas declararon:\n- Ana: «Diana no pagó».\n- Beatriz: «Yo pagué».\n- Carla: «Esther pagó».\n- Diana: «Ana miente».\n- Esther: «Beatriz dice la verdad».\n¿Quién no pagó la entrada?",
+      "alternatives": [
+        "Beatriz",
+        "Esther",
+        "Carla",
+        "Diana"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/razonamiento-logico-verdades-y-mentiras.html",
+      "sourceName": "Razonamiento Lógico - Verdades y Mentiras, Problemas Resueltos de Ingreso a la Universidad (matematicasn), Problema 1, concierto"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un examen se descubrió que alguien copió. Hay cuatro sospechosos; se sabe que tres siempre mienten y solo uno dice la verdad. Ellos declararon:\n- Delia: «Julio copió».\n- Julio: «Juan copió».\n- Juan: «Delia miente».\n- José: «Yo no copié».\n¿Quién no copió en el examen? (identifique a quien dice la verdad)",
+      "alternatives": [
+        "Delia",
+        "José",
+        "Juan",
+        "Julio"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/04/razonamiento-logico-verdades-y-mentiras.html",
+      "sourceName": "Razonamiento Lógico - Verdades y Mentiras, Problemas Resueltos de Ingreso a la Universidad (matematicasn), Problema 8, examen"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Se deben realizar cinco actividades: A, B, C, D y E, una por día, desde el lunes hasta el viernes. Se sabe que:\n- B no se realiza después de D.\n- C se realiza dos días después de A.\n- B se realiza jueves o viernes.\n¿Qué actividad se realiza el día martes?",
+      "alternatives": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/orden-de-informacion-ejercicios.html",
+      "sourceName": "Orden de Información - Ejercicios Resueltos (matematicasn), Pregunta 3, actividades lunes a viernes"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Sabiendo que:\n- Carlos es más alto que Luis.\n- Felipe es más bajo que Carlos.\n- Pedro es más bajo que Luis.\nCon seguridad podemos deducir:",
+      "alternatives": [
+        "Felipe es más bajo que Pedro.",
+        "Luis es más bajo que Felipe.",
+        "Pedro es más bajo que Felipe.",
+        "Carlos es más alto que Pedro.",
+        "Pedro es el más alto."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/orden-de-informacion-ejercicios.html",
+      "sourceName": "Orden de Información - Ejercicios Resueltos (matematicasn), Pregunta 5, comparación de alturas"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Dado que:\n- Ningún animal furioso ataca al hombre.\n- Todos los perros son animales furiosos.\nLa conclusión válida es:",
+      "alternatives": [
+        "Algunos perros no son furiosos.",
+        "Algunos perros no atacan al hombre.",
+        "Ningún perro ataca al hombre.",
+        "Ningún perro deja de atacar al hombre.",
+        "Todos los perros atacan al hombre."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios Resueltos (matematicasn), Pregunta 2, silogismo animales furiosos"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Dado que:\n- Ningún científico admite la clonación.\n- Algunos aficionados a la ciencia ficción la admiten.\nLa deducción válida es:",
+      "alternatives": [
+        "Todos los aficionados a la ciencia ficción son científicos.",
+        "Ningún científico es aficionado a la ciencia ficción.",
+        "Algunos aficionados a la ciencia ficción no son científicos.",
+        "Todos los científicos son aficionados a la ciencia ficción.",
+        "Ningún aficionado a la ciencia ficción es científico."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios Resueltos (matematicasn), Pregunta 7, científicos y clonación"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Dado que:\n- Ninguna persona que toma mate toma café.\n- Algunas personas que toman té toman café.\nLa deducción correcta es:",
+      "alternatives": [
+        "Ninguna persona que toma té toma mate.",
+        "Todas las personas que toman mate toman té.",
+        "Algunas personas que toman mate toman café.",
+        "Algunas personas que toman té no toman mate.",
+        "Todas las personas que toman café toman té."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios Resueltos (matematicasn), Pregunta 4, mate café y té"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado que:\n- Algunas personas son corruptas.\n- Todo corrupto es ruin.\n- Todo ruin es mediocre.\nLa conclusión válida es:",
+      "alternatives": [
+        "Algunas personas son mediocres.",
+        "Algunas personas son no mediocres.",
+        "Algunos no corruptos son mediocres.",
+        "Alguien que no es ruin es mediocre.",
+        "Algunas personas no son corruptas."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios Resueltos (matematicasn), Pregunta 11, personas corruptas"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Dado que:\n- Todos los futbolistas son ricos.\n- Todos los artistas son personas alegres.\n- Óscar es futbolista.\n- Todas las personas alegres no son ricas.\nSe puede concluir con certeza que:",
+      "alternatives": [
+        "Algunos artistas son ricos.",
+        "Algunos futbolistas son alegres.",
+        "Óscar es alegre.",
+        "Óscar no es artista.",
+        "Óscar es artista."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios Resueltos (matematicasn), Pregunta 12, futbolistas artistas Óscar"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La negación de la proposición «Algunas personas no son corruptas» es:",
+      "alternatives": [
+        "Algunos científicos son románticos.",
+        "Ningún científico es romántico.",
+        "Todos los científicos son románticos.",
+        "Todos los científicos no son románticos."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios Resueltos (matematicasn), Pregunta 8, negación proposición científicos"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La negación de «Ningún matemático es distraído» es:",
+      "alternatives": [
+        "Al menos un matemático no es distraído.",
+        "Al menos un matemático es distraído.",
+        "Todos los matemáticos son distraídos.",
+        "Todos los matemáticos no son distraídos."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios Resueltos (matematicasn), Pregunta 9, negación matemáticos distraídos"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Cuál de las siguientes es equivalente a «Ningún diplomático es descortés»?",
+      "alternatives": [
+        "Algún diplomático es cortés.",
+        "Algún diplomático no es descortés.",
+        "Ningún cortés es diplomático.",
+        "Todo diplomático es descortés.",
+        "Todo diplomático es cortés."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/logica-de-clases-ejercicios-resueltos.html",
+      "sourceName": "Lógica de Clases - Ejercicios Resueltos (matematicasn), Pregunta 13, equivalencia diplomático descortés"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Lizbeth, Valeri y Pilar tienen diferentes ocupaciones (médico, reportera y profesora). Se sabe que:\n- Pilar y la que es médico no se conocen.\n- Valeri es hermana de la que es médico y amiga de la reportera.\n¿Cuál de las afirmaciones es siempre verdadera?",
+      "alternatives": [
+        "Pilar es reportera.",
+        "Valeri es reportera.",
+        "Lizbeth es profesora.",
+        "Valeri es médico.",
+        "Lizbeth es reportera."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/orden-de-informacion-en-cuadros.html",
+      "sourceName": "Orden de Información en Tablas - Ejercicios Resueltos (matematicasn), Problema 1, Lizbeth Valeri Pilar ocupaciones"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Pedro, Juan, Adrián y Mario son médicos. Solo uno de ellos es pediatra y los otros tres son epidemiólogos. Se sabe que:\n- Entre Juan y Pedro, uno es epidemiólogo y el otro es pediatra.\n- Adrián trabaja en una clínica.\nComo consecuencia, siempre es cierto que:",
+      "alternatives": [
+        "Juan es epidemiólogo.",
+        "Pedro y Juan son epidemiólogos.",
+        "Mario no es pediatra.",
+        "Juan es pediatra."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/orden-de-informacion-en-cuadros.html",
+      "sourceName": "Orden de Información en Tablas - Ejercicios Resueltos (matematicasn), Problema 2, médicos pediatra epidemiólogo"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un centro deportivo se enseña fútbol y tenis. Cuatro niños (Abel, Boris, Caín, Daniel) se matriculan. Se sabe que:\n- Abel y Caín no practican fútbol.\n- Boris y Caín practican disciplinas diferentes.\n- Boris y Daniel no practican la misma disciplina.\nDe lo anterior, es verdad que:",
+      "alternatives": [
+        "Hay dos niños que practican fútbol.",
+        "Solo dos niños practican tenis.",
+        "Solo uno practica fútbol.",
+        "Daniel es el único que practica fútbol."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/orden-de-informacion-en-cuadros.html",
+      "sourceName": "Orden de Información en Tablas - Ejercicios Resueltos (matematicasn), Problema 3, fútbol y tenis"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "María, Pedro, Lucy y Héctor tienen una profesión diferente cada uno: Educación, Ingeniería, Química y Derecho. Se sabe que:\n- Lucy habría estudiado Educación si Pedro no lo hubiese hecho.\n- Héctor quiere estudiar Química como segunda profesión.\n- María estudió antes Derecho pero se cambió a Química.\n- Si Lucy hubiera estudiado Ingeniería, Pedro habría estudiado Derecho.\n¿Quién es profesional en Derecho?",
+      "alternatives": [
+        "Lucy",
+        "Pedro",
+        "Héctor",
+        "María"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/orden-de-informacion-en-cuadros.html",
+      "sourceName": "Orden de Información en Tablas - Ejercicios Resueltos (matematicasn), Problema 4, profesiones María Pedro Lucy Héctor"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una taberna se reúnen tres amigos: Abel, Beto y Carlos, discutiendo sus vicios: beber, fumar o jugar. Abel dice: «Yo no gusto de fumar ni de beber». Carlos dice: «Me habría gustado aprender a fumar». Cada uno tiene un solo vicio. ¿Cuál es la relación correcta?",
+      "alternatives": [
+        "Carlos juega.",
+        "Carlos fuma.",
+        "Abel fuma.",
+        "Beto bebe.",
+        "Beto fuma."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/orden-de-informacion-en-cuadros.html",
+      "sourceName": "Orden de Información en Tablas - Ejercicios Resueltos (matematicasn), Problema 6, Abel Beto Carlos vicios"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los señores Farfán, López y Vidal nacieron en Áncash, Lima y Trujillo, no necesariamente en ese orden. Cada uno tiene un hijo nacido en una de esas ciudades, pero ninguno en la ciudad natal de su padre. Farfán es de Lima y el hijo de Vidal es de Áncash. ¿De dónde son López y el hijo de Farfán, respectivamente?",
+      "alternatives": [
+        "Áncash y Lima",
+        "Áncash y Trujillo",
+        "Lima y Trujillo",
+        "Trujillo y Lima"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/orden-de-informacion-en-cuadros.html",
+      "sourceName": "Orden de Información en Tablas - Ejercicios Resueltos (matematicasn), Problema 8, ciudades natales Farfán López Vidal"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Tres comerciantes: José, David y Toribio venden diferentes artículos: arroz, leche y azúcar; y viven en diferentes lugares: Arequipa, Lima y Piura. Se sabe que:\n- José no vive en Piura.\n- David no vive en Lima.\n- Quien vive en Piura no vende arroz.\n- Quien vive en Lima vende leche.\n- David no vende azúcar.\n¿Qué vende José y dónde vive?",
+      "alternatives": [
+        "Arroz – Arequipa",
+        "Azúcar – Piura",
+        "Arroz – Lima",
+        "Leche – Piura",
+        "Leche – Lima"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/orden-de-informacion-en-cuadros.html",
+      "sourceName": "Orden de Información en Tablas - Ejercicios Resueltos (matematicasn), Problema 10, comerciantes ciudades"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "María, Norma, Carla y Elena trabajan en un hospital con profesiones distintas: enfermera, obstetra, nutricionista y farmacéutica. Se sabe que:\n- María y Carla conocen a la obstetra.\n- Norma y la nutricionista estuvieron en la farmacia de la farmacéutica.\n- La nutricionista es prima de Elena con horario diferente al de María.\n- María conoce a la enfermera pero no a Elena.\n¿Cuál afirmación es verdadera?",
+      "alternatives": [
+        "Elena es obstetra.",
+        "María es nutricionista.",
+        "Carla es enfermera.",
+        "Norma es farmacéutica."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/orden-de-informacion-en-cuadros.html",
+      "sourceName": "Orden de Información en Tablas - Ejercicios Resueltos (matematicasn), Problema 12, hospital María Norma Carla Elena"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Miriam, Elisa, Angélica y Carla son profesionales: pediatra, abogada, ingeniera y nutricionista. Se sabe que:\n- Miriam está casada con el hermano de la nutricionista.\n- Elisa y la ingeniera consultan a la nutricionista.\n- Elisa y Carla son amigas de la abogada, quien no está casada.\n¿Quién es la abogada y quién es la ingeniera, respectivamente?",
+      "alternatives": [
+        "Carla – Elisa",
+        "Elisa – Miriam",
+        "Angélica – Miriam",
+        "Angélica – Carla"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/orden-de-informacion-en-cuadros.html",
+      "sourceName": "Orden de Información en Tablas - Ejercicios Resueltos (matematicasn), Problema 14, Miriam Elisa Angélica Carla profesiones"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En una hilera de 4 casas, los Pinedo están junto a los Pérez y los Paredes. Si los Pérez no están junto a los Portocarrero, ¿quiénes son los vecinos de los Portocarrero?",
+      "alternatives": [
+        "Los Pérez",
+        "Los Paredes",
+        "Los Pinedo",
+        "Los Pérez y los Paredes",
+        "Los Paredes y los Pinedo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ordenamiento-lineal-ejercicios.html",
+      "sourceName": "Ordenamiento Lineal - Ejercicios Resueltos (matematicasn), Problema 1, casas en hilera"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Rosa obtuvo menos puntos que Diana; Elvira obtuvo menos que Carmen; Flor obtuvo lo mismo que Susana; Rosa obtuvo más que Laura; Elvira obtuvo lo mismo que Diana. Si Flor obtuvo más que Carmen, ¿quién obtuvo el menor puntaje?",
+      "alternatives": [
+        "Carmen",
+        "Elvira",
+        "Flor",
+        "Laura",
+        "Rosa"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ordenamiento-lineal-ejercicios.html",
+      "sourceName": "Ordenamiento Lineal - Ejercicios Resueltos (matematicasn), Problema 2, comparación de puntajes"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Alberto obtuvo menos que Braulio; Dino obtuvo menos que Alberto; Coco obtuvo más que Eduardo; Eduardo obtuvo más que Braulio. ¿Quiénes obtuvieron el menor y el mayor puntaje, respectivamente?",
+      "alternatives": [
+        "Alberto – Eduardo",
+        "Dino – Coco",
+        "Coco – Braulio",
+        "Braulio – Coco"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ordenamiento-lineal-ejercicios.html",
+      "sourceName": "Ordenamiento Lineal - Ejercicios Resueltos (matematicasn), Problema 5, mayor y menor puntaje"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un edificio de seis pisos, E vive adyacente a C y a B; para ir del piso de E al de F se bajan 3 pisos; A vive en el piso 2. ¿Quién vive en el piso más alto?",
+      "alternatives": [
+        "B",
+        "C",
+        "E",
+        "F",
+        "D"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ordenamiento-lineal-ejercicios.html",
+      "sourceName": "Ordenamiento Lineal - Ejercicios Resueltos (matematicasn), Problema 6, edificio de seis pisos"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cinco corredoras (Amalia, Beatriz, Carmen, Dora, Emilia) participaron en una carrera. Ninguna terminó en la posición del número inicial de su nombre; Carmen no quedó última; Beatriz llegó antes que Amalia; Carmen llegó después de Emilia; Dora llegó inmediatamente después de Beatriz. ¿En qué puesto llegaron Carmen y Dora, respectivamente?",
+      "alternatives": [
+        "5° y 3°",
+        "4° y 5°",
+        "2° y 3°",
+        "5° y 2°",
+        "4° y 2°"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ordenamiento-lineal-ejercicios.html",
+      "sourceName": "Ordenamiento Lineal - Ejercicios Resueltos (matematicasn), Problema 11, carrera de corredoras"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Luz, María, Nancy, Ofelia, Pamela y Rita se sientan alrededor de una mesa circular con seis asientos distribuidos simétricamente. Se sabe que:\n- Ofelia no se sienta junto a María.\n- Pamela no se sienta junto a Nancy.\n- Luz se sienta junto y a la derecha de María y frente a Nancy.\n¿Dónde se sienta Rita?",
+      "alternatives": [
+        "Junto y entre Nancy y Pamela.",
+        "Frente a Nancy.",
+        "Junto y entre María y Nancy.",
+        "Frente a María.",
+        "Frente a Ofelia."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ordenamiento-circular-problemas.html",
+      "sourceName": "Ordenamiento Circular - Ejercicios Resueltos (matematicasn), Pregunta 1, Luz María Nancy Ofelia Pamela Rita"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Alrededor de una mesa circular están sentadas 6 amigas distribuidas simétricamente. Se sabe que:\n- Karen se ubica junto a Rosa pero no junto a María.\n- Ana se sienta frente a la persona que está junto y a la izquierda de Rosa.\n- María está a dos lugares de Ana.\n- Inés se ubica a dos lugares a la derecha de Dora.\n¿Quién se encuentra frente a Ana?",
+      "alternatives": [
+        "Dora",
+        "Rosa",
+        "María",
+        "Inés",
+        "Karen"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ordenamiento-circular-problemas.html",
+      "sourceName": "Ordenamiento Circular - Ejercicios Resueltos (matematicasn), Pregunta 2, Karen Rosa María Ana Inés Dora"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En la playa, cuatro niñas: Anita, Luisita, Carmencita y Dianita forman una circunferencia tomándose de las manos. Se sabe que:\n- La niña de ropa de baño verde está a la izquierda de Carmencita.\n- Luisita está al frente de la niña de ropa de baño rojo.\n- La niña a la derecha de Anita tiene ropa de baño rosado, y esta se encuentra frente a la de ropa de baño amarilla.\n¿De qué color es la ropa de baño de Dianita?",
+      "alternatives": [
+        "Verde",
+        "Rojo",
+        "Rosado",
+        "Amarillo",
+        "Azul"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ordenamiento-circular-problemas.html",
+      "sourceName": "Ordenamiento Circular - Ejercicios Resueltos (matematicasn), Pregunta 3, niñas playa ropa de baño"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un comedor de estudiantes, 8 comensales se sientan en una mesa circular guardando distancias proporcionales. Se sabe que:\n- El de Ingeniería está frente al de Educación y entre los de Economía y Farmacia.\n- El de Periodismo está a la izquierda del de Educación y frente al de Economía.\n- Frente al de Farmacia está el de Derecho; este a su vez está a la izquierda del de Arquitectura.\n¿Cuál de ellos está entre los estudiantes de Biología y Educación?",
+      "alternatives": [
+        "Derecho",
+        "Farmacia",
+        "Ingeniería",
+        "Economía",
+        "Periodismo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ordenamiento-circular-problemas.html",
+      "sourceName": "Ordenamiento Circular - Ejercicios Resueltos (matematicasn), Pregunta 5, comedor de estudiantes carreras"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Seis amigos se sientan alrededor de una mesa circular en seis asientos simétricamente distribuidos. Ernesto está al frente de Carla. Dina está al frente de Flor, quien no está junto a Alonso. Carla está junto y a la derecha de Alonso. ¿Quién está junto y a la izquierda de Beto?",
+      "alternatives": [
+        "Carla",
+        "Flor",
+        "Dina",
+        "Ernesto",
+        "Alonso"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ordenamiento-circular-problemas.html",
+      "sourceName": "Ordenamiento Circular - Ejercicios Resueltos (matematicasn), Pregunta 8, Ernesto Carla Dina Flor Alonso Beto"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Aldo, Enrique, José y Carlos fueron a cenar en compañía de sus esposas. En el restaurante ocuparon una mesa redonda con asientos simétricos y se sentaron cumpliendo las siguientes condiciones:\n- Ningún esposo se sienta al lado de su esposa.\n- Frente a Aldo se sienta José.\n- Junto y a la derecha de la esposa de Aldo se sienta Enrique.\n- No se sientan dos varones juntos.\n¿Quién se sienta entre Aldo y Carlos?",
+      "alternatives": [
+        "La esposa de Aldo",
+        "La esposa de Carlos",
+        "La esposa de José",
+        "La esposa de Enrique",
+        "Ninguna"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ordenamiento-circular-problemas.html",
+      "sourceName": "Ordenamiento Circular - Ejercicios Resueltos (matematicasn), Pregunta 9, Aldo Enrique José Carlos cena"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Seis amigos, con las profesiones: abogado, contador, médico, economista, ingeniero y biólogo, se sientan en forma simétrica alrededor de una mesa circular. Se sabe que:\n- El ingeniero está junto y a la izquierda del abogado.\n- El contador no está junto al médico ni al economista.\n- El abogado se sienta frente al médico.\n¿Cuál es la afirmación correcta?",
+      "alternatives": [
+        "Es falso que el economista se siente junto al médico y al ingeniero.",
+        "El contador está sentado frente al que está junto al abogado.",
+        "Entre el médico y el contador está sentado el ingeniero.",
+        "No es cierto que el ingeniero no se siente frente al biólogo.",
+        "Frente al biólogo está sentado el economista."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/ordenamiento-circular-problemas.html",
+      "sourceName": "Ordenamiento Circular - Ejercicios Resueltos (matematicasn), Pregunta 11, seis profesionales mesa circular"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Alex, Benito, Carlos y Danilo tienen 10, 11, 13 y 16 años respectivamente. Dos de ellos son hermanos que siempre mienten y los otros dos siempre dicen la verdad. Al preguntarles quiénes son los hermanos, respondieron:\n- Alex: «Benito y Carlos no son hermanos».\n- Benito: «Carlos y Danilo sí lo son».\n- Carlos: «Danilo no es mi hermano».\n- Danilo: «Carlos es mi hermano».\n¿Cuál es la suma de las edades de los dos hermanos?",
+      "alternatives": [
+        "24",
+        "29",
+        "27",
+        "21"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/verdades-mentiras-ejercicios-resueltos.html",
+      "sourceName": "Verdades y Mentiras - Ejemplos y Preguntas Resueltas (razonamientopdf), Problema 1, hermanos mentirosos"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cinco niños tienen 12, 13, 14, 15 y 16 canicas respectivamente. Cada uno dijo:\n- Abel: «Yo tengo 16 canicas».\n- Boris: «Yo tengo 15 canicas».\n- Carlos: «Boris tiene 13 canicas».\n- David: «Yo tengo 14 canicas».\n- Eduardo: «Yo tengo 13 canicas».\nSi solamente uno de ellos miente y los otros dicen la verdad, ¿cuántas canicas tienen juntos Abel y Eduardo?",
+      "alternatives": [
+        "29",
+        "31",
+        "28",
+        "27"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/verdades-mentiras-ejercicios-resueltos.html",
+      "sourceName": "Verdades y Mentiras - Ejemplos y Preguntas Resueltas (razonamientopdf), Problema 2, canicas niños"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Eduardo tiene por lo menos tres hermanos, dice Abel. Tiene menos de tres, corrige Boris. Tiene más de un hermano, agrega Carlos. Si se sabe que solo uno de los tres amigos ha dicho la verdad y Eduardo tiene sobrinos, ¿cuántos hermanos puede tener Eduardo?",
+      "alternatives": [
+        "2",
+        "4",
+        "5",
+        "1"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/verdades-mentiras-ejercicios-resueltos.html",
+      "sourceName": "Verdades y Mentiras - Ejemplos y Preguntas Resueltas (razonamientopdf), Problema 3, hermanos de Eduardo"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Una isla está habitada por caballeros y vasallos. Los vasallos siempre mienten, mientras que los caballeros siempre dicen la verdad. Dieciséis isleños se reunieron y emitieron anuncios:\n- Tres dijeron: «Solo tres de entre nosotros son mentirosos».\n- Cinco dijeron: «Solo cinco de entre nosotros son mentirosos».\n- Ocho dijeron: «Solo ocho de entre nosotros son mentirosos».\n¿Cuántos vasallos hay entre los dieciséis isleños?",
+      "alternatives": [
+        "5",
+        "3",
+        "11",
+        "8"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/verdades-mentiras-ejercicios-resueltos.html",
+      "sourceName": "Verdades y Mentiras - Ejemplos y Preguntas Resueltas (razonamientopdf), Problema 5, isla caballeros vasallos"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cinco comentaristas deportivos pronosticaron el partido de Las Águilas vs. Las Panteras:\n- Abel: «El partido no terminará empatado».\n- Beto: «Las Águilas anotará por lo menos un gol».\n- César: «Las Águilas ganarán ese partido».\n- Darío: «Las Águilas no perderán».\n- Ernesto: «En ese partido se anotarán 3 goles».\nAl terminar, exactamente tres de estas predicciones resultaron ciertas. ¿Cuál fue el resultado del partido (Águilas – Panteras)?",
+      "alternatives": [
+        "3–0",
+        "1–2",
+        "2–1",
+        "0–3"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/verdades-mentiras-ejercicios-resueltos.html",
+      "sourceName": "Verdades y Mentiras - Ejemplos y Preguntas Resueltas (razonamientopdf), Problema 6, partido de fútbol Águilas Panteras"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Luisa, Paola, Sandra y María participaron en un concurso de atletismo. Un periodista entrevistó a tres de ellas:\n- Paola: «María llegó segunda» y «Sandra llegó tercera».\n- María: «Sandra llegó última» y «Luisa llegó segunda».\n- Luisa: «María fue la primera en llegar» y «Paola llegó segunda».\nSi cada una de las entrevistadas dijo una verdad y una mentira, ¿quién llegó primera y quién llegó segunda, respectivamente?",
+      "alternatives": [
+        "Luisa – Paola",
+        "María – Luisa",
+        "Paola – Luisa",
+        "Paola – María"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/verdades-mentiras-ejercicios-resueltos.html",
+      "sourceName": "Verdades y Mentiras - Ejemplos y Preguntas Resueltas (razonamientopdf), Problema 7, atletismo Luisa Paola Sandra María"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Daniela vive en el mismo edificio que yo. Le pregunté a cuatro vecinos por el número de su departamento:\n- Vecino 1: «El número de su departamento es el 9».\n- Vecino 2: «El número de su departamento es primo».\n- Vecino 3: «El número de su departamento es par».\n- Vecino 4: «El número de su departamento es 15».\nEl portero aseguró que exactamente dos de las afirmaciones anteriores son falsas. ¿En qué departamento vive Daniela?",
+      "alternatives": [
+        "9",
+        "3",
+        "15",
+        "2"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/verdades-mentiras-ejercicios-resueltos.html",
+      "sourceName": "Verdades y Mentiras - Ejemplos y Preguntas Resueltas (razonamientopdf), Problema 8, departamento de Daniela"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La hermana de mi tío no es mi tía. Si lo afirma Mauricio y es cierto, ¿a quién se estará refiriendo?",
+      "alternatives": [
+        "A su hija.",
+        "A su madre.",
+        "A su esposa.",
+        "A su hermana.",
+        "A su suegra."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/parentescos-especificos-ejercicios.html",
+      "sourceName": "Parentescos Específicos - Ejercicios Resueltos (matematicasn), Pregunta 1, hermana del tío"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué es de mí la hija de la hija de la hermana de la mamá del esposo de mi madre?",
+      "alternatives": [
+        "Mi madre.",
+        "Mi hermana.",
+        "Mi prima.",
+        "Mi tía.",
+        "Mi abuela."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/parentescos-especificos-ejercicios.html",
+      "sourceName": "Parentescos Específicos - Ejercicios Resueltos (matematicasn), Pregunta 2, cadena de parentesco"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué relación de parentesco existe entre Antonio y la hija de la esposa del único vástago de su madre?",
+      "alternatives": [
+        "Tío – Sobrina.",
+        "Primos.",
+        "Abuelo – Nieta.",
+        "Padre – Hija.",
+        "Hermanos."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/parentescos-especificos-ejercicios.html",
+      "sourceName": "Parentescos Específicos - Ejercicios Resueltos (matematicasn), Pregunta 3, Antonio y vástago de su madre"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "La madre de la hermana del hijo de la hermana del hijo de la hermana de mi padre es mi...",
+      "alternatives": [
+        "Tía.",
+        "Prima.",
+        "Cuñada.",
+        "Hermana.",
+        "Abuela."
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/parentescos-especificos-ejercicios.html",
+      "sourceName": "Parentescos Específicos - Ejercicios Resueltos (matematicasn), Pregunta 4, cadena compleja de parentesco"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "No es cierto que Bruno no sea nieto de Manuel, el cual es padre de Juan, y es falso que Juan sea tío de Bruno. ¿Cuál de las siguientes conclusiones es correcta?",
+      "alternatives": [
+        "Pilar es hija de Manuel.",
+        "Juan es nieto de Manuel.",
+        "Pilar y Manuel son esposos.",
+        "Pilar y Juan son esposos.",
+        "Pilar es abuela de Juan."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/parentescos-especificos-ejercicios.html",
+      "sourceName": "Parentescos Específicos - Ejercicios Resueltos (matematicasn), Pregunta 8, Bruno nieto de Manuel"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cinco mujeres, al ser interrogadas por un delito que cometió una de ellas, manifestaron lo siguiente:\n- Bertha: «Fue Elsa».\n- Ana: «Fue Bertha».\n- Elsa: «Bertha miente».\n- María: «Yo no fui».\n- Karla: «Yo fui».\nSi solo una de ellas dice la verdad, ¿quién cometió el delito?",
+      "alternatives": [
+        "Bertha",
+        "Ana",
+        "María",
+        "Elsa",
+        "Karla"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://profe-alexz.blogspot.com/2011/03/razonamiento-logico-matematico.html",
+      "sourceName": "Razonamiento Lógico Matemático - Ejercicios Resueltos (profe-alexz), Problema 4, delito cinco mujeres"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cinco amigos se sientan en una banca de cinco asientos. Se sabe que:\n- Carlos está tres asientos a la izquierda de Brenda.\n- Brenda está junto a David.\n- Éder está a la derecha de todos.\n¿Quién se sienta junto a la izquierda de Ana?",
+      "alternatives": [
+        "Carlos",
+        "David",
+        "Brenda",
+        "Éder",
+        "No se sabe."
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/orden-de-informacion-ejercicios.html",
+      "sourceName": "Orden de Información - Ejercicios Resueltos (matematicasn), Pregunta 1, banca cinco amigos"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Seis chicas escalan una montaña. Se conocen sus posiciones relativas respecto a Camila, Aracely, Mirtha, Kiara, Gisela y Janeth. ¿Quién está en cuarto lugar?",
+      "alternatives": [
+        "Mirtha",
+        "Gisela",
+        "Aracely",
+        "Kiara",
+        "Camila"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/12/orden-de-informacion-ejercicios.html",
+      "sourceName": "Orden de Información - Ejercicios Resueltos (matematicasn), Pregunta 4, escalada de montaña"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dos caballeros se encuentran con tres dragones: Ari, Bori y Cari. Los dragones racionales grises y los predadores rojos siempre dicen la verdad; los racionales rojos y los predadores grises siempre mienten. Cada dragón hizo dos afirmaciones:\n- Ari: «Soy un dragón racional» y «Cari y yo no somos del mismo color».\n- Bori: «Ari es de tipo racional» y «Yo no soy un dragón rojo».\n- Cari: «Bori es un predador» y «Ari y yo compartimos el mismo color».\nSi solo hay dragones grises y rojos, ¿de qué color son Ari, Bori y Cari, respectivamente?",
+      "alternatives": [
+        "Rojo, gris, rojo.",
+        "Gris, rojo, rojo.",
+        "Gris, gris, rojo.",
+        "Rojo, rojo, rojo."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://razonamientopdf.blogspot.com/2018/11/verdades-mentiras-ejercicios-resueltos.html",
+      "sourceName": "Verdades y Mentiras - Ejemplos y Preguntas Resueltas (razonamientopdf), Problema 4, dragones Ari Bori Cari"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Ariadna, Belinda, Carla, Dayana y Elena viven en diferentes pisos: 3, 5, 7, 11 y 13. Sus profesiones son: contadora, cantante, enfermera, psicóloga y economista. Se sabe que:\n- El piso de Belinda es mayor que el de Carla y el de la economista.\n- Carla es prima de la economista.\n- La cantante vive en el piso 5.\n- Ariadna no vive en el piso 7.\n- La enfermera es amiga de Belinda y vive en el piso 13.\n- Elena es la psicóloga y vive debajo del piso 5.\n¿En qué piso vive Carla y cuál es su profesión?",
+      "alternatives": [
+        "Séptimo – Contadora",
+        "Undécimo – Economista",
+        "Quinto – Cantante",
+        "Décimotercero – Cantante"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/orden-de-informacion-en-cuadros.html",
+      "sourceName": "Orden de Información en Tablas - Ejercicios Resueltos (matematicasn), Problema 11, Ariadna Belinda Carla Dayana Elena pisos"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Cinco hermanos: Arón, Raúl, Juvenal, Liberato y Germán, de 21, 23, 25, 27 y 28 años, entrenan uno por día en motocicleta de lunes a viernes. Se sabe que:\n- Arón entrena desde el jueves en adelante.\n- Raúl entrena después de Liberato.\n- Juvenal entrena el viernes.\n- Ni Liberato ni Raúl entrenan el miércoles.\n¿Cuál es la suma de las edades de los que entrenan el lunes y el miércoles?",
+      "alternatives": [
+        "55",
+        "52",
+        "50",
+        "48"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/orden-de-informacion-en-cuadros.html",
+      "sourceName": "Orden de Información en Tablas - Ejercicios Resueltos (matematicasn), Problema 13, hermanos motocicleta días"
+    },
+    {
+      "courseName": "Razonamiento Matemático",
+      "topicName": "Razonamiento Lógico",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Arturo, Belén, Carmen y Danilo forman dos parejas de esposos. Sus edades en orden ascendente son: 25, 27, 29 y 33 años. Se sabe que:\n- Belén está casada con el mayor de todos.\n- Danilo es menor que Carmen pero mayor que Belén.\n¿Cuál es el promedio de edades de uno de los matrimonios?",
+      "alternatives": [
+        "29 años",
+        "31 años",
+        "30 años",
+        "26 años"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2015/11/orden-de-informacion-en-cuadros.html",
+      "sourceName": "Orden de Información en Tablas - Ejercicios Resueltos (matematicasn), Problema 7, matrimonios edades"
+    }
+  ]
+}

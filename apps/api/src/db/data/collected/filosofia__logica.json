@@ -1,0 +1,446 @@
+{
+  "entries": [
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La Lógica es una ciencia ………… que estudia la validez de …………..",
+      "alternatives": [
+        "natural - los argumentos",
+        "formal - la inferencia",
+        "social - los pensamientos",
+        "fáctica - los razonamientos",
+        "social - la deducción"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 1"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La obra \"El Organom\" y el Silogismo fueron aportes importantes de …………. a la Lógica.",
+      "alternatives": [
+        "Platón",
+        "Aristóteles",
+        "Gotolob Frege",
+        "George Boole",
+        "Giussepe Peano"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 2"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Las falacias son consideradas razonamientos:",
+      "alternatives": [
+        "incorrectos",
+        "erróneos",
+        "distorsionados",
+        "de apariencia verdadera",
+        "todos los anteriores"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 3"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El lenguaje lógico no es:",
+      "alternatives": [
+        "simbólico",
+        "científico",
+        "convencional",
+        "universal",
+        "directivo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 4"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si expresamos: \"El pensamiento idealista de Platón lo convierte en autoridad única de la filosofía\", cometemos una Falacia de Argumento",
+      "alternatives": [
+        "Ad Hominem",
+        "Ad Baculum",
+        "Ad Misericordiam",
+        "Ad Populum",
+        "Ad Verecundiam"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 5"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La Inferencia que deriva su conclusión de manera necesaria de sus premisas, se denomina:",
+      "alternatives": [
+        "Inductiva",
+        "Mediata",
+        "Inmediata",
+        "Deductiva",
+        "Compleja"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 6"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Señale la inferencia cuyo razonamiento admite premisas que representan casos singulares y concluye en un principio general:",
+      "alternatives": [
+        "Mediata",
+        "Inmediata",
+        "Deductiva",
+        "Inductiva",
+        "Crítica"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 7"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La Falacia denominada Ad Baculum, tiene como argumento de apelación:",
+      "alternatives": [
+        "contra el hombre",
+        "a la fuerza",
+        "a la causa falsa",
+        "a la pregunta compleja",
+        "a la ambigüedad"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 8"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Cuando en un razonamiento no hay conexión lógica entre las premisas y la conclusión, se denomina Falacia ……..",
+      "alternatives": [
+        "Formal",
+        "Informal",
+        "de Atingencia",
+        "de Causa Falsa",
+        "de Pregunta Compleja"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 9"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Según los lógicos griegos, entre ellos Aristóteles, el instrumento para pensar correctamente se denomina:",
+      "alternatives": [
+        "Lógica",
+        "Inferencia",
+        "Argumentación",
+        "Tópico",
+        "Organom"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 10"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La Falacia de Ambigüedad se le conoce como",
+      "alternatives": [
+        "Falacia de Causa Falsa",
+        "Falacia de Pregunta Compleja",
+        "Falacia Atingente",
+        "Falacia de Anfibología",
+        "Falacia de Complejidad"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 11"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si expresamos: \"Martín Heidegger, no debe ser considerado filósofo porque colaboró con los nazis\", cometemos una Falacia de Argumento:",
+      "alternatives": [
+        "Ad Hominem",
+        "Ad Baculum",
+        "Ad Misericordian",
+        "Ad Populum",
+        "Ad Verecundiam"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 12"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Indique el enunciado falso",
+      "alternatives": [
+        "Una inferencia puede ser válida o inválida.",
+        "Una proposición no puede ser verdadera y falsa a la vez.",
+        "La Lógica y la Matemática son ciencias incompatibles.",
+        "El Silogismo es un razonamiento deductivo.",
+        "La Inferencia es sinónimo de: predicción o derivación."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 13"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Indique el criterio de verdad (V) o falsedad (F) de las siguientes expresiones:\n\nI. Toda Inferencia es un razonamiento\nII. Una Falacia es un razonamiento incorrecto.\nIII. La Inferencia Mediata tiene una sola premisa.",
+      "alternatives": [
+        "V F F",
+        "F V F",
+        "V V V",
+        "V V F",
+        "F F V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 14"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Si no existe premisa y conclusión no existe ……….",
+      "alternatives": [
+        "una proposición",
+        "una inferencia",
+        "un juicio",
+        "una idea",
+        "un concepto"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 15"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Cuando la conclusión de una Inferencia se deriva de una sola premisa toma el nombre de:",
+      "alternatives": [
+        "Simple",
+        "Atómica",
+        "Inmediata",
+        "Mediata",
+        "Molecular"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 16"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La Lógica no estudia:",
+      "alternatives": [
+        "El lenguaje",
+        "La inferencia",
+        "Los argumentos",
+        "Las proposiciones",
+        "La conducta"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 17"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indica la inferencia deductiva creada por Aristóteles.",
+      "alternatives": [
+        "Argumentación",
+        "Inducción",
+        "Silogismo",
+        "Implicación",
+        "Equivalencia"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 18"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Señale el tipo de inferencia que presenta el siguiente enunciado:\n\nMéxico está al norte de Perú\nPerú está al Sur de México",
+      "alternatives": [
+        "Simple e Inductiva",
+        "Mediata e Inductiva",
+        "Mediata y Deductiva",
+        "Molecular y Deductiva",
+        "Inmediata y Deductiva"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 19"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "La Inferencia es una estructura de proposiciones compuesta por …..…… de las cuales derivamos la …………",
+      "alternatives": [
+        "premisas – conclusión",
+        "ideas - argumentación",
+        "pensamientos – deducción",
+        "argumentos – inducción",
+        "deducciones - conclusión"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2021/02/nociones-basicas-de-la-logica-preguntas-resueltas-admision-universidad-academia-preuniversitaria.html",
+      "sourceName": "Nociones básicas de la Lógica - Preguntas resueltas admisión universidad, pregunta 20"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "¿Qué tipo de proposición es \"Si haces ejercicios, entonces mejorarás\"?",
+      "alternatives": [
+        "predicativas",
+        "relacionales",
+        "atómicas",
+        "moleculares",
+        "simples"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/logica-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "Lógica - Ejercicios resueltos de examen admisión universidad, pregunta 1"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Cómo se denomina en lógica formal la proposición que es verdadera si por lo menos una de las dos variables es verdadera?",
+      "alternatives": [
+        "Conjuntiva",
+        "Bicondicional",
+        "Disyuntiva exclusiva",
+        "Condicional",
+        "Disyuntiva inclusiva"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/logica-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "Lógica - Ejercicios resueltos de examen admisión universidad, pregunta 2"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En el argumento \"Se vende perro pastor alemán. Come de todo. Le gusta mucho los niños\", ¿qué falacia se comete?",
+      "alternatives": [
+        "énfasis",
+        "equívoco",
+        "anfibología",
+        "composición",
+        "división"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/logica-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "Lógica - Ejercicios resueltos de examen admisión universidad, pregunta 3"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La proposición \"Raúl y César son hermanos\" es:",
+      "alternatives": [
+        "atómica y predicativa",
+        "molecular y conjuntiva",
+        "atómica y relacional",
+        "molecular y afirmativa",
+        "molecular y predicativa"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/logica-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "Lógica - Ejercicios resueltos de examen admisión universidad, pregunta 4"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "El objeto de estudio de la lógica formal es:",
+      "alternatives": [
+        "El lenguaje cotidiano",
+        "El proceso cognitivo",
+        "La inferencia",
+        "El fin último del universo",
+        "El pensamiento a nivel subjetivo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/logica-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "Lógica - Ejercicios resueltos de examen admisión universidad, pregunta 6"
+    },
+    {
+      "courseName": "Filosofía",
+      "topicName": "Lógica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "El alumno Ricardo pide a su profesora una mejora en sus calificaciones diciéndole: \"Póngame una nota más alta porque de lo contrario moriré de pena\". De acuerdo a esto, se aprecia que dicho alumno incurre en una falacia de atingencia denominada ad",
+      "alternatives": [
+        "misericordiam",
+        "baculum",
+        "hominem",
+        "populum",
+        "ignorantiam"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2020/03/filosofia-preguntas-del-examen-de-admision-a-la-universidad-resueltas-con-claves-y-respuestas.html",
+      "sourceName": "Filosofía - Preguntas del examen de admisión resueltas con claves, segunda prueba pregunta 14"
+    }
+  ]
+}

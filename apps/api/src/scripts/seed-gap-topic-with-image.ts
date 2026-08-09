@@ -18,9 +18,10 @@ const API_BASE_URL = process.env.API_BASE_URL ?? "http://localhost:3012";
  * bank-new "Escribir pregunta" tab's optional image picker would.
  *
  * Data file shape: `{ entries: [{ courseName, topicName, gradeLevel,
- * bodyTypst, alternatives, correctAnswer, difficulty, imagePath, sourceUrl,
+ * bodyTypst, alternatives, correctAnswer, difficulty, imagePath?, sourceUrl,
  * sourceName }] }`. `imagePath` is resolved relative to the data file's
- * own directory.
+ * own directory. `imagePath` is optional — entries without it are plain
+ * text/Typst questions and skip the image-attach step entirely.
  */
 interface GapEntry {
   readonly courseName: string;
@@ -30,7 +31,7 @@ interface GapEntry {
   readonly alternatives: readonly string[];
   readonly correctAnswer: string;
   readonly difficulty: string;
-  readonly imagePath: string;
+  readonly imagePath?: string;
   readonly sourceUrl: string;
   readonly sourceName: string;
 }
@@ -99,6 +100,11 @@ async function main(): Promise<void> {
         throw new Error(`create HTTP ${createResponse.status}: ${await createResponse.text()}`);
       }
       const { id } = (await createResponse.json()) as { id: string };
+
+      if (!entry.imagePath) {
+        console.log(`OK   ${label} (question ${id})`);
+        continue;
+      }
 
       const imageBytes = readFileSync(resolve(dataDir, entry.imagePath));
       const form = new FormData();

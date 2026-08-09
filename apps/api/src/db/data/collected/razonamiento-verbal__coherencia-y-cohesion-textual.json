@@ -1,0 +1,599 @@
+{
+  "entries": [
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ordene coherentemente los siguientes enunciados sobre la evolución del calendario:\n(I) En 1582, el papa Gregorio XIII ajustó el calendario eliminando los años bisiestos de fin de siglo, salvo los divisibles entre 400.\n(II) Este fue reformado por Julio César en el 46 a. C.\n(III) Con ello, la duración media del año civil quedó en 365,25 días.\n(IV) Julio César introdujo un año bisiesto cada cuatro años para adaptar el calendario al año astronómico.\n(V) El calendario actual deriva del calendario romano.",
+      "alternatives": [
+        "V-II-IV-III-I",
+        "I-III-IV-V-II",
+        "IV-II-V-III-I",
+        "V-IV-III-II-I",
+        "IV-III-I-V-II"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/coherencia-y-cohesion-textual-examen-resuelto-de-razonamiento-verbal-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "Coherencia y cohesión textual — ejercicios resueltos de examen de admisión a la universidad, pregunta 1 (evolución del calendario)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ordene coherentemente los siguientes enunciados sobre una exploración astronómica:\n(I) Las observaciones espectroscópicas revelaron cómo fluye el material dentro de las primeras galaxias y desde ellas.\n(II) Como resultado, se obtuvieron las observaciones espectroscópicas más profundas jamás realizadas.\n(III) Con esto se midieron distancias y propiedades de 1600 galaxias muy débiles y lejanas.\n(IV) Un equipo internacional de astronomía logró exploraciones sin precedentes del universo.\n(V) El grupo de investigación las observó tal como eran hace 13 000 millones de años, incluyendo 72 galaxias antes no detectadas.",
+      "alternatives": [
+        "I-V-IV-III-II",
+        "V-I-III-II-IV",
+        "III-IV-I-II-V",
+        "IV-III-V-II-I",
+        "II-V-I-IV-III"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/coherencia-y-cohesion-textual-examen-resuelto-de-razonamiento-verbal-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "Coherencia y cohesión textual — ejercicios resueltos de examen de admisión a la universidad, pregunta 2 (exploración astronómica)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ordene coherentemente los siguientes enunciados sobre Agatha Christie:\n(I) El teatro policial de Christie ha sido escasamente publicado en español y con limitado impacto.\n(II) Es la novelista de misterio con mayores ventas a lo largo de la historia.\n(III) A nadie sorprende reconocer a Agatha Miller Christie como la reina del crimen.\n(IV) Su mérito indiscutible es atraer a un enorme público lector.\n(V) Ello resultó de su cuantiosa producción literaria en la ficción detectivesca.",
+      "alternatives": [
+        "I-IV-II-V-III",
+        "IV-I-III-V-II",
+        "II-IV-V-III-I",
+        "III-V-II-IV-I",
+        "IV-III-V-I-II"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/coherencia-y-cohesion-textual-examen-resuelto-de-razonamiento-verbal-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "Coherencia y cohesión textual — ejercicios resueltos de examen de admisión a la universidad, pregunta 3 (Agatha Christie)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ordene coherentemente los siguientes enunciados sobre la localización de la fauna:\n(I) Múltiples factores influyen en la localización y expansión de las especies de la fauna.\n(II) La competencia con otras especies y el clima son dos factores ecológicos.\n(III) La fauna es el conjunto de animales que habita en una región determinada.\n(IV) Las barreras naturales que impiden el paso de los animales son factores geográficos que limitan la expansión de las especies.\n(V) Entre esos factores están los ecológicos y los geográficos.",
+      "alternatives": [
+        "III-I-IV-II-V",
+        "I-V-III-IV-II",
+        "I-V-II-III-IV",
+        "III-I-V-II-IV",
+        "III-I-II-IV-V"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/coherencia-y-cohesion-textual-examen-resuelto-de-razonamiento-verbal-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "Coherencia y cohesión textual — ejercicios resueltos de examen de admisión a la universidad, pregunta 4 (localización de la fauna)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Ordene coherentemente los siguientes enunciados sobre la validación de una teoría científica:\n(I) Al forjar una teoría, los científicos deben inferir sobre hechos que sus observaciones directas no explican.\n(II) Idealmente, toda teoría debe someterse a confirmación o refutación mediante la investigación.\n(III) Estas proposiciones sirven como principios que explican clases o conjuntos de fenómenos.\n(IV) Un enfoque concreto del problema de la validación de una teoría es probar las relaciones entre sus constructos.\n(V) Una teoría es un conjunto coherente de proposiciones generales relacionadas.",
+      "alternatives": [
+        "V-III-I-II-IV",
+        "I-II-V-III-IV",
+        "I-V-II-III-IV",
+        "I-V-III-IV-II",
+        "V-III-II-I-IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/coherencia-y-cohesion-textual-examen-resuelto-de-razonamiento-verbal-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "Coherencia y cohesión textual — ejercicios resueltos de examen de admisión a la universidad, pregunta 5 (validación de una teoría)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Ordene coherentemente los siguientes enunciados:\n(I) Los jefes temían futuras denuncias y demandas.\n(II) Los fugitivos partieron saqueando almacenes y oficinas.\n(III) Después se supo que la empresa les entregó elevadas sumas de dinero.\n(IV) Su objetivo era comprar el silencio de aquellos.\n(V) Se llevaron todo lo valioso, armas y provisiones principalmente.",
+      "alternatives": [
+        "II-I-V-IV-III",
+        "II-V-III-IV-I",
+        "II-III-I-IV-V",
+        "II-IV-I-III-V",
+        "II-III-IV-V-I"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/coherencia-y-cohesion-textual-examen-resuelto-de-razonamiento-verbal-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "Coherencia y cohesión textual — ejercicios resueltos de examen de admisión a la universidad, pregunta 6 (los fugitivos)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Ordene coherentemente los siguientes enunciados sobre el doctor Ronald Woodman:\n(I) Ese liderazgo lo convirtió en valioso merecedor del Premio Appleton en 1999.\n(II) Este premio se otorgó por primera vez a un científico del tercer mundo o de un país hispanohablante.\n(III) Además, investigó y aportó ideas clave a colegas de otros observatorios de radar.\n(IV) El premio llevaba esta mención: 'Por contribuciones significativas y liderazgo en estudios de radar de la ionosfera y la atmósfera'.\n(V) El doctor Ronald Woodman se especializa en el estudio de la alta atmósfera mediante radar.",
+      "alternatives": [
+        "V-III-I-IV-II",
+        "III-I-IV-V-II",
+        "II-III-I-V-IV",
+        "I-II-IV-V-III",
+        "V-II-I-III-IV"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/coherencia-y-cohesion-textual-examen-resuelto-de-razonamiento-verbal-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "Coherencia y cohesión textual — ejercicios resueltos de examen de admisión a la universidad, pregunta 7 (Ronald Woodman)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Ordene coherentemente los siguientes enunciados sobre el pueblo aka:\n(I) Los aka, en cambio, valoran la autonomía individual, la colaboración y la igualdad, por lo que no intervienen en la conducta de los demás.\n(II) Lo que estos pueblos enseñan y cómo lo hacen ofrece nuevas ideas sobre nuestra naturaleza y sobre mejores métodos de enseñanza y aprendizaje.\n(III) Los aka están entre los últimos pueblos cazadores-recolectores del mundo y habitan en África.\n(IV) Los aka no son padres sobreprotectores que tiemblan al dar objetos punzantes a los niños pequeños.\n(V) Un novedoso estudio sobre los aka sugiere que enseñar es parte del genoma humano.",
+      "alternatives": [
+        "III-V-II-IV-I",
+        "I-V-II-IV-III",
+        "IV-V-I-III-II",
+        "II-I-V-III-IV",
+        "V-IV-III-I-II"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/08/coherencia-y-cohesion-textual-examen-resuelto-de-razonamiento-verbal-de-admision-a-la-universidad-pdf.html",
+      "sourceName": "Coherencia y cohesión textual — ejercicios resueltos de examen de admisión a la universidad, pregunta 45 (pueblo aka)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"Renzo hizo todo lo posible, ____ no obtuvo respuesta de los manifestantes del paro de transportistas. Sin embargo, ____ su tenacidad logró cruzar la carretera de Arequipa a Lima.\"",
+      "alternatives": [
+        "pero - gracias a",
+        "empero - con",
+        "ya que - puesto que",
+        "aunque - porque",
+        "por ello - por"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 1"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"La dictadura sale debilitada, ____ ha perdido todo asomo de legitimidad, ____, la condición indispensable para gobernar con estabilidad.\"",
+      "alternatives": [
+        "aunque - aún",
+        "empero - todavía",
+        "porque - y",
+        "pues - es decir",
+        "porque - empero"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 2"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"Al recorrer museos ____ bibliotecas, acostumbrémonos a imaginar que atravesamos una especie de cementerio donde cuadros, estatuas ____ libros encierran no solo el pensamiento, ____ la vida de los autores.\"",
+      "alternatives": [
+        "o – como – y",
+        "y – si no – o",
+        "como – como – o",
+        "y – y – sino",
+        "y – aún – aunque"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 3"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"Esta estrategia es, ____ contundente, ____, muy eficaz.\"",
+      "alternatives": [
+        "por supuesto – no obstante",
+        "sin duda – a pesar de ello",
+        "también - además",
+        "indudablemente – y por lo tanto",
+        "realmente - pero"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 5"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"La televisión por cable ____ variada y especializada, es menos comercial, ____, menos alienante.\"",
+      "alternatives": [
+        "en tanto – por lo tanto",
+        "a pesar de - también",
+        "puesto que – por tanto",
+        "además de – por lo tanto",
+        "además de - aunque"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 7"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"Las normas de urbanidad son utilísimas para conducirse correctamente en todo lugar y circunstancia; ____, todo buen ciudadano debe conocerlas ____ practicarlas.\"",
+      "alternatives": [
+        "no obstante - pero",
+        "aunque - también",
+        "naturalmente - y",
+        "consecuentemente - empero",
+        "aparte de ello - ergo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 8"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"La opinión de los peritos fue desechada por los campesinos; ____ no tenía argumentos sólidos, ____ conocían realmente la zona, ____ no habían llegado nunca.\"",
+      "alternatives": [
+        "empero – puesto que – o",
+        "también – evidentemente – ni",
+        "puesto que – ni – porque",
+        "en cambio – o – tal vez",
+        "aunque – después – ora"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 9"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"El maestro se expresaba sin dificultad, ____ con alguna afectación; ____, no congeniaba plenamente con los alumnos.\"",
+      "alternatives": [
+        "y – luego",
+        "sin embargo - incluso",
+        "o - además",
+        "aun - y",
+        "pero - por ello"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 10"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con el conector que restituya la cohesión del enunciado:\n\"Beethoven fue un músico revolucionario que rompió con el equilibrado clasicismo anterior. ____ logró imponer un tipo de expresión más libre y enérgica.\"",
+      "alternatives": [
+        "De modo que",
+        "Por ejemplo",
+        "O bien",
+        "Siempre que",
+        "Es el caso de"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 11"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"Los pueblos que viven en el subdesarrollo son, ____, naciones carentes de industrias. Y, ____, la actividad económica predominante es la explotación de materias primas.\"",
+      "alternatives": [
+        "siempre - entre tanto",
+        "aquellas - mientras que",
+        "por lo general - por tanto",
+        "todas - puesto que",
+        "algunas - al fin y al cabo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 12"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"Los experimentos que al repetirse en las mismas condiciones conducen a los mismos resultados se denominan determinísticos o no aleatorios. ____, si soltamos una piedra, caerá; ____ si se calienta hasta 100°C, a la presión atmosférica normal, el agua hervirá.\"",
+      "alternatives": [
+        "O – a pesar de",
+        "Por ejemplo – obviamente",
+        "Por más que – este es el caso de",
+        "A condición de que – aunque",
+        "También – por ejemplo"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 14"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"Los medios de comunicación utilizan códigos verbales y no verbales para transmitir sus mensajes. ____, la televisión utiliza la palabra, la imagen, los sonidos, etc. La radio, ____, solo emplea códigos acústicos.\"",
+      "alternatives": [
+        "En consecuencia – en sí",
+        "Ergo – aun así",
+        "Así – sin embargo",
+        "Porque – no",
+        "Así que – entonces"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 15"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"La televisión influye socialmente en los niños; ____, afecta la manera cómo estos se relacionan con otros. ____, urge controlar su uso ____ se evite problemas de conducta.\"",
+      "alternatives": [
+        "por eso - Luego - porque",
+        "sin embargo - Ya que - incluso",
+        "es decir - Por lo tanto - a fin de que",
+        "así como - Incluso - asimismo",
+        "por ejemplo - Es decir - además"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 16"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Marque la alternativa que contenga los conectores lógicos explicativos de recapitulación.",
+      "alternatives": [
+        "Entonces, pues, así pues, por lo tanto, por consiguiente, etc.",
+        "En seguida, luego, después, a continuación, por otra parte, etc.",
+        "La verdad, bueno, bien, pues, vamos, mira, oye, dime, etc.",
+        "En resumen, en fin, total, pues bien, en definitiva, en suma, etc.",
+        "Ante todo, para comenzar, en principio, a propósito, a todo esto, etc."
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 17"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"La impresora presentó fallas técnicas; ____, se llamó al especialista ____ la repare inmediatamente, ____ se necesitaba el listado de postulantes.\"",
+      "alternatives": [
+        "por ende - con el objeto de que - pero",
+        "sin embargo - por ejemplo - de modo que",
+        "en consecuencia - para que - debido a que",
+        "así que - también - entonces",
+        "verbigracia - mas - sino que"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 18"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"____ se cuente con una buena hoja de vida, es difícil conseguir trabajo, ____ hay muchos profesionales excelentes con los que se debe competir; ____, existe poca oferta laboral.\"",
+      "alternatives": [
+        "Cuando - y - aunque",
+        "Ergo - entonces - vale decir",
+        "Pese a que - dado que - además",
+        "Empero - pues - debido a",
+        "A fin de que - ni - aunque"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 19"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"Realizar investigaciones científicas en la universidad es primordial, ____ permite que el estudiante adquiera conocimientos, ____ promueve el desarrollo del pensamiento crítico. ____, en el Perú no se incentiva lo suficiente esta actividad académica.\"",
+      "alternatives": [
+        "pues - ergo - No obstante",
+        "en vista de que - es decir - Asimismo",
+        "porque - además - Sin embargo",
+        "aunque - y - Por ello",
+        "ya que - esto es - Empero"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 20"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"____ sismo, la ciudad fue devastada; ____, los lugareños la reconstruyeron aun sin la ayuda del gobierno.\"",
+      "alternatives": [
+        "Ante – el",
+        "Debido al – para ello",
+        "No obstante – por ello",
+        "Si bien – y",
+        "A causa del – sin embargo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 21"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"Las emociones son una forma peculiar de interacción de los organismos con su medio; ____, son sentimientos que energizan y dirigen la conducta externa. ____, se considera el miedo, la alegría, la sorpresa, entre otros. Referirse a estas es realmente sencillo, ____ su estudio no lo es tanto.\"",
+      "alternatives": [
+        "es decir - También - mas",
+        "verbigracia - Asimismo - y",
+        "o sea - Por ejemplo - pero",
+        "aun cuando - Por eso - o",
+        "incluso - Porque - ergo"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 24"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los conectores establecen relaciones semánticas entre los componentes de un texto. Correlacione cada texto con el tipo de conector y seleccione la opción con la correspondencia adecuada.\nTextos:\nI) En este establecimiento está prohibido el acoso. Así pues, emplee un lenguaje más respetuoso y cordial.\nII) Jaime trabaja en un circo como malabarista, es decir, lanza y recoge objetos con gran agilidad.\nIII) La niña es muy conversadora y cariñosa; en cambio, su hermanito es más serio y tímido.\nIV) En el Perú se hablan 48 lenguas originarias. Mejor dicho, existen 50 comunidades lingüísticas si consideramos el español y la lengua de señas peruana.\nTipos: a) adversativo  b) explicativo  c) ilativo/consecutivo  d) rectificativo",
+      "alternatives": [
+        "Ic, IIb, IIId, IVa",
+        "Ia, IIb, IIIc, IVd",
+        "Id, IIc, IIIb, IVa",
+        "Ic, IIa, IIId, IVb",
+        "Ic, IIb, IIIa, IVd"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 25 (correlación)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"Desde marzo, los docentes ya no pueden grabar sus reuniones virtuales con la plataforma Meet. ____, el profesor Quispe ahora grabará las clases con un programa y subirá los videos al aula virtual. ____, por precaución, ha solicitado al delegado que también grabe las clases.\"",
+      "alternatives": [
+        "Por consiguiente – Además",
+        "Asimismo – Sin embargo",
+        "Aunque – Por eso",
+        "Es decir – Por ejemplo",
+        "Entonces – por ello"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 26"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los conectores enlazan de forma explícita los segmentos textuales y establecen entre ellos relaciones semánticas. Señale la alternativa que presenta el orden correcto de la clasificación de los conectores subrayados en el siguiente texto:\n\"Pese a que ha tenido muchos problemas, Enrique es muy perseverante. Se esfuerza mucho porque quiere ser un profesional altamente calificado. En suma, te conviene rodearte de personas como él.\"",
+      "alternatives": [
+        "Concesivo – causal – ejemplificativo",
+        "Causal – concesivo – ejemplificativo",
+        "Ilativo – causal – reformulador",
+        "Causal – adversativo – explicativo",
+        "Concesivo – causal – recapitulativo"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 27 (clasificación)"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"Sostuvimos que los sonidos oclusivos ____ fricativos en un niño se diferencian en un rasgo ____ propiedad; ____ deben describirse primero.\"",
+      "alternatives": [
+        "o - por lo tanto - y",
+        "o - y - entonces",
+        "y - o - por lo tanto",
+        "o - o - por ello",
+        "y - y - por lo tanto"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 29"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"La situación económica era difícil; ____ decidieron emigrar los tres hermanos. ____, salió José, ____, partió Manuel; ____, Julio decidió quedarse.\"",
+      "alternatives": [
+        "así que - Antes - después - al final",
+        "entonces - Primero - luego - sin embargo",
+        "por lo tanto - Así que - más tarde - entonces",
+        "por eso - Entonces - además - no obstante",
+        "por ello - Esto es - así también - pero"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2022/04/tipos-de-conectores-logicos-ejercicios-resueltos-de-razonamiento-verbal-de-examen-admision-universidad-prueba-desarrollada-claves-respuestas-soluciones-word-pdf.html",
+      "sourceName": "Tipos de conectores lógicos — ejercicios resueltos de razonamiento verbal de examen de admisión a la universidad, pregunta 30"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"Había sido víctima de un robo, ____ se dirigió a la comisaría ____ poner la denuncia respectiva.\"",
+      "alternatives": [
+        "y - a",
+        "porque - para",
+        "es decir - hasta",
+        "así que - a fin de",
+        "pues - hasta"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2014/04/conectores-logicos-textuales-ejercicios.html",
+      "sourceName": "Conectores lógicos textuales — ejercicios resueltos (razonamiento-verbal1.blogspot.com), pregunta 1"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"____ su capacidad económica era limitada, se dirigió no a una clínica, ____ a una posta médica ____ recibir la atención debida.\"",
+      "alternatives": [
+        "No obstante - sino - para",
+        "Porque - si no - a fin de",
+        "Porque - o - para",
+        "Puesto que - sino - para",
+        "Aunque - y - por"
+      ],
+      "correctAnswer": "3",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2014/04/conectores-logicos-textuales-ejercicios.html",
+      "sourceName": "Conectores lógicos textuales — ejercicios resueltos (razonamiento-verbal1.blogspot.com), pregunta 2"
+    },
+    {
+      "courseName": "Razonamiento Verbal",
+      "topicName": "Coherencia y cohesión textual",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete con los conectores que restituyan la cohesión del enunciado:\n\"Los libros existen ____ entendamos mejor nuestro mundo, ____ hay obras que no orientan, ____ apartan al lector de la realidad.\"",
+      "alternatives": [
+        "porque - pero - sino",
+        "para que - y - o",
+        "a fin de que - sino - o",
+        "aunque - y - hasta",
+        "para que - sin embargo - sino"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://razonamiento-verbal1.blogspot.com/2014/04/conectores-logicos-textuales-ejercicios.html",
+      "sourceName": "Conectores lógicos textuales — ejercicios resueltos (razonamiento-verbal1.blogspot.com), pregunta 3"
+    }
+  ]
+}

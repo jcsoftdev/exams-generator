@@ -6,6 +6,7 @@ import { GRADE_LEVELS } from "../modules/exams/domain/value-objects/grade-level"
 import type { GradeLevel, Stage } from "../modules/exams/domain/value-objects/grade-level";
 import { hashPassword } from "../modules/auth/password.util";
 import { db, pool } from "./client";
+import { seedCollectedQuestions } from "./seed-collected-questions";
 import {
   courses,
   cycles,
@@ -1276,6 +1277,11 @@ export async function seed(): Promise<void> {
   await seedExamBlueprintData(canonicalIndex);
   await reconcileLegacyTopics(canonicalIndex);
   await seedCycle();
+
+  const [bankSampleAdmin] = await db.select({ id: users.id }).from(users).where(eq(users.email, BANK_SAMPLE_ADMIN.email));
+  if (bankSampleAdmin) {
+    await seedCollectedQuestions(bankSampleAdmin.id);
+  }
 }
 
 /**

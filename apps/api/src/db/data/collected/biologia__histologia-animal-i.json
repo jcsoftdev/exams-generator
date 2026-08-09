@@ -1,0 +1,54 @@
+{
+  "entries": [
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La gelatina o jalea de Wharton está conformada por células mesenquimatosas, que luego se convertirán en fibroblastos, consiste en una matriz extracelular especializada, de aspecto gelatinoso, compuesta principalmente por ácido hialurónico y fibras de colágeno. Este tejido corresponde al tejido conjuntivo embrionario mucoso que se encuentra en",
+      "alternatives": [
+        "Dermis superficial",
+        "Cordón umbilical",
+        "Fibras de tendones",
+        "Grandes arterias",
+        "Los ligamentos"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
+      "sourceName": "San Marcos Biología - Examen de Admisión UNMSM (preguntas resueltas), Pregunta 43"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los tejidos animales están compuestos de células que son parecidas en estructura y están diseñadas para realizar una función especializada. De acuerdo con lo dicho, determine la respectiva ubicación de los tejidos cartilaginoso, epitelial y conectivo.",
+      "alternatives": [
+        "Superficie del cuerpo y cavidades, nariz y orejas; tendones y ligamentos.",
+        "Tendones y ligamentos; nariz y orejas; superficie del cuerpo y cavidades.",
+        "Nariz y orejas; superficie del cuerpo y cavidades; tendones y ligamentos.",
+        "Nariz y orejas; tendones y ligamentos; superficie del cuerpo y cavidades.",
+        "Tendones y ligamentos; ojos y nariz; superficie del cuerpo y cavidades."
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/biologia-simulacro-san-marcos-resuelto-de-admision-a-la-universidad-deco-unmsm-pdf.html",
+      "sourceName": "Biología San Marcos - Prueba DECO de ingreso UNMSM (desarrollada), Pregunta 23"
+    },
+    {
+      "courseName": "Biología",
+      "topicName": "Histología animal I",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Es un tejido reemplazado progresivamente en la etapa fetal; es esencial en la formación y crecimiento longitudinal de huesos largos, y permanece hasta la adultez en algunas partes del cuerpo, como en la tráquea, los bronquios y la laringe. Este tipo de tejido cartilaginoso se denomina",
+      "alternatives": [
+        "hialino",
+        "fibroso",
+        "elástico",
+        "reticular"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/biologia-resuelta-admision-universidades.html",
+      "sourceName": "Biología Banco de Preguntas Resueltas Admisión Universidades - Segunda Prueba, Pregunta 3"
+    }
+  ]
+}

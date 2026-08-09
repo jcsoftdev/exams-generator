@@ -1,0 +1,76 @@
+{
+  "entries": [
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "En un proceso electrolítico se han depositado 72 gramos de aluminio. El número de electrones que han pasado a través de la solución electrolítica es: (P.A. Al = 27)",
+      "alternatives": ["8 N₀", "6 N₀", "18 N₀", "20 N₀", "27 N₀"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/electroquimica-celdas-electroliticas-galvanicas-pilas-faraday-ejercicios-resueltos-quimica-pre-universidad-pdf.html",
+      "sourceName": "Electroquímica problemas resueltos preuniversitario (matematicaj) - pregunta depósito de aluminio"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a la electrólisis, indique la secuencia correcta de verdadero (V) y falso (F):\nI. La reacción redox es espontánea y genera corriente eléctrica.\nII. Los iones ceden sus electrones en el ánodo.\nIII. En el circuito externo, los electrones fluyen del cátodo hacia el ánodo.",
+      "alternatives": ["FVF", "VVF", "VVV", "FFV", "VFV"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/electroquimica-celdas-electroliticas-galvanicas-pilas-faraday-ejercicios-resueltos-quimica-pre-universidad-pdf.html",
+      "sourceName": "Electroquímica problemas resueltos preuniversitario (matematicaj) - secuencia V/F electrólisis"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Respecto a la celda electrolítica de NaCl(l), indique la alternativa correcta.",
+      "alternatives": [
+        "Los iones Na⁺ migran hacia el cátodo, en él pierden electrones y se oxidan.",
+        "Se utiliza corriente eléctrica para producir la reacción, debido a que ésta es espontánea.",
+        "En el ánodo se forma cloro gaseoso (Cl₂), debido a la reducción del Cl⁻.",
+        "El NaCl es un conductor de primera especie.",
+        "La oxidación se produce en el ánodo y la reducción en el cátodo."
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicaj.blogspot.com/2019/12/electroquimica-celdas-electroliticas-galvanicas-pilas-faraday-ejercicios-resueltos-quimica-pre-universidad-pdf.html",
+      "sourceName": "Electroquímica problemas resueltos preuniversitario (matematicaj) - celda electrolítica NaCl(l)"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "¿Qué intensidad de corriente (amperios) necesitamos para depositar 90 g de aluminio en 5 horas? (P.A. Al = 27)",
+      "alternatives": ["27.0", "36.4", "48.7", "53.6", "60.8"],
+      "correctAnswer": "3",
+      "sourceUrl": "http://quimica-a1.blogspot.com/2013/02/electroquimica-problemas-resueltos-tipo.html",
+      "sourceName": "Electroquímica problemas resueltos tipo examen de ingreso (quimica-a1) - corriente para depositar aluminio"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Si en el cátodo de una celda que contiene CuCl₂ se han depositado 6,35 g de metal durante 1930 segundos, ¿qué corriente se utilizó en amperios? (P.A. Cu = 63,5)",
+      "alternatives": ["50 A", "5 A", "25 A", "2.5 A", "10 A"],
+      "correctAnswer": "4",
+      "sourceUrl": "http://quimica-a1.blogspot.com/2013/02/electroquimica-problemas-resueltos-tipo.html",
+      "sourceName": "Electroquímica problemas resueltos tipo examen de ingreso (quimica-a1) - corriente depósito de cobre"
+    },
+    {
+      "courseName": "Química",
+      "topicName": "Electroquímica",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Determinar el potencial de la siguiente pila: Mg / Mg²⁺, 1M // Ag⁺, 1M / Ag",
+      "alternatives": ["+1.54 V", "+3.14 V", "+3.94 V", "0.74 V", "0.37 V"],
+      "correctAnswer": "1",
+      "sourceUrl": "http://quimica-a1.blogspot.com/2013/02/electroquimica-problemas-resueltos-tipo.html",
+      "sourceName": "Electroquímica problemas resueltos tipo examen de ingreso (quimica-a1) - potencial de pila Mg/Ag"
+    }
+  ]
+}

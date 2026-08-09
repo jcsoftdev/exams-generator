@@ -1,0 +1,235 @@
+{
+  "entries": [
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula: $tan(arccos(1/5))$",
+      "alternatives": ["$sqrt(3)$", "$2 sqrt(6)$", "$sqrt(2)$", "$sqrt(7)$", "$sqrt(5)$"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/funciones-trigonometricas-inversas.html",
+      "sourceName": "MatemáticaN (Rubiños) — Funciones Trigonométricas Inversas, ejercicios resueltos, problema 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula: $sec^2(arctan(3)) + csc^2(arccot(5))$",
+      "alternatives": ["34", "36", "28", "8", "24"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/funciones-trigonometricas-inversas.html",
+      "sourceName": "MatemáticaN (Rubiños) — Funciones Trigonométricas Inversas, ejercicios resueltos, problema 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula: $tan(2 arctan(1/3))$",
+      "alternatives": ["$1/2$", "$3/2$", "$3/4$", "$3/5$", "$3/7$"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/funciones-trigonometricas-inversas.html",
+      "sourceName": "MatemáticaN (Rubiños) — Funciones Trigonométricas Inversas, ejercicios resueltos, problema 3"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula: $tan(arctan(3/5) + arcsen(3/5))$",
+      "alternatives": ["$25/13$", "$29/13$", "$27/11$", "$16/15$", "$14/11$"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/funciones-trigonometricas-inversas.html",
+      "sourceName": "MatemáticaN (Rubiños) — Funciones Trigonométricas Inversas, ejercicios resueltos, problema 5"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula: $sen(2 arctan(2/3))$",
+      "alternatives": ["$12/11$", "$12/7$", "$12/13$", "$13/11$", "$13/17$"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/funciones-trigonometricas-inversas.html",
+      "sourceName": "MatemáticaN (Rubiños) — Funciones Trigonométricas Inversas, ejercicios resueltos, problema 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula: $cos(3 arccos(1/3))$",
+      "alternatives": ["$25/26$", "$-27/28$", "$-23/27$", "$27/29$", "$29/25$"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/funciones-trigonometricas-inversas.html",
+      "sourceName": "MatemáticaN (Rubiños) — Funciones Trigonométricas Inversas, ejercicios resueltos, problema 7"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada la ecuación: $arctan(x+1) - arctan(x-1) = arctan(2)$. Indica la suma de soluciones:",
+      "alternatives": ["$-2$", "$-1$", "0", "2", "1"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2016/01/funciones-trigonometricas-inversas.html",
+      "sourceName": "MatemáticaN (Rubiños) — Funciones Trigonométricas Inversas, ejercicios resueltos, problema 8"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula: $sec^2(arctan(5)) + csc^2(arccot(7))$",
+      "alternatives": ["20", "50", "56", "70", "76"],
+      "correctAnswer": "4",
+      "sourceUrl": "https://www.slideshare.net/slideshow/solucion-14-44998656/44998656",
+      "sourceName": "SlideShare — Solución 14: Funciones Trigonométricas Inversas, problema 4"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Simplifica: $arctan(2/3) + arctan(2/5)$",
+      "alternatives": ["$arctan(13/11)$", "$arctan(14/11)$", "$arctan(15/11)$", "$arctan(16/11)$", "$arctan(17/11)$"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.slideshare.net/slideshow/solucion-14-44998656/44998656",
+      "sourceName": "SlideShare — Solución 14: Funciones Trigonométricas Inversas, problema 5"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Calcula: $cot(1/2 cdot arcsec(61/60))$",
+      "alternatives": ["1", "11", "$1/11$", "121", "$1/121$"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.slideshare.net/slideshow/solucion-14-44998656/44998656",
+      "sourceName": "SlideShare — Solución 14: Funciones Trigonométricas Inversas, problema 6"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Calcula: $cos(arcsen(4/5) + arccos(12/13))$",
+      "alternatives": ["$16/67$", "$16/65$", "$16/53$", "$16/37$", "$16/57$"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.slideshare.net/slideshow/solucion-14-44998656/44998656",
+      "sourceName": "SlideShare — Solución 14: Funciones Trigonométricas Inversas, problema 10"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Indica cuáles son verdaderas (V) o falsas (F):\nI. $arcsen(-x) = -arcsen(x)$\nII. Para todo $x in RR$: $sen(arcsen(x)) = x$\nIII. Para $0 <= x <= 1$: $arccos(x) + arcsen(x) = pi/2$",
+      "alternatives": ["FFF", "FVV", "VFF", "VFV", "VVV"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.slideshare.net/slideshow/semana-14-funciones-inversas-79354384/79354384",
+      "sourceName": "SlideShare — Semana 14: Funciones Inversas Trigonométricas, problema 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Halla el rango de la función: $y = 3 arccos(x) - pi/4$",
+      "alternatives": ["$[-pi/4 , 11pi/4]$", "$[-3pi/4 , 7pi/4]$", "$[-pi/4 , 9pi/4]$", "$[-pi/4 , 5pi/4]$", "$[3pi/4 , 11pi/4]$"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.slideshare.net/slideshow/semana-14-funciones-inversas-79354384/79354384",
+      "sourceName": "SlideShare — Semana 14: Funciones Inversas Trigonométricas, problema 10"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Determina el dominio de: $f(x) = arcsen(x^2 - 1) + arccos(x) + arcsec(x)$",
+      "alternatives": ["$[-1, 1]$", "$[-sqrt(2), sqrt(2))$", "$(-sqrt(2), sqrt(2))$", "$\\{-1, 1\\}$", "$emptyset$"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.slideshare.net/slideshow/semana-14-funciones-inversas-79354384/79354384",
+      "sourceName": "SlideShare — Semana 14: Funciones Inversas Trigonométricas, problema 14"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Sea $f(x) = arcsec(x) cdot arccsc(x)$. Indica el valor máximo de $f$.",
+      "alternatives": ["$pi^2/16$", "$pi^2/8$", "$pi^2/4$", "$pi^2/2$", "$pi^2$"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.slideshare.net/slideshow/semana-14-funciones-inversas-79354384/79354384",
+      "sourceName": "SlideShare — Semana 14: Funciones Inversas Trigonométricas, problema 16"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Dada $f(x) = arcsen(2x-1) + arccos(2x+1)$, halla $Dom(f) union Ran(f)$.",
+      "alternatives": ["$\\{0, pi\\}$", "$\\{1, -pi/2\\}$", "$\\{-1, -pi/2\\}$", "$\\{0, -pi/2\\}$", "$emptyset$"],
+      "correctAnswer": "3",
+      "sourceUrl": "https://www.slideshare.net/slideshow/semana-14-funciones-inversas-79354384/79354384",
+      "sourceName": "SlideShare — Semana 14: Funciones Inversas Trigonométricas, problema 17"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el dominio de: $f(x) = 5 arcsen((x-1)/3) + 7 arccos((2x+1)/5)$",
+      "alternatives": ["$[-1, 1]$", "$[-2, 2]$", "$(0, 2)$", "$[-1, 0)$", "$(0, 1)$"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.slideshare.net/slideshow/semana-14-funciones-inversas-79354384/79354384",
+      "sourceName": "SlideShare — Semana 14: Funciones Inversas Trigonométricas, problema 18"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Halla el dominio de: $f(x) = arcsen((2|x|+1)/(|x|+2))$. ¿Cuál es el menor valor entero del dominio?",
+      "alternatives": ["$-3$", "$-1$", "$0$", "$1$", "$2$"],
+      "correctAnswer": "1",
+      "sourceUrl": "https://www.slideshare.net/slideshow/semana-14-funciones-inversas-79354384/79354384",
+      "sourceName": "SlideShare — Semana 14: Funciones Inversas Trigonométricas, problema 19"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula: $theta = arcsen(1/2) + arccos(sqrt(2)/2)$",
+      "alternatives": ["$5pi/12$", "$5pi/6$", "$pi/6$", "$pi/5$", "$pi/2$"],
+      "correctAnswer": "0",
+      "sourceUrl": "https://www.slideshare.net/slideshow/funciones-trigonometricas-inversas-175506893/175506893",
+      "sourceName": "SlideShare — Funciones Trigonométricas Inversas (Tumbes), problema 1"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Calcula: $theta = arctan(sqrt(3)) - arctan(sqrt(3)/3)$",
+      "alternatives": ["$pi/3$", "$5pi/6$", "$pi/6$", "$pi/5$", "$pi/2$"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.slideshare.net/slideshow/funciones-trigonometricas-inversas-175506893/175506893",
+      "sourceName": "SlideShare — Funciones Trigonométricas Inversas (Tumbes), problema 2"
+    },
+    {
+      "courseName": "Trigonometría",
+      "topicName": "Funciones Trigonométricas Inversas",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Simplifica: $cos^2(arcsen(x)) - sen^2(arccos(x))$",
+      "alternatives": ["$1$", "$2$", "$0$", "$-1$", "$3$"],
+      "correctAnswer": "2",
+      "sourceUrl": "https://www.slideshare.net/slideshow/semana-14-funciones-inversas-79354384/79354384",
+      "sourceName": "SlideShare — Semana 14: Funciones Inversas Trigonométricas, problema 21"
+    }
+  ]
+}

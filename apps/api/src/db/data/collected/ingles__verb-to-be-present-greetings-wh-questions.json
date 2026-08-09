@@ -1,0 +1,38 @@
+{
+  "entries": [
+    {
+      "courseName": "Inglés",
+      "topicName": "Verb to be (present) / greetings & wh-questions",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Complete the conversation.\na: Your new neighbor's good-looking! ______ his name?\nb: His name's Francisco.\na: ______ he from?\nb: El Salvador.",
+      "alternatives": [
+        "What's - When's",
+        "How's - Where's",
+        "What's - Where's",
+        "Where's - Who's",
+        "What's - Who's"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/ingles-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "Inglés - Preguntas resueltas de examen de admisión a la universidad, Pregunta 42 (clave C)"
+    },
+    {
+      "courseName": "Inglés",
+      "topicName": "Verb to be (present) / greetings & wh-questions",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Complete the conversation.\na: It was nice to meet your brothers. ______ they?\nb: Greg's only fourteen. But my older brother, David, is twenty-eight.\na: ______ David's occupation?\nb: ______ a lawyer.",
+      "alternatives": [
+        "How old are - What is - He is",
+        "How are - What is - She is",
+        "How much are - Who is - He is",
+        "How old are - Who is - He is",
+        "Who is - What is - He is"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/2019/08/ingles-preguntas-resueltas-de-examen-de-admision-a-la-universidad.html",
+      "sourceName": "Inglés - Preguntas resueltas de examen de admisión a la universidad, Pregunta 45 (clave A)"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "courseName": "Ecología",
+      "topicName": "Reino Monera, Protista y Fungi",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La verruga peruana es resultado de una infección que afecta a la piel, en la que el agente causal es la bacteria denominada:",
+      "alternatives": [
+        "Bordetella pertussis",
+        "Bartonella bacilliformis",
+        "Leishmania braziliensis",
+        "Trypanosoma cruzi",
+        "Candida albicans"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/biologia-resuelta-admision-universidades.html",
+      "sourceName": "UNMSM Biología - Banco de preguntas resueltas admisión, pregunta 54 (Reino Monera)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Reino Monera, Protista y Fungi",
+      "gradeLevel": "pre",
+      "difficulty": "easy",
+      "bodyTypst": "Candida albicans es un organismo oportunista que ataca generalmente a pacientes con SIDA y pertenece al reino:",
+      "alternatives": [
+        "Monera",
+        "Protista",
+        "Fungi",
+        "Animal",
+        "Vegetal"
+      ],
+      "correctAnswer": "2",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/biologia-resuelta-admision-universidades.html",
+      "sourceName": "UNMSM Biología - Banco de preguntas resueltas admisión, pregunta 56 (Reino Fungi)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Reino Monera, Protista y Fungi",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "La parte conocida o visible del 'champiñón', o sea la seta, es:",
+      "alternatives": [
+        "el micelio",
+        "la porción anatómica que origina las células asexuales de reproducción",
+        "la porción femenina",
+        "un esporocarpo",
+        "la porción que lleva la carga genética"
+      ],
+      "correctAnswer": "0",
+      "sourceUrl": "https://matematicasn.blogspot.com/p/biologia-resuelta-admision-universidades.html",
+      "sourceName": "UNMSM Biología - Banco de preguntas resueltas admisión, pregunta 26 (Reino Fungi)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Reino Monera, Protista y Fungi",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Los estudiantes de biología observan muestras de hongos no levaduriformes en el microscopio y visualizan un tipo de reproducción asexual. Este tipo de reproducción se denomina:",
+      "alternatives": [
+        "regeneración",
+        "gemación",
+        "fragmentación",
+        "bipartición",
+        "esporulación"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
+      "sourceName": "UNMSM Biología - Preguntas resueltas examen admisión, pregunta 16 (Reino Fungi)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Reino Monera, Protista y Fungi",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las esponjas de mar y las amebas dependen de la digestión intracelular. ¿Cómo se denomina el proceso en el que extensiones de la membrana engullen partículas extracelulares?",
+      "alternatives": [
+        "Permeabilidad",
+        "Fagocitosis",
+        "Citocinesis",
+        "Exocitosis",
+        "Cocifesis"
+      ],
+      "correctAnswer": "1",
+      "sourceUrl": "https://matematicasn.blogspot.com/2017/08/san-marcos-biologia-preguntas-resueltas.html",
+      "sourceName": "UNMSM Biología - Preguntas resueltas examen admisión, pregunta 1 (Reino Protista)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Reino Monera, Protista y Fungi",
+      "gradeLevel": "pre",
+      "difficulty": "medium",
+      "bodyTypst": "Las amebas son organismos acuáticos unicelulares que pertenecen al Phylum Amoebozoa. Aparte de la locomoción, ¿cuál es la otra función que cumplen los pseudópodos?",
+      "alternatives": [
+        "Captura de alimentos mediante osmotrofia",
+        "Intercambio de material genético intraespecífico",
+        "Intercambio de material genético interespecífico",
+        "Sujeción a un sustrato fijo en etapa sésil",
+        "Captura de alimentos mediante fagocitosis"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "http://biologia-test.blogspot.com/2014/10/examen-de-admision-san-marcos-2015-i.html",
+      "sourceName": "Examen Admisión San Marcos 2015-I, pregunta 15 (Reino Protista)"
+    },
+    {
+      "courseName": "Ecología",
+      "topicName": "Reino Monera, Protista y Fungi",
+      "gradeLevel": "pre",
+      "difficulty": "hard",
+      "bodyTypst": "Los organismos autótrofos sintetizan sustancias orgánicas. Las bacterias primitivas usaban H₂S disuelto como fuente de hidrógeno; al escasear este elemento, comenzaron a usar H₂O en su reemplazo, dando lugar a la liberación de oxígeno a la atmósfera. ¿Cuál de los siguientes procariotas pudo hacer este cambio?",
+      "alternatives": [
+        "Sulfurobacterias",
+        "Nanobacterias",
+        "Eubacterias",
+        "Metanobacterias",
+        "Cianobacterias"
+      ],
+      "correctAnswer": "4",
+      "sourceUrl": "http://biologia-test.blogspot.com/2014/10/examen-de-admision-san-marcos-2015-i.html",
+      "sourceName": "Examen Admisión San Marcos 2015-I, pregunta 6 (Reino Monera)"
+    }
+  ]
+}
